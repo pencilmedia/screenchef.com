@@ -1,0 +1,99 @@
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*/
+/* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
+/* Desktop & Tablet - >480px - Shared styles for desktop/tablet */
+@media (min-width: 768px) {
+  /* Begin Navigation */
+  /* line 14, ../../../sass/theme/responsive.scss */
+  header nav {
+    position: absolute;
+    top: .5em;
+    right: 0;
+    text-align: right;
+  }
+
+  /* Begin Layout */
+  /* line 24, ../../../sass/theme/responsive.scss */
+  main section article {
+    /* Cool Stuff */
+  }
+}
+/* Desktop Only - >768px  */
+@media (min-width: 768px) {
+  /* Begin Layout */
+  /* line 38, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards {
+    border: 1px solid red;
+  }
+  /* line 39, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .lt-column {
+    min-height: 350px;
+  }
+  /* line 42, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .mid-column {
+    min-height: 400px;
+  }
+  /* line 45, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .rt-column {
+    min-height: 350px;
+  }
+}
+/* Tablet and Phone - <768px */
+@media (max-width: 768px) {
+  /* Begin Navigation */
+  /* line 59, ../../../sass/theme/responsive.scss */
+  header nav {
+    margin: 1em  0;
+  }
+  /* line 61, ../../../sass/theme/responsive.scss */
+  header nav a {
+    margin: 0;
+    width: 30.3%;
+  }
+  /* line 64, ../../../sass/theme/responsive.scss */
+  header nav a:first-child {
+    padding-left: 0;
+  }
+  /* line 67, ../../../sass/theme/responsive.scss */
+  header nav a:nth-child(2) {
+    text-align: center;
+  }
+  /* line 70, ../../../sass/theme/responsive.scss */
+  header nav a:last-child {
+    text-align: right;
+  }
+
+  /* Begin Layout */
+  /* line 82, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .lt-column {
+    min-height: 450px;
+  }
+  /* line 85, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .mid-column {
+    min-height: 500px;
+  }
+  /* line 88, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .rt-column {
+    min-height: 450px;
+  }
+}
+/* Phone Only - <480px */
+@media (max-width: 480px) {
+  /* Begin Navigation */
+  /* line 104, ../../../sass/theme/responsive.scss */
+  header hgroup h2 + p {
+    margin-bottom: 0;
+  }
+
+  /* Begin Layout */
+  /* line 116, ../../../sass/theme/responsive.scss */
+  main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
+    position: inherit;
+    float: none;
+    width: 100%;
+    min-height: 100px;
+    top: auto;
+    left: auto;
+  }
+}

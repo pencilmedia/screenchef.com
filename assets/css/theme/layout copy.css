@@ -1,0 +1,246 @@
+/* Layout.scss -----
+common layout styles */
+/* Layout ************* */
+/* line 10, ../../../sass/theme/layout copy.scss */
+#db {
+  margin-top: 2em;
+}
+/* line 12, ../../../sass/theme/layout copy.scss */
+#db p {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* line 18, ../../../sass/theme/layout copy.scss */
+#wrapper {
+  /* This div is stretched height 100% by setting html, body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls correctly and if it is shorter it won't shrink to fit content */
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: -2em;
+  /* keeps footer clear of text going underneath */
+  padding: 0 1em;
+  min-height: 100%;
+}
+
+/* line 28, ../../../sass/theme/layout copy.scss */
+header {
+  overflow: hidden;
+  margin-top: 2em;
+}
+/* line 31, ../../../sass/theme/layout copy.scss */
+header hgroup {
+  float: left;
+  width: 60%;
+}
+
+/* line 37, ../../../sass/theme/layout copy.scss */
+nav {
+  float: right;
+  width: 40%;
+}
+/* line 40, ../../../sass/theme/layout copy.scss */
+nav ul {
+  float: right;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 45, ../../../sass/theme/layout copy.scss */
+nav ul li {
+  float: right;
+  width: auto;
+  list-style: none;
+  margin-left: 2em;
+  padding: 5px 0;
+  text-align: right;
+}
+/* line 52, ../../../sass/theme/layout copy.scss */
+nav ul li a {
+  color: #999;
+  text-decoration: none;
+  padding: 4px 0;
+  text-shadow: 0 1px #fff;
+}
+/* line 57, ../../../sass/theme/layout copy.scss */
+nav ul li a:hover {
+  color: #f96;
+  text-decoration: none;
+  border-top: 1px solid #f96;
+}
+/* line 63, ../../../sass/theme/layout copy.scss */
+nav ul li:first-child {
+  /* If you add to the navigation decrease this margin to align the right edge with stuff below it */
+}
+/* line 66, ../../../sass/theme/layout copy.scss */
+nav ul li a#selected {
+  border-bottom: 1px solid #f96;
+}
+
+/* line 73, ../../../sass/theme/layout copy.scss */
+#exercises section nav {
+  float: none;
+  width: 100%;
+}
+/* line 76, ../../../sass/theme/layout copy.scss */
+#exercises section nav ul {
+  float: none;
+  width: 100%;
+}
+/* line 79, ../../../sass/theme/layout copy.scss */
+#exercises section nav ul li {
+  display: inline;
+  float: left;
+  width: auto;
+}
+/* line 83, ../../../sass/theme/layout copy.scss */
+#exercises section nav ul li a {
+  color: #000;
+}
+/* line 86, ../../../sass/theme/layout copy.scss */
+#exercises section nav ul li:first-child {
+  margin-left: 0;
+}
+
+/* line 93, ../../../sass/theme/layout copy.scss */
+footer {
+  height: 2em;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+/* line 98, ../../../sass/theme/layout copy.scss */
+footer ul {
+  margin: 0 0 0 28%;
+  padding: .5em 0;
+}
+/* line 101, ../../../sass/theme/layout copy.scss */
+footer ul li {
+  display: inline;
+  list-style: none;
+  margin-left: 1em;
+  font-size: 85%;
+  color: #999;
+}
+/* line 107, ../../../sass/theme/layout copy.scss */
+footer ul li a {
+  color: #999;
+  text-decoration: none;
+}
+/* line 110, ../../../sass/theme/layout copy.scss */
+footer ul li a:hover {
+  text-decoration: none;
+}
+
+/* line 118, ../../../sass/theme/layout copy.scss */
+section {
+  margin-top: 0em;
+}
+
+/* line 122, ../../../sass/theme/layout copy.scss */
+article {
+  font-family: Helvetica;
+  margin: 0 0 2em 0;
+  padding: 1em;
+  background-color: #f6f6f6;
+  outline: 1px solid #e9e9e9;
+}
+
+/* Wordpress overrides ************* */
+/* line 133, ../../../sass/theme/layout copy.scss */
+#journal #wrapper {
+  background: none;
+}
+/* line 136, ../../../sass/theme/layout copy.scss */
+#journal article {
+  float: left;
+  width: 45%;
+  margin-left: .5em;
+}
+/* line 140, ../../../sass/theme/layout copy.scss */
+#journal article:first-child {
+  margin: 2em 0 0 0;
+}
+/* line 144, ../../../sass/theme/layout copy.scss */
+#journal section {
+  overflow: auto;
+}
+/* line 147, ../../../sass/theme/layout copy.scss */
+#journal #journal_content {
+  float: left;
+  width: 65%;
+  margin-top: 5%;
+}
+/* line 152, ../../../sass/theme/layout copy.scss */
+#journal #sidebar1 {
+  float: right;
+  width: 30%;
+  margin-top: 5%;
+  padding-left: 2em;
+}
+
+/* line 160, ../../../sass/theme/layout copy.scss */
+.entry-utility {
+  margin-bottom: 3em;
+}
+
+/* line 165, ../../../sass/theme/layout copy.scss */
+#journal h2.entry-title {
+  margin-top: 2em;
+}
+/* line 168, ../../../sass/theme/layout copy.scss */
+#journal h2 a {
+  color: #432;
+  text-decoration: none;
+}
+
+/* line 175, ../../../sass/theme/layout copy.scss */
+.entry-meta span, .entry-meta a {
+  color: #999;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+/* line 182, ../../../sass/theme/layout copy.scss */
+.entry-content {
+  margin-top: 2em;
+}
+
+/* line 186, ../../../sass/theme/layout copy.scss */
+.meta {
+  font-size: 85%;
+  margin-bottom: 1em;
+  color: #999;
+}
+
+/* line 192, ../../../sass/theme/layout copy.scss */
+h3.storytitle {
+  margin-bottom: 0.5em;
+}
+/* line 194, ../../../sass/theme/layout copy.scss */
+h3.storytitle a {
+  color: #969;
+  text-decoration: none;
+}
+
+/* line 201, ../../../sass/theme/layout copy.scss */
+#sidebar1 ul {
+  list-style: none;
+  margin: 0 0 25% 0;
+  padding: 0;
+}
+/* line 205, ../../../sass/theme/layout copy.scss */
+#sidebar1 ul li {
+  margin: 0 0 .5em 0;
+}
+/* line 209, ../../../sass/theme/layout copy.scss */
+#sidebar1 h3.widget-title {
+  font-size: 120%;
+  color: #f96;
+  margin-top: 2em;
+}
+/* line 214, ../../../sass/theme/layout copy.scss */
+#sidebar1 #searchform label {
+  font-size: 80%;
+  color: #999;
+  display: none;
+}

@@ -1,0 +1,36 @@
+/* Footer.scss -----
+footer styles */
+/* Footer ************* */
+/* line 10, ../../../sass/theme/footer.scss */
+footer {
+  background: #f9f9f9;
+  bottom: 5px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1050;
+  padding: 1.6em;
+}
+/* line 18, ../../../sass/theme/footer.scss */
+footer ul {
+  text-align: center;
+}
+/* line 20, ../../../sass/theme/footer.scss */
+footer ul li {
+  color: #a6a6a6;
+  display: inline-block;
+  font-size: 85%;
+  list-style: none;
+  padding: 5px 3px;
+}
+/* line 26, ../../../sass/theme/footer.scss */
+footer ul li a {
+  margin: 0;
+  color: #a6a6a6;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 31, ../../../sass/theme/footer.scss */
+footer ul li a:hover {
+  text-decoration: none;
+}

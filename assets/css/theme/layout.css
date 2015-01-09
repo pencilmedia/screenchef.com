@@ -1,0 +1,110 @@
+/* Layout.scss -----
+common layout styles */
+/* Layout ************* */
+/* line 9, ../../../sass/theme/layout.scss */
+main {
+  /* This div is stretched height 100% by setting html, 
+  body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls
+  correctly and if it is shorter it won't shrink to fit content */
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  border: 1px solid transparent;
+}
+/* line 17, ../../../sass/theme/layout.scss */
+main section {
+  margin-top: 0;
+}
+/* line 20, ../../../sass/theme/layout.scss */
+main section article .colonnade {
+  overflow: auto;
+}
+/* line 22, ../../../sass/theme/layout.scss */
+main section article .colonnade .lt-column, main section article .colonnade .mid-column, main section article .colonnade .rt-column {
+  padding-left: 10px;
+}
+/* line 24, ../../../sass/theme/layout.scss */
+main section article .colonnade .lt-column h2, main section article .colonnade .mid-column h2, main section article .colonnade .rt-column h2 {
+  margin: 1em 0;
+}
+/* line 27, ../../../sass/theme/layout.scss */
+main section article .colonnade .lt-column:first-child, main section article .colonnade .mid-column:first-child, main section article .colonnade .rt-column:first-child {
+  padding-left: 0;
+}
+/* line 31, ../../../sass/theme/layout.scss */
+main section article .colonnade.cards {
+  font-family: 'Inconsolata';
+  padding: 1.6em 15%;
+}
+/* line 34, ../../../sass/theme/layout.scss */
+main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
+  background: #f3f3f3;
+  border: 1px solid white;
+  box-shadow: 0 0 15px #d9d9d9;
+  outline: 1px solid #d9d9d9;
+  overflow: auto;
+  padding: 1.6em 10px;
+  position: relative;
+}
+/* line 42, ../../../sass/theme/layout.scss */
+main section article .colonnade.cards .lt-column h1, main section article .colonnade.cards .mid-column h1, main section article .colonnade.cards .rt-column h1 {
+  margin-top: 10px;
+}
+/* line 46, ../../../sass/theme/layout.scss */
+main section article .colonnade.cards .lt-column {
+  right: -5px;
+  top: 1.6em;
+}
+/* line 50, ../../../sass/theme/layout.scss */
+main section article .colonnade.cards .mid-column {
+  z-index: 2;
+}
+/* line 53, ../../../sass/theme/layout.scss */
+main section article .colonnade.cards .rt-column {
+  left: -5px;
+  top: 1.6em;
+}
+/* line 59, ../../../sass/theme/layout.scss */
+main section article.callout {
+  background-color: #f6f6f6;
+  color: gray;
+  font-family: Helvetica;
+  margin: 0 0 2em 0;
+  outline: 1px solid #e9e9e9;
+  padding: 1em;
+}
+/* line 66, ../../../sass/theme/layout.scss */
+main section article.callout h1 {
+  margin-bottom: 1em;
+}
+/* line 69, ../../../sass/theme/layout.scss */
+main section article.callout dl {
+  clear: both;
+  display: block;
+  margin-bottom: 1.6em;
+  overflow: hidden;
+}
+/* line 74, ../../../sass/theme/layout.scss */
+main section article.callout dl dt {
+  margin: .5em auto;
+}
+/* line 77, ../../../sass/theme/layout.scss */
+main section article.callout dl dd {
+  display: inline-block;
+  margin: .25em .25em .25em 0;
+}
+/* line 80, ../../../sass/theme/layout.scss */
+main section article.callout dl dd.graphic {
+  float: left;
+  margin: 0 15px 0 0;
+  width: auto;
+}
+/* line 84, ../../../sass/theme/layout.scss */
+main section article.callout dl dd.graphic img {
+  border: 3px solid white;
+  border-radius: 100%;
+}
+/* line 90, ../../../sass/theme/layout.scss */
+main section article.callout dl:last-child {
+  margin-bottom: 0;
+}

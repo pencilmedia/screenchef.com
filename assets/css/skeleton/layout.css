@@ -1,0 +1,133 @@
+.content {
+  overflow-x: auto;
+  margin: 10% auto;
+  margin-bottom: 5%;
+  padding-top: 1em;
+  width: 850px;
+  overflow: hidden;
+  /***************/
+  /** COLUMNS **/
+  /***************/
+}
+.content .colonnade {
+  overflow: hidden;
+}
+.content .colonnade .lt_column,
+.content .colonnade .rt_column {
+  box-sizing: border-box;
+  float: left;
+  padding-bottom: 9000px;
+  /* Key property - equal heights */
+  margin-bottom: -9000px;
+  /* Key property - equal heights */
+}
+.content .colonnade .lt_column {
+  width: 65%;
+  /***************/
+  /** SLATE **/
+  /***************/
+}
+.content .colonnade .lt_column h3 {
+  margin-top: 0;
+}
+.content .colonnade .lt_column .slate {
+  overflow: auto;
+  margin: 1em 0;
+  padding: 0 1em 1em 1em;
+  border: 1px solid #432;
+  border-top-color: #e9e9e9;
+  border-left-color: #e9e9e9;
+  /* Background Opacity - Child elements aren't get included */
+  background: #ffffff;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgba(255, 255, 255, 0.3);
+  /* Box Shadow */
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.content .colonnade .lt_column .slate ul {
+  margin: 1.5em 1.5em 0 1.5em;
+  width: 75%;
+}
+.content .colonnade .lt_column .slate ul li {
+  font-size: 90%;
+  margin: 0;
+  padding: 0 0 1.5em 0;
+}
+.content .colonnade .lt_column .slate ul li strong {
+  font-size: 100%;
+}
+.content .colonnade .lt_column .slate hr {
+  margin: 3em 0;
+}
+.content .colonnade .lt_column .lt_column,
+.content .colonnade .lt_column .rt_column {
+  width: 50%;
+  margin: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.content .colonnade .lt_column .lt_column dt,
+.content .colonnade .lt_column .rt_column dt,
+.content .colonnade .lt_column .lt_column dd,
+.content .colonnade .lt_column .rt_column dd {
+  margin: 0;
+}
+.content .colonnade .rt_column {
+  width: 31%;
+  margin-left: 4%;
+}
+.content .colonnade .rt_column h3 {
+  font-size: 120%;
+}
+.content .colonnade .rt_column h3:first-child {
+  margin-top: 0;
+}
+.content .colonnade .rt_column dl {
+  overflow: hidden;
+  /* Need this overflow because the fx.js script is overriding a dynamic overflow hidden addition */
+}
+.icons .slate p,
+.logos .slate p {
+  box-sizing: border-box;
+  float: left;
+  width: auto;
+  margin: .5em;
+  padding: 1em;
+}
+.logos .slate p {
+  text-align: center;
+  border: 1px solid #432;
+  background: rgba(255, 255, 255, 0.8);
+  width: 45%;
+}
+#contact .content .colonnade .lt_column,
+#contact .content .colonnade .rt_column {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+#labs .colonnade .rt_column h3 {
+  margin-top: 2em;
+}
+/* styling for elements inside overlay */
+.details {
+  float: left;
+  width: 16em;
+  min-height: 88%;
+  overflow: auto;
+  font-size: 90%;
+  border: 1px solid #666;
+  /* Background Opacity - Child elements aren't get included */
+  background: #ffffff;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgba(255, 255, 255, 0.8);
+}
+.details h3 {
+  margin: 1em .75em .5em .75em !important;
+}
+.details p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
