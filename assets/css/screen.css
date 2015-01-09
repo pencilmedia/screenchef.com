@@ -424,10 +424,6 @@ footer ul li a:hover {
 /* Desktop Only - >768px  */
 @media (min-width: 768px) {
   /* Begin Layout */
-  /* line 38, ../../sass/theme/responsive.scss */
-  main section article .colonnade.cards {
-    border: 1px solid red;
-  }
   /* line 39, ../../sass/theme/responsive.scss */
   main section article .colonnade.cards .lt-column {
     min-height: 350px;
