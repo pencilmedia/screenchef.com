@@ -4,40 +4,27 @@
 // Base Colors
 // -----------------------------------------------------
 
-$white:				#fff;
-$black:				#000;
-$gray:				#ccc;
-$dark:				#343838;
 
-$green:				#009900; //#0A8A0A;
-$greenLight:			lighten($green, 10%);
-$greenLighter:			lighten($green, 35%);
-$greenLightest:		lighten($green, 45%);
-$greenDark:			darken($green, 10%);
-$greenDarker:			darken($green, 20%);
-$greenDarkest:			darken($green, 30%);
+// Primary Color Palette
+// -----------------------------------------------------
 
-$orange:				#f0ad4e;
-$orangeLight:			lighten($orange, 10%);
-$orangeLighter:		lighten($orange, 20%);
-$orangeLightest:		lighten($orange, 30%);
-$orangeDark:			darken($orange, 10%);
-$orangeDarker:			darken($orange, 20%);
-$orangeDarkest:		darken($orange, 30%);
-
-$red:				#E50015;
-$redLight:			lighten($red, 35%);
-$redLighter:			lighten($red, 45%);
-$redLightest:			lighten($red, 52%);
-$redDark:				darken($red, 10%);
-$redDarker:			darken($red, 18%);
-$redDarkest:			darken($red, 25%);
-
-$yellow:				#f2e6a7;
+$yellow:				#FECC70;
 $yellowLight:			lighten($yellow, 15%);
 
+
+$brown:				#443322;
+$brownLight:			lighten($brown, 15%);
+
+$white:				#fff;
+$black:				#000;
+$dark:				#343838;
+$green:				#628637;
+$orange:				#EA4727;
+$red:				#D0021B;
+$burgundy: 			#C14E4E;
+
 // Grays
-$gray:               	#999;
+$gray:               	#ccc;
 $grayLight:          	lighten($gray, 18%);
 $grayLighter:        	lighten($gray, 26%);
 $grayLightest:       	lighten($gray, 34%);
@@ -45,34 +32,24 @@ $grayDark:           	darken($gray, 20%);
 $grayDarker:         	darken($gray, 30%);
 $grayDarkest:        	darken($gray, 40%);
 
-// Blues
-$blue:        			#527FA5; // old - #3369E8;
-$blueLight:   			lighten($blue, 20%);
-$blueLighter: 			lighten($blue, 30%);
-$blueLightest:			lighten($blue, 40%);
-$blueDark:    			darken($blue, 15%);
-$blueDarker:  			darken($blue, 25%);
-$blueDarkest: 			darken($blue, 35%);
-$navyBlue:			#2D4F62;
-$brightBlue: 		     #4A90E2;
-
-// Primary Color Palette
-// -----------------------------------------------------
-
-$main: 				#eddec3; //#EFECD8; // grayish blue
-$main-tint: 			lighten($main, 45%);
-$main-blue: 			#0387ab; // bright blue
-$highlight-blue: 		#72c9ca; // aqua blue
-$highlight-green: 		#d2db26; //greenish yellow
-
 
 // Typography
 // -----------------------------------------------------
 
-$baseFontSize:          12px;
+$baseFontSize:          13px;
 $baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $baseLineHeight:        28px;
 $fontFamilyLight:	    "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+
+// Custom Web Fonts
+$fontAmericanTypewriter:  "AmericanTypewriter";
+$fontChelsea:  "Chelsea";
+$fontGreatVibes:  "GreatVibes";
+$fontStrangelove:  "StrangeLove";
+$fontEaglefeather:  "Eaglefeather";
+$fontNoteworthy:  "Noteworthy";
+$fontMohave:  "Mohave";
+$fontIndieFlower:  "IndieFlower";
 
 //** Background color for `<body>`.
 $bodyBG:               $white;
@@ -80,7 +57,7 @@ $bodyBG:               $white;
 $textColor:            $grayDarkest;
 
 //** Global textual link color.
-$linkColor:            $main-blue;
+$linkColor:            $brown;
 //** Link hover color set via `darken()` function.
 $linkHoverColor:      darken($linkColor, 15%);
 //** Link hover decoration.
@@ -89,56 +66,19 @@ $linkHoverDecoration: underline;
 
 // Forms
 // -----------------------------------------------------
-
-$inputBorder:  					$blueDark;
-
 $placeholderText: 					#a9a9a9;
-// Required Placeholder Text
-$required-placeholder:        		$brightBlue;
-
-$errorText:						#a94442;
-$errorBorder:						$redLighter;
-$errorBG:							$redLightest;
+$input-height-base: 34px;
 
 
 // Common
 // -----------------------------------------------------
 $pageMargin: 				20px;
-$borderColor: 				#E7EAEC;
-$borderColorHighlight: 		$highlight-blue;
+$borderColor: $grayDarkest;
 
 
 // Layout
 // -----------------------------------------------------
 $navbarHeight: 			45px;
-$contextPaneWidth: 			480px;
-
-
-// Slats
-// -----------------------------------------------------
-$shortSlatHeight: 			45px;
-$midSlatHeight: 			60px;
-$tallSlatHeight: 			75px;
-$slatHover: 				$blueLightest;
-
-
-// Lists
-// -----------------------------------------------------
-$dropdown-link-hover-color: 	$grayDarkest;
-$dropdown-link-hover-bg: 	$slatHover;
-
-// Forms
-// -----------------------------------------------------
-$input-height-base: 34px;
-
-// Breadcrumb
-// -----------------------------------------------------
-//** Breadcrumb background color
-$breadcrumb-bg:                 $grayLightest;
-//** Breadcrumb text and separator color
-$breadcrumb-color:              $grayLight;
-//** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray;
 
 
 // Media queries breakpoints
@@ -155,5 +95,74 @@ $screen-md-min:              992px;
 
 // Large screen / wide desktop
 $screen-lg-min:              1200px;
+
+
+
+// Variables
+// ================================================== //
+
+// Colors
+// -------------------------------------------------- //
+
+$black: #000;
+$white: #fff;
+$blue: #0080FF;
+$blueBright: #37f;
+$red: #900;
+
+$gray: #ccc;
+$grayLight: lighten($gray, 5%);
+$grayLighter: lighten($gray, 10%);
+$grayLightest: lighten($gray, 15%);
+$grayDark: darken($gray, 15%);
+$grayDarker: darken($gray, 30%);
+$grayDarkest: darken($gray, 45%);
+
+// Blues
+$blue:                  #043F90;
+$blueLight:             lighten($blue, 20%);
+$blueLighter:           lighten($blue, 40%);
+$blueLightest:          lighten($blue, 60%);
+$blueDark:              darken($blue, 2%);
+$blueDarker:            darken($blue, 4%);
+$blueDarkest:           darken($blue, 8%);
+
+// Accent colors
+$blueAccent:            #98B3CD;
+$blueHighlight:		#7EA3B8;
+$navHighlight:			lighten($blueHighlight,25%);
+$blueHover:			#ECF2F7;
+$navyBlue:          	darken($blue, 60%);
+
+// Error colors
+$red:                   #ba2b36;
+$redLight:			lighten($red, 30%);
+$redLighter:			lighten($red, 40%);
+$redLightest:			lighten($red, 50%);
+
+$green:                 #74ae42;
+$greenLight:            lighten($green, 5%);
+$greenLighter:          lighten($green, 10%);
+$greenLightest:         lighten($green, 15%);
+$greenDark:             darken($green, 5%);
+$greenDarker:           darken($green, 15%);
+$greenDarkest:          darken($green, 30%);
+
+$yellow:                #EFB73E;
+$orange:                #f96;
+$schoolbusYellow:		    #FEC200;
+$darkOrange:            darken(#f96, 40%);
+$pink:                  #c3325f;
+$purple:                #986FB1;
+
+$bodyBackground:        #f9f9f9;
+
+
+// Margins & Padding
+// -------------------------------------------------- //
+
+$pageMargin: 1.6em;
+
+
 
 

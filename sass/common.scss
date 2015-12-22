@@ -3,182 +3,135 @@
 * {
 	box-sizing: border-box;
 }
-html, body {
-    height: 100%;
+
+/* Highlight Text Color */
+::selection {
+	color: #fff;
+	background: #f96; /* Safari */
+}
+::-moz-selection {
+	color: #fff;
+	background: #f96; /* Firefox */
+}
+
+/* Global ************* */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
 }
 body {
-	@include vert-gradient($main, lighten($main, 7%));
-	overflow: hidden;
-     -webkit-font-smoothing: antialiased;
-     font-smoothing: antialiased;
+  border-top: 2px solid $schoolbusYellow;
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  color: #444;
+  background-color: $bodyBackground;
+  margin: 0;
+  padding: 0;
 }
-
-
-/* GLOBAL ANCHOR LINKS
-// -----------------------------------------------------*/
+p {
+	margin: 0 0 1.25em 0;
+	line-height: 1.5em;
+}
 a {
-	@include transition(.25s);
-	border-bottom: 1px dotted $grayDarkest; 
-	color: $linkColor;
-	text-decoration: none;
+	color: $blueDarkest;
+  text-decoration: none;
+  &:visited {
+    color: $blueDarkest;
+  }
 	&:hover {
-		color: $linkHoverColor;
-		text-decoration: none;
+		color: $purple;
+		text-decoration: underline;
 	}
 }
 
-hr {
-	border-top-color: $grayLight;
-	margin: 10px 0;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
 
-/* FORM - BOOTSTRAP OVERRIDES
-// -----------------------------------------------------*/
-/* Bootstrap - input group mods */
-.input-group {
-	.input-group-addon {
-		background: $white;
-		border-right: 0;
-		box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	}
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 175%;
+}
+h3 {
+  font-size: 150%;
+}
+h4 {
+  font-size: 125%;
+}
+h5 {
+  font-size: 100%;
+}
+h6 {
+  font-size: 85%;
+}
+section {
+  article {
+    h1 {
+      font-size: 150%;
+      margin-bottom: .75em;
+    }
+    h2 {
+      font-size: 125%;
+    }
+}
 }
 
+/* Buttons ************* */
 
-/* SEARCH TOGGLE
-// -----------------------------------------------------*/
-.toggle-search { // Search Toggle - show / hide search field
-	.input-group-addon {
-		@include no-box-shadow();
-		background: none;
-		border: none;
-	}
-	> .form-control {
-		display: none;
-	}
+.button {
+  font-size: .95em;
+  color: #043F90;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  margin: auto 3px auto 0;
+  outline-style: none;
+  padding: 7px 0 16px 15px;
+  white-space: nowrap;
+  background: url(../img/btns/btn_left.png) no-repeat left center;
+  span {
+    height: 35px;
+    line-height: 35px;
+    margin: 0;
+    padding: 7px 15px 16px 0;
+    background: url(../img/btns/btn_right.png) no-repeat right center;
+  }
+  em {
+    background-position: left center;
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 0;
+    padding: 3px 6px;
+  }
+  &:hover {
+    text-decoration: none;
+    background: url(../img/btns/btn_left_hvr.png) no-repeat left center;
+    span {
+      background: url(../img/btns/btn_right_hvr.png) no-repeat right center;
+    }
+  }
 }
-@media (min-width: 100px) {
-	.form-inline .toggle-search > .form-control {
-		width: 0;
-	}
-}
 
-
-/* COLUMNS - NOT FLEXBOX
-// -----------------------------------------------------*/
 .colonnade {
-	overflow: hidden;
-	width: 100%;
-	> .lt-column, > .rt-column, > .mid-column {
-		float: left;
-	}
-	&.dual {
-		> .lt-column, > .rt-column {
-			width: 50%;
-		}
-	}
-	&.triple {
-		> .lt-column, > .mid-column, > .rt-column {
-			width: 33.3%;
-		}
-	}
-}
-
-
-/* COLUMNS - FLEXBOX
-// -----------------------------------------------------*/
-.flex-colonnade { // Flex Box - Generic Row Flexbox
-	@include flexbox();
-	@include flexDirection(row);
-	@include flexAlign(stretch);
-	.flex-column {
-		@include flexbox();
-		@include flexDirection(column);
-	}
-	.flex-row {
-		@include flexDirection(row);
-	}
-	.flex {
-		@include flex(1);
-	}
-	&.hide-flex {
-		display: none;
-	}
-}
-
-
-/* LABELS
-// -----------------------------------------------------*/
-.label-primary {
-	background-color: $main-blue;
-}
-
-
-/* LISTS
-// -----------------------------------------------------*/
-ul {
-	&.info-list {
-		padding: 0; // Information lists in contextual pane
-		list-style: none;
-		li {
-			a {
-				border-bottom: none;
-				color: $grayDarkest;
-				display: block;
-				padding: 7px 10px;
-				.fa {
-					color: $gray;
-					float: right;
-					font-size: 80%;
-					margin-top: 6px;
-				}
-				.item-status {
-					float: right;
-					> em {
-						color: $grayDark;
-						font-size: 90%;
-						font-style: normal;
-						margin-right: 5px;
-					}
-					.fa {
-						float: none;
-						margin-top: 0;
-					}
-				}
-				&:hover {
-					background: $dropdown-link-hover-bg;
-				}
-			}
-		}
-	}
-}
-
-dl {
-	&.application-list {
-		dt, dd {
-			line-height: 34px;
-			label {
-				width: 100%;
-				cursor: pointer;
-				margin: 0;
-				input[type="checkbox"] {
-					margin: 0 10px;
-				}
-			}
-			&:hover {
-				background: $slatHover;
-			}
-		}
-		dt {
-		}
-		dd {
-			padding-left: $pageMargin;
-			border-bottom: 1px solid $borderColor;
-			label {
-				font-weight: normal;
-			}
-			&:last-child {
-				border-bottom: none;
-			}
-		}
-	}
+  .lt-column {
+    float: left;
+    width: 30.3%;
+  }
+  .mid-column {
+    float: left;
+    width: 39.3%;
+  }
+  .rt-column {
+    float: left;
+    width: 30.3%;
+  }
 }

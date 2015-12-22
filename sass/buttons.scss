@@ -18,33 +18,12 @@ $btnPrimaryBorder: #068;
 $btnPrimaryHvr: darken($btnPrimary, 15%);
 $btnPrimaryBorderHvr: darken($btnPrimaryBorder, 5%);
 
-// btn-success
-$btnSuccess: $green;
-$btnSuccessBorder: darken($btnSuccess, 15%);
-	//hover
-$btnSuccessHvr: darken($btnSuccess,10%);
-$btnSuccessBorderHvr: darken($btnSuccess, 25%);
-
 // btn-info
-$btnInfo: $main;
+$btnInfo: $brown;
 $btnInfoBorder: darken($btnInfo, 15%);
 	//hover
 $btnInfoHvr: darken($btnInfo, 10%);
 $btnInfoBorderHvr: darken($btnInfo, 25%);
-
-// btn-warning
-$btnWarning: $orange;
-$btnWarningBorder: darken($btnWarning, 15%);
-	//hover
-$btnWarningHvr: darken($btnWarning,10%);
-$btnWarningBorderHvr: darken($btnWarning, 25%);
-
-// btn-danger
-$btnDanger: $red;
-$btnDangerBorder: darken($btnDanger, 15%);
-	//hover
-$btnDangerHvr: darken($btnDanger,10%);
-$btnDangerBorderHvr: darken($btnDanger, 25%);
 
 
 // BUTTONS
@@ -65,14 +44,14 @@ $btnDangerBorderHvr: darken($btnDanger, 25%);
 	}
 	&.btn-link {
 		@include no-box-shadow();
-		color: $main;
+		color: $brown;
 		text-decoration: none;
 		.fa {
 			margin-right: 5px;
 			min-width: 12px;
 		}
 		&:focus, &:hover {
-			background: $slatHover;
+			background: $grayLightest;
 			color: $grayDarkest;
 		}
 	}
@@ -101,7 +80,7 @@ $btnDangerBorderHvr: darken($btnDanger, 25%);
 	}
 	// Default Buttons
 	&.btn-default {
-		color: $main;
+		color: $brown;
 		@include vert-gradient($btnDefault, #E6E6E6);
 		border-color: $btnDefaultBorder;
 		&:hover,
@@ -128,20 +107,6 @@ $btnDangerBorderHvr: darken($btnDanger, 25%);
 			@include vert-gradient(#0387AB, #0387AB);
 		}
 	}
-	// Success Buttons
-	&.btn-success {
-		background-color: $btnSuccess;
-		border-color: $btnSuccessBorder;
-		&:hover,
-		&:active, &.active {
-			background-color: $btnSuccessHvr;
-			border-color: $btnSuccessBorderHvr;
-		}
-		// Disabled
-		&.disabled, &.btn[disabled], &[disabled] {
-			color: $grayLightest;
-		}
-	}
 	// Info Buttons
 	&.btn-info {
 		background-color: $btnInfo;
@@ -150,30 +115,6 @@ $btnDangerBorderHvr: darken($btnDanger, 25%);
 		&:active, &.active {
 			background-color: $btnInfoHvr;
 			border-color: $btnInfoBorderHvr;
-		}
-		// Disabled
-		&.disabled, &.btn[disabled], &[disabled] {
-			color: $grayLightest;
-		}
-	}
-	// Warning Buttons
-	&.btn-warning {
-		background-color: $btnWarning;
-		border-color: $btnWarningBorder;
-		&:hover,
-		&:active, &.active {
-			background-color: $btnWarningHvr;
-			border-color: $btnWarningBorderHvr;
-		}
-	}
-	// Danger Buttons
-	&.btn-danger {
-		background-color: $btnDanger;
-		border-color: $btnDangerBorder;
-		&:hover,
-		&:active, &.active {
-			background-color: $btnDangerHvr;
-			border-color: $btnDangerBorderHvr;
 		}
 		// Disabled
 		&.disabled, &.btn[disabled], &[disabled] {

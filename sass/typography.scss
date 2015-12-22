@@ -1,10 +1,12 @@
 /* BEGIN: typography.scss
 // -----------------------------------------------------*/
 
+
 /* HEADER TITLES
 // -----------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
 	margin-top: $pageMargin;
+	letter-spacing: .07rem;
 	&.w-edit {
 		position: relative;
 		.btn-icon {
@@ -16,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 22px;
+	font-weight: 400;
 }
 h2 {
 	font-size: 20px;

@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 		// LiveReload in browser
 		watch: {
 			scripts: {
-				files: ['views/**/*.ejs','sass/**/*.scss'], // File types to watch for
+				files: ['views/**/*.ejs','sass/**/*.scss', 'public/javascripts/**/*js'], // File types to watch for
 				tasks: ['sass'], // Tasks that should run on save
 				options: {
 					livereload: true,

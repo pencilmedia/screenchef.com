@@ -1,0 +1,22 @@
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<header>
+    <hgroup>
+        <h1><a href="<?php echo $thisPage ?>/"><%= companytitle %></a></h1>
+        <h2><%= companydescription %></h2>
+        <p><?php echo $yearsExperience; ?> years of experience in web development, visual and interaction design.
+
+
+        <%= slogan %>
+
+
+   </p>
+    </hgroup>
+    <nav>
+        <a <?php echo 'href="' . $ROOT . '"'; if ($thisPage=="home") echo " id=\"selected\""; ?> >Home</a>&bull;<a <?php echo 'href="' . $ROOT . '/work/"'; if ($thisPage=="work") echo " id=\"selected\""; ?> >Work</a>&bull;<a <?php echo 'href="' . $ROOT . '/about/"'; if ($thisPage=="about") echo " id=\"selected\""; ?> >About</a>
+    </nav>
+</header>
+
+      
