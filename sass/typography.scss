@@ -1,0 +1,46 @@
+/* BEGIN: typography.scss
+// -----------------------------------------------------*/
+
+/* HEADER TITLES
+// -----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	margin-top: $pageMargin;
+	&.w-edit {
+		position: relative;
+		.btn-icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+h1 {
+	font-size: 22px;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 13px; // underlined
+	padding-bottom: 3px;
+	border-bottom: 1px solid $borderColor;
+}
+h5, h6 {
+	text-transform: uppercase;
+}
+
+
+/* TYPOGRAPHY 
+// -----------------------------------------------------*/
+.text-muted { // Bootstrap - helper class
+	color: $gray;
+}

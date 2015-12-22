@@ -1,0 +1,222 @@
+/* BEGIN: buttons.scss
+// -----------------------------------------------------*/
+
+
+// BUTTON VARIABLES
+
+// btn-default
+$btnDefault: #EEE;
+$btnDefaultBorder: darken($btnDefault, 10%);
+	//hover
+$btnDefaultHvr: darken($btnDefault, 5%);
+$btnDefaultBorderHvr: darken($btnDefault, 15%);
+
+// btn-primary
+$btnPrimary: #0E96BB;
+$btnPrimaryBorder: #068;
+	//hover
+$btnPrimaryHvr: darken($btnPrimary, 15%);
+$btnPrimaryBorderHvr: darken($btnPrimaryBorder, 5%);
+
+// btn-success
+$btnSuccess: $green;
+$btnSuccessBorder: darken($btnSuccess, 15%);
+	//hover
+$btnSuccessHvr: darken($btnSuccess,10%);
+$btnSuccessBorderHvr: darken($btnSuccess, 25%);
+
+// btn-info
+$btnInfo: $main;
+$btnInfoBorder: darken($btnInfo, 15%);
+	//hover
+$btnInfoHvr: darken($btnInfo, 10%);
+$btnInfoBorderHvr: darken($btnInfo, 25%);
+
+// btn-warning
+$btnWarning: $orange;
+$btnWarningBorder: darken($btnWarning, 15%);
+	//hover
+$btnWarningHvr: darken($btnWarning,10%);
+$btnWarningBorderHvr: darken($btnWarning, 25%);
+
+// btn-danger
+$btnDanger: $red;
+$btnDangerBorder: darken($btnDanger, 15%);
+	//hover
+$btnDangerHvr: darken($btnDanger,10%);
+$btnDangerBorderHvr: darken($btnDanger, 25%);
+
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn {
+	@include border-radius(3px);
+	font-family: $baseFontFamily;
+	.fa {
+		margin-right: 5px;
+		min-width: 12px;
+	}
+	&.btn-link, &.btn-icon {
+		/* Undo Margin for icon only buttons */
+		.fa {
+			margin-right: 0;
+		}
+	}
+	&.btn-link {
+		@include no-box-shadow();
+		color: $main;
+		text-decoration: none;
+		.fa {
+			margin-right: 5px;
+			min-width: 12px;
+		}
+		&:focus, &:hover {
+			background: $slatHover;
+			color: $grayDarkest;
+		}
+	}
+	// Hover
+	&:hover {
+		@include no-box-shadow();
+		background-position: 0 -15px;
+		text-decoration: none;
+		@include transition(.3s);
+		-webkit-box-shadow: 0 1px 1px rgba(150, 150, 150, .7);
+	     box-shadow: 0 1px 1px rgba(150, 150, 150, .7);
+	}
+	// Disabled
+	&.disabled, &.btn[disabled], &[disabled] {
+		background-image:none;
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		box-shadow:none;
+		color: $grayDark;
+		cursor: default;
+		filter: alpha(opacity=7);
+		font-weight: normal;
+		letter-spacing: 0;
+		opacity: 0.7;
+		text-shadow: none;
+	}
+	// Default Buttons
+	&.btn-default {
+		color: $main;
+		@include vert-gradient($btnDefault, #E6E6E6);
+		border-color: $btnDefaultBorder;
+		&:hover,
+		&:active, &:active{
+			background-color: $btnDefaultHvr;
+			border-color: $btnDefaultBorderHvr;
+		}
+	}
+	// Primary Buttons
+	&.btn-primary {
+		@include vert-gradient($btnPrimary, darken($btnPrimary, 3%));
+		border-color: $btnPrimaryBorder;
+		font-weight: bold;
+		text-shadow: 0 0 1px darken($btnPrimary, 15%);
+		&:hover,
+		&:active, &.active {
+			@include vert-gradient(#0387AB, #0387AB);
+			text-shadow: none; // Flickers unless a gradient
+			border-color: lighten($btnPrimary, 1%);
+		}
+		// Disabled
+		&.disabled, &.btn[disabled], &[disabled] {
+			color: rgba(255,255,255, .5);
+			@include vert-gradient(#0387AB, #0387AB);
+		}
+	}
+	// Success Buttons
+	&.btn-success {
+		background-color: $btnSuccess;
+		border-color: $btnSuccessBorder;
+		&:hover,
+		&:active, &.active {
+			background-color: $btnSuccessHvr;
+			border-color: $btnSuccessBorderHvr;
+		}
+		// Disabled
+		&.disabled, &.btn[disabled], &[disabled] {
+			color: $grayLightest;
+		}
+	}
+	// Info Buttons
+	&.btn-info {
+		background-color: $btnInfo;
+		border-color: $btnInfoBorder;
+		&:hover,
+		&:active, &.active {
+			background-color: $btnInfoHvr;
+			border-color: $btnInfoBorderHvr;
+		}
+		// Disabled
+		&.disabled, &.btn[disabled], &[disabled] {
+			color: $grayLightest;
+		}
+	}
+	// Warning Buttons
+	&.btn-warning {
+		background-color: $btnWarning;
+		border-color: $btnWarningBorder;
+		&:hover,
+		&:active, &.active {
+			background-color: $btnWarningHvr;
+			border-color: $btnWarningBorderHvr;
+		}
+	}
+	// Danger Buttons
+	&.btn-danger {
+		background-color: $btnDanger;
+		border-color: $btnDangerBorder;
+		&:hover,
+		&:active, &.active {
+			background-color: $btnDangerHvr;
+			border-color: $btnDangerBorderHvr;
+		}
+		// Disabled
+		&.disabled, &.btn[disabled], &[disabled] {
+			color: $grayLightest;
+		}
+	}
+	// Shared Styles
+	&.btn-primary,
+	&.btn-warning, 
+	&.btn-danger {
+		color: $white;
+	}
+	&.btn-primary:hover,
+	&.btn-warning:hover,
+	&.btn-danger:hover {
+		color: rgba(255, 255, 255, .8);
+	}
+	&.btn-icon {
+		.fa {
+			margin-right: 0;
+		}
+	}
+	// Buttons with an Icon on the right side
+	&.btn-icon-right {
+		.fa {
+			margin-left: 5px;
+			margin-right: 0;
+		}
+	}
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+	border-radius: 0;
+}
+
+.input-group > .input-group-btn {
+	.btn {
+		height: $input-height-base;
+		outline: 0;
+	}
+}
+
+
+
+/* END: Buttons.scss
+// ----------------------------------------------------*/

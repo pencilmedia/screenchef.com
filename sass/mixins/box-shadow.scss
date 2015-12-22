@@ -1,0 +1,17 @@
+/* BEGIN: box-shadow.scss
+// -----------------------------------------------------*/
+
+// Box Shadow
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow rgba(0, 0, 0, .175);
+          box-shadow: $shadow rgba(0, 0, 0, .175);
+}
+
+@mixin no-box-shadow() {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow:  none;
+}
+

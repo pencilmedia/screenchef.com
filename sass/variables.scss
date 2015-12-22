@@ -1,0 +1,159 @@
+/* BEGIN: variables.scss - for theme.scss
+// -----------------------------------------------------*/
+
+// Base Colors
+// -----------------------------------------------------
+
+$white:				#fff;
+$black:				#000;
+$gray:				#ccc;
+$dark:				#343838;
+
+$green:				#009900; //#0A8A0A;
+$greenLight:			lighten($green, 10%);
+$greenLighter:			lighten($green, 35%);
+$greenLightest:		lighten($green, 45%);
+$greenDark:			darken($green, 10%);
+$greenDarker:			darken($green, 20%);
+$greenDarkest:			darken($green, 30%);
+
+$orange:				#f0ad4e;
+$orangeLight:			lighten($orange, 10%);
+$orangeLighter:		lighten($orange, 20%);
+$orangeLightest:		lighten($orange, 30%);
+$orangeDark:			darken($orange, 10%);
+$orangeDarker:			darken($orange, 20%);
+$orangeDarkest:		darken($orange, 30%);
+
+$red:				#E50015;
+$redLight:			lighten($red, 35%);
+$redLighter:			lighten($red, 45%);
+$redLightest:			lighten($red, 52%);
+$redDark:				darken($red, 10%);
+$redDarker:			darken($red, 18%);
+$redDarkest:			darken($red, 25%);
+
+$yellow:				#f2e6a7;
+$yellowLight:			lighten($yellow, 15%);
+
+// Grays
+$gray:               	#999;
+$grayLight:          	lighten($gray, 18%);
+$grayLighter:        	lighten($gray, 26%);
+$grayLightest:       	lighten($gray, 34%);
+$grayDark:           	darken($gray, 20%);
+$grayDarker:         	darken($gray, 30%);
+$grayDarkest:        	darken($gray, 40%);
+
+// Blues
+$blue:        			#527FA5; // old - #3369E8;
+$blueLight:   			lighten($blue, 20%);
+$blueLighter: 			lighten($blue, 30%);
+$blueLightest:			lighten($blue, 40%);
+$blueDark:    			darken($blue, 15%);
+$blueDarker:  			darken($blue, 25%);
+$blueDarkest: 			darken($blue, 35%);
+$navyBlue:			#2D4F62;
+$brightBlue: 		     #4A90E2;
+
+// Primary Color Palette
+// -----------------------------------------------------
+
+$main: 				#eddec3; //#EFECD8; // grayish blue
+$main-tint: 			lighten($main, 45%);
+$main-blue: 			#0387ab; // bright blue
+$highlight-blue: 		#72c9ca; // aqua blue
+$highlight-green: 		#d2db26; //greenish yellow
+
+
+// Typography
+// -----------------------------------------------------
+
+$baseFontSize:          12px;
+$baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseLineHeight:        28px;
+$fontFamilyLight:	    "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+
+//** Background color for `<body>`.
+$bodyBG:               $white;
+//** Global text color on `<body>`.
+$textColor:            $grayDarkest;
+
+//** Global textual link color.
+$linkColor:            $main-blue;
+//** Link hover color set via `darken()` function.
+$linkHoverColor:      darken($linkColor, 15%);
+//** Link hover decoration.
+$linkHoverDecoration: underline;
+
+
+// Forms
+// -----------------------------------------------------
+
+$inputBorder:  					$blueDark;
+
+$placeholderText: 					#a9a9a9;
+// Required Placeholder Text
+$required-placeholder:        		$brightBlue;
+
+$errorText:						#a94442;
+$errorBorder:						$redLighter;
+$errorBG:							$redLightest;
+
+
+// Common
+// -----------------------------------------------------
+$pageMargin: 				20px;
+$borderColor: 				#E7EAEC;
+$borderColorHighlight: 		$highlight-blue;
+
+
+// Layout
+// -----------------------------------------------------
+$navbarHeight: 			45px;
+$contextPaneWidth: 			480px;
+
+
+// Slats
+// -----------------------------------------------------
+$shortSlatHeight: 			45px;
+$midSlatHeight: 			60px;
+$tallSlatHeight: 			75px;
+$slatHover: 				$blueLightest;
+
+
+// Lists
+// -----------------------------------------------------
+$dropdown-link-hover-color: 	$grayDarkest;
+$dropdown-link-hover-bg: 	$slatHover;
+
+// Forms
+// -----------------------------------------------------
+$input-height-base: 34px;
+
+// Breadcrumb
+// -----------------------------------------------------
+//** Breadcrumb background color
+$breadcrumb-bg:                 $grayLightest;
+//** Breadcrumb text and separator color
+$breadcrumb-color:              $grayLight;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       $gray;
+
+
+// Media queries breakpoints
+// -----------------------------------------------------
+
+// Extra small screen / phone
+$screen-xs-min:              480px;
+
+// Small screen / tablet
+$screen-sm-min:              768px;
+
+// Medium screen / desktop
+$screen-md-min:              992px;
+
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+
+

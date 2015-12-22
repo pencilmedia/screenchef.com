@@ -1,0 +1,30 @@
+/* BEGIN: responsive.scss
+// -----------------------------------------------------*/
+
+/*  RESPONSIVE BEHAVIOR
+// -----------------------------------------------------*/
+// In between Large and Medium 
+@media(max-width: 1440px) and (min-width: $screen-md-min) {
+	
+}
+
+// Large Desktop - > 1200px
+@media(min-width: $screen-lg-min) {
+	
+}
+
+// Medium Desktop - > 992px
+@media(min-width: $screen-md-min) {
+	
+}
+
+// Tablet Portrait - > 768px
+@media(max-width: $screen-sm-min) {
+
+}
+
+// Phone Portrait - > 480px
+@media(max-width: $screen-xs-min) {
+	
+}
+

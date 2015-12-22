@@ -1,0 +1,31 @@
+/* BEGIN: Include Mixins
+// -----------------------------------------------------*/
+
+@import "mixins/vendor-prefixes";
+@import "mixins/border-radius";
+@import "mixins/box-shadow";
+@import "mixins/flex-box";
+@import "mixins/transition";
+@import "mixins/gradient";
+
+
+/* COMMON REUSABLE MIXINS
+// -----------------------------------------------------*/
+@mixin text-truncate() {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Placeholder text
+// -------------------------
+@mixin placeholderText() {
+  &:-moz-placeholder {
+    color:$placeholderText;
+  }
+  &:-ms-input-placeholder {
+    color:$placeholderText;
+  }
+  &::-webkit-input-placeholder {
+    color:$placeholderText;
+  }
+}
