@@ -15,8 +15,10 @@ router.get('/', function(req, res, next) {
 router.get('/work', function(req, res, next) {
   res.render('work', {
     title: 'screenchef : Work',
-    h1: 'Services',
-    classname: 'work'
+    h1: 'Work',
+    classname: 'work',
+    companytitle: 'Ralph Adrian Garcia',
+    companydescription: 'Interaction Designer and Prototyper'
   });
 });
 
@@ -25,7 +27,9 @@ router.get('/about', function(req, res, next) {
   res.render('about', {
     title: 'screenchef : About',
     h1: 'About',
-    classname: 'about'
+    classname: 'about',
+    companytitle: 'Ralph Adrian Garcia',
+    companydescription: 'Interaction Designer and Prototyper'
   });
 });
 
