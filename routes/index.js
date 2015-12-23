@@ -7,8 +7,7 @@ router.get('/', function(req, res, next) {
     title: 'screenchef',
     classname: 'hmpg',
     companytitle: 'Ralph Adrian Garcia',
-    companydescription: 'Interaction Designer and Prototyper',
-    slogan: 'Reveal character, personality, abilities and much more!'
+    companydescription: 'Interaction Designer and Prototyper'
   });
 });
 
@@ -21,12 +20,12 @@ router.get('/work', function(req, res, next) {
   });
 });
 
-/* GET contact. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', {
-    title: 'screenchef : Contact',
-    h1: 'Contact',
-    classname: 'contact'
+/* GET about. */
+router.get('/about', function(req, res, next) {
+  res.render('about', {
+    title: 'screenchef : About',
+    h1: 'About',
+    classname: 'about'
   });
 });
 

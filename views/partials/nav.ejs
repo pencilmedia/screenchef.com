@@ -6,16 +6,14 @@
     <hgroup>
         <h1><a href="<?php echo $thisPage ?>/"><%= companytitle %></a></h1>
         <h2><%= companydescription %></h2>
-        <p><?php echo $yearsExperience; ?> years of experience in web development, visual and interaction design.
-
-
-        <%= slogan %>
-
-
-   </p>
+        <p><span data-id="yearsExperience"></span> years of experience in web development, visual and interaction design.</p>
     </hgroup>
     <nav>
-        <a <?php echo 'href="' . $ROOT . '"'; if ($thisPage=="home") echo " id=\"selected\""; ?> >Home</a>&bull;<a <?php echo 'href="' . $ROOT . '/work/"'; if ($thisPage=="work") echo " id=\"selected\""; ?> >Work</a>&bull;<a <?php echo 'href="' . $ROOT . '/about/"'; if ($thisPage=="about") echo " id=\"selected\""; ?> >About</a>
+       <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/about">About</a></li>
+       </ul>
     </nav>
 </header>
 

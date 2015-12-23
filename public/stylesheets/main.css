@@ -323,15 +323,17 @@ header {
       margin-bottom: 2em; }
   header nav {
     color: #ccc; }
-    header nav a {
-      display: inline-block;
-      padding: 5px 15px;
-      text-shadow: 0 1px #fff; }
-      header nav a:last-child {
-        padding-right: 0; }
-      header nav a#selected {
-        color: #986FB1;
-        font-weight: bold; }
+    header nav > ul {
+      list-style: none; }
+      header nav > ul li {
+        display: inline-block; }
+        header nav > ul li a {
+          display: inline-block;
+          padding: 5px 15px;
+          text-shadow: 0 1px #fff; }
+          header nav > ul li a#selected {
+            color: #986FB1;
+            font-weight: bold; }
 
 /* BEGIN: buttons.scss
 // -----------------------------------------------------*/

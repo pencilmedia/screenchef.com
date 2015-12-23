@@ -27,16 +27,19 @@ header {
   nav {
     // Position is in responsive.scss
     color: $gray;
-    a {
-      display: inline-block;
-      padding: 5px 15px;
-      text-shadow: 0 1px #fff;
-      &:last-child {
-        padding-right: 0;
-      }
-      &#selected {
-        color: $purple;
-        font-weight: bold;
+    > ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          padding: 5px 15px;
+          text-shadow: 0 1px #fff;
+          &#selected {
+            color: $purple;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
