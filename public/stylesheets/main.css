@@ -223,8 +223,6 @@ p {
 a {
   color: #032e68;
   text-decoration: none; }
-  a:visited {
-    color: #032e68; }
   a:hover {
     color: #986FB1;
     text-decoration: underline; }

@@ -38,9 +38,6 @@ p {
 a {
 	color: $blueDarkest;
   text-decoration: none;
-  &:visited {
-    color: $blueDarkest;
-  }
 	&:hover {
 		color: $purple;
 		text-decoration: underline;
