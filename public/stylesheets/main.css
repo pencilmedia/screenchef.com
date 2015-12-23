@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BEGIN: theme.scss
 // -----------------------------------------------------*/
 /* BEGIN: variables.scss - for theme.scss
@@ -22,8 +23,8 @@
 // -----------------------------------------------------*/
 main {
   /* This div is stretched height 100% by setting html, 
-body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls
-correctly and if it is shorter it won't shrink to fit content */
+  body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls
+  correctly and if it is shorter it won't shrink to fit content */
   margin: 0 auto;
   min-height: 100%;
   position: relative;
@@ -203,8 +204,7 @@ h5, h6 {
 * {
   box-sizing: border-box; }
 
-html,
-body {
+html, body {
   height: 100%; }
 
 body {
@@ -310,7 +310,8 @@ header {
   margin: 2em 15% 0 15%; }
   header + section {
     margin: 2em 15% 0 15%; }
-  header hgroup h1, header hgroup h2 {
+  header hgroup h1,
+  header hgroup h2 {
     margin-bottom: .15em; }
   header hgroup h1 a {
     color: #595959; }
@@ -329,9 +330,13 @@ header {
           display: inline-block;
           padding: 5px 15px;
           text-shadow: 0 1px #fff; }
-          header nav > ul li a#selected {
+          header nav > ul li a.active {
             color: #986FB1;
             font-weight: bold; }
+        header nav > ul li:after {
+          content: "•"; }
+        header nav > ul li:last-child:after {
+          content: ""; }
 
 /* BEGIN: buttons.scss
 // -----------------------------------------------------*/

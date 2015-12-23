@@ -1,26 +1,25 @@
 /* BEGIN: common.scss (global app styles)
 // -----------------------------------------------------*/
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Highlight Text Color */
 ::selection {
-	color: #fff;
-	background: #f96; /* Safari */
+  color: #fff;
+  background: #f96;    /* Safari */
 }
 ::-moz-selection {
-	color: #fff;
-	background: #f96; /* Firefox */
+  color: #fff;
+  background: #f96;    /* Firefox */
 }
 
 /* Global ************* */
 * {
   box-sizing: border-box;
 }
-html,
-body {
-	height: 100%;
+html, body {
+  height: 100%;
 }
 body {
   border-top: 2px solid $schoolbusYellow;
@@ -32,23 +31,22 @@ body {
   padding: 0;
 }
 p {
-	margin: 0 0 1.25em 0;
-	line-height: 1.5em;
+  margin: 0 0 1.25em 0;
+  line-height: 1.5em;
 }
 a {
-	color: $blueDarkest;
+  color: $blueDarkest;
   text-decoration: none;
-	&:hover {
-		color: $purple;
-		text-decoration: underline;
-	}
-}
 
+  &:hover {
+    color: $purple;
+    text-decoration: underline;
+  }
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-
 h1 {
   font-size: 200%;
 }
@@ -76,11 +74,10 @@ section {
     h2 {
       font-size: 125%;
     }
-}
+  }
 }
 
 /* Buttons ************* */
-
 .button {
   font-size: .95em;
   color: #043F90;
@@ -94,6 +91,7 @@ section {
   padding: 7px 0 16px 15px;
   white-space: nowrap;
   background: url(../img/btns/btn_left.png) no-repeat left center;
+
   span {
     height: 35px;
     line-height: 35px;
@@ -112,12 +110,12 @@ section {
   &:hover {
     text-decoration: none;
     background: url(../img/btns/btn_left_hvr.png) no-repeat left center;
+
     span {
       background: url(../img/btns/btn_right_hvr.png) no-repeat right center;
     }
   }
 }
-
 .colonnade {
   .lt-column {
     float: left;
