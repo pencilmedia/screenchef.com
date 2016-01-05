@@ -16,7 +16,7 @@
 		$("[data-id='getTheYear']").text(thisYear);
   	},
   	getYearsExperience: function() {
-		today.setFullYear(1999);
+		today.setFullYear(2000);
 		startYear = today.getFullYear();
 		yearsExperience = thisYear - startYear;
 		$("[data-id='yearsExperience']").text(yearsExperience);
