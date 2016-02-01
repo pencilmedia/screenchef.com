@@ -511,15 +511,10 @@ header {
 /* BEGIN: footer.scss
 // -----------------------------------------------------*/
 footer {
-  background: #f9f9f9;
-  bottom: 5px;
-  display: block;
-  position: absolute;
-  width: 100%;
-  z-index: 1050;
-  padding: 1.6em; }
+  background: #f9f9f9; }
   footer ul {
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
     footer ul li {
       color: #a6a6a6;
       display: inline-block;
@@ -550,7 +545,13 @@ footer {
   main section article .colonnade.cards .mid-column {
     min-height: 400px; }
   main section article .colonnade.cards .rt-column {
-    min-height: 350px; } }
+    min-height: 350px; }
+  footer {
+    position: absolute;
+    z-index: 1050;
+    bottom: 0;
+    display: block;
+    width: 100%; } }
 
 /* Tablet and Phone - <768px */
 @media (max-width: 768px) {
@@ -572,13 +573,7 @@ footer {
   main section article .colonnade.cards .mid-column {
     min-height: 500px; }
   main section article .colonnade.cards .rt-column {
-    min-height: 450px; } }
-
-@media (max-width: 480px) {
-  /* Begin Navigation */
-  header hgroup h2 + p {
-    margin-bottom: 0; }
-  /* Begin Layout */
+    min-height: 450px; }
   main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
     position: inherit;
     float: none;
@@ -586,3 +581,9 @@ footer {
     min-height: 100px;
     top: auto;
     left: auto; } }
+
+@media (max-width: 480px) {
+  /* Begin Navigation */
+  header hgroup h2 + p {
+    margin-bottom: 0; }
+  /* Begin Layout */ }

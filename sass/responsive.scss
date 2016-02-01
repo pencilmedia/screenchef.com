@@ -10,7 +10,7 @@
 
 // Large Desktop - > 1200px
 @media(min-width: $screen-lg-min) {
-	
+
 }
 
 // Medium Desktop - > 992px
@@ -48,6 +48,13 @@
         }
       }
     }
+  }
+  footer {
+    position: absolute;
+    z-index: 1050;
+    bottom: 0;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -88,6 +95,14 @@
             .rt-column {
               min-height: 450px;
             }
+            .lt-column, .mid-column, .rt-column {
+              position: inherit;
+              float: none;
+              width: 100%;
+              min-height: 100px;
+              top: auto;
+              left: auto;
+            }
           }
         }
       }
@@ -112,18 +127,7 @@
   main {
     section {
       article {
-        .colonnade {
-          &.cards {
-            .lt-column, .mid-column, .rt-column {
-              position: inherit;
-              float: none;
-              width: 100%;
-              min-height: 100px;
-              top: auto;
-              left: auto;
-            }
-          }
-        }
+       
       }
     }
   }

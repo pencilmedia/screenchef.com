@@ -3,14 +3,9 @@
 
 footer {
     background: $bodyBackground;
-    bottom: 5px;
-    display: block;
-    position: absolute;
-    width: 100%;
-    z-index: 1050;
-    padding: $pageMargin;
     ul {
         text-align: center;
+        margin: 0;
         li {
             color: $grayDark;
             display: inline-block;
