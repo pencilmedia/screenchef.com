@@ -68,6 +68,8 @@ only screen and (max-device-width: 667px),
 only screen and (max-width: 480px) and (orientation : portrait) { 
   /* Begin Navigation */
   header {
+     margin-left: $pageMargin;
+     margin-right: $pageMargin;
     nav {
       margin: 1em  0;
       a {
@@ -88,6 +90,8 @@ only screen and (max-width: 480px) and (orientation : portrait) {
   /* Begin Layout */
   main {
     section {
+     margin-left: $pageMargin;
+     margin-right: $pageMargin;
       article {
         .colonnade {
           &.cards {

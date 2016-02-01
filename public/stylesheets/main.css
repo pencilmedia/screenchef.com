@@ -554,31 +554,37 @@ footer {
 /* Tablet and Phone - <768px */
 @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
   /* Begin Navigation */
-  header nav {
-    margin: 1em  0; }
-    header nav a {
-      margin: 0;
-      width: 30.3%; }
-      header nav a:first-child {
-        padding-left: 0; }
-      header nav a:nth-child(2) {
-        text-align: center; }
-      header nav a:last-child {
-        text-align: right; }
+  header {
+    margin-left: 1.6em;
+    margin-right: 1.6em; }
+    header nav {
+      margin: 1em  0; }
+      header nav a {
+        margin: 0;
+        width: 30.3%; }
+        header nav a:first-child {
+          padding-left: 0; }
+        header nav a:nth-child(2) {
+          text-align: center; }
+        header nav a:last-child {
+          text-align: right; }
   /* Begin Layout */
-  main section article .colonnade.cards .lt-column {
-    min-height: 450px; }
-  main section article .colonnade.cards .mid-column {
-    min-height: 500px; }
-  main section article .colonnade.cards .rt-column {
-    min-height: 450px; }
-  main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
-    position: inherit;
-    float: none;
-    width: 100%;
-    min-height: 100px;
-    top: auto;
-    left: auto; } }
+  main section {
+    margin-left: 1.6em;
+    margin-right: 1.6em; }
+    main section article .colonnade.cards .lt-column {
+      min-height: 450px; }
+    main section article .colonnade.cards .mid-column {
+      min-height: 500px; }
+    main section article .colonnade.cards .rt-column {
+      min-height: 450px; }
+    main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
+      position: inherit;
+      float: none;
+      width: 100%;
+      min-height: 100px;
+      top: auto;
+      left: auto; } }
 
 @media only screen and (max-width: 480px) {
   /* Begin Navigation */
