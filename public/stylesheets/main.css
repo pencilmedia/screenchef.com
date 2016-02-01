@@ -532,7 +532,7 @@ footer {
 /* BEGIN: responsive.scss
 // -----------------------------------------------------*/
 /* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
-@media screen and (min-device-width: 414px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
   /* Begin Navigation */
   header nav {
     position: absolute;
@@ -554,7 +554,7 @@ footer {
     width: 100%; } }
 
 /* Tablet and Phone - <768px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
   /* Begin Navigation */
   header nav {
     margin: 1em  0; }

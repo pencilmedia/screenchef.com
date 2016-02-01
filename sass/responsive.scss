@@ -19,8 +19,10 @@
 }
 
 // Tablet Portrait - > 768px
-@media screen and (min-device-width : 414px) 
-and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 640px), 
+only screen and (max-device-width: 667px), 
+only screen and (max-width: 480px) and (orientation : portrait) { 
+
   /* Begin Navigation */
   header {
     nav {
@@ -61,7 +63,9 @@ and (-webkit-device-pixel-ratio: 3) {
 
 
 /* Tablet and Phone - <768px */
-@media only screen and (max-width: $screen-sm-min) {
+@media only screen and (max-device-width: 640px), 
+only screen and (max-device-width: 667px), 
+only screen and (max-width: 480px) and (orientation : portrait) { 
   /* Begin Navigation */
   header {
     nav {
