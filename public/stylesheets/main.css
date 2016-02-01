@@ -55,12 +55,15 @@ main {
             margin-top: 10px; }
         main section article .colonnade.cards .lt-column {
           right: -5px;
-          top: 1.6em; }
+          top: 1.6em;
+          min-height: 350px; }
         main section article .colonnade.cards .mid-column {
-          z-index: 2; }
+          z-index: 2;
+          min-height: 400px; }
         main section article .colonnade.cards .rt-column {
           left: -5px;
-          top: 1.6em; }
+          top: 1.6em;
+          min-height: 350px; }
     main section article.callout {
       background-color: #f6f6f6;
       color: gray;
@@ -530,7 +533,7 @@ footer {
 /* BEGIN: responsive.scss
 // -----------------------------------------------------*/
 /* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (min-width: 992px) {
   /* Begin Navigation */
   header nav {
     position: absolute;
@@ -538,12 +541,6 @@ footer {
     right: 0;
     text-align: right; }
   /* Begin Layout */
-  main section article .colonnade.cards .lt-column {
-    min-height: 350px; }
-  main section article .colonnade.cards .mid-column {
-    min-height: 400px; }
-  main section article .colonnade.cards .rt-column {
-    min-height: 350px; }
   footer {
     position: absolute;
     z-index: 1050;
@@ -552,39 +549,33 @@ footer {
     width: 100%; } }
 
 /* Tablet and Phone - <768px */
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 768px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
   /* Begin Navigation */
-  header {
-    margin-left: 1.6em;
-    margin-right: 1.6em; }
-    header nav {
-      margin: 1em  0; }
-      header nav a {
-        margin: 0;
-        width: 30.3%; }
-        header nav a:first-child {
-          padding-left: 0; }
-        header nav a:nth-child(2) {
-          text-align: center; }
-        header nav a:last-child {
-          text-align: right; }
+  header nav {
+    margin: 1em  0; }
+    header nav a {
+      margin: 0;
+      width: 30.3%; }
+      header nav a:first-child {
+        padding-left: 0; }
+      header nav a:nth-child(2) {
+        text-align: center; }
+      header nav a:last-child {
+        text-align: right; }
   /* Begin Layout */
-  main section {
-    margin-left: 1.6em;
-    margin-right: 1.6em; }
-    main section article .colonnade.cards .lt-column {
-      min-height: 450px; }
-    main section article .colonnade.cards .mid-column {
-      min-height: 500px; }
-    main section article .colonnade.cards .rt-column {
-      min-height: 450px; }
-    main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
-      position: inherit;
-      float: none;
-      width: 100%;
-      min-height: 100px;
-      top: auto;
-      left: auto; } }
+  main section article .colonnade.cards .lt-column {
+    min-height: 450px; }
+  main section article .colonnade.cards .mid-column {
+    min-height: 500px; }
+  main section article .colonnade.cards .rt-column {
+    min-height: 450px; }
+  main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
+    position: inherit;
+    float: none;
+    width: 100%;
+    min-height: 100px;
+    top: auto;
+    left: auto; } }
 
 @media only screen and (max-width: 480px) {
   /* Begin Navigation */

@@ -16,13 +16,6 @@
 // Medium Desktop - > 992px
 @media only screen and (min-width: $screen-md-min) {
 	
-}
-
-// Tablet Portrait - > 768px
-@media only screen and (max-device-width: 640px), 
-only screen and (max-device-width: 667px), 
-only screen and (max-width: 480px) and (orientation : portrait) { 
-
   /* Begin Navigation */
   header {
     nav {
@@ -36,19 +29,6 @@ only screen and (max-width: 480px) and (orientation : portrait) {
   main {
     section {
       article {
-        .colonnade {
-          &.cards {
-            .lt-column {
-              min-height: 350px;
-            }
-            .mid-column {
-              min-height: 400px;
-            }
-            .rt-column {
-              min-height: 350px;
-            }
-          }
-        }
       }
     }
   }
@@ -61,15 +41,12 @@ only screen and (max-width: 480px) and (orientation : portrait) {
   }
 }
 
-
 /* Tablet and Phone - <768px */
-@media only screen and (max-device-width: 640px), 
+@media only screen and (max-width: $screen-sm-min),
 only screen and (max-device-width: 667px), 
 only screen and (max-width: 480px) and (orientation : portrait) { 
   /* Begin Navigation */
   header {
-     margin-left: $pageMargin;
-     margin-right: $pageMargin;
     nav {
       margin: 1em  0;
       a {
@@ -90,8 +67,6 @@ only screen and (max-width: 480px) and (orientation : portrait) {
   /* Begin Layout */
   main {
     section {
-     margin-left: $pageMargin;
-     margin-right: $pageMargin;
       article {
         .colonnade {
           &.cards {

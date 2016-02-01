@@ -18,10 +18,8 @@ main {
     article {
       .colonnade {
         overflow: hidden;
-
         .lt-column, .mid-column, .rt-column {
           padding-left: 10px;
-
           h2 {
             margin: 1em 0;
           }
@@ -49,13 +47,16 @@ main {
           .lt-column {
             right: -5px;
             top: $pageMargin;
+            min-height: 350px;
           }
           .mid-column {
             z-index: 2;
+            min-height: 400px;
           }
           .rt-column {
             left: -5px;
             top: $pageMargin;
+            min-height: 350px;
           }
         }
       }
