@@ -19,7 +19,14 @@
 }
 
 // Tablet Portrait - > 768px
-@media only screen and (min-width: $screen-sm-min) {
+@media only screen and (min-width: $screen-sm-min) 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px)
+    and (device-width : 414px)
+    and (device-height : 736px)
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 3) 
+    and (-webkit-device-pixel-ratio : 3) {
   /* Begin Navigation */
   header {
     nav {
@@ -60,7 +67,14 @@
 
 
 /* Tablet and Phone - <768px */
-@media only screen and (max-width: $screen-sm-min) {
+@media only screen and (max-width: $screen-sm-min) 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px)
+    and (device-width : 414px)
+    and (device-height : 736px)
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 3) 
+    and (-webkit-device-pixel-ratio : 3){
   /* Begin Navigation */
   header {
     nav {
@@ -112,7 +126,14 @@
 
 
 // Phone Portrait - > 480px
-@media only screen and (max-width: $screen-xs-min) {
+@media only screen and (max-width: $screen-xs-min) 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px)
+    and (device-width : 414px)
+    and (device-height : 736px)
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 3) 
+    and (-webkit-device-pixel-ratio : 3){
   /* Begin Navigation */
   header {
     hgroup {
