@@ -4,22 +4,22 @@
 
 
 // In between Large and Medium 
-@media(max-width: 1440px) and (min-width: $screen-md-min) {
+@media only screen and (max-width: 1440px) and (min-width: $screen-md-min) {
 	
 }
 
 // Large Desktop - > 1200px
-@media(min-width: $screen-lg-min) {
+@media only screen and (min-width: $screen-lg-min) {
 
 }
 
 // Medium Desktop - > 992px
-@media(min-width: $screen-md-min) {
+@media only screen and (min-width: $screen-md-min) {
 	
 }
 
 // Tablet Portrait - > 768px
-@media(min-width: $screen-sm-min) {
+@media only screen and (min-width: $screen-sm-min) {
   /* Begin Navigation */
   header {
     nav {
@@ -60,7 +60,7 @@
 
 
 /* Tablet and Phone - <768px */
-@media (max-width: $screen-sm-min) {
+@media only screen and (max-width: $screen-sm-min) {
   /* Begin Navigation */
   header {
     nav {
@@ -112,7 +112,7 @@
 
 
 // Phone Portrait - > 480px
-@media(max-width: $screen-xs-min) {
+@media only screen and (max-width: $screen-xs-min) {
   /* Begin Navigation */
   header {
     hgroup {
