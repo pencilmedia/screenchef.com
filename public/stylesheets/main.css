@@ -532,23 +532,13 @@ footer {
 /* BEGIN: responsive.scss
 // -----------------------------------------------------*/
 /* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) and (-webkit-device-pixel-ratio: 3) {
+@media screen and (min-device-width: 414px) and (-webkit-device-pixel-ratio: 3) {
   /* Begin Navigation */
   header nav {
     position: absolute;
     top: .5em;
     right: 0;
-    text-align: right;
-    margin: 1em  0; }
-    header nav a {
-      margin: 0;
-      width: 30.3%; }
-      header nav a:first-child {
-        padding-left: 0; }
-      header nav a:nth-child(2) {
-        text-align: center; }
-      header nav a:last-child {
-        text-align: right; }
+    text-align: right; }
   /* Begin Layout */
   main section article .colonnade.cards .lt-column {
     min-height: 350px; }
@@ -566,6 +556,17 @@ footer {
 /* Tablet and Phone - <768px */
 @media only screen and (max-width: 768px) {
   /* Begin Navigation */
+  header nav {
+    margin: 1em  0; }
+    header nav a {
+      margin: 0;
+      width: 30.3%; }
+      header nav a:first-child {
+        padding-left: 0; }
+      header nav a:nth-child(2) {
+        text-align: center; }
+      header nav a:last-child {
+        text-align: right; }
   /* Begin Layout */
   main section article .colonnade.cards .lt-column {
     min-height: 450px; }
@@ -581,7 +582,7 @@ footer {
     top: auto;
     left: auto; } }
 
-@media only screen and (max-width: 480px) and (min-device-width: 414px) and (max-device-width: 736px) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-width: 480px) {
   /* Begin Navigation */
   header hgroup h2 + p {
     margin-bottom: 0; }

@@ -1,20 +1,121 @@
-                /* BEGIN: responsive.scss
+/* BEGIN: responsive.scss
 // -----------------------------------------------------*/
 /* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
 
+
 // In between Large and Medium 
-@media only screen and (max-width: 1440px) and (min-width: $screen-md-min) {}
+@media only screen and (max-width: 1440px) and (min-width: $screen-md-min) {
+	
+}
 
 // Large Desktop - > 1200px
-@media only screen and (min-width: $screen-lg-min) {}
+@media only screen and (min-width: $screen-lg-min) {
+
+}
 
 // Medium Desktop - > 992px
-@media only screen and (min-width: $screen-md-min) {}
+@media only screen and (min-width: $screen-md-min) {
+	
+}
 
-// Tablet Portrait to Phone - > 768px
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) and (-webkit-device-pixel-ratio: 3) {
-/* Begin Navigation */
-header {
+// Tablet Portrait - > 768px
+@media screen and (min-device-width : 414px) 
+and (-webkit-device-pixel-ratio: 3) {
+  /* Begin Navigation */
+  header {
+    nav {
+      position: absolute;
+      top: .5em;
+      right: 0;
+      text-align: right;
+    }
+  }
+  /* Begin Layout */
+  main {
+    section {
+      article {
+        .colonnade {
+          &.cards {
+            .lt-column {
+              min-height: 350px;
+            }
+            .mid-column {
+              min-height: 400px;
+            }
+            .rt-column {
+              min-height: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: absolute;
+    z-index: 1050;
+    bottom: 0;
+    display: block;
+    width: 100%;
+  }
+}
+
+
+/* Tablet and Phone - <768px */
+@media only screen and (max-width: $screen-sm-min) {
+  /* Begin Navigation */
+  header {
+    nav {
+      margin: 1em  0;
+      a {
+        margin: 0;
+        width: 30.3%;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:nth-child(2) {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+  /* Begin Layout */
+  main {
+    section {
+      article {
+        .colonnade {
+          &.cards {
+            .lt-column {
+              min-height: 450px;
+            }
+            .mid-column {
+              min-height: 500px;
+            }
+            .rt-column {
+              min-height: 450px;
+            }
+            .lt-column, .mid-column, .rt-column {
+              position: inherit;
+              float: none;
+              width: 100%;
+              min-height: 100px;
+              top: auto;
+              left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Phone Portrait - > 480px
+@media only screen and (max-width: $screen-xs-min) {
+  /* Begin Navigation */
+  header {
     hgroup {
         h2 {
             + p {
@@ -22,60 +123,14 @@ header {
             }
         }
     }
-    nav {
-        position: absolute;
-        top: .5em;
-        right: 0;
-        text-align: right;
-        margin: 1em 0;
-        a {
-            margin: 0;
-            width: 30.3%;
-            &:first-child {
-                padding-left: 0;
-            }
-            &:nth-child(2) {
-                text-align: center;
-            }
-            &:last-child {
-                text-align: right;
-            }
-        }
-    }
-}
-/* Begin Layout */
-main {
+  }
+  /* Begin Layout */
+  main {
     section {
-        article {
-            .colonnade {
-                &.cards {
-                    .lt-column {
-                        min-height: 450px;
-                    }
-                    .mid-column {
-                        min-height: 500px;
-                    }
-                    .rt-column {
-                        min-height: 450px;
-                    }
-                    .lt-column,
-                    .mid-column,
-                    .rt-column {
-                        position: inherit;
-                        float: none;
-                        width: 100%;
-                        min-height: 100px;
-                        top: auto;
-                        left: auto;
-                    }
-                }
-            }
-        }
-        footer {
-            position: absolute;
-            z-index: 1050;
-            bottom: 0;
-            display: block;
-            width: 100%;
-        }
+      article {
+       
+      }
     }
+  }
+}
+
