@@ -17,7 +17,7 @@ main {
 
     article {
       .colonnade {
-        overflow: auto;
+        overflow: hidden;
 
         .lt-column, .mid-column, .rt-column {
           padding-left: 10px;
@@ -31,15 +31,14 @@ main {
         }
         &.cards {
           font-family: 'Inconsolata';
-          padding: $pageMargin 15%;
-
+          padding: $pageMargin 5px;
           .lt-column, .mid-column, .rt-column {
             background: #f3f3f3;
             border: 1px solid $white;
             box-shadow: 0 0 15px $grayLight;
             outline: 1px solid $grayLight;
             overflow: auto;
-            padding: $pageMargin 10px;
+            padding: $pageMargin 30px;
             position: relative;
 
             h1 {

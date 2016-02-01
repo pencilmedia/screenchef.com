@@ -32,7 +32,7 @@ main {
   main section {
     margin-top: 0; }
     main section article .colonnade {
-      overflow: auto; }
+      overflow: hidden; }
       main section article .colonnade .lt-column, main section article .colonnade .mid-column, main section article .colonnade .rt-column {
         padding-left: 10px; }
         main section article .colonnade .lt-column h2, main section article .colonnade .mid-column h2, main section article .colonnade .rt-column h2 {
@@ -41,14 +41,14 @@ main {
           padding-left: 0; }
       main section article .colonnade.cards {
         font-family: 'Inconsolata';
-        padding: 1.6em 15%; }
+        padding: 1.6em 5px; }
         main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
           background: #f3f3f3;
           border: 1px solid #fff;
           box-shadow: 0 0 15px #d9d9d9;
           outline: 1px solid #d9d9d9;
           overflow: auto;
-          padding: 1.6em 10px;
+          padding: 1.6em 30px;
           position: relative; }
           main section article .colonnade.cards .lt-column h1, main section article .colonnade.cards .mid-column h1, main section article .colonnade.cards .rt-column h1 {
             font-family: "GothamProLight";
