@@ -51,6 +51,7 @@ main {
           padding: 1.6em 10px;
           position: relative; }
           main section article .colonnade.cards .lt-column h1, main section article .colonnade.cards .mid-column h1, main section article .colonnade.cards .rt-column h1 {
+            font-family: "GothamProLight";
             margin-top: 10px; }
         main section article .colonnade.cards .lt-column {
           right: -5px;
@@ -94,6 +95,7 @@ main {
 /* HEADER TITLES
 // -----------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
+  font-family: "GothamPro";
   margin-top: 1.6em;
   letter-spacing: .07rem; }
   h1.w-edit, h2.w-edit, h3.w-edit, h4.w-edit, h5.w-edit, h6.w-edit {
