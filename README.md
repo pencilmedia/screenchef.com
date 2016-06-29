@@ -3,9 +3,9 @@ PHP and Grunt project
 
 ## To Install:
 
-npm install
-npm install grunt
-npm install bower
+1. ``npm install``
+2. ``npm install grunt``
+3. ``npm install bower``
 
 
 ## How to run it
