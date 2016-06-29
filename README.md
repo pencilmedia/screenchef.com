@@ -10,6 +10,5 @@ PHP and Grunt project
 
 ## How to run it
 
-``grunt`` command from root folder of project
-
-Use MAMP Pro to run php server locally
+1. ``grunt`` command from root folder of project
+2. Use MAMP Pro to run php server locally
