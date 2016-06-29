@@ -23,12 +23,10 @@ coverage
 
 *.css.map
 
+bower_components
+
+node_modules
 node_modules/.bin/**
 node_modules/**
+
 portfolio/work/**
-
-!.bowerrc
-!.gitignore
-
-bower_components
-node_modules
