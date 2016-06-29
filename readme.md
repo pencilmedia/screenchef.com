@@ -1,20 +1,15 @@
+# screenchef.com
+PHP and Grunt project
+
+## To Install:
+
 npm install
 npm install grunt
 npm install bower
 
----
-
-
-## What you need to have?
-
-``nodejs / npm``, ``grunt-cli``, ``sass``, ``bower`` installed
-
-## How to install it
-
-``npm install`` maybe ``sudo npm install``
-
-``bower install``
 
 ## How to run it
 
 ``grunt`` command from root folder of project
+
+Use MAMP Pro to run php server locally
