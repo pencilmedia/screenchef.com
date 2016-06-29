@@ -1,0 +1,64 @@
+/* BEGIN: animation.scss - Custom Animation
+// -----------------------------------------------------*/
+
+.animate25s {
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animate5s {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* Dropdown Menu - Open */
+@-webkit-keyframes menuOpen {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+  }
+}
+@keyframes menuOpen {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+  }
+}
+.menuOpen {
+  -webkit-animation-name: menuOpen;
+  animation-name: menuOpen;
+}
+
+/* Dropdown Menu - Close */
+@-webkit-keyframes menuClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes menuClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.menuClose {
+  -webkit-animation-name: menuClose;
+  animation-name: menuClose;
+}
+

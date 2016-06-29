@@ -1,0 +1,12 @@
+/* BEGIN: transition.scss
+// -----------------------------------------------------*/
+
+// Default Transition
+
+@mixin transition($speed) {
+	-moz-transition: $speed ease;
+	-ms-transition: $speed ease;
+	-o-transition: $speed ease;
+	-webkit-transition: $speed ease;
+	transition: $speed ease;
+}

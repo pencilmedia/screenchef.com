@@ -1,0 +1,13 @@
+/* BEGIN: webfont.scss
+// -----------------------------------------------------*/
+@font-face {
+  font-family: GothamPro;
+  src: url("GothamPro.ttf"); }
+
+@font-face {
+  font-family: GothamProBold;
+  src: url("GothamProBold.otf"); }
+
+@font-face {
+  font-family: GothamProLight;
+  src: url("GothamProLight.ttf"); }

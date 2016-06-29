@@ -1,0 +1,25 @@
+/* BEGIN: theme.scss
+// -----------------------------------------------------*/
+// Bourbon Library
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "bower_components/neat/app/assets/stylesheets/_neat";
+
+// Global Includes
+@import "variables";
+@import "mixins";
+
+// Page Layout
+@import "layout";
+
+// Global/Common
+@import "typography";
+@import "animation";
+@import "common";
+@import "forms";
+@import "nav";
+@import "buttons";
+@import "footer";
+
+// Responsive Behaviors
+@import "responsive";
+ 
