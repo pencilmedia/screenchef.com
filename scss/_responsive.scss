@@ -1,0 +1,136 @@
+/* BEGIN: responsive.scss
+// -----------------------------------------------------*/
+
+
+/* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
+
+// In between Large and Medium 
+@media only screen and (max-width: 1440px) and (min-width: $screen-md-min) {}
+
+// Large Desktop - > 1200px
+@media only screen and (min-width: $screen-lg-min) {}
+
+// Medium Desktop - > 992px
+@media only screen and (min-width: $screen-sm-min) {
+    /* Begin Navigation */
+    header {
+        nav {
+            position: absolute;
+            top: .5em;
+            right: 0;
+            text-align: right;
+            li {
+                width: auto;
+                &:after {
+                    content: "•";
+                }
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+    /* Begin Layout */
+    main {
+        section {
+            article {
+
+            }
+        }
+    }
+    footer {
+        position: absolute;
+        z-index: 1050;
+        bottom: 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* Tablet and Phone - <768px */
+
+@media only screen and (max-width: $screen-sm-min),
+only screen and (max-device-width: 667px),
+only screen and (max-width: 480px) and (orientation: portrait) {
+    /* Begin Navigation */
+    header {
+        nav {
+            margin: 1em 0;
+            li {
+                width: 32%;
+                text-align: center;
+                a {
+                    margin: 0;
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:nth-child(2) {
+                        text-align: center;
+                    }
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+                &:after {
+                    content: " ";
+                }
+            }
+        }
+    }
+    /* Begin Layout */
+    main {
+        article {
+            section {
+                .colonnade {
+                    &.cards {
+                        .lt-column {
+                            min-height: 450px;
+                        }
+                        .mid-column {
+                            min-height: 500px;
+                        }
+                        .rt-column {
+                            min-height: 450px;
+                        }
+                        .lt-column,
+                        .mid-column,
+                        .rt-column {
+                            display: block;
+                            position: inherit;
+                            float: none;
+                            width: 100%;
+                            min-height: 100px;
+                            top: auto;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Phone Portrait - > 480px
+@media only screen and (max-width: $screen-xs-min) {
+    /* Begin Navigation */
+    header {
+        hgroup {
+            h2 {
+                + p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    /* Begin Layout */
+    main {
+        margin-right: $pageMargin;
+        margin-left: $pageMargin;
+        section {
+            article {}
+        }
+    }
+}

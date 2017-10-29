@@ -1,0 +1,231 @@
+/******************************************************************************
+SUBTABS.CSS
+Description: Skinnable Subtabs related styles and definitions. 
+******************************************************************************/
+.tab_list a {
+	  background-image: none;
+ }
+.tab_list span { 
+	  background: url(../images/icn_more_menu.png) no-repeat 2px 4px;
+	  width:16px;
+}
+.buffer_subtabs {
+	margin-top: 25px;
+}
+/******************************************************************************
+SKINNABLE SUB TABS
+******************************************************************************/
+/* Base Subtab Styles - DO NOT EDIT */
+.sub_tabs_container {
+	margin: 20px 0 0 0;
+	height: 25px;
+	text-align: right;
+}
+.sub_tabs {
+	height: 20px;
+}
+.sub_tabs li {
+	display: inline;
+	margin-left: -4px;
+	padding: 3px 0 4px 0;
+}
+.sub_tabs span {
+	white-space: nowrap;
+}
+.sub_tabs li:first-child {
+	border-left: none;
+}
+.sub_tabs li:last-child {
+	border-right: 1px solid #adadad;
+}
+.sub_tabs a {
+	cursor: pointer;
+	line-height: 20px;
+}
+.sub_tabs li:hover {
+	background: #ccc; 
+}
+.sub_tabs .selected {
+	position: relative;
+	top: 0;
+	right: 0;
+}
+.sub_tabs .selected:hover {
+	background: #99f;
+}
+.sub_tabs em {
+	margin-right: -5px;
+	padding: 0 10px 0 0;
+}
+
+
+/* Default Subtabs Skin */
+.sub_tabs_container.skin_default {
+	background-color: #f2f2f3;
+}
+.sub_tabs_container.skin_default  .sub_tabs {
+	border-bottom: 1px solid #adadad;
+	background-color: #fff;
+}
+div.sub_tabs_container.skin_default .sub_tabs li {
+	color: #333;
+	border-left: 1px dotted #333;
+	background: #d7d7d7 url(../images/bgd_tabs.png) repeat-x left top;
+}
+div.sub_tabs_container.skin_default .sub_tabs li:first-child {
+	border-left: none;
+}
+div.sub_tabs_container.skin_default .sub_tabs li:last-child {
+	border-right: 1px solid #adadad;
+}
+div.sub_tabs_container.skin_default .sub_tabs a {
+	color: #333;
+	padding: 0 15px;
+}
+div.sub_tabs_container.skin_default .sub_tabs li:hover {
+	background: url(../images/bgd_tabs_ovr.png) 0 0; 
+}
+div.sub_tabs_container.skin_default .sub_tabs .selected { 
+	border: 1px solid #adadad;
+	border-bottom: 1px solid #f2f2f3;
+	background: #f3f3f4;
+	font-weight: bold;
+}
+div.sub_tabs_container.skin_default .sub_tabs .selected:hover {
+	background: url(../images/bgd_tabs_selected_ovr.png) 0 0;
+}
+
+
+/* Fusion Subtabs Skin */
+.sub_tabs_container.skin_fusion {
+	background-color: #adc2cf;
+}
+.sub_tabs_container.skin_fusion .sub_tabs {
+	border-bottom: none;
+	background: #fff;
+	overflow: hidden;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li {
+	margin-right: -10px;
+	padding: 4px 0;
+	line-height: 20px;
+	background: url(../images/tabs/skins/fusion/bgd_rt_tab.png) no-repeat right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li a {
+	padding: 4px 10px 4px 25px;
+	background: url(../images/tabs/skins/fusion/bgd_lt_tab.png) no-repeat left center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li span {
+	margin-right: 5px;
+	padding: 4px 3px;
+	background: #0c4179 url(../images/tabs/skins/fusion/bgd_mid_tab.png) repeat-x right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs a {
+	color: #a6b3c8;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li:first-child {
+	border-left: none;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li:last-child {
+	border-right: none;
+	margin-right: 0;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li:last-child:hover {
+	margin-right: 0;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs .selected a {
+	color: #333;
+	font-weight: bold;
+	background: url(../images/tabs/skins/fusion/bgd_tab_lt_selected.png) no-repeat left center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs .selected a span {
+	background: url(../images/tabs/skins/fusion/bgd_tab_mid_selected.png) repeat-x right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs .selected {
+	margin-right: -15px;
+	background: url(../images/tabs/skins/fusion/bgd_tab_rt_selected.png) no-repeat right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li:hover a {
+	color: #333;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li:hover {
+	margin-right: -10px;
+	background: url(../images/tabs/skins/fusion/bgd_rt_tab_hover.png) no-repeat right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li a:hover {
+	background: url(../images/tabs/skins/fusion/bgd_lt_tab_hover.png) no-repeat left center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li span:hover {
+	background: url(../images/tabs/skins/fusion/bgd_mid_tab_hover.png) repeat-x right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs .selected a:hover  {
+	background: url(../images/tabs/skins/fusion/bgd_tab_lt_selected.png) no-repeat left center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs .selected a span:hover  {
+	background: url(../images/tabs/skins/fusion/bgd_tab_mid_selected.png) repeat-x right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs .selected:hover {
+	margin-right: -15px;
+	background: url(../images/tabs/skins/fusion/bgd_tab_rt_selected.png) no-repeat right center;
+}
+
+div.sub_tabs_container.skin_fusion .sub_tabs li.spanHover span {
+	background: url(../images/tabs/skins/fusion/bgd_mid_tab_hover.png) repeat-x right center;
+}
+div.sub_tabs_container.skin_fusion .sub_tabs li.selected.spanHover span {
+	background: url(../images/tabs/skins/fusion/bgd_tab_mid_selected.png) repeat-x right center;
+}
+/******************************************************************************
+PALETTE SUB TABS
+******************************************************************************/
+.palette_tabs {
+	border-bottom: 1px solid #9bb3e1;
+	background: #a8c7ff url(../images/bgd_palette_tabs.png) repeat-x left top; 
+	height: 23px;
+	margin: 5px 0 0 0;
+	padding: 1px 5px 0 5px;
+	min-width: 450px;
+}
+
+
+.palette_tabs li {
+	display: inline;
+	line-height: 22px;
+	margin: 2px 0 0 0;
+	padding: 1px 0;
+	*margin-left: 0;
+	*border-left: 0;
+}
+
+.palette_tabs span {
+	color: #333;
+	line-height: 22px;
+	padding-bottom: 3px;
+	*padding-bottom: 0;
+	white-space: nowrap;
+}
+
+.palette_tabs li:hover {
+	background-color: #e6f0ff;
+	border-top: 2px solid #e6f0ff;
+}
+
+.palette_tabs a {
+	color: #333;
+	cursor: pointer;
+	line-height: 20px;
+	padding: 0 13px;
+}
+
+.palette_tabs .selected { 
+	position: relative; 
+	top: 0;
+	left: 0;
+	font-weight: bold;
+	background-color: #a8c7ff;
+	border: 1px solid #9bb3e1;
+	border-top: 2px solid #485baf;
+	border-bottom: 2px solid #a8c7ff;
+	padding: 2px 13px 2px 13px;
+	*margin: 0;
+}

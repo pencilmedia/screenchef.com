@@ -1,11 +1,15 @@
 @charset "UTF-8";
 /* BEGIN: theme.scss
 // -----------------------------------------------------*/
+/* line 4, ../../bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
+/* line 9, ../../bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
 *, *::after, *::before {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 /* BEGIN: variables.scss - for theme.scss
 // -----------------------------------------------------*/
@@ -27,670 +31,845 @@ html {
 // -----------------------------------------------------*/
 /* BEGIN: layout.scss
 // -----------------------------------------------------*/
+/* line 3, ../../scss/_layout.scss */
 main {
   /* This div is stretched height 100% by setting html, 
-      body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls
-      correctly and if it is shorter it won't shrink to fit content */
-  margin: 0 auto;
+   body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls
+   correctly and if it is shorter it won't shrink to fit content */
+  margin: 0 10% 0 10%;
+  padding-top: 2em;
   padding-bottom: 40px;
   min-height: 100%;
   position: relative;
-  border: 1px solid transparent; }
-  main section {
-    margin-top: 0; }
-    main section article .colonnade {
-      padding: 1.6em 5px; }
-      main section article .colonnade .lt-column, main section article .colonnade .mid-column, main section article .colonnade .rt-column {
-        padding-left: 10px; }
-        main section article .colonnade .lt-column h2, main section article .colonnade .mid-column h2, main section article .colonnade .rt-column h2 {
-          margin: 1em 0; }
-        main section article .colonnade .lt-column:first-child, main section article .colonnade .mid-column:first-child, main section article .colonnade .rt-column:first-child {
-          padding-left: 0; }
-      main section article .colonnade.cards {
-        font-family: 'Inconsolata'; }
-        main section article .colonnade.cards h1 {
-          font-size: 150%;
-          margin-bottom: .75em; }
-        main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
-          background: #f2f2f2;
-          border: 1px solid #fff;
-          box-shadow: 0 0 15px #d9d9d9;
-          color: #333;
-          outline: 1px solid #d9d9d9;
-          overflow: auto;
-          padding: 1.6em 30px;
-          position: relative; }
-          main section article .colonnade.cards .lt-column:hover, main section article .colonnade.cards .mid-column:hover, main section article .colonnade.cards .rt-column:hover {
-            -moz-transition: all 0.5s ease;
-            -ms-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            -webkit-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-            background: #e6e6e6;
-            box-shadow: 0 0 25px #a6a6a6;
-            color: #000;
-            text-decoration: none; }
-          main section article .colonnade.cards .lt-column h1, main section article .colonnade.cards .mid-column h1, main section article .colonnade.cards .rt-column h1 {
-            font-family: "GothamProLight";
-            margin-top: 10px; }
-        main section article .colonnade.cards .lt-column {
-          min-height: 350px;
-          right: -5px;
-          top: 1.6em; }
-        main section article .colonnade.cards .mid-column {
-          min-height: 400px;
-          z-index: 2; }
-        main section article .colonnade.cards .rt-column {
-          left: -5px;
-          min-height: 350px;
-          top: 1.6em; }
-    main section article.callout {
-      background-color: #f6f6f6;
-      color: gray;
-      font-family: Helvetica;
-      margin: 0 0 2em 0;
-      outline: 1px solid #e9e9e9;
-      padding: 1em; }
-      main section article.callout h1 {
-        margin-bottom: 1em; }
-      main section article.callout dl {
-        clear: both;
-        display: block;
-        margin-bottom: 1.6em;
-        overflow: hidden; }
-        main section article.callout dl dt {
-          margin: .5em auto; }
-        main section article.callout dl dd {
-          display: inline-block;
-          margin: .25em .25em .25em 0; }
-          main section article.callout dl dd.graphic {
-            float: left;
-            margin: 0 15px 0 0;
-            width: auto; }
-            main section article.callout dl dd.graphic img {
-              border: 3px solid #fff;
-              border-radius: 100%; }
-        main section article.callout dl:last-child {
-          margin-bottom: 0; }
-
-.portfolio section > h1 {
-  margin-bottom: 10px;
-  margin-top: 40px; }
-
-.portfolio section article.client-summary {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px dashed #dedede;
-  border-top: 1px dashed #FEC200;
+  border: 1px solid transparent;
+}
+/* line 15, ../../scss/_layout.scss */
+main > h1 {
+  margin-top: 1.6em;
+}
+/* line 20, ../../scss/_layout.scss */
+main > article section > h2 {
+  display: inline-block;
+  margin: 0 0 10px 0;
+}
+/* line 24, ../../scss/_layout.scss */
+main > article section .back-top {
+  margin-top: 5px;
+}
+/* line 27, ../../scss/_layout.scss */
+main > article section .colonnade {
+  padding: 1.6em 5px;
+}
+/* line 29, ../../scss/_layout.scss */
+main > article section .colonnade .lt-column, main > article section .colonnade .mid-column, main > article section .colonnade .rt-column {
+  padding-left: 10px;
+}
+/* line 31, ../../scss/_layout.scss */
+main > article section .colonnade .lt-column h2, main > article section .colonnade .mid-column h2, main > article section .colonnade .rt-column h2 {
+  margin: 1em 0;
+}
+/* line 34, ../../scss/_layout.scss */
+main > article section .colonnade .lt-column:first-child, main > article section .colonnade .mid-column:first-child, main > article section .colonnade .rt-column:first-child {
+  padding-left: 0;
+}
+/* line 38, ../../scss/_layout.scss */
+main > article section .colonnade.cards {
+  font-family: 'Inconsolata';
+}
+/* line 40, ../../scss/_layout.scss */
+main > article section .colonnade.cards h1 {
+  font-size: 150%;
+  margin-bottom: .75em;
+}
+/* line 44, ../../scss/_layout.scss */
+main > article section .colonnade.cards p {
+  text-align: justify;
+}
+/* line 47, ../../scss/_layout.scss */
+main > article section .colonnade.cards .lt-column, main > article section .colonnade.cards .mid-column, main > article section .colonnade.cards .rt-column {
+  float: left;
+  background: #f2f2f2;
+  border: 1px solid #fff;
+  box-shadow: 0 0 15px #d9d9d9;
+  color: #333;
+  outline: 1px solid #d9d9d9;
+  overflow: auto;
+  padding: 1.6em 30px;
+  position: relative;
+}
+/* line 57, ../../scss/_layout.scss */
+main > article section .colonnade.cards .lt-column:hover, main > article section .colonnade.cards .mid-column:hover, main > article section .colonnade.cards .rt-column:hover {
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #e6e6e6;
+  box-shadow: 0 0 25px #a6a6a6;
+  color: #000;
+  text-decoration: none;
+}
+/* line 64, ../../scss/_layout.scss */
+main > article section .colonnade.cards .lt-column h1, main > article section .colonnade.cards .mid-column h1, main > article section .colonnade.cards .rt-column h1 {
+  font-family: "GothamProLight";
+  margin-top: 10px;
+}
+/* line 69, ../../scss/_layout.scss */
+main > article section .colonnade.cards .lt-column {
+  min-height: 350px;
+  right: -5px;
+  top: 1.6em;
+  width: 31.3%;
+}
+/* line 75, ../../scss/_layout.scss */
+main > article section .colonnade.cards .mid-column {
+  min-height: 425px;
+  z-index: 2;
+  width: 37.3%;
+}
+/* line 80, ../../scss/_layout.scss */
+main > article section .colonnade.cards .rt-column {
+  left: -5px;
+  min-height: 350px;
+  top: 1.6em;
+  width: 31.3%;
+}
+/* line 88, ../../scss/_layout.scss */
+main > article section.callout {
+  background-color: #f6f6f6;
+  color: gray;
+  font-family: Helvetica;
+  margin: 0 0 2em 0;
+  outline: 1px solid #e9e9e9;
+  padding: 1em;
+}
+/* line 95, ../../scss/_layout.scss */
+main > article section.callout h1 {
+  margin-bottom: 1em;
+}
+/* line 98, ../../scss/_layout.scss */
+main > article section.callout dl {
+  clear: both;
+  display: block;
   margin-bottom: 1.6em;
-  padding-top: 1.6em; }
-  .portfolio section article.client-summary::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .portfolio section article.client-summary .client-brand {
-    float: left;
-    display: block;
-    margin-right: 2.3576520234%;
-    width: 31.7615653177%; }
-    .portfolio section article.client-summary .client-brand:last-child {
-      margin-right: 0; }
-    .portfolio section article.client-summary .client-brand > img {
-      margin-bottom: 1.6em;
-      max-width: 250px; }
-  .portfolio section article.client-summary .client-description {
-    float: left;
-    display: block;
-    margin-right: 2.3576520234%;
-    width: 65.8807826589%; }
-    .portfolio section article.client-summary .client-description:last-child {
-      margin-right: 0; }
-    .portfolio section article.client-summary .client-description h3 {
-      display: inline-block; }
+  overflow: hidden;
+}
+/* line 104, ../../scss/_layout.scss */
+main > article section.callout dl dt {
+  margin: .5em auto;
+}
+/* line 107, ../../scss/_layout.scss */
+main > article section.callout dl dd {
+  display: inline-block;
+  margin: .25em .25em .25em 0;
+}
+/* line 111, ../../scss/_layout.scss */
+main > article section.callout dl dd.graphic {
+  float: left;
+  margin: 0 15px 0 0;
+  width: auto;
+}
+/* line 116, ../../scss/_layout.scss */
+main > article section.callout dl dd.graphic img {
+  border: 3px solid #fff;
+  border-radius: 100%;
+}
+/* line 122, ../../scss/_layout.scss */
+main > article section.callout dl:last-child {
+  margin-bottom: 0;
+}
 
-.portfolio section article.card-container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .portfolio section article.card-container::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .portfolio section article.card-container .card-item {
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    background: #f2f2f2;
-    border: 1px solid #fff;
-    box-shadow: 0 0 15px #d9d9d9;
-    display: block;
-    margin-bottom: 1.6em;
-    outline: 1px solid #d9d9d9;
-    overflow: auto; }
-    .portfolio section article.card-container .card-item:hover {
-      background: #e6e6e6;
-      box-shadow: 0 0 25px #a6a6a6;
-      color: #000;
-      text-decoration: none; }
-    .portfolio section article.card-container .card-item .card-left, .portfolio section article.card-container .card-item .card-right {
-      min-height: 100px; }
-      .portfolio section article.card-container .card-item .card-left h6, .portfolio section article.card-container .card-item .card-right h6 {
-        visibility: hidden; }
-      .portfolio section article.card-container .card-item .card-left > p, .portfolio section article.card-container .card-item .card-right > p {
-        color: #595959; }
-        .portfolio section article.card-container .card-item .card-left > p:last-child, .portfolio section article.card-container .card-item .card-right > p:last-child {
-          margin-bottom: 0; }
-    .portfolio section article.card-container .card-item .card-left {
-      float: left;
-      display: block;
-      margin-right: 2.3576520234%;
-      width: 31.7615653177%;
-      outline: 1px solid #dedede;
-      border: 1px solid #fff; }
-      .portfolio section article.card-container .card-item .card-left:last-child {
-        margin-right: 0; }
-    .portfolio section article.card-container .card-item .card-right {
-      float: left;
-      display: block;
-      margin-right: 2.3576520234%;
-      width: 65.8807826589%;
-      padding: 10px 1.6em 10px 1.6em; }
-      .portfolio section article.card-container .card-item .card-right:last-child {
-        margin-right: 0; }
-    .portfolio section article.card-container .card-item:nth-child(even) .card-left {
-      float: left;
-      display: block;
-      margin-right: 2.3576520234%;
-      width: 65.8807826589%;
-      padding: 10px 1.6em 10px 1.6em; }
-      .portfolio section article.card-container .card-item:nth-child(even) .card-left:last-child {
-        margin-right: 0; }
-    .portfolio section article.card-container .card-item:nth-child(even) .card-right {
-      float: left;
-      display: block;
-      margin-right: 2.3576520234%;
-      width: 31.7615653177%;
-      padding: 0; }
-      .portfolio section article.card-container .card-item:nth-child(even) .card-right:last-child {
-        margin-right: 0; }
-    .portfolio section article.card-container .card-item.ixd .card-left {
-      background: url("../img/graphic-ixd.jpg") no-repeat center center;
-      background-size: 100%; }
-    .portfolio section article.card-container .card-item.front-end .card-right {
-      background: url("../img/graphic-fee.jpg") no-repeat center center;
-      background-size: 100%; }
-    .portfolio section article.card-container .card-item.visual-design .card-left {
-      background: url("../img/graphic-vd.jpg") no-repeat center center;
-      background-size: 100%; }
+/* line 134, ../../scss/_layout.scss */
+.secondary main article:first-of-type {
+  padding-top: 1.6em;
+}
+/* line 137, ../../scss/_layout.scss */
+.secondary main article > h1 {
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+/* line 146, ../../scss/_layout.scss */
+.secondary.about article section h3 {
+  margin-bottom: 1.6em;
+}
 
 /* BEGIN: typography.scss
 // -----------------------------------------------------*/
+/* line 4, ../../scss/_typography.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #333; }
+  color: #333;
+}
 
 /* HEADER TITLES
 // -----------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
+/* line 15, ../../scss/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "GothamPro";
   margin-top: 1.6em;
   letter-spacing: .07rem;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  text-transform: capitalize;
+}
 
+/* line 29, ../../scss/_typography.scss */
 h1 {
-  font-size: 200%; }
+  font-size: 200%;
+}
 
+/* line 33, ../../scss/_typography.scss */
 h2 {
-  font-size: 175%; }
+  font-size: 175%;
+}
 
+/* line 37, ../../scss/_typography.scss */
 h3 {
-  font-size: 150%; }
+  font-size: 150%;
+}
 
+/* line 41, ../../scss/_typography.scss */
 h4 {
-  font-size: 125%; }
+  font-size: 125%;
+}
 
+/* line 45, ../../scss/_typography.scss */
 h5 {
-  font-size: 100%; }
+  font-size: 100%;
+}
 
+/* line 49, ../../scss/_typography.scss */
 h6 {
-  font-size: 85%; }
+  font-size: 85%;
+}
 
 /* TYPOGRAPHY 
 // -----------------------------------------------------*/
+/* line 57, ../../scss/_typography.scss */
 .text-muted {
-  color: #ccc; }
+  color: #ccc;
+}
 
 /* BEGIN: animation.scss - Custom Animation
 // -----------------------------------------------------*/
+/* line 4, ../../scss/_animation.scss */
 .animate25s {
   -webkit-animation-duration: .25s;
   animation-duration: .25s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
+  animation-fill-mode: both;
+}
 
+/* line 10, ../../scss/_animation.scss */
 .animate5s {
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
+  animation-fill-mode: both;
+}
 
 /* Dropdown Menu - Open */
 @-webkit-keyframes menuOpen {
   0% {
     opacity: 0;
-    height: 0; }
+    height: 0;
+  }
   100% {
     opacity: 1;
-    height: auto; } }
-
+    height: auto;
+  }
+}
 @keyframes menuOpen {
   0% {
     opacity: 0;
-    height: 0; }
+    height: 0;
+  }
   100% {
     opacity: 1;
-    height: auto; } }
-
+    height: auto;
+  }
+}
+/* line 38, ../../scss/_animation.scss */
 .menuOpen {
   -webkit-animation-name: menuOpen;
-  animation-name: menuOpen; }
+  animation-name: menuOpen;
+}
 
 /* Dropdown Menu - Close */
 @-webkit-keyframes menuClose {
   0% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 0; } }
-
+    opacity: 0;
+  }
+}
 @keyframes menuClose {
   0% {
-    opacity: 1; }
+    opacity: 1;
+  }
   100% {
-    opacity: 0; } }
-
+    opacity: 0;
+  }
+}
+/* line 60, ../../scss/_animation.scss */
 .menuClose {
   -webkit-animation-name: menuClose;
-  animation-name: menuClose; }
+  animation-name: menuClose;
+}
 
 /* BEGIN: common.scss (global app styles)
 // -----------------------------------------------------*/
+/* line 3, ../../scss/_common.scss */
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Highlight Text Color */
+/* line 8, ../../scss/_common.scss */
 ::selection {
   background: #f96;
   /* Safari */
-  color: #fff; }
+  color: #fff;
+}
 
+/* line 12, ../../scss/_common.scss */
 ::-moz-selection {
   background: #f96;
   /* Firefox */
-  color: #fff; }
+  color: #fff;
+}
 
 /* Global ************* */
+/* line 18, ../../scss/_common.scss */
 html, body {
-  height: 100%; }
+  height: 100%;
+}
 
+/* line 21, ../../scss/_common.scss */
 body {
   background-color: #f9f9f9;
   border-top: 2px solid #FEC200;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
+/* line 27, ../../scss/_common.scss */
 p {
   line-height: 1.5em;
-  margin: 0 0 1.25em 0; }
+  margin: 0 0 1.25em 0;
+}
 
+/* line 31, ../../scss/_common.scss */
 a {
   color: #032e68;
-  text-decoration: none; }
-  a:hover {
-    color: #986FB1;
-    text-decoration: underline; }
+  text-decoration: none;
+  border-bottom: 1px dashed #ddd;
+}
+/* line 35, ../../scss/_common.scss */
+a:hover {
+  color: #986FB1;
+  border-bottom-style: solid;
+}
+
+/* line 41, ../../scss/_common.scss */
+dl > dd {
+  margin-left: 0;
+}
 
 /* Helpers ************* */
+/* line 47, ../../scss/_common.scss */
 .pull-right {
-  float: right; }
-
-/* Buttons ************* */
-.button {
-  background: url(../img/btns/btn_left.png) no-repeat left center;
-  color: #043F90;
-  cursor: pointer;
-  font-size: .95em;
-  height: 35px;
-  line-height: 35px;
-  margin: auto 3px auto 0;
-  outline-style: none;
-  padding: 7px 0 16px 15px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 white;
-  white-space: nowrap; }
-  .button span {
-    background: url(../img/btns/btn_right.png) no-repeat right center;
-    height: 35px;
-    line-height: 35px;
-    margin: 0;
-    padding: 7px 15px 16px 0; }
-  .button em {
-    background-position: left center;
-    background-repeat: no-repeat;
-    font-style: normal;
-    font-weight: normal;
-    margin-right: 0;
-    padding: 3px 6px; }
-  .button:hover {
-    background: url(../img/btns/btn_left_hvr.png) no-repeat left center;
-    text-decoration: none; }
-    .button:hover span {
-      background: url(../img/btns/btn_right_hvr.png) no-repeat right center; }
-
-.colonnade .lt-column {
-  float: left;
-  width: 30.3%; }
-
-.colonnade .mid-column {
-  float: left;
-  width: 39.3%; }
-
-.colonnade .rt-column {
-  float: left;
-  width: 30.3%; }
+  float: right;
+}
 
 /* BEGIN: forms.scss
 // -----------------------------------------------------*/
 /* BEGIN: nav.scss
 // -----------------------------------------------------*/
+/* line 4, ../../scss/_nav.scss */
 header {
   position: relative;
-  margin: 2em 15% 0 15%; }
-  header + section {
-    margin: 2em 15% 0 15%; }
-  header hgroup h1 {
-    margin: 0; }
-    header hgroup h1 a {
-      color: #595959; }
-  header hgroup h2 {
-    font-size: 135%;
-    color: #f96; }
-    header hgroup h2 + p {
-      margin-top: 10px; }
-  header nav {
-    color: #ccc; }
-    header nav > ul {
-      list-style: none; }
-      header nav > ul li {
-        display: inline-block; }
-        header nav > ul li a {
-          display: inline-block;
-          padding: 5px 15px;
-          text-shadow: 0 1px #fff;
-          text-transform: capitalize; }
-          header nav > ul li a.active {
-            color: #986FB1;
-            font-weight: bold; }
-        header nav > ul li:after {
-          content: "•"; }
-        header nav > ul li:last-child:after {
-          content: ""; }
+}
+/* line 7, ../../scss/_nav.scss */
+header hgroup h1 {
+  margin: 0;
+}
+/* line 9, ../../scss/_nav.scss */
+header hgroup h1 a {
+  border-bottom: none;
+  color: #595959;
+}
+/* line 14, ../../scss/_nav.scss */
+header hgroup h2 {
+  color: #f96;
+  font-size: 135%;
+}
+/* line 17, ../../scss/_nav.scss */
+header hgroup h2 + p {
+  margin-top: 10px;
+}
+/* line 22, ../../scss/_nav.scss */
+header nav {
+  color: #ccc;
+}
+/* line 25, ../../scss/_nav.scss */
+header nav > ul {
+  list-style: none;
+}
+/* line 27, ../../scss/_nav.scss */
+header nav > ul li {
+  display: inline-block;
+}
+/* line 29, ../../scss/_nav.scss */
+header nav > ul li a {
+  border-bottom: none;
+  display: inline-block;
+  padding: 5px 15px;
+  text-transform: capitalize;
+  text-shadow: 0 1px #fff;
+}
+/* line 35, ../../scss/_nav.scss */
+header nav > ul li a.active {
+  color: #986FB1;
+  font-weight: bold;
+}
 
 /* BEGIN: Secondary Page Navigation */
-.secondary header {
-  margin-bottom: 10px;
-  margin-top: 10px; }
-  .secondary header hgroup h1 {
-    font-size: 115%; }
-  .secondary header hgroup h2 {
-    font-size: 100%; }
-    .secondary header hgroup h2 + p {
-      display: none; }
+/* line 47, ../../scss/_nav.scss */
+.secondary .page-header {
+  border: 1px solid transparent;
+}
+/* line 49, ../../scss/_nav.scss */
+.secondary .page-header hgroup {
+  -moz-transition: all 2s ease-in ease;
+  -ms-transition: all 2s ease-in ease;
+  -o-transition: all 2s ease-in ease;
+  -webkit-transition: all 2s ease-in ease;
+  transition: all 2s ease-in ease;
+}
+/* line 51, ../../scss/_nav.scss */
+.secondary .page-header hgroup h1 {
+  font-size: 115%;
+}
+/* line 54, ../../scss/_nav.scss */
+.secondary .page-header hgroup h2 {
+  font-size: 100%;
+}
+/* line 56, ../../scss/_nav.scss */
+.secondary .page-header hgroup h2 + p {
+  display: none;
+}
+/* line 61, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed {
+  background: rgba(254, 194, 0, 0.9);
+  border-top: 2px solid #FEC200;
+  box-shadow: 0 1px 3px gray;
+  height: 45px;
+  left: 0;
+  padding: 0 1.6em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(5px);
+  /* backdrop-filter is not fully supported yet; so far only on safari */
+  backdrop-filter: blur(5px);
+}
+/* line 74, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed hgroup {
+  display: inline-block;
+}
+/* line 76, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed hgroup h1 {
+  color: #000;
+  display: inline-block;
+  line-height: 40px;
+}
+/* line 81, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed hgroup h2 {
+  display: none;
+}
+/* line 85, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed nav {
+  margin-right: 10px;
+  padding-top: 5px;
+  top: 0;
+}
+/* line 89, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed nav ul {
+  margin-bottom: 0;
+}
+/* line 91, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed nav ul li {
+  margin-bottom: 0;
+}
+/* line 93, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed nav ul li:after {
+  color: #000;
+}
+/* line 96, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed nav ul li a {
+  text-shadow: none;
+}
+/* line 98, ../../scss/_nav.scss */
+.secondary .page-header.navbar-fixed nav ul li a:not(.active) {
+  color: #000;
+}
+
+/* line 110, ../../scss/_nav.scss */
+.subnav strong {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 /* BEGIN: buttons.scss
 // -----------------------------------------------------*/
-.btn {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  .btn .fa {
-    margin-right: 5px;
-    min-width: 12px; }
-  .btn.btn-link, .btn.btn-icon {
-    /* Undo Margin for icon only buttons */ }
-    .btn.btn-link .fa, .btn.btn-icon .fa {
-      margin-right: 0; }
-  .btn.btn-link {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    box-shadow: none;
-    color: #432;
-    text-decoration: none; }
-    .btn.btn-link .fa {
-      margin-right: 5px;
-      min-width: 12px; }
-    .btn.btn-link:focus, .btn.btn-link:hover {
-      background: #f2f2f2;
-      color: #595959; }
-  .btn:hover {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    box-shadow: none;
-    background-position: 0 -15px;
-    text-decoration: none;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    -webkit-box-shadow: 0 1px 1px rgba(150, 150, 150, 0.7);
-    box-shadow: 0 1px 1px rgba(150, 150, 150, 0.7); }
-  .btn.disabled, .btn.btn[disabled], .btn[disabled] {
-    background-image: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    color: #a6a6a6;
-    cursor: default;
-    filter: alpha(opacity=7);
-    font-weight: normal;
-    letter-spacing: 0;
-    opacity: 0.7;
-    text-shadow: none; }
-  .btn.btn-default {
-    color: #432;
-    background: #EEE;
-    /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmOGY4ZjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -moz-linear-gradient(top, #EEE 75%, #E6E6E6 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #EEE), color-stop(100%, #E6E6E6));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #EEE 75%, #E6E6E6 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #EEE 75%, #E6E6E6 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #EEE 75%, #E6E6E6 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #EEE 75%, #E6E6E6 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
-    /* IE6-8 */
-    border-color: #d5d5d5; }
-    .btn.btn-default:hover, .btn.btn-default:active, .btn.btn-default:active {
-      background-color: #e1e1e1;
-      border-color: #c8c8c8; }
-  .btn.btn-primary {
-    background: #0E96BB;
-    /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmOGY4ZjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -moz-linear-gradient(top, #0E96BB 75%, #0d8bad 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #0E96BB), color-stop(100%, #0d8bad));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #0E96BB 75%, #0d8bad 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #0E96BB 75%, #0d8bad 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #0E96BB 75%, #0d8bad 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #0E96BB 75%, #0d8bad 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
-    /* IE6-8 */
-    border-color: #068;
-    font-weight: bold;
-    text-shadow: 0 0 1px #095d74; }
-    .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary.active {
-      background: #0387AB;
-      /* Old browsers */
-      /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmOGY4ZjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-      background: -moz-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #0387AB), color-stop(100%, #0387AB));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, #0387AB 75%, #0387AB 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
-      /* IE6-8 */
-      text-shadow: none;
-      border-color: #0e9ac0; }
-    .btn.btn-primary.disabled, .btn.btn-primary.btn[disabled], .btn.btn-primary[disabled] {
-      color: rgba(255, 255, 255, 0.5);
-      background: #0387AB;
-      /* Old browsers */
-      /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmOGY4ZjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-      background: -moz-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #0387AB), color-stop(100%, #0387AB));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #0387AB 75%, #0387AB 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, #0387AB 75%, #0387AB 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
-      /* IE6-8 */ }
-  .btn.btn-info {
-    background-color: #432;
-    border-color: #110d09; }
-    .btn.btn-info:hover, .btn.btn-info:active, .btn.btn-info.active {
-      background-color: #221a11;
-      border-color: black; }
-    .btn.btn-info.disabled, .btn.btn-info.btn[disabled], .btn.btn-info[disabled] {
-      color: #f2f2f2; }
-  .btn.btn-primary, .btn.btn-warning, .btn.btn-danger {
-    color: #fff; }
-  .btn.btn-primary:hover, .btn.btn-warning:hover, .btn.btn-danger:hover {
-    color: rgba(255, 255, 255, 0.8); }
-  .btn.btn-icon .fa {
-    margin-right: 0; }
-  .btn.btn-icon-right .fa {
-    margin-left: 5px;
-    margin-right: 0; }
+/* line 32, ../../scss/_buttons.scss */
+.button {
+  color: #043F90;
+  background: #ccc;
+}
+/* line 35, ../../scss/_buttons.scss */
+.button:hover {
+  background: #bfbfbf;
+  text-decoration: none;
+}
+/* line 39, ../../scss/_buttons.scss */
+.button.button-primary {
+  background: #FEC200;
+  border-color: #cb9b00;
+}
+/* line 42, ../../scss/_buttons.scss */
+.button.button-primary:hover {
+  background: #b28800;
+  border-color: #b28800;
+}
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-  border-radius: 0; }
-
-.input-group > .input-group-btn .btn {
-  height: 34px;
-  outline: 0; }
-
-/* END: Buttons.scss
-// ----------------------------------------------------*/
 /* BEGIN: footer.scss
 // -----------------------------------------------------*/
+/* line 4, ../../scss/_footer.scss */
 footer {
-  background: #f9f9f9; }
-  footer ul {
-    text-align: center;
-    margin: 0; }
-    footer ul li {
-      color: #a6a6a6;
-      display: inline-block;
-      font-size: 85%;
-      list-style: none;
-      padding: 5px 3px; }
-      footer ul li a {
-        margin: 0;
-        color: #a6a6a6;
-        display: inline-block;
-        text-decoration: none; }
-        footer ul li a:hover {
-          text-decoration: none; }
+  background: #f9f9f9;
+}
+/* line 6, ../../scss/_footer.scss */
+footer ul {
+  text-align: center;
+  margin: 0;
+}
+/* line 9, ../../scss/_footer.scss */
+footer ul li {
+  color: #a6a6a6;
+  display: inline-block;
+  font-size: 85%;
+  list-style: none;
+  padding: 5px 3px;
+}
+/* line 15, ../../scss/_footer.scss */
+footer ul li a {
+  margin: 0;
+  color: #a6a6a6;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 20, ../../scss/_footer.scss */
+footer ul li a:hover {
+  text-decoration: none;
+}
+
+/* BEGIN: portfolio.scss
+// -----------------------------------------------------*/
+/* line 7, ../../scss/_portfolio.scss */
+.portfolio main > article.client {
+  border-top: 1px dashed #FEC200;
+  margin-bottom: 30px;
+}
+/* line 10, ../../scss/_portfolio.scss */
+.portfolio main > article.client:first-of-type {
+  border-top: none;
+}
+/* line 13, ../../scss/_portfolio.scss */
+.portfolio main > article.client h2 {
+  margin: 1.6em 0;
+}
+/* line 16, ../../scss/_portfolio.scss */
+.portfolio main > article.client h3 {
+  margin-bottom: 15px;
+}
+/* line 19, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section {
+  border-bottom: 1px dashed #ddd;
+  margin-bottom: 1.6em;
+}
+/* line 22, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section:last-of-type {
+  border-bottom: none;
+}
+/* line 25, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.client-summary {
+  border-bottom: none;
+}
+/* line 27, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.client-summary .client-brand {
+  border-bottom: none;
+}
+/* line 29, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.client-summary .client-brand > img {
+  margin-bottom: 1.6em;
+  max-width: 200px;
+}
+/* line 35, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section > h4 {
+  margin-bottom: 5px;
+}
+/* line 39, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section p:last-child {
+  margin-bottom: 30px;
+}
+/* line 44, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.product img {
+  width: 325px;
+  margin-bottom: 1.6em;
+}
+/* line 49, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, ../../bower_components/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+.portfolio main > article.client > section.card-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 51, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item {
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #f2f2f2;
+  border: 1px solid #fff;
+  box-shadow: 0 0 15px #d9d9d9;
+  display: block;
+  margin-bottom: 1.6em;
+  outline: 1px solid #d9d9d9;
+  overflow: auto;
+}
+/* line 60, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item:hover {
+  background: #e6e6e6;
+  box-shadow: 0 0 25px #a6a6a6;
+  color: #000;
+  text-decoration: none;
+}
+/* line 66, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item .card-left, .portfolio main > article.client > section.card-container .card-item .card-right {
+  min-height: 100px;
+}
+/* line 68, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item .card-left h6, .portfolio main > article.client > section.card-container .card-item .card-right h6 {
+  visibility: hidden;
+}
+/* line 71, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item .card-left > p, .portfolio main > article.client > section.card-container .card-item .card-right > p {
+  color: #595959;
+}
+/* line 73, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item .card-left > p:last-child, .portfolio main > article.client > section.card-container .card-item .card-right > p:last-child {
+  margin-bottom: 0;
+}
+/* line 78, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item .card-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  border: 1px solid #fff;
+  outline: 1px solid #ddd;
+}
+/* line 89, ../../bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.portfolio main > article.client > section.card-container .card-item .card-left:last-child {
+  margin-right: 0;
+}
+/* line 83, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item .card-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding: 10px 1.6em 10px 1.6em;
+}
+/* line 89, ../../bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.portfolio main > article.client > section.card-container .card-item .card-right:last-child {
+  margin-right: 0;
+}
+/* line 88, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding: 10px 1.6em 10px 1.6em;
+}
+/* line 89, ../../bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-left:last-child {
+  margin-right: 0;
+}
+/* line 92, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  padding: 0;
+}
+/* line 89, ../../bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
+.portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-right:last-child {
+  margin-right: 0;
+}
+/* line 98, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item.ixd .card-left {
+  background: url("../img/graphic-ixd.jpg") no-repeat center center;
+  background-size: 100%;
+}
+/* line 104, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item.front-end .card-right {
+  background: url("../img/graphic-fee.jpg") no-repeat center center;
+  background-size: 100%;
+}
+/* line 110, ../../scss/_portfolio.scss */
+.portfolio main > article.client > section.card-container .card-item.visual-design .card-left {
+  background: url("../img/graphic-vd.jpg") no-repeat center center;
+  background-size: 100%;
+}
+/* line 120, ../../scss/_portfolio.scss */
+.portfolio main > article.screenshots section {
+  overflow: hidden;
+}
+/* line 122, ../../scss/_portfolio.scss */
+.portfolio main > article.screenshots section img {
+  margin-bottom: 1.6em;
+  max-width: 800px;
+}
+/* line 129, ../../scss/_portfolio.scss */
+.portfolio main > article section.client-summary {
+  padding-top: 1.6em;
+}
 
 /* BEGIN: responsive.scss
 // -----------------------------------------------------*/
 /* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   /* Begin Navigation */
+  /* line 17, ../../scss/_responsive.scss */
   header nav {
     position: absolute;
     top: .5em;
     right: 0;
-    text-align: right; }
+    text-align: right;
+  }
+  /* line 22, ../../scss/_responsive.scss */
+  header nav li {
+    width: auto;
+  }
+  /* line 24, ../../scss/_responsive.scss */
+  header nav li:after {
+    content: "•";
+  }
+  /* line 28, ../../scss/_responsive.scss */
+  header nav li:last-child:after {
+    content: "";
+  }
+
   /* Begin Layout */
+  /* line 43, ../../scss/_responsive.scss */
   footer {
     position: absolute;
     z-index: 1050;
     bottom: 0;
     display: block;
-    width: 100%; } }
-
+    width: 100%;
+  }
+}
 /* Tablet and Phone - <768px */
 @media only screen and (max-width: 768px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation: portrait) {
   /* Begin Navigation */
+  /* line 60, ../../scss/_responsive.scss */
   header nav {
-    margin: 1em  0; }
-    header nav a {
-      margin: 0;
-      width: 30.3%; }
-      header nav a:first-child {
-        padding-left: 0; }
-      header nav a:nth-child(2) {
-        text-align: center; }
-      header nav a:last-child {
-        text-align: right; }
+    margin: 1em 0;
+  }
+  /* line 62, ../../scss/_responsive.scss */
+  header nav li {
+    width: 32%;
+    text-align: center;
+  }
+  /* line 65, ../../scss/_responsive.scss */
+  header nav li a {
+    margin: 0;
+  }
+  /* line 67, ../../scss/_responsive.scss */
+  header nav li a:first-child {
+    padding-left: 0;
+  }
+  /* line 70, ../../scss/_responsive.scss */
+  header nav li a:nth-child(2) {
+    text-align: center;
+  }
+  /* line 73, ../../scss/_responsive.scss */
+  header nav li a:last-child {
+    text-align: right;
+  }
+  /* line 77, ../../scss/_responsive.scss */
+  header nav li:after {
+    content: " ";
+  }
+
   /* Begin Layout */
-  main section article .colonnade.cards .lt-column {
-    min-height: 450px; }
-  main section article .colonnade.cards .mid-column {
-    min-height: 500px; }
-  main section article .colonnade.cards .rt-column {
-    min-height: 450px; }
-  main section article .colonnade.cards .lt-column, main section article .colonnade.cards .mid-column, main section article .colonnade.cards .rt-column {
+  /* line 89, ../../scss/_responsive.scss */
+  main article section .colonnade.cards .lt-column {
+    min-height: 450px;
+  }
+  /* line 92, ../../scss/_responsive.scss */
+  main article section .colonnade.cards .mid-column {
+    min-height: 500px;
+  }
+  /* line 95, ../../scss/_responsive.scss */
+  main article section .colonnade.cards .rt-column {
+    min-height: 450px;
+  }
+  /* line 98, ../../scss/_responsive.scss */
+  main article section .colonnade.cards .lt-column,
+  main article section .colonnade.cards .mid-column,
+  main article section .colonnade.cards .rt-column {
+    display: block;
     position: inherit;
     float: none;
     width: 100%;
     min-height: 100px;
     top: auto;
-    left: auto; } }
-
+    left: auto;
+  }
+}
 @media only screen and (max-width: 480px) {
   /* Begin Navigation */
+  /* line 122, ../../scss/_responsive.scss */
   header hgroup h2 + p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+  }
+
   /* Begin Layout */
+  /* line 129, ../../scss/_responsive.scss */
   main {
-    min-width: 480px; } }
+    margin-right: 1.6em;
+    margin-left: 1.6em;
+  }
+}

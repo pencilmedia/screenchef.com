@@ -1,0 +1,387 @@
+BODY{visibility:hidden;}
+BODY,TABLE,INPUT,TEXTAREA{
+		
+		font-family: Tahoma,Verdana,Helvetica,Sans-Serif;
+		font-size: 11px;
+		margin:0px;
+		-moz-user-select:text;
+}
+
+
+P{margin:8px;}
+
+A,A:Link,A:Visited,A:Hover{color:#009FAB;text-decoration:none }
+A:Hover{color: #65B9BF;text-decoration:underline }
+
+
+LI{padding:8px 0px;}
+
+BODY{background-color: #ccc;}
+
+#page{	margin: 0px auto;
+		padding: 10px 20px 20px 20px;
+		text-align: left;
+		width: 80%;
+		max-width:1280px;
+		border:1px solid #666666;
+		border-width:0px 1px 1px 1px;
+		background:#f0f0f0;
+		}
+
+
+#preview{	position:relative;
+			display:block;
+			min-height:40px;max-height:300px;
+			overflow-y:auto;
+			overflow-x:hidden;
+			
+			margin:10px 0px;
+			padding:15px 10px;
+			
+			border:1px dotted #999;
+			background-image:url(images/preview.png);
+			background-repeat:no-repeat;
+			background-position:top right;
+			_background-attachment:fixed;
+			}		
+		
+FIELDSET{padding:10px;}
+LEGEND{font-weight:bold}
+
+
+
+.divider{border-top:2px dotted #cccccc}
+
+.status-table {border:1px solid #cccccc;border-width:1px 0px 0px 1px;}
+.status-table TD{border:1px solid #cccccc;border-width:0px 1px 1px 0px;}
+.status-table TH{width:75;vertical-align:bottom;background:#cccccc;padding:5px;border:1px solid #999999;border-width:0px 1px 1px 0px;}
+.status-table TD{padding:5px}
+.status-table TD.label{text-align:right}
+TH.center{text-align:center}
+
+
+tbody.swim-lanes TD{border-width:0px 0px 1px 0px}
+tbody.swim-lanes TD:first-child{text-align:right;}
+
+
+/*schedule*/
+.done{background:transparent url(/DWPE/images/checkmark.png) center center no-repeat;}
+.ribbon{background:transparent url(/DWPE/images/ribbon-right.png) center right no-repeat;}
+.time-lapse{ position:relative;background:#f0f0f0 url(/DWPE/images/schedule-background.png) repeat-y fixed 20%  0%;}
+
+
+.properties-table{width:100%;padding:5px 5px}
+.properties-table TD{padding:5px}
+.properties-table TD.label{text-align:right;white-space:nowrap;width:1%}
+.properties-table TR{vertical-align:top}
+
+
+
+.note{border:1px dotted #999999;background:#EEF3E2;padding:10px;}
+.fld-help{font-size:10px; color:#777;}
+
+.cancel{text-decoration:line-through;}
+
+#metadata{width:100%;height:250px;font-size:12px;font-family:"courier new"}
+
+#component-tabs
+{
+	font-size:12px;
+}
+
+.component-360-iframe
+{	width:100%;height:650px;border:none;	}
+
+/*.ui-tabs .ui-tabs-hide { display: none;}*/
+
+#feedback-body {overflow:hidden;background:#fff;}
+#feedback-form-container{background:#f0f0f0;position:relative;padding:0px 5px 0px 5px;height:0%;}
+#feedback-form-container TEXTAREA{font-family:Helvetica, Verdana,  Arial, sans-serif;line-height:15px}
+#char-count{position:absolute;right:20px;bottom:0px;padding:0 5px;font-size:10px}
+#feedback-search-bar,
+.component-360-toolbar
+{position:relative;margin:0px;padding:3px 5px;background:#dddddd;border-top:1px solid #999999;min-height:22px}
+
+.char-count{background:#transparent;color:#0000cc;}
+.warn{background:#FF8C00;color:#fff;}
+
+.fld-error{border:1px dotted #E77776;background:#F8DBDB}
+
+
+/*list styles*/
+
+.multi-column-list
+{
+ 	width: 700px;
+    list-style-type:none;
+}
+
+.three-column-list>LI
+{
+	width:180px;
+    margin:15px 0 0 0;
+    padding:0 10px 0 0;
+    line-height:5px;
+    float:left;
+}
+
+
+/*feedback list styling*/
+#feedback-list-container{position:relative;overflow-y:auto;border-top:1px solid #999999;min-height:75%;height:100%;width:100%;padding:0px;}
+
+DIV.group-header{font-size:14px;font-weight:bold;padding:10px;background:#F4FFD8;color:#000;}
+
+DIV.msg-row,
+DIV.msg-row:hover
+{	background:#ffffff;padding:10px 5px;margin:0px;
+	border:1px dashed #cccccc;padding:10px 0px;margin:0px 0px;
+	border-width:0px 0px 1px 0px;}
+
+
+DIV.msg-level0,
+DIV.msg-level0:hover
+{}
+DIV.msg-level1,
+DIV.msg-level1:hover
+{border-left:1px dashed #cccccc;margin-left:50px}
+
+DIV.msg-level2,
+DIV.msg-level2:hover
+{border-left:1px dashed #cccccc;margin-left:100px}
+
+DIV.msg-level3,
+DIV.msg-level3:hover
+{border-left:1px dashed #cccccc;margin-left:150px}
+
+DIV.msg-level4,
+DIV.msg-level4:hover
+{border-left:1px dashed #cccccc;margin-left:200px}
+
+DIV.msg-level5,
+DIV.msg-level5:hover
+{border-left:1px dashed #cccccc;margin-left:250px}
+
+DIV.msg-level6,
+DIV.msg-level6:hover
+{border-left:1px dashed #cccccc;margin-left:300px}
+
+DIV.msg-level7,
+DIV.msg-level7:hover
+{border-left:1px dashed #cccccc;margin-left:350px}
+
+DIV.msg-level8,
+DIV.msg-level8:hover
+{border-left:1px dashed #cccccc;margin-left:400px}
+
+DIV.msg-level9,
+DIV.msg-level9:hover
+{border-left:1px dashed #cccccc;margin-left:450px}
+
+DIV.msg-level10,
+DIV.msg-level10:hover
+{border-left:1px dashed #cccccc;margin-left:500px}
+
+DIV.msg-level11,
+DIV.msg-level11:hover
+{border-left:1px dashed #cccccc;margin-left:550px}
+
+DIV.msg-row:hover,
+DIV.msg-level0:hover,
+DIV.msg-level1:hover,
+DIV.msg-level2:hover,
+DIV.msg-level3:hover,
+DIV.msg-level4:hover,
+DIV.msg-level5:hover,
+DIV.msg-level6:hover,
+DIV.msg-level7:hover,
+DIV.msg-level8:hover,
+DIV.msg-level9:hover,
+DIV.msg-level10:hover,
+DIV.msg-level11:hover,
+
+{	background:#f0f0f0	}
+
+.msg-body{background:transparent;padding:0px 10px;}
+
+
+
+
+/* Editable Tree Controls */
+.editable-tree-controls
+{
+	background:transparent url(../images/editable-tree-controls.png) no-repeat;
+	width:16px;
+	height:16px;
+	margin:0px 8px;
+	display:inline-block;
+	opacity:.75;
+	vertical-align:middle;
+}
+
+SPAN.editable-tree-controls:hover
+{	
+	opacity:1;
+	background-color:#f0f0f0;
+}
+
+
+
+.add-node{	background-position:0px 0px	}
+.delete-node{	background-position:-16px 0px	}
+.outdent-node{	background-position:-32px 0px	}
+.indent-node{	background-position:-48px 0px	}
+.up-node{	background-position:-64px 0px	}
+.down-node{	background-position:-80px 0px	}
+.expand-node{	background-position:-96px 0px;margin:1px	}
+.collapse-node{	background-position:-112px 0px;margin:1px	}
+.blank-node{	background-position:-128px 0px;margin:1px	}
+
+
+
+
+DIV.editable-tree-container
+		{
+			overflow:hidden;
+		
+		}
+		
+		DIV.editable-tree-control-bar
+		{
+			position:relative;
+			margin:10px 0px 0px 0px;
+			padding:0px;
+		}
+		
+		span.editable-tree-title
+		{
+			position:relative;
+			display:inline-block;
+			-moz-border-radius-bottomleft:0px;
+			-moz-border-radius-bottomright:0px;
+			-moz-border-radius-topleft:5px;
+			-moz-border-radius-topright:5px;
+			
+			border:1px solid #999;
+			border-width:1px 1px 0px 1px;
+			padding:2px 10px;
+			top:1px;
+			
+			background:#fff;
+			min-height:16px
+			
+		}
+		
+		
+		
+		DIV.editable-tree-panel
+		{
+			overflow:auto;
+			border:1px solid #999;
+			background:#fff;
+			padding:5px 0px;
+			margin:0px;
+			display:block;
+			height:150px
+		}
+		
+		UL.editable-tree,
+		UL.editable-tree UL
+		
+		{
+			
+			position:relative;
+			margin:0px;
+			padding:0px;
+			z-index:0;
+			white-space:nowrap;
+			display:inline-block;
+			border:none;
+			display:block;
+			
+		}
+		
+		
+		
+		UL.editable-tree LI
+		{
+			list-style-image:none;
+			list-style-position:outside;
+			list-style-type:none;
+			margin:0px; 
+			padding:0px;
+			_border:1px solid transparent;
+			border-width:1px 0px;
+			display:block;
+			background:#fff;
+		}
+		
+	
+		UL.editable-tree LI>A
+		{
+			display:inline-block;
+			min-width:50px;
+			cursor:pointer;
+			color:#000;
+		}
+		
+		UL.editable-tree LI.hover>A
+		{
+			background:#c1e4e6;
+			
+		}
+		
+		
+		UL.editable-tree LI.selected>A
+		{
+			background:#7dc8cb;
+		}
+		
+		
+		
+		/*Nested LIs*/
+		UL.editable-tree LI LI
+		{
+			padding-left:10px;
+		}
+		
+		TABLE.editable-tree-prop-sheet
+		{
+			display:block;
+			padding:10px;
+			border:1px solid #999;
+			border-width:0px 1px 1px 1px;
+			background:#e0e0e0;
+		}
+		
+		TABLE.editable-tree-prop-sheet INPUT,
+		TABLE.editable-tree-prop-sheet SELECT,
+		TABLE.editable-tree-prop-sheet TEXTAREA
+		{
+			width:100%;
+		}		
+		
+		
+		
+		
+
+
+DIV.component-list LI
+{
+	color:#009900;
+}
+
+DIV.component-list LI.in-progress
+{
+	list-style-image: none;
+	color:#000099;
+}
+
+
+DIV.component-list LI.at-risk
+{
+	list-style-image: none;
+	color:#cc0000;
+}
+
+UL.legend	{padding:0px;}
+UL.legend>LI{display:inline;padding:10px; list-style-type:circle;}

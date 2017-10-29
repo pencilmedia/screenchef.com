@@ -1,0 +1,69 @@
+/*
+	The tab container
+*/
+#tabs {
+	height: 25px;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 3px 0px 3px;
+	border-bottom: 1px solid #154097;
+	overflow: hidden;
+}
+
+
+
+
+/* 
+	Backgrounds for all the tab parts
+*/
+#tabs div.tab_mid_nrm    { background: url('../../images/tab_normal_middle.png') repeat-x top left; }
+#tabs div.cap_lft_nrm    { background: url('../../images/tab_normal_cap_left.png') no-repeat top left; }
+#tabs div.cap_rgt_nrm    { background: url('../../images/tab_normal_cap_right.png') no-repeat top left; }
+#tabs div.sep_mid_nrm    { background: url('../../images/tab_normal_separator.png') no-repeat top left; }
+#tabs div.tab_mid_ovr    { background: url('../../images/tab_over_middle.png') repeat-x top left; }
+#tabs div.cap_lft_ovr    { background: url('../../images/tab_over_cap_left.png') no-repeat top left; }
+#tabs div.cap_rgt_ovr    { background: url('../../images/tab_over_cap_right.png') no-repeat top left; }
+#tabs div.sep_lft_ovr    { background: url('../../images/tab_over_separator_left.png') no-repeat top left; }
+#tabs div.sep_rgt_ovr    { background: url('../../images/tab_over_separator_right.png') no-repeat top left; }
+
+
+
+
+/* 
+	Common attributes for all the tab caps
+*/
+#tabs div.cap_lft_nrm,
+#tabs div.cap_rgt_nrm,
+#tabs div.sep_mid_nrm,
+#tabs div.cap_lft_ovr,
+#tabs div.cap_rgt_ovr,
+#tabs div.sep_lft_ovr,
+#tabs div.sep_rgt_ovr {
+	float: left;
+	height: 25px;
+	width: 15px;
+}
+
+
+
+
+/*
+	Attributes for the tab central parts (easier to keep separate)
+*/
+#tabs div.tab_mid_nrm,
+#tabs div.tab_mid_ovr {
+	float: left;
+	height: 25px;
+}
+
+/*
+	Basic link setup
+*/
+#tabs div.tab_mid_nrm a,
+#tabs div.tab_mid_ovr a {
+	display: block;
+	font-weight: bold;
+	margin: 10px 0px 0px 0px;
+	text-decoration: none;
+}
+#tabs div.tab_mid_nrm a { color: #fff; }
+#tabs div.tab_mid_ovr a { color: #000; }

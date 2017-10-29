@@ -1,0 +1,107 @@
+/******************************************************************************
+TABLES.CSS
+Description: Tables and table-related elements styles and definitions.
+******************************************************************************/
+
+/******************************************************************************
+TABLE ACTIONS
+NOTE- The styles below apply to the objects in "table_actions".  This is the
+bar that is at either end of tables and provides users with tools to use the 
+table.
+******************************************************************************/
+div.table_actions 						{ background-color: #e8e8e8; border-top: 1px solid #d6d6d6; border-bottom: 1px solid #9f9f9f; height: 22px; padding: 6px 10px; white-space:nowrap;  }
+div.table_actions .column_one			{ width:33%; }
+div.table_actions .column_two 			{ text-align: center; width:33%; padding-top:3px; }
+div.table_actions .column_three			{ width: 33%; }
+div.table_actions .pagination span 		{ float: left; }
+
+div.simple_actions						{ background: #f9f9f9; padding: 6px 0 6px 5px; border-bottom: 1px solid #ddd; white-space:nowrap;  }
+
+div.table_actions span.page				{ padding:3px 5px 0 0;}
+div.table_actions span.of				{ padding:3px 5px 0 5px;}
+div.table_actions p.pagination select,
+div.table_actions div.column_one span.page	{ float:left; }
+div.table_actions div.column_one p,
+div.table_actions div.column_two p,
+div.table_actions div.column_three p		{ margin: 2px 0; line-height: 18px; }
+/******************************************************************************
+TABLE
+******************************************************************************/
+table							{ width: 100%; border:1px solid #ddd; }
+th, td							{ height: 20px; padding: 0 2px; border-bottom: 1px solid #ddd; background-color:#fff; }
+th 								{ background-color: #f2f2f2;  border-bottom: 1px solid #ddd; font-weight: bold; }
+/*td								{ white-space: nowrap; width: 100px; overflow: auto;}*/
+div.scrollHeaderDiv table,
+div.scrollTableDiv table,	
+div.scrollTableDivPinned table 	{ border: 0; }
+table.grid th,
+table.grid td					{  border-right: 1px solid #ddd; } 
+/******************************************************************************
+TABLE HANDLE
+******************************************************************************/
+th.resize,
+th.no_resize 			{ border-right: 1px solid #ddd; padding: 0; width: 5px; }
+th.resize 				{ cursor: e-resize; }
+th.no_resize 			{ cursor: default; }
+td.resize,
+td.no_resize 			{ border-right: 1px solid #ddd; cursor: default; padding: 0; width: 5px; }
+.handle 				{ background-color: #d8d8d8; border-right: 1px solid #999; border-bottom: 1px dotted #999; cursor: pointer; width: 10px; } 
+/******************************************************************************
+TABLE SIMPLE 
+******************************************************************************/
+table.table_simple td 	{ border: none; }
+table.simple th { background-color: #fff; }
+/******************************************************************************
+SCROLLING TABLE DIV
+******************************************************************************/
+.scrollHeaderDiv table,
+.scrollTableDiv table 	{ width: 101%; }
+/******************************************************************************
+SELECTED ROWS AND HANDLES
+******************************************************************************/
+.selected td		{ background-color: #e4eeff; }
+.selected .handle 	{ background-color: #adadad; }
+/******************************************************************************
+SCROLL DIVS
+******************************************************************************/
+div.scrollHeaderDiv			{ position: relative; overflow: hidden; }
+div.scrollTableDiv 			{ position: relative; overflow: scroll; height: 100px; overflow-x:hidden; }
+div.scrollTableDivPinned 	{ height: auto; }
+div.scrollTreeDiv 			{ position: relative; overflow: scroll; height: 400px; overflow-x:hidden; }
+/******************************************************************************
+PAGE DIVIDER
+******************************************************************************/
+.prvMoveDiv 	{ background-color: #c0c0c0; border: 1px solid #808080; cursor: s-resize; height: 1px; }
+/******************************************************************************
+PREVIEW PANE TABLE
+******************************************************************************/
+body.preview_page_empty { background-color: #fafafa; padding-top: 10%; }
+.table_display	  { border: none; }
+.table_display td { background-color: #fafafa; text-align: center; border: none;  }
+/******************************************************************************
+EMPTY ROWS PART OF EMPTY GENERIC TABLE (PREVIOUSLY PINNED ROWS?)
+******************************************************************************/
+div.empty_rows 	   { background-color: #fafafa; height: 200px; padding-top: 0px; text-align: center; vertical-align: top; }
+td.empty_table_row { text-align: left; }
+/******************************************************************************
+TREE LEVEL STYLES
+******************************************************************************/
+.level_00 em,
+.level_01 em, 
+.level_02 em,
+.level_03 em,
+.level_04 em { padding: 1px 0 2px 14px; }
+
+.level_00 {  }
+.level_01 { margin-left: 35px; }
+.level_02 { margin-left: 18px; }
+.level_03 { margin-left: 35px; }
+.level_04 { margin-left: 55px; }
+
+/******************************************************************************
+TREE STYLE FOR CELLS WITH ICONS
+******************************************************************************/
+.has_attachment { cursor:pointer; padding: 0; margin: 0; }
+.has_attachment .truncate { margin: 0; }
+.has_attachment img { padding: 3px 3px 3px 9px; }
+/*.has_attachment { cursor:pointer; background-image:url(../images/icn_status_dot_gray.png); background-position: 7px center; background-repeat:no-repeat; }*/

@@ -1,0 +1,426 @@
+/******************************************************************************
+FRAMEWORK.CSS
+Description: Framework related styles and definitions.
+******************************************************************************/
+body#car { 
+	min-width:1024px;
+}
+/******************************************************************************
+LEFT PANE STYLES
+******************************************************************************/
+.LeftPane {
+	top: 0;
+	left: 0;
+	width: 196px;
+	border-right: 4px solid #7a7a7a;
+	float:left;
+}
+.leftPaneHeader {
+	height: 28px;
+    background: #e4e5e4 url(../images/blueone_left_pane_header.png) no-repeat left top;
+    border-bottom: 1px solid #999;
+	margin-right: 3px;
+	padding: 0; 
+	width: 100%;
+}
+/* Left Pane: Content */
+.LeftPane .action_buttons {
+	background-color: #d0d0d0;
+	height: 19px;
+	min-width: 190px;
+	line-height: 14px;
+	padding: 4px 0px 7px 5px;
+	white-space: nowrap;
+}
+.LeftPane .action_buttons a.button {
+	margin-right: 2px;
+}
+.LeftPane .action_buttons a.button:last-child {
+	margin-right: 0;
+}
+
+.LeftPane .slideMenu {
+	background-color: #F9F9F9;
+	width: 100%;
+}
+.LeftPane .slideMenuHeader {
+	background:url(../images/bgd_acd_hdr_nrm.png) repeat-x; 
+	border-top: 1px solid #999;
+	color: #333;
+	cursor:pointer;
+	font-weight: bold;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 19px;
+	text-transform: uppercase;
+}
+.LeftPane .slideMenuHeader:hover {
+	background:url(../images/bgd_acd_hdr_hilight.png) repeat-x; 
+}
+
+.LeftPane .slideMenuHeader.selected {
+	background:url(../images/bgd_acd_hdr_selected.png) repeat-x;
+}
+.LeftPane .slideMenuHeader a {
+	color: #333;
+}
+
+.LeftPane .slideMenuHeader.disabled {
+	color: #999;
+}
+
+.LeftPane .slideMenuHeader em {
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 4px 8px;
+}
+
+/*Compartment Headings */
+.LeftPane div.title {
+	border-top: 1px dotted #333;
+	color: #333;
+	font-weight: bold;
+	height: 17px;
+	line-height: 18px;
+	padding-left: 40px;
+	text-transform: capitalize;
+	overflow: hidden;
+	margin: 10px 0 5px 0;
+}
+
+.LeftPane div.title.first {
+	border-top: 0;
+	margin: 0 0 5px 0;
+}
+
+.LeftPane div.title p {
+	float: right;
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	margin-right: 4px;
+	padding: 0;
+	text-align: right;
+}
+
+.LeftPane div.title a {
+	background-position: 6px 1px; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	line-height: 18px;
+	margin-right: -4px;
+	padding: 3px 11px 0 14px;
+	border-left: 1px dotted #333;
+	-moz-outline-style: none;
+}
+
+.LeftPane div.title a:hover {
+	background-color: #DBEAFF;
+	border-bottom: 1px solid #3C5AB3;
+	-moz-outline-style:none;
+}
+
+.LeftPane div.title a.edit /* Required because size inconsistencies. */
+{
+	background-position: 4px 1px; 
+}
+
+.LeftPane div.title em.first,
+.LeftPane div.title a.first
+{
+	border-left: 0;
+}
+
+.LeftPane p.tree,
+.LeftPane p.lp_navigator {
+	padding: 12px 10px 12px 36px;
+}
+.LeftPane p.lp_navigator {
+	line-height: 22px;
+}
+
+/* Collapse: Splitter Styles */
+.splitter {
+	position: relative;
+    *position: absolute;
+	top: 0;
+	left: 196px;
+    z-index: 99;
+    width: 4px;
+	height: 100%;
+    line-height: 1px;
+    cursor: e-resize;
+    cursor: col-resize;
+    background-color: #7a7a7a;
+}
+
+
+/* Collapse: Button Styles */
+.layoutCollapse {
+    float: right;
+    cursor: pointer;
+	background: url(../images/util_collapse.png) no-repeat left center;
+	height: 28px;
+	width: 20px;
+	margin-right: -2px !important;
+}
+.layoutExpand {
+	float: left;
+	cursor: pointer;
+	background: url(../images/util_expand.png) no-repeat left center;
+	height: 25px;
+	width: 20px;
+}
+
+/* Collapse: Collapsed Styles */
+.collapsedPane {
+	display: none;
+    position: absolute;
+    left:-0;
+    top: 0;
+    overflow: hidden;
+	z-index: 20;
+    background-color: #d3d3d3;
+	border-left: 4px solid #7a7a7a;
+	border-right: 1px solid #999;
+    width: 8px;
+	height: 100%;
+	cursor: pointer;
+}
+
+/*************************************************************
+MAIN Pane
+*************************************************************/		
+.MainPane {
+	top: 0;
+	float:left;
+	width:70%;
+	overflow: hidden;
+	height: 100%;
+	/* min-width: 450px; Removed because it causes button_controls to hide once min_width is reached */
+}
+
+/* Main Pane: Content */
+		
+.BottomPane #Header {
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+.BottomPane #PaneContent {
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden !important;
+	width: 100%;
+	min-width: 500px;
+	border-top: 1px solid #ccc;
+}
+.BottomPane #PaneContent,  
+.PageViewContent {
+	position: relative;
+	top: 0;
+	overflow: auto;
+	height: auto;
+	/*border-top: 1px solid #ccc;	*/ /*TIFF WRITES: why is this here? */
+}
+.frame_pinned {
+	border-top: 0 !important;
+	overflow-y: hidden !important;
+}
+.ObjectFull {
+	padding-top: 15px;
+}
+#PaneContent .Object {
+}	
+#PaneContent .Preview {
+}
+#PaneContent .Preview iframe  {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+/*************************************************************
+Top Pane
+*************************************************************/
+.TopPane {
+	background: #ddd url(../images/bgd_top_pane.png); 
+	min-width: 745px;
+	height: 25px;
+	padding: 3px 5px 0 0;
+	white-space: nowrap;
+	border-bottom: 1px solid #999;
+}
+.TopPane .nav_buttons {
+	float: left;
+	margin: 0 40px 0 10px;
+	padding: 0;
+	white-space: nowrap;
+	min-width: 100px;
+}
+.TopPane .nav_buttons a.button {
+	margin-right: 2px !important; /* creates 5px margin between buttons */
+}
+.TopPane .nav_buttons a.button:last-child { 
+	margin-right: 0 !important;
+}
+.create_button {
+	float: left;
+	height: 20px;
+	min-width: 85px;
+	margin: -3px 40px 0 0; /* when window is shrunk, this preservers 40px space to the right of create menu */
+	padding-top: 8px;
+	border-left: 1px dotted #999;
+	border-right: 1px dotted #999;
+}
+.create_button a {
+	cursor: pointer;
+	color: #333;
+	padding: 9px 10px 7px 10px;
+	-moz-outline-style:none;
+}
+.create_button a:hover {
+	background-color: #b9cee1;
+}
+.create_button em {
+	background-repeat: no-repeat;
+	padding-bottom: 2px;
+}
+
+
+.TopPane .search_panel {
+	float: right;
+	margin: 0 40px 0 0;
+	min-width: 339px;
+	white-space: nowrap;
+}
+.TopPane .search_panel_buttons a.button {
+	margin-right: 2px !important; /* creates 5px margin between buttons */
+}
+.TopPane .search_panel a.button:last-child { 
+	margin-right: 0 !important;
+}
+.TopPane .search_panel input {
+	float: left;
+	width: 225px;
+	height: 16px;
+	vertical-align: middle;
+	line-height: 12px;
+	margin-right: 5px;
+	border-top: 1px solid #ccc; 
+	border-right: 1px solid #999;   
+	border-bottom: 1px solid #999; 
+	border-left: none;
+}
+.TopPane .search_panel #toggle_search_menu { 
+	float: left;
+	height: 18px;
+	cursor: pointer;
+	margin-right: -3px;
+	padding-left: 2px;
+	padding-top: 2px;
+	background-color: #fff;
+	border-top: 1px solid #cccccc; 
+	border-right: none;   
+	border-bottom: 1px solid #999999; 
+	border-left: 1px solid #cccccc;
+}
+
+.TopPane em.divet {
+	position: relative; 
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin-right: 7px;
+}
+
+
+
+.TopPane em.search_selector,
+.TopPane em.selector_00,
+.TopPane em.selector_01,
+.TopPane em.selector_02,
+.TopPane em.selector_03,
+.TopPane em.selector_04,
+.TopPane em.selector_05,
+.TopPane em.selector_06,
+.TopPane em.selector_07,
+.TopPane em.selector_08,
+.TopPane em.selector_09,
+.TopPane em.selector_10,
+.TopPane em.selector_11,
+.TopPane em.selector_12,
+.TopPane em.selector_13,
+.TopPane em.selector_14,
+.TopPane em.selector_15,
+.TopPane em.selector_16,
+.TopPane em.selector_17,
+.TopPane em.selector_18,
+.TopPane em.selector_19,
+.TopPane em.selector_20,
+.TopPane em.selector_21 {
+	position: relative; 
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 2px 8px;
+	line-height: 150%;
+}
+
+ div.search_selectors em.search_page{  
+ 	background-position: center center; 
+	background-repeat: no-repeat;
+	margin-right: 5px;
+	padding: 3px 9px;
+}
+
+/* YUI menu items */
+ div.search_selectors li.yuimenuitem {
+	padding-top: 5px !important; 
+	padding-bottom: 5px !important; 
+}
+div.search_selectors em.checkedindicator {
+	top: 2px !important;
+}
+div.yuimenu li a {
+    margin-left: 0;
+	line-height: 100%;
+}
+div.yuimenu li.checked a {
+	position: relative;
+	left: -15px;
+	background-color: none;
+	background: url("../includes/yui/menu/assets/map.gif") no-repeat 2px -45px;
+	padding-left: 15px;
+}
+
+div.yuimenu li.selecteditem a {
+	position: relative;
+	left: -25px;
+	background-color: none;
+	background: url("../images/icn_diamond.png") no-repeat 0 -2px;
+	padding-left: 35px;
+}
+
+/* For Production: YUI menu items 
+
+ div.search_selectors li.yuimenuitem {
+	padding-top: 5px !important; 
+	padding-bottom: 5px !important; 
+}
+div.search_selectors em.checkedindicator {
+	top: .6em !important;
+}
+div.yuimenu li a {
+    padding-left: 10px;
+}
+div.yuimenu li.checked a {
+	position: relative;
+	left: -25px;
+	background-color: none;
+	background: url("../includes/yui/menu/assets/map.gif") no-repeat 2px -45px;
+    padding-left: 35px;
+}
+
+*/

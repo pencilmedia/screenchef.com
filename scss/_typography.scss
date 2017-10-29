@@ -1,0 +1,60 @@
+/* BEGIN: typography.scss
+// -----------------------------------------------------*/
+
+body {
+    font-family: $baseFontFamily;
+    font-size: $baseFontSize;
+    // -webkit-text-size-adjust: 200%;
+    color: $charcoal;
+}
+
+
+/* HEADER TITLES
+// -----------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $titleFont;
+    margin-top: $pageMargin;
+    letter-spacing: .07rem;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 175%;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+h4 {
+    font-size: 125%;
+}
+
+h5 {
+    font-size: 100%;
+}
+
+h6 {
+    font-size: 85%;
+}
+
+
+/* TYPOGRAPHY 
+// -----------------------------------------------------*/
+
+.text-muted {
+    // Bootstrap - helper class
+    color: $gray;
+}

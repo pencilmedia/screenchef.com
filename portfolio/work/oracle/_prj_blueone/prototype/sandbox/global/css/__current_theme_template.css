@@ -1,0 +1,414 @@
+/******************************************************************************
+	BORDERS AND CREATE NEW BUTTON UNDERLINE
+*****************************************************************************/
+.LeftPane .leftPaneHeader,
+.create_button a
+{ color: [%global_toolbar_text%] !important; }
+
+/******************************************************************************
+	SELECTED DRAWER
+*****************************************************************************/
+.LeftPane .slideMenuHeader.selected
+{
+	background: none !important; 
+	background-color: [%selected_controls%] !important;
+	color: [%selected_controls_text%] !important;
+}
+
+.LeftPane .slideMenuHeader.selected a
+{
+	background: none !important; 
+	color: [%selected_controls_text%] !important;
+}
+
+.tabs_container.skin_default .tabs span
+{
+	padding: 3px 2px 2px 0 !important;
+}
+
+.tabs_container.skin_default .tabs
+{
+	background: none !important; 
+	border-bottom: solid [%selected_controls%] !important;
+	height: 20px !important;
+}
+
+
+tabs_container.skin_default .tabs a {
+	padding: 0 !important;
+}
+
+/******************************************************************************
+	HIGHLIGHT
+*****************************************************************************/
+.yuimenuitem li a { background-color: transparent !important; }
+
+.LeftPane .slideMenuHeader:hover,
+.LeftPane .slideMenuHeader.selected:hover,
+.LeftPane .slideMenuHeader.selected a:hover,
+.LeftPane .slideMenuHeader:hover a,
+.create_button a:hover,
+.selected td,
+div.yuimenu li.selected:hover,
+div.yuimenu li.selected:hover a.selected,
+.tabs_container.skin_default .tabs a:hover
+{
+	background: none !important; 
+	background-color: [%control_highlights%] !important;
+	color: [%control_highlights_text%] !important;
+}
+
+.tabs_container.skin_default.special_case li.selected ul li.selected a,
+.tabs_container.skin_default .tabs span
+{
+	font-weight: normal !important;
+	padding: 1px 10px 3px 10px !important;
+	*padding: 3px 10px 3px 10px !important;
+}
+
+.tabs_container.skin_default.special_case li.selected ul li.selected span
+{
+	color: #333 !important;
+}
+
+.tabs_container.skin_default .tabs span:hover,
+.tabs_container.skin_default.special_case li.selected ul li:hover,
+.tabs_container.skin_default.special_case li.selected ul li a:hover
+{
+	color: [%control_highlights_text%] !important;
+}
+
+.tabs_container.skin_default .tabs li.selected span,
+.tabs_container.skin_default .tabs li.selected span:hover,
+.tabs_container.skin_default.special_case li.selected ul li a
+{
+	color: [%selected_controls_text%] !important;
+	padding: 1px 10px 1px 10px !important;
+	*padding: 1px 10px 2px 10px !important;
+}
+
+.tabs_container.skin_default.special_case li.selected ul li
+{
+	border-top: 1px solid transparent !important;
+	border-left: 1px solid transparent !important;
+	border-right: 1px solid transparent !important;
+}
+.tabs_container.skin_default.special_case li.selected ul li a 
+{
+	margin:0 !important;
+}
+.LeftPane div.title a:hover
+{
+	background-color: [%control_highlights%] !important;
+	border-bottom: none;
+}
+
+.tabs_container.skin_default.special_case li.selected ul li:hover
+{
+	background: none !important; 
+	background-color: [%control_highlights%] !important;
+	color: [%control_highlights_text%] !important;
+}
+.tabs_container.skin_default.special_case li.selected ul li:hover a
+{
+	background-color: [%control_highlights%] !important;
+}
+
+.tabs_container.skin_default.special_case li.selected ul li:hover a span
+{
+	color: [%control_highlights_text%] !important;
+}
+.tabs_container.skin_default .tabs li 
+{
+	height:19px !important;
+}
+
+.tabs_container.skin_default .tabs li:first-child a { padding-left: 10px !important; }
+.tabs_container.skin_default.special_case li ul li:first-child { padding-left: 0 !important; }
+
+div.sss.focus_border,
+.focus_field { /* highlight style focus fields */
+	background: #fff url(../images/bgd_input_silver.png) repeat-x left top;
+	/*background: [%control_highlights%] url(../images/t2.png) repeat-x left -5px; */
+	border: 1px solid [%control_highlights%] !important; 
+}
+/******************************************************************************
+	HELP MESSAGE
+*****************************************************************************/
+.message
+{
+	background: none !important; 
+	background-color: [%message_area%] !important;
+	color: [%message_area_text%] !important;	
+}
+
+/*****************************************************************************
+	TABS
+*****************************************************************************/
+.LeftPane .slideMenuHeader
+{
+	background: [%non_selected_controls%] url(/global/images/grad_dark2.png) repeat-x scroll center 13px !important;
+	color: [%non_selected_controls_text%] !important;
+	padding: 2px 8px 2px 8px !important;
+}
+
+.tabs_container.skin_default .tabs span 
+{
+	color: [%non_selected_controls_text%] !important;
+}
+
+.tabs_container.skin_default .tabs li
+{
+	background: [%non_selected_controls%] url(/global/images/grad_dark2.png) repeat-x scroll center 13px !important;
+	color: [%non_selected_controls_text%] !important;
+}
+.tabs_container.skin_default .tabs li ul li,
+.tabs_container.skin_default.special_case li ul
+{
+	background-color: [%selected_controls%] !important;
+}
+
+
+div.full_table_header h3
+{
+	background: [%non_selected_controls%] !important;
+	color: [%non_selected_controls_text%] !important;
+	padding: 5px 8px !important;
+}
+
+.tabs_container.skin_default .tabs .selected a 
+{
+	background: none !important; 
+	background: [%selected_controls%] !important;
+}
+
+.LeftPane .slideMenuHeader a
+{
+	color: [%selected_controls_text%] !important; 
+}
+
+.tabs_container.skin_default.special_case li.selected ul li.selected,
+.tabs_container.skin_default.special_case li.selected ul li.selected a
+{
+	background-color: #fff !important;
+	background-image: none !important;
+}
+.tabs_container.skin_default .tabs a
+{ border-left: 1px solid #fff !important; }
+
+
+.tabs_container.skin_default ul.tabs li:first-child a
+{ border-left: none !important; }
+
+.tabs_container.skin_default ul.tabs li:first-child ul li:first-child a
+{ border-left: none !important; }
+
+
+/*****************************************************************************
+	TOP PANE
+*****************************************************************************/
+.TopPane,
+.leftPaneHeader  {
+	background-image: none !important;
+    background-color: [%global_toolbar%] !important;
+}
+.leftPaneHeader  
+{
+	transparent url(/global/images/orc_logo_xsml_dark_bkg.png) repeat scroll 0 0 !important
+}
+/*****************************************************************************
+	ACTION DIALOGS
+*****************************************************************************/
+/* Footer */
+.action_dialog .header_wrapper
+{
+	background-image: none !important;
+    background-color: [%dialog_title_bar%] !important;
+}
+.action_dialog .header_wrapper h2,
+.action_dialog .header_wrapper p
+{ color: [%dialog_title_bar_text%] !important; }
+
+
+/*****************************************************************************
+	WIZARDS
+*****************************************************************************/
+.wizard .wizard_steps
+{
+	background-color: [%non_selected_controls%] !important;
+}
+
+.header_close_button,
+.wizard .wizard_steps h2
+{
+	color: [%non_selected_controls_text%] !important;	
+}
+
+/******************************************************************************
+	PALETTE HEADER / FOOTER
+*****************************************************************************/
+
+.ux_palette_top 
+{ 
+	background-image: none !important;
+	background-color: [%dialog_title_bar%];
+}
+.ux_palette_bottom_action_bar {
+	margin-left: 0 5px;
+}
+#ux_palette_title { 
+	color: #FFF;
+}
+/******************************************************************************
+	DIALOG ACTION BARS
+*****************************************************************************/
+.ux_palette_bottom ,
+.action_dialog div.footer,
+.action_dialog div.footer div.column_one label
+{ 
+	background-image: none !important;
+	background-color: [%dialog_title_bar%] !important;
+	border: 2px solid transparent;
+	color: [%dialog_title_bar_text%] !important;
+}
+
+.action_dialog div.footer div.column_one label
+{
+	background-color: transparent !important;
+}
+
+
+/******************************************************************************
+	WIDGET TITLE BAR
+*****************************************************************************/
+.dashboardTitle,
+.groupWrapper .groupItem .itemHeader,
+.groupItem .itemHeader
+{
+	background: none !important; 
+	background-color: [%widget_title_bar%] !important;
+	color: [%widget_title_bar_text%] !important;
+}
+
+/******************************************************************************
+	LEFT PANE BUTTON BG, DRAWER & CREATE NEW BUTTON HOVERS, SELECTED PALETTE TAB
+*****************************************************************************/
+.GPanel,
+.GPanelTop,
+.LeftPane .action_buttons
+{
+	background: none !important;	
+	background-color: [%non_selected_controls%] !important;
+	color: [%non_selected_controls_text%] !important;
+}
+
+/* What Joel calls borders */
+.LeftPane .slideMenuHeader 
+{
+	border-top:1px solid [%borders%] !important;
+}
+
+table.widget th:first-child
+{
+	border-left:1px solid [%dialog_title_bar%] !important;
+}
+
+table.rbr tbody tr:last-child  td,
+table.widget tbody tr:last-child td { border-bottom: none !important; }
+/******************************************************************************
+	HIGHTLIGHTS & PALETTE TAB BACKGROUND
+*****************************************************************************/
+.palette_tabs {
+	border-top: 1px solid #9bb3e1;
+	border-bottom: 1px solid #9bb3e1;
+	background: url(../images/bgd_palette_tabs.png) repeat-x left top; 
+}
+
+.palette_tabs .selected { 
+	border: none;
+}
+
+.palette_tabs,
+.palette_tabs .selected {
+	background-color: #9bb3e1 !important;
+}
+/******************************************************************************
+	PALETTE AND LEFT PANE 
+*****************************************************************************/
+.LeftPane .slideMenu,
+.treemenu .ygtvitem table td a
+{
+	background-color: [%backgrounds%] !important;
+	color: [%backgrounds_text%] !important;
+}
+
+.tabs_container.skin_default .tabs a 
+{
+	padding:2px 14px 0 14px !important;
+}
+
+/******************************************************************************
+	BUTTONS
+*****************************************************************************/
+a.button:hover,
+a.button:focus,
+a.button:active {
+	background: url('../images/btn_left_hover.png') left center no-repeat !important;
+}
+a.button:hover span,
+a.button:focus span,
+a.button:active span 
+{
+	background: url('../images/btn_right_hover.png') right center no-repeat !important;
+}
+
+#logo1
+{
+	display: block !important;
+}
+
+/******************************************************************************
+	ICONS
+******************************************************************************/
+.dropdown { background-image:url(../images/icn_menu[%global_toolbar_icons%].png) !important; }
+.collapse_all { background-image:url(../images/icn_tree_collapse_all[%backgrounds_collapse_all_icons%].png) !important; }
+.expand_all { background-image:url(../images/icn_tree_expand_all[%backgrounds_expand_all_icons%].png) !important; }
+.edit { background-image:url(../images/icn_action_edit[%backgrounds_edit_icons%].png) !important; }
+
+
+/******************************************************************************
+	TAB SCROLLERS
+******************************************************************************/
+div#leftScroll,
+div#rightScroll
+{
+	height: 14px;
+	background: none !important;
+	background-color: #fff !important;
+}
+div#rightScroll { border-bottom: 3px solid #900; }
+
+
+/******************************************************************************
+	GRADIENT STYLES
+******************************************************************************/
+.TopPane,
+.leftPaneHeader
+{
+	background: [%global_toolbar%] url(/global/images/[%gradient%]) repeat-x center 15px !important;
+}
+
+.action_dialog .header_wrapper
+{
+	background: [%dialog_title_bar%] url(/global/images/[%gradient%]) repeat-x center 42px !important;
+}
+
+.action_dialog div.footer
+{
+	background: [%dialog_title_bar%] url(/global/images/[%gradient%]) repeat-x center 13px !important;
+}
+
+.LeftPane .slideMenuHeader.selected
+{
+	background: [%selected_controls%] url(/global/images/[%gradient%]) repeat-x center 8px !important;
+}

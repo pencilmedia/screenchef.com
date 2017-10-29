@@ -1,0 +1,199 @@
+/******************************************************************************
+SUPPLIER.CSS
+Description: Shared / Common Styles for SIMPLIFIED SUPPLIER.
+******************************************************************************/
+
+/********* FRAMEWORK ************/
+html,
+body.simple_supplier {
+	min-width: 1024px;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+/******************************************************************************
+LEFT PANE STYLES
+******************************************************************************/
+body.simple_supplier .LeftPane {
+	position: absolute;
+	top: 0;
+	bottom: 0; 
+	left: 0;
+	width: 199px;
+	height: 100%;
+	border-right: 1px solid #e3e3e3;
+	overflow: visible;
+}
+body.simple_supplier .LeftPaneTop {
+	width: 200px;
+}
+body.simple_supplier .LeftPane .action_buttons {
+	background-color: #e4e4e4;
+	height: 19px;
+	min-width: 190px;
+	line-height: 14px;
+	padding: 4px 0px 7px 5px;
+	white-space: nowrap;
+}
+body.simple_supplier .LeftPane .LeftPaneBottom {
+	height: 100%;
+}
+body.simple_supplier .LeftPane .slideMenu {
+	background-color: #F9F9F9;
+	width: 100%;
+	height: 100%;
+}
+
+body.simple_supplier .LeftPane .slideMenuHeader {
+	border-top: none;	
+}
+
+
+body.simple_supplier .slideMenuBody ul {
+	margin-top: 10px;
+}
+body.simple_supplier .slideMenuBody ul li:hover {
+	cursor: pointer;
+	background-color: #e9e9e9;
+}
+body.simple_supplier .slideMenuBody li.selected {
+	font-weight: bold;
+	background-color: #e4e4e4;
+}
+body.simple_supplier .slideMenuBody ul li a {
+	color: #333;
+	display: block;
+	margin: 0;
+}
+body.simple_supplier .slideMenuBody ul li {
+	padding: 5px 0 5px 25px;
+}
+body.simple_supplier .slideMenuBody ul ul {
+	margin-top: 0;
+	border: none;
+}
+body.simple_supplier .slideMenuBody ul:last-child {
+	border-top: 1px solid #e3e3e3;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+body.simple_supplier .slideMenuBody ul ul:last-child {
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 0;
+}
+body.simple_supplier .slideMenuBody ul ul li a {
+	padding-left: 25px;
+}
+/* Homepage Nav */
+body.simple_supplier .slideMenuBody.homeNav li.notification a span em {
+	padding: 2px 8px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+body.simple_supplier .slideMenuBody ul li.custom a {
+	margin-left: 12px;
+}
+body.simple_supplier .slideMenuBody ul li.custom.first a {
+	margin-left: 0;
+}
+.rfq_submit_response {
+	 margin-left: 50px;
+	 padding: 5px 0;
+}
+.dec_submit_response {
+	 margin-left: 37px;
+	 padding: 5px 0;
+}
+
+/*************************************************************
+MAIN Pane
+*************************************************************/
+body.simple_supplier .MainPane {
+	position: fixed;
+	top: 0; 
+	left: 200px;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	width: auto !important;
+}
+body.simple_supplier .BottomPane #Header {
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+body.simple_supplier .BottomPane #PaneContent {
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden !important;
+	width: 100%;
+	min-width: 500px;
+	border-top: none;
+}
+body.simple_supplier .BottomPane #PaneContent,  
+body.simple_supplier .PageViewContent {
+	position: relative;
+	top: 0;
+	overflow: auto;
+	height: auto;
+}
+/*************************************************************
+Top Pane
+*************************************************************/
+body.simple_supplier .TopPane {
+	background: #ddd url(../images/bgd_top_pane.png); 
+	min-width: 745px;
+	height: 25px;
+	padding: 3px 0 0 0;
+	white-space: nowrap;
+	border-bottom: 1px solid #999;
+}
+
+
+body.simple_supplier .TopPane .action_panel {
+	float: right;
+	text-align: right;
+	margin: 0 10px 0 0;
+	min-width: 339px;
+	white-space: nowrap;
+}
+body.simple_supplier .TopPane .action_panel_buttons a.button {
+	margin-right: 2px !important; /* creates 5px margin between buttons */
+}
+body.simple_supplier .TopPane .action_panel a.button:last-child { 
+	margin-right: 0 !important;
+}
+
+
+/*************************************************************
+CONTENT
+*************************************************************/
+body.simple_supplier .page_controls {
+	text-align: right;
+}
+body.simple_supplier .message {
+	border-top: 1px solid #ccc;
+}
+
+/*************************************************************
+TABLES
+*************************************************************/
+body.simple_supplier .table_actions .column_three input.short_width {
+	width: 60%;
+}
+div.bom_demo_table_filler { height: 1200px; background-color: silver; background-image: url('/global/images/table_deadspace.png'); }
+
+
+
+
+/*************************************************************
+SUPPLIER HOME PAGE STYLES
+*************************************************************/
+body.supplier_home .slideMenuBody.homeNav ul {
+	margin-top: 46px;
+}
+body.supplier_home .slideMenuBody.homeNav ul li.notification {
+	margin-top: 10px;
+}

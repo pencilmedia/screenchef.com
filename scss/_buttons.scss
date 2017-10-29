@@ -1,0 +1,40 @@
+/* BEGIN: buttons.scss
+// -----------------------------------------------------*/
+
+
+// BUTTON VARIABLES
+
+// btn-default
+$btnDefault: #ccc;
+$btnDefaultBorder: darken($btnDefault, 10%);
+	//hover
+$btnDefaultHvr: darken($btnDefault, 5%);
+$btnDefaultBorderHvr: darken($btnDefault, 15%);
+
+// btn-primary
+$btnPrimary: $schoolbusYellow;
+$btnPrimaryBorder: darken($schoolbusYellow, 10%);
+	//hover
+$btnPrimaryHvr: darken($btnPrimary, 15%);
+$btnPrimaryBorderHvr: darken($btnPrimaryBorder, 5%);
+
+// btn-info
+$btnInfo: $brown;
+$btnInfoBorder: darken($btnInfo, 15%);
+	//hover
+$btnInfoHvr: darken($btnInfo, 10%);
+$btnInfoBorderHvr: darken($btnInfo, 25%);
+
+
+// BUTTONS
+// -----------------------------------------------------
+
+.button {
+     color: #043F90;
+     background: $btnDefault;
+     font-size: .95em;
+     &:hover {
+     	background: $btnDefaultHvr;
+        text-decoration: none;
+     }
+}

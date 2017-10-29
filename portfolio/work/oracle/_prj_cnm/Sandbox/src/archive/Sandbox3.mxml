@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml"
+	title="Oracle CNM: Welcome Anthony Moquette"
+	xmlns:cnm="components.*"
+	width="1024" 
+	height="768" 
+	layout="vertical" 
+	verticalGap="0" 
+	showStatusBar="false" 
+	paddingLeft="0" 
+	paddingRight="0" 
+	paddingTop="0" 
+	paddingBottom="0" 
+	backgroundColor="#ffffff">
+	
+	<mx:Style source="styles/default.css"/>
+	
+	<mx:XML xmlns="" id="quotesXML" source="../assets/data/quotes.xml" />
+	<mx:XML xmlns="" id="statusXML" source="../assets/data/projectStatus.xml" />
+	<mx:XML xmlns="" id="ownersXML" source="../assets/data/owners.xml" />
+	<mx:XML xmlns="" id="customersXML" source="../assets/data/customers.xml" />
+
+	<mx:states>
+		<mx:State name="homePage">
+			<mx:AddChild>
+				<cnm:home id="homePage" />
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="quotePage">
+			<mx:AddChild>
+				<cnm:quotes id="quotePage" />
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="ideaPage">
+			<mx:AddChild>
+				<cnm:ideas />
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="requirementPage">
+			<mx:AddChild>
+				<cnm:requirements/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="searchResultsPage">
+			<mx:AddChild>
+				<cnm:search_results />
+			</mx:AddChild>
+		</mx:State>
+		
+	</mx:states>
+	
+	
+	<mx:Grid x="0" y="0" horizontalGap="0" verticalGap="1" width="100%" height="40" creationComplete="currentState='homePage'">
+		<mx:GridRow width="100%" height="40" paddingBottom="0" paddingTop="0" paddingRight="0">
+			<mx:GridItem paddingBottom="0" paddingTop="0" paddingRight="0" paddingLeft="0">
+				<mx:ApplicationControlBar styleName="globalAppBar" width="45" height="40" paddingLeft="8" paddingTop="5" fillAlphas="[1.0, 1.0]" fillColors="[#5C85AA, #3D71AE]">
+					<mx:Image x="10" y="8" id="l1" styleName="globalAppBarLogo" source="@Embed(source='../assets/images/logos/o_logo_white.png')" />
+				</mx:ApplicationControlBar>			
+			</mx:GridItem>
+			<mx:GridItem width="100%" height="100%" verticalAlign="middle" paddingLeft="0" paddingRight="0" paddingBottom="0" paddingTop="0">
+				<mx:ApplicationControlBar width="100%" paddingLeft="5" paddingRight="10" paddingBottom="0" paddingTop="0" height="100%">
+					
+					<mx:HBox horizontalGap="0">
+        				<mx:LinkButton icon="@Embed(source='../assets/images/icons/ico_home_dark.png')" click="currentState='homePage'" id="homeButton" styleName="navBtn" height="35" selected="true" />
+			            <mx:LinkButton icon="@Embed(source='../assets/images/icons/ico_quote_dark.png')" click="currentState='quotePage'" id="quoteButton" height="35" />
+			            <mx:LinkButton icon="@Embed(source='../assets/images/icons/ico_idea_dark.png')" click="currentState='ideaPage'" height="35" />
+			            <mx:LinkButton icon="@Embed(source='../assets/images/icons/ico_requirement_dark.png')" click="currentState='requirementPage'" height="35" />
+			        </mx:HBox>
+					<mx:LinkButton icon="@Embed('../assets/images/icons/ico_dropdown.png')" height="35" label="Favorites" labelPlacement="left" />
+					<mx:LinkButton icon="@Embed('../assets/images/icons/ico_dropdown.png')" height="35" label="Recently Visited" labelPlacement="left" />
+					<mx:Spacer width="50%"/>
+					<mx:TextInput width="80%" height="22" fontSize="11" borderColor="#999999"/>
+					<mx:Button  id="searchButton" click="currentState='searchResultsPage'"
+					color="#666666" height="22" fontSize="10" fontWeight="normal">
+						<mx:icon>@Embed(source='../assets/images/icons/ico_global_forward.png')</mx:icon>
+					</mx:Button>
+				    <mx:ButtonBar styleName="globalButtonBar" paddingLeft="10">
+				        <mx:dataProvider>
+							<mx:Object icon="@Embed(source='../assets/images/icons/ico_global_settings.png')"/>
+							<mx:Object icon="@Embed(source='../assets/images/icons/ico_global_help.png')"/>
+							<mx:Object icon="@Embed(source='../assets/images/icons/ico_global_logout.png')"/>
+				        </mx:dataProvider>
+				    </mx:ButtonBar>	
+				</mx:ApplicationControlBar>
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+</mx:WindowedApplication>

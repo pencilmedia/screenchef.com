@@ -1,0 +1,138 @@
+/* BEGIN: navbar.less
+// -----------------------------------------------------*/
+
+.vsnb {
+    &.price-lookup {
+        // Show sidebar button in navbar for price lookup page
+        .navbar-fixed-top {
+            .create-actions {
+                display: none;
+            }
+            .price-lookup-actions {
+                display: none;
+            }
+        }
+        &.wideViewport {
+            .navbar-fixed-top {
+                &.drill-out {
+                    .create-actions, .deal-actions {
+                        display: none;
+                    }
+                    .price-lookup-actions  {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-fixed-top {
+        // Theme in vsn-theme-default theme
+        line-height: @navbarHeight;
+        max-height: @navbarHeight;
+        min-height: @navbarHeight;
+        padding-left: 250px;
+        h1 {
+            display: inline-block;
+            float: left;
+            font-size: 125%;
+            line-height: @navbarHeight;
+            margin: 0;
+            width: 80%;
+        }
+        .btn {
+            position: relative;
+            top: -3px;
+        }
+        .butcon {
+            font-size: 135%;
+            height: @navbarHeight;
+            width: 50px;
+            i {
+                // Theme in vsn-theme-default theme
+                height: @navbarHeight;
+                line-height: @navbarHeight;
+                text-shadow: none;
+                width: 50px;
+            }
+            &:hover {
+                // Theme in vsn-theme-default theme
+            }
+            &.back {
+                display: none;
+                // Theme in vsn-theme-default theme
+            }
+            &.close-view {
+                // Theme in vsn-theme-default theme
+            }
+        }
+        .sidebar-action {
+            display: inline-block;
+            .butcon {
+                display: none;
+                + h1 {
+                    float: none;
+                    width: auto;
+                    display: none;
+                }
+            }
+        }
+        .create-actions {
+            display: block;
+        }
+        .deal-actions {
+            display: none;
+        }
+        .price-lookup-actions {
+            display: none;
+        }
+        &.drill-out {
+            padding-right: 40%;
+            .butcon {
+                &.back {
+                    display: inline-block;
+                }
+                &.close-view {
+                    display: none;
+                }
+            }
+            .sidebar-action {
+                    display: none;
+            }
+            .create-actions {
+                display: none;                
+            }
+            .deal-actions {
+                display: block;                
+            }
+            h1, .close-view {
+                display: none;
+            }
+            p {
+                &.pull-right {
+                    display: none;
+                }
+            }
+        }
+        p {
+            margin: 0;
+            &.pull-right {
+                line-height: @navbarHeight;
+                .butcon {
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.sidebar-closed {// Sidebar closed remove padding-left
+        .navbar-fixed-top {
+            padding-left: 0;
+        }
+    }
+}
+
+/* END: navbar.less
+// -----------------------------------------------------*/
+

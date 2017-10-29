@@ -1,0 +1,40 @@
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+    <!-- Page <HEAD>
+    ================================================== -->
+    @@include('./inc/head.tpl', {"pageTitle": "Paradata Prototype"})
+    <!-- Page <BODY>
+    ================================================== -->
+    <body class="@@authenticateClass" data-id="@@authenticateID">
+        <main>
+            <form name="login" method="post" action="/auth" accept-charset="utf-8">
+                <img src="@@context/common/img/paradata_darkbg.png" alt="Paradata Logo">
+                <div class="alert alert-info" role="alert">
+                    Your session has expired.
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Username" aria-describedby="username" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" aria-describedby="password">
+                </div>
+                <input type="submit" value="Login" class="btn btn-primary btn-lg">
+            </form>
+            <footer>
+                <p>
+                    <a href="#/">Forgot Your Password?</a>
+                    <span>Send email to support@paradata.io</span>
+                </p>
+            </footer>
+        </main>
+    <!-- JavaScripts
+    ================================================== -->
+        @@include('./inc/javascripts.tpl')
+    </body>
+</html>

@@ -1,0 +1,13 @@
+﻿.groupItem
+{
+	border: 1px solid #ddd;
+	background-color: #f5f5f5;
+}
+.groupItem .itemHeader
+{
+	background: #ddd url(/global/images/bgd_top_pane.png) repeat scroll 0%;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+}
+
+.groupItem .itemHeader a.closeEl  { color: white; }

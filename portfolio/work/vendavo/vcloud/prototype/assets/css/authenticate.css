@@ -1,0 +1,345 @@
+/* Authenticate.less
+// Theme: Vendavo
+// -----------------------------------------------------*/
+html,
+body {
+  height: 100%;
+  padding-top: 0;
+}
+#wrapper,
+.authenticate {
+  height: 100%;
+}
+.authenticate {
+  overflow: auto;
+  border: 1px solid transparent;
+  background-image: -webkit-linear-gradient(top, #1a3643 0%, #162d38 100%);
+  background-image: linear-gradient(to bottom, #1a3643 0%, #162d38 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a3643', endColorstr='#ff162d38', GradientType=0);
+}
+.authenticate .tab-content {
+  overflow: hidden;
+}
+.authenticate #logo {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.authenticate .btns-register {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+}
+.authenticate nav,
+.authenticate footer,
+.authenticate .tab-pane {
+  margin: 0 auto;
+  width: 450px;
+}
+.authenticate nav {
+  overflow: auto;
+  margin-top: 3%;
+}
+.authenticate nav .nav {
+  margin-bottom: 0;
+  margin-left: 25%;
+}
+.authenticate nav .nav li a {
+  color: #666666;
+}
+.authenticate nav .nav li.active {
+  font-weight: bold;
+}
+.authenticate nav .nav li.active a {
+  background: none;
+  color: #ffffff;
+}
+.authenticate .tab-pane {
+  padding-top: 20px;
+  min-height: 300px;
+}
+.authenticate .tab-pane section {
+  border-radius: 5px;
+  padding: 40px 0 30px 0;
+  min-height: 300px;
+  border-top: 1px solid #15262e;
+  border-right: 1px solid #90b9cc;
+  border-bottom: 1px solid #b3cfdc;
+  border-left: 1px solid #0d181d;
+  background: #ffffff;
+  background-color: #c8d1d8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f6f8), to(#c8d1d8));
+  background-image: -webkit-linear-gradient(top, #f5f6f8, #c8d1d8);
+  background-image: -moz-linear-gradient(top, #f5f6f8, #c8d1d8);
+  background-image: -o-linear-gradient(top, #f5f6f8, #c8d1d8);
+  background-image: -ms-linear-gradient(top, #f5f6f8, #c8d1d8);
+  background-image: linear-gradient(top, #f5f6f8, #c8d1d8);
+  box-shadow: inset 0 0 7px #1d3540;
+}
+.authenticate .tab-pane section article {
+  padding: 0 30px;
+}
+.authenticate .tab-pane section article h1 {
+  text-align: center;
+  font-size: 175%;
+  line-height: 30px;
+}
+.authenticate .tab-pane section .alert {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 8px 14px;
+  text-align: left;
+}
+.authenticate .tab-pane section .alert p {
+  margin-right: 0;
+  margin-left: 0;
+}
+.authenticate .tab-pane section form {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 5px;
+  width: 350px;
+}
+.authenticate .tab-pane section form fieldset {
+  text-align: center;
+}
+.authenticate .tab-pane section form fieldset legend {
+  margin: 0;
+  border-bottom: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 175%;
+  line-height: 30px;
+}
+.authenticate .tab-pane section form fieldset legend + dl {
+  padding-top: 20px;
+}
+.authenticate .tab-pane section form fieldset input[type="checkbox"] {
+  border: none;
+  box-shadow: none;
+}
+.authenticate .tab-pane section form fieldset .error input[type="text"],
+.authenticate .tab-pane section form fieldset .error input[type="password"] {
+  border: 1px solid #ba2b36;
+}
+.authenticate .tab-pane section form fieldset .error span {
+  padding-bottom: 7px;
+}
+.authenticate .tab-pane section form fieldset .error i {
+  color: #ba2b36 !important;
+}
+.authenticate .tab-pane section form fieldset .checkbox {
+  margin: 10px 0 15px 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+}
+.authenticate .tab-pane section form fieldset .checkbox input[type="checkbox"] {
+  margin: 0 3px 0 0;
+}
+.authenticate .tab-pane section form fieldset .checkbox:after {
+  content: '';
+}
+.authenticate .tab-pane section form fieldset .radio input[type="radio"],
+.authenticate .tab-pane section form fieldset .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: -25px;
+}
+.authenticate .tab-pane section form fieldset dl {
+  margin: 0;
+  padding-top: 5px;
+}
+.authenticate .tab-pane section form fieldset dl dd {
+  margin: 0 0 10px 0;
+  text-overflow: visible overflow;
+  white-space: normal;
+  overflow: visible;
+}
+.authenticate .tab-pane section form fieldset dl dd i {
+  color: #74ae42;
+}
+.authenticate .tab-pane section form fieldset dl dd .btn i {
+  display: inline-block;
+  margin-right: 5px;
+  width: 13px;
+  height: 13px;
+  color: #8d9fad;
+}
+.authenticate .tab-pane section form fieldset dl dd select,
+.authenticate .tab-pane section form fieldset dl dd input,
+.authenticate .tab-pane section form fieldset dl dd input[type="text"],
+.authenticate .tab-pane section form fieldset dl dd input[type="password"] {
+  margin: 3px 0;
+}
+.authenticate .tab-pane section form fieldset dl dd select,
+.authenticate .tab-pane section form fieldset dl dd textarea:required,
+.authenticate .tab-pane section form fieldset dl dd input:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="text"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="password"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="datetime"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="datetime-local"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="date"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="month"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="time"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="week"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="number"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="email"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="url"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="search"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="tel"]:required,
+.authenticate .tab-pane section form fieldset dl dd input[type="color"]:required {
+  margin: 0;
+  color: #666666;
+}
+.authenticate .tab-pane section form fieldset dl dd select {
+  height: 30px;
+}
+.authenticate .tab-pane section form fieldset dl dd select + i {
+  top: 5px;
+}
+.authenticate .tab-pane section form fieldset dl dd span {
+  padding: 5px 0 0 7px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 13px;
+}
+.authenticate .tab-pane section form fieldset dl dd label {
+  margin-top: 0;
+}
+.authenticate .tab-pane section form fieldset dl dd p {
+  margin-bottom: 20px;
+  padding: 0;
+}
+.authenticate .tab-pane section form fieldset dl dd ul {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 0 0 20px;
+  width: 75%;
+}
+.authenticate .tab-pane section form fieldset dl dd ul li {
+  text-align: left;
+}
+.authenticate .tab-pane section form fieldset dl dd a {
+  border-bottom: 1px dotted #bfbfbf;
+  color: #74ae42;
+}
+.authenticate .tab-pane section form fieldset dl dd a:hover {
+  color: #333333;
+}
+.authenticate .tab-pane section form fieldset dl .list-actions {
+  margin-top: 15px;
+}
+.authenticate .tab-pane section form fieldset dl .list-actions button {
+  width: 100%;
+}
+.authenticate .tab-pane section form fieldset dl .list-actions a {
+  display: inline-block;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+.authenticate .tab-pane .form-check-email {
+  background-image: url("../img/watermark_email.png");
+  background-position: right top;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+.authenticate .tab-pane .form-register hr {
+  margin-left: 20px;
+  width: 89%;
+}
+.authenticate .tab-pane .form-register form {
+  padding: 0;
+  width: 390px;
+}
+.authenticate .tab-pane .form-register form fieldset {
+  padding: 0;
+}
+.authenticate .tab-pane .form-register form fieldset legend + dl dd:first-child {
+  width: 92%;
+  text-align: center;
+}
+.authenticate .tab-pane .form-register form fieldset dl {
+  margin: 0 0 0 20px;
+}
+.authenticate .tab-pane .form-register form fieldset dl dd {
+  text-align: left;
+}
+.authenticate .tab-pane .form-register form fieldset dl dd .inline-select label {
+  display: inline;
+  float: left;
+  margin-left: 5px;
+  line-height: 30px;
+}
+.authenticate .tab-pane .form-register form fieldset dl dd .inline-select select {
+  display: inline;
+  float: left;
+}
+.authenticate .tab-pane .form-register form fieldset dl dd label {
+  text-align: center;
+}
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="text"],
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="password"],
+.authenticate .tab-pane .form-register form fieldset dl dd select {
+  width: 89%;
+}
+.authenticate .tab-pane .form-register form fieldset dl dd select + i,
+.authenticate .tab-pane .form-register form fieldset dl dd textarea:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="text"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="password"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="datetime"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="datetime-local"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="date"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="month"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="time"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="week"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="number"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="email"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="url"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="search"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="tel"]:required + i,
+.authenticate .tab-pane .form-register form fieldset dl dd input[type="color"]:required + i {
+  display: inline;
+  margin-left: 5px;
+}
+.authenticate footer {
+  text-align: center;
+  /* Gradient to account for scrolling when bottom fixed position.
+		background-image: -webkit-gradient(
+		  linear, left top, left bottom, from(rgba(22,50,63,0.1)),
+		  to(rgba(45,82,99,0.4)), color-stop(.9,#16323F)
+		);
+		background-image: -moz-linear-gradient(
+		  rgba(185,196,205, 0.1) 0%, rgba(185,196,205, .8) 75%
+		);
+*/
+  width: 100%;
+}
+.authenticate footer p {
+  font-size: 90%;
+}
+.authenticate footer p a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 0 10px;
+  border: none;
+  border-right: 1px solid #666666;
+  color: #e6eaed;
+  text-align: center;
+  line-height: 85%;
+}
+.authenticate footer p a:last-child {
+  border-right: none;
+}
+.authenticate footer p a:hover {
+  color: #a8d185;
+}
+.authenticate footer p img {
+  margin: 0 15px;
+  width: 50px;
+}
+.authenticate footer a {
+  border: none;
+}

@@ -1,0 +1,19 @@
+/* BEGIN: dialogs.scss
+// -----------------------------------------------------*/
+
+// Dialogs
+.bootstrap-dialog {
+	.modal-header {
+		background: $grayLighter;
+		border-bottom-color: $grayLight;
+		&.bootstrap-dialog-draggable {
+			cursor: move;
+		}
+	}
+	.modal-content {
+		// Mixin
+		@include border-radius(0);
+	}
+}
+
+

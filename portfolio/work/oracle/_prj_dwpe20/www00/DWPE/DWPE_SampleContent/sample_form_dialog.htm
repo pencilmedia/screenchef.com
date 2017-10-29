@@ -1,0 +1,44 @@
+<ux class='dwpe-window-container also-resize centered  context-menu' menu='/DWPE/DWPE_SampleContent/sample_context_menu.htm'>
+	<div class='window dialog'>
+	<div class='top'>
+		<div class='left'>Dialog With Form Elements</div>
+		<div class='right'>&nbsp;<span class='icons ico-closetab close-window'  title='Close' /></div>
+	</div>
+		
+	<div class='middle also-resize'>
+		<form>
+		<table cellpadding='0' cellspacing='0' class='dwpe-form-layout-inner not-stacked'>
+					<tr>
+						<td><div class='dwpe-prompt     '><span class='icons ico-not-required ' />Spinbox 1</div></td>
+						<td class='r2'><ux class="dwpe-spinbox  not-required" current="5"  min="1"  max="10"  increment="1" help="Example: 1 to 10"/></td>
+					</tr>
+				
+					<tr>
+						<td><div class='dwpe-prompt     '><span class='icons ico-not-required '  title='Required' />Zip Code</div></td>
+						<td class='r2'><input class="dwpe-textbox  zip not-required" value="My Text" help="Example: I'm a field that accepts 5 digit zip codes only"/></td>
+					</tr>
+					<tr>
+						<td><div class='dwpe-prompt     '><span class='icons ico-required ' />Email Address</div></td>
+						<td class='r2'><input class="dwpe-textbox  email required" value="My Text" help="Example: I'm a field that requires an email address"/></td>
+					</tr>
+					<tr>
+						<td><div class='dwpe-prompt     '><span class='icons ico-not-required ' />Positive Number</div></td>
+						<td class='r2'><input class="dwpe-textbox  pos-number not-required" value="My Text" help="Example: I'm a field that accepts positive numbers only"/></td>
+					</tr>
+					<tr>
+						<td><div class='dwpe-prompt     '><span class='icons ico-not-required ' />Phone Number</div></td>
+						<td class='r2'><input class="dwpe-textbox  phone not-required" value="My Text" help="Example: I'm a field that accepts phone numbers only"/></td>
+					</tr>
+					
+					
+				</table>
+		</form>
+	</div>
+	<div class='bottom'>
+		<div class='left'></div>
+		<div class='right'><li id='ux1269079765843' class='DWPE_Button close-window'  title='OK' onclick='DWPE_Utilities.loadURL(this);' url='#' target='_self'>OK</li>
+							<li id='ux1269079765843' class='DWPE_Button close-window'  title='Cancel' onmousedown='DWPE_Utilities.exec(this);' cmd="" target='_javascript'>Cancel</li>
+		</div>
+	</div>
+	</div>
+</ux>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication initialize="init()" xmlns:Extended="com.*" xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" xmlns:local="*">
+	
+<mx:Script>
+	<![CDATA[
+		import mx.containers.VBox;
+		import mx.controls.Label;
+		import mx.containers.Canvas;
+	 	
+		[Embed (source="assets/Bulb On.png")]
+		[Bindable]
+		public var bmlip:Class;
+		
+	]]>
+</mx:Script>
+
+<mx:Style>
+extendedPopUpMenuButton{
+   cornerRadius: 0;
+   alpha: 1;
+   borderColor: #DCEBFE;
+   color: #000000;
+   textRollOverColor: #000000;
+   textSelectedColor: #000000;
+   paddingLeft: 5;
+   paddingRight: 5;
+   upSkin: ClassReference('com.extended_TabListToolButtonSkin');
+   overSkin: ClassReference('com.extended_TabListToolButtonSkin');
+   downSkin: ClassReference('com.extended_TabListToolButtonSkin');
+   popUpDownSkin : ClassReference('com.extended_TabListToolButtonSkin');
+   popUpOverSkin : ClassReference('com.extended_TabListToolButtonSkin');
+   
+}
+
+.CloseButton{
+   upSkin: Embed(source="assets/Close_Up.png"); 
+   overSkin: Embed(source="assets/Close_Over.png");
+   downSkin: Embed(source="assets/Close_Down.png");
+}
+
+Tab{ 
+   borderSides: "top";	
+   borderStyle: "none";
+   fillAlphas: 1,1,1,1;
+   alpha: .2;
+   fillColors: #DCEBFE,#8EB3E7,#DCEBFE,#8EB3E7;
+   cornerRadius: 5;
+   borderColor: #8EB3E7;
+   backgroundColor: #DCEBFE;
+   fontWeight: "normal";
+   paddingLeft: 5;
+   showCloseButton: true;
+   
+}
+.TabNav {
+   backgroundAlpha: 1;
+   borderColor: #8EB3E7;
+   backgroundColor: #DCEBFE;
+   fontWeight: "normal";
+   themeColor: #8EB3E7;
+}
+
+
+</mx:Style>
+	
+	<mx:Script>
+		<![CDATA[
+			
+			private function additem(parent:DisplayObjectContainer):void{
+				
+				var xitem:VBox = new VBox;
+				xitem.label = "Tab" + parent.numChildren + 1;
+				xitem.icon =bmlip;
+				xitem.name=xitem.label;
+				xitem.id=xitem.label;
+				
+				var itemlabel:Label = new Label();
+				itemlabel.name = "label" + parent.numChildren + 1;
+				itemlabel.id = "label" + parent.numChildren + 1;
+				itemlabel.text = "Container item for " + xitem.label.toString();
+				
+				xitem.addChild(itemlabel);
+				
+				parent.addChild(xitem);
+				
+			}
+						
+			
+		]]>
+	</mx:Script>
+	
+	<mx:VDividedBox left="10" right="10" top="35" bottom="10">
+	
+	<Extended:extended_TabNavigator CloseClick="trace('close clicked')" styleName="TabNav" id="main1"  height="50%" width="100%">
+		<mx:VBox label="Item 11111" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 11111"/>
+		</mx:VBox>
+		<mx:VBox label="Item 2" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 2"/>
+		</mx:VBox>
+		<mx:VBox label="Item 3" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 3"/>
+		</mx:VBox>
+		<mx:VBox label="Item 4" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 4"/>
+		</mx:VBox>
+		<mx:VBox label="Item 5" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 5"/>
+		</mx:VBox>
+		<mx:VBox label="Item 6" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 6"/>
+		</mx:VBox>
+		<mx:VBox label="Item 7" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 7"/>
+		</mx:VBox>
+		<mx:VBox label="Item 8" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 8"/>
+		</mx:VBox>
+		<mx:VBox label="Item 9" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 9"/>
+		</mx:VBox>
+		<mx:VBox label="Item 10" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 10"/>
+		</mx:VBox>
+		<mx:VBox label="Item 11" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 11"/>
+		</mx:VBox>
+		<mx:VBox label="Item 122222222" icon="{bmlip}" width="100%" height="100%">
+			<mx:Label text="Label 122222222"/>
+		</mx:VBox>
+	</Extended:extended_TabNavigator>
+
+	<Extended:extended_TabNavigator styleName="TabNav" id="main2" height="50%" width="100%">
+		
+	</Extended:extended_TabNavigator>	
+	
+	</mx:VDividedBox>
+	
+	<mx:Button click="additem(main1)" label="Add tab to container 1"  x="10" y="10"/>
+	<mx:Button click="additem(main2)" label="Add tab to container 2"  x="171" y="10"/>
+	
+
+
+</mx:WindowedApplication>

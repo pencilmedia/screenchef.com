@@ -1,0 +1,211 @@
+/* BEGIN: NAVBAR
+// -----------------------------------------------------*/
+// Core variables and mixins
+@import "../less_bootstrap/variables.less";
+@import "../less_bootstrap/mixins.less";
+@import "variables.less"; // custom variables
+@import "mixins.less"; // custom mixins
+
+.navbar {
+	background: @navbarBackground;
+	border-bottom-color: @blueDarkest;
+	color: @blueDark;
+	margin-bottom: 0;
+	min-height: @navbarHeight;
+	width: 100%;
+	&.navbar-fixed-top {
+		border-bottom: 1px solid lighten(@navbarBackground, 10%);
+	}
+	.btn {
+		&:hover {
+			background: none;
+		}
+		&:focus {
+			// Remove focus ring on all buttons
+			outline: none;
+		}
+	}
+	.app-switcher {
+		background: transparent;
+		border: none;
+		border-right: 1px solid lighten(@navbarBackground, 5%);
+		border-radius: 0;
+		height: @navbarHeight;
+		padding: 0;
+		text-shadow: none;
+		width: 80px;
+		box-shadow: none;
+		span {
+			border-right: 1px solid darken(@navbarBackground, 5%);
+			display: block;
+			height: @navbarHeight;
+			line-height: @navbarHeight;
+			padding: 0;
+			img {
+				width: 50%;
+				display: inline-block;
+			}
+			[class*="fa-"] {
+				color: @blueDarker;
+				display: none;
+				font-size: 155%;
+			}
+		}
+		&:hover, &.active {
+			span {
+				[class*="fa-"] {
+					display: inline-block;
+				}
+				img {
+					display: none;
+				}
+			}
+		}
+	}
+	.courtesy-menu {
+		background: none;
+		border: none;
+		box-shadow: none;
+		height: @navbarHeight;
+		padding-right: 20px;
+		text-shadow: none;
+		white-space: nowrap;
+		i {
+			display: none;
+		}
+		.caret {
+			border-left-width: 5px;
+			border-right-width: 5px;
+	   		border-top-color: @blueDarker;
+			border-top-width: 5px;
+			margin-left: 5px;
+	  	}
+	  	&:hover {
+	    		color: saturate(@blueDark, 40%);
+	    		text-shadow: 0 0 5px @blue;
+	    		background: transparent;
+			.caret {
+		   		border-top-color: saturate(@blueDark, 40%);
+		  	}
+	  	}
+	}
+	.user-name {
+		color: @blueDarker;
+	}
+}
+
+// Popover: App Switcher
+.app-switcher-menu {
+	background: @white;
+	box-shadow: 2px 2px 3px @grayLighter;
+	display: none;
+	left: 0;
+	position: fixed;
+	top: @navbarHeight;
+	z-index: 1000;
+	.app-switcher-content {
+		min-width: 250px;
+		.nav {
+			padding: @pageMargin 0 0 0;
+			li {
+				margin: 0;
+				background: @blueLightest;
+				a {
+					border: none;
+					padding-left: 55px;
+					&:hover {
+						background: @blueHover;
+						color: @navyBlue;
+					}
+				}
+				&.active {
+					background: darken(@blueHover, 2%);
+					color: @navyBlue;
+					font-weight: bold;
+				}
+				// NOTE: Workspace Specific Workaround per Engineering
+				// NOTE: Engineering needs it named app-opportunities
+				&.app-opportunities {
+					a {
+						background: @white url("../img/ws-vpa.png") no-repeat 15px 4px;
+						background-size: 30px;
+						font-weight: bold;
+						&:hover, 
+						&.active {
+							background: darken(@blueHover, 2%) url("../img/ws-vpa.png") no-repeat 15px 4px;
+							background-size: 30px;
+						}
+					}
+				}
+				&.app-pricedata {
+					a {
+						background: @white url("../img/ws-data.png") no-repeat 15px 4px;
+						background-size: 30px;
+						font-weight: bold;
+						&:hover, 
+						&.active {
+							background: darken(@blueHover, 2%) url("../img/ws-data.png") no-repeat 15px 4px;
+							background-size: 30px;
+						}
+					}
+				}
+				&.app-powerrisk {
+					margin-bottom: 5px;
+					a {
+						background: @white url("../img/ws-power-risk.png") no-repeat 15px 4px;
+						background-size: 30px;
+						font-weight: bold;
+						&:hover, 
+						&.active {
+							background: darken(@blueHover, 2%) url("../img/ws-power-risk.png") no-repeat 15px 4px;
+							background-size: 30px;
+						}
+					}
+					+ li {
+						border-top: 1px solid @blueLightBorder;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Popover: Courtesy Menu
+.popover {
+	.popover-content {
+		.courtesy-menu-content {
+			margin: -15px;
+			max-height: 500px;
+			overflow: auto;
+		}
+	}
+}
+
+// RESPONSIVE STYLES
+// Smaller than Portrait (mobile/phablets and less, not iPad Portrait)
+// Changes courtesy menu into a butcon
+@media(max-width: @viewportSmall) {
+	.navbar {
+		.courtesy-menu {
+			background: transparent;
+			border: none;
+			border-radius: 0;
+			height: @navbarHeight;
+			padding-right: 0;
+			text-shadow: none;
+			width: 80px;
+			span, em {
+				display: none;
+			}
+			i {
+				color: @blue;
+				display: inline-block;
+				font-size: 155%;
+			}
+		}
+	}
+}
+
+/* END: NAVBAR
+// -----------------------------------------------------*/
+

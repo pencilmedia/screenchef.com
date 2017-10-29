@@ -1,0 +1,67 @@
+/******************************************************************************
+	CONTENTS OF THIS FILE HAVE NO BUSINESS IN PRODUCTION!!!!
+	THESE ARE ORPHAN CLASSES WHICH NEED A HOME!
+	
+	Pleas make sure to clear your styles from this file ASAP!!!!
+******************************************************************************/
+
+.optionbox { height: 60px; width: 95% !important; }
+.highlight { background-color: #039; color: #fff;}
+/******************************************************************************
+!!!!!!! WORKFLOW OVERVIEW ----- NEED TO MOVE THIS OUT OF HERE ----------
+******************************************************************************/
+body.item_workflow div.container 	{ min-width: 730px; }
+.status_indicator				 	{ overflow: hidden; }
+.status_indicator li 			 	{ float: left; display: inline; width:145px; height: 145px; }
+.status_indicator li.selected	 	{ background: url(../images/icn_workflow_status_current_bgd.png) no-repeat 4px 2px; }
+
+.status_indicator p.label		 	{ color: #666; font-size: 12px; font-weight: bold; text-align: center; margin: 0 auto; padding: 15px 0 5px 0; }
+
+.status_indicator li p.completed	{ background: url(../images/icn_workflow_status_completed.png) no-repeat 25px 0;  }
+.status_indicator li p.current 	 	{ background: url(../images/icn_workflow_status_current.png) no-repeat 25px 0;  }
+.status_indicator li p.upcoming  	{ background: url(../images/icn_workflow_status_upcoming.png) no-repeat 25px 0;  }
+.status_indicator p.completed,
+.status_indicator p.current,
+.status_indicator p.upcoming 	 	{ font-size: 28px; text-align: center; padding-top: 30px; color: #fff; height: 60px; }
+.status_indicator li			 	{ border:1px solid transparent; }
+.status_indicator li.indicator:hover{background: url(../images/icn_workflow_status_current_bgd.png) no-repeat 4px 2px; cursor: pointer;}
+
+.ux_ui_message 					 	{ color:#e1e1e1; margin:0 0 10px 0; border-bottom:1px solid #e1e1e1; background-color:#f9f9f9; padding:5px 20px; text-align: right; }
+
+/******************************************************************************
+USED BY OUR JS FILE TO TOGGLE VISIBILITY.
+******************************************************************************/
+#ui_toggle_01,
+#ui_toggle_02,
+#ui_toggle_03,
+#ui_toggle_04,
+#ui_toggle_05,
+#ui_toggle_06						{ display: none; }
+
+/* This adds space between the last fieldset and the browser in scrolling action dialogs */
+.last_set:after { content: "."; height: 1%; visibility: hidden; display: block; }
+
+
+/* used in includes/table.php */
+span.positive_variance { color: green; }
+span.negative_variance { color: red; }
+
+
+
+
+/******************************************************************************
+USED BY PREVIEW PANE CONTENT PAGE
+******************************************************************************/
+.pane_title 		{ font-size: 16px; background-color: #f9f9f9; border-bottom: 1px solid #ddd; height: 25px; margin-bottom: 20px; padding: 10px 0 0 10px; white-space: normal; }
+
+body.preview_content dl.side_by_side_text 				{ min-width: 250px; } 
+body.preview_content dl.side_by_side_text dt			{ width: 35%; }
+body.preview_content dl.side_by_side_text dd			{ margin-left: 37%; }
+
+body.preview_content dl.side_by_side_text.left,
+body.preview_content dl.side_by_side_text.right	 		{ margin: 0 0 5px 0; width: 49%; float: left; clear: none; } 
+
+body.preview_content dl.side_by_side_text.right { position: relative; top: -48px; }
+.special_control { padding-bottom: 25px; line-height: 22px; }
+
+.pointer { cursor: pointer; }

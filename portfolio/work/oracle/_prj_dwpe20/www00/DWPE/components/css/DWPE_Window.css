@@ -1,0 +1,566 @@
+.DWPE_Window
+{
+	
+	position:absolute;
+	-moz-box-shadow: #aaa 2px 3px 2px;
+	-webkit-box-shadow: #aaa 2px 3px 2px;
+    box-shadow: #aaa 2px 3px 2px;
+
+}
+
+
+
+.DWPE_Window_Overflow
+{
+	
+	position:relative;
+	border:1px solid #8eb4d1;
+	background:#fff;
+	padding:5px;
+	margin:0px;
+}	
+
+.DWPE_window_overflow>LI.DWPE_Button
+
+{
+	display:block;
+}
+
+
+
+.mask{position:absolute;}
+
+
+
+
+.DWPE_Window_Body
+{
+	
+	position:relative;
+	border:1px solid #8eb4d1;
+	background:#fff;
+	padding:7px;
+	margin:0px;
+}
+
+UL.Menu
+{
+	padding:0px;
+}
+
+UL.Menu>LI
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	padding:0px 5px 0px 5px;
+	position:relative;
+	display:block;
+	
+	
+}
+
+UL.Menu>LI:Hover
+{
+	background:#d6dee5;
+}
+
+
+
+
+
+/*standard window container*/
+.dwpe-window-container
+{	position:absolute;
+	display:block;		
+	background-image:url(../images/window-shadow.png);
+	-moz-background-size:100% 100%;
+	
+	padding:0px 5px 5px 0px;
+	z-index:9999;
+	top:0px;
+	left:0px;
+	color:#000;
+}
+	
+.dwpe-window-container.modal
+{	background-image:url(../images/window-modal-screen.png) ;
+	padding:0px;
+	z-index:9999;
+}	
+
+.dwpe-window-container.modal>DIV.window
+{
+	border:1px solid  #8eb4d1;
+}
+
+
+DIV.window
+{
+	position:relative;
+	border:1px solid  #8eb4d1;
+	background:#fff;
+	display:inline-block;
+	width:360px;
+}
+
+DIV.window>DIV.top
+{
+	position:relative;
+	display:block;
+	padding:2px 0px 2px 5px;
+	cursor:move;
+	max-height:26px;
+	white-space:nowrap;
+}
+DIV.window>DIV.middle
+{
+	position:relative;
+	display:block;
+	overflow:auto;
+	padding:0px 10px;
+	height:auto;
+}
+
+DIV.window.dialog,
+DIV.window.warning-dialog,
+DIV.window.error-dialog,
+DIV.window.confirm-dialog,
+DIV.window.help-dialog
+{
+
+	
+
+}
+
+
+
+
+
+DIV.window>DIV.bottom
+{
+	position:relative;
+	display:block;
+	padding:7px 5px;
+	height:21px;
+	max-height:21px;
+	
+	white-space:nowrap;
+}
+
+DIV.window>DIV.top>DIV.left
+{
+	position:relative;
+	display:inline-block;
+	width:79%;
+	overflow:hidden;
+	font-weight:bold;
+}
+
+DIV.window>DIV.top>DIV.right
+{
+	position:relative;
+	display:inline-block;
+	text-align:right;
+	width:20%;
+}
+
+DIV.window>DIV.bottom>DIV.left
+{
+	position:relative;
+	display:inline-block;
+	width:25%;
+}
+DIV.window>DIV.bottom>DIV.right
+{
+	position:relative;
+	display:inline-block;
+	text-align:right;
+	width:74%;
+}
+
+
+
+DIV.window DIV.resizer
+{
+	position:relative;
+	width:10px;
+	height:16px;
+	display:inline-block;
+}
+
+
+.close-window
+{	cursor:pointer;	}
+
+
+.ui-icon-gripsmall-diagonal-se
+{
+	background-image:url(../images/common_icons_normal.png);
+	background-position: -144px -240px;
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+}
+
+
+
+/*note windows*/
+
+.dwpe-note-window-container
+{	position:absolute;
+	display:block;		
+	z-index:9999;
+	top:0px;
+	left:0px;
+}
+
+DIV.window.note
+{
+	position:relative;
+	z-index:0;
+	display:inline-block;
+	padding:2px;
+	width:auto;
+	-moz-box-shadow:5px 5px 2px #999;
+		
+}
+
+DIV.window.note>DIV.middle
+{
+	position:relative;
+	display:block;
+	overflow:auto;
+	padding:0px;
+	width:auto;
+	height:auto;
+	max-width:360px;
+	min-width:25px;
+}
+
+.dwpe-note-window-container>DIV.cone
+{
+	display:inline-block;
+	position:relative;
+	left:0px;
+	bottom:0px;
+	width:14px;
+	height:13px;
+	z-index:1;
+	background:url(../images/windows/cone-strip.png) no-repeat;
+}	
+
+
+.dwpe-note-window-container.cone-points-top-right>DIV.cone
+{
+	vertical-align:bottom;
+	background-position:0px -13px;
+	left:1px;
+	
+}
+
+.dwpe-note-window-container.cone-points-bottom-right>DIV.cone
+{
+	vertical-align:top;
+	background-position:0px 0px;
+	left:1px;
+}
+
+.dwpe-note-window-container.cone-points-top-right>DIV.cone.right,
+.dwpe-note-window-container.cone-points-bottom-right>DIV.cone.right
+{	display:none;	}
+
+.dwpe-note-window-container.cone-points-top-left>DIV.cone
+{
+	vertical-align:bottom;
+	background-position:0px -39px;
+	left:-1px;
+	
+}
+
+.dwpe-note-window-container.cone-points-bottom-left>DIV.cone
+{
+	vertical-align:top;
+	background-position:0px -26px;
+	left:-1px;
+}
+
+.dwpe-note-window-container.cone-points-top-left>DIV.cone.left,
+.dwpe-note-window-container.cone-points-bottom-left>DIV.cone.left
+{	display:none;	}
+
+
+
+
+/*------------  
+	menu css
+
+---------------*/
+
+
+
+.dwpe-menu
+{
+	display:inline-block;
+	margin:0px;
+	padding:0px;
+}
+
+
+.dwpe-menu.context
+{
+	display:block;
+	position:absolute;
+	background-color:#fff;
+	border:1px solid #8eb4d1;
+}
+
+
+/*style top-level menu containers*/
+.dwpe-menu>ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*style submenu containers*/
+.dwpe-menu>ul ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color:#fff;
+	border:1px solid #8eb4d1;
+	
+}
+
+/*shadow shown behind menu container*/
+DIV.menu-shadow
+{
+	position:absolute;
+	background-image:url(../images/window-shadow.png);
+	-moz-background-size:100% 100%;
+	padding:0px 7px 7px 0px;
+	margin:0px;
+	visibility:hidden;
+}
+
+/*Top level list items*/
+.dwpe-menu>ul>li
+{
+	position: relative;
+	display: inline-block;
+	padding:0px;
+}
+
+/*submenu item style*/
+.dwpe-menu>ul>li li,
+.dwpe-menu.context>ul>li,
+.dwpe-menu.context>ul li
+{
+	display: block;
+	padding:2px 18px 2px 18px;
+	margin:0px 0px; 
+	color: #000000;
+	text-decoration: none;
+	white-space:nowrap;
+
+}
+
+
+/*accelerator key container*/
+.dwpe-menu>ul li>key,
+.dwpe-menu>ul li>key:link,
+.dwpe-menu>ul li>key:visited,
+.dwpe-menu>ul li>key:hover    
+{
+	position:relative;
+	right:0px;
+	text-align:right;
+	margin-left:20px;
+	color:#000;
+	text-decoration:none
+}
+
+/*Hover for top-level menu item*/
+.dwpe-menu>ul>li:hover
+{ 
+	cursor:pointer;
+	color:#263340;
+	border-color:#3f6a9c;
+	
+}
+
+/*Currently active top-level menu items' LI element*/
+.dwpe-menu>ul>li.selected
+{ 
+	color: #263340;
+	border-color:#54697b;
+	background:#a3a8ad url('../images/button_bg_dwn.png') top left repeat-x;
+}
+
+
+
+/*Currently active secondary submenu items' LI element*/
+.dwpe-menu ul li.selected
+{ 
+	/*shepherd does not style the parent menu item in secondary menus*/
+	background: #b7cfe2;
+}
+
+/*Hover for secondary submenu items*/
+.dwpe-menu ul li:hover
+{
+	background: #b7cfe2; 
+}
+	
+/*1st level submenu; hidden to begin with*/
+.dwpe-menu ul li ul
+{
+	position: absolute;
+	left: 0;
+	display: none;
+	visibility: hidden;
+}
+
+/*All secondary submenus align their tops to their parent */
+.dwpe-menu ul li ul li ul
+{
+	left:0px;
+	top: 0px;
+}
+
+/*top-level element is parent of a submenu*/
+.dwpe-menu>UL>LI,
+.dwpe-menu>UL>LI.top-level-parent
+{
+	padding: 0px 18px 0px 5px;
+	background-color:transparent;
+	background-image:	url('../images/menus/top-level-menu-normal.png'); 
+	
+	background-repeat:no-repeat;
+	background-position:center right;
+	line-height:19px;
+}
+
+.dwpe-menu.context>UL>LI
+{
+	background-image:none;
+}
+
+/*top-level element is parent of a submenu*/
+.GlobalRegion .dwpe-menu>UL>LI,
+.GlobalRegion .dwpe-menu>UL>LI.top-level-parent,
+.PrimaryRegion .dwpe-menu>UL>LI,
+.PrimaryRegion .dwpe-menu>UL>LI.top-level-parent
+{
+	color:#fff;
+	background-image:	url('../images/menus/top-level-menu-active.png'); 
+
+}
+
+/*top-level element is parent of a submenu & mouse is over it*/
+.dwpe-menu>UL>LI.top-level-parent:hover
+{
+	color:#fff;
+	background-color:   #7aaada;
+	background-image:	url('../images/menus/top-level-menu-active.png'),
+						url('../images/button_bg_ovr.png'); 
+	
+	background-repeat:no-repeat,repeat-x;
+	background-position:center right,bottom left;
+}
+
+/*top-level element is parent of a submenu & selected*/
+.dwpe-menu>UL>LI.top-level-parent.selected
+{
+	background-image:	url('../images/menus/top-level-menu-selected.png'),
+						url('../images/button_bg_dwn.png'); 
+	
+	background-repeat:no-repeat,repeat-x;
+	background-position:center right,bottom left;
+}
+
+/*submenu element is parent of a submenu*/
+.dwpe-menu UL>LI.second-level-parent
+{
+	background-image:url('../images/menus/secondary-menu-normal.png');
+	background-position: center right;
+	background-repeat:no-repeat;
+}
+
+/*menu radio group*/
+.dwpe-menu LI.radio.on
+{
+	background-image:url('../images/menus/menu-radio.png');
+	background-position: center left;
+	background-repeat:no-repeat;
+}
+
+/*menu toggle check*/
+.dwpe-menu LI.toggle.on
+{
+	background-image:url('../images/menus/menu-check.png');
+	background-position: center left;
+	background-repeat:no-repeat;
+}
+
+
+/*menu separator*/
+.dwpe-menu LI>HR
+{
+	border:none;
+	background:#999;
+	height:1px;
+}
+
+.dwpe-menu LI.separator:hover
+{
+	background-color:transparent;
+	cursor:default;
+}
+
+
+.dwpe-menu LI.disabled:hover
+{
+	background:transparent;
+	
+	
+}
+.dwpe-menu LI.disabled
+{
+	opacity:.5;
+}
+
+
+.dwpe-menu LI.menu-scroll
+{	text-align:center;	}
+
+.dwpe-menu LI.menu-scroll.up DIV
+{
+	display:inline-block;
+	background:url('../images/menus/menu-scroll.png') 0px 0px no-repeat;
+	width:12px;
+	height:12px;
+	opacity:.2;
+	
+}
+
+.dwpe-menu LI.menu-scroll.down DIV
+{
+	display:inline-block;
+	background:url('../images/menus/menu-scroll.png') 0px -12px no-repeat;
+	width:12px;
+	height:12px;
+	opacity:.2;
+}
+
+.dwpe-menu LI.menu-scroll.enabled DIV
+{
+	opacity:1;
+}
+
+
+
+

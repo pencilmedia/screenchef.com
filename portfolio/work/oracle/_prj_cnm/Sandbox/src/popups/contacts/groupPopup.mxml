@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="175" headerHeight="0" 
+	borderStyle="solid" borderThickness="1" borderColor="#97B8D6" cornerRadius="0" dropShadowEnabled="true" 
+	horizontalScrollPolicy="off" paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10" 
+	mouseDown="closePopGroup()">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			private function closePopGroup():void
+			{
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	<mx:Script source="../../script/team.as" />
+
+	<mx:VBox width="100%" paddingLeft="5" paddingRight="5" paddingTop="10">
+        
+		<mx:LinkButton label="Anthony Moquette" fontSize="11" height="18" paddingLeft="0" mouseOver="popGroupContact()"
+     		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_status_available.png')" />
+		<mx:LinkButton label="Ralph Garcia"  fontSize="11" height="18" paddingLeft="0" paddingTop="0"
+     		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_empty_space.png')" />
+		<mx:LinkButton label="Peng Zhang" fontSize="11" height="18" paddingLeft="0" paddingTop="0"
+     		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_status_available.png')" />
+		<mx:LinkButton label="Joel Nave" fontSize="11" height="18" paddingLeft="0" paddingTop="0"
+     		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_empty_space.png')" />
+   </mx:VBox>
+   
+</mx:Panel>

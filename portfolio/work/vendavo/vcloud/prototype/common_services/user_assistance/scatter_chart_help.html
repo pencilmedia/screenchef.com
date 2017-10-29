@@ -1,0 +1,209 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-gb">
+  <![endif]-->
+  <!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8" lang="en-gb">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="en-gb">
+      <![endif]-->
+      <!--[if gt IE 8]>
+      <!-->
+      <html lang="en-gb">
+        <!--<![endif]-->
+    <head>
+      <title>User Assistance: Root Cause Comparison</title>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+       <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+
+      <!-- Vendavo Theme - Last in order to override plugin styles -->
+      <link rel="stylesheet" type="text/css" href="css/vendavo-bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="css/web-fonts.css">
+
+      <!-- App Styles: Individual apps -->
+      <link rel="stylesheet" type="text/css" href="css/midas.css">
+
+      <!-- Print -->
+      <link rel="stylesheet" type="text/css" href="css/print.css">
+
+      <!-- Modernizr -->
+      <script type="text/javascript" src="js/modernizr.js"></script>
+
+    </head>
+<body class="user-assistance">
+  <nav class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <a class="brand" href="#">User Assistance: Scatter Chart</a>
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+          <p class="pull-right">
+              <button class="btn print"><i class="icon-print"></i>Print</button>
+              <button class="btn expand-all">Expand All <i class="icon-angle-down"></i></button>
+              <button class="btn collapse-all" style="display:none">Collapse All <i class="icon-angle-up"></i></button>
+          </p>
+      </div>
+    </div><!-- /navbar-inner -->
+  </nav>
+  <div class="app">
+    <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+            <i class="icon-angle-right"></i>
+            What is plotted on this chart?
+          </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="row-fluid">
+              <div class="span6">
+                <img src="img/ua_sc_1.png">
+              </div>
+              <div class="span6">
+                <p>The Scatter Chart characterizes transactions based on how far they are from an established floor and plots them in the appropriate performance quadrant. The floors are compared against the identified root cause adjuster of the opportunity (i.e. High Negotiated Discounts) and the floor for a defined price point (i.e. Pocket Margin or Net Price).</p>
+                <p>If transactions are below both floors, they appear in the red quadrant. These are the transactions that need the most help.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwo">
+            <i class="icon-angle-right"></i>
+            Why are there bold and faded dots?
+          </a>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="row-fluid">
+              <div class="span6">
+                <p>Bold dots are <strong>segment transactions</strong> and represent transactions contained in the segment identified for the opportunity.</p>
+                <p>Faded dots are <strong>comparative transactions</strong> and represent transactions for the same products that are outside the segment. Comparative transactions provide you with context when comparing the segment transactions.</p>
+              </div>
+              <div class="span6">
+                <img src="img/ua_sc_2.png"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseThree">
+            <i class="icon-angle-right"></i>
+            What can I do to improve the red transactions?
+          </a>
+        </div>
+        <div id="collapseThree" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="row-fluid">
+              <div class="span6">
+                <img src="img/ua_sc_7a.png">
+                <img src="img/ua_sc_7b.png">
+              </div>
+              <div class="span6">
+                <p>Review the content <i class="icon-file-alt"></i> available at the top of the Opportunity Detail page for recommended actions to resolve the root cause of the profit leak. In many instances, creating or changing a policy can eliminate or reduce the number of transactions that end up in the red quadrant.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseFour">
+            <i class="icon-angle-right"></i>
+            Who determines the floor, and can all products have the same floor?
+          </a>
+        </div>
+        <div id="collapseFour" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="row-fluid">
+              <div class="span6">
+                <p>Vendavo Profit Advisor generates floors for decision measures, such as pocket margin and root cause adjustments, based on our industry knowledge and experience.</p>
+                <p>Each product has a unique floor that is the intersection of its pocket margin and root cause floors.  When multiple products are viewed in the same chart, we normalize the floors and plot the transactions based on their difference as a percentage from the floor. </p>
+                <img src="img/ua_sc_5.png">
+              </div>
+              <div class="span6">
+                <img src="img/ua_sc_4.png">            
+                <p>For more specific information on a product, you can drill down on that one product using the View by Product selector. When looking at a single product, the x- and y-axis change to display the actual floors for that product, and plot the transactions based on their actual root cause and price point values. </p>
+                <p>In addition to using the View by Product selector to view the transaction data for one product, you can change the focus of the chart by selecting to focus on a product in the Contributors section.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseFive">
+            <i class="icon-angle-right"></i>
+            What does it mean if I see clouds on my chart?
+          </a>
+        </div>
+        <div id="collapseFive" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="row-fluid">
+              <div class="span6">
+                <p>You might see cloud-like shapes in the scatter chart for some of your opportunities. This happens when there are so many transactions that displaying them all as dots would make the chart unreadable.</p>
+                <p>In this case, we display the general shape of the comparative transactions as a cloud, while segment transactions are always dots.</p>
+              </div>
+              <div class="span6">
+                <img src="img/ua_sc_6.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" href="#collapseSix">
+            <i class="icon-angle-right"></i>
+            Is there any limit to the number of bold transactions displayed?
+          </a>
+        </div>
+        <div id="collapseSix" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="row-fluid">
+              <div class="span12">
+                <p>Since segment transactions are always presented as bold dots, there are rare instances when there are too many segment transactions to display in a readable way. Rather than try to present all of them, we choose a representative subset of the segment transactions. Because you want the detail about all the transactions in the opportunity, you can view and export them from the Transactions tab in the Contributors section.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <footer>
+          <p>
+            Was this help page useful? <a href="mailto:cloudfeedback@vendavo.com">Send feedback</a>.
+            <span>Copyright &copy; 2013 Vendavo. All rights reserved.</span>
+          </p>
+        </footer>
+  </div>
+
+      <!-- CDN: JQUERY -->
+      <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+      <!-- Bootstrap Component Scripts -->
+      <script type="text/javascript" src="bootstrap/js/bootstrap-alert.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-button.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-collapse.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-dropdown.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-modal.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-tooltip.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-popover.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-scrollspy.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-tab.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-transition.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+      <!-- App: User Assistance -->
+      <script type="text/javascript" src="js/user_assistance.js"></script>
+
+</body>
+</html>

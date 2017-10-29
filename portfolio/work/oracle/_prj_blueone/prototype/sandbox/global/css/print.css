@@ -1,0 +1,53 @@
+/******************************************************************************
+PRINT.CSS
+Description: Print view related styles and definitions.
+******************************************************************************/
+
+body.print_view .header_wrapper	{ background: #f7f7f7 url(../images/bgd_header.png) no-repeat right bottom; border-bottom: 1px solid #999; overflow: hidden; clear: both; height: 100%; }
+body.print_view .header_wrapper .column_two	{ margin-top: 0; }
+
+
+/*!!!!!!!!!!!!!remove these to common.css*/
+.column_01,
+.column_02 { float: left; width: 49%; }
+.wrapper { margin: 0 20px 20px 20px; }
+
+body.print_view h3 { margin: 20px 0 15px 0; padding: 0 0 4px 0; }
+body.print_view h4 { background-color: #f9f9f9; border-bottom: 1px solid #ddd; height: 20px; margin-top: 30px; padding-top: 10px; }
+
+body.print_view dl { clear: both; margin-bottom: 5px;} 
+
+body.print_view dt,
+body.print_view dd	{ margin: 0;}
+
+body.print_view dt { float: none; margin-top: 5px; text-align:right;  width:25%; }
+body.print_view dd { margin: -14px 0 0 26%; }
+
+/******************************************************************************
+TABLES SECTION
+******************************************************************************/
+
+body.print_view th { background-color:#fff; border-bottom: 1px solid #ddd; }
+body.print_view .scrollTableDiv { overflow: hidden; height: 100%; }
+
+/******************************************************************************
+PRINT PREVIEW
+******************************************************************************/
+
+.print_preview .dual_columns:after 	{ content:"."; visibility: hidden; height: 1%; display: block; clear: both; }
+.print_preview .header_wrapper 		{ background: #f7f7f7 url(../images/bgd_dialog.png) repeat-x right bottom; border-bottom: 1px solid #999; height: 40px; min-width:475px; }
+
+.print_preview .column_two 			{ float: left; width: 25%; margin: 0 0 0 10px; }
+
+.print_table_header					{ background-color: #EFEFEF; border-bottom: 1px solid #ccc; padding: 5px 0; }
+.print_preview .simple				{ border-left: none !important; border-right: none !important; }
+.print_preview .table_simple		{ margin-bottom: 20px; border: none !important; }
+
+.print_preview dl.side_by_side 					{ margin-bottom: 5px; min-width: 250px; } 
+.print_preview dl.side_by_side dt					{ float: left; text-align: right; margin: 0 5px 0 0; padding-top: 4px; clear: left; width: 25%; }
+.print_preview dl.side_by_side dd 					{ margin: 0 5px 0 26.5%; height: auto; padding-top: 4px; }
+.print_preview dl.side_by_side dd input			{ float: left; }
+.print_preview dl.side_by_side dd a.button			{ float: left; }
+
+.print_preview dl.side_by_side.with_top_margin		{ margin-top: 10px; }
+.print_preview dl.side_by_side.with_bottom_margin	{ margin-bottom: 20px }

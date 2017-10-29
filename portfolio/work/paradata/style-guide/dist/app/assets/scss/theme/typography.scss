@@ -1,0 +1,124 @@
+/* BEGIN: typography.scss
+// -----------------------------------------------------*/
+
+body {
+    font-family: $baseFont;
+    font-size: $baseFontSize;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    @include hoverTransition();
+    color: $charcoal;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        @include hoverTransition();
+        color: $linkBlue;
+        text-decoration: underline;
+    }
+}
+
+
+// Font Family
+h1, h2, h3, h4, h5, h6 {
+    font-family: $mainFont;
+    [class^='btn'] {
+        font-family: $helvetica;
+    }
+    .btn {
+        &.user-assistance {
+            color: $linkBlue;
+        }
+    }
+    .fa {
+        margin-left: 5px;
+    }
+}
+
+// Font Size
+h1 {
+    font-size: 26px;
+}
+h2 {
+    font-size: 22px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+
+// Font Weights and Transforms
+h1 {
+    font-weight: 900;
+}
+h2, h3, h4 {
+    font-weight: 700;
+}
+h5, h6 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+// Icons
+.fa {
+    font-size: 16px; // standard icon size
+    height: 16px;
+    width: 16px;
+}
+
+// Bootstrap override
+.text-warning {
+    color: $orange;
+}
+.text-danger {
+    color: $red;
+}
+
+//UNCLEAN-ness - Remove eventually
+.bold {
+    font-weight: bold;
+}
+
+.boldType-28 {
+    color: $charcoal;
+    font-family: $baseFont;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mainType-16 {
+    color: $charcoal;
+    font-family: $baseFont;
+    font-size: 16px;
+}
+
+.boldType-14 {
+    color: $charcoal;
+    font-family: $baseFont;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.redText {
+    color: $red;
+}
+
+.blueText {
+    color: $blue;
+}
+
+
+.greenText {
+    color: $green;
+}

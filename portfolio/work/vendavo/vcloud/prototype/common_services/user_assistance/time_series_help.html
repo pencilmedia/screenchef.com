@@ -1,0 +1,175 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-gb">
+  <![endif]-->
+  <!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8" lang="en-gb">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="en-gb">
+      <![endif]-->
+      <!--[if gt IE 8]>
+      <!-->
+      <html lang="en-gb">
+        <!--<![endif]-->
+    <head>
+      <title>User Assistance: Root Cause Comparison</title>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+       <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+
+      <!-- Vendavo Theme - Last in order to override plugin styles -->
+      <link rel="stylesheet" type="text/css" href="css/vendavo-bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="css/web-fonts.css">
+
+      <!-- App Styles: Individual apps -->
+      <link rel="stylesheet" type="text/css" href="css/midas.css">
+
+      <!-- Print -->
+      <link rel="stylesheet" type="text/css" href="css/print.css">
+
+      <!-- Modernizr -->
+      <script type="text/javascript" src="js/modernizr.js"></script>
+
+    </head>
+<body class="user-assistance">
+        <nav class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+              <a class="brand" href="#">User Assistance: Time Series</a>
+              <div class="nav-collapse collapse navbar-responsive-collapse">
+                <p class="nav pull-right">
+                  <button class="btn print">
+                    Print <i class="icon-print"></i>
+                  </button>
+                  <button class="btn expand-all">
+                    Expand All <i class="icon-angle-down"></i>
+                  </button>
+                  <button class="btn collapse-all" style="display:none">
+                    Collapse All
+                    <i class="icon-angle-up"></i>
+                  </button>
+                </p>
+              </div>
+          </div>
+          <!-- /navbar-inner --> </nav>
+        <div class="app">
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+                  <i class="icon-angle-right"></i>
+                  What is plotted on this chart?
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <p>
+                        The Time Series Chart presents the trend over time for your transactions. The goal is to understand if certain events occurred during the year which impacted your margin, like the implementation of a new rebate program in July or a new product launch in November.
+                      </p>
+                    </div>
+                    <div class="span6">
+                      <img src="img/ua_ts_1.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwo">
+                  <i class="icon-angle-right"></i>
+                  What is the hover detail telling me?
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <img src="img/ua_ts_2.png"></p>
+                  </div>
+                  <div class="span6">
+                    <p>
+                      When you hover over a specific dot in the chart, you can see the number of transactions in that month which are a percentage of Market Price for the root cause. Use the View by Product selector to the right to see the performance of transactions for a particular product.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" href="#collapseThree">
+                <i class="icon-angle-right"></i>
+                What can I do to improve the red transactions?
+              </a>
+            </div>
+            <div id="collapseThree" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div class="row-fluid">
+                  <div class="span12">
+                    <p>
+                      Review the content <i class="icon-file-alt"></i> available at the top of the Opportunity Detail page for recommended actions to resolve the root cause of the profit leak.  The trend may show you behavior of which you are already aware; however, you may see where the creation or modification of a policy can improve the profitability of your bad transactions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" href="#collapseFour">
+                <i class="icon-angle-right"></i>
+                Why don't I see orange and dark blue lines?
+              </a>
+            </div>
+            <div id="collapseFour" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div class="row-fluid">
+                  <div class="span6">
+                    <p>
+                      Initially, you’ll only see light blue and red transaction series lines as seeing the performance over time for these is most important; if you want to see the other transaction series, you can enable them by clicking the labels in the chart's legend.
+                    </p>
+                  </div>
+                  <div class="span6">
+                    <img src="img/ua_ts_3.png"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>
+            Was this help page useful? <a href="mailto:cloudfeedback@vendavo.com">Send feedback</a>.
+            <span>Copyright &copy; 2013 Vendavo. All rights reserved.</span>
+          </p>
+        </footer>
+      </div>
+
+      <!-- CDN: JQUERY -->
+      <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+      <!-- Bootstrap Component Scripts -->
+      <script type="text/javascript" src="bootstrap/js/bootstrap-alert.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-button.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-collapse.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-dropdown.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-modal.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-tooltip.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-popover.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-scrollspy.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-tab.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-transition.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+      <!-- App: User Assistance -->
+      <script type="text/javascript" src="js/user_assistance.js"></script>
+
+
+</body>
+    </html>

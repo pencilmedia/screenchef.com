@@ -1,0 +1,107 @@
+/* BEGIN: authenticate.scss
+// -----------------------------------------------------*/
+// Global Includes
+@import "../theme/variables";
+@import "../theme/mixins";
+
+html, body {
+    height: 100%;
+}
+body {
+	&.authenticate {
+		background: $main url("../img/home-background.png") no-repeat center -200px;
+		background-size: cover;
+		main {
+			padding-top: 10%;
+			form {
+				@include box-shadow(0 0 5px);
+				background: rgba(109, 125, 143, 0.5);
+				margin: 0 auto;
+				max-width: 600px;
+				min-width: 400px;
+				padding: $pageMargin 80px 60px;
+				width: 50%;
+				.alert {
+					@include border-radius(5px);
+					background: rgba(109, 125, 143, 0.7);
+					border-color: rgba(87, 100, 114, 0.9);
+					color: darken($main, 15%);
+				}
+				img {
+					display: block;
+					margin: 30px auto;
+					margin-bottom: 40px;
+					width: 200px;
+					+ .alert {
+						margin-top: -$pageMargin;
+						margin-right: 0;
+						margin-left: 0;
+						color: $white;
+					}
+				}
+				.form-group {
+					margin-bottom: 10px;
+					.form-control {
+						border-color: darken($main, 5%);
+						border-left: none;
+						color: darken($main, 25%);
+						@include placeholderText();
+						&:focus {
+							-webkit-box-shadow: 0 0 5px 0 rgba(14, 150, 187, 1);
+							box-shadow: 0 0 5px 0 rgba(14, 150, 187, 1);
+							border-color: rgba(14, 150, 187, .61);
+						}
+					}
+				}
+				.btn-primary {
+					font-size: 90%;
+					font-weight: 500;
+					margin-top: $pageMargin;
+					text-transform: uppercase;
+					width: 100%;
+					&:hover {
+						-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+					     box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+					}
+				}
+				@include border-radius(10px);
+			}
+			footer {
+				margin: 0 auto;
+				max-width: 600px;
+				min-width: 400px;
+				text-align: center;
+				width: 50%;
+				p {
+					margin: $pageMargin 0;
+					a {
+						color: $grayLight;
+						border: none;
+						&:hover {
+							color: $highlight-green;
+							text-decoration: underline;
+						}
+					}
+					> span {
+						display: block;
+						color: #c7c7c7;
+						font-size: 90%;
+					}
+				}
+			}
+		}
+		// Phone Portrait - > 480px
+		@media(max-width: $screen-xs-min) {
+			main {
+				padding-top: 10%;
+				form {
+					@include border-radius(0);
+					border-left: none;
+					border-right: none;
+					max-width: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

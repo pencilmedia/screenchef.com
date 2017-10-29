@@ -1,0 +1,96 @@
+
+
+Viewing Table Content
+updated by Uday Gajendar
+on 09/04/2007
+
+BASIC
+========================
+* CLICK on a cell: cell is highlighted visually
+* DOUBLE-CLICK on a cell: cell becomes editable, edit frame appears
+* If cell is a text field, then text is highlighted upon DOUBLE-CLICK
+* Text highlight color is defaulted per OS/browser
+* CLICK row handle to select whole row of data (see PSD)
+* CLICK off the edit frame: UI controls dismissed; any entered data IS set for the field
+* ESC: dismiss UI controls and revert data values (if any entered); focus/visual selection on current cell
+* TAB: move focus laterally across table cells to next editable field or down to the first editable field in the next row; commits data if any entered
+- cell is highlighted visually (see PSD)
+* TAB order: horizontally, left to right, then down to the next row
+* ARROW UP/DOWN/RIGHT/LEFT: move focus to next field or down to the first field in the next row table cells (see PSD)
+* RETURN or ENTER: toggle "edit" and "view " states for a cell; if pressed after data entry, then data is set, focus kept on current cell (see PSD)
+
+- Column headers are boldfaced
+- Toolbar actions (buttons) do NOT have icons 
+- Exceptions: More Actions, Save and Cancel buttons
+
+
+Colors:
+- gridlines: DDDDDD
+- text: 333333
+- toolbar bg: E8E8E8
+- separator line: 9F9F9F
+- row handle unselected: D8D8D8
+- row handle selected: 999999
+- column header unselected: F2F2F2
+- column header selected: TBD
+- row unselected: FFFFFF
+- row selected: DBEAFF
+- cell unselected: same as row
+- cell selected: A8C7FF
+- error/warning row (unselected): FFE0E1
+- error/warning row (selected): 5F0303
+
+- Enabled Save button is blue (see PSD)
+
+
+Icons:
+- no privilege
+- gray dot 
+- error icon (in row handle)
+- warning icon (in row handle)
+- neutral change indicator (in row handle)
+
+
+Read-only cells: 
+- CLICK: dotted pattern appears
+- CLICK + DRAG: select/highlight the data value for copy/paste
+- DOUBLE-CLICK: causes an FYI/prompt in the message area to "pop and fade" in telling user that the cell is not editable + dotted pattern appears
+
+(** NOTE: the user is still able to ARROW to the read-only cells, resulting in standard cell focus, not a dot pattern but TAB skips the read-only cells)
+
+
+Other viewing content:
+- Header truncation: Yes truncate, as user resizes the column size inward, place ellipses where possible per browser abilities
+- Dual header truncation: yes truncate, the subheaders move in/out proportionally as the column width is increased/decreased
+- Headers have tooltips
+
+- Cell data truncation: yes truncate, as user resizes the column size inward, place ellipses where possible per browser abilities
+- Where possible (per browser ability), have a tooltip that shows full data value
+- No tooltip for MSL or Multi-line text controls 
+- Debating whether to show the appropriate read-only div on mouse over (TBD)
+
+- Non-editable cells are indistinguishable from editable cells by default. But non-editable cells have a dot pattern (see PSD) upon CLICK. Upon DOUBLE-CLICK, FYI message does "pop and fade" in DMS telling user the cell is not editable. (no javascript alert!)
+- No privilege cells show the hash mark icon. If user clicks it once, nothing happens. Upon DOUBLE-CLICK, FYI message does "pop and fade" in DMS telling user no privilege to view the data. (no javascript alert!)
+- Double-clicking headers does nothing
+- In read mode, headers and table cell data can be selected for copy/paste using the text cursor (mouse drag across cells) or via keyboarding
+- For  multi-line text, the text value will be truncated per cell width
+- Same for multi-select list values or multi-select cascade list values, separated by semicolon, but that list is truncated per cell width
+
+- Links are displayed in the defined link style per current Agile CSS (blue text with underline on hover)
+
+
+Scrolling:
+- As user scrolls the table up/down, an ajax-style spinner appears until table data content has been loaded in place
+- User can scroll directly to the very top or very bottom of scrollbar
+- Need to maximize performance to minimize user frustration of waiting for content to load
+
+
+Table dead-space:
+- If table does not have further data rows to scroll, then show dead-space below the table (see concept car)
+
+
+ADVANCED
+========================
+Full table display TBD
+
+

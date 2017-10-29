@@ -1,0 +1,124 @@
+<!-- Page <HEAD>
+    ================================================== -->
+    <!DOCTYPE html>
+    <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <html lang="en">
+        <!-- Page <HEAD>
+            ================================================== -->
+            @@include('./inc/head.tpl', {"pageTitle": "@@productProto"})
+            <style>
+            .colonnade {
+                margin-bottom: 40px;
+            }
+            .lt-column > h2, .rt-column > h2 {
+                margin-top: 30px;
+            }
+            </style>
+            <!-- Page <BODY>
+                ================================================== -->
+                <body class="@@classProto">
+                    
+                    <!-- Global Navbar
+                    ================================================== -->
+                    @@include('./components/navbar_global.tpl', {"productTitle": "@@productProto"})
+                    <!-- App Shell
+                    ================================================== -->
+                    <main>
+                    <section class="app-shell">
+                        <style>
+                        .lt-column, .rt-column {
+                        padding-left: 20px;
+                        }
+                        </style>
+                        <!-- BEGIN: PAGE HEAD -->
+                        @@include('./components/page_head.tpl', {"productTitle": "@@productProto"})
+                        <div class="colonnade dual">
+                            <div class="lt-column">
+                                <h2>Colors</h2>
+                                <p>Here are examples of our color palette.</p>
+                                <h2>Paradata Color Theme</h2>
+                                <p class="color-swatch">
+                                    <span class="main">$main</span>
+                                    <span class="main-tint">$main-tint</span><span class="main-blue">$main-blue</span>
+                                    <span class="highlight-blue">$highlight-blue</span><span class="highlight-green">$highlight-green</span>
+                                </p>
+                                <h2>Blues</h2>
+                                <p class="color-swatch">
+                                    <span class="blue"></span>
+                                    <span class="blueLight"></span><span class="blueLighter"></span><span class="blueLightest"></span>
+                                    <span class="blueDark"></span><span class="blueDarker"></span><span class="blueDarkest"></span>
+                                </p>
+                                <h2>Gray</h2>
+                                <p class="color-swatch">
+                                    <span class="gray"></span>
+                                    <span class="grayLight"></span><span class="grayLighter"></span><span class="grayLightest"></span>
+                                    <span class="grayDark"></span><span class="grayDarker"></span><span class="grayDarkest"></span>
+                                </p>
+                                <h2>Green</h2>
+                                <p class="color-swatch">
+                                    <span class="green"></span>
+                                    <span class="greenLight"></span><span class="greenLighter"></span><span class="greenLightest"></span>
+                                    <span class="greenDark"></span><span class="greenDarker"></span><span class="greenDarkest"></span>
+                                </p>
+                                <h2>Orange</h2>
+                                <p class="color-swatch">
+                                    <span class="orange"></span>
+                                    <span class="orangeLight"></span><span class="orangeLighter"></span><span class="orangeLightest"></span>
+                                    <span class="orangeDark"></span><span class="orangeDarker"></span><span class="orangeDarkest"></span>
+                                </p>
+                                <h2>Red</h2>
+                                <p class="color-swatch">
+                                    <span class="red"></span>
+                                    <span class="redLight"></span><span class="redLighter"></span><span class="redLightest"></span>
+                                    <span class="redDark"></span><span class="redDarker"></span><span class="redDarkest"></span>
+                                </p>
+                                <h2>Plugins</h2>
+                                <h4>Bootstrap3 Switch</h4>
+                                                    <code><pre>
+                                                            // Init Bootstrap Switch
+                                                         $("[data-plugin='toggle-switch']").bootstrapSwitch({
+                                                             onColor: 'success',
+                                                             offColor: 'warning',
+                                                             onText: 'Active',
+                                                             offText: 'Inactive'
+                                                         });
+                                </pre>
+                                </code>
+                                <input type="checkbox" name="status" data-plugin="toggle-switch" data-size="small" checked>
+                            </div>
+                            <div class="rt-column">
+                                <h2>Header Titles</h2>
+                                <p>Here are examples of header title sizes.</p>
+                                <h1>H1 - Title Example</h1>
+                                <h2>H2 - Title Example</h2>
+                                <h3>H3 - Title Example</h3>
+                                <h4>H4 - Title Example</h4>
+                                <h5>H5 - Title Example</h5>
+                                <h6>H6 - Title Example</h6>
+                                <h2>Buttons</h2>
+                                <p>Here are examples of button types</p>
+                                <h4>Primary Action Buttons</h4>
+                                <p><button type="button" class="btn btn-primary">Primary</button>&nbsp;<button type="button" class="btn btn-primary" disabled>Primary - Disable</button></p>
+                                <h4>Default Action Buttons</h4>
+                                <p><button type="button" class="btn btn-default">Default</button>&nbsp;<button type="button" class="btn btn-default" disabled>Default - Disable</button></p>
+                                <h4>Error Buttons</h4>
+                                <p><button type="button" class="btn btn-danger">Error</button>&nbsp;<button type="button" class="btn btn-danger" disabled>Error - Disable</button></p>
+                                <h4>Link Style Buttons</h4>
+                                <p><button type="button" class="btn btn-link">Link</button>&nbsp;<button type="button" class="btn btn-link" disabled>Link - Disable</button></p>
+                                <h4>Icon Buttons</h4>
+                                <p><button type="button" class="btn btn-link btn-icon"><i class="fa fa-inbox"></i></button><button type="button" class="btn btn-link btn-icon" disabled><i class="fa fa-inbox"></i></button></p>
+                            </div>
+                        </div>
+                    </section>
+                    <!--  <aside class="contextual-pane">
+                        
+                    </aside> -->
+                    </main>
+                    <!-- JavaScripts
+                    ================================================== -->
+                    @@include('./inc/javascripts.tpl')
+                </body>
+            </html>

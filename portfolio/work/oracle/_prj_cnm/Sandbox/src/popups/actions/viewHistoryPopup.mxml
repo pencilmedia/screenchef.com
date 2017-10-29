@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="650" title="View History"
+	 paddingBottom="0" paddingTop="10" paddingLeft="0" paddingRight="0"
+	horizontalScrollPolicy="off" borderAlpha="100" dropShadowEnabled="true" cornerRadius="0" 
+	showCloseButton="true" close="closeHistoryPopup();">
+<mx:Script>
+    <![CDATA[
+                
+		[Embed(source="../assets/images/icons/ico_expanded.png")] 
+		public var expandedImage:Class
+		[Embed(source="../assets/images/icons/ico_collapsed.png")] 
+		public var collapsedImage:Class
+		[Embed(source="../assets/images/icons/ico_edit.png")] 
+		public var editIconImage:Class
+		
+        // CLOSE CONTACT POPUP
+        import mx.managers.PopUpManager;
+         
+		private function closeHistoryPopup():void
+        {
+        	PopUpManager.removePopUp(this);
+		}
+		    
+    ]]>
+</mx:Script>
+	<mx:VBox width="100%" height="100%" paddingTop="10" paddingRight="10" paddingBottom="10" paddingLeft="10" 
+		verticalGap="0" verticalScrollPolicy="auto" xmlns:cnm="components.*">	
+		<mx:Grid width="100%" verticalGap="0">
+			<mx:GridRow width="100%" height="100%" styleName="tableToolBg">
+				<mx:GridItem width="15%" height="100%">
+					<mx:Button label="Filter" />
+				</mx:GridItem>
+				<mx:GridItem width="75%" height="100%">
+				</mx:GridItem>
+			</mx:GridRow>
+		</mx:Grid>
+		<mx:DataGrid width="100%" styleName="panelTable">
+		<mx:XMLList>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		    <record>
+		        <action>Create</action>
+		        <user>JSmith</user>
+		        <timestamp>12/12/2009 : 12:12pm</timestamp>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </record>
+		</mx:XMLList>
+			<mx:columns>
+				<mx:DataGridColumn headerText="Action" dataField="action" />
+				<mx:DataGridColumn headerText="User" dataField="user" />
+				<mx:DataGridColumn headerText="Date : Time" dataField="timestamp" />
+				<mx:DataGridColumn headerText="Details" dataField="description" />
+			</mx:columns>
+		</mx:DataGrid>
+</mx:VBox>
+		<mx:HBox styleName="footer" width="100%">
+		    <mx:Button label="Help" />
+		    <mx:Spacer width="80%" />
+			<mx:Button label="Close" click="closeHistoryPopup();" />
+		</mx:HBox>
+</mx:TitleWindow>

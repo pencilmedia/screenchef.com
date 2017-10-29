@@ -1,0 +1,106 @@
+/*
+ * Agile BlueOne style modifications for the coqsoft table.
+ *
+ * NOTE: Link this *after* the default Grid.css.
+ *
+ * Copyright (c) 2007 Agile
+ */
+
+.GTable {
+    border: none;
+    font-family: Arial;
+}
+
+.GHeadMid {
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.GHeadLeft {
+    border-top: 0;
+    height: 20px;
+}
+
+.GHeader {
+   	border-bottom: 1px solid #ddd;
+    border-left: 0;
+    background-color: #F2F2F2;
+    height: 20px;
+}
+.GHeaderHover {
+    border-bottom: none !important;
+    background: #FAF8F3;
+}
+.GPanelTopHover {
+    border-right: none !important;
+    border-bottom: 1px dotted #999;
+    background: #FAF8F3;
+}
+
+.GBodyMid, .GBodyLeft {
+    border-top: 0px;
+}
+
+.GBodyMid {
+    border-left: 1px solid #999;
+}
+
+.GPanel, .GPanelTop {
+    background-color: #D8D8D8;
+    border-bottom: 1px dotted #999;
+    border-right: 0px;
+}
+.GPanelHover {
+    background-color: #ADADAD;
+    border-bottom: 1px dotted #999;
+    border-right: 0px;
+}
+
+.GHeadText {
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.GText,.GTextB,.GTextM,.GNumber,.GNumberB,.GNumberM,.GIText,.GINumber,.GLines,.GTextArea, .GHtml,.GRadio, .GIHtml {
+    font-family: Arial;
+    font-size:11px;
+    padding-left:2px;
+    border:0px solid;
+    background:inherit;
+}
+
+.GPage {
+	border-top: 0;
+}
+
+.GCell {
+	border-color: #ddd;
+}
+
+.has_attachment .GText {
+	text-align: center;
+}
+
+/**************************************************
+Frames
+**************************************************/
+
+.outer_block { 
+	margin: -3px;
+	background-color: #e5e5e5; 
+	border: 1px solid #999;
+	padding: 3px 9px 3px 3px;
+}
+
+.outer_block input.frame {
+	background-color: #fff; 
+	border: 1px solid #33b0ff; 
+	cursor: text; 
+	font: 11px Arial, Verdana, sans-serif;
+	margin: 0;
+	padding: 2px;
+	width: 100%;
+}

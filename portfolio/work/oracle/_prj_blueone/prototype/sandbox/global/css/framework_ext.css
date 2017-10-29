@@ -1,0 +1,442 @@
+
+
+
+
+
+/*****************************************************************************
+OLD FRAMEWORK WHICH IS USED FOR EXT extension for YUI library.
+This page will not be used in production for licensing issues.
+******************************************************************************/
+
+
+
+
+
+
+
+/******************************************************************************
+FRAMEWORK.CSS
+Description: Framework related styles and definitions.
+******************************************************************************/
+
+.x-layout-panel {
+    position: absolute;
+	overflow: hidden;
+}
+
+/******************************************************************************
+LEFT PANE STYLES
+******************************************************************************/
+/* Left Pane: Content */
+.LeftPane .action_buttons {
+	background-color: #d0d0d0;
+	height: 19px;
+	min-width: 190px;
+	line-height: 14px;
+	padding: 4px 0px 7px 5px;
+}
+
+.LeftPane a.button {
+	margin: auto 1px auto 0;
+}
+.LeftPane a.button span {
+	margin: 0;
+}
+
+.LeftPane .slideMenu {
+	background-color: #fff;
+	width: 100%;
+}
+
+.LeftPane .slideMenuHeader {
+	background:url(../images/bgd_acd_hdr_nrm.png) repeat-x; 
+	border-top: 1px solid #999;
+	color: #333;
+	cursor:pointer;
+	font-weight: bold;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 14px;
+	text-transform: uppercase;
+}
+
+.LeftPane .slideMenuHeader.selected {
+	background:url(../images/bgd_acd_hdr_selected.png) repeat-x;
+}
+
+.LeftPane .slideMenuHeader.disabled {
+	color: #999;
+}
+
+.LeftPane .slideMenuHeader em {
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 4px 8px;
+}
+
+/*Compartment Headings */
+.LeftPane div.title {
+	border-top: 1px dotted #333;
+	color: #333;
+	font-weight: bold;
+	height: 20px;
+	line-height: 22px;
+	padding-left: 36px;
+	text-transform: capital;
+	overflow: hidden;
+}
+
+.LeftPane div.title.first {
+	border-top: none;
+}
+
+.LeftPane div.title p {
+	border-left: 1px dotted #333;
+	float: right;
+}
+
+.LeftPane div.title em {
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 4px 9px;
+}
+
+.LeftPane p.tree {
+	padding: 12px 10px 12px 36px;
+}
+
+/* Collapse: Left Pane Styles */
+.x-layout-panel-hd {
+    position: relative;
+	height: 28px;
+    background: #e9eaea url(../images/blueone_left_pane_header.png) no-repeat left top;
+    border-bottom: 1px solid #999;
+	margin-right: -5px;
+	padding: 0;
+}
+
+
+.x-layout-panel-hd-text{
+    display: block;
+	white-space:nowrap;
+}
+.x-layout-panel-hd-tools {
+    position:absolute;
+    right:0;
+    top:0;
+    text-align:right;
+    padding-top:2px;
+    padding-right:2px;
+    width:60px;
+}
+
+/* Collapse: Splitter Styles */
+.x-splitbar-proxy {
+    position: absolute;
+    visibility: hidden;
+    z-index: 20001;
+    background: #aaa;
+    zoom: 1;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+}
+.x-splitbar-h, .x-splitbar-proxy-h {
+    cursor: e-resize;
+    cursor: col-resize;
+}
+.x-layout-split-h {
+    background-color: #7a7a7a /*url(../images/util_handle.png)*/;
+    background-position: left;
+}
+.x-layout-split {
+    position: absolute;
+    width: 4px;
+    line-height: 1px;
+    z-index: 3;
+}
+
+
+/* Collapse: Button Styles */
+.x-layout-tools-button {
+    float: right;
+    z-index: 6;
+    cursor: pointer;
+	background: url(../images/util_collapse.png) no-repeat left center;
+	height: 25px;
+	width: 20px;
+}
+.x-layout-collapsed-tools .x-layout-tools-button {
+	float: left;
+    margin: 0;
+	background: url(../images/util_expand.png) no-repeat left center;
+}
+
+.x-layout-tools-button2 {
+    float: right;
+    z-index: 6;
+    cursor: pointer;
+	background: url(../images/util_collapse.png) no-repeat left center;
+	height: 25px;
+	width: 20px;
+}
+.x-layout-collapsed .x-layout-tools-button2 {
+	float: left;
+    margin: 3px 0 0 0;
+	background: url(../images/util_expand.png) no-repeat left center;
+}
+.TopPane .x-layout-tools-button2 {
+	float: left;
+	margin-right: 35px;
+	min-width: 160px;
+}
+
+/* Collapse: Collapsed Styles */
+.x-layout-collapsed {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+    overflow: hidden;
+	z-index: 20;
+    visibility: hidden;
+    background-color: #e9eaea;
+	border-left: 4px solid #7a7a7a;
+	border-right: 1px solid #ccc;
+    width: 8px;
+	margin-left: 0;
+	padding: 0;
+}
+.x-layout-collapsed-over {
+    cursor:pointer;
+	background-color:#ccc;
+}
+
+.x-layout-collapsed .collapsed_buttons {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	margin: 0;
+	width: 25px;
+}
+.x-layout-collapsed .collapsed_buttons a.button {
+	float: left;
+	margin: 0 0 0 2px;
+	padding: 2px 0 2px 3px;
+}
+.x-layout-collapsed .collapsed_buttons a.button span {
+	margin: 0;
+	padding: 5px 3px 5px 0;
+}
+
+#ext-gen16 .collapsed_buttons {  /* Hides the buttons when left pane is expanded */
+	display: none; 
+}
+
+
+/* ************* ATTENTION ***************
+BELOW is the style for collapsed with buttons: DELETE if we don't go this direction */
+.x-layout-collapsed2 {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+    overflow: hidden;
+	z-index: 20;
+    visibility: hidden;
+    background-color: #e9eaea;
+	border-left: 4px solid #7a7a7a;
+	border-right: 1px solid #7a7a7a;
+    width: 26px;
+	margin-left: 0;
+	padding: 0;
+}
+.x-layout-collapsed2 .collapsed_buttons {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	margin: 0;
+	width: 25px;
+}
+.x-layout-collapsed2 .collapsed_buttons a.button {
+	float: left;
+	margin: 0 0 0 2px;
+	padding: 2px 0 2px 3px;
+}
+.x-layout-collapsed2 .collapsed_buttons a.button span {
+	margin: 0;
+	padding: 5px 3px 5px 0;
+}
+/* ABOVE is the style for collapsed with buttons: DELETE if we don't go this direction */
+
+
+/*************************************************************
+MAIN Pane
+*************************************************************/		
+.MainPane {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	height: 100%;
+	min-width: 600px;
+}
+
+/* Main Pane: Content */
+		
+.BottomPane #Header {
+	position: relative;
+	top: 0;
+}
+.BottomPane #PaneContent  {
+	position: relative;
+	top: 0;
+	overflow: auto;
+	height: auto;
+}
+.BottomPane #PaneContent .ObjectFull {
+	padding-top: 15px;
+}
+.BottomPane #Object {
+	background-color: #e5e5e5;
+	height: 50%;
+}	
+.BottomPane #Preview {
+	background-color: #ddd;
+	height: 50%;
+}
+
+
+/*************************************************************
+Top Pane
+*************************************************************/
+.TopPane {
+	background: #ddd url(../../global/images/bgd_top_pane.png); 
+	overflow: hidden;
+	min-width: 710px;
+	height: 25px;
+	padding: 3px 10px 0 10px;
+	border-bottom: 1px solid #999;
+}
+
+.TopPane .nav_buttons {
+	float: left;
+	margin-right: 20px;
+	min-width: 185px;
+}
+
+.create_button {
+	border-left: 1px dotted #999;
+	border-right: 1px dotted #999;
+	margin-top: -3px;
+	padding-top: 3px;
+	float: left;
+	height: 15px;
+	min-width: 85px;
+}
+.create_button p {
+	cursor: pointer;
+	padding: 5px 10px 3px 10px;
+}
+.create_button em {
+	background-repeat: no-repeat;
+	padding-bottom: 2px;
+}
+
+.TopPane .search_panel {
+	float: right;
+	margin-right: -10px;
+	min-width: 300px;
+}
+
+.TopPane .search_box {
+	float: left;
+}
+
+.TopPane .search_box input {
+	line-height: 12px;
+	margin-right: 3px;
+	padding-left: 40px;
+	vertical-align: middle;
+	width: 215px;
+}
+
+.TopPane .search_buttons {
+	float: left;
+	min-width: 100px;
+	padding-right: 15px;
+}
+
+.TopPane a.button {
+	margin: auto 1px;
+}
+.TopPane a.button span {
+	margin: 0;
+}
+
+.TopPane em.divet {
+	position: relative; 
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.TopPane span#toggle_search_menu {
+	position: relative;
+	top: 0; 
+	left: 34px;
+	cursor: pointer;
+	padding-bottom: 0;
+	padding-left: 2px;
+	background-color: #fff;
+}
+
+.TopPane em.search_selector,
+.TopPane em.selector_00,
+.TopPane em.selector_01,
+.TopPane em.selector_02,
+.TopPane em.selector_03,
+.TopPane em.selector_04,
+.TopPane em.selector_05,
+.TopPane em.selector_06,
+.TopPane em.selector_07,
+.TopPane em.selector_08,
+.TopPane em.selector_09,
+.TopPane em.selector_10,
+.TopPane em.selector_11,
+.TopPane em.selector_12,
+.TopPane em.selector_13,
+.TopPane em.selector_14,
+.TopPane em.selector_15,
+.TopPane em.selector_16,
+.TopPane em.selector_17,
+.TopPane em.selector_18,
+.TopPane em.selector_19,
+.TopPane em.selector_20,
+.TopPane em.selector_21 {
+	position: relative; 
+	background-position: center center; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 2px 8px;
+	line-height: 150%;
+}
+div.yuimenu li a {
+    margin-left: 0;
+	line-height: 150%;
+}
+div.search_selectors em.search_page{  
+ 	background-position: center center; 
+   	background-repeat: no-repeat;
+   	margin-right: 5px;
+	padding: 3px 9px;
+}
+
+/* YUI menu items */
+ div.search_selectors li.yuimenuitem { 
+	padding: 5px 10px 5px 5px; 
+}
+
+div.search_selectors em.checkedindicator {
+	top: .6em !important;
+}

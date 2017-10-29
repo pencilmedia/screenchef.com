@@ -1,0 +1,49 @@
+/* BEGIN: common.scss (global app styles)
+// -----------------------------------------------------*/
+* {
+     box-sizing: border-box;
+}
+
+/* Highlight Text Color */
+::selection {
+     background: #f96;    /* Safari */
+     color: #fff;
+}
+::-moz-selection {
+     background: #f96;    /* Firefox */
+     color: #fff;
+}
+
+/* Global ************* */
+html, body {
+     height: 100%;
+}
+body {
+     background-color: $bodyBackground;
+     border-top: 2px solid $schoolbusYellow;
+     margin: 0;
+     padding: 0;
+}
+p {
+     line-height: 1.5em;
+     margin: 0 0 1.25em 0;
+}
+a {
+     color: $blueDarkest;
+     text-decoration: none;
+     border-bottom: 1px dashed $borderColor;
+     &:hover {
+          color: $purple;
+          border-bottom-style: solid;
+     }
+}
+dl {
+     > dd {
+          margin-left: 0;
+     }
+}
+
+/* Helpers ************* */
+.pull-right {
+     float: right;
+}

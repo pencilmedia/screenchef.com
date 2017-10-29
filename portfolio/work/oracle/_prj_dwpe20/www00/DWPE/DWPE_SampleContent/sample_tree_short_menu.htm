@@ -1,0 +1,26 @@
+<ul>
+	<li>
+		View
+		<ul>
+			<li cmd="javascript::DWPE_Tree.expand(DWPE_Tree.getSelection(DWPE_Tree.getTree($(this))))">Expand</li>
+			<li cmd="javascript::DWPE_Tree.collapse(DWPE_Tree.getSelection(DWPE_Tree.getTree($(this))))">Collapse</li>
+			<li cmd="javascript::DWPE_Tree.expandAllBelow(DWPE_Tree.getSelection(DWPE_Tree.getTree($(this))))">Expand All Below</li>
+			<li cmd="javascript::DWPE_Tree.collapseAllBelow(DWPE_Tree.getSelection(DWPE_Tree.getTree($(this))))">Collapse All Below</li>
+			<li cmd="javascript::DWPE_Tree.expandAll(DWPE_Tree.getTree($(this)))">Expand All</li>
+			<li cmd="javascript::DWPE_Tree.collapseAll(DWPE_Tree.getTree($(this)))">Collapse All</li>
+			<li class=" separator ">
+				<hr/>
+			</li>
+			<li cmd="javascript::DWPE_Tree.showAsTop(DWPE_Tree.getFocus(DWPE_Tree.getTree($(this))))">Show as Top</li>
+			<li cmd="javascript::DWPE_Tree.goToTop(DWPE_Tree.getTree($(this)))">Go to Top</li>
+			<li cmd="javascript::DWPE_Tree.scrollTo(DWPE_Tree.getTree($(this)).find('.node:first'))">
+				Scroll to First
+				<key>CTRL+ALT+&uarr;</key>
+			</li>
+			<li cmd="javascript::DWPE_Tree.scrollTo(DWPE_Tree.getTree($(this)).find('.node:visible:last'))">
+				Scroll to Last
+				<key>CTRL+ALT+&darr;</key>
+			</li>
+		</ul>
+	</li>
+</ul>

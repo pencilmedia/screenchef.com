@@ -1,0 +1,191 @@
+/*****************************************************************************
+	TOP PANE
+*****************************************************************************/
+.TopPane,
+.leftPaneHeader,
+.LeftPane .slideMenuHeader:hover
+{
+	background-image: none !important;
+    background-color: #D1EFD1 !important;
+}
+.LeftPane .slideMenuHeader:hover a,
+.create_button a
+{
+	color: #333 !important;
+}
+
+/******************************************************************************
+	DASHBOARD HEADER & ACTIVE DRAWER
+*****************************************************************************/
+.dashboardTitle
+{ 
+	color: #fff;
+}
+.groupItem .itemHeader,
+.widget_personalization .drag_handle,
+.LeftPane .action_buttons
+{
+	background: none !important; 
+	background-color: #487F47 !important;
+}
+
+
+/******************************************************************************
+	BORDERS AND CREATE NEW BUTTON UNDERLINE
+*****************************************************************************/
+.LeftPane .leftPaneHeader,
+.create_button a:hover,
+.TopPane 
+{
+    border-bottom: 1px solid #D1EFD1 !important;
+}
+.LeftPane .slideMenuHeader,
+.action_dialog div.footer 
+{
+	border-top: 1px solid silver !important;
+}
+
+
+.message.info
+{
+	background: #f6f6f6 url(../images/blank_grad.png) repeat-x scroll left -6px;
+}
+
+
+
+/*****************************************************************************
+	ACTION DIALOGS
+*****************************************************************************/
+/* Footer */
+.action_dialog .header_wrapper,
+.action_dialog div.footer 
+{
+	background-image: none !important;
+    background-color: #D1EFD1 !important;
+	color: #333 !important;
+}
+
+/******************************************************************************
+	PALETTE HEADER / FOOTER
+*****************************************************************************/
+.ux_palette_top 
+{ 
+	background-color: #D1EFD1;
+}
+.ux_palette_bottom 
+{ 
+	background-color: #D1EFD1;
+	border: 2px solid transparent;
+}
+.ux_palette_bottom_action_bar 
+{
+	margin-left: 0 5px;
+}
+#ux_palette_main
+{
+	background-color: #fff;
+}
+
+#ux_palette_title
+{ 
+	color: #333;
+}
+/******************************************************************************
+	TABLE HEADER, LEFT PANE BUTTON BG, DRAWER & CREATE NEW BUTTON HOVERS, SELECTED PALETTE TAB
+*****************************************************************************/
+th,
+tr.header td,
+.GHeader,
+
+.GPanel,
+.GPanelTop,
+
+div.yuimenu li.selected,
+div.yuimenubar li.selected,
+
+.LeftPane .slideMenuHeader.selected,
+.create_button a:hover 
+{
+	background: none !important;	
+	background-color: #B5CFB5 !important;
+}
+
+.LeftPane .slideMenuHeader.selected a { color: #333 !important; }
+/******************************************************************************
+	HIGHTLIGHTS & PALETTE TAB BACKGROUND
+*****************************************************************************/
+.palette_tabs 
+{
+	border-top: 1px solid #9bb3e1;
+	border-bottom: 1px solid #9bb3e1;
+	background: url(../images/bgd_palette_tabs.png) repeat-x left top; 
+}
+
+.palette_tabs .selected 
+{ 
+	border: none;
+}
+
+.palette_tabs,
+.palette_tabs .selected 
+{
+	background-color: #9bb3e1 !important;
+}
+/******************************************************************************
+	PALETTE AND LEFT PANE BACKGROUNDS
+*****************************************************************************/
+.LeftPane .slideMenu,
+.ux_palette_main 
+{
+	background-color: #F5FBFF;
+}
+
+
+/******************************************************************************
+	FLAT BUTTONS
+*****************************************************************************/
+a.button 
+{
+	border: 1px solid transparent !important;
+	background: url('') left center no-repeat !important;
+}
+
+a.button:hover 
+{
+	border: 1px solid #999 !important;
+	background-color: #efefef !important;
+}
+
+a.button.disabled:hover 
+{
+	border: 1px solid transparent !important;
+	background-color: transparent !important;
+}
+
+a.button span
+{
+	background: url('') right center no-repeat !important;
+}
+
+.object_level_controls a.button,
+.view_controls a.button
+{
+	border: 1px solid silver !important;
+	background: url('') left center no-repeat !important;
+	padding:3px 0 3px 8px;
+	background-color:#e3e3e3 !important;
+}
+
+.object_level_controls a.button:hover,
+.view_controls a.button:hover
+{
+	background-color: #efefef !important;;
+}
+.table_actions a.button
+{
+	padding:3px 0 3px 8px;
+}
+.table_actions a.button span
+{
+	background: url() !important;
+}

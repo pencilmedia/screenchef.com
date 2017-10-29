@@ -1,0 +1,37 @@
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+    <!-- Page Header
+    ================================================== -->
+    @@include('./inc/head.tpl', {"pageTitle": "Paradata Prototype"})
+    
+    <!-- Page <BODY>
+    ================================================== -->
+    <body class="@@accountsClass" data-id="@@accountsID">
+        
+    <!-- Global Navbar 
+    ================================================== -->
+    @@include('./global_nav/proto_global_nav.tpl', {"productTitle": "@@accountsTitle"})
+
+    <!-- App Shell
+    ================================================== -->
+    <main role="main">
+        <section class="app-shell">
+            <!-- BEGIN: Customer Accounts -->
+            @@include('./pages/stats.tpl', {"productTitle": "@@accountsTitle"})
+        </section>
+        <aside class="contextual-pane animate25s">
+             @@include('./pages/contextual_pane.tpl')
+        </aside>
+    </main>
+
+    <!-- JavaScripts
+    ================================================== -->
+        @@include('./inc/javascripts.tpl')
+    </body>
+</html>

@@ -1,0 +1,218 @@
+/* vsnb.less
+// -----------------------------------------------------*/
+body {
+  padding-top: 25px;
+}
+.vsnb.app > section {
+  padding-bottom: 0;
+}
+.vsnb.app .modal-overlay {
+  background: #ffffff;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+.vsnb.app .modal-overlay nav {
+  background: #d9d9d9;
+  border-bottom: 1px solid #bfbfbf;
+  height: 45px;
+}
+.vsnb.app .modal-overlay nav h1 {
+  display: inline-block;
+  float: left;
+  font-size: 125%;
+  line-height: 45px;
+  margin: 0;
+  padding-left: 20px;
+  width: 80%;
+}
+.vsnb.app .modal-overlay nav .butcon {
+  color: #000000;
+  height: 45px;
+  padding-left: 9px;
+  width: 45px;
+}
+.vsnb.app .modal-overlay nav .butcon:hover {
+  background: #cccccc;
+  border-bottom: 1px solid #bfbfbf;
+  color: #ffffff;
+  outline: none;
+}
+.vsnb > header {
+  min-height: 45px;
+}
+.vsnb > header .columns .lt-column,
+.vsnb > header .columns .ct-column,
+.vsnb > header .columns .rt-column {
+  float: left;
+  height: 45px;
+  width: 33.3%;
+}
+.vsnb > header .columns .lt-column .logo-vendavo {
+  margin-left: 10px;
+}
+.vsnb > header .columns .ct-column h1 {
+  display: block;
+  font-size: 100%;
+  height: 45px;
+  min-width: 100px;
+  padding: 10px 0 0 0;
+  text-align: center;
+  width: 100%;
+}
+.vsnb > header .columns .ct-column .btn {
+  display: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #ffffff;
+  height: 45px;
+  text-shadow: none;
+  width: 100%;
+}
+.vsnb > header .columns .ct-column .btn b {
+  margin-left: 5px;
+}
+.vsnb > header .columns .ct-column .btn:hover {
+  color: #c9e0f0;
+}
+.vsnb > header .columns .rt-column .btn-group {
+  margin-right: 0;
+}
+.vsnb > header .columns .rt-column .btn-group .butcon {
+  color: #ffffff;
+  font-size: 125%;
+  height: 45px;
+  margin-left: 5px;
+}
+.vsnb > header .columns .rt-column .btn-group .butcon i {
+  text-shadow: none;
+}
+.vsnb > header .columns .rt-column .btn-group .butcon:hover {
+  background: transparent;
+  outline: none;
+}
+.vsnb > header .columns .rt-column .btn-group .butcon:hover i {
+  color: #c9e0f0;
+}
+.vsnb > header .columns .rt-column .btn-group .butcon:nth-child(4) {
+  display: none;
+}
+.vsnb > section .colonnade {
+  overflow: hidden;
+  /* Key property - equal heights */
+}
+.vsnb > section .colonnade .lt-column,
+.vsnb > section .colonnade .rt-column {
+  margin-bottom: -9000px;
+  /* Key property - equal heights */
+  padding: 0 20px;
+  padding-bottom: 9000px;
+  /* Key property - equal heights */
+}
+.vsnb > section .colonnade .lt-column {
+  background: #bfbfbf;
+  width: 25%;
+}
+.vsnb > section .colonnade .lt-column .nav {
+  margin-top: 20px;
+}
+.vsnb > section .colonnade .rt-column {
+  background: #ffffff;
+  width: 75%;
+}
+.vsnb > section .deal-list form {
+  margin-top: 20px;
+  min-width: 0;
+}
+.vsnb > section .deal-list dl {
+  border-top: 1px solid #d9d9d9;
+  margin: 0 20px;
+  padding: 10px;
+}
+.vsnb > section .deal-list dl:first-of-type {
+  margin-top: 20px;
+}
+.vsnb > section .deal-list dl:last-of-type {
+  border-bottom: 1px solid #d9d9d9;
+}
+.vsnb > section .deal-list dl dd {
+  margin: 0;
+  padding: 0;
+}
+.vsnb > section .deal-list dl .deal-indicator {
+  color: #a6a6a6;
+  float: left;
+  margin-right: 10px;
+}
+.vsnb > section .deal-list dl .deal-indicator.green {
+  color: #74ae42;
+}
+.vsnb > section .deal-list dl .deal-indicator.orange {
+  color: #f89406;
+}
+.vsnb > section .deal-list dl .deal-indicator.red {
+  color: #ba2b36;
+}
+.vsnb > section .deal-list dl .deal-id {
+  font-weight: bold;
+}
+.vsnb > section .deal-list dl .deal-status {
+  float: right;
+  position: relative;
+  right: 0;
+}
+.vsnb > section .deal-list dl .deal-date {
+  float: right;
+  position: relative;
+  right: 0;
+}
+.vsnb > section .deal-list dl .deal-description {
+  color: #999999;
+  margin: 5px 0 5px 21px;
+}
+.vsnb > section .deal-list dl .deal-customer {
+  font-weight: bold;
+  margin-left: 21px;
+}
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*/
+/* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .vsnb > header .columns .ct-column {
+    /* Show Responsive Menu/Hide Title */
+  }
+  .vsnb > header .columns .ct-column h1 {
+    display: none;
+  }
+  .vsnb > header .columns .ct-column .btn {
+    display: block;
+  }
+  .vsnb > section .colonnade .lt-column {
+    display: none;
+  }
+  .vsnb > section .colonnade .rt-column {
+    width: 100%;
+  }
+}
+/* Phone - 480px */
+@media (max-width: 480px) {
+  .vsnb > header .columns .rt-column .btn-group .butcon:nth-child(2) {
+    display: none;
+  }
+  .vsnb > header .columns .rt-column .btn-group .butcon:nth-child(3) {
+    display: none;
+  }
+  .vsnb > header .columns .rt-column .btn-group .butcon:nth-child(4) {
+    display: inline-block;
+  }
+  .vsnb > section .deal-list dl {
+    margin: 0;
+  }
+}

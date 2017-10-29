@@ -1,0 +1,45 @@
+/* PREVIEW PANE - FORM DISPLAY TABLES */
+
+table.form_display				{ margin: 0 0 30px 0; }
+
+table.form_display td {
+	vertical-align: middle;
+	padding: 2px 5px 2px 0;
+}
+
+td.form_label { 
+	font-weight: bold; 
+	color: #666; 
+	text-align: right;
+}
+
+
+
+/* PREVIEW PANE - NORMAL TABLES */
+
+table.preview_table				{ margin: 0 0 30px 0; width: 100%;}
+
+table.preview_table th {
+	font-size: 11px;
+	text-align: left;
+	vertical-align: top;
+	padding: 2px 20px 2px 0;
+	border-bottom: #ccc solid 1px;
+}
+
+table.preview_table td {
+	vertical-align: top;
+	padding: 2px 20px 2px 0;
+	white-space: nowrap;
+}
+
+
+
+td.cellpush						{ width: 65%; }
+
+
+/* FOR TESTING PAGE ONLY */
+
+div.wrapper { 
+	padding: 0 10px 0 10px;
+}

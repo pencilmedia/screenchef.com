@@ -1,0 +1,47 @@
+.ux_palette.infopop
+{
+	width: 650px;
+	height: 500px;
+	min-width: 500px;
+}
+
+.ux_palette.infopop .ux_palette_main
+{
+	background-color: #fff;
+}
+
+.ux_palette.infopop .thumb .lt_column {
+	float: left;
+	width: 75%;
+	min-width: 250px;
+}
+.ux_palette.infopop .thumb .rt_column {
+	float: left;
+	width: 25%;
+	min-width: 100px;
+}
+ 
+
+.ux_palette.infopop dl.side_by_side_text.palette_rule {
+	width: 100%;
+	margin: 15px 0 15px 0;
+	min-width: 325px;
+	background-color: #dae6f6;
+	border: 1px solid #b7c8e9;
+} 
+.ux_palette.infopop dl.side_by_side_text.palette_rule dt {
+	font-weight: bold;
+	width: 18.75%;
+	margin-bottom: 0;
+	padding: 7px 0 0 0;
+}
+.ux_palette.infopop dl.side_by_side_text.palette_rule dd {
+	width: 80%;
+	padding: 7px 0 0 0;
+}
+
+/* Temp Table Styles */
+.ux_palette.infopop div.table_actions {
+	border-right: 1px solid #D6D6D6;
+	border-left: 1px solid #D6D6D6;
+}

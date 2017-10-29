@@ -1,0 +1,193 @@
+
+
+MULTI-TEXT FOR TABLE
+updated by Uday Gajendar
+on 09/06/2007
+
+
+************************************************
+>> OVERVIEW
+************************************************
+
+prototype available? Y
+
+mockup available? Y
+
+mockup file/location: table_actions.psd
+
+
+UI COMPONENT DEFINITION:
+Multi-text is an alphanumeric text input box that allows for multiple lines of text to be inputted, within a table cell. It can accept alphanumeric characters per specific field constraints. It is NOT the single line text field. Can be found in any table as needed. 
+
+Limits:
+Display width is set in admin, irrespective of character max
+
+Dependencies: 
+Input frame width increase/decrease as user resizes the column (see table_behavior_notes.txt)
+
+Default width:
+
+
+
+
+TERMINOLOGY:
+
+Read-only Div: the expanded read-only view of the table cell contents, extends beyond the table cell borders, with a vertical scroll as needed
+
+Edit Div: the the editable view of the multi-text content
+
+Text Box: the multi-line text entry box that scrolls vertically as needed, and wraps text to the next line per character limits
+
+Focus: The normal browser notion of focus. Will allow events to fire relative to the object that has the focus.
+
+Selection: Add the element that received an event to a collection of objects for code to operate on.
+
+Visual Selection: A visual cue to the user that demonstrates the selected state of an object.
+
+
+
+
+UI LAYOUT:
+
+In table cell:
+- the text is justified left within table cell
+- data values separated by semicolon
+- data truncated per browser abilities
+- data revealed/hidden per table column resizing (see table_behavior_notes.txt)
+
+
+In read-only div:
+- the text is justified left within read-only div
+- text wraps per browser abilities within div space
+- vertical scrolling allowed
+- no horizontal scrolling
+
+
+In edit div:
+- the text box (with vertical scrolling as needed) is within the div (horizontally and vertically)
+- text wraps per browser abilities within div space
+- vertical scrolling allowed
+- text is justified left within text box
+- no horizontal scrolling
+
+
+
+Positioning:
+If on the far Right column:
+- UOM, datepicker, MSL, and multitext all move in leftward so nothing is jutting outside of the table frame
+
+If on the bottom row:
+- multitext read and edit div goes upward from the cell
+- MSL read div goes upward from the cell
+- datepicker calendar appears above the cell when the button is pressed
+- MSL edit div and single-select search goes upward
+
+
+
+
+VISUAL DISPLAY:
+table_actions.psd
+
+
+
+
+ICONOGRAPHY: n/a
+
+
+************************************************
+>> BEHAVIORS
+************************************************
+------------------------------
+IN GENERAL...
+------------------------------
+
+MOUSE ACTIONS: 
+
+- CLICK on a cell: cell is highlighted, read-only div visible after 2 second delay
+- DOUBLE-CLICK shows the edit div, with a text box, text selected, scroll down to the end of the text selection (end of text string)
+- upon DOUBLE-CLICK, all text is visually selected and in focus, and the cursor is at the end by default per CPD feedback
+- also upon DOUBLE-CLICK, what's shown is the "last part" of the text, since the cursor is at the end
+- CLICK off the read-only div = ESC
+- CLICK off the edit div = ESC
+
+
+KEYBOARD COMMANDS:
+(note: these are subject to change per prototype feedback)
+
+- TAB: puts focus on cell, and shows the read-only div after 2 second delay (equal to CLICK above)
+- ENTER: flips to edit div (equal to DOUBLE-CLICK above)
+- SHIFT + ENTER does carriage return in edit div (NEED TO DISCUSS)
+- ENTER: keeps changes made, and shows the cell with new data
+- ESC: discards changes, and shows the cell with prior data
+- ARROW UP/DOWN: puts focus on cell, and shows the read-only div (equal to CLICK above)
+
+- Use browser-defined behaviors for text input area (ARROW, HOME, PAGE DOWN, PAGE UP, END, etc.
+
+
+
+
+TAB INDEX ORDER:
+
+- across cells: horizontally, left to right, then down to the next row
+- within edit div: browser focus is on text scroll box, can't tab to Close Box (requires mouse click)
+
+
+
+
+DEFAULT STATES:
+
+- Upon entering edit div, any text contents are visually selected and in focus, ready for editing via keyboard
+- Cursor is placed at the end of text block
+- WRAP text to the next line as user types in text box, per character limits
+- If text extends beyond cell width, show the end part of the text upon DOUBLE-CLICK, where the cursor is, at the end
+
+- Edit Div default size: see PSD file
+- Text box default size: see PSD file
+
+
+
+
+SYSTEM BEHAVIORS: n/a
+
+
+------------------------------
+READ DIV
+------------------------------
+- ARROW UP/DOWN to scroll thru the text block
+- ESC to dismiss the div and see just the table cell as usual
+- ARROW UP/DOWN or TAB to move focus to a different table cell
+
+
+------------------------------
+EDIT DIV
+------------------------------
+
+- appears on DOUBLE-CLICK or ENTER
+- default Div size: TBD
+
+- default focus in edit div is text input box
+- if any text already entered, this text is highlighted upon DOUBLE-CLICK of table cell
+- text highlight color is defaulted per OS/browser
+- ENTER: clears text and dismisses the edit div, shows change to the visually selected table cell, preserves focus & visual selection on that table cell
+- carriage return: SHIFT + ENTER
+- ESC: discards changes, and shows the cell with prior data
+- CLICK off the edit div = ESC
+
+- A character counter is located centered below the text box, counting down the number of characters the user can write
+- The color of the character counter changes to red at a specific percentage level (TBD)
+
+
+************************************************
+>> TBD's/Issues Outstanding
+************************************************
+
+- All keyboard commands above; Ben/centralized keyboard list
+- Any system behaviors not foreseen yet?
+
+
+
+************************************************
+>> RELATED COMMENTS/DISCUSSIONS:
+************************************************
+Paste any discussions from email threads here...
+

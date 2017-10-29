@@ -1,0 +1,190 @@
+/* Close Panes */
+@keyframes ltPaneClose {
+	from{ transform: translateX(-100%); }
+	to { transform:translateX(0); }
+}
+@-webkit-keyframes ltPaneClose { /* Safari and Chrome */
+	from{ -webkit-transform: translateX(-100%); }
+	to { -webkit-transform:translateX(0); }
+}
+@-moz-keyframes ltPaneClose { /* Firefox */
+	from{ -moz-transform: translateX(-100%); }
+	to { -moz-transform:translateX(0); }
+}
+#uxd .ltPaneClose {
+	position:relative;
+	
+	animation-name: ltPaneClose;
+	animation-duration: 2s;
+	animation-fill-mode: backwards;
+
+	 /* Safari and Chrome */
+	-webkit-animation-name: ltPaneClose;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: backwards;
+	
+	 /* Firefox */	
+	-moz-animation-name: ltPaneClose;
+	-moz-animation-duration: 2s;	
+	-moz-animation-fill-mode: backwards;
+	
+}
+
+@keyframes rtPaneClose {
+	from{ transform: translateX(100%); }
+	to { transform:translateX(0); }
+}
+@-webkit-keyframes rtPaneClose { /* Safari and Chrome */
+	from{ -webkit-transform: translateX(100%); }
+	to { -webkit-transform:translateX(0); }
+}
+@-moz-keyframes rtPaneClose { /* Firefox */
+	from{ -moz-transform: translateX(100%); }
+	to { -moz-transform:translateX(0); }
+}
+#uxd .rtPaneClose {
+	position:relative;
+	
+	animation-name: rtPaneClose;
+	animation-duration: 2s;
+	animation-fill-mode: backwards;
+	
+	 /* Safari and Chrome */
+	-webkit-animation-name: rtPaneClose;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: backwards;
+	
+	 /* Firefox */	
+	-moz-animation-name: rtPaneClose;
+	-moz-animation-duration: 2s;
+	-moz-animation-fill-mode: backwards;
+	
+}
+
+
+/* Open Panes */
+@keyframes ltPaneOpen {
+	from{ transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}
+@-moz-keyframes ltPaneOpen { /* Firefox */
+	from{ -moz-transform: translateX(0); }
+	to { -moz-transform: translateX(-50%); }
+}
+@-webkit-keyframes ltPaneOpen { /* Safari and Chrome */
+	from{ -webkit-transform: translateX(0); }
+	to { -webkit-transform: translateX(-50%); }
+}
+#uxd .ltPaneOpen {
+	position: relative;
+	
+	animation-name: ltPaneOpen;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+
+	 /* Safari and Chrome */
+	-webkit-animation-name: ltPaneOpen;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	
+	 /* Firefox */	
+	-moz-animation-name: ltPaneOpen;
+	-moz-animation-duration: 2s;	
+	-moz-animation-fill-mode: forwards;
+	
+}
+
+@keyframes rtPaneOpen {
+	from{ transform: translateX(0); }
+	to { transform:translateX(30%); }
+}
+@-webkit-keyframes rtPaneOpen { /* Safari and Chrome */
+	from{ -webkit-transform: translateX(0); }
+	to { -webkit-transform:translateX(30%); }
+}
+@-moz-keyframes rtPaneOpen { /* Firefox */
+	from{ -moz-transform: translateX(0); }
+	to { -moz-transform:translateX(30%); }
+}
+#uxd .rtPaneOpen {
+	position:relative;
+	
+	animation-name: rtPaneOpen;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	
+	 /* Safari and Chrome */
+	-webkit-animation-name: rtPaneOpen;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	
+	 /* Firefox */	
+	-moz-animation-name: rtPaneOpen;
+	-moz-animation-duration: 2s;
+	-moz-animation-fill-mode: forwards;
+	
+}
+
+/* Open Content Pane*/
+@keyframes ltPaneContentOpen {
+	from{ transform: translateX(0); }
+	to { transform: translateX(-5%); }
+}
+@-webkit-keyframes ltPaneContentOpen { /* Safari and Chrome */
+	from{ -webkit-transform: translateX(0); }
+	to { -webkit-transform: translateX(-5%); }
+}
+@-moz-keyframes ltPaneContentOpen { /* Firefox */
+	from{ -moz-transform: translateX(0); }
+	to { -moz-transform: translateX(-5%); }
+}
+#uxd .ltPaneContentOpen {
+	position: relative;
+	
+	animation-name: ltPaneContentOpen;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+
+	 /* Safari and Chrome */
+	-webkit-animation-name: ltPaneContentOpen;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	
+	 /* Firefox */	
+	-moz-animation-name: ltPaneContentOpen;
+	-moz-animation-duration: 2s;	
+	-moz-animation-fill-mode: forwards;
+	
+}
+
+@keyframes rtPaneContentOpen {
+	from{ transform: translateX(0); }
+	to { transform:translateX(-30%); }
+}
+@-webkit-keyframes rtPaneContentOpen { /* Safari and Chrome */
+	from{ -webkit-transform: translateX(0); }
+	to { -webkit-transform:translateX(-30%); }
+}
+@-moz-keyframes rtPaneContentOpen { /* Firefox */
+	from{ -moz-transform: translateX(0); }
+	to { -moz-transform:translateX(-30%); }
+}
+#uxd .rtPaneContentOpen {
+	position:relative;
+	
+	animation-name: rtPaneContentOpen;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	
+	 /* Safari and Chrome */
+	-webkit-animation-name: rtPaneContentOpen;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	
+	 /* Firefox */	
+	-moz-animation-name: rtPaneContentOpen;
+	-moz-animation-duration: 2s;
+	-moz-animation-fill-mode: forwards;
+	
+}
+

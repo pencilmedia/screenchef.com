@@ -1,0 +1,37 @@
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+    <!-- Page Header
+    ================================================== -->
+    @@include('./inc/head.tpl', {"pageTitle": "Paradata Prototype"})
+
+    <!-- Page <BODY>
+    ================================================== -->
+    <body class="@@nmrClass details-page" data-id="@@nmrDetailsID"> <!-- data-id feeds what header to show in proto.js showPageHead() -->
+        
+    <!-- Global Navbar 
+    ================================================== -->
+    @@include('./components/navbar_global.tpl', {"productTitle": "@@nmrTitle"})
+
+    <!-- App Shell
+    ================================================== -->
+    <main>
+        <section class="app-shell">
+            <!-- BEGIN: New Material Request -->
+            @@include('./pages/new_material.tpl')
+        </section>
+        <aside class="contextual-pane animate25s fadeInRightBig">
+             @@include('./pages/contextual_pane.tpl')
+        </aside>
+    </main>
+
+    <!-- JavaScripts
+    ================================================== -->
+        @@include('./inc/javascripts.tpl')
+    </body>
+</html>

@@ -1,0 +1,40 @@
+/* BEGIN: theme.scss
+// -----------------------------------------------------*/
+
+// Global Includes
+@import "theme/variables";
+@import "theme/mixins";
+
+// Plugins Restyling
+@import "theme/plugins";
+
+// Bootstrap Overrides
+// Page Layout
+@import "theme/layout";
+@import "theme/contextualpane";
+
+// Global/Common
+@import "theme/typography";
+@import "theme/animation";
+@import "theme/breadcrumb";
+@import "theme/common";
+@import "theme/components";
+@import "theme/tabs";
+@import "theme/forms";
+@import "theme/alerts";
+@import "theme/buttons";
+@import "theme/menus";
+
+// Components
+@import "theme/dialogs";
+
+// Pages
+@import "theme/apps/accounts";
+@import "theme/apps/new_material";
+
+// Responsive Behaviors
+@import "theme/responsive";
+ 
+
+// Prototype ONLY 
+@import "theme/prototype"

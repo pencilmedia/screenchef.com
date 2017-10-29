@@ -1,0 +1,112 @@
+/*---------- from buttons.css ----------*/
+
+/*
+	List of available icons for buttons
+	PLEASE KEEP THIS LIST ALPHABETIZED
+*/
+
+div.buttons .apply b {background: url('../../images/icn_apply.png') no-repeat;}
+div.buttons .book b {background: url('../../images/icn_book.png') no-repeat;}
+div.buttons .calendar b {background: url('../../images/icn_calendar.png') no-repeat;}
+div.buttons .cancel b {background: url('../../images/icn_cancel.png') no-repeat;}
+div.buttons .chat b {background: url('../../images/icn_exclaim_ble.png') no-repeat;}
+div.buttons .check b {background: url('../../images/icn_check.png') no-repeat;}
+div.buttons .check_circle b {background: url('../../images/icn_check_circle.png') no-repeat;}
+div.buttons .clipboard b {background: url('../../images/icn_clipboard.png') no-repeat;}
+div.buttons .cog b {background: url('../../images/icn_cog.png') no-repeat;}
+div.buttons .delete b {background: url('../../images/icn_delete.png') no-repeat;}
+div.buttons .disk b {background: url('../../images/icn_disk.png') no-repeat;}
+div.buttons .doc b {background: url('../../images/icn_document.png') no-repeat;}
+div.buttons .down b {background: url('../../images/icn_arrow_down.png') no-repeat;}
+div.buttons .first b {background: url('../../images/icn_arrow_first.png') no-repeat;}
+div.buttons .folder b {background: url('../../images/icn_folder.png') no-repeat;}
+div.buttons .glass b {background: url('../../images/icn_glass.png') no-repeat;}
+div.buttons .glass_arrow b {background: url('../../images/icn_glass_arrow.png') no-repeat;}
+div.buttons .glass_plus b {background: url('../../images/icn_glass_plus.png') no-repeat;}
+div.buttons .last b {background: url('../../images/icn_arrow_last.png') no-repeat;}
+div.buttons .lock b {background: url('../../images/icn_lock.png') no-repeat;}
+div.buttons .menu b {background: url('../../images/icn_menu.png') no-repeat;}
+div.buttons .next b {background: url('../../images/icn_arrow_next.png') no-repeat;}
+div.buttons .paperclip b {background: url('../../images/icn_paperclip.png') no-repeat;}
+div.buttons .pencil b {background: url('../../images/icn_pencil.png') no-repeat;}
+div.buttons .plus b {background: url('../../images/icn_plus.png') no-repeat;}
+div.buttons .prev b {background: url('../../images/icn_arrow_prev.png') no-repeat;}
+div.buttons .printer b {background: url('../../images/icn_printer.png') no-repeat;}
+div.buttons .request b {background: url('../../images/icn_request.png') no-repeat;}
+div.buttons .search b {background: url('../../images/icn_searchfolder.png') no-repeat;}
+div.buttons .sundial b {background: url('../../images/icn_sundial.png') no-repeat;}
+div.buttons .unlock b {background: url('../../images/icn_unlock.png') no-repeat;}
+div.buttons .up b {background: url('../../images/icn_arrow_up.png') no-repeat;}
+
+
+
+/*
+	NORMAL BUTTON STYLES
+*/
+
+div.buttons a span, 
+div.buttons a em, 
+div.buttons a b {
+	height: 21px;
+	display: block;
+	float: left;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	background: none;
+}
+
+div.buttons a span {
+	margin: 0px 3px 0px 0px;
+	padding: 0px 0px 0px 5px;
+	cursor:	pointer;
+	white-space: nowrap;
+}
+
+div.buttons a em {
+	margin: 0px;
+	padding: 4px 8px 0px 0px;
+	color: #335cad;
+}
+
+div.buttons a b {
+	margin: -2px 0px 0px 0px;
+	width: 21px;
+}
+
+
+
+/*
+	NORMAL HOVER STYLES 
+*/
+div.buttons a:hover span,
+div.buttons a.button_over span {
+	background: url('../../images/btn_left_ovr.png') no-repeat top left;
+}
+
+div.buttons a:hover em,
+div.buttons a.button_over em {
+	background: url('../../images/btn_right_ovr.png')  no-repeat top right;
+	color: #fff;
+}
+
+div.buttons a:hover {
+	text-decoration: none;
+}
+
+
+/*
+	ICONIC BUTTON STYLE OVERRIDE
+*/
+
+div.buttons .iconic em {
+	padding: 4px 0px 0px 0px;
+}
+
+
+div.buttons hr {
+	clear: both;
+	line-height: 0;
+	height: 0;
+	visibility: hidden;
+}

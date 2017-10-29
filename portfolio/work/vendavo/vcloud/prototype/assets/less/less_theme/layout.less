@@ -1,0 +1,366 @@
+/* BEGIN: Layout.less
+// ----------------------------------------------------*/
+
+// App Layouts
+// -----------------------------------------------------
+
+.app {
+	overflow: hidden;
+	> header {
+		border-bottom: 5px solid @blueLightBorder;
+		min-height: 65px;
+		h1 {
+			display: table-cell;
+			height: 65px;
+			line-height: 22px;
+			margin: 0;
+			min-width: 320px;
+			padding: 0 0 0 @pageMargin;
+			vertical-align: middle;
+			width: 100%;
+		}
+		.page-tools {
+			float: right;
+			margin-bottom: -65px;
+			padding: 15px 10px 15px 15px;
+			position: relative;
+			text-align: right;
+			top: -65px;
+			width: 70%;
+			&.back {
+				float: left;
+				text-align: left;
+				.btn-group {
+					i, span {
+						vertical-align: middle;
+					}
+					i {
+						margin-right: 10px;
+					}
+				}
+			}
+			.btn-group {
+				display: inline-block;
+				width: auto;
+				em {
+					display: inline;
+					padding: 5px;
+					float: left;
+					color: @blueDarkest;
+				}
+				.btn, .butcon {
+					i {
+						display: inline-block; // display inline-block needed on i for animation
+						font-size: 140%;
+					}
+				}
+				.btn {
+					.border-radius(0);
+					background: none;
+					border: none;
+					box-shadow: none;
+					color: @blueDarkest;
+					font-weight: bold;
+					padding: 8px 12px;
+					text-transform: uppercase;
+					&:hover {
+						background-color: @blue;
+						color: @navyBlue;
+						outline: 1px solid @blueDark;
+						.caret {
+							border-top-color: @navyBlue;
+						}
+					}
+					.caret {
+						border-top-color: @blueDarkest;
+						margin-left: 5px;
+					}
+					span {
+						margin: 0 5px;
+					}
+				}
+				.butcon {
+					margin: 0 5px;
+					padding: 0;
+					i {
+						font-size: 140%;
+					}
+					&.active {
+						color: @navyBlue;
+						outline: 1px solid @blueDark;// active butcon 
+						background-color: @blue;
+						i {
+							color: @navyBlue;
+						}
+					}
+				}
+				.dropdown-menu {
+					text-align: left;
+				}
+			}
+			.btn.parameters {
+				.border-radius(0);
+				background: none;
+				border: none;
+				box-shadow: none;
+				color: @blueDarkest;
+				font-weight: bold;
+				margin-left: -5px;
+				padding: 8px 12px;
+				text-transform: uppercase;
+				i {
+					color: @blueDarkest;
+					font-size: 150%;
+				}
+				&:hover {
+					background-color: @blue;
+					color: @navyBlue;
+					outline: 1px solid @blueDark;
+					i {
+						color: @navyBlue;
+					}
+				}
+			}
+		}
+	}
+	> section {
+		padding: @pageMargin 0 0 0;
+		article {
+			margin: 0 @pageMargin;
+		}
+	}
+	// NOTE: This is wrong. Price Data should have app.w_column but it breaks when you add that class
+	// So i needed to quickly add these styles to fix. 	
+	.tab-pane {
+		aside {
+			article {
+				.learning-center  {
+					margin: @pageMargin 0 0 0;
+					padding: 0;
+					li {
+						list-style: none;
+						margin-bottom: 10px;
+						padding: 0;
+						i {
+							color: @blueDarkest;
+							display: inline-block;
+							font-size: 16px;
+							margin-right: 5px;
+							text-align: center;
+							width: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.w_column {
+		> section {
+			border-right: 1px solid @blueLightBorder;
+			float: left;
+			margin-bottom: @pageMargin;
+			width: 70%; // first section following (.midas)
+			.form-inline {
+				min-width: 300px;
+			}
+		}
+		> aside {
+			float: left;
+			width: 30%;
+			article {
+				margin: 0 @pageMargin;
+				min-height: 100px;
+				h2 {
+					margin: 0 0 @pageMargin 0;
+					&:first-child {
+						margin-bottom: 0;
+						margin-top: 10px;
+						padding: 0;
+					}
+					a {
+						&.view-all {
+							width: auto;
+							padding-right: 5px;
+							padding-left: 5px;
+							text-transform: capitalize;
+							font-size: 90%;
+							font-weight: normal;
+						}
+					}
+				}
+				p {
+					margin: 10px 0;
+				}
+				textarea {
+					line-height: 18px;
+					min-height: 100px;
+					width: 100%;
+				}
+				dl {
+					dt {
+						em {
+							color: @black;
+							font-weight: bold;
+							margin: 0 5px;
+						}
+						span {
+							font-size: 90%;
+							font-weight: normal;
+						}
+					}
+					dd {
+						border-bottom: 1px solid @blueLightBorder;
+						margin-bottom: 10px;
+						margin-left: 0;
+						padding-bottom: 10px;
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+				}
+				ul {
+					list-style: none;
+					/* ASIDE LISTS - Opens dropdown menu
+					// -----------------------------------------------------*/
+					&.aside-list {
+						margin: 0;
+						padding: 0;
+						li {
+							margin: 0;
+							padding: 0;
+							white-space: normal;
+							a {
+						          border: none;
+						          border-bottom: 1px solid @blueLightBorder;
+						          display: block;
+						          min-height: 60px;
+						          overflow: hidden;
+						          position: relative;
+								.fa {
+									color: @navyBlue;
+									font-size: 80%;
+									margin-right: 5px;
+									position: absolute;
+									right: 5px;
+									top: 45%;
+								}
+						          h2 {
+									border: none;
+									float: left;
+									font-size: 100%;
+							          font-weight: normal;
+									line-height: 18px;
+									margin: 0;
+									min-height: 60px;
+									padding: 12px 5px;
+									text-align: right;
+									text-transform: none;
+									width: 20%;
+									> span {
+										color: @green;
+									}
+									.bar-chart {
+										display: block;
+										height: 8px;
+										margin-top: 7px;
+										overflow: auto;
+										width: 100%;
+										> span {
+											background: @greenLighter;
+											border: 1px solid @green;
+											display: block;
+											float: right;
+											height: 8px;
+										}
+									}
+						          }
+						          > span {
+									color: @gray;
+									display: block;
+									float: left;
+									min-height: 60px;
+									padding: 10px 25px 10px 5px;
+									width: 80%;
+									strong {
+										color: @grayDark;
+									}
+           							.root-cause {
+           								color: @grayDark;
+           							}
+						          }
+							}
+							&:last-child {
+								a {
+									border-bottom: none;
+								}
+							}
+							&:hover {
+								background: @blueHover;
+								cursor: pointer;
+								a {
+									color: @grayDarkest;
+								}
+							}
+						}
+						&.favorites-list {
+							border-bottom: 3px solid @blueLightBorder;
+						}
+					}
+				}
+				.learning-center  {border:1px solid red;
+					margin: @pageMargin 0 0 0;
+					li {
+						list-style: none;
+						margin-bottom: 10px;
+						padding: 0;
+						i {
+							color: @blueDarkest;
+							display: inline-block;
+							font-size: 16px;
+							margin-right: 5px;
+						}
+					}
+				}
+				.pill-list {
+					padding-top: 10px;
+				}
+			}
+		}
+	}	
+}
+// DETAILS PAGE
+// -----------------------------------------------------
+.app.w_column.details {
+	> section {
+		> h2 {
+			font-size: 110%;
+		}
+		> h3 {
+			border-bottom: none;
+			clear: both;
+			color: @grayDark;
+			font-size: 100%;
+			line-height: 25px;
+			margin: 0 @pageMargin;
+			padding-top: 10px;
+			text-transform: normal;
+			em {
+				color: @gray;
+				font-size: 95%; 
+				margin-left: 5px;
+				text-transform: none;
+			}
+		}
+		p {
+			margin-top: 10px;
+		}
+	}
+}
+
+// Full Page Layouts
+// -----------------------------------------------------
+
+.wrapper {
+	height: 100%;
+	overflow: auto;
+}

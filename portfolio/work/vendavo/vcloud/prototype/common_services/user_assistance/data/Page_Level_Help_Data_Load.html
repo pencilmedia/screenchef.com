@@ -1,0 +1,270 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-gb"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en-gb"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-gb"> <!--<![endif]-->
+<head>
+  <title>Vendavo Profit Advisor Help</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+   <!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="/vss/plugins/cloudshell-1.1.0/public/css/main.css">
+
+</head>
+<body>
+<div class="wrapper page_help">
+	<section>
+		<div class="app">
+			<header>
+ 				<h1>
+
+  				<!-- ////////////////////////////// -->
+  				<!-- EDIT HERE: Page Title -->
+  				<!-- ////////////////////////////// -->UPLOADING TRANSACTION DATA<!-- ////////////////////////////// -->
+			  	<!-- END EDIT HERE: Page Title -->
+  				<!-- ////////////////////////////// -->
+
+			    </h1>
+				<article class="page-tools">
+					<a href="JavaScript: window.close();"  class="btn close-window" title="Close This Page">Close</a>
+				</article>
+			</header>
+			<section class="content">
+
+  			<!-- ////////////////////////////// -->
+  			<!-- EDIT HERE: Page Content -->
+  			<!-- ////////////////////////////// -->
+  			<p><i class="icon-info-sign"></i> If you want to analyse the Vendavo Pricemart data in Vendavo Profit Advisor, use Vendavo Pricemart Data Extractor that exports the data from Vendavo Pricemart in the format that Vendavo Profit Advisor expects.</p>
+			  <h2 id="DataUploadPageHelp-DataFile&amp;Format">Data File &amp; Format</h2>
+				<p>The file that contains your data must conform to the following formats.</p>
+			  <div class="table-container">
+				  <table >
+				    <tbody>
+				      <tr>
+				        <th >Rule</th>
+				        <th >Format</th>
+				        <th >Description and Examples</th>
+			          </tr>
+				      <tr>
+				        <td >File type</td>
+				        <td ><p>.csv</p>
+				          <p>.zip</p></td>
+				        <td ><ul>
+				          <li>A compressed file format is supported for you to efficiently upload large files or multiple data files. </span><br />
+				            <ul>
+				              <li><span>You must use a .zip file. No other compressed file format is supported.</span></li>
+				              <li>A  .zip file can't contain another .zip file.</li>
+			                </ul>
+			              </li>
+				          </ul>
+				          <ul>
+				            <li>If you create and save a data file on Mac OS, you need to <strong>Save As</strong> the .csv file using the line ending characters supported by Vendavo Profit Advisor, such as LF or CR+LF.</li>
+			              </ul></td>
+			          </tr>
+				      <tr>
+				        <td colspan="1" >File size</td>
+				        <td colspan="1" > n/a</td>
+				        <td colspan="1" >A data file must be 500MB or smaller in size.</td>
+			          </tr>
+				      <tr>
+				        <td >Field separator</span></td>
+				        <td >comma (,)</td>
+				        <td >TX1234, 10-AUG-13</td>
+			          </tr>
+				      <tr>
+				        <td >Field encloser</td>
+				        <td >double quotes <br />
+				          (&quot; &quot;)</td>
+				        <td >&quot;TX1234&quot;, &quot;10-AUG-13&quot;</td>
+			          </tr>
+				      <tr>
+				        <td colspan="1" >Escape character</td>
+				        <td colspan="1" >double quote <br />
+				          (&quot;)</td>
+				        <td colspan="1" >3&quot;&quot; Nail</td>
+			          </tr>
+				      <tr>
+				        <td colspan="1" >Header row</td>
+				        <td colspan="1" >hash (#)</td>
+				        <td colspan="1" >The line starting with the '#' character and immediately preceding the data is considered the header row. In the example below, the line 4 will be treated as the column header.
+				          <p style="margin-left: 60.0px;"><span style="color: rgb(0,0,0);">#This<br />
+				            #is<br />
+				            #a comment.<br />
+				            #ID, Customer, Qty<br />
+				            1,ABC,1000</span></p></td>
+			          </tr>
+				      <tr>
+				        <td colspan="1" >Comment row</td>
+				        <td colspan="1" >hash (#)</td>
+				        <td colspan="1" >The non-header lines that start with a '#' character will be considered as comments and will be ignored. In the above example, the line 1, 2, and 3 are comment rows and will not be uploaded.</td>
+			          </tr>
+			        </tbody>
+			      </table>
+			  </div>
+				<h2 id="DataUploadPageHelp-DataRequirements" class="O1">Data Requirements</h2>
+				<h3 id="DataUploadPageHelp-MandatoryFieldData">Mandatory Field Data</h3>
+				<div class="table-container">
+				  <table>
+				    <tbody>
+				      <tr>
+				        <th>Rule</th>
+				        <th>Description</th>
+			          </tr>
+				      <tr>
+				        <td >Non-empty values</td>
+				        <td >The following required fields must contain non-empty values:
+				          <ul>
+				            <li>Transaction ID</li>
+				            <li>Transaction Date</li>
+				            <li>Product</li>
+				            <li>Sold to Customer</li>
+				            <li>Order Currency</li>
+				            <li>Unit of Measure</li>
+			              </ul></td>
+			          </tr>
+				      <tr>
+				        <td >Non-zero values</td>
+				        <td >The following field must contain non-zero values:
+				          <ul>
+				            <li>Order Quantity</li>
+				          </ul></td>
+			          </tr>
+			        </tbody>
+			      </table>
+			  </div>
+              <h3 id="DataUploadPageHelp-WaterfallDataRequirements">Waterfall Data Requirements</h3>
+							  <div class="table-container">
+				  <table >
+				    <tbody>
+				      <tr>
+				        <th >Rule</th>
+				        <th >Description</th>
+			          </tr>
+				      <tr>
+				        <td >Total values</td>
+				        <td ><p>All waterfall element values must represent the total value for the whole transaction. Per unit and percent values are not allowed.</p></td>
+			          </tr>
+				      <tr>
+				        <td >Optional pricepoints</td>
+				        <td ><ul>
+				          <li>If you do not provide a value for an optio<span>nal pricepoint, the value is calculated.</span></li>
+				          <li>If you provide an optional pricepoint value, the provided value is validated against the calculated value. If the provided and calculated values do not match, an error is returned, and this transaction record is not uploaded. For example, if you provided the following values for a transaction, this transaction record would cause an error and not uploaded.</li>
+				          </ul>
+				          <p style="margin-left: 60.0px;">Market Price = $10<br />
+				            Negotiated Discount = $2<br />
+				            <span>Customer Negotiated Price Adjustment = $3<br />
+			                </span><span>Customer Negotiated Price = $6</span></p>
+				          <p style="margin-left: 60.0px;"><span>(Market Price - Negotiated Discount - Customer Negotiated Price Adjustment ) &lt;&gt; Customer Negotiated Price </span></p></td>
+			          </tr>
+				      <tr>
+				        <td >Non-zero value</td>
+				        <td ><p class="O1">In each transaction record, at least, one of the following key pricepoints must have a non-zero value. Otherwise, a validation error returns during data upload, and the record is not uploaded.</p>
+				          <ul>
+				           
+				                <li>Invoice Price</li>
+				                <li>Pocket Margin</li>
+			                 </ul></td>
+			          </tr>
+				      <tr>
+				        <td colspan="1" >Cost of Goods Sold</td>
+				        <td colspan="1" ><p class="O1"><span>The value in the Cost of Goods Sold field must be less than or equal to 0.</span></p></td>
+			          </tr>
+				      <tr>
+				        <td colspan="1" >Order Quantity and Invoice Price</td>
+				        <td colspan="1" >In each transaction record, the values for Order Quantity and Invoice Price must have the same sign, positive or negative. For example, if an Invoice Price value is -100, the corresponding Order Quantity value must be a negative number.</td>
+			          </tr>
+			        </tbody>
+			      </table>
+			  </div>
+				<div class="O1">
+				  <h3 id="DataUploadPageHelp-NumericFields">Numeric Fields</h3>
+				  <div class="table-container">
+				    <table >
+				      <tbody>
+				        <tr>
+				          <th >Rule</th>
+				          <th >Description</th>
+			            </tr>
+				        <tr>
+				          <td >Negative numbers</td>
+				          <td ><p>Negative numbers should carry a minus sign, for example, -10. No other format is accepted for negative numbers. A sign is not required for positive numbers.</p></td>
+			            </tr>
+				        <tr>
+				          <td colspan="1" >Empty numeric value</td>
+				          <td colspan="1" ><p>An empty value in a numeric field is converted to 0.</p></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+				  <h3 id="DataUploadPageHelp-SpecialCharacters">Special Characters</h3>
+				  <div class="table-container">
+				    <table >
+				      <tbody>
+				        <tr>
+				          <th >Rule</th>
+				          <th >Description</th>
+			            </tr>
+				        <tr>
+				          <td ><span>Record values that start with a hash (#) character </span></td>
+				          <td ><p>The record values that start with a hash character must be enclosed in double quotes. For example, the product name, #3 Bolts, must be enclosed in double quotes as &quot;#3 Bolts&quot; in the data file.</p></td>
+			            </tr>
+				        <tr>
+				          <td >Record values that contain a<span> field separator </span>character (,)</td>
+				          <td ><p><span>The record values that contain a comma (,) </span><span>character m</span>ust be enclosed in double quotes. For example, the product name, Nuts, Screws &amp; Bolts, must be enclosed in double quotes as &quot;Nuts, Screws &amp; Bolts&quot; in the data file.</p></td>
+			            </tr>
+				        <tr>
+				          <td >Record values that contain an escape character (&quot;)</td>
+				          <td ><p>The record values that contain a double quote (&quot;) character must be escaped with another double quote. For example, <span>the product name, </span>3&quot; Nail, must be specified as <span>3&quot;&quot; Nail</span><span> in the data file.</span></p></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+				  <h3 id="DataUploadPageHelp-OtherRequirements">Other Requirements</h3>
+				  <div class="table-container">
+				    <table >
+				      <tbody>
+				        <tr>
+				          <th >Rule</th>
+				          <th >Description</th>
+			            </tr>
+				        <tr>
+				          <td >Same field label</td>
+				          <td ><p><span style="color: rgb(0,0,0);">Each time you upload data, use the exactly same field labels in your data file as appeared in the template.</span></p></td>
+			            </tr>
+				        <tr>
+				          <td >Unique Transaction ID</td>
+				          <td ><p><span style="color: rgb(0,0,0);">Transaction IDs must be unique within a .csv data file. </span></p></td>
+			            </tr>
+				        <tr>
+				          <td >Date format</td>
+				          <td ><p><span style="color: rgb(0,0,0);">Date values must be in the  &quot;dd-MON-yyyy&quot; format, for example, 17-AUG-2012.</span></p></td>
+			            </tr>
+				        <tr>
+				          <td >Empty value in optional fields</td>
+				          <td ><p><span style="color: rgb(0,0,0);">In optional fields, do not specify empty values with &quot;N/A&quot; or &quot;NULL.&quot; Leave empty values blank.</span></p></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+			  </div>
+<p>&nbsp;</p>
+
+  			<!-- ////////////////////////////// -->
+  			<!-- END EDIT HERE: Page Content -->
+  			<!-- ////////////////////////////// -->
+		  </section>
+		</div>
+	</section>
+</div>
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="extras/h5bp/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+<!-- Vendavo Custom Scripts-->
+<script type="text/javascript" src="file:///C|/Users/js/page_help.js"></script>
+
+</body>
+</html>

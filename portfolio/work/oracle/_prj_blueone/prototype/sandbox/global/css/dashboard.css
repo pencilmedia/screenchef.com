@@ -1,0 +1,581 @@
+.groupWrapper {
+	width: 62.3%;
+	float: left;
+	margin-right: 1%;
+	min-height: 400px;
+	height: 400px;
+}
+.groupWrapper.widgets {
+	width: 35%;
+	float: right;
+	margin-right: 1%;
+}
+.groupWrapper.side_by_side {
+	width: 49%;
+	margin-right: 1%;
+}
+.groupWrapper.side_by_side.with_bottom {
+	min-height: 100px;
+	height: auto;
+}
+.groupWrapper.bottom {
+	width: 99%;
+}
+.serializer {
+	clear: both;
+}
+.groupItem {
+	margin-bottom: 10px;
+	border: 1px solid silver;
+}
+.groupItem .itemHeader {
+	background: #333;
+	line-height: 22px;
+	border-bottom: 1px solid silver;
+	color: #000;
+	padding: 0 0 0 5px;
+	cursor: move;
+	font-weight: bold;
+	overflow: hidden;
+}
+.wide_widget_lft {
+	width: 74.3% !important;
+}
+.wide_widget_rght {
+	width: 24.3% !important;
+}
+.algn_rght {
+	text-align: right;
+}
+.algn_cntr {
+	text-align: center;
+}
+.itemHeader .column_zero, .itemHeader .column_one {
+	line-height: 22px;
+	float: left;
+	width: 49.3%;
+}
+.itemHeader .column_one {
+	text-align: right;
+}
+.groupItem .itemHeader a, .groupItem .itemHeader a:active, .groupItem .itemHeader a:link, .groupItem .itemHeader a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.dashboardTitle {
+	color: #FFFFFF;
+}
+.groupItem .itemHeader a:hover {
+	color: #cccccc;
+	text-decoration: underline;
+}
+.groupItem .itemHeader a.closeEl {
+	background: url(/global/images/ux_palette/ico_tree_collapse_white.png) no-repeat 0 -1px;
+	font-weight: normal;
+	text-decoration: none;
+	color: gray;
+	padding: 0 6px;
+}
+.groupItem .itemHeader a.closeEl:hover {
+	background: url(/global/images/ux_palette/ico_tree_collapse_on.png) no-repeat 0 0;
+}
+.groupItem .itemHeader a.closeEl.expanded {
+	background: url(/global/images/ux_palette/ico_tree_expand_white.png) no-repeat 0 0;
+}
+.groupItem .itemHeader a.closeEl.expanded:hover {
+	background: url(/global/images/ux_palette/ico_tree_expand_on.png) no-repeat 0 0;
+}
+.groupItem .itemContent a.closeEl {
+	background: url(/global/images/ux_palette/palette_expand.png) no-repeat 0 -1px;
+	font-weight: normal;
+	text-decoration: none;
+	color: gray;
+	padding: 0 6px;
+}
+.groupItem .itemContent a.closeEl.expanded {
+	background: url(/global/images/ux_palette/palette_collapse.png) no-repeat 0 0;
+}
+.groupItem a:hover {
+	text-decoration: underline
+}
+.scrollDiv a:hover {
+	text-decoration: underline
+}
+.groupItem .itemHeader a.cmdA, .groupItem .itemHeader a.cmdB, .groupItem .itemHeader a.cmdC, .groupItem .itemHeader a.cmdD, .groupItem .itemHeader a.cmdM {
+	text-decoration:none;
+	padding:0 6px;
+}
+.groupItem .itemHeader a.cmdA {
+	background:url('/global/images/ico_summary_recycle_sm_white.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdA:hover {
+	background:url('/global/images/ico_summary_recycle_sm_on.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdB {
+	background:url('/global/images/ico_container_expand_lrg.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdB:hover {
+	background:url('/global/images/ico_container_expand_lrg_on.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdC {
+	background:url('/global/images/ico_menu_open_arrow.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdC:hover {
+	background:url('/global/images/ico_menu_open_arrow_on.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdD {
+	background:url('/global/images/ico_filter_white.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdD:hover {
+	background:url('/global/images/ico_filter_white_on.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdM {
+	background:url('/global/images/ico_container_collapse_white.png') no-repeat center center;
+}
+.groupItem .itemHeader a.cmdM:hover {
+	background:url('/global/images/ico_container_collapse_on.png') no-repeat center center;
+}
+.groupItem .obj_form table {
+	margin-bottom: 30px;
+}
+.dasboard_dropdown {
+	background: url('/global/images/ico_menu_open_arrow.png') no-repeat center center;
+	;
+	padding-left: 10px;
+	padding-top: 0px;
+}
+.dasboard_control_up {
+	background: url('/global/images/icn_shuttle_control_up.png') no-repeat center center;
+	padding-left: 10px;
+	padding-top: 0px;
+}
+.dasboard_dropdown:hover {
+	background:url('/global/images/ico_menu_open_arrow_on.png') no-repeat center center;
+}
+.sortHelper {
+	border: 1px dashed #ccc;
+	width: auto !important;
+}
+.groupWrapper p {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.groupItem .itemContent ul.content li {
+	padding-top:1px;
+	margin-left: 18px;
+}
+.groupItem .itemContent ul.gates {
+	color: #000;
+	background: #abc;
+}
+.groupItem .itemContent ul.gates li {
+	color: #000;
+	background: #ffc;
+}
+.groupItem .itemContent ul.gates li {
+	color: #000;
+	background: #ffc;
+}
+.groupDiscussion {
+	min-height: 50px;
+	position: relative;
+}
+.discussionMessage {
+	padding: 16px;
+	text-align: center;
+}
+.discussionContent {
+	text-align: left;
+	display: none;
+}
+.discussionContent li {
+	margin-bottom: 5px;
+}
+.itemMessage {
+	background-color: #e3e3e3;
+	border-top: 1px solid #d6d6d6;
+	border-bottom: 1px solid #9f9f9f;
+	height: 11px;
+	padding: 3px 10px 7px 10px;
+	white-space:nowrap;
+}
+span.overdueLabel {
+	color: red;
+}
+span.completedLabel {
+	color: #666666;
+}
+div.widget_actions {
+	background-color: #e3e3e3;
+	border-bottom: 1px solid #9f9f9f;
+	height: 22px;
+	padding: 3px 10px 4px 10px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+div.widget_actions .column_one {
+	width: 33%;
+}
+div.widget_actions .column_two {
+	text-align: right;
+	width:67%;
+	line-height: 22px;
+}
+.no_column_one {
+	width:100% !important;
+	overflow: visible;
+}
+div.widget_actions .pagination span {
+	float: left;
+}
+div.widget_content {
+	max-height: 420px;
+	overflow-y: auto;
+}
+div.widget_content ul.contact_info li {
+	border-bottom: 1px solid #ccc;
+	padding-top:1px;
+	padding-left:5px;
+}
+div.widget_content ul.contact_info li img {
+	float: left;
+	position: relative;
+	cursor: pointer;
+}
+div.widget_content ul.content li {
+	padding-top:1px;
+	margin-left: 18px;
+}
+.with_object_part {
+	background-image: url(/global/images/part.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+.with_non_conformance {
+	background-image: url(/global/images/non-conformance_report.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+.with_requirement {
+	background-image: url(/global/images/requirement.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+.with_action {
+	background-image: url(/global/images/action_item.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+.with_program {
+	background-image: url(/global/images/icn_obj_program.png);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+}
+div.widget_content ul.contact_info p {
+	margin-left : 26px;
+	margin-bottom: 0px;
+}
+div.widget_content table.news {
+	margin-bottom:0pt;
+}
+div.widget_content table.news td {
+	border-bottom: 1px solid #ccc;
+	padding-bottom:10px;
+	padding-left: 10px;
+}
+div.widget_content table.news p {
+	margin-top: 5px;
+	margin-bottom: 0pt;
+}
+div.widget_content td.attachment {
+	background-position: center center;
+	border-left: 0pt !important;
+}
+/* Widget specific styles */
+.widget_summary img {
+	float: right;
+	cursor: pointer;
+}
+.widget_summary dl.side_by_side_text {
+	overflow: hidden;
+	width: 75%;
+	min-width: 150px;
+}
+.widget_summary dl.side_by_side_text dt {
+	width: 45%;
+}
+.widget_summary dl.side_by_side_text dd {
+	width: 53%;
+	margin-bottom: 5px;
+}
+.container.obj_form.widgets {
+	min-width: 325px;
+}
+/* Exceptions */
+.ObjectFull.with_widgets {
+	padding-top:10px;
+}
+.ObjectFull.with_widgets p {
+	margin-bottom: 0pt;
+}
+.obj_form table.with_widgets {
+	margin-bottom: 0pt;
+	padding-left: 0pt;
+}
+table.rbr td.with_subcontent {
+	padding-left: 0pt;
+}
+.lefty {
+	position: absolute;
+	top: 0pt;
+	bottom: 0pt;
+}
+/* these are styles used by Alex's YUI drag-n-drop demo */
+
+.columnLeft {
+	width: 58%;
+	float: left;
+	margin: 0pt;
+	min-height: 400px;
+}
+.columnRight {
+	width: 40%;
+	float: right;
+	margin-left: 10px;
+	margin-right: 0pt;
+}
+.dropSlot {
+	visibility:hidden;
+	background-color:#FF0000;
+	border:0px;
+	width: 100px;
+	height:10px;
+	top:0px;
+	left:0px;
+	cursor:move;
+}
+.wideWidget {
+	width: 100%;
+	height: 160px;
+}
+.narrowWidget {
+	width: 100%;
+	height: 100px;
+}
+#proxyWidget {
+	visibility:hidden;
+	border:5px dotted #BBBBBB;
+	cursor:move;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:35px;
+	height:20px;
+	clear:both;
+}
+.row0_sub_content li a {
+	display: block;
+	border-left: 15px solid #E3E3E3;
+	padding: 0pt 5px 0pt 0.5em;
+	text-decoration: none;
+}
+.row0_sub_content li a.nolink {
+	color: #333;
+}
+span.iconic {
+	background-position: center center;
+	background-repeat:no-repeat;
+	margin-right: -3px !important;
+	padding: 2px 7px !important;
+}
+div.allocation_percentage {
+	float: left;
+	width:50%;
+	text-align: right;
+}
+tr.row2a_content td.with_icon {
+	border-bottom: 0 !important;
+	padding-left: 3.8em !important;
+	padding-right: 5px !important;
+}
+td.with_icon a img {
+	float: right;
+}
+a.doc {
+	background-image:url(/global/images/icn_obj_document.png) !important;
+	background-repeat:no-repeat !important;
+	padding:0 0 2px 20px !important;
+}
+p.table_loading_indicator {
+	text-align:center;
+	padding: 20px;
+}
+
+
+table.widget {
+	margin-bottom: 0px;
+}
+table.widget td {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 2px;
+	vertical-align: top;
+}
+table.widget tr:first-child td {
+	border-top: 0 !important;
+}
+table.widget tr td:first-child {
+	border-left: 0 !important;
+}
+table.widget td.icon_cell {
+	width: 22px;
+}
+
+table.widget td.icon_cell img {
+	padding: 5px 0 !important;
+}
+table.widget th {
+	background-color: #F2F2F2;
+	border-left: 1px solid #CCCCCC;
+	font-weight: bold;
+	padding: 0 5px;
+}
+table tr.last td,  table.news tr.last td {
+	border-bottom:none !important;
+}
+table.widget td.no_left_border,  table.widget tr.last td.no_left_border {
+	border-left: 0 !important;
+}
+
+						table.widget tr.no_bottom_border td,
+						table.widget tr.with_subcontent td {
+							border-bottom:0 !important;
+							border-top:0 !important;
+						}
+						table.widget tr.with_subcontent a{
+							margin-left: 25px;
+							padding: 0 5px 0 20px !important;
+						}
+						table.widget tr.last_row td
+						{
+							border-bottom: 1px solid #ccc !important;
+						}
+						a.status_completed
+						{
+							background: url(/global/images/ico_status_task_complete.png) 0 center no-repeat;
+						}
+						a.status_attention
+						{
+							background: url(/global/images/ico_status_task_needs_attention.png) 0 center no-repeat;
+						}
+						a.status_task_offtrack
+						{
+							background: url(/global/images/ico_status_task_offtrack.png) 0 center no-repeat;
+						}
+						a.status_task_ontrack
+						{
+							background: url(/global/images/ico_status_task_ontrack.png) 0 center no-repeat;
+						}
+
+/*
+	The following styles ae for the Dashboard Personalization and Configuration
+*/
+		ul.widget_personalization.left
+		{
+			width: 67%;
+			float: left;
+			margin-right: 1em;
+		}
+		ul.widget_personalization.right
+		{
+			width: 30%;
+			float: right;
+		}
+		ul.widget_personalization li
+		{
+			font-weight: bold;
+			border: 1px solid #ccc;
+			padding: 0 0 5px 0;
+			margin-bottom: 3px;
+			color: #ccc;
+		}
+
+		ul.widget_personalization li span
+		{
+			margin: 0 20px;
+			white-space:normal;
+			display: block;
+		}
+
+		ul.widget_personalization li a
+		{
+			color: #ccc;
+		}
+		ul.widget_personalization li.selected a
+		{
+			color: #369;
+		}
+
+		ul.widget_personalization li.selected
+		{
+			font-weight: bold;
+			color:#333;
+			border: 1px solid #999999;
+		}
+
+		ul.widget_personalization li .drag_handle
+		{
+			background: url(/global/images/ux_palette/palette_grip.png) no-repeat scroll center 3px;
+			cursor:move;
+			background-color:#efefef;
+			height: 10px;
+			border-bottom: 1px solid silver;
+		}
+
+		ul.widget_personalization li.selected .drag_handle
+		{
+			background-color:#ddd;
+		}
+
+		ul.widget_personalization li .checkbox
+		{
+			margin: 3px 10px 0 5px;
+		}
+
+		ul.widget_personalization span.drag_handle_text input
+		{
+			width: 80%;
+		}
+		ul.widget_personalization li span
+		{
+			margin-top: -15px;
+		}
+		ul.widget_personalization li .x1 
+		{
+			cursor: pointer;
+			float: right;
+			padding:0px 5px;
+			margin: -15px 3px 0 0;
+			font-weight: normal;
+		}
+		
+		ul.widget_personalization li .text_box 
+		{
+			width: 85%;
+		}
+		
+		.w_controller
+		{
+			display: none;
+			margin-top: 5px;
+			text-align: center;
+			overflow: hidden;
+		}
+		.w_controller img
+		{
+			margin: 10px 0 0 0;
+		}
+		
+		.checkbox { border: none; }

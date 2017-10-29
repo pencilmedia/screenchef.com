@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>Tabbed Menu Sizing #1</title>
+<!-- IMPORTS FROM OUR LIBRARY -->
+<script type="text/javascript" src="./invo.main.js"></script>
+<script type="text/javascript" src="./invo.dom.js"></script>
+<script type="text/javascript" src="./invo.metrics.js"></script>
+<script type="text/javascript" src="./invo.event.js"></script>
+
+<!-- DATA FOR THIS DEMO -->
+<script type="text/javascript" src="./tab_data.js"></script>
+
+<!-- CLASSES FOR THE DEMO -->
+<script type="text/javascript">
+
+/* -----------------------------------------------------------------------------
+	TAB CLASS
+----------------------------------------------------------------------------- */
+function Tabs() {
+
+}
+
+Tabs.prototype.init = function(data_src, draw_tgt) {
+	this._data_source = data_src;
+	this._draw_target = document.getElementById(draw_tgt);
+	this._tab_sizes = new Array;
+	this._total_width = 0;
+	this._menu = document.createElement("div");
+	this._menu.className = "menu_off";
+	this._menu_trigger = this.createMenuTrigger();
+	
+	// TODO: Figure this out dynamically?
+	this._menu_trigger_width = 30;
+	
+	// Attach the resize callback
+	window.onresize = associateEvent(this, "draw", null, true);
+}
+
+Tabs.prototype.draw = function() {
+	// Get the screen size
+	var screen_width = invo.metrics.getInsideWindowWidth();
+
+	// Empty everything out
+	clearObj(this._draw_target);
+	clearObj(this._menu);
+
+	// Reset the width
+	this._total_width = this._menu_trigger_width;
+
+	for (var i=0; i<this._data_source.length; i++) {
+		// Create the tab
+		var tab = document.createElement("div");
+		
+		// At this point, we have it be special for size calculation
+		tab.className = "tab_predraw";
+		
+		// Add the text
+		var tab_label = document.createTextNode(this._data_source[i]['title']);
+		tab.appendChild(tab_label);
+		
+		// Shove it in the container
+		this._draw_target.appendChild(tab);
+		
+		// Store the width
+		var tab_width = invo.metrics.getObjectWidth(tab);
+		this._tab_sizes.push(tab_width);
+		this._total_width = this._total_width + tab_width;
+		
+		// Now, we see if we are past the screen size
+		// If so, the rest of them go in the menu
+		// NOTE: This can be any size you need to measure, not necessarly the screen
+		if (this._total_width < screen_width) {
+			tab.className = "tab";
+		} else {
+			// Shove it in the menu
+			tab.className = "menu_item";
+			tab.onclick = associateEvent(this, "handleMenuClick", null, true);
+			this._menu.appendChild(tab);
+		}
+	}
+	
+	if(this._menu.hasChildNodes()) {
+		this._draw_target.appendChild(this._menu_trigger);
+		var body_element = document.getElementsByTagName("body")[0];
+		body_element.appendChild(this._menu);
+	}
+}
+
+Tabs.prototype.createMenuTrigger = function() {
+	var trigger = document.createElement("div");
+	trigger.className = "menu_trigger";
+	var trigger_link = document.createElement("a");
+	trigger_link.href = "#";
+	trigger_link.onclick = associateEvent(this, "handleMenuClick", null, true);
+	var trigger_inside = document.createTextNode("[X]");
+	trigger_link.appendChild(trigger_inside);
+	trigger.appendChild(trigger_link);
+	return trigger;
+}
+
+Tabs.prototype.handleMenuClick = function(evt) {
+	evt = invo.event.getEvent(evt);
+	var evt_x = invo.event.getEventX(evt);
+	var evt_y = invo.event.getEventY(evt);
+	
+	if (this._menu.className == "menu_off") {
+		this._menu.className = "menu_on";
+		this._menu.style.top = (evt_y) + "px";
+		this._menu.style.left = (evt_x - invo.metrics.getObjectWidth(this._menu)) + "px";
+	} else {
+		this._menu.className = "menu_off";
+	}
+}
+
+function clearObj(obj) {
+	while (obj.firstChild) {
+		obj.removeChild(obj.firstChild);
+	}
+}
+
+/*
+	Use this one, rather than the one in the class, this is better
+*/
+function associateEvent(obj, methodName, params, bool_event) {
+	return(function(e) {
+		e = e || window.event;
+		if (params && bool_event) {
+			return obj[methodName](e, params);
+		} else if (bool_event) {
+			return obj[methodName](e);
+		} else if (params) {
+			return obj[methodName](params);
+		} else {
+			return obj[methodName]();
+		}
+	});
+}
+
+/* -----------------------------------------------------------------------------
+	FOR DEMO ONLY
+----------------------------------------------------------------------------- */
+g_tab_array = new Array;
+function drawTabs() {
+	var idx = g_tab_array.length;
+	g_tab_array[idx] = new Tabs;
+	g_tab_array[idx].init(tab_data, 'tabs');
+	g_tab_array[idx].draw();
+}
+</script>
+<style type="text/css">
+#tabs {
+	border: 1px solid #999;
+	height: 20px;
+}
+div.tab,
+div.menu_item,
+div.tab_predraw {
+	border: 1px solid #ccc;
+	height: 18px;
+}
+div.tab_predraw {
+	position: absolute;
+}
+div.tab {
+	position: static;
+	float: left;
+}
+div.menu_off,
+div.menu_on {
+	border: 1px solid #999;
+	background: #fff;
+	width: 200px;
+	z-index: 500;
+	position: absolute;
+}
+div.menu_off {
+	display: none;
+}
+div.menu_on {
+	display: block;
+}
+div.menu_item {
+	position: static;
+}
+div.menu_trigger {
+	float: left;
+}
+</style>
+</head>
+<body onload="drawTabs();">
+
+<div id="tabs"></div>
+
+</body>
+</html>

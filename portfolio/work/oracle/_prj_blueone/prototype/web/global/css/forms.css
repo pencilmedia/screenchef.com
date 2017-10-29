@@ -1,0 +1,70 @@
+/******************************************************************************
+FORMS.CSS
+Description: Form related styles and definitions. 
+******************************************************************************/
+/******************************************************************************
+FORM GLOBAL STYLES
+******************************************************************************/
+input, 
+select, 
+textarea		{ font: 11px Arial, Verdana, Helvetica, sans-serif; line-height:11px; border-bottom: 1px solid #999999; border-left: 1px solid #cccccc; border-right: 1px solid #999999; border-top: 1px solid #cccccc; }
+input,
+textarea		{ padding: 3px 0 1px 3px; height: 16px; }
+.disabled 		{ background-color: #eee; color:#666; }
+.error    		{ border:1px solid #900;  }
+.form_selectors { border: none; width: 14px !important; }
+label			{ cursor: pointer; color:#666; }
+legend			{ color: #666; }
+
+/******************************************************************************
+INPUT ELMENT WIDTHS
+******************************************************************************/
+.field_input_small 				{ width:20px !important; height: 14px; float: none !important; margin-top: -8px; }
+
+#auto_complete_container.short_width,
+.content input.short_width, 	
+.content textarea.short_width	{ width:16%; *width: 23%; }
+.content select.short_width		{ width:16.25%; *width: 23.25%; }
+
+#auto_complete_container.medium_width,
+.content input.medium_width, 	
+.content textarea.medium_width	{ width:35%; *width: 50%; }
+.content select.medium_width	{ width:36%; *width: 51.5%; }
+
+#auto_complete_container.long_width,
+.content input.long_width,
+.content textarea.long_width	{ width:55%; *width: 70%; }
+.content select.long_width		{ width:56.20%; *width: 71.20%; }
+
+.focus_field  					{ border: 1px solid #c3d5f1; background: #fff url(../images/bg_input.png) repeat-x left top; }
+
+.form_error  					{ border: 1px solid #900; background-color: #FFE1D5; }
+.form_error_label 				{ color: #900 !important; }
+
+/******************************************************************************
+Textarea's with buttons
+******************************************************************************/
+dd.medium_textbox  																 		{ min-height: 32px; }
+dd.large_textbox  						 										 		{ min-height: 57px; }
+dd.extra_large_textbox 																 	{ min-height: 92px; }
+
+dd.medium_textbox, dd.medium_textbox textarea 									 		{ height: 25px; }
+dd.large_textbox, dd.large_textbox textarea 									 		{ height: 50px; }
+dd.extra_large_textbox, dd.extra_large_textbox textarea 								{ height: 85px; }
+dd.extra_large_textbox textarea, dd.large_textbox textarea, dd.medium_textbox textarea	{ float: left; }
+
+/******************************************************************************
+ SPECIAL FIELD HANDLING: action dialogs - used in create prices action dialog to make 2 field elements the same width as the one above and below
+******************************************************************************/
+.element_one, 
+.element_two  								{ width: 17.25% !important; *width: 24.6% !important; }
+.element_one								{ margin-right: 3px; }
+
+select.inline_selectbox						{ width: 36.25% !important; *width:44.5% !important; margin: -3px 0 5px 5px; }
+
+/******************************
+	NEW REQUIRED STYLING
+******************************/
+.required 			{ background-color: #fff; }
+dt.required label	{ font-weight: bold; color:#333; }
+dt.required span 	{ color: #990000; font-size:11px; padding-right: 3px; }

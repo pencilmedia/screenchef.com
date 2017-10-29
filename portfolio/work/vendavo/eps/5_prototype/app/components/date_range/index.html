@@ -1,0 +1,198 @@
+<!-- Page Top
+================================================== -->
+@@include('./../../template_head.tpl', {"pageID": "date-range", "pageCategory": "components"})
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h1>@@titleDateRange</h1>
+<p>Use Date Range when you need to input a specific time period, either static or dynamic.</p>
+
+<!-- Page Nav
+================================================== -->
+<div class="sg-page-nav">
+  <div>
+    <h6>Go To:</h6>
+    <ul>
+      <li><a href="#presentation-state">Presentation State</a></li>
+      <li><a href="#readonly-state">Read Only State</a></li>
+      <li><a href="#editable-state">Editable State</a></li>
+    </ul>
+  </div>
+  <div>
+    <a href="https://confluence.vendavo.com/x/MSY_AQ" target="_blank" class="btn btn-primary">View Guidelines</a>
+
+  </div>
+</div>
+
+<!-- Page Content
+================================================== -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="presentation-state">Presentation State</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: Panel Content -->
+    <h4>Presentation Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Utilize the bootstrap popover component. Apply the class <code>.presentation-date-range</code> as a hook for the date range popover.</p>
+    <div class="alert alert-info"><p>Hover over the example to see the popover.</p></div>
+    <!-- END: Panel Comments -->
+    <p><span class="presentation-date-range" data-toggle="popover"><i class="fa fa-repeat"></i>Last 30 Days to Date</span></p>
+    <!-- End: Panel Content -->
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+<span class="presentation-date-range" data-toggle="popover"><i class="fa fa-repeat"></i>Last 30 Days to Date</span>
+
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="readonly-state">Read Only State</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: Panel Content -->
+    <h4>Readonly Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Apply the class <code>.readonly</code> to the bootstrap class <code>.input-group</code>, add the attribute <code>readonly</code> to the input field and add the attribute <code>disabled</code> to the button.</p>
+    <!-- END: Panel Comments -->
+    <div class="input-group readonly">
+      <label class="sr-only" for="date-range-example1">Date Range</label>
+      <input type="text" id="date-range-example1" class="form-control" value="02/02/2014 - 03/04/2014" readonly>
+      <span class="input-group-btn">
+        <button class="btn btn-icon" type="button" disabled><i class="fa fa-calendar"></i></button>
+      </span>
+    </div>
+    <h4>Readonly with Icon Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Add the class <code>.w-front-icon</code> to the <code>.input-group</code>. Add icon markup before the input field with the class <code>.input-icon</code> to create an input field with icon.</p>
+    <!-- END: Panel Comments -->
+    <div class="input-group readonly w-front-icon">
+      <label class="sr-only" for="date-range-example">Date Range</label>
+      <i class="fa fa-repeat input-icon"></i>
+      <input type="text" id="date-range-example" class="form-control" value="Last 30 Days to Date" readonly>
+      <span class="input-group-btn">
+        <button class="btn btn-icon" type="button" disabled><i class="fa fa-calendar"></i></button>
+      </span>
+    </div>
+    <!-- End: Panel Content -->
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+<div class="input-group readonly">
+  <label class="sr-only" for="date-range-example1">Date Range</label>
+  <input type="text" id="date-range-example1" class="form-control" value="02/02/2014 - 03/04/2014" readonly>
+  <span class="input-group-btn">
+    <button class="btn btn-icon" type="button" disabled><i class="fa fa-calendar"></i></button>
+  </span>
+</div>
+<!-- With Icon -->
+<div class="input-group readonly w-front-icon">
+  <label class="sr-only" for="date-range-example">Date Range</label>
+  <i class="fa fa-repeat input-icon"></i>
+  <input type="text" id="date-range-example" class="form-control" value="Last 30 Days to Date" readonly>
+  <span class="input-group-btn">
+    <button class="btn btn-icon" type="button" disabled><i class="fa fa-calendar"></i></button>
+  </span>
+</div>
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="editable-state">Editable State</h3>
+  </div>
+  <div class="panel-body">
+    <h4>Editable Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Add <code>.input-group-addon .btn-info</code> at the end to create the info button.</p>
+    <!-- END: Panel Comments -->
+    <!-- BEGIN: Panel Content -->
+    <form action="#">
+      <div class="input-group dropdown">
+        <label class="sr-only" for="date-range-example4">Date Range</label>
+        <input type="text" id="dLabel" class="form-control" value="05/23/2013 - 05/22/2014" placeholder="Please select a date range" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <!-- Auto Suggest Menu -->
+        <div class="dropdown-menu auto-suggest limited" role="menu" aria-labelledby="dLabel">
+          <ul class="menu-list">
+            <li class="dropdown-header">Date Range Shortcuts</li>
+            <li><a href="#">Today</a></li>
+            <li><a href="#">Yesterday</a></li>
+            <li><a href="#">This Business Week</a></li>
+            <li><a href="#">This Calendar Month to Date</a></li>
+            <li><a href="#">This Calendar Month</a></li>
+            <li><a href="#">This Calendar Quarter</a></li>
+            <li><a href="#">This Financial Quarter</a></li>
+            <li><a href="#">This Calendar Year to Date</a></li>
+            <li><a href="#">This Calendar Week</a></li>
+            <li><a href="#">Last Business Week</a></li>
+            <li><a href="#">Last 7 Days</a></li>
+            <li><a href="#">Last Calendar Month</a></li>
+            <li><a href="#">Last 4 Weeks</a></li>
+          </ul>
+          <ul class="menu-list">
+            <li class="divider"></li>
+            <li class="list-button"><a href="#">More about date range shortcut</a></li>
+          </ul>
+        </div>
+
+        <span class="input-group-btn">
+          <button class="btn btn-icon" type="button" id="trigger-date-range-dialog"><i class="fa fa-calendar"></i></button>
+        </span>
+        <span class="input-group-addon btn-info"><i class="fa fa-info-circle"></i></span>
+      </div>
+    </form>
+
+    <h4>Editable inside Dialog Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Tap the calendar button to launch the dialog.</p>
+    <div class="alert alert-info">
+      <h4>BootstrapDialog 3 Plugin</h4>
+      <p>Dialogs utilize the plugin BootstrapDialog. <a href="http://nakupanda.github.io/bootstrap3-dialog/" target="_blank">Learn More</a></p>
+    </div>
+    <!-- END: Panel Comments -->
+    <!-- BEGIN: Panel Content -->
+    
+
+
+    <!-- End: Panel Content -->
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+<div class="input-group">
+  <label class="sr-only" for="date-range-example4">Date Range</label>
+  <input type="text" id="date-range-example4" class="form-control" value="05/23/2013 - 05/22/2014">
+  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+  <span class="input-group-addon btn-info"><i class="fa fa-info-circle"></i></span>
+</div>
+
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<!-- END: Template Content
+================================================== -->
+
+<!-- Page Bottom
+================================================== -->
+@@include('./../../template_foot.tpl')

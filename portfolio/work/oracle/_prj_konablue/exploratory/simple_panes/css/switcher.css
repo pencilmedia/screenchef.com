@@ -1,0 +1,53 @@
+/* Switcher Children */
+#switcher {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: url('../images/switcher/bgd_center.png') repeat-x top left;
+}
+
+#switcher_left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: url('../images/switcher/bgd_left.png') no-repeat top left;
+}
+
+#switcher_right {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: url('../images/switcher/bgd_right.png') no-repeat top right;
+}
+
+#switcher table {
+	height: 50px;
+}
+
+#switcher table td {
+	height: 50px;
+}
+
+#switcher table td.icn {
+	text-align: center;
+}
+
+#switcher table td.hack {
+	width: 10px;
+}
+
+#switcher a {
+	text-decoration: none;
+	color: #666;
+	font-size: 10px;
+}
+
+#switcher a img {
+	border: none;
+}

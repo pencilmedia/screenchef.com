@@ -1,0 +1,40 @@
+body
+{ margin: 20px; }
+table
+{
+}
+
+table th,
+table td
+{
+	padding: 3px 5px;
+}
+table.blue1,
+table.blue1 td 	{ border: 1px solid #003366; }
+table.blue1 th 	{ background-color: #003366; color: #fff; }
+table.blue2,
+table.blue2 td 	{ border: 1px solid #336699; }
+table.blue2 th 	{ background-color: #336699; color: #fff; }
+table.blue3,
+table.blue3 td 	{ border: 1px solid #6699cc; }
+table.blue3 th 	{ background-color: #6699cc; color: #fff; }
+
+table.tan1,
+table.tan1 td 	{ border: 1px solid #999966; }
+table.tan1 th 	{ background-color: #999966; color: #fff; }
+table.tan2,
+table.tan2 td 	{ border: 1px solid #cccc99; }
+table.tan2 th 	{ background-color: #cccc99; color: #333; }
+table.tan3,
+table.tan3 td 	{ border: 1px solid #ffffcc; }
+table.tan3 th 	{ background-color: #ffffcc; color: #333; }
+
+table.dark1,
+table.dark1 td 	{ border: 1px solid #333; }
+table.dark1 th 	{ background-color: #333; color: #fff; }
+table.dark2,
+table.dark2 td 	{ border: 1px solid #666; }
+table.dark2 th 	{ background-color: #666; color: #fff; }
+table.dark3,
+table.dark3 td 	{ border: 1px solid #ccc; }
+table.dark3 th 	{ background-color: #ccc; color: #333; }

@@ -1,0 +1,1073 @@
+ /******************************************************************************
+ACTION_DIALOGS.CSS
+Description: Action Dialogs related styles and definitions.
+******************************************************************************/
+
+/******************************************************************************
+DIALOGS SPECIFIC DEFINITION LISTS
+// 
+******************************************************************************/
+.action_dialog dt label {
+	line-height: 12px;
+}
+.action_dialog dd label,
+.action_dialog li label { 
+	color: #333; 
+}
+.action_dialog dd select {
+	vertical-align: middle;
+	margin-bottom: 2px; /* Can't control height of selects in IE, this gives clearance for buttons to the right */
+}
+/* Options - 2 columns layout
+OVERRIDES styles found in common.css */
+
+.action_dialog div.two_column_side_by_side {
+	float: left; 
+	width: 45%; 
+	clear:right;
+}
+
+/* Side by Side Text: ( text only dl's)
+OVERRIDES styles found in common.css */
+.action_dialog dl.side_by_side_text {
+	min-width: 325px;
+} 
+.action_dialog dl.side_by_side_text dt {
+	width: 25%;
+}
+
+.action_dialog dl.side_by_side_text dd {
+	width: 74%;
+}
+
+/* Side by Side Mixed: ( contains text AND field elements )
+OVERRIDES styles found in common.css */
+.action_dialog dl.side_by_side_mixed {
+	min-width: 325px;
+} 
+.action_dialog dl.side_by_side_mixed dt {
+	width: 25%;
+	margin-right: 4px;
+	margin-bottom: 10px;
+}
+.action_dialog dl.side_by_side_mixed dt.small {
+	width: 10% !important;
+}
+.action_dialog dl.side_by_side_mixed dd.small_text
+{
+	min-height: 10px !important;
+	height: 10px !important;
+} 
+.action_dialog dl.side_by_side_mixed dd {
+	float: left;
+	*float: none;
+	width: 73.5% !important;
+	min-height: 22px;
+	margin-bottom: 10px;
+}
+
+.action_dialog dl.side_by_side_mixed dt.mixed_text {
+	min-height: 12px;
+	padding-top: 0;
+}
+
+.action_dialog dl.side_by_side_mixed dt.left {
+	min-height: 12px;
+	padding-top: 0;
+	text-align:left;
+}
+
+.action_dialog dt.left input{
+	margin-left: 40px;
+}
+
+.action_dialog dl.side_by_side_mixed dd.mixed_text {
+	min-height: 12px;
+}
+
+.action_dialog dl.side_by_side_mixed dd.buffer { /* keeps labels that wrap looking good */
+	float: none;
+	width: 100% !important;
+	clear: both;
+	margin: 0;
+	height: 0;
+	min-height: 0;
+}
+
+.action_dialog dl.side_by_side_mixed dd a:hover {
+	text-decoration: underline;
+}
+.action_dialog dl.side_by_side_mixed dd a.button:hover {
+	text-decoration: none;
+}
+
+.action_dialog dl.side_by_side_mixed input {
+	vertical-align: middle;
+}
+.action_dialog dl.side_by_side_mixed dd select {
+	vertical-align: middle;
+}
+
+
+/* Shared Side by Side styles */
+.action_dialog dl.side_by_side.with_top_margin,
+.action_dialog dl.side_by_side_text.with_top_margin,
+.action_dialog dl.side_by_side_mixed.with_top_margin { 
+	margin-top: 10px;
+}
+.action_dialog dl.side_by_side.with_bottom_margin,
+.action_dialog dl.side_by_side_text.with_bottom_margin,
+.action_dialog dl.side_by_side_mixed.with_bottom_margin { 
+	margin-bottom: 20px;
+}
+
+
+/* chk_group: ( dl's with a group of radio's or checkboxes and labels )
+shares styles with side_by_side_mixed found in common.css */
+.action_dialog dl.chk_group dt {
+	padding-top: 1px;
+	margin-bottom: 0;
+} 
+.action_dialog dl.chk_group dd {
+	margin-bottom: 0;
+}
+
+
+/******************************************************************************
+WIDTHS
+******************************************************************************/
+/* action dialog INPUT & TEXTAREA Element Widths */
+.action_dialog input.short_width,
+.action_dialog textarea.short_width {
+	width: 14%;
+}
+.action_dialog input.medium_width,
+.action_dialog textarea.medium_width {
+	width: 44%;
+}
+.action_dialog input.long_width,
+.action_dialog textarea.long_width {
+	width: 86%;
+}
+
+/* SELECT Element Widths */
+.action_dialog select.short_width {
+	width: 16% ;
+}
+.action_dialog select.medium_width {
+	width: 46%;
+}
+.action_dialog select.long_width {
+	width: 88%;
+}
+
+/* CONTROL Widths */
+.action_dialog .controlOuterContainer.short_width, 
+.action_dialog .mscl.short_width, 
+.action_dialog .sss.short_width, 
+.action_dialog .agileautocomplete.short_width { 
+	width: 14.65%; 
+}
+.action_dialog .controlOuterContainer.medium_width, 
+.action_dialog .mscl.medium_width, 
+.action_dialog .sss.medium_width, 
+.action_dialog .agileautocomplete.medium_width {
+	 width: 44.65%;
+}
+.action_dialog .controlOuterContainer.long_width, 
+.action_dialog .mscl.long_width, .sss.long_width, 
+.action_dialog .agileautocomplete.long_width{ 
+	width: 85.65%; 
+} 
+
+.action_dialog .agileautocomplete.edit_frame_width{ 
+	width: 80.65%; 
+} 
+
+/******************************************************************************
+ACTION DIALOG PAGE CONTAINERS
+******************************************************************************/
+.action_dialog div.header {
+	width: 100%;
+	position: fixed;
+}
+.action_dialog div.content {
+	width: 100%;
+	position: fixed;
+	overflow: auto; 
+	overflow-x: hidden;
+	padding-top: 15px;
+}
+
+.print_preview div.header { 
+	position: fixed; 
+	width: 100%; 
+} 
+.print_preview div.content { 
+	position: fixed;
+	width: 100%; 
+	overflow: auto; 
+	padding-top:15px; 
+}
+.action_dialog .content li { 
+	white-space:nowrap;
+}
+
+.action_dialog .messaging_dialog p {
+	margin: 0 0 10px 10px;
+	width: 85%;
+}
+.action_dialog .messaging_dialog ul {
+	list-style-type: disc;
+	margin: 0 0 0 30px;
+	width: 80%;
+}
+.action_dialog .messaging_dialog ul li {
+	margin-bottom: 5px;
+}
+
+
+/******************************************************************************
+ACTION DIALOG HEADER STYLES
+******************************************************************************/
+.action_dialog {
+	 margin-bottom: 10px; 
+}
+.action_dialog .header_wrapper { 
+	background: #f7f7f7 url(../images/bgd_dialog.png) repeat-x right bottom; 
+	border-bottom: 1px solid #999; 
+	height: 40px; 
+	min-width:475px; 
+}
+.action_dialog .column_three { 
+	padding: 15px 10px 10px 10px; 
+	white-space:nowrap; 
+}
+.action_dialog .column_three span.dialog_check { 
+	margin-right:10px; 
+}
+.action_dialog .column_three span.dialog_check input { 
+	margin: 0; padding: 0; 
+}
+.action_dialog .container { 
+	margin: 0 0 0 40px; 
+}
+.action_dialog .left_space {
+	margin-left: 15% !important;
+}
+.action_dialog .header_wrapper h2 { 
+	margin-bottom: 2px;
+}
+.action_dialog .header_wrapper p { 
+	padding-left: 2px;
+}
+.action_dialog .top_space {
+	margin-top: 10px;
+}
+
+.action_dialog .top_space_large { 
+	margin-top: 30px; 
+}
+.action_dialog span.dialog_check label { 
+	color: #333; 
+}
+
+
+/******************************************************************************
+ACTION DIALOG FORM STYLES
+******************************************************************************/
+.action_dialog fieldset { 
+	border: 1px solid #ddd;
+	margin: 0 20px 20px 20px;  
+	min-width: 425px;  
+}
+.action_dialog fieldset.dynamic { 
+	border: none; 
+	margin: 0 20px; 
+}
+.action_dialog fieldset.full { 
+	border: none; 
+	border-top: 1px solid #666; 
+	padding: 20px 0 0 0; 
+	clear: both; 
+	margin-top: 20px; 
+}
+
+.action_dialog fieldset.fixed_set { 
+	min-width: 700px; 
+}
+
+
+
+.action_dialog fieldset input.long_width,
+.action_dialog fieldset textarea.long_width 
+{
+	width: 83%;
+}
+.action_dialog fieldset select.long_width 
+{
+	width: 84%;
+}
+.action_dialog fieldset .controlOuterContainer.long_width,
+.action_dialog fieldset .sss.long_width
+{
+	width: 83.9%;
+}
+
+
+
+
+.action_dialog fieldset.with_bottom_margin { 
+	margin-bottom: 20px; 
+}
+.action_dialog fieldset.dynamic dd input,
+.action_dialog fieldset.dynamic dd textarea	{ 
+	margin-right: 0px;
+}
+.action_dialog fieldset.first_fieldset { 
+	margin-bottom: -6px; 
+	*margin-bottom: -12px; 
+}
+.action_dialog legend {
+	color: #333;
+	margin-left: 20px;
+}
+.action_dialog legend input { 
+	float: left; /* aligns the label to the right of the radio button */
+	height: 14px;
+	margin: 0; 
+	border: none; 
+}
+.action_dialog legend label {
+	margin-left: 5px;
+}
+.auto_number_field { 
+	color: #666; 
+}
+.action_dialog dd.with_bottom_margin { 
+	margin-bottom: 20px;
+}
+dl.choice_filter dt { 
+	width: 12% !important;
+	margin-bottom: 0 !important;
+}
+dl.choice_filter dd {
+	margin-bottom: 0 !important;
+}
+
+/******************************************************************************
+UNORDERED LISTS
+******************************************************************************/
+.action_dialog fieldset.input_lists { 
+	overflow: auto;
+	width: 90% !important;
+	min-width: 200px !important;
+}
+.action_dialog fieldset.input_lists ul.column_zero,
+.action_dialog fieldset.input_lists ul.column_one,
+.action_dialog fieldset.input_lists ul.column_two { 
+	margin-left: 5%; 
+	width: 40%; 
+}
+.action_dialog fieldset.input_lists ul.column_two { 
+	width: 45%; 
+}
+.action_dialog fieldset.input_lists ul li { 
+	line-height: 30px; 
+}
+span.single_line input.form_selectors {
+	margin-left: 10px;
+}
+span.single_line label { 
+	margin-left: 5px; 
+}
+
+
+body.action_dialog input.form_selectors
+{
+	border: 0;		
+}
+
+/******************************************************************************
+Drag and Drop Cursor
+******************************************************************************/
+div.drag_tooltip {
+	color: #000;
+	background-color: #fff;
+	border: 1px dotted #787878;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	height: 15px;
+	width: auto;
+    min-width: 15px;
+    padding: 2px;
+	line-height: 14px;
+	padding: 2px;
+	opacity: .75;
+	filter: alpha(opacity=75);
+}
+div.drag_tooltip.over_target {
+	background-color: #8cd921;
+}
+
+/******************************************************************************
+ACTION BAND - Used in action dialogs containing buttons
+******************************************************************************/
+.action_dialog div.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #ccc url(../images/bgd_btn_band.png) left top;
+	height: 34px;
+	width: 100%;
+	min-width: 475px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	margin: 0;
+}
+
+.action_dialog div.footer div.column_one {
+	padding: 6px 0 6px 15px;
+	max-width: 355px;
+	line-height: 20px;
+}
+.action_dialog div.footer div.column_three {
+	margin-right: 20px;
+	padding: 6px;
+}
+.action_dialog div.footer div.column_one input {
+	vertical-align: middle;
+	border: none;
+}
+.action_dialog div.footer div.column_one label {
+	color: #333;
+	vertical-align: middle;
+}
+.action_dialog div.footer div.column_three a.button {
+	margin-left: 6px;
+}
+
+/* Footer for Terms & Condition */
+div.footer.terms_footer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: #ccc url(../images/bgd_btn_band.png) left top;
+	height: 34px;
+	width: 80.7%;
+	min-width: 475px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	margin: 0;
+}
+
+div.footer.terms_footer div.column_one {
+	margin-left: 15px;
+	padding: 6px;
+	max-width: 355px;
+	line-height: 20px;
+}
+div.footer.terms_footer div.column_three {
+	margin-right: 20px;
+	padding: 6px;
+}
+div.footer.terms_footer div.column_one input {
+	vertical-align: middle;
+	border: none;
+}
+div.footer.terms_footer div.column_one label {
+	color: #333;
+	vertical-align: middle;
+}
+div.footer.terms_footer div.column_three a.button {
+	margin-left: 6px;
+}
+
+/*****************************************************************************************
+	COMMENT BOX
+*****************************************************************************************/
+.action_dialog .comment_box { 
+	height: 85px; 
+	overflow:auto;
+}
+.action_dialog dl.side_by_side_mixed dd.command { 
+	text-align: right; 
+	width: 63.75% !important;
+}
+.action_dialog .folder { 
+	height: 150px; 
+	overflow:hidden;
+}
+
+.steps_container { 
+	border-bottom: 1px solid #ccc; 
+	min-height: 35px; 
+	min-width:620px;
+}
+
+
+
+
+
+
+/******************************************************************************
+***ATTENTION*** BELOW IS FOR SPECIFIC ACTION DIALOG PAGES
+******************************************************************************/
+
+/* Create Sourcing Project Action Dialog */
+p.action_dialog_foot_spacer { 
+	color: #fff; height:20px;
+}
+
+dd.dually label {
+	margin-left: 10px;
+} 
+
+
+/* Target Price Dialog */
+.target_price {
+	float: left;
+	width: 100%;
+	margin-top: 15px;
+}
+dl.price_list {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	min-width: 450px;
+} 
+dl.price_list dt {
+	color: #333;
+	float: left;
+	width: 50%;
+	clear: left;
+	margin: 0 0 5px 5px;
+	padding-top: 4px;
+	white-space: nowrap;
+}
+dl.price_list dd {
+	float: left;
+	*float: none;
+	width: 47%;
+	margin-bottom: 8px;
+}
+
+dl.price_list.title {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+}
+dl.price_list.title dt {
+	font-weight: bold;
+}
+dl.price_list.title dd { 
+	font-weight: bold;
+}
+
+.blank_table_space {
+	background-color: #f4f4f4; height: 100%;
+}
+
+
+/* Create Request for Quote Dialog */
+ul.request_quote {
+	min-width: 700px;
+}
+ul.request_quote li
+{
+	float: left;
+	text-align:center;
+	margin: 10px;
+	border: 1px solid transparent;
+	height: 240px;
+	width:170px;
+	padding: 10px;
+}
+ul.request_quote li:hover {
+}
+ul.request_quote li.selected {
+	border: 1px solid #c3d5f1; 
+	background: #fff url(/global/images/bgd_input.png) repeat-x left top;			
+}
+ul.request_quote li p {
+	margin-bottom: 20px;
+}
+ul.request_quote li.selected p {
+	color: #333;
+}
+
+
+
+body.action_dialog.wizard.step.3 input {
+	border: none; 
+}
+
+body.action_dialog.wizard.dynamic.step.3 th,
+body.action_dialog.wizard.dynamic.step.3 td { 
+	padding: 3px 0 0 5px;
+}
+body.action_dialog.wizard.dynamic.step.3 input {
+	background: url(); /* overrides default input bg */
+	border: none;
+}
+
+
+/* Audit Pages */
+body.action_dialog .content h4 { margin-left: 10px; }
+body.action_dialog .content .reminder li { white-space:normal; }
+body.action_dialog .content .reminder p.strong { color: #333 !important; font-weight:bold !important; }
+
+/* Info Pop */
+body.action_dialog .infopop h4 { margin-left: 25px; }
+
+/* Info Pop */
+body.action_dialog .infopop h4.small_margin { margin-left: 2px; }
+/* RFQ Wizard */
+
+		.header.rfq { min-width:620px; }
+		div.wizard_steps { white-space:nowrap; min-width:300px; }
+		div.rfq div.view_controls { display: none; }
+		div.rfq div.table_actions { margin-top: 15px; display:none; }
+		.input_lists ul.column_one { margin-left: 26%; }
+		body.action_dialog.wizard.muw div#step_2 table.rbr, 
+		body.action_dialog.wizard.muw div#step_3 table.rbr, 
+		body.action_dialog.wizard.ew div#step_1 table.rbr, 
+		div#step_7 { margin-top:-15px; }
+		table.response_data td
+		{
+			height: 25px;
+		}
+		fieldset.input_lists
+		{
+			min-width:550px !important;
+		}
+		li.rq { cursor: pointer; }
+		li.rq input,
+		.response_data input
+		{
+			position:relative; 
+			top:2px; 
+			left:-3px;
+			border:0;
+			background-image: url(); /* Needed to remove focus field.*/
+		}
+		
+		.shadow_container
+		{
+			border: 1px solid #ccc;
+			height: 125px;
+			padding: 5px;
+		}
+		
+		.filter_by p { margin-top: 5px; }
+		
+/* Publish to Item Master */
+body.action_dialog .form_selectors.with_left_margin { margin-left: 30px; }
+body.action_dialog .radio_with_bottom_margin { margin-bottom:5px !important; }
+body.action_dialog .chk_group input { border:0; background-image: url(); }
+
+/* Update AML */
+body.action_dialog fieldset.aml p { margin: 0 0 10px 20px; line-height:16px; }
+body.action_dialog fieldset.aml input.opt { margin: -3px 0 0 40px; *margin: 3px 0 0 40px; vertical-align: middle;}
+body.action_dialog fieldset.aml label { margin: 5px 0 5px 0; color: #333;}
+body.action_dialog fieldset.aml label.disabled { color: #999;}
+body.action_dialog fieldset.aml input { border:0; background-image: url(); }
+
+/* Mass Update Wizard */
+body.action_dialog.wizard.muw dd.select_action_choices p { padding: 5px 0 0 5px; }
+body.action_dialog.wizard.muw div#step_2 table.rbr tr,
+body.action_dialog.wizard.muw div#step_3 table.rbr tr { background-color:#fff; }
+body.action_dialog.wizard.muw p#ac1,
+body.action_dialog.wizard.muw p#ac2 { display: none; }
+
+/* File Wizard */
+body.action_dialog fieldset.input_lists label.disabled { color: #666;}
+.action_dialog fieldset.input_lists ul.pillbox li {line-height: 15px; } 
+body.action_dialog.wizard.muw .obj_part
+{
+	background-image:url(/global/images/icn_obj_part.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}		
+body.action_dialog.wizard.muw .obj_manufacturer
+{
+	background-image:url(/global/images/icn_obj_manufacturer.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}		
+body.action_dialog.wizard.muw .gray_selected
+{
+	background-image:url(/global/images/icn_status_dot_gray.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* Export Wizard */
+body.action_dialog.wizard.ew dd.select_action_choices p { padding: 5px 0 0 5px; }
+body.action_dialog.wizard.ew div#step_1 table.rbr tr,
+body.action_dialog.wizard.ew div#step_3 table.rbr tr { background-color:#fff; }
+body.action_dialog.wizard.ew p#ac1,
+body.action_dialog.wizard.ew p#ac2 { display: none; }
+body.action_dialog.wizard.ew .step fieldset { padding: 10px 20px; }
+body.action_dialog.wizard.ew li.indent { padding-left: 25px; }
+body.action_dialog.wizard.ew #divTableFormat { width:50%; line-height:23px; }
+body.action_dialog.wizard.ew #selTableFormat { margin-left: 10px; display:inline; }
+
+
+/* Bulk Change Wizard */
+body.action_dialog.muw fieldset.dynamic.step p { line-height: 22px; }
+body.action_dialog.muw .r_handler { vertical-align: middle; }
+
+
+/* Add Files Dialog */
+.browse { height: 22px; }
+
+form.add_files .column_one { 
+	width: 35%; 
+	min-width: 225px;
+}
+form.add_files .column_two {
+	width: 60%;
+}
+form.add_files .column_two .long_width {
+	width: 80% !important;
+}
+dd span label {
+	line-height: 16px;
+}
+
+/* Add URLs Dialog */
+form.add_urls .column_one {
+	width: 48%;
+	min-width: 320px;
+}
+form.add_urls .column_two { 
+	width: 48%;
+}
+form.add_urls .column_one input {
+	margin-right: 3px !important;
+}
+form.add_urls .column_one .medium_width,
+form.add_urls .column_two .medium_width {
+	width: 80% !important;
+}
+
+/* AML Bulk Change Wizard */
+li.sec a { 
+	cursor:default;
+}
+
+form.schedule_details { 
+	min-width:500px;
+}
+
+/* FIND DIALOG */
+body.action_dialog.find dl.side_by_side_mixed dt {
+	width: 15% !important;
+}
+
+
+
+/* Shuttle Control */
+
+.shuttle_control {
+	border: medium none;
+	margin: 0 20px;
+}
+#formatContentEl {
+	min-height: 159px;
+}
+.shuttle_control .colonnade {
+	left: 0;
+	min-height: 159px;
+	min-width: 470px;
+	padding: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+.shuttle_control div.agileTreeNode a {
+	color:#333333;
+	cursor:pointer;
+	line-height:15px;
+	text-decoration:none;
+}
+.shuttle_control .colonnade .foot {
+	clear:both;
+	padding:8px 0 10px;
+	width:75%;
+}
+.shuttle_control .colonnade .foot .left_col {
+	float:left;
+	text-align:left !important;
+}
+.shuttle_control .colonnade .foot .right_col {
+	float:right;
+}
+.shuttle_control .lt_column {
+	left:0;
+	margin:0;
+	min-width:200px;
+	padding:0;
+	position:absolute;
+	top:0;
+	width:48.2%;
+}
+.shuttle_control .rt_column {
+	left:49.5%;
+	min-width:200px;
+	padding:0;
+	position:absolute;
+	top:0;
+	width:52.5%;
+}
+.shuttle_content {
+	min-height:115px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.shuttle_content p {
+	margin:0;
+	text-align:left;
+}
+
+.shuttle_buttons {
+	float: left;
+	width: 20%;
+	margin-top: 35px;
+}
+.lock_button {
+	margin-top: 10px;
+}
+.shuttle_control .lt_column .shuttle_buttons {
+	float: right;
+}
+.shuttle_control .rt_column .shuttle_buttons p {
+	text-align: left !important;
+}
+.shuttle_buttons p {
+	margin-top: 5px;
+	text-align: center !important;
+}
+.shuttle_buttons p:first-child {
+	margin-top: 0;
+}
+
+.shuttle_control .colonnade h4 {
+	margin-left: 0 !important;
+	margin-top: 15px;
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+}
+.shuttle_content {
+	background-color: #FFFFFF;
+	border: 1px solid silver;
+	float: left;
+	height: 100px;
+	margin-right: 5px;
+	width: 75%;
+}
+.shuttle_list_item {
+	cursor: pointer;
+	border-bottom: 1px solid #FFFFFF;
+	padding: 1px 0 1px 5px;
+	outline-style: none; 
+	white-space: nowrap;
+}
+.shuttle_list_item.selected {
+	background-color: #DBEAFF;
+	border-bottom: 1px solid #DBEAFF;
+}
+.shuttle_lock {
+	background: transparent url(/global/images/ico_shuttle_lock_inline.png) no-repeat scroll right center;
+	margin-top: -16px;
+	padding: 8px 16px;
+	position: static;
+	right: 0 !important;
+}
+.shuttle_lock.selected {
+	background: transparent url(/global/images/ico_shuttle_lock_inline_hover.png) no-repeat scroll right center;
+}
+.disabled_node {
+	background-color:#EEEEEE;
+	border-bottom:medium none;
+	border-color:#999999 #999999 -moz-use-text-color;
+	color:#666666;
+	cursor:default;
+}
+.display_block {
+	display:block;
+	padding:0 0 0 5px !important;
+}
+
+
+.format_results_sort_settings {
+	padding: 10px 35px;
+}
+
+
+/****** Common Download ******/
+body.action_dialog.common_download,
+body.action_dialog.common_download div.footer
+
+{
+	min-width: 100px;
+}
+body.action_dialog.common_download div.loading_indicator
+{
+	text-align: center;
+	padding: 15% 0 0 0;
+}
+body.action_dialog.common_download div.loading_indicator h4
+{
+	margin: 30px 0 0 0;
+}
+
+/****** WORKFLOW DIALOG ******/
+body.action_dialog.workflow .item_workflow {
+	width: 99%;
+	margin: 10px 0;
+	padding-left: 10px;
+	overflow: auto;
+}
+body.action_dialog.workflow #wrapper_action_dialog_content {
+	overflow-y: hidden;
+}
+
+
+.action_dialog .record_by_record
+{
+	background-color: #e1e1e1;
+	height: 25px;
+	padding: 10px 0 0 10px;
+	float: left;
+	width:100%;
+	border-right: 1px solid silver;
+}
+
+.action_dialog.record_by_record .content
+{
+	padding-top: 0 !important;
+	padding-bottom: 15px;
+}
+.action_dialog .record_by_record  h2
+{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	display: inline;
+}
+.action_dialog .record_by_record  h2.right
+{
+	position: relative;
+	top: -20px;
+	float: right;
+	margin-right: 25px;
+	font-weight: normal;
+	width:24%;
+	text-align: right;
+}
+
+.action_dialog a#cmdNext.button { margin-right: 10px !important; }
+.action_dialog a#cmdFinish.button { margin-left: 10px !important; }
+
+div.signoff_statement h2
+{
+	font-size: 14px !important
+}
+div.signoff_statement p
+{
+	margin-bottom: 10px;
+}
+
+
+/******************************************************************************
+Response Entry Form
+******************************************************************************/
+.action_dialog div.content.dual_column {
+	min-width: 675px; 
+}
+/******************************************************************************
+FORM COLUMNS
+******************************************************************************/
+.action_dialog div.dual_column fieldset.lt_column, 
+.action_dialog div.dual_column fieldset.rt_column {
+	float: left;
+	width: 50%;
+	min-width: 200px; 
+	border: none;
+	margin: 0;
+}
+.action_dialog div.dual_column .side_by_side_text dd {
+	width: 73%;
+}
+/******************************************************************************
+FORM INPUTS
+******************************************************************************/
+.action_dialog div.dual_column .short_width {
+	width: 35%
+}
+.action_dialog div.dual_column select.short_width {
+	width: 34%
+}
+.action_dialog div.dual_column .medium_width {
+	width: 62%
+}
+.action_dialog div.dual_column select.medium_width {
+	width: 64%
+}
+.action_dialog div.dual_column .long_width {
+	width: 82%
+}
+.action_dialog div.dual_column select.long_width {
+	width: 84%
+}
+
+/******************************************************************************
+THEMES
+******************************************************************************/
+
+table#theme_table 
+{
+	width: 75%;
+	margin-left:10%;
+	margin-right:15%;
+}
+table#theme_table td
+{
+	padding: 0 5px 5px 5px;
+	white-space: nowrap;
+}
+table#theme_table tr.strong td{ font-weight: bold;  }
+table#theme_table td.right { text-align: right; }
+table#theme_table span.sample
+{
+	padding: 3px 10px;
+}
+table#theme_table #borders_sample { color: transparent; }
+
+.action_dialog.wizard.ew div.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #ccc url(../images/bgd_btn_band.png) left top;
+	height: 34px;
+	width: 100%;
+	min-width: 475px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	margin: 0;
+}
+
+.action_dialog div.footer div.column_one {
+	margin-left: 15px;
+	padding: 6px;
+	max-width: 355px;
+	line-height: 20px;
+}
+.action_dialog div.footer div.column_three {
+	margin-right: 20px;
+	padding: 6px;
+}
+

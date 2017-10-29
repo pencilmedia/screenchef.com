@@ -1,0 +1,133 @@
+/*****************************************************************************************
+	LIST CONTAINERS
+	SSL: Single Select List
+	MSL: Multi Select List
+******************************************************************************************
+	List Structure
+******************************************************************************************
+	<dt><label>Label Title:</label></dt>
+	<dd>
+		<div class="list_control single_list long_width">
+			<input type="text" />
+			<div class="auto_complete_results"></div>
+			<div class="pill_container">
+				<ul id="pillbox">
+					<li>Test Pill<a href="#">&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="#" class="button"><span><em class="addressbook">&nbsp;</em>&nbsp;</span></a>
+	</dd>	
+******************************************************************************************
+	COMMON
+*****************************************************************************************/
+.list_control					{ position: relative; border: 1px solid #ccc; float: left; margin-right: 3px; }
+
+.list_control input 			{ border: 0; width: 98.5%; }
+
+.list_control.short_width 		{ width: 15.65%; }
+
+.list_control.medium_width 		{ width: 45.65%; }
+
+.list_control.long_width 		{ width: 87.5%; } 
+
+/*****************************************************************************************
+	SINGLE SELECT LIST
+*****************************************************************************************/
+.list_control.single_list 		{ height: 43px; }
+
+/*****************************************************************************************
+	MULTI SELECT LIST
+*****************************************************************************************/
+.list_control.multi_list			{ height: 85px; overflow:hidden; }
+
+/*****************************************************************************************
+	PILLS
+*****************************************************************************************/
+.list_control .pill_container
+{
+	position: relative;
+	background: transparent url(/global/images/ico_status_non_editable.png) left top;
+	border-top: 1px solid #ccc;
+	outline-style: none;
+	overflow: auto;
+	width: 99.5%;
+	-moz-outline-style: none;
+}
+
+
+.list_control.single_list .pill_container	{ height: 20px; }
+
+.list_control.multi_list .pill_container	{ height: 62px; }
+
+.list_control .no_input
+{
+	border: 1px solid transparent;
+	height: 83px !important;
+	/*background-image: url() !important;*/
+}
+
+
+.list_control .pill_container li
+{ 
+	float: left;
+	font-size: 9px;
+	border: 1px solid #a4bdec;
+	padding: 0 1px 0 3px;
+	margin: 3px 0 0 3px;
+	height: 12px;
+	line-height: 12px;
+	background-color: #a4bdec;
+	cursor: pointer;
+	letter-spacing: .115em;
+	color: #333;
+	white-space: nowrap;
+}
+
+.list_control .pill_container a
+{
+	background: url(/global/images/btn_pill_close.png) no-repeat right center;
+	text-decoration: none;
+	margin: 0 0 0 2px;
+	padding: 0 3px;
+	height: 12px; 
+}
+
+/*****************************************************************************************
+	YUI AUTO COMPLETE
+*****************************************************************************************/
+.auto_complete_results 
+{
+	left: -1px;
+	z-index: 10;
+	width: 100%; 
+	font-size: 11px;
+	height: 0;
+}
+.yui-ac-content
+{
+	height: auto;
+	top: 20px;
+	position: absolute;
+	width: 100%;
+	z-index: 99999;
+	border: 1px solid #ccc; 
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.auto_complete_results ul 
+{
+	padding: 5px 0;
+	width: 100%;
+}
+.auto_complete_results li 
+{
+	padding: 0 5px;
+	cursor: default;
+	white-space: nowrap; 
+}
+.auto_complete_results li.yui-ac-highlight 
+{
+	background-color: #dee7f8;
+}

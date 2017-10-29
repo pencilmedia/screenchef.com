@@ -1,0 +1,65 @@
+<attachments>
+    <attachment>
+        <icon>x</icon>
+        <type>Attachment</type>
+        <file>sensor.dwg</file>
+        <filesize>1.2 MB</filesize>
+        <description>Sensor CAD file</description>
+        <author>User Name</author>
+        <date>21-Oct-2009</date>
+    </attachment>
+    <attachment>
+        <icon>x</icon>
+        <type>Attachment</type>
+        <file>sensor.pdf</file>
+        <filesize>1.2 MB</filesize>
+        <description>Sensor drawing in pdf file</description>
+        <author>User Name</author>
+        <date>14-Jul-2009</date>
+    </attachment>
+    <attachment>
+        <icon>x</icon>
+        <type>Reference</type>
+        <file>www.url.com</file>
+        <filesize>N/A</filesize>
+        <description>Description goes here</description>
+        <author>User Name</author>
+        <date>14-Jul-2009</date>
+    </attachment>
+    <attachment>
+        <icon>x</icon>
+        <type>Attachment</type>
+        <file>sensor.dwg</file>
+        <filesize>1.2 MB</filesize>
+        <description>Sensor CAD file</description>
+        <author>User Name</author>
+        <date>21-Oct-2009</date>
+    </attachment>
+    <attachment>
+        <icon>x</icon>
+        <type>Reference</type>
+        <file>www.url.com</file>
+        <filesize>N/A</filesize>
+        <description>Description goes here</description>
+        <author>User Name</author>
+        <date>14-Jul-2009</date>
+    </attachment>
+    <attachment>
+        <icon>x</icon>
+        <type>Reference</type>
+        <file>www.longerurl.com</file>
+        <filesize>N/A</filesize>
+        <description>Description goes here</description>
+        <author>User Name</author>
+        <date>14-Jul-2009</date>
+    </attachment>
+    <attachment>
+        <icon>x</icon>
+        <type>Attachment</type>
+        <file>sensor.dwg</file>
+        <filesize>0.8 MB</filesize>
+        <description>Sensor CAD file</description>
+        <author>User Name</author>
+        <date>21-Oct-2009</date>
+    </attachment>
+</attachments>

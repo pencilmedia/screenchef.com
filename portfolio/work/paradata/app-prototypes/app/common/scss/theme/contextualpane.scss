@@ -1,0 +1,105 @@
+/* BEGIN: contextualpane.scss
+// -----------------------------------------------------*/
+
+
+/* CONEXTUAL PANE
+// -----------------------------------------------------*/
+// REMINDER: Contextual Pane Layout Styles in layout.scss
+.contextual-pane {
+	.contextual-content {
+		> section {
+			display: none;
+			&:first-child {
+				display: block;
+			}
+			&.no-content {
+				> p {				
+					text-align: center;
+					color: $grayLight;
+					font-size: 125%;
+					margin: 30% $pageMargin 0 $pageMargin;
+				}
+			}
+			&.edit-section {
+				padding: $pageMargin;
+			}
+			> footer {
+				background-color: $white;
+				padding: 10px;
+				.btn {
+					width: 49%;
+				}
+			}
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		h6 {
+			color: $main-blue;
+			line-height: 32px;
+		}
+		> article {
+			overflow: auto;
+			margin-top: 30px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		address {
+			margin-bottom: 0;
+			padding: 0 10px $pageMargin 10px;
+			min-height: 100px;
+			.photo {
+				float: left;
+				width: 125px;
+				height: 100px;
+				text-align: center;
+				overflow: hidden;
+				img {
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+			h1 {
+				font-size: 115%;
+				.status {
+					font-size: 90%;
+					font-weight: normal;
+					color: $green;
+					&:before {
+						content: '-';
+						margin-right: 5px;
+						margin-left: 5px;
+					}
+				}
+			}
+			h1, > p {
+				display: block;
+				margin: 0 0 0 145px;
+				word-break: break-all;
+			}
+		}
+		.info-tags {
+			p {
+				margin-right: 10px;
+				margin-left: 10px;
+				> span {
+					margin-left: 10px;
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+			form {
+				margin: 0 10px;
+				.form-group {
+					width: 100%;
+					.form-control {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+/******************************************************************************
+HEADER.CSS
+Description: Header related styles and definitions.
+******************************************************************************/
+.header_wrapper			 					{ padding: 10px 10px 15px 10px; overflow: hidden; }
+.header_wrapper	div.column_one.layout		{ width: 50%; }
+.header_wrapper .column_one					{ position: inherit; }
+.header_wrapper	.column_one .breadcrumbs	{ height:10px; overflow:visible; }
+.header_wrapper	.column_one ul				{ overflow: auto; margin: 0 0 10px 0; }
+.header_wrapper	.column_one li				{ float: left; padding: 0 5px 0 0;  }
+.header_wrapper	.column_two					{ margin: 20px 10px 0 30px; }
+.header_wrapper input						{ border: none; }
+.header_wrapper	.progress_bar 				{ border: 1px solid #ccc; float: left; height: 5px; margin: 5px 5px 5px 0; padding: 1px; width: 100px; }
+.header_wrapper	.progress_bar_background	{ background-color:#ccc; height: 100%; width: 100%; }
+.header_wrapper	.progress_bar_inner			{ background-color: #333; height: 100%; width: 30%; }
+.header_wrapper	.container_header_action	{ background: url('../images/bgd_dialog.png') repeat-x bottom; border-bottom: 1px solid #999; height: 50px; padding: 11px 10px 0 10px; }
+.header_wrapper	.column_three ul.rating li	{ background-position: right top; background-repeat: no-repeat; list-style-type: none; margin: 0 0 2px 0; padding-right:50px; white-space:nowrap; }
+.header_wrapper	.rating_100					{ background-image: url(../images/icn_traffic_red.png); }
+.header_wrapper	.rating_50	    			{ background-image: url(../images/icn_traffic_yellow.png); }
+.header_wrapper	.rating_0	    			{ background-image: url(../images/icn_traffic_green.png); }
+.header_wrapper	.rating_none				{ background-image: url(../images/icn_traffic_gray.png); }

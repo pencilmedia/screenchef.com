@@ -1,0 +1,19 @@
+/******************************************************************************
+	GRADIENT STYLES
+******************************************************************************/
+.LeftPane .slideMenuHeader,
+.TopPane,
+.leftPaneHeader
+{
+	background: [%global_toolbar%] url(/global/images/grad_dark.png) repeat-x center 8px !important;
+}
+
+.action_dialog .header_wrapper
+{
+	background: [%global_toolbar%] url(/global/images/grad_dark.png) repeat-x center 42px !important;
+}
+
+.action_dialog div.footer
+{
+	background: [%global_toolbar%] url(/global/images/grad_dark.png) repeat-x center 13px !important;
+}

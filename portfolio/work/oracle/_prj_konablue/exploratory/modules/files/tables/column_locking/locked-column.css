@@ -1,0 +1,133 @@
+.lockedColDiv     {left:0px}
+.lockedHdrDiv	{top:0px;}
+
+.lastLockedColDiv {border-right:1px solid silver;}
+
+/*
+thead.lockedTHead {position:relative;
+			z-index:30;
+			}
+*/
+
+div#tbl-container {
+			width: 550px;
+			height: 252px;
+			overflow: auto;
+			}
+
+table {
+			table-layout: fixed;
+			border-collapse: collapse;
+			background-color: white;
+			width:700px;
+			}
+
+div#tbl-container table th {
+/*			width: 120px;  */
+			}
+
+td                {vertical-align:middle
+                  }
+
+thead th, thead th.lockedCol	{
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			background-color: #6666CC;
+			color: white;
+			cursor: pointer; 
+			position:relative;
+			}
+	
+thead th {		z-index: 20;
+			top: expression(document.getElementById("tbl-container").scrollTop-2);   /* for IE */
+		
+}
+
+thead th.lockedCol {z-index: 40;
+			background-color:#CC99CC}
+
+
+.lockedColDiv {	position:relative; 
+			height:100%;
+			vertical-align:middle;
+	 		z-index:30}
+.lockedHdrDiv {	position:relative;			
+			height:100%;
+			vertical-align:middle;
+	 		z-index:29;
+			background-color: #6666CC;
+			color: white;
+}
+
+.lockedColDiv .lockedHdrDiv {background-color:transparent;}
+
+th {			cursor:pointer;cursor:hand;\
+			padding:0px;
+			}
+
+td.lockedCol,th.lockedCol {padding:0px;
+			/* left: expression(document.getElementById("tbl-container").scrollLeft); */
+			left:  expression(parentNode.parentNode.parentNode.parentNode.scrollLeft);  /* for IE */
+			position:relative;
+   }
+.lockedColDiv {padding:4px}
+
+td.lockedCol div.lockedColDiv {background-color:#FFEAFF;}
+th.lockedCol div.lockedColDiv {background-color:#CC99CC;}
+
+
+
+
+
+/*these styles have nothing to do with the locked column*/
+body {
+background-color: white;
+color: black;
+font-family: Arial, sans-serif;
+margin:60px;
+}
+
+td,th {
+padding:4px;
+font-size: 12px;
+text-align: center;
+}
+
+
+button {
+width: 180px; 
+font-weight: bold;
+color: navy;
+margin-bottom: 5px;
+}
+
+div.infobox {
+position:absolute; 
+top:110px; 
+left:470px; 
+right:5px; 
+border: double 4px #6633ff;
+padding:8px; 
+font-size:12px; 
+font-family:Arial, sans-serif; 
+text-align:justify; 
+text-justify:newspaper; 
+background-color:whitesmoke;
+}
+
+blockquote	{
+font-family: Tahoma, Verdana, sans-serif;
+font-size: 85%;
+border: double 4px #6633ff;
+padding: 8px 20px;
+margin: 3% auto auto 0;
+background-color: whitesmoke;
+width: 418px;
+}
+
+.sig	{
+color:#6633ff;
+font-style: italic;
+letter-spacing: 2px;
+}

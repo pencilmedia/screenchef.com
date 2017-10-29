@@ -1,0 +1,77 @@
+<Grid>
+
+<!-- BEGIN: cut/paste to your XML config file -->
+<Cfg id='agile_results_table' SortIcons='0' MaxWidth='1' MaxHeight='1' ResizingMain="0" Version='37' Hover='0' HoverLap='1' NoTreeLines='1' />
+<Colors Default="255,255,255"
+        EditedCell="228,238,255" FocusedCell="168,199,255" ChangedCell="0,0,0"
+        Changed="0,0,0" Focused="-36,-21,0" Selected="-36,-21,0"
+        CannotFocus="255,255,255"  ReadOnly="0,0,0"/>
+<!-- ^ Focused is somehow based on Read Only -->
+<Panel Visible="1" Select="1" Delete="0" />
+<Img Grid="agile.gif" />
+<Toolbar Visible="0" />
+<!-- END: cut/paste to your XML config file -->
+
+<!-- WITHIN COLUMN NAME: -->
+<!-- SET column number (col00...) -->
+<!-- SET column type   (noedit...) -->
+<Cols>
+      <C Name='col01noedit' CanEdit='0'/>
+      <C Name='col02noedit' CanEdit='0'/>
+      <C Name='col03noedit' CanEdit='0'/>
+      <C Name='col04noedit' CanEdit='0'/>
+      <C Name='col05noedit' CanEdit='0'/>
+      <C Name='col06noedit' CanEdit='0'/>
+      <C Name='col07noedit' CanEdit='0' RelWidth='100'/>
+      <C Name='col08noedit' CanEdit='0'/>
+	  <C Name='col09noedit' CanEdit='0'/>
+</Cols>
+<Solid>
+	<I Space="2" RelHeight="100" MaxHeight="0" Visible="1"/>
+</Solid>
+<Body>
+<B>
+<!-- EACH I denotes a row -->
+<!-- VALUES for rows are declared horizontally COLUMN="VALUE" x N -->
+<!-- ROW 01 --><I id="row01"
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_obj_bom.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col02noedit="LEGO-JEEP-LJ3"
+	col03noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col03noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col06noeditClassOuter="GCell has_attachment"
+	col07noedit="LEGO-JEEP MODEL L-J3 MASTER PRODUCT RECORD"
+	col08noedit="Preliminary"
+	/>
+<!-- ROW 02 --><I id="row02"
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_obj_document.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col02noedit="D00385"
+	col03noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col03noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col06noeditClassOuter="GCell has_attachment"
+	col07noedit="LEGO JEEP ASSEMBLY INSTRUCTIONS"
+	/>
+<!-- ROW 03 --><I id="row03"
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_obj_bom.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col02noedit="D00385"
+	col03noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col03noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col06noeditClassOuter="GCell has_attachment"
+	col07noedit="LEGO JEEP CHASSIS INSTRUCTIONS"
+	/>
+</B>
+</Body>
+<Header 
+	RowSelect="" 
+	col01noedit="Type" 
+	col02noedit="Number" 
+	col03noedit="&lt;img src='../../../global/images/icn_action_attachment.png'/&gt;" 
+	col04noedit="&lt;img src='../../../global/images/icn_obj_manufacturer.png'/&gt;" 
+	col05noedit="&lt;img src='../../../global/images/icn_obj_eng_change_order.png'/&gt;" 
+	col06noedit="&lt;img src='../../../global/images/icn_obj_problem_report.png'/&gt;" 
+	col07noedit="Description" 
+	col08noedit="Lifecycle Phase" 
+	col09noedit="Rev" NoEscape="1"/>
+</Grid>

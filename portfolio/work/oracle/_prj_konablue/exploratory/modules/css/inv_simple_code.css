@@ -1,0 +1,338 @@
+/*
+	KONABLUE SANDBOX STYLES
+*/
+
+body, td {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+p.info {
+	margin: 10px 0px 10px 0px;
+}
+
+a, a:visited {
+	color: #36c;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+a img {
+	border: none;
+}
+
+
+/*
+	Simple header reset and styles
+*/
+
+h1, h2 {
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+}
+
+h3 {
+	font-weight: bold;
+	padding: 0;
+	margin: 20px 0px 0px 0px;
+}
+
+h3 span {
+	font-weight: bold;
+	font-size: 11px;
+	padding: 0px;
+	margin: 0px;
+}
+
+h3 em {
+	font-weight: bold;
+	color: #900;
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 13px;
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+}
+
+h6 {
+	font-weight: bold;
+	font-size: 13px;
+	margin: 2em 0em 1em 0em;
+	padding-top: 1em;
+	border-top: 1px solid #ccc;
+}
+
+
+/*
+	Extra styles for random pieces
+*/
+
+em {
+	font-weight: normal;
+	font-style: normal;
+	color: #36c;
+}
+
+img.border {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+
+/*
+	HEADER STYLES
+*/
+
+#header {
+	height: 60px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 20px 10px 20px;
+	background: url('/shared/images/bgd_header_shadow.png') repeat-x bottom left;
+	text-align: left;
+}
+
+#header img.logo {
+	padding: 0px 0px 0px 60px;
+}
+
+#header p {
+	margin: 0;
+	padding: 10px 0 0 0;
+	font-size: 26px;
+	font-weight: normal;
+	color: #333;
+}
+
+#header p.logos {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+#header p.project a em {
+	color: #333
+}
+
+
+/*
+	MAIN CONTENT STYLES
+*/
+
+#content {
+	margin: 20px 20px 50px 20px;
+	padding: 0;
+	vertical-align: top;
+}
+
+
+#content p.posted {
+	margin: 0px 0px 60px 0px;
+}
+
+#konablue {
+	margin: 0px;
+	padding: 0px;
+	width: 600px;
+}
+
+#box_exercise {
+	margin: 20px 0px 20px 0px;
+	padding: 20px 0px 0px 0px;
+	border-top: 1px solid #ccc;
+}
+
+#components {
+	margin: 20px 0px 20px 0px;
+	padding: 20px 0px 0px 0px;
+	border-top: 1px solid #ccc;
+}
+
+#team {
+	margin: 20px 0px 20px 0px;
+	padding: 20px 0px 0px 0px;
+	border-top: 1px solid #ccc;
+}
+
+#prototype {
+	margin: 20px 0px 20px 0px;
+	padding: 20px 0px 0px 0px;
+	border-top: 1px solid #ccc;
+}
+
+#send {
+	margin: 20px 0px 20px 0px;
+	padding: 20px 0px 0px 0px;
+	border-top: 1px solid #ccc;
+}
+
+#sidebar {
+	margin: 0px 0px 0px 30px;
+	padding: 0px 0px 0px 20px;
+	width: 530px;
+	float: right;
+	border-left: 1px solid #ccc;
+}
+
+#about {
+	background: url('/shared/images/postcard.png') no-repeat top right;
+	height: 150px;
+}
+
+#about p {
+	width: 50%;
+}
+
+#schedule {
+	margin: 30px 0px 30px 0px;
+	padding: 10px 0px 10px 0px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+/*
+	FOOTER STYLES
+*/
+
+#footer {
+	background: #465e89 url('/shared/images/bgd_footer_shadow.png') repeat-x top left;
+	height: 100px;
+	padding: 10px 20px 0 20px;
+	color: #fff;
+}
+
+#footer a {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/* 
+	POP-UP BIZ CARD STYLES
+	Adapted from: http://www.redmelon.net/tstme/4corners/
+*/
+
+div.vitals {
+	margin: 0px 0px 0px 40px;
+	padding: 0px;
+}
+
+div.vitals ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+div.vitals ul li {
+	margin: 0px 0px 5px 0px;
+}
+
+.obj_display_none {
+	display: none;
+}
+
+obj_display_block {
+	display: block;
+}
+
+img.close {
+	cursor: pointer;
+}
+
+/* 
+	set background images
+*/
+.pop_arrow_up {
+	background: url('/shared/images/pop_arrow_up.png') no-repeat top;
+}
+
+.pop_arrow_left {
+	position: absolute;
+	left: -40%;
+}
+
+.pop_arrow_right {
+	position: absolute;
+	left: 40%;
+}
+
+.pop_arrow_down {
+	background: url('/shared/images/pop_arrow_down.png') no-repeat bottom;
+}
+
+.pop_top div.pop_left {
+	background: url('/shared/images/pop_top_left.png') no-repeat top left;
+}
+
+.pop_top div.pop_right {
+	background: url('/shared/images/pop_top_right.png') no-repeat top right;
+}
+.pop_top {
+	background: url('/shared/images/pop_top.png') repeat-x top;
+}
+.pop_bottom div.pop_left {
+	background: url('/shared/images/pop_bottom_left.png') no-repeat bottom left;
+}
+
+.pop_bottom div.pop_right {
+	background: url('/shared/images/pop_bottom_right.png') no-repeat bottom right;
+}
+
+.pop_bottom {
+	background: url('/shared/images/pop_bottom.png') repeat-x bottom;
+}
+
+.pop_msg div.pop_right {
+	background: url('/shared/images/pop_right.png') repeat-y top right;
+}
+
+.pop_msg {
+	background: url('/shared/images/pop_left.png') repeat-y top left;
+}
+
+
+/* 
+	height and width details
+*/
+
+.pop_wrapper {
+	padding: 5px 10px 5px 10px;
+}
+
+.pop_top div, .pop_top, .pop_bottom div, .pop_bottom {
+	width: 100%;
+	height: 20px;
+}
+.pop_msg {
+	background-color: #fff;
+	}
+
+.popup {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 280px;
+	background: transparent;
+	z-index: 50;
+}

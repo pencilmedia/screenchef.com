@@ -1,0 +1,42 @@
+body {
+	font-size: 12px;
+	font-family: sans-serif;
+}
+
+textarea {
+	width: 400px;
+	height: 48px;
+	display: block;
+}
+
+h4 {
+	margin: 5px 0px;
+	padding: 0px;
+}
+
+div {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+div.alternate {
+	background: #eee;
+}
+
+span {
+	display: block;
+	border: 1px solid #999;
+	width: 300px;
+	line-height: 25px;
+}
+
+li {
+	width: 400px;
+	margin: 0 0 10px 0;
+}
+
+em {
+	font-style: normal;
+	font-weight: bold;
+	color: #b00;
+}

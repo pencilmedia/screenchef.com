@@ -1,0 +1,55 @@
+.pop_up
+{
+	position: absolute;
+	top: 35%;
+	left: 0;
+	z-index: 99;
+	display: block;
+	background: url(/global/images/inset_shadow.png) no-repeat right bottom;
+	min-width: 300px;
+	width: 400px;
+	height: auto;
+	margin: auto 25%;
+	padding: 0 8px 5px 0;
+}
+.pop_up .content
+{
+	padding: 15px 0;
+	background-color:#FFFFFF;
+	border:1px solid #666666;
+	height:auto;
+	left:-4px;
+	position:relative;
+	top:-4px;
+	width:100%;
+}
+.pop_up h4 {
+	margin-left:  10px;
+}
+.pop_up p {
+	margin:  5px 10px;
+}
+.pop_up p.actions {
+	text-align: right;
+	margin: 10px 10px 0 10px;
+}
+.pop_up p.indicator {
+	text-align: center;
+}
+.pop_up p.indicator img {
+	clear: both;
+	margin-bottom: 5px;
+}
+
+/*
+	Pop-ups which include forms.
+*/
+.pop_up.with_form_content dl.side_by_side_mixed 
+{
+	width: 100%;
+	min-width: 100px;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+.pop_up.with_form_content dl.side_by_side_mixed dt { width: 25%; }
+.pop_up.with_form_content p.actions { margin-top: 0; }

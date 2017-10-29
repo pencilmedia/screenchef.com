@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="550" title="Search and Select: Contacts"
+	 paddingBottom="0" paddingTop="10" paddingLeft="0" paddingRight="0"
+	horizontalScrollPolicy="off" borderAlpha="100" dropShadowEnabled="true" cornerRadius="0" 
+	showCloseButton="true" close="closeTeamPopup();">
+<mx:Script>
+    <![CDATA[
+                
+		[Embed(source="../assets/images/icons/ico_expanded.png")] 
+		public var expandedImage:Class
+		[Embed(source="../assets/images/icons/ico_collapsed.png")] 
+		public var collapsedImage:Class
+		[Embed(source="../assets/images/icons/ico_edit.png")] 
+		public var editIconImage:Class
+		
+        // CLOSE CONTACT POPUP
+        import mx.managers.PopUpManager;
+        import popups.search.searchPopup;
+         
+		private function closeTeamPopup():void
+        {
+        	PopUpManager.removePopUp(this);
+		}
+		    
+    ]]>
+</mx:Script>
+	<mx:VBox width="100%" height="100%" paddingTop="10" paddingRight="10" paddingBottom="10" paddingLeft="10" 
+		verticalGap="10" verticalScrollPolicy="auto" xmlns:cnm="components.*">
+		
+		<mx:Grid width="100%" paddingLeft="5">
+			<mx:GridRow width="100%" height="100%">
+				<mx:GridItem width="140" height="100%" horizontalAlign="right">
+					<mx:Label text="Match"/>
+					<mx:RadioButtonGroup id="matchSearch"/>
+					<mx:RadioButton label="All" groupName="matchSearch" selected="true"/>
+					<mx:RadioButton label="Any" groupName="matchSearch"/>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+				</mx:GridItem>
+			</mx:GridRow>
+			<mx:GridRow width="100%" height="100%">
+				<mx:GridItem width="125" height="100%" horizontalAlign="right">
+					<mx:Label text="Type"/>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+					<mx:ComboBox></mx:ComboBox>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+					<mx:ComboBox></mx:ComboBox>
+				</mx:GridItem>
+			</mx:GridRow>
+			<mx:GridRow width="100%" height="100%">
+				<mx:GridItem width="125" height="100%" horizontalAlign="right">
+					<mx:Label text="Number"/>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+					<mx:ComboBox></mx:ComboBox>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+					<mx:TextInput text="REQ-5"/>
+				</mx:GridItem>
+			</mx:GridRow>
+			<mx:GridRow width="100%" height="100%">
+				<mx:GridItem width="125" height="100%" horizontalAlign="right">
+					<mx:Label text="Description"/>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+					<mx:ComboBox></mx:ComboBox>
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+					<mx:TextInput/>
+				</mx:GridItem>
+			</mx:GridRow>
+			<mx:GridRow width="100%" height="100%">
+				<mx:GridItem width="125" height="100%" horizontalAlign="right">
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%">
+				</mx:GridItem>
+				<mx:GridItem width="100%" height="100%" horizontalAlign="right" paddingTop="5">
+					<mx:Button label="Reset" />
+					<mx:Button label="Search" />
+				</mx:GridItem>
+			</mx:GridRow>
+		</mx:Grid>
+		<mx:DataGrid width="100%" styleName="panelTable">
+		<mx:XMLList>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Joel Nave</name>
+		        <title>UX Manager</title>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </contact>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Anthony Moquette</name>
+		        <title>UX Developer</title>
+		        <description>Consectetur adipiscing elit. Lorem ipsum dolor sit amet.</description>
+		    </contact>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Ralph Garcia</name>
+		        <title>UX Developer</title>
+		        <description>Consectetur adipiscing elit. Lorem ipsum dolor sit amet.</description>
+		    </contact>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Kobe Bryant</name>
+		        <title>Product Manager</title>
+		        <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+		    </contact>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Ronald Artest</name>
+		        <title>Program Manager</title>
+		        <description>Consectetur adipiscing elit. Lorem ipsum dolor sit amet.</description>
+		    </contact>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Derrick Rose</name>
+		        <title>Director</title>
+		        <description>Consectetur adipiscing elit. Lorem ipsum dolor sit amet.</description>
+		    </contact>
+		    <contact>
+		        <icon>x</icon>
+		        <name>Phil Jackson</name>
+		        <title>Vice President</title>
+		        <description>Consectetur adipiscing elit. Lorem ipsum dolor sit amet.</description>
+		    </contact>
+		</mx:XMLList>
+			<mx:columns>
+				<mx:DataGridColumn headerText="" dataField="col1" width="16">
+            	<mx:itemRenderer>
+            		<mx:Component>
+            			<mx:Image source="@Embed('../assets/images/icons/ico_status_available.png')" horizontalAlign="center" width="100%" height="16" scaleContent="false" />
+            		</mx:Component>
+            	</mx:itemRenderer>
+			    </mx:DataGridColumn>
+				<mx:DataGridColumn headerText="Name" dataField="name"/>
+				<mx:DataGridColumn headerText="Title" dataField="title"/>
+				<mx:DataGridColumn headerText="Description" dataField="description"/>
+			</mx:columns>
+		</mx:DataGrid>
+</mx:VBox>
+		<mx:HBox styleName="footer" width="100%">
+		    <mx:Button label="Help" />
+		    <mx:Spacer width="80%" />
+			<mx:Button label="Cancel" click="closeTeamPopup();" />
+			<mx:Button label="OK" />
+		</mx:HBox>
+</mx:TitleWindow>

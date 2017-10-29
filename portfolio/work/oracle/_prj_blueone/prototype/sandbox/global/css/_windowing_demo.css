@@ -1,0 +1,69 @@
+/**************************************************************
+	THIS FILE IS REQUIRED BY THE WINDOWING DEMO.
+	UPON COMPLETION, THE STILES SHOULD BE REEVALUATED AND
+	PLACED IN A PERMANENT CSS HOME.
+	A.
+**************************************************************/
+
+/********************************
+	LEGO-JEEP-LJ3 DEMO STYLES
+/*******************************/
+table#bomDemoTable .collapse { background: url(/global/images/treeview/collapse.png) no-repeat scroll 0 0 !important;  }
+table#bomDemoTable .expand { background: url(/global/images/treeview/expand.png) no-repeat scroll 0 0 !important;  }
+table#bomDemoTable thead th,
+table#bomDemoTable tbody td { background-repeat: no-repeat; background-position: 5px center }
+
+table#bomDemoTable thead th.col_attachments,
+table#bomDemoTable thead th.col_manufacturers,
+table#bomDemoTable thead th.col_pending,
+table#bomDemoTable thead th.col_problems {width:20px;}
+
+table.ecoDemoTable .col_attachments,
+table#bomDemoTable .col_attachments { background-image: url('/global/images/icn_status_has_attachment.png'); }
+
+table.ecoDemoTable .col_manufacturers,
+table#bomDemoTable .col_manufacturers { background-image: url('/global/images/icn_obj_manufacturer.png');}
+
+table.ecoDemoTable .col_pending,
+table#bomDemoTable .col_pending { background-image: url('/global/images/icn_obj_eng_change_order.png'); }
+
+table.ecoDemoTable .col_problems,
+table#bomDemoTable .col_problems { background-image: url('/global/images/icn_obj_problem_report.png'); }
+
+table.ecoDemoTable .col_checked,
+table#bomDemoTable .col_checked { background-image: url('/global/images/icn_status_dot_gray.png'); background-position: center center; }
+
+div.bom_demo_table_filler { height: 1200px; background-color: silver; background-image: url('/global/images/table_deadspace.png'); }
+div.scrollTreeDiv.windowing_demo { height:220px; *height: 230px; overflow-y:hidden; border-bottom:2px solid silver; } /* '*height' required for IE */
+em.document { background-position: 0 1px !important; background-repeat:no-repeat; }
+em.bom { background-repeat:no-repeat; }
+
+/********************************
+	CHANGE AFFECTED ITEM STYLES
+/*******************************/
+select.windowingDemo { width:150px; }
+select.windowingDemo.rightMargin {  margin-right: 10px; }
+
+table.ecoDemoTable .collapse { background: url(/global/images/treeview/collapse.png) no-repeat scroll 0 0 !important;  }
+table.ecoDemoTable .expand { background: url(/global/images/treeview/expand.png) no-repeat scroll 0 0 !important;  }
+table.ecoDemoTable thead th,
+table.ecoDemoTable tbody td { background-repeat: no-repeat; background-position: 5px center }
+
+
+table.ecoDemoTable thead th.col_redlines,
+table.ecoDemoTable thead th.col_attachments,
+table.ecoDemoTable thead th.col_manufacturers,
+table.ecoDemoTable thead th.col_pending,
+table.ecoDemoTable thead th.col_problems {width:20px;}
+
+table.ecoDemoTable .col_redlines { background-image: url('/global/images/icn_status_redlined.png'); }
+table.ecoDemoTable .col_attachments { background-image: url('/global/images/icn_status_has_attachment.png'); }
+table.ecoDemoTable .col_manufacturers { background-image: url('/global/images/icn_obj_manufacturer.png');}
+table.ecoDemoTable .col_pending { background-image: url('/global/images/icn_obj_eng_change_order.png'); }
+table.ecoDemoTable .col_problems { background-image: url('/global/images/icn_obj_problem_report.png'); }
+table.ecoDemoTable .col_checked { background-image: url('/global/images/icn_status_dot_gray.png'); background-position: center center; }
+
+
+
+.demoStrike { color: #f00; text-decoration: line-through; }
+

@@ -1,0 +1,185 @@
+.worklist-item
+{
+	-webkit-border-radius:5px;
+	-webkit-box-shadow: 4px 4px 5px #333;
+	width:238px;
+	
+	background:#eaeaea;
+	display:inline-block;
+	margin:10px 10px;
+}
+
+
+body.portrait .worklist-item
+{	
+	display:block;
+	width:auto;
+}
+
+.worklist-item .title
+{		
+	position:relative;
+	height:20px;
+	font-size:16px;
+	font-weight:bold;
+	vertical-align:center;
+	background:#999;
+	padding:5px;
+	margin:0px;
+	color:#ffffff;
+	-webkit-border-top-left-radius:5px 5px;
+	-webkit-border-top-right-radius:5px 5px;
+	
+	text-align:center;
+	
+}
+
+.worklist-item .statusbar
+{		
+	position:relative;
+	height:50px;
+	width:2%;
+	font-size:16px;
+	font-weight:bold;
+	vertical-align:center;
+	background:#999;
+	padding:10px 5px;
+	display:inline-block;
+	-webkit-border-top-left-radius:5px 5px;
+	-webkit-border-bottom-left-radius:5px 5px;
+
+	
+}
+
+.worklist-item .body-portrait
+{		
+	position:relative;
+	height:50px;
+	width:92%;
+	vertical-align:top;	
+	padding:10px 5px;
+	display:inline-block;
+
+	
+}
+
+.title.escalated,
+.statusbar.escalated
+{
+	background:#b2553e url(../images/titlebar-red.png) left top ;
+	background-repeat:repeat-x;
+	
+	color:#fff;
+	
+}
+
+.title.information-requested,
+.statusbar.information-requested
+{
+	background:#8398af url(../images/titlebar-blue.png) left top;
+	background-repeat:repeat-x;
+	color:#fff;
+	
+}
+
+.title.assigned,
+.statusbar.assigned
+{
+	background:#82a882 url(../images/titlebar-green.png) left top;
+	background-repeat:repeat-x;
+	color:#fff;
+	
+}
+
+.worklist-item>.body
+{		
+	position:relative;
+	height:80px;
+	vertical-align:top;	
+	padding:10px 5px;
+}
+
+.worklist-item>.body TD
+{
+	font-size:14px;
+	font-weight:bold;
+	color:#898989;
+	
+}
+
+.worklist-item>.body .msg
+{
+	font-size:15px;
+	font-weight:bold;
+	color:#757575;
+	
+}
+
+
+.worklist-item>.body .timestamp
+{
+	padding-top:10px;
+	font-size:13px;
+	font-weight:normal;
+	color:#898989;
+	
+}
+
+
+
+.worklist-item .actions
+{	
+	position:relative;
+	height:35px;
+	font-size:12px;
+	text-align:right;
+	white-space:nowrap;
+}
+
+.worklist-item .actions>input
+{		
+	-webkit-border-radius:4px;
+	--webkit-box-shadow: 2px 2px #999;
+	border:1px solid #a5a5a5;
+	margin:0px 5px;
+	padding:5px;
+	font-size:12px;
+	font-weight:bold;
+	color:#4d4d4d;
+	
+	background:#e6e6e6  url(../images/button-back.png) left bottom;
+	background-repeat:repeat-x;
+}
+
+.worklist-icon.assigned
+{
+	background:url(../images/icon-clipboard.png) center center;
+	width:48px;
+	height:48px;
+}
+
+
+.worklist-icon.escalated
+{
+	background:url(../images/icon-flag.png) center center;
+	width:48px;
+	height:48px;
+}
+
+.worklist-icon.information-requested
+{
+	background:url(../images/icon-info.png) center center;
+	width:48px;
+	height:48px;
+}
+
+.body-portrait	{font-size:10px;}
+.body-portrait .worklist-icon{ display:inline-block;}
+.body-portrait .timestamp{ font-size:14px;display:inline-block;width:90px;color:#999999;text-overflow:ellipsis}
+.body-portrait .msg{ font-size:14px;display:inline-block;width:150px;color:#000;text-overflow:ellipsis}
+.body-portrait .sender{font-size:14px; display:inline-block;width:50px;color:#000;text-overflow:ellipsis}
+.body-portrait .actions{ display:inline-block;width:220px; text-align:right}
+
+
+	
+	

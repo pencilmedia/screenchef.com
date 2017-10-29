@@ -1,0 +1,11 @@
+/******************************************************************************
+MESSAGES.CSS
+Description: Message related styles and definitions.
+******************************************************************************/
+.message		{ border-bottom: 1px solid #999; clear: both; padding: 7px 10px; background-repeat: repeat-x; }
+.message p		{ max-width: 600px; }
+.info 			{ background: url('../images/bgd_info.png'); }
+.message.error	{ background: #FFE1D5 url('../images/bgd_diagonals.png'); border:1px solid #900; }
+a.more			{ background: url(../images/icn_action_popup.png) no-repeat right center; margin-left: 5px; padding-right: 15px;  }
+a.more:hover	{ text-decoration: underline; }
+

@@ -1,0 +1,18 @@
+.groupItem
+{
+	border: 1px solid #003366;
+	background-color: #b7d7f8;
+}
+.groupItem .itemHeader
+{
+	border-bottom: 1px solid #003366;
+	background-color: #003366;
+	color: white;
+}
+
+.groupItem .itemHeader a.closeEl  { color: white; }
+
+div.widget_content
+{
+	background-color: #b7d7f8;
+}

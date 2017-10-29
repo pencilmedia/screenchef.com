@@ -1,0 +1,40 @@
+#nav {
+	margin-top: 25px;
+}
+#nav li {
+	padding: 3px 10px 3px 3px;
+	text-transform: uppercase;
+	text-align: right;
+}
+#nav li#selected {
+	background-color: #ffe0e0;
+	border-left: 6px solid #c66;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+#right1 h3 {
+	font-size: 14px;
+	padding-left: 10px;
+	margin-top: 15px;
+}
+#right1 ul {
+	margin-top: 10px;
+}
+#right1 ul li {
+	padding: 3px 0 3px 15px;
+}
+#right1 ul li span {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+div.container.poc2 {
+	min-width: 400px !important;
+}
+
+div.poc2 .lt_column, 
+div.poc2 .rt_column {
+	min-width: 0 !important;
+	width: 45% !important;
+}

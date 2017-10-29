@@ -1,0 +1,391 @@
+/******************************************************************************
+BUTTONS.CSS
+Description: Button related styles and definitions.
+******************************************************************************/
+
+/******************************************************************************
+Button Styles
+******************************************************************************/
+
+a.button {
+	background: url('../images/btn_left_nrm.png') left center no-repeat;
+	color: #333;
+	cursor: pointer;
+	height: 22px;
+	line-height: 22px;
+	margin: auto 1px auto 0 !important;
+	padding: 5px 0 5px 8px;
+	-moz-outline-style:none;
+	white-space:nowrap;
+}
+a.button span {
+	background: url('../images/btn_right_nrm.png') right center no-repeat;
+	color: #333;
+	height: 22px;
+	line-height: 22px;
+	margin: 0;
+	padding: 5px 8px 5px 0;
+}
+
+a.button:hover,
+a.button:focus,
+a.button:active {
+	background: url('../images/btn_left_light_blue.png') left center no-repeat;
+}
+
+a.button:hover span,
+a.button:focus span,
+a.button:active span {
+	background: url('../images/btn_right_light_blue.png') right center no-repeat;
+}
+
+a.button.blue {
+	background: url('../images/btn_left_blue_nrm.png') left center no-repeat;
+}
+a.button.blue span {
+	background: url('../images/btn_right_blue_nrm.png') right center no-repeat;
+}
+
+/* Reflects above style a.button:hover. Used on elements focus */
+a.a_hover { 
+	background: url('../images/btn_left_ovr.png') left center no-repeat;
+}
+
+a.button .s_hover {
+	background: url('../images/btn_right_ovr.png') right center no-repeat;
+}
+
+a.button.disabled {
+	cursor: default;
+	zoom: 1; /* BS for IE to obey the law of opacity through CSS */
+	opacity: 0.7;
+	filter: alpha(opacity = 40);	
+	padding: 5px 0 5px 8px;
+	 *padding: 0 0 0 8px; /* BS for IE since the zoom above messes up the positioning */
+}
+a.button.disabled span {
+	color: #666; 
+	cursor: default;
+	*line-height: 22px; /* BS for IE since the zoom above messes up the positioning */
+}
+a.button.disabled:hover { 
+	background: url('../images/btn_left_nrm.png') left center no-repeat; 
+}
+a.button.disabled:hover span { 
+	background: url('../images/btn_right_nrm.png') right center no-repeat; 
+}
+
+.button em {
+	background-position: center left; 
+	background-repeat: no-repeat; 
+	font-weight: normal;
+	font-style: normal;
+	padding: 3px 8px;
+	margin-right: 0;
+}
+.button em.iconic {
+	background-position: center center;
+	margin-right: -3px;
+	padding: 3px 7px; 
+}
+
+/* Created for the two icon divet help button on the side nave of concept car */
+/* Names need to be revisited. */
+.button em.iconic2 {
+	background-position: -2px center; 
+	padding: 4px 7px; 
+}
+.button em.iconic3 {
+	background-position: 1px 6px; 
+	padding: 3px 19px; 
+}
+.button.disabled em	{
+	opacity: .5;
+	filter:alpha(opacity=20);
+}
+
+a.btn_next_group {
+	margin-left: 8px !important;
+}
+
+.searchMenu { 
+            background-position: 5px center; 
+            background-repeat: no-repeat;
+            margin-right: 5px;
+            padding: 3px 9px 3px 25px !important;			
+}
+
+.btn_divide { 
+	border-left: 1px solid #999;
+	margin: 0 5px;
+	padding: 2px 0;
+	width: 1px;
+}
+
+/******************************************************************************
+Button ICONS
+******************************************************************************/
+.cancel							{ background-image: url('../images/icn_action_cancel_checkout.png'); }
+.save							{ background-image: url('../images/icn_action_save.png'); }
+.edit							{ background-image: url('../images/icn_action_edit.png'); }
+.expand_all						{ background-image: url('../images/icn_tree_expand_all.png'); }
+.collapse_all					{ background-image: url('../images/icn_tree_collapse_all.png'); }
+
+.remove							{ background-image: url('../images/icn_action_remove.png'); }
+
+.arrow_back            			{ background-image: url('../images/arrow_back.png'); }
+.arrow_next           			{ background-image: url('../images/arrow_next.png'); margin-left: 5px; padding: 3px 6px !important; /* adjusts icon since it's to the RIGHT of text */ }
+.arrow_up						{ background-image: url('../images/arrow_up.png'); }
+.arrow_down						{ background-image: url('../images/arrow_down.png'); }
+
+.iconic.arrow_next				{ margin-left: 0; padding: 3px 7px !important; }
+
+/* AlexK */
+.action_search					{ background-image: url('../images/icn_action_view_details.png'); }
+.action_list					{ background-image: url('../images/ico_list.png'); }
+.action_list_tree				{ background-image: url('../images/ico_list_tree.png'); }
+
+.action_item 		    		{ background-image: url('../images/icn_obj_action_item.png'); }
+.accept 	 		    		{ background-image: url('../images/ico_accept.png'); }
+.add      		    			{ background-image: url('../images/icn_action_add.png'); }
+.addressbook 		    		{ background-image: url('../images/icn_action_addressbook.png'); }
+.approve						{ background-image: url('../images/icn_action_approve.png'); }
+.ato							{ background-image: url('../images/icn_obj_auto_transfer_order.png'); }
+.attachment		    			{ background-image: url('../images/icn_action_attachment.png'); background-repeat:no-repeat; }
+.attention		   				{ background-image: url('../images/icn_status_attention.png'); }
+.audit			   			 	{ background-image: url('../images/icn_obj_audit.png'); }
+.auto_number 		    		{ background-image: url('../images/icn_action_autonumber.png'); }
+.auto_number_disabled 			{ background-image: url('../images/icn_action_autonumber_disabled.png'); }
+.change_status					{ background-image: url('../images/icn_action_change_status.png'); }
+
+.back				    		{ background-image: url('../images/icn_action_back.png'); }
+.bom				    		{ background-image: url('../images/icn_obj_bom.png'); }
+body.action_dialog.wizard.ew .bom { background-repeat: no-repeat; background-position:center center; }
+.bom_tree			    		{ background-image: url('../images/icn_bom_tree.png'); }
+.bookmark			    		{ background-image: url('../images/icn_obj_bookmark.png'); }
+
+.calendar 		    			{ background-image: url('../images/icn_action_calendar.png'); }
+.capa		 		    		{ background-image: url('../images/icn_obj_capa.png'); }
+.canceled						{ background-image: url('../images/icn_status_cancelled.png'); }
+.complete						{ background-image: url('../images/icn_action_check_names.png'); }
+.collapse						{ background-image: url('../images/icn_action_collapse.png'); background-repeat:no-repeat; }
+.comment						{ background-image: url('../images/icn_action_comment.png'); }
+.createNew						{ background-image: url('../images/ico_new.png'); }
+.cto				    		{ background-image: url('../images/icn_obj_content_transfer_order.png'); }
+.customer			    		{ background-image: url('../images/icn_obj_customer.png'); }
+.deviation						{ background-image: url('../images/icn_obj_deviation.png'); }
+.divet							{ background-image: url('../images/icn_menu.png'); padding: 0 3px 3px 3px !important; }
+.document						{ background-image: url('../images/icn_obj_document.png'); }
+
+.dropdown						{ 
+	background-image: url('../images/icn_menu.png'); 
+	background-position: right center !important; 
+	padding-left: 10px;
+}
+.button em.dropdown					{
+	background-position: center 7px !important; 
+	margin-right: -10px !important;
+}
+
+
+.button.combo span {
+	padding: 5px 0 5px 0;
+	background: url('../images/btn_combo_rt.png') no-repeat right center;
+}
+
+.button.combo:hover { 	
+	background: url('../images/btn_left_light_blue.png') left center no-repeat;
+}
+.button.combo span:hover { 	
+	background: url('../images/btn_combo_rt_hover1.png') right center no-repeat;
+}
+.button.combo:hover > span:first-child  { /* Pattern Matching: gives hover styles to span when user hovers the a.button  */
+	background: url('../images/btn_combo_rt_hover_split.png') right center no-repeat;
+}
+
+.button.combo span em.menu {
+	background-position: -224px center !important;
+	padding: 5px 12px 5px 10px;
+	margin: 0 0 0 6px;
+	position: relative;
+	right: -2px;
+}
+.button.combo span em.menu:hover {
+	background: url('../images/btn_combo_rt_hover_splithover.png') no-repeat;
+}
+
+
+.create_new						{ background-image: url('../images/icn_obj_action_item.png'); }
+
+.eng_change_order				{ background-image: url('../images/icn_obj_eng_change_order.png'); }
+
+.eng_change_request				{ background-image: url('../images/icn_obj_eng_change_request.png'); }
+.expand							{ background-image: url('../images/icn_action_expand.png'); background-repeat:no-repeat; }
+
+.flagged						{ background-image: url('../images/icn_status_flagged.png'); background-repeat:no-repeat; }
+
+.file_closed					{ background-image: url('../images/icn_obj_folder_closed.png'); }
+.file_folder					{ background-image: url('../images/file_folder.png'); }
+
+.file_open						{ background-image: url('../images/folder_open.png'); }
+
+.fill_right						{ background-image: url('../images/icn_fill_right.png'); }
+
+.filter_on						{ background-image: url('..//images/tables/ico_table_filter_on.png'); background-repeat:no-repeat;}
+
+.forward						{ background-image: url('../images/icn_action_forward.png'); }
+
+.gate							{ background-image: url('../images/icn_obj_gate.png'); background-repeat:no-repeat }
+.gray_dot						{ background-image: url('/global/images/icn_status_dot_gray.png'); background-repeat:no-repeat }
+
+.help							{ background-image: url('../images/icn_action_help.png'); }
+.home							{ background-image: url('../images/icn_action_home.png'); }
+
+.inbox							{ background-image: url('../images/icn_obj_inbox.png'); }
+.icn_information							{
+ 	background-image: url('../images/ico_status_info.png'); 
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-right: 5px;
+	padding: 2px 8px 5px 8px;
+}
+.join_discussion				{ background-image: url('../images/icn_action_join_discussion.png'); }
+
+.level_collapsed				{ background-image: url('../images/icn_action_expand.png'); }
+.level_expanded					{ background-image: url('../images/icn_action_collapse.png'); }
+.lock							{ background-image: url('../images/icn_action_lock.png'); }
+.logout							{ background-image: url('../images/icn_action_logout.png'); }
+
+.mark_complete					{ background-image: url('../images/ico_mark_complete.png'); }
+.material						{ background-image: url('../images/icn_obj_material.png'); }
+.material_declaration			{ background-image: url('../images/icn_obj_material_declaration.png'); }
+.manufacturer					{ background-image: url('../images/icn_obj_manufacturer.png'); background-repeat:no-repeat; }
+.manufacturer_change_order		{ background-image: url('../images/icn_obj_manufacturer_change_order.png'); }
+.manufacturer_part				{ background-image: url('../images/icn_obj_manufacturer_part.png'); background-repeat:no-repeat;}
+.mdi							{ background-image: url('../images/ico_profile.png'); }
+.mdi_close						{ background-image: url('../images/icn_action_mdi_close.png'); }
+
+.menu_active					{ background-image: url('../images/ico_menu_value_active.png'); background-repeat:no-repeat;}
+.menu_arrow_next           			{ background-image: url('../images/question/icn_arrow_next.png'); background-repeat:no-repeat; }
+.menu_arrow_back           			{ background-image: url('../images/question/icn_arrow_prev.png'); background-repeat:no-repeat; }
+
+.navigator			   			{ background-image: url('../images/icn_obj_navigator.png'); }
+.button .navigator				{ background-image: url('../images/icn_action_navigator.png'); }
+
+.non_conformance	   			{ background-image: url('../images/icn_obj_non_conformance.png'); }
+.notification_read				{ background-image: url('../images/icn_obj_notification_read.png'); }
+
+.off_track						{ background-image: url('../images/icn_status_off_track.png'); }
+.off_track_task					{ background-image: url('../images/ico_status_task_offtrack.png'); background-color: transparent;} 
+
+.on_track						{ background-image: url('../images/icn_status_on_track.png'); }
+.on_track_task					{ background-image: url('../images/ico_status_task_ontrack.png'); background-color: transparent;}
+
+.organization					{ background-image: url('../images/icn_obj_organization.png'); }
+
+.package						{ background-image: url('../images/icn_obj_package.png'); }
+.parameter						{ background-image: url('../images/icn_obj_parameter.png'); }
+.parametric_search	    		{ background-image: url('../images/icn_action_parametric_search.png'); padding: 3px 9px!important; }
+.part							{ background-image: url('../images/icn_obj_part.png'); background-position:0px 1px; background-repeat:no-repeat; }
+.part_concept					{ background-image: url('../images/icn_obj_part_concept.png'); }
+.part_variant					{ background-image: url('../images/icn_obj_part_variant.png'); }
+.pending						{ background-image: url('../images/icn_status_pending.png'); }
+.phase							{ background-image: url('../images/icn_obj_phase.png'); }
+.popup							{ background-image: url('../images/icn_action_popup.png'); }
+.preferences					{ background-image: url('../images/icn_action_preferences.png'); }
+.price							{ background-image: url('../images/icn_obj_price.png'); }
+.price_change_order				{ background-image: url('../images/icn_obj_price_change_order.png'); }
+.problem_report					{ background-image: url('../images/icn_obj_problem_report.png'); }
+.product						{ background-image: url('../images/icn_obj_product.png'); }
+.product_family					{ background-image: url('../images/icn_obj_product_family.png'); }
+.product_variant				{ background-image: url('../images/icn_obj_product_variant.png'); }
+.program						{ background-image: url('../images/icn_obj_program.png'); }
+.project						{ background-image: url('../images/icn_obj_project.png'); }
+.published_price				{ background-image: url('../images/icn_obj_published_price.png'); }
+
+.quick_search					{ background-image: url('../images/ico_search_go.png'); }
+
+.refresh						{ background-image: url('../images/icn_action_refresh.png'); }
+.reload							{ background-image: url('../images/icn_action_reload.png'); }
+.report							{ background-image: url('../images/icn_obj_report.png'); background-repeat:no-repeat; }
+.replace						{ background-image: url('../images/ico_replace_file.png'); }
+.requirement					{ background-image: url('../images/icn_obj_requirement.png'); }
+.rfq							{ background-image: url('../images/icn_obj_rfq.png'); background-repeat:no-repeat; }
+.rfq_response					{ background-image: url('../images/icn_obj_rfq_response.png'); }
+
+.search_selector				{ background-image: url('../images/icn_action_search_selector.png'); }
+.selector_00					{ background-image: url('../images/icn_obj_part.png'); }
+.selector_01					{ background-image: url('../images/icn_obj_eng_change_order.png'); }
+.selector_02					{ background-image: url('../images/icn_obj_manufacturer.png'); }
+.selector_03					{ background-image: url('../images/icn_obj_manufacturer_part.png'); }
+.selector_04					{ background-image: url('../images/icn_obj_product_family.png'); }
+.selector_05					{ background-image: url('../images/icn_obj_problem_report.png'); }
+.selector_06					{ background-image: url('../images/icn_obj_non_conformance.png'); }
+.selector_07					{ background-image: url('../images/icn_obj_customer.png'); }
+.selector_08					{ background-image: url('../images/icn_obj_program.png'); }
+.selector_09					{ background-image: url('../images/icn_obj_sourcing_project.png'); }
+.selector_10					{ background-image: url('../images/icn_obj_price.png'); }
+.selector_11					{ background-image: url('../images/icn_obj_supplier.png'); }
+.selector_12					{ background-image: url('../images/icn_obj_file_folder.png'); }
+.selector_13					{ background-image: url('../images/icn_obj_site.png'); }
+.selector_14					{ background-image: url('../images/icn_action_join_discussion.png'); }
+.selector_15					{ background-image: url('../images/icn_obj_report.png'); }
+.selector_16					{ background-image: url('../images/icn_obj_package.png'); }
+.selector_17					{ background-image: url('../images/icn_obj_content_transfer_order.png'); }
+.selector_18					{ background-image: url('../images/icn_obj_substance.png'); }
+.selector_19					{ background-image: url('../images/icn_obj_material_declaration.png'); }
+.selector_20					{ background-image: url('../images/icn_obj_specification.png'); }
+.selector_21					{ background-image: url('../images/icn_obj_document.png'); }
+
+.shuttle_up						{ background-image: url('../images/icn_shuttle_control_up.png'); }
+.shuttle_down					{ background-image: url('../images/icn_shuttle_control_down.png'); }
+
+
+.save_dialog					{ background-image: url('../images/icn_checkmark.png'); }
+.saved_search					{ background-image: url('../images/icn_obj_saved_search.png'); }
+
+.simplified_home				{ background-image: url('../images/ico_simplified_home.png'); }
+.simplified_left_pane			{ background-image: url('../images/ico_simplified_left_pane.png'); }
+
+.site							{ background-image: url('../images/icn_obj_site.png'); }
+.site_change_order				{ background-image: url('../images/icn_obj_site_change_order.png'); }
+.sourcing_project				{ background-image: url('../images/icn_obj_sourcing_project.png'); }
+.specification					{ background-image: url('../images/icn_obj_specification.png'); }
+.status_complete				{ background-image: url('../images/icn_status_complete.png'); }
+.status_warning					{ background-image: url('../images/ico_status_warning.png'); background-repeat:no-repeat;}
+.stop_ship						{ background-image: url('../images/icn_obj_stop_ship.png'); }
+.structure						{ background-image: url('../images/icn_obj_structure.png'); }
+.subpart						{ background-image: url('../images/icn_obj_subpart.png'); }
+.substance						{ background-image: url('../images/icn_obj_substance.png'); }
+.substance_group				{ background-image: url('../images/icn_obj_substance_group.png'); }
+.summary						{ background-image: url('../images/icn_action_view_summary.png'); }
+.supplier						{ background-image: url('../images/icn_obj_supplier.png'); }
+
+.task							{ background-image: url('../images/icn_obj_task.png'); }
+
+.toggle_thumbs					{ background-image: url('../images/ico_toggle_thumbnails.png'); }
+.toggle_thumblist				{ background-image: url('../images/ico_toggle_thumblist.png'); }
+.toggle_list					{ background-image: url('../images/ico_toggle_list.png'); }
+
+
+.unlock							{ background-image: url('../images/icn_action_unlock.png'); }
+.user							{ background-image: url('../images/icn_obj_user.png'); }
+.user_group						{ background-image: url('../images/icn_obj_user_group.png'); background-repeat:no-repeat;}
+
+.view_details					{ background-image: url('../images/icn_action_view_details.png'); }
+.view_gannt						{ background-image: url('../images/icn_action_view_gannt.png'); }
+
+.workflow_progress				{ background-image: url('../images/icn_obj_workflow_process.png'); }
+
+.delete							{ background-image: url('../images/icn_action_delete.png'); }
+/* PAGINATION BUTTONS *******************************************************/
+p.pagination					{ float: right; margin-top:2px; }
+.pagination a 					{ background-position: 0 center; background-repeat: no-repeat; display: block; float: left; height: 20px; margin: 0 2px 0 2px; width: 10px; }
+.page_first 					{ background: url('../images/icn_pagination_first.png'); }
+.page_first_disabled 			{ background: url('../images/icn_pagination_first_disabled.png'); }
+.page_prev 						{ background: url('../images/icn_pagination_prev.png'); }
+.page_prev_disabled 			{ background: url('../images/icn_pagination_prev_disabled.png'); }
+.page_next 						{ background: url('../images/icn_pagination_next.png'); }
+.page_next_disabled  			{ background: url('../images/icn_pagination_next_disabled.png'); }
+.page_last 						{ background: url('../images/icn_pagination_last.png'); }
+.page_last_disabled	    		{ background: url('../images/icn_pagination_last_disabled.png'); }

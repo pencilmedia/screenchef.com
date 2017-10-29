@@ -1,0 +1,86 @@
+/******************************************************************************
+TAB.CSS
+Description: Tab related styles and definitions. 
+******************************************************************************/
+.agile_tabs 					{ background:url(../images/bgd_tabs.png) repeat-x; margin-bottom: -3px; overflow: auto; width: 100%; padding: 0 0 0 0px;  }
+.agile_tabs li 					{ float: left; }
+.agile_tabs .first_tab a		{ border-left: none; padding-left:10px; }
+.agile_tabs a 					{ border-left: 1px dotted #333; cursor: pointer; float: left; padding: 0 0 0 14px; }
+.agile_tabs span 				{ color: #333; float: left; margin-right: -1px; padding: 5px 2px 2px 0; }
+.agile_tabs a:hover				{ background: url(../images/bgd_tabs_ovr.png) 0% 0px; }
+.agile_tabs #current a			{ background-position:0% -42px;}
+.agile_tabs #current a span		{ background-position:100% -42px;}
+.agile_tabs .selected			{ border-bottom: 3px solid #3c5ab3; font-weight: bold; }
+.agile_tabs .selected a:hover	{ background: none 0% 0px; }
+.agile_tabs em 					{ padding: 0 14px 0 0;}
+
+.agile_tabs3 					{ overflow: auto; border-bottom: 1px solid #999; width: 100%;  }
+.agile_tabs3 li a 					{ color: #333 !imporant;  		font-weight: bold; }
+.agile_tabs3 li 				{ float: left; border-right:1px solid silver; border-top:1px solid silver; padding: 2px 5px; }
+.agile_tabs3 .first_tab			{ margin-left:10px; border-left:1px solid silver; }
+.agile_tabs3 li:hover			{ background-color:#efefef;}
+.agile_tabs3 .selected			{ font-weight: bold; background-color: #b3ceff !important; background: url('../images/bgd_info2.png') top center;}
+
+.agile_tabs3 .indicator_gray span,
+.agile_tabs3 .indicator_green span,
+.agile_tabs3 .indicator_red span	{ padding-right: 14px;}
+.agile_tabs3 .indicator_gray		{ background:url(../images/icn_status_dot_gray2.png) no-repeat right center}
+.agile_tabs3 .indicator_red		{ background:url(../images/icn_status_dot_red2.png) no-repeat right center}
+
+
+
+.tab_list a						{ background-image: none; }
+.tab_list span					{ background: url(../images/icn_more_menu.png) no-repeat 2px 4px; width:16px; }
+
+.agile_sub_tabs 				{ border-bottom: 1px solid #999; padding: 20px 50px 0 0; overflow:hidden; }
+.agile_sub_tabs li 				{ float: right; }
+.agile_sub_tabs .first_tab		{ padding-left:10px; }
+.agile_sub_tabs a 				{ background:url(../images/tab_left.png) no-repeat left top; cursor: pointer; float: left; padding: 0 0 0 2px; }
+.agile_sub_tabs span 			{ background: url(../images/tab_right.png) no-repeat right top; color: #333; float: left; margin-right: -1px; padding: 5px 4px 2px 4px; }
+.agile_sub_tabs a:hover			{ background-position:0% 0px;}
+.agile_sub_tabs #current a		{ background-position:0% -42px;}
+.agile_sub_tabs #current a span	{ background-position:100% -42px;}
+.agile_sub_tabs .selected		{ background-color: #b3ceff; }
+ 
+.agile_tabs_2 					{ overflow: auto; border-bottom: 1px solid #999; width: 100%;}
+.agile_tabs_2 li 				{ float: left; position:relative;}
+.agile_tabs_2 .first_tab		{ padding-left:10px; }
+.agile_tabs_2 a 				
+{ 
+	background:url(../images/ttleft.png) 
+	no-repeat left top; 
+	cursor: pointer; 
+	float: left; 
+	padding: 0 0 0 10px; 
+}
+.agile_tabs_2 span
+{
+	background: url(../images/ttright.png) no-repeat right top; 
+	color: #333; 
+	float: left; 
+	margin-right: -1px; 
+	padding: 5px 4px 2px 4px;
+}
+
+.agile_tabs_2 .selected a 
+{ 
+	background:url(../images/ttselected.png) no-repeat left top;
+	cursor: pointer;
+	float: left;
+	padding: 0 0 0 10px;
+	position:relative;
+	top:1px;
+	z-index:50;
+	background-color:#fff;
+}
+.agile_tabs_2 indicator_gray.selected span
+.agile_tabs_2 .selected span	{ background: url(../images/ttright_last.png) no-repeat right top; color: #333; float: left; margin-right: -1px; padding: 5px 4px 2px 4px; }
+.agile_tabs_2 a:hover			{ background-position:0% 0px;}
+.agile_tabs_2 #current a		{ background-position:0% -42px;}
+.agile_tabs_2 #current a span	{ background-position:100% -42px;}
+
+.indicator_red em				{ background:url(../images/icn_status_dot__red.png) no-repeat right top;}
+.indicator_gray	em				{ background:url(../images/icn_status_dot_gray.png) no-repeat right top; position:relative; z-index:1}
+
+
+

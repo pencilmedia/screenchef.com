@@ -1,0 +1,486 @@
+/* Full TreeGrid CSS, to know how to modify it, see TreeGridStyles.htm documentation. */
+
+/* -------------
+--- Sections --- 
+------------- */
+
+.GBodyLeft, .GBodyMid, .GBodyRight, .GHeadLeft, .GHeadMid, .GHeadRight, .GFootLeft, .GFootMid, .GFootRight {
+	border-left:1px solid #a0a090;
+	}
+.GBodyLeft, .GBodyMid, .GBodyRight { 
+	border-top: 1px solid #808070;
+	}
+.GHeadLeft, .GHeadMid, .GHeadRight { 
+	border-top:1px solid #b0b0a0;
+	}
+.GFootLeft, .GFootMid, .GFootRight { 
+	border-top:1px solid #808070;
+	}
+.GVScroll {
+   border-top:1px solid #b0b0a0;
+   border-right:1px solid #b0b0a0;
+   }
+.GXScroll {
+   background:#F4F4F4;
+   }
+.GHScroll {
+
+	}
+
+/* -----------------
+--- Special rows --- 
+----------------- */
+	
+.GFillRow {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	background:#F4F4F4;
+	}
+.GFillUserRow {
+	border-bottom:1px solid #d0d0c0;
+	background:#F4F4F4;
+	}	
+.GSpace,.GGroup,.GSearch,.GPager {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	background:#F0F0E0;
+	white-space:nowrap;
+	}
+
+/* ----------
+--- Cells --- 
+---------- */
+
+.GHeader, .GPanelTop {
+	background: #F0F0E0;
+	padding-bottom:1px;
+	}
+.GPanelTop,.GPanelTopHover,.GPanel,.GPanelHover,.GHeader,.GHeaderHover {
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GPanel,.GPanelHover {
+	background: #F0F0E0; 
+	border-top:1px solid #ffffff; 
+	}
+.GCell, .GCellNE, .GHeader, .GHeaderHover, .GPanel, .GPanelHover, .GPanelTopHover, .GPanelTop, .GHeaderHoverMulti, .GHeaderGroup, .GHeaderGroupFocus,.GHeaderGroupDelete { 
+	border-bottom:1px solid #d0d0c0;
+	border-right:1px solid #d0d0c0;
+	vertical-align:top;
+	}
+.GHeaderGroup,.GHeaderGroupFocus,.GHeaderGroupDelete {
+    background: #E0E0D0;
+    border-right:1px solid #b0b0a0;
+    cursor:default;
+    }
+.GHeaderGroupFocus {
+    background: #C0C0A0;
+    }
+.GHeaderGroupDelete {
+    background: #F0F0E0;
+    color: #F0F0E0;
+    }
+.GCellNE {
+	cursor:default;
+	}
+.GHeaderHover,.GPanelTopHover {
+	border-bottom:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GHeaderHoverMulti {
+	background: #FAF8F3; 
+	cursor:default;
+	}
+.GHeaderFocus {
+	background: #DEDFD8; 
+	}
+.GPanelHover,.GPanelTopHover {
+	border-right:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GHeader,.GHeaderHover,.GHeaderHoverMulti,.GHeaderGroup { 
+	white-space:nowrap;
+	overflow:hidden;
+	}
+.GRightButton, .GFilterButton, .GTreeIcon {
+	vertical-align:top;
+	}
+.GCellSpaceButton {
+	overflow:hidden;
+	height:18px;
+	width:42px;
+	}
+   
+/* -----------------
+--- Cell content --- 
+----------------- */
+
+.GHeadText { 
+	font-size:13px;
+	padding-left:3px;
+	padding-right:3px;
+	white-space:nowrap;
+	}
+.GHeadSort { 
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GText,.GTextB,.GTextM,.GNumber,.GNumberB,.GNumberM,.GIText,.GINumber,.GLines,.GTextArea, .GHtml,.GRadio, .GIHtml {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	padding-left:3px;
+	padding-right:3px;
+	border:0px solid;
+	background:inherit;
+	}
+.GRadio {
+	padding-left:0px;
+	padding-right:5px;
+	}
+.GText,.GTextB,.GTextM {
+	white-space:nowrap;
+	padding-top:2px;
+	}
+.GHtml {
+	padding-top:2px;
+	cursor:default;
+	}
+.GIText,.GINumber, .GIHtml, .GIList {
+	display:block;
+	white-space:nowrap;
+	_margin-top:-1px;
+	_margin-bottom:-1px;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GNumber,.GNumberB,.GNumberM,.GINumber {
+	text-align:right;
+	white-space:nowrap;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GTextB,.GNumberB,.GNumberM {
+	color:blue;
+	}
+.GTextM,.GNumberM {
+	font-weight:bold;
+	}
+.GLines,.GTextArea {
+	padding-top:1px;
+	padding-bottom:1px;	
+	}
+.GTextArea {
+	margin:0px;
+	_padding-top:0px;
+	_padding-bottom:0px;
+	_padding-left:3px;
+	padding-right:0px;
+	_line-height:13px;
+	}
+.GSelect {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:10px;
+	}
+.GButton,.GButtonSpace,.GButtonSpaceChecked {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:9px;
+	height:18px; 
+	cursor:pointer;
+	_cursor:hand;	
+	padding-bottom:3px;
+	margin-bottom:4px;
+	}
+.GButtonImg {
+	cursor:pointer;
+	_cursor:hand;
+	text-align:right;
+	}
+.GGroupCustom {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	color:#BBB;
+	font-style:italic;
+	padding-left:5px;
+	cursor:default;
+	white-space:nowrap;
+	height:17px;
+   }
+.GButtonSpace {
+	width:42px;
+   }
+.GButtonSpaceChecked {
+	color:blue;
+	font-weight:700;
+	width:42px;
+	}
+
+/* ------------
+--- Toolbar --- 
+------------ */
+
+.GControlPanel {
+	border-top:1px solid #808070;
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	border-bottom:1px solid #a0a090;
+	padding-top:1px;
+	padding-bottom:1px;
+	background: #F0F0E0;
+	}
+.GControlPanelCell {
+	background: #F0F0E0;
+	}
+.GControlPanelImg,.GControlPanelImgHover,.GControlPanelImgChecked,.GControlPanelImgHoverChecked {
+	cursor:pointer;	
+	_cursor:hand;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:2px;
+	border-right:1px solid #d0d0c0;
+	font-size:12px;
+	}
+.GControlPanelImgHover,.GControlPanelImgHoverChecked {
+	margin-top:0px;
+	margin-bottom:1px;
+	padding-top:3px;
+	padding-bottom:1px;
+	border-bottom:1px solid #FCC247;
+	background: #FFFFFF; 
+	}
+.GControlPanelImgChecked,.GControlPanelImgHoverChecked {
+	color:#8080FF;
+	font-weight:700;
+	}
+.GControlPanelFormula {
+	padding-left:5px;
+	padding-right:5px;
+	white-space:nowrap;
+   }
+
+/* -------------
+--- Cfg menu --- 
+------------- */
+
+.GCfgMenu {
+	border:3px outset #DDD;
+	padding:6px;
+	background:#ddddff;
+	margin:3px;
+	}
+.GCfgMenuItem {
+	font-size:13px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GCfgMenuHover {
+	background:#ffeeaa;
+	font-size:13px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GCfgMenuButton {
+	width:70px;
+	font-size:11px;
+	margin:2px;
+	}
+
+
+/* ----------------
+--- Popup menus --- 
+---------------- */
+
+.GFilterMenu {
+	border:1px outset #aaaaff;
+	background:#eeeeee;
+	margin-top:1px;
+   cursor:pointer;
+	_cursor:hand;
+	}
+.GFilterMenuItem {
+	font-size:13px;
+	}
+.GFilterMenuHover {
+	background:#ffeeaa;
+	font-size:13px;
+	}
+
+
+/* ----------------
+--- Date picker --- 
+---------------- */
+
+.GPickTag {
+	background:#eeeeee;
+	padding:5px;
+	margin-top:1px;
+	}
+.GPickMS{
+	width:77px;
+	font-size:11px;
+	}
+.GPickB{
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:10px;
+	font-weight:bold; 
+	cursor:pointer;
+	_cursor:hand;
+	width:20px;
+	}
+.GPickMY{
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:13px;
+	font-weight:bold; 
+	color:#2200cc;
+	}
+.GPickWDN {
+	background-color:#bbbbbb;
+	text-align:center; 
+	width:20px; 
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:11px;
+	}
+.GPickWD, .GPickSa, .GPickSu, .GPickSel, .GPickNow, .GPickWDNE, .GPickSaNE, .GPickSuNE, .GPickSelNE, .GPickNowNE {
+	text-align:center; 
+	width:20px;
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:12px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GPickWDNE, .GPickSaNE, .GPickSuNE, .GPickSelNE, .GPickNowNE {
+	cursor:default;
+	}
+.GPickWD {
+	background-color:#ffffff;
+	}
+.GPickSa {
+	background-color:#ddddff;
+	}
+.GPickSu {
+	background-color:#aaaaff;
+	}
+.GPickSel {
+	background-color:#ffff77;
+	}
+.GPickSelNE {
+	background-color:#ffffdd;
+	}
+.GPickNow {
+	background-color:#dd44dd;
+	}
+.GPickNowNE {
+	background-color:#ffe0ff;
+	}
+
+
+/* ----------
+--- Pager --- 
+---------- */
+
+.GPagerBody {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #a0a090;
+	background: #F0F0E0;
+	}
+.GPagerHeader {
+	border-bottom:1px solid #b0b0a0;
+	border-top:1px solid #b0b0a0;
+	border-left:1px solid #a0a090;
+	border-right:1px solid #a0a090;
+	}
+.GPagerItem, .GPagerHover, .GPagerCaption {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	border-top:1px solid #ffffff; 
+	border-bottom:1px solid #d0d0c0;
+	border-left:1px solid #d0d0c0;
+	border-right:1px solid #d0d0c0;
+	padding-left:3px;
+	padding-right:3px;
+	background: #F0F0E0;
+	}
+.GPagerCaption {
+	height:17px;
+	cursor:default;
+	}
+.GPagerItem {
+	cursor:pointer;
+	_cursor:hand;
+	background: #FFFFFF;
+	}
+.GPagerHover {
+	cursor:pointer;
+	_cursor:hand;
+	background: #DCF0FF;
+	}
+.GPagerCursor {
+	cursor:pointer;
+	_cursor:hand;
+	background:#aFaF00;
+	opacity:0.5;              /* Mozilla */
+	filter:alpha(opacity=50); /* IE */
+	}
+.GPagerSort1 {
+	color: #006600;
+	}
+.GPagerSort2 {
+	color: #00AE00;
+	}
+.GPagerSort3 {
+	color: #00FF00;
+	}
+.GPagerSortS {
+	color: black;
+	}
+
+/* -----------------
+--- Simple pager --- 
+----------------- */
+
+
+.GSimplePager {
+   padding-left:3px;
+   padding-top:2px;
+   padding-bottom:2px;
+   margin-top:2px;
+   margin-bottom:2px;
+   font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	cursor:pointer;
+	color:blue;
+	display:inline-block;
+   }
+.GSimplePager:visited {
+   color:blue;
+   }
+.GSimplePager:hover {
+   color:red;
+   }
+
+
+/* ----------
+--- Other --- 
+---------- */
+
+.GMessage {
+	background:#F0F0E0;
+	border:3px outset #DDD;
+	padding:10px;
+	white-space:nowrap;
+	}
+.GPageMessage {
+	background:#FaFaFa;
+	border:1px solid #f77;
+	padding:10px;
+	}
+.GPage {
+	border-top:1px solid #d0d0c0;
+	}
+.GPageOne {
+	
+	}
+.GTable {
+	
+	}

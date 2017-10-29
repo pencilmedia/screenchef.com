@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" verticalGap="0" backgroundColor="#FFFFFF">
+	<mx:Script>
+		<![CDATA[
+	public function goToQuoteDetail():void
+            {
+            	parentApplication.navStack.selectedChild = parentApplication.quoteDetail;
+            }
+	
+	]]>                                                                                                                         
+	 </mx:Script>
+	<mx:XMLList id="actionItems">
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+        <actionItems>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+            <date>12/12/2012</date>
+        </actionItems>
+    </mx:XMLList>
+    <mx:XMLList id="favourites">
+        <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       <favourites>
+            <id>REQ-144</id>
+            <description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</description>
+        </favourites>
+       
+    </mx:XMLList>
+<mx:VBox verticalGap="10" width="100%" height="100%" backgroundColor="#FFFFFF" paddingTop="10" paddingBottom="10" paddingLeft="10" paddingRight="10">
+	<mx:Grid width="100%">
+		<mx:GridRow width="100%" >
+			<mx:GridItem width="50%" verticalAlign="middle">
+				<mx:Text text="Welcome Team" fontSize="18" />	
+			</mx:GridItem>
+			<mx:GridItem width="50%" verticalAlign="middle" horizontalAlign="right" paddingRight="10">
+				<mx:Button id="createNew" label="Create New" color="#000000"  labelPlacement="left" icon="@Embed(source='/assets/images/icons/ico_dropdown.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+	<mx:HDividedBox id="homeContent" width="100%" height="100%"  >
+		<mx:VDividedBox width="50%" height="100%" >
+			<mx:Panel width="100%" height="40%" layout="absolute" title="My Open Action Items" >
+				<mx:DataGrid dataProvider="{actionItems}" width="100%" height="100%" headerHeight="0" verticalGridLines="false" rowHeight="25" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn dataField="description" paddingLeft="5">
+						<mx:itemRenderer>
+								<mx:Component>
+									<mx:CheckBox label="{data.description}"/>
+								</mx:Component>
+							</mx:itemRenderer>
+						</mx:DataGridColumn>
+                		<mx:DataGridColumn dataField="id"  width="75"/>
+                		<mx:DataGridColumn dataField="date" width="100" />
+               		</mx:columns>
+				</mx:DataGrid>
+				<mx:ControlBar textAlign="right" paddingTop="0" paddingRight="0" paddingBottom="5" horizontalAlign="right">
+					<mx:LinkButton label="View all..." fontSize="11" color="#3c5ab3" fontWeight="normal" />			
+				</mx:ControlBar>
+			</mx:Panel>
+			<mx:Panel width="100%" height="60%" layout="absolute" title="My Records">
+				<mx:DataGrid click="goToQuoteDetail()" dataProvider="{favourites}" width="100%" height="100%" headerHeight="0" verticalGridLines="false" rowHeight="25" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn dataField="description" />
+						<mx:DataGridColumn dataField="id" width="70" />
+						
+					</mx:columns>
+				</mx:DataGrid>
+				<mx:ControlBar textAlign="right" paddingTop="0" paddingRight="0" paddingBottom="5" horizontalAlign="right">
+					<mx:LinkButton label="View all..." fontSize="11" color="#3c5ab3" fontWeight="normal" />			
+				</mx:ControlBar>
+			</mx:Panel>
+		</mx:VDividedBox>
+		<mx:Panel width="50%" height="100%" layout="absolute" title="Recent Updates" horizontalScrollPolicy="off">
+			<mx:VBox  verticalGap="0" width="100%" height="100%" backgroundColor="#ffffff" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid" >
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox width="66%" horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" backgroundColor="#eff1f2" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox width="66%" horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" backgroundColor="#eff1f2" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox width="66%" horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" backgroundColor="#eff1f2" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox width="66%" horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" backgroundColor="#eff1f2" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox width="66%" horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" backgroundColor="#eff1f2" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox width="66%" horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0" backgroundColor="#eff1f2" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+			</mx:VBox>
+		</mx:Panel>
+	</mx:HDividedBox>
+	</mx:VBox>
+</mx:VBox>

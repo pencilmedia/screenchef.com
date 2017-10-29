@@ -1,0 +1,78 @@
+.progress_indicator
+{
+	visibility:hidden;
+	z-index: 90005;
+}
+
+.progress_indicator.global
+{
+	background-color: #fff;
+	background: url(/global/images/activity_00.gif) no-repeat center center;
+	height: 16px;
+	width: 16px;
+	padding: 8px;
+}
+
+.progress_indicator.action
+{
+	background-color: #fff;
+	background: url(/global/images/activity_00.gif) no-repeat 3px 5px;
+	position: absolute;
+	padding: 5px 5px 5px 25px;
+	border: 1px solid silver;
+	background-color: #fff;
+	top: 400px;
+	left: 55%;
+}
+
+.progress_indicator.table
+{
+	position: absolute;
+	padding: 5px;
+	top: 520px;
+	left: 55%;
+}
+
+.progress_indicator_mask
+{
+	display: none;
+	background-color:#333333;
+	height:100%;
+	opacity:0.1;
+	position:absolute;
+	top:0pt;
+	width:100%;
+	z-index:9000;	
+}
+
+div.activity_indicator1,
+div.activity_indicator2,
+div.activity_indicator3 { display: none; }
+
+
+div.activity_indicator2
+{
+	position: absolute;
+	z-index: 99999;
+	right: 0;
+	top: 0;
+	background-color: #dbeaff;
+	border:1px solid silver;
+	padding: 3px 5px;
+}
+
+div.activity_indicator3
+{
+	position: absolute;
+	z-index: 99999;
+	right: 0px;
+	top: 0px;
+	background-color: #dbeaff;
+	border:1px solid silver;
+	padding: 3px 5px;
+	width: 50px;
+}
+div.activity_done
+{
+	background: url(/global/images/activity_done.gif) no-repeat center center;			
+}

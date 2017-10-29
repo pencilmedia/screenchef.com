@@ -1,0 +1,39 @@
+html, body
+{
+	margin: 0;			/* Remove body margin/padding */
+	padding: 0;
+	overflow: hidden;	/* Remove scroll bars on browser window */
+}
+
+/*
+ * Splitter container. Set this to the desired width and height
+ * of the combined left and right panes. In this example, the
+ * height is fixed and the width is the full width of the body,
+ * less the margin on the splitter itself.
+ */
+#appContainer { min-width:300px; height: 100px; }
+/*
+ * Left-side element of the splitter. Use pixel units for the
+ * min-width and max-width; the splitter plugin parses them to
+ * determine the splitter movement limits. Set the width to
+ * the desired initial width of the element; the plugin changes
+ * the width of this element dynamically.
+ */
+#leftContainer, #rightContainer {
+	/* No margin or border allowed */
+	overflow:auto;
+	min-width: 20px;	/* optional */
+}
+
+/* 
+ * Splitter bar style; the .active class is added when the
+ * mouse is over the splitter or the splitter is focused
+ * via the keyboard taborder or an accessKey. 
+ */
+#appContainer .vsplitbar {
+	width: 6px;
+	background: #D7E8FF url(/global/images/vgrabber.gif) no-repeat center;
+}
+#appContainer .vsplitbar.active, #appContainer .vsplitbar:hover {
+	background: #678FC2 url(/global/images/vgrabber.gif) no-repeat center;
+}

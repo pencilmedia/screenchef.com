@@ -1,0 +1,607 @@
+<!-- Page Top
+================================================== -->
+
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/favicon.png">
+    <meta name="description" content="">
+
+    <!-- For iOS web apps-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/apple-touch-icon-114x114.png">
+
+    <!--[if lt IE 9]>
+    <script src="/portfolio/work/paradata/style-guide/dist/app/http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Font Library
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/fonts/font-custom/font-custom.css">
+
+    <!-- Plug-Ins Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css">
+
+    <!-- Animate.css
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/animate.css/animate.min.css">
+
+    <!-- Style Guide Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/css/styleguide.css">
+
+    <!-- OLD YETI Styles
+    ================================================== -->
+    <!-- <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/css/_original/style.css"> -->
+
+    <!-- Theme Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/css/theme.css">
+
+    <!-- Code Snippet CSS -->
+    <link rel="stylesheet" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/highlightjs/styles/monokai_sublime.css">
+
+    <!-- Modernizr -->
+    <script type="text/javascript" src="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/modernizer/modernizr.js"></script>
+
+
+    <title>Paradata Style Guide</title>
+  </head>
+
+  <!-- Page <BODY>
+  ================================================== -->
+  <body class="style-guide components forms" data-id="forms">
+    <section class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="sg-content col-xs-12 col-sm-9">
+          <!-- Responsive Navigation Button
+          ================================================== -->
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-link" data-toggle="offcanvas" title="Toggle nav"> <i class="fa fa-bars"></i>
+            </button>
+          </p>
+
+
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h1>Forms</h1>
+<p>A form is a collection of labels and input fields on a single page, panel or dialog. Try to keep forms as semantic as possible and consider hidden HTML tags that aid in accessibility.</p>
+
+<!-- Page Nav
+================================================== -->
+<div class="sg-page-nav">
+	<div>
+		<h6>Go To:</h6>
+		<ul>
+			<li><a href="#section-1">Field Styling</a></li>
+			<li><a href="#section-2">Form Layouts</a></li>
+			<li><a href="#section-3">Form Errors</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="http://getbootstrap.com/css/#forms" target="_blank" class="btn btn-default">View Guidelines</a>
+	</div>
+</div>
+<div class="alert alert-info" role="alert">
+	<p> <i class="fa fa-info-circle"></i>
+		Forms are an extension of Bootstrap forms. Please visit
+		<a href="http://getbootstrap.com/css/#forms" class="alert-link" target="_blank">bootstrap forms</a>
+		to get more information on them if you don't see what you need here.
+	</p>
+</div>
+
+<!-- Page Content
+================================================== -->
+<h2 id="section-1">Field Styling</h2>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Field Styles</h3>
+  </div>
+  <div class="panel-body">
+	 <p>Below are the different styles of fields. Editable, required, active, error, disabled and read-only fields. You can also disable an entire group by applying <code>disabled</code> to the fieldset. <a href="http://getbootstrap.com/css/#forms-control-disabled" target="_blank">Read more here</a>.</p>
+	 <p>The editable field contains a <code>placeholder</code>. When you are in focus and type 1 character it disappears and replaces with the character typed. Also, when any field contains a value and focus is put on it the value is highlighted through javascript <code>this.select()</code>.</p>
+
+      <!-- BEGIN: CONTENT HERE -->
+
+	 <form class="form-horizontal pd-horizontal inline-status">
+		<div class="form-group">
+		    <label for="input1" class="col-sm-3 control-label">Editable Field</label>
+		    <div class="col-sm-9">
+		        <input id="input1" class="form-control">
+		    </div>
+		</div>
+		<div class="form-group">
+		    <label for="input2" class="col-sm-3 control-label">Required Field</label>
+		    <div class="col-sm-9">
+		        <input id="input2" class="form-control" placeholder="required" required>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <label for="input3" class="col-sm-3 control-label">Disabled Field</label>
+		    <div class="col-sm-9">
+		        <input id="input3" class="form-control disabled" value="Disabled Field" disabled>
+		    </div>
+		</div>
+		<div class="form-group has-error">
+		    <label for="input4" class="col-sm-3 control-label">Error Field</label>
+		    <div class="col-sm-9 field-indicator">
+		        <input id="input4" class="form-control">
+		        <i class="fa fa-exclamation-triangle"></i>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-3 col-sm-9">
+		        <div class="checkbox">
+		            <label>
+		                <input type="checkbox"> Remember me
+		            </label>
+		        </div>
+		    </div>
+		</div>
+	 </form>
+
+      <!-- END: CONTENT HERE -->
+      <!-- BEGIN: CODE SNIPPET -->
+      <h4>Code Snippet</h4>
+      <div class="highlight">
+      <pre>
+      <code class="html">
+      <!-- BEGIN: HTML SNIPPET -->
+
+		<div class="form-group">
+		    <label for="input1" class="col-sm-3 control-label">Editable Field</label>
+		    <div class="col-sm-9">
+		        <input id="input1" class="form-control">
+		    </div>
+		</div>
+		<div class="form-group">
+		    <label for="input2" class="col-sm-3 control-label">Required Field</label>
+		    <div class="col-sm-9">
+		        <input id="input2" class="form-control" placeholder="required" required>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <label for="input3" class="col-sm-3 control-label">Disabled Field</label>
+		    <div class="col-sm-9">
+		        <input id="input3" class="form-control disabled" value="Disabled Field" disabled>
+		    </div>
+		</div>
+		<div class="form-group has-error">
+		    <label for="input4" class="col-sm-3 control-label">Error Field</label>
+		    <div class="col-sm-9 field-indicator">
+		        <input id="input4" class="form-control">
+		        <i class="fa fa-exclamation-triangle"></i>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-3 col-sm-9">
+		        <div class="checkbox">
+		            <label>
+		                <input type="checkbox"> Remember me
+		            </label>
+		        </div>
+		    </div>
+		</div>
+
+      <!-- END: HTML SNIPPET -->
+      </code>
+      </pre>
+      </div><!--/.highlight-->
+      <!-- END: CODE SNIPPET -->
+
+  </div>
+</div><!--/.panel-body-->
+
+<h2 id="section-2">Form Layouts</h2>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Horizontal Form</h3>
+  </div>
+  <div class="panel-body">
+	<p>Horizontal forms have labels to the left of the input fields. Use the class <code>.form-horizontal</code> on the <code>&lt;form&gt;</code> element.</p>
+
+      <!-- BEGIN: CONTENT HERE -->
+
+	<form class="form-horizontal">
+          <fieldset>
+               <legend>Specify Price Type</legend>
+               <dl>
+                   <dt>Quote Source</dt>
+                   <dd class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> <strong>Partner</strong> (Electronics Manufacturing Services, Original Design Manufacturing)
+                        </label>
+                   </dd>
+                   <dd class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Supplier
+                        </label>
+                   </dd>
+               </dl>
+          </fieldset>
+          <fieldset>
+               <legend>Specify Price Set Information</legend>
+               <div class="form-group">
+                    <label for="input1" class="col-sm-3 control-label">Partner</label>
+                    <div class="col-sm-9">
+                         <input type="text" class="form-control" id="input1" placeholder="Type Name">
+                    </div>
+               </div>
+               <div class="form-group">
+                    <label for="input2" class="col-sm-3 control-label">Price Set Name</label>
+                    <div class="col-sm-9">
+                         <input type="text" class="form-control" id="input2" placeholder="ex. EMS Q1 8000">
+                    </div>
+               </div>
+               <div class="form-group">
+                    <label for="input3" class="col-sm-3 control-label">Choose File</label>
+                    <div class="col-sm-9">
+                         <input type="file" class="form-control" id="input3" placeholder="Choose File">
+                    </div>
+               </div>
+               <div class="form-group">
+                    <label for="input4" class="col-sm-3 control-label">Date</label>
+                    <div class="col-sm-9">
+                         <input type="date" class="form-control" id="input4" placeholder="Type Name">
+                    </div>
+               </div>
+          </fieldset>
+          <fieldset>
+               <legend>Map Fields</legend>
+
+               <div class="field-mapping">
+                   <div class="row title-group">
+                       <h5 class="col-sm-5">Our Fields</h5>
+                       <h5 class="col-sm-7">Import from Price File</h5>
+                   </div>
+                  <div class="row">
+                      <div class="col-sm-5"><strong>Item Number</strong></div>
+                      <div class="col-sm-6">
+                         <select class="form-control">
+                              <option value="1"><strong>Item Number</strong></option>
+                         </select>
+                    </div>
+                      <div class="col-sm-1">
+                          <i class="fa fa-check" title="This field is mapped"></i>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-5"><strong>Cost for 1000 units</strong></div>
+                      <div class="col-sm-6">
+                         <select class="form-control">
+                              <option value="1"><strong>-</strong></option>
+                         </select>
+                      </div>
+                      <div class="col-sm-1">&nbsp;</div>
+                  </div>
+               </div>
+          </fieldset>
+     </form>
+
+      <!-- END: CONTENT HERE -->
+      <!-- BEGIN: CODE SNIPPET -->
+      <h4>Code Snippet</h4>
+      <div class="highlight">
+      <pre>
+      <code class="html">
+      <!-- BEGIN: HTML SNIPPET -->
+
+
+
+      <!-- END: HTML SNIPPET -->
+      </code>
+      </pre>
+      </div><!--/.highlight-->
+      <!-- END: CODE SNIPPET -->
+
+  </div>
+</div><!--/.panel-body-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Vertical Form</h3>
+  </div>
+  <div class="panel-body">
+	 <p>Using no class on the <code>&lt;form&gt;</code> element will bring the labels above the input fields.</p>
+
+      <!-- BEGIN: CONTENT HERE -->
+
+      Content here...
+
+      <!-- END: CONTENT HERE -->
+      <!-- BEGIN: CODE SNIPPET -->
+      <h4>Code Snippet</h4>
+      <div class="highlight">
+      <pre>
+      <code class="html">
+      <!-- BEGIN: HTML SNIPPET -->
+
+
+
+      <!-- END: HTML SNIPPET -->
+      </code>
+      </pre>
+      </div><!--/.highlight-->
+      <!-- END: CODE SNIPPET -->
+
+  </div>
+</div><!--/.panel-body-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Two Column Form</h3>
+  </div>
+  <div class="panel-body">
+     <!-- BEGIN: CONTENT HERE -->
+	<p>Using <code>.row</code> on the <code>&lt;form&gt;</code> element and wrapping fields in a <code>.col-md-6</code> will give a two column layout.</p>
+	<form class="form-inline row">
+		<h3>Form Title</h3>
+		<fieldset>
+			<legend>Form Group Headline</legend>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="identifier">ID</label>
+					<input id="identifier" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+				</div>
+				<div class="form-group">
+					<label for="full_name">Name</label>
+					<input id="full_name" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input id="description" class="form-control" placeholder="Required" required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="keywords">Keywords</label>
+					<input id="keywords" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="status">Password</label>
+					<select id="status" class="form-control">
+						<option value="draft">Draft</option>
+						<option value="revised">Revised</option>
+					</select>
+				</div>
+				<div class="form-group multi-line">
+					<label for="notes">Notes</label>
+					<textarea id="notes" class="form-control" rows="3"></textarea>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+      <!-- END: CONTENT HERE -->
+      <!-- BEGIN: CODE SNIPPET -->
+      <h4>Code Snippet</h4>
+      <div class="highlight">
+      <pre>
+      <code class="html">
+      <!-- BEGIN: HTML SNIPPET -->
+
+
+
+      <!-- END: HTML SNIPPET -->
+      </code>
+      </pre>
+      </div><!--/.highlight-->
+      <!-- END: CODE SNIPPET -->
+
+  </div>
+</div><!--/.panel-body-->
+
+<h2 id="section-3">Form Errors</h2>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Form with Errors</h3>
+  </div>
+  <div class="panel-body">
+	<p>Utilize the bootstrap class <code>.has-error</code> on the <code>.form-group</code> wrapper to call out errors.</p>
+	<p>Tap on the error icon to view the error message. A bootstrap popover was used and binded to the <code>.field-indicator</code>.</p>
+	
+     <!-- BEGIN: CONTENT HERE -->
+
+	<form class="inline-status">
+		<div class="alert alert-danger" role="alert">
+			<p><i class="fa fa-exclamation-triangle"></i>Please resolve the issues below.</p>
+		</div>
+		<fieldset>
+			<legend>Form Title</legend>
+			<div class="form-group">
+				<label for="full_name3">Name</label>
+				<input id="full_name3" class="form-control">
+			</div>
+			<div class="form-group has-error">
+				<label class="control-label" for="description3">Description</label>
+				<input type="text" class="form-control" id="description3" placeholder="Required" required>
+				<button type="button" class="btn btn-link field-indicator"><i class="fa fa-exclamation-triangle"></i></button>
+			</div>
+		</fieldset>
+	</form>
+
+      <!-- END: CONTENT HERE -->
+      <!-- BEGIN: CODE SNIPPET -->
+      <h4>Code Snippet</h4>
+      <div class="highlight">
+      <pre>
+      <code class="html">
+      <!-- BEGIN: HTML SNIPPET -->
+
+
+
+      <!-- END: HTML SNIPPET -->
+      </code>
+      </pre>
+      </div><!--/.highlight-->
+      <!-- END: CODE SNIPPET -->
+
+  </div>
+</div><!--/.panel-body-->
+
+
+<!-- END: Template Content
+================================================== -->
+
+<!-- Page Bottom
+================================================== -->
+</div><!--/.col-xs-12.col-sm-9-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <!-- Main Navigation
+          ================================================== -->
+          <!-- Page Header
+================================================== -->
+<!-- INSTRUCTIONS: 
+The navigation item is selected by matching the 'data-id' and the "pageID" variable on the index.html for each page
+-->
+<h1><i class="fa fa-briefcase"></i>Design Library</h1>
+<nav id="styleguideNav" role="navigation">
+   <ul class="nav nav-list">
+       <li>
+           <ul class="nav-stacked tree">
+                <li>
+                    <a href="/" class="btn btn-default" data-id="homepage">Return to Homepage</a>
+                </li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Foundations</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+            <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/code_style.html" data-id="codestyle">Coding Style</a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/typography.html" data-id="typography">Typography</a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/icons.html" data-id="iconography">Iconography</a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/colors.html" data-id="colors"><strike>Colors</strike></a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/entities.html" data-id="entities">HTML Entities</a></li>
+            <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/animation.html" data-id="animation">Animation</a></li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Components</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/breadcrumb/" data-id="component-breadcrumb"><strike>Breadcrumb</strike></a></li>
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/buttons/" data-id="buttons">Buttons</a></li>
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/dialogs/" data-id="dialogs">Modal Dialogs</a></li>
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/forms/" data-id="forms">Forms</a></li>
+<!--               <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/tabs/" data-id="tabs">Tabs</a></li> -->
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/tooltips/" data-id="tooltips"><strike>Tooltips</strike></a></li>
+              <li> <!-- Subtree -->
+                <a href="#/" class="tree-toggler subtree"><i class="fa fa-caret-down"></i>Input Controls</a>
+                <ul class="nav nav-pills nav-stacked tree">
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/date_range/" data-id="date-range"><strike>Date, Date Range</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/date_single/" data-id="date-single"><strike>Date, Single Date</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/long_list_single/" data-id="long-list-single"><strike>List, Long Single Value</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/long_list_multi/" data-id="long-list-multi"><strike>List, Long Multi Value</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/select_angular/" data-id="angular-select">Select2 Box with Angular</a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/money/" data-id="money-input"><strike>Money Input</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/quantity/" data-id="quantity-input"><strike>Quantity Input</strike></a></li>
+                </ul>
+              </li>
+           </ul>
+       </li>
+   </ul>
+</nav>  
+
+
+
+        </div><!--/.sidebar-offcanvas-->
+      </div>
+      <!--/row-->
+    </section><!--/.container-->
+
+    <!-- END/ Page Content
+    ================================================== -->
+
+
+    <!-- JavaScripts
+    ================================================== -->
+
+    <!--jQuery CDN -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Plug-Ins -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.js"></script>
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/jquery.truncator/jquery.truncator.js"></script>
+
+    <!-- Polyfills - create support for unsupported browsers
+    ... Will be added here ... -->
+
+    <!-- Bootstrap Components -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Plugins  -->
+    <!-- plugins go here -->
+
+    <!-- App JS -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/js/app.js"></script>
+
+    <!-- Components JS  -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/js/components.js"></script>
+
+    <!-- Component Library (Style Guide) Specific JS -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/js/styleguide.js"></script>
+
+    <!-- Angular Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+
+
+    <!-- HighLight Plugin for code snippest -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/highlightjs/highlight.pack.js"></script>
+    <script>hljs.configure({ 'languages': ['html', 'javascript'] });</script>
+    <script type="text/javascript">
+      $('pre code').each(function(i, item){
+        var htmlOfElement = $(item).html().replace(/</g, '&lt;');
+        var htmlOfElement = htmlOfElement.replace(/>/g, '&gt;');
+        $(item).html(htmlOfElement);
+        hljs.highlightBlock(item);
+      });
+    </script>
+
+    <!-- Angular module setup -->
+    <script>
+      var angApp = angular.module('myApp',[]);
+        angApp.controller('appCtrl', ['$scope', function($scope){
+          $scope.collection = [
+            {name:'Scott'},
+            {name:'Steve'},
+            {name:'Nick'},
+            {name:'Asha'},
+            {name:'Vishak'},
+            {name:'Joel'},
+            {name:'Ralph'},
+            {name:'Marq'},
+            {name:'Michele'},
+            {name:'Kiavash'}
+          ];
+        }]);
+    </script>
+
+    <!-- FOR DEV PURPOSES: LiveReload -->
+    <script src="//localhost:35729/livereload.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,155 @@
+/*-------------------------------
+MENU.CSS
+OVERWRITES PRIMARILY YUI MENU CSS
+-------------------------------*/
+
+/* menu and submenu */
+div.yuimenu { 
+	position: absolute;
+	background-color: #fff; 
+	border: solid 1px #999; 
+	padding: 0px; 
+	visibility: hidden;
+}
+
+/* Matches the UL inside a Menu or MenuBar instance */
+div.yuimenu ul {
+	padding: 0; 
+}
+
+
+/* MenuItem and MenuBarItem styles */
+div.yuimenu li,
+div.yuimenubar li {
+	font-size: 100%;
+}
+div.yuimenu li.yuimenuitem {
+	padding: 5px 10px 5px 15px; 
+}
+div.yuimenu li li,
+div.yuimenubar li li { 
+	font-size: 100%;
+}
+/* set text color */
+div.yuimenu li a,
+div.yuimenubar li a { 
+	color: #333; 
+	text-decoration: none; 
+	outline: none; 
+	-moz-outline:none; 
+	margin-right: 10px;
+}
+div.yuimenu li a:focus,
+div.yuimenubar li a:focus { 
+	width: 0; 
+	height: 0; 
+}
+/* background color of selected items */
+div.yuimenu li.selected,
+div.yuimenubar li.selected
+{ 
+	background-color: #e4eeff;
+	width:auto;
+	margin-right:0px;
+}
+/* decoration for any links */
+div.yuimenu li.selected a.selected,
+div.yuimenubar li.selected a.selected {
+	 text-decoration: none;
+}
+/* color of text when selected */
+div.yuimenu li.selected a.selected,
+div.yuimenu li.selected em.selected, 
+div.yuimenubar li.selected a.selected { 
+	color: #333;
+}
+div.yuimenu .disabled {
+	background-color: #fff; 
+	color: #666;
+}
+
+/* Styles for the the submenu indicator for menu items */
+div.yuimenu li.hassubmenu em.submenuindicator {
+	background-position:0 0; 
+	background-image:url(../images/agile_map.png); 
+	margin: 0 ; 
+	padding: 0; 
+}
+
+/* Styles for helptext / also overwrites default.css em */
+em.helptext { 
+	font-weight: normal; 
+	margin-right: 30px; 
+}
+
+/* Styles for a menu item's "checked" state */
+div.yuimenu li em.checkedindicator {
+    height:8px;
+    width:8px;
+    text-indent:9px;
+    overflow:hidden;
+    background-image:url(map.gif);
+    background-position:0 -48px;
+    background-repeat:no-repeat;
+    position:absolute;
+    _left:-16px; /* Underscore hack b/c this is for IE 6 only */
+    top:.5em;
+	left: 3px; 
+	margin: 0;
+	padding: 0; 
+}
+
+
+div.yuimenu li.checked em.checkedindicator {
+	background-image:url(../images/agile_map.png);  
+	left: 3px; 
+	margin: 0;
+	padding: 0;
+}
+
+.activity_status a,
+.activity_status a:hover {
+	background: url('../images/icn_activity_status.png') left center no-repeat;
+	margin-left: -12px;
+	padding-left: 12px;
+}
+
+/*
+    Styles for the menu's header and footer elements that are used as controls 
+    to scroll the menu's body element when the menu's height exceeds the 
+    value of the "maxheight" configuration property.
+*/
+div.yuimenu div.topscrollbar,
+div.yuimenu div.bottomscrollbar {
+    height:16px;
+    background-image:url(../images/agile_map.png);
+    background-repeat:no-repeat;
+}
+
+
+div.yuimenu div.topscrollbar {
+    background-image:url(../images/agile_map.png);
+    background-position:center -72px;
+    background-color: #ededed;
+}
+
+
+div.yuimenu div.topscrollbar_disabled {
+    background-image:url(../images/map.gif);
+    background-position:center -88px;
+    background-color: transparent;
+}
+
+
+div.yuimenu div.bottomscrollbar {
+    background-image:url(../images/agile_map.png);
+    background-position:center -104px;
+    background-color: #ededed;
+}
+
+
+div.yuimenu div.bottomscrollbar_disabled {
+    background-image:url(../images/map.gif);
+    background-position:center -120px;
+    background-color: transparent;
+}

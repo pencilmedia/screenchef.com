@@ -1,0 +1,269 @@
+/* BEGIN: buttons.scss
+// -----------------------------------------------------*/
+
+// btn-default
+$btnDefault: $btn-silver;
+$btnDefaultBorder: darken($btnDefault, 1%);
+//hover
+$btnDefaultHvr: darken($btnDefault, 10%);
+$btnDefaultBorderHvr: darken($btnDefault, 11%);
+// btn-primary
+$btnPrimary: $btn-blue;
+$btnPrimaryBorder: darken($btnPrimary, 2%);
+//hover
+$btnPrimaryHvr: darken($btnPrimary, 10%);
+$btnPrimaryBorderHvr: darken($btnPrimary, 11%);
+// btn-secondary
+$btnSecondary: $btn-mint;
+$btnSecondaryBorder: darken($btnSecondary, 2%);
+//hover
+$btnSecondaryHvr: darken($btnSecondary, 10%);
+$btnSecondaryBorderHvr: darken($btnSecondary, 11%);
+// btn-success
+$btnSuccess: $green;
+$btnSuccessBorder: darken($btnSuccess, 2%);
+//hover
+$btnSuccessHvr: darken($btnSuccess, 10%);
+$btnSuccessBorderHvr: darken($btnSuccess, 11%);
+// btn-info
+$btnInfo: $blue6;
+$btnInfoBorder: darken($btnInfo, 2%);
+//hover
+$btnInfoHvr: darken($btnInfo, 10%);
+$btnInfoBorderHvr: darken($btnInfo, 11%);
+// btn-warning
+$btnWarning: $orange;
+$btnWarningBorder: darken($btnWarning, 2%);
+//hover
+$btnWarningHvr: darken($btnWarning, 10%);
+$btnWarningBorderHvr: darken($btnWarning, 11%);
+// btn-danger
+$btnDanger: $red;
+$btnDangerBorder: darken($btnDanger, 2%);
+//hover
+$btnDangerHvr: darken($btnDanger, 10%);
+$btnDangerBorderHvr: darken($btnDanger, 11%);
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn {
+    @include border-radius(3px);
+    @include hoverTransition();
+    background-color: $btnDefault;
+    border-color: $btnDefaultBorder;
+    background-image: none;
+    box-shadow: none;
+    font-size: $baseFontSize;
+    font-weight: normal;
+    font-weight: 500;
+    padding: 6px 17px;
+    text-shadow: none;
+    &.btn-sm {
+        padding: 3px 10px;
+    }
+    .fa {
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+    }
+    // Disabled
+    &.disabled, &.btn[disabled], &[disabled] {
+        background-image:none;
+        -webkit-box-shadow:none;
+        -moz-box-shadow:none;
+        box-shadow:none;
+        cursor: default;
+        filter: alpha(opacity=5);
+        font-weight: normal;
+        letter-spacing: 0;
+        opacity: 0.5;
+        text-shadow: none;
+    }
+    // Default Buttons
+    &.btn-default {
+        background-color: $btnDefault;
+        border-color: $btnDefaultBorder;
+        color: $charcoal;
+        &:hover,
+        &:active, &:active{
+            background-color: $btnDefaultHvr;
+            border-color: $btnDefaultBorderHvr;
+            color: $charcoal;
+        }
+        &.disabled, &[disabled], &[disabled] {
+            &:focus, &:hover {
+                background-color: $btnDefault;
+                border-color: $btnDefaultBorder;
+            }
+        }
+    }
+    // Primary Buttons
+    &.btn-primary {
+        background-color: $btnPrimary;
+        border-color: $btnPrimaryBorder;
+        font-family: $baseFont;
+        font-weight: 600;
+        // Begin: Yeti Overrides (old app styles)
+        color: $white;
+        &:hover,
+        &:active, &.active {
+            background-color: $btnPrimaryHvr;
+            border-color: $btnPrimaryBorderHvr;
+        }
+        // Disabled
+        &.disabled, &.btn[disabled], &[disabled] {
+            color: $blue6;
+            &:focus, &:hover {
+                background-color: $btnPrimary;
+                border-color: $btnPrimaryBorder;
+            }
+        }
+    }
+    // Success Buttons
+    &.btn-secondary {
+        background-color: $btnSecondary;
+        border-color: $btnSecondaryBorder;
+        color: lighten($btnSecondary, 45%);
+        &:hover,
+        &:active, &.active {
+            background-color: $btnSecondaryHvr;
+            border-color: $btnSecondaryBorderHvr;
+            color: lighten($btnSecondary, 55%);
+        }
+        // Disabled
+        &.disabled, &.btn[disabled], &[disabled] {
+            color: lighten($btnSecondary, 35%);
+            &:focus, &:hover {
+            background-color: $btnSecondary;
+            border-color: $btnSecondaryBorder;
+            }
+        }
+    }
+    // Info Buttons
+    &.btn-info {
+        background-color: $btnInfo;
+        border-color: $btnInfoBorder;
+        &:hover,
+        &:active, &.active {
+            background-color: $btnInfoHvr;
+            border-color: $btnInfoBorderHvr;
+        }
+    }
+    // Warning Buttons
+    &.btn-warning {
+        background-color: $btnWarning;
+        border-color: $btnWarningBorder;
+        &:hover,
+        &:active, &.active {
+            background-color: $btnWarningHvr;
+            border-color: $btnWarningBorderHvr;
+        }
+    }
+    // Success Buttons
+    &.btn-success {
+        background-color: $btnSuccess;
+        border-color: $btnSuccessBorder;
+        &:hover,
+        &:active, &.active {
+            background-color: $btnSuccessHvr;
+            border-color: $btnSuccessBorderHvr;
+        }
+    }
+    // Danger Buttons
+    &.btn-danger {
+        background-color: $btnDanger;
+        border-color: $btnDangerBorder;
+        &:hover,
+        &:active, &.active {
+            background-color: $btnDangerHvr;
+            border-color: $btnDangerBorderHvr;
+        }
+    }
+    &.btn-icon, &.btn-close {
+        color: $charcoal;
+        &:hover,
+        &:active, &:active{
+            background-color: $btnDefaultHvr;
+            border-color: $btnDefaultBorderHvr;
+            color: $charcoal;
+        }
+        &.disabled, &[disabled], &[disabled] {
+            &:focus, &:hover {
+                background-color: $btnDefault;
+                border-color: $btnDefaultBorder;
+            }
+        }
+    }
+    &.btn-link {
+        background: none;
+        border: none;
+        color: $charcoal;
+        &:focus, &:hover {
+            background: $btn-silver;
+            color: $linkBlue;
+        }
+        &.disabled, &[disabled], &[disabled] {
+            &:focus, &:hover {
+                background: none;
+                color: $blue;
+            }
+        }
+    }
+    &.btn-close {
+        background: none;
+        border: none;
+        .fa {
+            color: $gray6;
+            font-size: 125%;
+        }
+        &:hover {
+            .fa {
+                color: $charcoal;
+            }
+        }
+    }
+    &.btn-link, &.btn-icon, &.btn-close {
+        /* Undo Margin for icon only buttons */
+        .fa {
+            margin: 0;
+        }
+    }
+    // Buttons with an Icon on the right side
+    &.btn-icon-right {
+        .fa {
+            margin-left: 5px;
+            margin-right: 0;
+        }
+    }
+}
+
+// A Bootstrap button that goes well with uploadButton
+// Simply add the btn-upload class to hide the normal browse button
+.btn-upload {
+    border: 1px solid $borderColor;
+    @extend .btn;
+    @extend .btn-default;
+    position: relative;
+    overflow: hidden;
+    font-weight: normal;
+    input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: $white;
+        cursor: inherit;
+        display: block;
+    }
+}
+.no-file {
+    @include border-radius(4px);
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+}

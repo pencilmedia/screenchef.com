@@ -1,0 +1,80 @@
+/******************************************************************************
+COMMON.CSS
+Description: Shared / Common Styles.
+******************************************************************************/
+
+/******************************************************************************
+HEADERS
+******************************************************************************/
+div.container h3					{ margin: 20px 0 20px 0; } 
+h4.table_title						{ margin: 0 0 5px 10px }
+
+/******************************************************************************
+DEFINITION LISTS
+******************************************************************************/
+.action_dialog dt 					{ height: 22px; }
+.action_dialog dt label				{ line-height: 20px; }
+.action_dialog dd label,
+.action_dialog li label				{ color: #333; }
+
+.container dt, .container dd { 
+	float: left;
+}
+
+dl.side_by_side 					{ clear: both; margin-bottom: 5px; min-width: 475px; } 
+dl.side_by_side dt					{ float: left; text-align: right; margin: 0 5px 8px 0; clear: left; width: 25%; }
+dl.side_by_side dd 					{ margin: 0 5px 8px 0; height: 22px; }
+dl.side_by_side dd input			{ float: left; }
+dl.side_by_side dd a.button			{ line-height: 22px; }
+
+
+dl.side_by_side.with_top_margin		{ margin-top: 10px; }
+dl.side_by_side.with_bottom_margin	{ margin-bottom: 20px }
+
+dl.side_by_side_text 					{ clear: both; margin-bottom: 5px; min-width: 475px; overflow: auto; } 
+dl.side_by_side_text dt					{ float: left; text-align: right; margin: 0 5px 0 0; clear: left; width: 25%; height: 12px; }
+dl.side_by_side_text dd					{ float: left; margin: 0 5px 5px 0; width:70%; padding-bottom: 5px; }
+dl.side_by_side_text dd a.button		{ float: left; }
+
+dl.side_by_side_text.with_top_margin	{ margin-top: 10px; }
+dl.side_by_side_text.with_bottom_margin	{ margin-bottom: 20px }
+
+dd.urgent_space						{ line-height: 20px; }
+dd.urgent_space label				{ margin-left: 5px; }
+
+dl.selector_list dt,
+dl.selector_list dd					{ margin-bottom: 2px; height: 18px; }
+dl.selector_list label				{ line-height: 20px; }
+
+fieldset.full dl.side_by_side dt    { float: left; text-align: right; margin: 0 5px 8px 0; clear: left; width: auto; }
+
+dl.field_list 						{ margin-right: 10px; }
+dl.field_list span					{ margin: 0 0 0 3px; }
+dl.field_list span label  			{ margin-left: -3px; } 
+dl.field_list dd 					{ height: 26px; white-space: nowrap; }
+dl.field_list dd input				{ float: left; }
+dl.field_list dd label				{ margin-left: 3px; }
+dl.field_list dd a.button			{ float: left; }
+dl.field_list input.form_selectors	{ margin-left: 10px; }
+dl.field_list input.long_width		{ width: 95%; }
+
+/* SIDE BY SIDE TWO COLUMN */
+dl.side_by_side.left,
+dl.side_by_side.right	 			{ margin: 0 0 5px 0; width: 49%; float: left; clear: none;} 
+dl.side_by_side.left dt				{ float: left; text-align: right; margin:0 5px 3px 0; clear: left; width: 50%; }
+
+dt.place_holder						{ visibility: hidden; }
+
+/******************************************************************************
+DIVS 
+******************************************************************************/
+div.container						{ margin: 0 10px; }
+div.containing_block				{ margin: 0 10px; }
+
+/******************************************************************************
+3 COLUMN LAYOUT 
+******************************************************************************/
+.column_one, 
+.column_two							{ display: inline; float: left; overflow: hidden; }
+.column_three						{ float: right; overflow: hidden; text-align: right; }
+.no_width							{ width:50% !important; }

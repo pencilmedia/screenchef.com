@@ -1,0 +1,210 @@
+
+DATE PICKER (for table)
+updated by Uday Gajendar
+on 09/06/2007
+
+************************************************
+>> OVERVIEW
+************************************************
+
+prototype available? partial
+
+mockup available? Y
+
+mockup file/location: table_actions.psd
+
+
+
+
+UI COMPONENT DEFINITION:
+Date picker is a control that allows selection of a date and/or time as needed, for a table cell. Various keyboard shortcuts allow expedient date entry as defined in the date picker spec. Can be found in any table as needed.
+
+Limits:
+Date format is set per user preferences
+
+Dependencies:
+User prefs and system prefs for formatting, long/short date, etc.
+
+Default width:
+as its done currently for the form
+
+
+
+TERMINOLOGY:
+
+Calendar Pop-up: the actual visual calendar that comes up upon clicking the launch button
+
+Launch Button: the date picker icon/button
+
+Month Selector: the region for choosing the month by clicking the associated icons (back, next, etc.)
+
+Previous Month: for navigating back one month
+
+Next Month: for navigating forward one month
+
+Previous Year: for navigating back one year from current date
+
+Next Year: for navigating forward one year from current date
+
+Date Selection: the visual cue for the currently selected date
+
+Time Section: the selectors for setting the time (hour, minute, AM/PM)
+
+Focus: The normal browser notion of focus. Will allow events to fire relative to the object that has the focus.
+
+Selection: Add the element that received an event to a collection of objects for code to operate on.
+
+Visual Selection: A visual cue to the user that demonstrates the selected state of an object.
+
+
+
+
+UI LAYOUT:
+
+In read view:
+- text is justified left within table cell
+- data is truncated per browser abilities
+- data revealed/hidden per table column resizing 
+(see table_behavior_notes.txt)
+
+In edit view:
+- calendar pop-up appears below the datepicker icon, based upon edge-detection against the browser window (see: implementation and tiffany's prototype)
+
+- If any time controls, they are located at the bottom of the calendar pop-up
+
+
+Positioning:
+If on the far Right column:
+- UOM, datepicker, MSL, and multitext all move in leftward so nothing is jutting outside of the table frame
+
+If on the bottom row:
+- multitext read and edit div goes upward from the cell
+- MSL read div goes upward from the cell
+- datepicker calendar appears above the cell when the button is pressed
+- MSL edit div and single-select search goes upward
+
+
+VISUAL DISPLAY:
+table_actions.psd
+
+
+
+
+ICONOGRAPHY: 
+
+- datepicker icon for the button: 16 x 16 pixels
+- back arrow, double back arrow, next arrow, and double next arrow: 16 x 16 pixels
+
+
+
+
+************************************************
+>> BEHAVIORS
+************************************************
+------------------------------
+GENERAL (follow Vern's       published spec)
+------------------------------
+The behavior of the Date Entry Field conforms to the generic specification of UI Controls in Forms found in the Forms specification.
+¥ The Date Only version of this field will display the same date to every user around the globe.
+¥ The Date and Time version of this field will display the date and time in the userÕs preferred time zone. When a user changes the value, it will be set based on this time zone. When a user in a different time zone views the value, it will show a different time and may show a different date.
+
+
+
+
+MOUSE ACTIONS: 
+
+- CLICK on a cell: cell is highlighted
+- DOUBLE-CLICK on a cell: UI control appears
+- If any data values already entered, data is highlighted upon DOUBLE-CLICK
+- Data highlight color is defaulted per OS/browser
+- Cursor is at the end of the text
+
+
+
+
+KEYBOARD COMMANDS: 
+
+- TAB: move browser focus laterally across table cells to next editable field or down to the first editable field in the next row; commits data if any entered before pressing TAB
+- RETURN or ENTER: toggle "edit" and "view " states for a cell; if pressed after data entry, then data is committed, focus kept on current cell
+- ESC: discards changes, UI controls disappear, prior data is shown in table cell; table cell has focus and visually selected
+- TAB preserves edits 
+
+- Use browser-defined behaviors for text input area (ARROW, HOME, PAGE DOWN, PAGE UP, END, etc.)
+
+- TAB to calendar button
+- ENTER to launch the calendar
+- ARROW to the date
+- ENTER to close the calendar, set the date in the edit frame, focus remains on the calendar button
+- TAB to set the value in this cell and move focus to next cell
+
+for mouse interactions:
+- CLICK the calendar button
+- DOUBLE-CLICK a date in the calendar closes the calendar, sets the date in the edit frame, focus remains on the calendar button
+
+To move to next table cell: TAB twice or ENTER to return to view mode, then TAB to next cell
+
+
+
+TAB INDEX ORDER:
+
+- across cells: horizontally, left to right, then down to the next row
+- within calendar pop-up: >> follow Vern's       published spec
+
+
+
+DEFAULT STATES:
+
+- Upon entering edit state, any contents are visually selected and in focus, ready for editing via keyboard
+
+
+
+
+SYSTEM BEHAVIORS: n/a
+
+
+
+
+------------------------------
+DATE AUTO-COMPLETION
+------------------------------
+>> follow Vern's       published spec
+
+------------------------------
+LAUNCH BUTTON
+------------------------------
+>> follow Vern's       published spec
+
+------------------------------
+CALENDAR POP-UP
+------------------------------
+>> follow Vern's       published spec
+
+------------------------------
+TIME SELECTORS
+------------------------------
+>> follow Vern's       published spec
+
+
+
+
+************************************************
+>> TBD's/Issues Outstanding
+************************************************
+
+- All keyboard commands above; Ben/centralized keyboard list
+- ability to TAB, ENTER, etc. within the calendar pop-up still holds?
+- Any system behaviors not foreseen yet?
+
+
+
+************************************************
+>> RELATED COMMENTS/DISCUSSIONS:
+************************************************
+Paste any discussions from email threads here...
+
+
+
+
+
+
+

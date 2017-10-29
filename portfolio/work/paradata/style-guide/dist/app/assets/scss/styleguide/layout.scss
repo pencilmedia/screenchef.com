@@ -1,0 +1,242 @@
+/* BEGIN: layout.scss
+// -----------------------------------------------------*/
+
+
+// Common
+// -----------------------------------------------------
+
+html,
+body {
+	&.style-guide {
+		overflow-x: hidden; // NAMESPACED STYLEGUIDE
+		height: 100%; /* Prevent scroll on narrow devices */
+		.company-logo {
+			height: 60px;
+			margin: 30px 0 $pageMargin 0;
+		}
+		.nav-stacked {
+			li {
+				h4 {
+					color: $grayDark;
+					font-size: 100%;
+					font-weight: normal;
+					padding-left: 15px;
+				}
+				ul {
+					list-style: none;
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+}
+
+// Navigation
+// -----------------------------------------------------
+#styleguideNav {
+	.nav-list {
+		li {
+			.subtree {
+				padding-left: 0;
+				.fa {
+					color: $grayDarkest;
+					margin-right: 5px;
+					text-align: center;
+					width: 15px;
+				}
+			}
+			ul {
+				list-style: none;
+				margin: 0 0 0 15px;
+				padding: 0;
+			}
+		}
+	}
+}
+
+// Off Canvas Navigation
+.style-guide {
+	@media screen and (max-width: 767px) {
+	  .sidebar-offcanvas {
+		position: absolute;
+		top: 0;
+		width: 50%; /* 6 columns */
+	  }
+	  .row-offcanvas {
+	    position: relative;
+	         -o-transition: all .25s ease-out;
+	    -webkit-transition: all .25s ease-out;
+	            transition: all .25s ease-out;
+	  }
+	  .row-offcanvas-right {
+		height: 100%;
+		right: 0;
+	  }
+	  .row-offcanvas-left {
+	    left: 0;
+	  }
+	  .row-offcanvas-right
+	  .sidebar-offcanvas {
+	  	height: 100%;
+	     right: -50%; /* 6 columns */
+	  }
+	  .row-offcanvas-left
+	  .sidebar-offcanvas {
+	    left: -50%; /* 6 columns */
+	  }
+	  .row-offcanvas-right.active {
+	    right: 50%; /* 6 columns */
+	  }
+	  .row-offcanvas-left.active {
+	    left: 50%; /* 6 columns */
+	  }
+	  .row-offcanvas-right
+	  .sidebar-offcanvas {
+		background: $grayLightest;
+	  	border-left: 1px solid $grayLighter;
+	  }
+	}
+
+	.sidebar-offcanvas {
+		h1 {
+			font-size: 140%;
+			.fa {
+				margin-right: 5px;
+			}
+		}
+		nav {
+			h2 {
+				font-size: 100%;
+				margin-top: 30px;
+				.fa {
+					margin-right: 5px;
+					text-align: center;
+					width: 15px;
+				}
+			}
+			.nav {
+				> li {
+					> a {
+						padding-left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Layout
+// -----------------------------------------------------
+
+.style-guide {
+	> .container {
+		height: 100%;
+		.sg-content {
+	  		padding-bottom: 50px;
+		  	> h2 {
+		  		margin-top: 40px;
+		  	}
+			> h3,
+			> h4 {
+				margin-top: 30px;
+			}
+			p + h3, 
+			p + h4 { // Smaller margin-top if after a <p>
+				margin-top: 20px;
+			}
+			hgroup {
+				margin-bottom: 40px;
+				> h1 {
+					.fa {
+						margin-right: 10px;
+					}
+				}
+				> h4 {
+					color: $brightBlue;
+				}
+				> h2 {
+					margin-top: 40px;
+				}
+				> h5 {
+					font-weight: normal;
+				}
+			}
+			// page nav for styleguide
+			.sg-page-nav {
+				@include flexbox();
+				margin: 15px 0 $pageMargin 0;
+				> div {
+					@include flex(1 50%);
+					h6 {
+						margin-top: 0;
+					}
+					&:last-child {
+						position: relative;
+						text-align: center;
+						.btn {
+							margin-bottom: 5px;
+							width: 100%;
+						}
+					}
+					@include order(2);
+				}
+			}
+			> .divider {
+				border-top-color: $grayLight;
+				margin: 30px 0 0 0;
+			}
+			.pull-right {
+				margin: 10px 0 0 0;
+				.btn-link {
+					.fa {
+						font-size: 150%;
+					}
+				}
+			}
+			// Panels
+			.panel-default {
+				margin: 40px 0;
+				.panel-body {
+					> h4 {
+						margin-top: 30px;
+						&:first-child {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+			h2 + .panel-default {
+				margin-top: 0;
+			}
+		}
+	}
+	.table {
+		&.table-icons {
+			td {
+				&:first-child {
+					.fa {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+	.panel-body {
+		.row {
+			border-bottom: 1px solid $borderColor;
+			padding: $pagePadding 0;
+		}
+	}
+}
+
+
+.proto-example-dialog {
+    bottom: auto;
+    display: block;
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    z-index: 1;
+}

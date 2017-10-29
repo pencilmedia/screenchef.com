@@ -1,0 +1,33 @@
+/* BEGIN: common.scss (global app styles)
+// -----------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+/* Columns - Not using FlexBox */
+.colonnade {
+  overflow: hidden;
+  width: 100%;
+  > .lt-column, > .rt-column, > .mid1-column, > .mid2-column {
+    float: left;
+  }
+  &.two {
+    > .lt-column, > .rt-column {
+      width: 50%;
+    }
+  }
+  &.three {
+    > .lt-column, > .mid-column, > .rt-column {
+      width: 33.3%;
+    }
+  }
+  &.four {
+    > .lt-column, > .mid1-column, > .mid2-column, > .rt-column {
+      width: 25%;
+    }
+  }
+}

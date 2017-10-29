@@ -1,0 +1,59 @@
+<updates>
+	<update>
+		<type>New Comment</type>
+		<id>QTE-14658 - 2.1</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Michael Ma</owner>
+		<date>03/06/2009</date>
+	</update>
+	<update>
+		<type>New File Uploaded</type>
+		<id>QTE-36524 - 1.0</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Michael Ma</owner>
+		<date>03/06/2009</date>
+	</update>
+	<update>
+		<type>New Comment</type>
+		<id>QTE-54293 - 3.2</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Michael Ma</owner>
+		<date>03/06/2009</date>
+	</update>
+	<update>
+		<type>New Comment</type>
+		<id>QTE-87745 - 1.10</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Anthony Moquette</owner>
+		<date>03/06/2009</date>
+	</update>
+	<update>
+		<type>New Comment</type>
+		<id>QTE-14658 - 2.1</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Michael Ma</owner>
+		<date>03/06/2009</date>
+	</update>
+	<update>
+		<type>New File Uploaded</type>
+		<id>QTE-36524 - 1.0</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Michael Ma</owner>
+		<date>03/06/2009</date>
+	</update>
+
+	<update>
+		<type>New Comment</type>
+		<id>QTE-87745 - 1.10</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Anthony Moquette</owner>
+		<date>03/06/2009</date>
+	</update>
+	<update>
+		<type>New Comment</type>
+		<id>QTE-54293 - 3.2</id>
+		<description>This is a short description of the quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit eros sed orci. Praesent quis ante sed mi placerat mollis.</description>
+		<owner>Michael Ma</owner>
+		<date>03/06/2009</date>
+	</update>
+</updates>

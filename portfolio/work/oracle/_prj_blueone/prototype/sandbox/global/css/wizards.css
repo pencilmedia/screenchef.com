@@ -1,0 +1,66 @@
+.wizard .wizard_steps
+{
+	background-color: #e1e1e1;
+	height: 25px;
+	padding: 10px 0 0 10px;
+	float: left;
+	width:55%;
+	border-right: 1px solid silver;
+}
+.wizard .wizard_steps h2
+{
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	overflow: hidden;
+}
+.wizard ul.steps { 
+	padding: 0;
+	overflow-y: hidden;
+}
+
+
+.wizard ul.steps li { 
+	float: left;
+	margin: 0 1px 0 0;
+	cursor:pointer;
+}
+
+.wizard ul.steps li.first { 
+	margin-left: 10px;
+}
+
+.wizard ul.steps li a {
+	font-weight: bold;
+	padding: 11px 13px;
+	line-height: 35px;
+	-moz-outline: none;
+}
+
+.wizard ul.steps li.selected  a,
+.wizard ul.steps li.selected  a:hover
+{
+	background: url(/global/images/wizard_orange_circle.png) no-repeat center center #ffffcf;
+	color: #fff;
+}
+.wizard ul.steps li.substep a {
+	background: url(/global/images/wizard_orange_circle_substep.png) no-repeat center center #ffffcf;
+	color: #fff;
+}
+.wizard ul.steps li a:hover
+{
+	background: #fafafa;
+	color: #333;
+}
+
+fieldset.input_lists.three_columns ul.column_zero { width: 16%; }
+fieldset.input_lists.three_columns ul.column_one,
+fieldset.input_lists.three_columns ul.column_two { width: 30%; }
+
+fieldset.input_lists.two_columns ul.column_zero,
+fieldset.input_lists.two_columns ul.column_two { 
+ width: 49.5%; }
+
+fieldset.input_lists.three_columns_checkbox ul.column_zero { width: 16%; margin-left: 0pt;} 
+fieldset.input_lists.three_columns_checkbox ul.column_one,
+fieldset.input_lists.three_columns_checkbox ul.column_two { width: 30%; margin-left: 0pt;}

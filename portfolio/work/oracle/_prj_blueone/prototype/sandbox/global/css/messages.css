@@ -1,0 +1,153 @@
+/******************************************************************************
+MESSAGES.CSS
+Description: Message related styles and definitions.
+/******************************************************************************
+MESSAGE DMS
+******************************************************************************/
+.message {
+	clear: both;
+	padding: 3px 10px;
+	background: url('../images/bgd_gradient_half.png') repeat-x top left;
+}
+.message p { 
+	max-width: 600px;
+	padding: 1px 0 1px 0;
+	font-weight: normal;
+}
+/* DMS will use class "info" if there is text inside the dms, otherwise use only class "message" and it will show gradient image above */
+.message.info {
+	background: url(../images/bgd_info.png) repeat-x top left;
+	border-bottom: 1px solid #ccc;
+	overflow: auto;
+}
+
+a.more { 
+	background: url(../images/icn_action_popup.png) no-repeat right center; 
+	margin-left: 5px;
+	padding-right: 15px;
+}
+
+a.more:hover {
+	text-decoration: underline; 
+}
+/******************************************************************************
+ERROR DMS
+******************************************************************************/
+.message.error { 
+	background: none;
+	background-color: #FF7F87;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+	padding: 3px 10px;
+}
+.message.error p.text { 
+	background: url(../images/icn_status_error.png) no-repeat top left;
+	padding-left: 20px;
+}
+.message.error_notext {
+	background: url(../images/bgd_error_gradient_half.png)
+}
+/******************************************************************************
+FYI DMS
+******************************************************************************/
+.fyibar { 
+/* THIS CLASS WILL NOT BE USED FOR DMS */
+	border-bottom: 1px solid #aaa;
+	height: 22px;
+	overflow: hidden;
+	visibility: hidden;
+	margin-bottom: -10px;
+}
+
+.fyibar.palette_fyi { 
+/* THIS CLASS WILL NOT BE USED FOR DMS */
+	height: 20px;
+}
+
+.fyibar p.text { 
+/* THIS CLASS WILL NOT BE USED FOR DMS */
+	position: relative;
+	top: -25px;
+	line-height: 20px;
+	padding: 2px 10px;
+}
+
+.fyibar p.bgd { 
+/* THIS CLASS WILL NOT BE USED FOR DMS */
+	position: relative;
+	background: #ffffb2;	
+	line-height: 25px;
+	visibility: hidden;
+}
+
+.fyibar .asterisk { 
+/* THIS CLASS WILL NOT BE USED FOR DMS */
+	position: relative;
+	top: 2px;
+	font-weight: bold;
+	font-size: 17px;
+	vertical-align: middle;
+}
+/******************************************************************************
+ERROR DMS
+******************************************************************************/
+.errorbar {
+	border-bottom: 1px solid #ccc;
+	height: 24px;
+	overflow: hidden;
+}
+
+.errorbar.palette_error,
+.errorbar.palette_error p.bgd {
+	height: 20px;
+}
+
+.errorbar.palette_error p.text {
+	top: -18px;
+}
+
+.dms p.text {
+	visibility: hidden;
+	line-height: 20px;
+	padding: 2px 10px;
+}
+
+.dms p.bgd {
+	display: none;
+}
+
+div.errorbar p.text {
+	visibility: visible;
+	position: relative;
+	top: -25px;
+	line-height: 20px;
+	padding: 2px 10px;
+}
+
+div.errorbar span.dms_error_icon {
+	background-image: url('../images/icn_status_error.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	/*margin-right: 5px;*/
+	padding: 5px 8px;
+}
+
+div.errorbar p.bgd {
+	display: block;
+	position: relative;
+	background: #ff757c;
+	line-height: 25px;
+	visibility: hidden;
+}
+
+
+p.graydiag {
+	background: url(../images/infobar/gray_striping.png); 
+}
+ul.reminder {
+	margin: 10px 40px;
+	list-style-type: disc;
+}
+ul.reminder li {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,160 @@
+
+ADD TO TABLE
+updated by Uday Gajendar
+on 09/05/2007
+
+
+
+** Add a blank row:
+
+- CLICK Add: Blank row added at the TOP of the table, pushing the table rows down per number of times Add is clicked
+
+- New blank row appears in "pop and fade" style similar to FYI message strip in the DMS (see PSD)
+
+- New blank row handle has icon pointing to new row, with a row highlight and underline (see PSD)
+
+
+** Remove an existing row:
+
+- CLICK the row handle of the row to be removed
+- Row is highlighted
+- CLICK Remove
+- User shown javascript prompt "are you sure?" with a checkbox option to never show this prompt again
+- Prompt also briefly explains the impact/consequence of destroying the object both in the front-end and back-end. The prompt should make this very clear yet concise.
+- If user says OK, then table is reloaded with the row removed
+- FYI DMS appears confirming that the row has been successfully removed and object destroyed in the back-end
+
+- If row cannot be removed or error occurs, then show the DMS Error strip with appropriate verbiage
+
+- To remove multiple rows, then user SHIFT + CLICK or CTRL + CLICK the desired rows to be removed
+- FYI DMS appears confirming that the selected rows have been successfully removed, etc.
+
+=================================
+
+
+
+** Adding multiple blank rows:
+
+- CLICK Add multiple times: a new blank row is added for each button click, each row does "pop and fade" as described above
+- All new blank rows have the row handle icon and highlight as described above (see PSD)
+
+Focus is maintained on the Add button; user has to manually move focus either by pressing TAB or use mouse to edit the blank rows; we don't automatically move the focus to the first blank row since we can't presume if the user is done adding rows
+
+<QUESTION: Can the user click Save immediately after adding row(s) but not yet entering data into them? Yes, each new row addition is considered a change to the table and thus the Save button is now enabled. So simply save empty new rows that the user can fill in later.>
+
+
+NOTE: Regarding the back-end creation of an object when the user adds an object, the user does not need to know this with an FYI message. Only impact in the UI is when the user wants to Cancel. If user clicks table Cancel button then have a javascript prompt that asks user if he wants to destroy the just-added row (since it's already created in database)--the result of which is to destroy the newly added row both in the front end table UI AND the back end database. The prompt should make this very clear yet concise.
+
+=================================
+
+
+
+** Entering data for new blank row:
+
+via mouse:
+- DOUBLE-CLICK a cell to reveal text entry field control + two icons: create and search
+
+OR 
+
+via keyboard:
+- Presuming cursor focus and cell highlight is on editable cell in newest added row:
+-- ENTER: reveals text entry field control + two icons: create and search
+-- TAB order: focus from text field > create button > search button > next lateral table cell
+-- ENTER: if focus is on text field, commits the text data, edit controls disappear, flip to read-mode of table cell, browser cursor focus and visual highlight retained on current cell (standard table interaction)
+-- ENTER: if focus is on create button, launch the Create dialog box (see below)
+-- ENTER: if focus is on search button, launch the Search palette (see below)
+
+- for the Add keyboard command (CTRL + I), user must have focus on a table if there are multiple tables on the screen
+- new rows are added ABOVE the selected row
+- newly added blank rows do NOT auto-sort until AFTER user clicks Save
+- table header/sort controls are disabled to prevent accidental sorting
+- after successful save, show FYI message telling user that newly added rows have been saved and sorted per table's sorting method
+
+<QUESTION: should newly added rows retain some highlight color to let user know, even after saved and sorted? Yes, retain highlight for 24 hrs then after that becomes normal, no highlight -- check with Siva on feasibility>
+
+- Rows can be added to specific places within a table (Row insertion): user selects a row handle, CLICK Add, then new row(s) added ABOVE the selected row (per Excel behavior)
+
+
+=================================
+
+
+** Type-in values:
+- user can type in directly the text field the item number
+- validation happens on TAB out of cell (or pressing ENTER/RETURN)
+- if valid, no special signal shown
+- if not valid, then upon TAB out of field, show a javascript prompt saying that the value is invalid, and ask user what to do with it, either Create New from the typed in value (which then opens the Create dialog box described below) or correct it (which puts cursor focus into the edit frame of the field, so user can directly type in a new value or choose one of the other icons for create or search)
+
+
+=================================
+
+
+** Create dialog box:
+- appears upon clicking create button or TAB to button and then press ENTER
+- default focus on first editable control in the dialog
+- tab order follows the Form controls spec
+
+
+- Cancel: 
+-- dialog box disappears
+-- focus returns to Create button
+-- other edit controls are visible so user can click on Search or use the text field to type-in values
+
+
+- Add: 
+-- dialog box disappears
+-- newly entered data fills the blank row
+-- if there are no additional new blank rows: focus returns to first editable cell, but edit controls are hidden
+-- if there are more new blank rows: focus moves to first editable cell of the next blank row, showing the edit controls accordingly
+
+-- the editable cell controls disappear
+-- row retains the highlight color/new indicator until Save successful (should discuss whether to persist, see above)
+-- cell focus & visual highlight is on this edited table cell
+
+
+=================================
+
+
+** Search palette:
+- appears upon clicking search button or TAB to search button and then press ENTER
+
+- default cursor focus within search text field in the palette
+- TAB to search button
+- ENTER to execute search
+- table generates with results
+- double-click a table row to add
+- drag and drop a table row to add: must drop on to the table cell, not anywhere else (use already defined MSL/palette drag cues)
+
+
+Need to investigate dragging from palette to the table edit frame in a row, is there a drop target area? what's the visuals and limitations? 
+UNG: propose using the same visuals used for dragging objects from palette to MSL edit frame to be consistent in feedback and user interaction. This is how it should work, just a matter of getting the engineering right.
+
+
+=================================
+
+
+** Other Questions and Notes:
+
+- Can "add to table" be undone via the Undo command?
+Joel:  We are going to have to investigate CoqSofts support for undo / redo.  At this point the design should be neutral to having these actions... as much as possible. TBD
+
+- Can "add to table" be redone via the Redo command? TBD
+
+- Does the table reload or page reload on successful drop onto table? table reloads only
+
+- Can sort be disabled while adding table items? TBD, Uday prefers it
+
+- What if user tries to navigate or do another search before saving? how is that handled--javascript alert shown? YES
+
+- If the user navigates out of a table or window, or clicks in tab or left pane, or accidentally closes the window, then he is shown a javascript prompt, "are you sure?" etc.
+
+- If something happens after user has added new rows (but before clicking Save), like accidentally closes the browser window or clicks a link in the left pane which loads new content in the main window (replacing the table), then show javascript prompt, "are you sure?" etc.
+
+- Need to work out how to handle duplicates via drag/drop or copy/paste:
+
+option a) auto-detect dupes as user drags or pastes new content and throws up a javascript error
+
+option b) hit Save first, then show the validation errors re: dupes in table handled via the table warning messages UI (identified with warning indicator, etc.)
+
+- Should we have auto-save for adding and removing rows, so the user doesn't have to click Save every time?
+UNG: good for UX, we can have FYI DMS flash in to say that save has occurred like google mail does...also see prior point about doing auto-saves for editing table data (if we can do it for add/remove rows, then why not table data too?)
+

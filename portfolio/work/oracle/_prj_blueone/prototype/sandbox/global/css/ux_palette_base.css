@@ -1,0 +1,205 @@
+/*///////////////////////////////////////
+//
+//        UX PALETTE BASE STYLES
+//
+///////////////////////////////////////*/
+.ux_palette
+{
+	background-color: #d9d9d9;
+	border-top: 1px solid #b3b3b3;
+	border-right: 2px solid #b3b3b3;
+	border-bottom: 2px solid #b3b3b3;
+	border-left: 1px solid #b3b3b3;
+	position: absolute;
+	z-index: 9000;
+	width: 400px;
+	height: auto;
+	min-width: 200px;
+	min-height: 70px;
+	overflow: hidden;
+}
+
+.ux_palette_top { background: url(/global/images/ux_palette/palette_grip.png) no-repeat center 7px; }
+
+.ux_palette .ux_palette_main h2 {
+	font-size: 16px;
+}
+.ux_palette .ux_palette_main h4 {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.ux_palette_header 
+{
+	border-bottom: 1px solid #ccc;
+	min-height: 20px;
+}
+
+.ux_palette_header a span { display: none; }
+
+.ux_palette_title
+{
+	color:#333333;
+	cursor:default;
+	font-size: 12px;
+	line-height: 20px;
+	margin-left: 25px;
+	cursor: move;
+	font-weight: bold;
+}
+
+.ux_palette_toggle
+{
+	background: url(/global/images/ux_palette/palette_collapse.png) no-repeat 0 1px;
+	position: absolute;
+	left: 5px;
+	z-index: 2;
+	height: 16px;
+	width: 15px; 
+}
+
+.ux_palette_close
+{
+	background:  url(/global/images/ux_palette/palette_close.png) no-repeat 0 3px;
+	position: absolute;
+	top: 2px;
+	right: 0;
+	height: 14px;
+	width: 15px; 
+}
+
+.ux_palette_close span {
+	visibility: hidden;
+}
+.ux_palette_tab_area { }
+.ux_palette_main
+{
+	filter:alpha(opacity=85);
+	-moz-opacity:.85;
+	opacity:.85;
+    padding: 0;
+    overflow-y: auto;
+	overflow-x: hidden;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	clear: both;
+}
+
+.ux_palette_top_action_bar { overflow:hidden; }
+
+.ux_palette_top_action_bar .left_column,
+.ux_palette_bottom_action_bar .left_column
+{
+	width: 50%;
+	display: inline;
+	/*padding-left: 5px;*/
+}
+.ux_palette_top_action_bar .right_column,
+.ux_palette_bottom_action_bar .right_column
+{
+	width: 50%;
+	display: inline;
+	float: right;
+	text-align: right;
+}
+
+.ux_palette_message_area {}
+
+.button.left_spacer { margin-right: 15px !important; }
+
+.ux_palette_resize_bar 
+{
+    height: 5px;
+}
+
+.ux_palette_handle 
+{
+	position: absolute;
+	background: url(/global/images/ux_palette/palette_resize.png) no-repeat 2px 2px;
+	cursor: nw-resize;
+	width: 15px;
+	height: 15px;
+	z-index:100;
+	right: 0;
+	bottom: 0;
+}
+
+.ux_palette_top_action_bar,
+.ux_palette_bottom { padding: 5px 20px 5px 0; min-height: 5px; }
+
+.ux_palette_bottom_action_bar { height: 22px; }
+
+.ux_palette_resizer
+{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	cursor: se-resize;
+	background: url(/global/images/ux_palette/ux_palette_resize_handle.gif) -2px -2px;
+}
+
+.mask 
+{
+    background-color: #333;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    opacity: .10;
+	filter: alpha(opacity=10);
+    z-index: 10000;
+}
+
+div.ux_palette_mask 
+{
+    background: url('/global/images/pi/loading_8.gif') center center no-repeat;
+    background-color: #333;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    opacity: .10;
+	filter: alpha(opacity=10);
+    z-index: 10000;
+}
+
+
+.ux_palette .side_by_side_text dt,
+.ux_palette .side_by_side_mixed dt {
+	width: 25% !important;
+}
+
+
+/*********************************
+	ERROR SKIN
+*********************************/
+.ux_palette.error_skin
+{
+	background:#FFFFFF url(/global/images/error_palette_bg.gif) repeat-x;
+}
+.ux_palette.error_skin	.ux_palette_main
+{
+	background-color: transparent;
+}
+.ux_palette.error_skin	.ux_palette_main div
+{
+	padding: 15px 20px;		
+}				
+.ux_palette.error_skin .ux_palette_header 
+{
+	border-bottom: 0;
+}
+.ux_palette.error_skin h2
+{
+	font-size: 11px;
+	background:url(/global/images/error_ico.gif) no-repeat 0 3px;
+	padding-left: 20px;
+}
+.ux_palette.error_skin .error_messages p
+{
+	margin: 10px 0 10px 20px;
+}
+
+.ux_palette_main.with_padding { padding:0 15px; }

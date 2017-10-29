@@ -1,0 +1,29 @@
+html *				{ margin: 0px; padding: 0px; }
+body 				{
+					  font: .70em "segoe ui", verdana, arial, helvetica, sans-serif;
+					  overflow: -moz-scrollbars-vertical;
+					  color: #666;
+					  scrollbar-base-color: #ffffff; 
+					  scrollbar-track-color: #fafafa;
+					  scrollbar-face-color: #ffffff;
+					  scrollbar-highlight-color: #eaeaea;
+					  scrollbar-3dlight-color: #ffffff;
+					  scrollbar-darkshadow-color: #ffffff;
+					  scrollbar-shadow-color: #eaeaea;
+					  scrollbar-arrow-color: #666666;	
+					}
+a 					{ color: #999; text-decoration: none; border-bottom: 1px dotted #333; }
+a:visited			{ color: #666; text-decoration: none; }
+a:hover				{ color: #000; border-bottom: 1px solid #000; }
+h3					{ font-size: 2.5em; cursor: pointer; }
+h3 a, h3 a:hover 	{ border-bottom: 0; }
+h3 a, h3 a:visited 	{ color: #balack; display: block; }
+h3 a.selected,
+h3 a:visited 		{ color: #666; text-decoration:none; }
+h3 a:hover 			{ color: #999; text-decoration: none; }
+h4 					{ font-size: 1.2em;  margin: 10px 0 5px 0; background-color: #fafafa; padding: 5px; border: 1px solid #eaeaea;}
+div.container 		{ float:left; width: 19%; margin-left: 5px; }
+ul					{ list-style:none; }
+li 					{ margin:5px 0px; }
+
+

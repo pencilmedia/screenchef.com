@@ -1,0 +1,187 @@
+/* BEGIN: common.scss (global app styles)
+// -----------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+
+/* Animated SlideIn/Out */
+.offcanvas {
+	//min-height: 75px;
+	min-height: 375px;
+	position: relative;
+	> .lt-column, > .rt-column {
+		position: absolute;
+		top: 0;
+		-moz-transition: all 0.4s ease-out;
+		-webkit-transition: all 0.4s ease-out;
+		transition: all 0.4s ease-out;
+		width: 100%;
+	}
+	> .lt-column {
+		left: -100%;
+		&.active {
+			left: 0;
+		}
+	}
+	> .rt-column {
+		right: -100%;
+		&.active {
+			right: 0;
+		}
+	}
+}
+
+/* Autosuggest Menu */
+.auto-suggest {
+	@include border-radius(0);
+	width: 100%;
+	&.limited {
+		.menu-list {
+			&:first-child {
+				max-height: 200px;
+				overflow: auto;
+			}
+		}
+	}
+	.menu-list {
+		list-style: none;
+		margin: 2px 0 0;
+		min-width: 160px;
+		padding: 5px 0;
+		> li {
+			// Links
+			> a {
+				clear: both;
+				display: block;
+				font-weight: 400;
+				line-height: 1.42857143;
+				padding: 3px 20px;
+				white-space: nowrap;
+				&:hover,
+				&:focus {
+					background-color: $dropdown-link-hover-bg;
+					// color: $dropdown-link-hover-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/* Dropdown Menu - Global */
+// custom animation in animation.scss
+.open > .dropdown-menu {
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	animation-name: menuOpen;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	// Open Menu Animation
+	-webkit-animation-name: menuOpen;
+}
+.dropdown-menu {
+	@include border-radius(0);
+	li {	
+		.fa {
+			margin-right: 15px;
+		}
+	}
+	form {
+		margin: 10px;
+		fieldset {
+			padding: 0;
+		}
+		footer {
+			padding: 15px 0 0 0;
+			.btn {
+				margin: 0;
+				width: 100%;
+			}
+			&.dual-btns {
+				.btn {
+					margin-right: 5px;
+					width: 48%;
+				}
+			}
+		}
+	}
+	&.data-settings {
+		width: auto;
+		form {
+			min-width: 300px;
+		}
+	}
+}
+.dropdown {// Fix bootstrap underlining button
+	&.open {
+		.btn-link {
+			text-decoration: none;
+		}
+	}
+}
+
+/* Columns - Not using FlexBox */
+.colonnade {
+	overflow: hidden;
+	width: 100%;
+	> .lt-column, > .rt-column {
+		float: left;
+	}
+	&.two {
+		> .lt-column, > .rt-column {
+			width: 50%;
+		}
+	}
+	&.three {
+		> .lt-column, > .rt-column {
+			width: 33.3%;
+		}
+	}
+}
+
+/* Flex Box - Generic Row Flexbox */
+.flex-colonnade {
+	@include flexbox();
+	@include flexDirection(row);
+	@include flexAlign(stretch);
+	.flex-column {
+		@include flexbox();
+		@include flexDirection(column);
+	}
+	.flex {
+		@include flex(1);
+	}
+}
+
+
+/* Business Calendar */
+.business-calendar {
+	width: 500px;
+	margin: 10px auto;
+	p {
+		margin: 20px 0;
+	}
+	button {
+		min-width: 75px;
+		&.all {
+			margin-right: 5px;
+		}
+	}
+	.business-calendar-quarter {
+		float: left;
+		width: 25%;
+		margin: 10px 0;
+		button {
+			width: 100px;
+			float: left;
+			&:first-child {
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.business-calendar-weeks {
+		button {
+			font-size: 12px;
+		}
+	}
+}

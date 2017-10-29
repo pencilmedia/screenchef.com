@@ -1,0 +1,98 @@
+/* BEGIN: components.scss
+// -----------------------------------------------------*/
+
+// Input/Button Group - Date Range, Date Single
+.presentation-date-range {
+	.fa {
+		color: $brightBlue;
+		margin-right: 5px;
+	}
+}
+.input-group {
+	.input-group-addon {
+		@include border-radius(0);
+		cursor: pointer;
+		// Input group with btn-link 
+		&.btn-info {
+			background: none;
+			border: none;
+			color: $brightBlue;
+			&:hover {
+				.fa {
+					color: darken($brightBlue, 10%);
+				}
+			}
+		}
+	}
+	// Readonly Date Range
+	&.readonly {
+		.input-group-addon {
+			.fa {
+				color: $grayLight;
+			}
+		}
+	}
+	// Presentation with front icon
+	&.w-front-icon {
+		.input-icon {
+			color: $brightBlue;
+			left: 10px;
+			position: absolute;
+			top: 10px;
+			z-index: 9;
+		}
+		.form-control {
+			padding-left: 30px;
+		}
+	}
+}
+
+/* Dialog - Date Range */
+.date-range-dialog {
+	.modal-dialog {
+		.modal-body {
+			padding: 0;
+			.nav-dialog {
+				overflow: hidden;
+			}
+			.form-inline {
+				.form-group {
+					margin-bottom: 0;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+/* Quantity Input */
+.attr-quantity {
+	color: $gray;
+}
+
+/* Long List */
+.long-list {
+	&.read-state {
+		overflow: hidden;
+		padding: 0;
+		li {
+			float: left;
+			list-style: none;
+			width: auto;
+			&:after {
+				content: '';
+				margin-right: 5px;
+			}
+			&:last-child {
+				&:after {
+					content: '';
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+/* Truncator plugin */
+.truncator-link {
+	font-size: 85%;
+}

@@ -1,0 +1,332 @@
+/******************************************************************************
+	CONTENTS OF THIS FILE HAVE NO BUSINESS IN PRODUCTION!!!!
+	THESE ARE ORPHAN CLASSES WHICH NEED A HOME!
+	
+	Please make sure to clear your styles from this file ASAP!!!!
+******************************************************************************/
+/******************************************************************************
+!!!!!!! WORKFLOW OVERVIEW ----- NEED TO MOVE THIS OUT OF HERE ----------
+******************************************************************************/
+.ux_ui_message 					 	{ color:#e1e1e1; margin:0 0 10px 0; border-bottom:1px solid #e1e1e1; background-color:#f9f9f9; padding:5px 20px; text-align: right; }
+
+/******************************************************************************
+USED BY OUR JS FILE TO TOGGLE VISIBILITY.
+******************************************************************************/
+#ui_toggle_01,
+#ui_toggle_02,
+#ui_toggle_03,
+#ui_toggle_04,
+#ui_toggle_05,
+#ui_toggle_06						{ display: none; }
+
+/* This adds space between the last fieldset and the browser in scrolling action dialogs */
+.last_set:after { content: "."; height: 1%; visibility: hidden; display: block; }
+
+
+/* used in includes/table.php */
+span.positive_variance { color: green; }
+span.negative_variance { color: red; }
+
+
+
+.pointer { cursor: pointer; }
+
+
+/******************************************************************************
+ - - - - BELOW ARE TEMPORARY STYLES BASED ON SPRINTs - - - - -
+******************************************************************************/
+
+/******************************************************************************
+SPRINT 03 
+PROOF OF CONCEPTS (POCs): New Form Approaches
+******************************************************************************
+POC 1 of 2
+******************************************************************************/
+
+/******************************************************************************
+FORM COLUMNS
+******************************************************************************/
+div.poc .lt_column, div.poc .rt_column {
+	float: left;
+	width: 50%;
+}
+div.poc .lt_column dl, div.poc .rt_column dl {
+	margin-left: 10%;
+}
+
+div.poc dt label {
+	font-weight: bold;
+}
+div.poc dd {
+	width: 100% !important;
+	margin-bottom: 5px;
+}
+/******************************************************************************
+FORM INPUTS
+******************************************************************************/
+div.poc dl.side_by_side_mixed2 {
+	margin-bottom: 5px;
+	min-width: 50%;
+} 
+div.poc dl.side_by_side_mixed2 dt {
+	font-weight: bold;
+}
+div.poc dl.side_by_side_mixed2 dd {
+	margin: 0 0 5px 0;
+	line-height: 22px;
+}
+div.poc dl.side_by_side_mixed2 dd a:hover {
+	text-decoration: underline;
+}
+div.poc dl.side_by_side_mixed2 dd a.button:hover {
+	text-decoration: none;
+}
+div.poc dl.side_by_side_mixed2 dd.text {
+	padding-top: 4px;
+}
+div.poc dl.side_by_side_mixed2 input {
+	vertical-align: middle;
+}
+
+/******************************************************************************
+SPRINT 03 PROOF OF CONCEPTS (POCs)
+******************************************************************************
+POC 2 of 2
+******************************************************************************/
+div.container.poc2 {
+	min-width: 780px; 
+}
+/******************************************************************************
+FORM COLUMNS
+******************************************************************************/
+div.poc2 .lt_column, 
+div.poc2 .rt_column {
+	float: left;
+	width: 50%;
+	min-width: 390px;
+}
+/******************************************************************************
+FORM INPUTS
+******************************************************************************/
+div.poc2 dl.side_by_side_text2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	min-width: 375px;
+} 
+div.poc2 dl.side_by_side_text2 dt {
+	float: left;
+	width: 25%;
+	text-align: right;
+}
+div.poc2 dl.side_by_side_text2 dd {
+	width: 65%;
+	margin: 0 0 5px 25.5%;
+}
+div.poc2 dl.side_by_side_text2 dd a:hover {
+	text-decoration: underline;
+}
+div.poc2 dl.side_by_side_text2 dd a.button:hover {
+	text-decoration: none;
+}
+
+
+div.poc2 dl.side_by_side_mixed2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+} 
+div.poc2 dl.side_by_side_mixed2 dt {
+	float: left; 
+	clear: left;
+	width: 30%;
+	margin-right: 5px;
+	margin-top: 5px;
+	text-align: right;
+}
+div.poc2 dl.side_by_side_mixed2 dd {
+	float: left;
+	clear: right;
+	width: 65%;
+	margin: 0 0 5px 0;
+	line-height: 22px;
+}
+div.poc2 dl.side_by_side_mixed2 dd a:hover {
+	text-decoration: underline;
+}
+div.poc2 dl.side_by_side_mixed2 dd a.button:hover {
+	text-decoration: none;
+}
+div.poc2 dl.side_by_side_mixed2 dd.text {
+	padding-top: 4px;
+}
+div.poc2 dl.side_by_side_mixed2 input {
+	vertical-align: middle;
+}
+
+dl.side_by_side_mixed2 dt.mixed_text {
+	min-height: 12px;
+}
+dl.side_by_side_mixed2 dd.mixed_text {
+	min-height: 12px;
+	padding-top: 1px;
+}
+
+div.poc2 .long_width {
+	width: 82%
+}
+div.poc2 select.long_width {
+	width: 84%
+}
+/******************************************************************************
+POC 3: 2 Column Layout
+******************************************************************************/
+/* Read Mode */
+div.poc3_read p {
+	float: left;
+	width: 50%;
+	margin: 0 0 10px 0;
+	min-height: 22px;
+}
+div.poc3_read p label {
+	display: block;
+	float: left;
+	width: 25%;
+	text-align: right;
+	margin: 0 5px 0 0;
+}
+div.poc3_read p.multitext {
+	width: 100%;
+	clear: both;
+}
+div.poc3_read p.multitext label {
+	width: 12.25%;
+}
+ 
+/* Edit Mode */
+div.poc3_edit fieldset { 
+	min-width: 715px;
+}
+div.poc3_edit fieldset div.ie_clear { 
+	display: block;
+	width: 100%;
+	clear: both;
+	height: 0px;
+	min-height: 0;
+	border: 0;
+}
+div.poc3_edit fieldset p {
+	float: left;
+	width: 50%;
+	margin: 0 0 10px 0;
+	min-height: 22px;
+}
+div.poc3_edit fieldset p label {
+	display: block;
+	float: left;
+	width: 25%;
+	text-align: right;
+	margin: 4px 5px 0 0;
+}
+div.poc3_edit fieldset p.multitext {
+	width: 100%;
+	clear: both;
+}
+div.poc3_edit fieldset p.multitext label {
+	width: 12.25%;
+}
+
+/* INPUT & TEXTAREA Element Widths */
+div.poc3_edit fieldset p input.short_width,
+div.poc3_edit fieldset p textarea.short_width {
+	float: left;
+	width: 25%;
+	margin-right: 3px;
+}
+div.poc3_edit fieldset p input.medium_width,
+div.poc3_edit fieldset p textarea.medium_width {
+	float: left;
+	width: 40%;
+	margin-right: 3px;
+}
+div.poc3_edit fieldset p input.long_width,
+div.poc3_edit fieldset p textarea.long_width {
+	float: left;
+	width: 60%;
+	margin-right: 3px;
+}
+
+/* SELECT Element Widths */
+div.poc3_edit fieldset p select.short_width {
+	float: left;
+	width: 26.5% ;
+	margin-right: 3px;
+}
+div.poc3_edit fieldset p select.medium_width {
+	float: left;
+	width: 41.5%;
+	margin-right: 3px;
+}
+fieldset p select.long_width {
+	float: left;
+	width: 61.5%;
+	margin-right: 3px;
+}
+
+div.poc3_edit fieldset p.multitext textarea.long_width {
+	width: 80.35%;
+	margin-right: 3px;
+}
+
+
+/******************************************************************************
+SPRINT 06 
+PROTOTYPE COMPLETE FORM: Includes all form controls
+******************************************************************************
+PROTOTYPE : FORM
+******************************************************************************/
+
+/******************************************************************************
+Palette
+******************************************************************************/
+dl.side_by_side {
+	margin-top:10px;
+}
+
+table.attachments th.w15 img { margin-left: 2px;/*!important; border:1px solid red;*/ }
+
+table.attachments th.w15,
+table.attachments td.w15 { text-align: center; }
+
+
+
+
+
+
+
+
+
+
+
+.ux_palette .header_wrapper {
+	padding: 10px 10px 5px 10px; 
+	overflow: hidden;
+	min-width: 250px;
+}
+.ux_palette .header_wrapper	div.column_one.layout {
+	width: 50%;
+}
+.ux_palette .header_wrapper .column_one {
+	position: relative;
+}
+.ux_palette .header_wrapper	.column_two { 
+	width: 30%;
+	margin-top: -2px; /* brings up column two to match column one header alignment */
+}
+.ux_palette .header_wrapper .column_two p {
+	margin-top: -2px;
+}
+
+.ux_palette .view_controls {
+	margin: 0 10px 5px 10px;
+}

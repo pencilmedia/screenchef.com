@@ -1,0 +1,1489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Table Test</title>
+
+<!-- BEGIN: CSS Coqsoft table -->
+<link type="text/css" rel="stylesheet" href="global/js/grid/Grid.css">
+<!-- End: CSS Coqsoft table -->
+
+<!-- BEGIN: CSS YUI defaults -->
+<link type="text/css" rel="stylesheet" href="global/js/yui/reset/reset.css">
+<link type="text/css" rel="stylesheet" href="global/js/yui/fonts/fonts.css">
+<link type="text/css" rel="stylesheet" href="global/js/yui/fonts-min.css"> 
+<link type="text/css" rel="stylesheet" href="global/js/yui/menu/assets/menu.css">
+<!-- END: CSS YUI defaults -->
+
+<!-- BEGIN: CSS Agile general -->
+<link type="text/css" rel="stylesheet" href="global/css/default.css">
+<link type="text/css" rel="stylesheet" href="global/css/framework.css">
+<link rel="stylesheet" type="text/css" href="global/css/multi_list.css" />
+<link rel="stylesheet" type="text/css" href="global/css/multi_select_cascade_list_tree.css" />
+<!-- END: CSS Agile general -->
+
+<script type="text/javascript" src="global/js/common.js"></script>
+<script type="text/javascript" src="global/js/yui/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script type="text/javascript" src="global/js/yui/container/container_core-min.js"></script>  
+<script type="text/javascript" src="global/js/yui/menu/menu-min.js"></script>
+<script type="text/javascript" src="global/js/yui/treeview/treeview.js"></script>
+<script type="text/javascript" src="global/js/treeview/AgileConstants.js"></script>
+<script type="text/javascript" src="global/js/treeview/AgileTreeView.js"></script>
+<script type="text/javascript" src="global/js/treeview/AgileKeyReader.js"></script>
+<script type="text/javascript" src="global/js/treeview/AgileTextNode.js"></script>
+<script type="text/javascript" src="global/js/treeview/yui-trees-data.js"></script>
+<script type="text/javascript" src="global/js/yui/dragdrop/dragdrop-min.js"></script>
+<script type="text/javascript" src="global/js/yui/animation/animation.js"></script>
+<script type="text/javascript" src="../global/js/agile_animations.js"></script>
+<script type="text/javascript" src="global/js/_ux.not.for.production.js"></script>
+
+<script type="text/javascript" src="global/js/yui/dom/dom-min.js"></script>
+<script type="text/javascript" src="global/js/yui/autocomplete/autocomplete-min.js"></script>
+<script type="text/javascript" src="global/js/yui/datasource/datasource-beta-min.js"></script>
+<script type="text/javascript" src="global/js/yui/datatable/datatable-beta-min.js"></script>
+<script type="text/javascript" src="global/js/yui/datasource/data.js"></script> 
+
+<!-- BEGIN: DATASET -->
+<script type="text/javascript" src="global/js/dataset.js"></script>
+<!-- END: DATASET -->
+
+<!-- BEGIN: JS Coqsoft table -->
+<script type="text/javascript" src="global/js/grid/GridE.js"></script>
+<script type="text/javascript" src="global/js/table.js"></script>
+<!-- End: JS Coqsoft table -->
+
+<!-- BEGIN: JS for Menus -->
+<!-- Attachments Menu -->
+<script type="text/javascript" src="/pages/sprint_06/form_attachments/attachments_menus.js"></script>
+<!-- Auto Number Menu -->
+<script type="text/javascript" src="/pages/sprint_06/complete_form/autonumber_menus.js"></script>
+<!-- END: JS for Menus -->
+
+<!-- BEGIN: JS for Multi-Select Cascade List -->
+<script type="text/javascript" src="/pages/sprint_06/complete_form/AgileMultiSelectCascadeList.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_mscl_tree/AgileMultiSelectCascadeListTree.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_mscl_tree/AgileMultiSelectCascadeListNode.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_mscl_tree/AgileMultiSelectCascadeListBuilder.js"></script>
+<!-- END: JS for MSCL -->
+
+<!-- BEGIN: JS for Single Select Search -->
+<script type="text/javascript" src="/pages/sprint_06/complete_form/AgileSingleSelectSearch.js"></script>
+<!-- END: JS for Single Select Search -->
+
+<!-- BEGIN: JS for Multi-select Search -->
+<script type="text/javascript" src="/pages/sprint_06/complete_form/AgileMSS.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mss/AgileMSSPills.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mss/AgileMSSPalette.js"></script>
+<!-- END: JS for Multi-select Search -->
+
+<!-- BEGIN: JS for Multi User Search -->
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileConstants.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileKeyReader.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileMUSTree.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileMUSNode.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileMUSBuilder.js"></script>
+
+<script type="text/javascript" src="/pages/sprint_06/complete_form/AgileMUS.js"></script>
+
+<!--<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileMultiUserSearch.js"></script>-->
+
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileMUSPalette.js"></script>
+<script type="text/javascript" src="/pages/sprint_06/complete_form/js_mus/AgileMUSPills.js"></script>
+<!-- END: JS for Multi User Search -->
+
+
+<!-- BEGIN: JS for Multi Search List -->
+<script type="text/javascript" src="global/js/multiSelectionList.js"></script>
+<script type="text/javascript" src="global/js/PaletteTable.js"></script>
+<!-- END: JS for Multi Search List -->
+
+
+<!-- BEGIN: KEYS JS -->
+<script type="text/javascript" src="global/js/yui/yahoo/yahoo.js"></script> 
+<script type="text/javascript" src="global/js/yui/event/event.js"></script> 
+<script type="text/javascript" src="global/js/yui/dom/dom.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/BrowserDetect.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/AgileConstants.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/AgileEventListener.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/AgileEventProxy.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/AgileGlobalTextSelectionHandler.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/AgileListenerProxy.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_event_listener/AgileUtilFunctions.js"></script>
+<!-- END: KEYS JS -->
+
+<!-- BEGIN: WINDOW DEMO JS -->
+<script type="text/javascript" src="/pages/_testing/proj_windowing/lego_jeep_lj3.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_windowing/eco_003477.js"></script>
+<link type="text/css" rel="stylesheet" href="global/css/_windowing_demo.css">
+
+<script type="text/javascript" src="/pages/_testing/proj_windowing/AgileConstants.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_windowing/AgileWindowController.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_windowing/AgileWindow.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_windowing/AgileCopyPasteManager.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_windowing/DemoDataStructures.js"></script>
+<script type="text/javascript" src="/pages/_testing/proj_windowing/DemoFunctions.js"></script>
+
+<style type="text/css">
+
+UL.toolbar {
+	height: 30px;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 15px;
+	font-family: Arial;
+	font-size: 13px;
+}
+
+.toolbar LI {
+	border: 1px solid #C1C1C1;
+	background-color: #F7F7F7;
+	float: left;
+	margin-right: 5px;
+	padding: 2px 5px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+
+var gSelectedRow = null;
+var gGrid = null;
+
+function deleteSelectedRow() {
+	if (gGrid && gSelectedRow) {
+		gGrid.DelRow(gSelectedRow);
+		gSelectedRow = null;
+	}
+}
+
+////////////////////////////////////////
+////////////////////////////////////////
+//
+//        EDIT FRAME
+//
+////////////////////////////////////////
+////////////////////////////////////////
+
+
+var allEditFrames = new Array ();
+allEditFrames[0] = "frame_edit_textbox";
+allEditFrames[1] = "frame_edit_calendar";
+allEditFrames[2] = "frame_edit_multitext";
+allEditFrames[3] = "frame_edit_dropdown";
+allEditFrames[4] = "frame_edit_uom";
+allEditFrames[5] = "frame_edit_msl";
+
+var allReadFrames = new Array ();
+allReadFrames[0] = "frame_read";
+
+var option_array = new Array();
+option_array[0] = "Inactive";
+option_array[1] = "Obsolete";
+option_array[2] = "Pilot";
+option_array[3] = "Production";
+option_array[4] = "Prototype";
+option_array[5] = "Repair";
+
+var uom_option_array = new Array();
+uom_option_array[0] = "mg";
+uom_option_array[1] = "g";
+uom_option_array[2] = "kg";
+uom_option_array[3] = "t";
+
+
+var current_text_val = null;
+var current_sel_row = null;
+var current_focus_row = null;
+var current_focus_col = null;
+var current_frame_type = null;
+var frame_edit_displayed = false;
+var frame_read_displayed = false;
+var datepicker_displayed = false;
+
+var prev_focus_row = null;
+var prev_focus_col = null;
+
+//Global timer
+var timer = null;
+
+//msl instance
+var msl_instance = null;
+
+//uom focus flag
+var uom_focused = false;
+
+
+////////////////////////////////////////
+//
+//        LOAD FUNCTIONS
+//
+////////////////////////////////////////
+
+function onTreeGridLoad(){
+	var obj = document.getElementById("Header");
+	if (obj.fireEvent) {
+		obj.fireEvent("onclick");
+    } else {
+        var clickEvent = window.document.createEvent("MouseEvent");
+        clickEvent.initEvent("click", false, true);
+        obj.dispatchEvent(clickEvent);
+    }
+}
+
+function loadGrid(event) {
+	StartTreeGrid(event);
+	createFrames();	
+}
+
+////////////////////////////////////////
+//
+//        TREEGRID API FUNCTIONS
+//
+////////////////////////////////////////
+
+Grids.OnFocus = function (G, row, col, orow, ocol) {
+	
+	if (prev_focus_row != null && prev_focus_col != null){
+		prev_focus_col = current_focus_col;
+		prev_focus_row = current_focus_row;
+	}
+
+	current_focus_row = Grids[Grids.length - 1].FRow;
+	current_focus_col = Grids[Grids.length - 1].FCol;
+	current_frame_type = determinePopup(current_focus_col);
+	
+	if (prev_focus_row == null && prev_focus_col == null){
+		prev_focus_col = current_focus_col;
+		prev_focus_row = current_focus_row;
+	}
+	
+	if (
+		frame_edit_displayed == false && current_frame_type == "multitext" ||
+		frame_edit_displayed == false && current_frame_type == "msl"
+	){
+		var set_frame_timer = setTimeout("setFrame('read');", 2000);
+	} else if (frame_read_displayed == true) {
+		hideReadFrame();
+	}
+	
+	if (changedCell()) {
+		hideEditFrame();
+	}
+	
+}
+
+Grids.OnSelect = function (G, row, type) {
+	current_sel_row = row;
+}
+
+Grids.OnSelect = function (G, row, type) {
+	current_sel_row = row;
+}
+
+Grids.OnClick = function (G,row,col,x,y){
+	//timer = setTimeout("doOnClick();", 1500);
+}
+
+Grids.OnDblClick = function (G,row,col,x,y) {
+	clearTimeout(timer);
+	timer = null;
+	doOnDblClick();
+}
+
+Grids.OnKeyDown = function (grid, key, evt) {
+	detectTableKeys(evt, 'agile_table');
+}
+
+ Grids.OnScroll = function (G, scroll_left, scroll_top) {
+	if		(frame_edit_displayed == true){ setFrame("edit"); }
+	else if (frame_read_displayed == true){ setFrame("read"); }
+}
+
+
+Grids.OnGetColor = function (G,row,col,r,g,b){
+	if ((row==G.FRow || row.Selected) && col!=G.FCol) { return "rgb(228,238,255)"; }
+}
+
+////////////////////////////////////////
+//
+//        CLICK FUNCTIONS
+//
+////////////////////////////////////////
+
+
+function doOnClick(){
+	//Ben why do I have to take this extra step?!
+	if(timer == null) { return };
+	if (frame_read_displayed == true && changedCell() == true){
+		hideReadFrame();
+	} else {
+		hideEditFrame();
+	}
+}
+
+function doOnDblClick(){
+	if (frame_read_displayed == true) {
+		hideReadFrame();
+	} else if (frame_edit_displayed == true) {
+		hideEditFrame();
+	}
+	setFrame("edit");
+}
+
+
+
+function setPrevs() {
+	prev_focus_col = current_focus_col;
+	prev_focus_row = current_focus_row;
+}
+
+function changedCell(){
+	if (prev_focus_col == current_focus_col && prev_focus_row == current_focus_row){
+		return false;
+	} else {
+		return true;
+	}
+}
+
+
+////////////////////////////////////////
+//
+//        CREATE FUNCTIONS
+//
+////////////////////////////////////////
+function createFrames() {
+	var frame_enclosure = document.getElementById("frame_enclosure");
+	
+	if (frame_enclosure){
+		var textbox = createTextbox();
+		var multitext = createMultitext();
+		var calendar = createCalendar();
+		var dropdown = createDropdown();
+		var uom = createUOM();
+		
+		var msl = createMSL();
+		var msl_palette = createMSLPalette();
+		
+		var read_frame = createReadFrame();
+		
+		
+		frame_enclosure.appendChild(textbox);
+		frame_enclosure.appendChild(multitext);
+		frame_enclosure.appendChild(calendar);
+		frame_enclosure.appendChild(dropdown);
+		frame_enclosure.appendChild(uom);
+		
+		frame_enclosure.appendChild(msl);
+		frame_enclosure.appendChild(msl_palette);
+		
+		frame_enclosure.appendChild(read_frame);
+		
+		//TEMP FUNCTION
+		createTempDatepicker();
+		
+		msl_instance = createInstance();
+		//YAHOO.util.Event.onContentReady('frame_edit_msl', createInstance);
+	}
+	
+}
+
+
+function createTextbox() {
+	var frame_edit = make("div", "frame_edit", "frame_edit_textbox");
+	var outer_block = make("div", "outer_block");
+	
+	var textbox_input = make("input","textbox", "edit_textbox");
+	textbox_input.type = "text";
+	textbox_input.onkeydown = function(event) {checkEvent(event, "edit_textbox");};
+	
+	outer_block.appendChild(textbox_input);
+	frame_edit.appendChild(outer_block);
+	
+	return frame_edit;
+}
+
+function createMultitext() {
+	//Edit
+	var frame_edit = make("div", "frame_edit", "frame_edit_multitext");
+	var outer_block_edit = make("div", "outer_block");
+	
+	var multitext_edit = make("textarea","", "edit_multitext");
+	multitext_edit.onkeydown = function(event) { checkEvent(event, "edit_multitext"); };
+	
+	outer_block_edit.appendChild(multitext_edit);
+	frame_edit.appendChild(outer_block_edit);
+	
+	return frame_edit;
+}
+
+function createCalendar() {
+	var frame_edit = make("div", "frame_edit", "frame_edit_calendar");
+	var outer_block = make("div", "outer_block");
+	
+	var calendar_input = make("input","", "edit_calendar");
+	calendar_input.type = "text";
+	calendar_input.onkeydown = function(event) { checkEvent(event, "edit_calendar"); };
+	
+	var calendar_button = make("a", "button", "calendar_button");
+	var calendar_span = make("span");
+	var calendar_em = make("em", "calendar iconic");
+	
+	calendar_em.innerHTML = "&nbsp;";
+	calendar_span.appendChild(calendar_em);
+	calendar_button.appendChild(calendar_span);
+	
+	calendar_button.onclick = function() { callTempDatepicker(); };
+	
+	outer_block.appendChild(calendar_input);
+	outer_block.appendChild(calendar_button);
+	frame_edit.appendChild(outer_block);
+	
+	return frame_edit;
+}
+
+function createDropdown() {
+	var frame_edit = make("div", "frame_edit", "frame_edit_dropdown");
+	var outer_block = make("div", "outer_block");
+	
+	var dropdown_box = make("select","some_class", "edit_dropdown");
+	for (var i = 0; i < option_array.length; i++){
+		createOption (dropdown_box, option_array[i], "some_class", i);
+	}
+	dropdown_box.onkeydown = function(event) {checkEvent(event, "edit_dropdown");};
+	
+	outer_block.appendChild(dropdown_box);
+	frame_edit.appendChild(outer_block);
+	
+	return frame_edit;
+}
+
+function createOption (dropdown_box, val, use_class, index) {
+	var dropdown_option = make("option", use_class);
+	dropdown_option.value = dropdown_option.text = val;
+	dropdown_box.options.add(dropdown_option, index)
+}
+
+function createUOM() {
+	var frame_edit = make("div", "frame_edit", "frame_edit_uom");
+	var outer_block = make("div", "outer_block");
+	
+	var uom_input = make("input","uom", "edit_uom");
+	uom_input.type = "text";
+	uom_input.onkeydown = function(event) { checkEvent(event, "edit_uom"); };
+	
+	var uom_dropdown = make("select", "uom", "uom_dropdown");
+	for (var i = 0; i < uom_option_array.length; i++){
+		createOption (uom_dropdown, uom_option_array[i], "measurement", i);
+	}
+	
+	uom_dropdown.onkeydown = function(event) {checkEvent(event, "edit_uom");};
+	
+	outer_block.appendChild(uom_input);
+	outer_block.appendChild(uom_dropdown);
+	frame_edit.appendChild(outer_block);
+	
+	return frame_edit;
+}
+
+function createMSL() {
+	var frame_edit = make("div", "frame_edit", "frame_edit_msl");
+	var outer_block = make("div", "outer_block pillbox_control");
+	
+	/*var msl_input = make("input","", "edit_msl");
+	msl_input.type = "text";
+	msl_input.onkeydown = function(event) { checkEvent(event, "edit_msl"); };*/
+	
+	var msl_wrapper = make("div","","edit_msl");
+	
+	var msl_content = make("div","content action_dialog","content");
+	var msl_form = make("form","","form_dialogs");
+	msl_form.name = "form_dialogs";
+	msl_form.onsubmit = function (){return false;};
+	var msl_edit_mode = make("div","","edit_mode");
+	var msl_fieldset = make("fieldset","dynamic");
+	var msl_dl = make("dl","side_by_side");
+	
+	var msl_dt = make("dt");
+	var msl_dd = make("dd","multiselect_textbox");
+	var msl_agileautocomplete = make("div","agileautocomplete medium_width","agileautocomplete");
+	
+	var msl_input = make("input","search_query","search_query");
+	msl_input.onkeydown = function(event) { checkEvent(event, "edit_msl"); };
+	var msl_results_container = make("div","results_container","results_container");
+	var msl_selected_container = make("div","selected_container","selected_container");
+	msl_selected_container.tabindex = "-1";
+	
+	var msl_ul = make("ul","","selected_items");
+	var msl_added_notice = make("div","added_notice","added_notice");
+	//msl_added_notice.setAttribute("style","display: none;");
+	setStyle(msl_added_notice,"display: none;");
+	msl_added_notice.innerHTML = "Added";
+	
+	msl_selected_container.appendChild(msl_ul);
+	msl_selected_container.appendChild(msl_added_notice);
+	
+	msl_agileautocomplete.appendChild(msl_input);
+	msl_agileautocomplete.appendChild(msl_results_container);
+	msl_agileautocomplete.appendChild(msl_selected_container);
+	
+	var msl_show_floater = make("a","button","show_floater");
+	var msl_show_floater_span = make("span");
+	var msl_show_floater_em = make("em","view_details");
+	msl_show_floater_em.innerHTML = "&nbsp;";
+	msl_show_floater_span.appendChild(msl_show_floater_em);
+	msl_show_floater.appendChild(msl_show_floater_span);
+	
+	msl_dd.appendChild(msl_agileautocomplete);
+	msl_dd.appendChild(msl_show_floater);
+	
+	msl_dl.appendChild(msl_dt);
+	msl_dl.appendChild(msl_dd);
+
+	msl_fieldset.appendChild(msl_dl);
+	msl_edit_mode.appendChild(msl_fieldset);
+	msl_form.appendChild(msl_edit_mode);
+	
+	msl_action_dialog_foot_spacer = make("p","action_dialog_foot_spacer");
+	msl_action_dialog_foot_spacer.innerHTML = ".";
+	
+	msl_content.appendChild(msl_form);
+	msl_content.appendChild(msl_action_dialog_foot_spacer);
+	
+	msl_wrapper.appendChild(msl_content);
+	outer_block.appendChild(msl_wrapper);
+	
+	frame_edit.appendChild(outer_block);
+	
+	return frame_edit;
+}
+
+function createMSLPalette() {
+	var msl_floater_window = make("div","palette nodrag","floater_window");
+	msl_floater_window.tabIndex = "-1";
+	
+	var msl_floater_content = make("div","palette_content nodrag","floater_content");
+	msl_floater_content.tabIndex = "-1";
+	
+	var msl_floater_handlebar = make("div","handlebar","floater_window");
+	msl_floater_handlebar.tabIndex = "-1";
+	
+	var msl_close_floater = make("a","close_palette","close_floater");
+	msl_close_floater.tabIndex = "-1";
+	msl_close_floater.onclick = function() { return false; };
+	
+	var msl_close_floater_span = make("span");
+	msl_close_floater_span.innerHTML = "close";
+	msl_close_floater.appendChild(msl_close_floater_span);
+	
+	var msl_floater_title = make("div","palette_title nodrag","floater_title");
+	msl_floater_title.tabIndex = "-1";
+	
+	var msl_floater_title_p = make("p","nodrag","palette_title");
+	msl_floater_title_p.tabIndex = "-1";
+	
+	var msl_floater_title_added = make("div","palette_added_notice","palette_added_notice");
+	msl_floater_title_added.tabIndex = "-1";
+	setStyle(msl_floater_title_added,"display: none;");
+	msl_floater_title_added.innerHTML = "Added";
+	
+	msl_floater_title.appendChild(msl_floater_title_p);
+	msl_floater_title.appendChild(msl_floater_title_added);
+	
+	var msl_floater_filter = make("div","palette_filter nodrag","floater_filter");
+	msl_floater_filter.innerHTML = "Filter: ";
+	
+	var msl_floater_filter_input = make("input","search nodrag","floater_search_text");
+	msl_floater_filter_input.type = "text";
+	msl_floater_filter_input.tabIndex = "1";
+	msl_floater_filter_input.name = "search";
+	msl_floater_filter_input.value = "";
+	msl_floater_filter_input.setAttribute("autocomplete","off");
+	
+	msl_floater_filter.appendChild(msl_floater_filter_input);
+	
+	var msl_floater_results_div = make("div","nodrag","floater_results_div");
+	msl_floater_results_div.tabIndex = "-1";
+	
+	var msl_floater_results_list = make("div","palette_results_list nodrag","floater_results_list");
+	msl_floater_results_list.tabIndex = "-1";
+	
+	msl_floater_results_div.appendChild(msl_floater_results_list);
+	
+	var msl_floater_resize_handle = make("div","palette_resizer nodrag","floater_resize_handle");
+	msl_floater_resize_handle.tabIndex = "-1";
+	msl_floater_resize_handle.innerHTML = "&nbsp;";
+	
+	msl_floater_content.appendChild(msl_floater_handlebar);
+	msl_floater_content.appendChild(msl_close_floater);
+	msl_floater_content.appendChild(msl_floater_title);
+	msl_floater_content.appendChild(msl_floater_filter);
+	msl_floater_content.appendChild(msl_floater_results_div);
+	msl_floater_content.appendChild(msl_floater_resize_handle);
+	
+	var msl_drag_div = make("div","drag_div","dragDiv");
+	setStyle(msl_drag_div,"position:absolute;height:15px;width:15px;visibility:hidden;z-index:99998;");
+	
+	var msl_drag_div_p = make("p","drag_tooltip","totalDragged");
+	setStyle(msl_drag_div_p,"position:absolute;left:-9px;top:-8px;background-color: #fff;border: 1px dotted #787878;color: #000;font-weight: bold;font-size: 14px;height: 15px;line-height: 14px;min-width: 15px;padding: 2px;text-align: center;width: auto;z-index:99998;opacity: .75;filter: alpha(opacity=75);");
+	msl_drag_div_p.tabIndex = "-1";
+	
+	msl_drag_div.appendChild(msl_drag_div_p);
+	
+	msl_floater_window.appendChild(msl_floater_content);
+	msl_floater_window.appendChild(msl_drag_div);
+	
+	return msl_floater_window;
+}
+
+function createReadFrame(){
+	//Read
+	var frame_read = make("div", "frame_read", "frame_read");
+	var outer_block_read = make("div", "outer_block");
+	outer_block_read.ondblclick = function() { hideReadFrame(); setFrame("edit"); };
+	
+	var multitext_read = make("p","read", "read"); 
+	
+	//can't recieve focus unless there is a tabindex
+	//multitext_read.tabIndex = "-1";
+	multitext_read.onkeydown = function(event) { checkEvent(event, "read"); };
+	multitext_read.ondblclick = function() { hideReadFrame(); setFrame("edit"); };
+	
+	outer_block_read.appendChild(multitext_read);
+	frame_read.appendChild(outer_block_read);
+	
+	return frame_read;
+}
+
+function make(tag, objClass, objId) {
+    var elem = document.createElement(tag);
+    if (objClass)	{ elem.className = objClass; }
+    if (objId)		{ elem.id = objId; }
+    return elem;
+}
+
+function setStyle(obj, styleText) {
+	obj.style.cssText = styleText;
+}
+
+
+
+////////////////////////////////////////
+//
+//        FRAME FUNCTIONS
+//
+////////////////////////////////////////
+
+function setFrame(frame_type){
+	//if no frame should be showed, return
+	if (current_frame_type == null){ return; }
+	
+	//Getting text value from td cell
+	current_text_val = Grids[Grids.length - 1].GetString(current_focus_row, current_focus_col);
+	
+	//Using return object to find height and width of td cell
+	var cell_obj = Grids[Grids.length - 1].GetCell(current_focus_row, current_focus_col, 0);
+	
+	//Using returned position to get top and left values of td cell
+	var cell_pos = findPos(cell_obj);
+	
+	//Passing values to size and position function
+	positionFrame(current_text_val, cell_obj.offsetWidth, cell_obj.offsetHeight, cell_pos[1], cell_pos[0], frame_type);
+}
+
+function hideEditFrame() {
+	if (frame_edit_displayed == true) {
+		for (var i = 0; i < allEditFrames.length; i++){
+			displayNone(allEditFrames[i]);	
+		}
+		frame_edit_displayed = false;
+	}
+	
+	//TEMP FUNCTION
+	hideTempDatepicker();
+	
+	//set uom focus flag back to false
+	uom_focused = false;
+}
+
+function hideReadFrame() {
+	if (frame_read_displayed == true) {
+		for (var i = 0; i < allReadFrames.length; i++){
+			displayNone(allReadFrames[i]);	
+		}
+		frame_read_displayed = false;
+	}
+}
+
+//Put all frame types here
+function determinePopup(column){
+	if (column.match("noedit") != null){
+		return null;
+	} else if (column.match("textbox") != null){
+		return "textbox";
+	} else if (column.match("multitext") != null){
+		return "multitext";
+	} else if (column.match("calendar") != null){
+		return "calendar";
+	} else if (column.match("dropdown") != null){
+		return "dropdown";
+	} else if (column.match("uom") != null){
+		return "uom";
+	} else if (column.match("msl") != null){
+		return "msl";
+	}
+}
+
+function setValue() {
+	switch (current_frame_type) {
+		case "textbox":
+			var obj = document.getElementById('edit_textbox');
+			current_text_val =  obj.value;
+			Grids[Grids.length - 1].SetString(current_focus_row, current_focus_col, current_text_val, refresh = true);
+			break;
+		case "multitext":
+			var obj = document.getElementById('edit_multitext');
+			current_text_val =  obj.value;
+			Grids[Grids.length - 1].SetString(current_focus_row, current_focus_col, current_text_val, refresh = true);
+			break;
+		case "calendar":
+			var obj = document.getElementById('edit_calendar');
+			current_text_val =  obj.value;
+			Grids[Grids.length - 1].SetString(current_focus_row, current_focus_col, current_text_val, refresh = true);
+			break;
+		case "msl":
+			var obj = document.getElementById('edit_msl');
+			var msl_text = pillToText();
+			current_text_val = msl_text;
+			Grids[Grids.length - 1].SetString(current_focus_row, current_focus_col, current_text_val, refresh = true);
+			break;
+		case "uom":
+			var obj = document.getElementById('edit_uom');
+			var dropdown = document.getElementById('uom_dropdown');
+			if (obj.value){
+				var selectedNum = dropdown.selectedIndex;
+				var dropdown_val = dropdown.options[selectedNum].value;
+				current_text_val =  obj.value + " " + dropdown_val;
+			}
+			Grids[Grids.length - 1].SetString(current_focus_row, current_focus_col, current_text_val, refresh = true);
+			break;
+		case "dropdown":
+			var obj = document.getElementById('edit_dropdown');
+			var selectedNum = obj.selectedIndex;
+			current_text_val = obj.options[selectedNum].value;
+			Grids[Grids.length - 1].SetString(current_focus_row, current_focus_col, current_text_val, refresh = true);
+			break;
+	}
+}
+
+//Takes text in table cell and converts to pills
+function textToPill(pill_string){
+	var pill_text = new Array();
+	pill_text = pill_string.split(", ");
+	
+	var pillbox_enclosure = document.getElementById("selected_items");
+	
+	//clear pillbox
+	var pillIds =  msl_instance._pillBox.getPillIds();
+	
+	  if (pillIds.length) {
+		for (var i = 0; i < pillIds.length; i++) {
+		    var pillId = pillIds[i];
+			removePill(pillId);
+		}
+	}
+	
+	for (i = 0; i < pill_text.length; i++){
+	    var pill_string = new String(pill_text[i]);
+		msl_instance._pillBox.createPill(pill_string, false);
+	}
+}
+
+//Takes pills in pillbox enclosure and converts them into text for use in the table cell
+function pillToText(){
+	var pill_text = "";
+	var pillbox_enclosure = document.getElementById("selected_items");
+	var pill_items = pillbox_enclosure.getElementsByTagName("li");
+
+	
+	if (pill_items && pill_items.length){
+		//make text statement
+		for (var i = 0; i < pill_items.length; i++){	
+			if (i == pill_items.length - 1){;
+				pill_text = pill_text + pill_items[i].name;
+			} else {
+				pill_text = pill_text + pill_items[i].name + ", ";
+			}
+		}
+	}
+	
+	return pill_text;
+}
+
+
+////////////////////////////////////////
+//
+//        POSITIONING FUNCTIONS
+//
+////////////////////////////////////////
+
+//This function is passed values for default frame placement
+//Any alternate sizing is made within
+function positionFrame(text_value, cell_width, cell_height, cell_top, cell_left, frame_type) {
+	var parent = null;
+	var obj = null;
+	
+	var scroll_top = Grids[Grids.length - 1].GetScrollTop();
+	var scroll_left = Grids[Grids.length - 1].GetScrollLeft();
+	
+	if (frame_type == "edit") {
+		if (current_frame_type == "calendar"){
+			obj = document.getElementById('edit_calendar');
+			parent = obj.parentNode;
+			var frame_edit = document.getElementById('frame_edit_calendar');
+			
+			visibilityHidden(frame_edit);
+			displayBlock(frame_edit);
+			
+			var pos = detectFit(parent, cell_top, cell_left);
+		
+			obj.style.width = cell_width - 4 + "px";
+			obj.style.height = cell_height - 5 + "px";
+			parent.style.width = cell_width + 45 + "px";
+			
+			//ignores top or bottom
+			if (pos == "br" || pos == "tr"){
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left - scroll_left - 1 - 45 + "px";
+			} else { 
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left - scroll_left - 4 + "px";
+			}
+			
+			obj.value = current_text_val = text_value;
+		} else if (current_frame_type == "uom"){
+			obj = document.getElementById('edit_uom');
+			parent = obj.parentNode;
+			var frame_edit = document.getElementById('frame_edit_uom');
+			
+			visibilityHidden(frame_edit);
+			displayBlock(frame_edit);
+			
+			var pos = detectFit(parent, cell_top, cell_left);
+
+			obj.style.width = cell_width - 4  + "px";
+			//obj.style.height = cell_height - 1 + "px";
+			obj.style.height = cell_height - 5 + "px";
+			
+			//ignores top or bottom
+			if (pos == "br" || pos == "tr"){
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left - scroll_left - -5 + "px";
+			} else { 
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left - scroll_left - 4 + "px";
+			}
+			
+			var dropdown = document.getElementById('uom_dropdown');
+			
+			//in prepration for "for"
+			var check_num = NaN;
+			
+			if (text_value != ""){
+				for(var i =0; i < uom_option_array.length; i++){
+					if (text_value.match(uom_option_array[i]) != null && isNaN(check_num)){
+						//tell dropdown to start at a certain index
+						dropdown.selectedIndex = i;
+						
+						//cut out measurement in string
+						var temp = new Array();
+						temp = text_value.split(uom_option_array[i]);
+						
+						// take space out of temp
+						temp_num = temp[0].split(" ");
+						
+						check_num = temp_num[0] * 1;
+						if (isNaN(check_num) == false) {
+							obj.value = current_text_val = temp_num[0];
+						}
+					}
+				}
+			} else {
+				obj.value = current_text_val = text_value;
+			}
+		} else if (current_frame_type == "multitext") {
+			obj = document.getElementById('edit_multitext');
+			parent = obj.parentNode;
+			var frame_edit = document.getElementById('frame_edit_multitext');
+			
+			visibilityHidden(frame_edit);
+			displayBlock(frame_edit);
+			
+			var pos = detectFit(parent, cell_top, cell_left);
+			
+			if (pos == "br") {
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left + cell_width - parent.offsetWidth - scroll_left + 4 + "px";
+			} else if (pos == "tr") {
+				parent.style.top = cell_top + cell_height - parent.offsetHeight - scroll_top + 5 + "px";
+				parent.style.left = cell_left + cell_width - parent.offsetWidth - scroll_left + 4 + "px"; 
+			} else if (pos == "bl") {
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left - scroll_left - 4 + "px";
+			} else if (pos == "tl") {
+				parent.style.top = cell_top + cell_height - parent.offsetHeight - scroll_top + 5 + "px";
+				parent.style.left = cell_left - scroll_left - 4 + "px";
+			}
+			
+			obj.value = current_text_val = text_value;
+		} else if (current_frame_type == "dropdown") {
+			obj = document.getElementById('edit_dropdown');
+			parent = obj.parentNode;
+			var frame_edit = document.getElementById('frame_edit_dropdown');
+			
+			visibilityHidden(frame_edit);
+			displayBlock(frame_edit);
+			
+			obj.style.width = cell_width  + "px";
+			obj.style.height = cell_height - 1 + "px";
+			
+			parent.style.top = cell_top - scroll_top - 5 + "px";
+			parent.style.left = cell_left - scroll_left - 4 + "px";
+			
+			//Take text value and match to option so it can be displayed as selected
+			for (var i = 0; i < option_array.length; i++){
+				if (obj.options[i].value == text_value){
+					obj.selectedIndex = i;
+				}
+			}
+		} else if (current_frame_type == "msl") {
+			obj = document.getElementById('edit_msl');
+			parent = obj.parentNode;
+			var frame_edit = document.getElementById('frame_edit_msl');
+			
+			visibilityHidden(frame_edit);
+			displayBlock(frame_edit);
+			
+			var pos = detectFit(parent, cell_top, cell_left);
+			
+			if (pos == "br") {
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left + cell_width - parent.offsetWidth - scroll_left + 4 + "px";
+			} else if (pos == "tr") {
+				parent.style.top = cell_top + cell_height - parent.offsetHeight - scroll_top + 5 + "px";
+				parent.style.left = cell_left + cell_width - parent.offsetWidth - scroll_left + 4 + "px"; 
+			} else if (pos == "bl") {
+				parent.style.top = cell_top - scroll_top - 5 + "px";
+				parent.style.left = cell_left - scroll_left - 4 + "px";
+			} else if (pos == "tl") {
+				parent.style.top = cell_top + cell_height - parent.offsetHeight - scroll_top + 5 + "px";
+				parent.style.left = cell_left - scroll_left - 4 + "px";
+			}
+			
+			textToPill(text_value);
+			current_text_val = text_value;
+		} else { //default to text popup
+			obj = document.getElementById('edit_textbox');
+			parent = obj.parentNode;
+			var frame_edit = document.getElementById('frame_edit_textbox');
+			
+			visibilityHidden(frame_edit);
+			displayBlock(frame_edit);
+			
+			obj.style.width = cell_width - 4 + "px";
+			obj.style.height = cell_height - 5 + "px";
+			
+			parent.style.top = cell_top - scroll_top - 5 + "px";
+			parent.style.left = cell_left - scroll_left - 4 + "px";
+			
+			obj.value = current_text_val = text_value;
+		}
+		
+		//Display edit frame as block and set flag for frame as displayed
+		visibilityVisible(frame_edit);
+		frame_edit_displayed = true;
+		
+		if (frame_read_displayed == true){
+			hideReadFrame();
+			frame_edit_displayed == false
+		}
+			
+		if(obj.select){
+			obj.select();
+		}
+		
+			if (obj && obj.focus) {
+				obj.focus();
+			}
+			
+			if (datepicker_displayed) { 
+				var date_obj = document.getElementById("calendar_button");
+				callTempDatepicker(date_obj)
+			}
+		
+		return;
+		
+	} if (frame_type == "read" && frame_edit_displayed == false) {
+		obj = document.getElementById('read');
+		parent = obj.parentNode;
+		var frame_read = document.getElementById('frame_read');
+		
+		visibilityHidden(frame_read);
+		displayBlock(frame_read);
+		
+		var pos = detectFit(parent, cell_top, cell_left);
+		
+		if (pos == "br") {
+			parent.style.top = cell_top - scroll_top - 1 + "px";
+			parent.style.left = cell_left + cell_width - parent.offsetWidth - scroll_left - 1 + "px";
+		} else if (pos == "tr") {
+			parent.style.top = cell_top + cell_height - parent.offsetHeight - scroll_top - 1 + "px";
+			parent.style.left = cell_left + cell_width - parent.offsetWidth - scroll_left - 1 + "px"; 
+		} else if (pos == "bl") {
+			parent.style.top = cell_top - scroll_top - 1 + "px";
+			parent.style.left = cell_left - scroll_left - 1 + "px";
+		} else if (pos == "tl") {
+			parent.style.top = cell_top + cell_height - parent.offsetHeight - scroll_top - 1 + "px";
+			parent.style.left = cell_left - scroll_left - 1 + "px";
+		}
+		
+		obj.innerHTML = text_value;
+		current_text_val = text_value;
+		
+		//Display read frame and set flag for frame as displayed
+		visibilityVisible(frame_read);
+		frame_read_displayed = true;
+	}
+			
+	if (obj && obj.focus) {
+		obj.focus();
+	}
+	
+	if (datepicker_displayed) { 
+		var date_obj = document.getElementById("calendar_button");
+		callTempDatepicker(date_obj)
+	}
+	
+}
+
+//Four way edge detection
+function detectFit(posObj, tgtObj_top, tgtObj_left) {
+	var scroll_top = Grids[Grids.length - 1].GetScrollTop();
+	var scroll_left = Grids[Grids.length - 1].GetScrollLeft();
+
+	//get element size
+	var table_enclosure = document.getElementById("treegrid");
+	
+	table_pos = findPos(table_enclosure);
+	
+	//get table width less target obj position
+	var space_left = (table_enclosure.offsetWidth + table_pos[0] + scroll_left) - tgtObj_left;
+	var space_bottom = (table_enclosure.offsetHeight + table_pos[1] + scroll_top) - tgtObj_top;
+	//alert("Space Left: " + space_left);
+	//alert("Space Bottom: " + space_bottom + " = table_enclosure.offsetHeight (" + table_enclosure.offsetHeight + ") + table_pos(" + table_pos[0] + ") - tgtObj_top (" + tgtObj_top + ")");
+	//alert("PosObj Height: " + posObj.offsetHeight);
+	
+	if		(posObj.offsetWidth < space_left && posObj.offsetHeight > space_bottom) { return "tl"}
+	else if	(posObj.offsetWidth > space_left && posObj.offsetHeight > space_bottom) { return "tr"}
+	else if	(posObj.offsetWidth < space_left && posObj.offsetHeight < space_bottom) { return "bl"}
+	else if	(posObj.offsetWidth > space_left && posObj.offsetHeight < space_bottom) { return "br"}
+}
+
+
+function findPos(obj) {
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+		curleft = obj.offsetLeft
+		curtop = obj.offsetTop
+		while (obj = obj.offsetParent) {
+			curleft += obj.offsetLeft
+			curtop += obj.offsetTop
+		}
+	}
+	return [curleft,curtop];
+}
+
+////////////////////////////////////////
+//
+//        DISPLAY FUNCTIONS
+//
+////////////////////////////////////////
+
+function displayBlock(obj) {
+	if (typeof obj == 'string') {
+		var obj = document.getElementById(obj);
+	}
+	obj.style.display = "block";	
+}
+
+function displayNone(obj) {
+	if (typeof obj == 'string') {
+		var obj = document.getElementById(obj);
+	}
+	obj.style.display = "none";
+}
+
+function displayInline(obj) {
+	if (typeof obj == 'string') {
+		var obj = document.getElementById(obj);
+	}
+	obj.style.display = "inline";
+}
+
+function visibilityHidden(obj){
+	if (typeof obj == 'string') {
+		var obj = document.getElementById(obj);
+	}
+	obj.style.visibility = "hidden";
+}
+
+function visibilityVisible(obj){
+	if (typeof obj == 'string') {
+		var obj = document.getElementById(obj);
+	}
+	obj.style.visibility = "visible";
+}
+
+
+////////////////////////////////////////
+//
+//        KEY EVENT FUNCTIONS
+//
+////////////////////////////////////////
+
+
+function detectedEnter(val){
+	//do nothing if val = agile_table and edit_frame_displayed
+	if (val.match("edit") != null && frame_edit_displayed == true) {
+		if (current_frame_type == "msl"){
+			var obj = document.getElementById('search_query');
+			if (obj.value != ""){
+				return;
+			} else {
+				setValue();
+				hideEditFrame();
+				return;
+			}		
+		} else { //default
+			setValue();
+			hideEditFrame();
+			return;
+		}
+	} else if (val == "agile_table" && frame_edit_displayed == false) {
+		setFrame("edit");
+		return;
+	}
+}
+
+function detectedEsc(){
+	hideEditFrame();
+	hideReadFrame();
+}
+
+function detectedTab(val, shift_bool, evt){
+	if (val.match("edit_uom") != null && frame_edit_displayed == true && shift_bool == false) {
+		if (uom_focused == false) {
+			CancelEvent(evt, 1);
+			var obj = document.getElementById('uom_dropdown');
+			if (obj.focus) obj.focus();
+			uom_focused = true;
+		}
+	} else if (val.match("edit_uom") != null && frame_edit_displayed == true && shift_bool == true){
+		CancelEvent(evt, 1);
+		var obj = document.getElementById('edit_uom');
+		if (obj.focus) obj.focus();
+		if (obj.select) obj.select();
+		uom_focused = false;
+	} else {
+		setValue();
+	}
+}
+
+
+
+
+////////////////////////////////////////
+//
+//        EVENT DETECTION FUNCTIONS
+//
+////////////////////////////////////////
+
+/* Need cross browser grabbing of event */
+function getEvent(evt) {
+	evt = (evt) ? evt : ((window.event) ? window.event : "");
+	return (evt);
+}
+
+function detectTableKeys (evt, val) {
+	evt = getEvent(evt);
+	var characterCode = (evt && evt.which) ? evt.which : evt.keyCode;
+	var modifiers = getEventModifiers(evt);
+	if (!characterCode) { return; }
+	
+	switch (characterCode) {
+		case 9:	// > Tab 
+			if (modifiers && modifiers['shift']) { detectedTab(val, true, evt); } else { detectedTab(val, false, evt); }
+			break;
+		case 13: // > Enter
+			detectedEnter(val);
+			break;
+		case 27: // > Esc
+			detectedEsc();
+			break;
+		case 37: // > Left Arrow
+			break;
+		case 38: // > Up Arrow
+			break;
+		case 39: // > Right Arrow
+			break;
+		case 40: // > Down Arrow
+			break;
+		default:
+			break;
+	}
+}
+
+function checkEvent(evt, val) {
+	evt = getEvent(evt);
+	var characterCode = (evt && evt.which) ? evt.which : evt.keyCode;
+	var modifiers = getEventModifiers(evt);
+	if (!characterCode) { return; }
+	
+	switch (characterCode) {
+		case 9:	// > Tab
+			//CancelEvent(evt, 1);
+			break;
+		case 13: // > Enter
+			stopEvent(evt);
+			CancelEvent(evt, 1);
+			break;
+		case 27: // > Esc
+			//detectedEsc();
+			break;
+		case 37: // > Left Arrow
+			CancelEvent(evt, 1);
+			break;
+		case 38: // > Up Arrow
+			CancelEvent(evt, 1);
+			break;
+		case 39: // > Right Arrow
+			CancelEvent(evt, 1);
+			break;
+		case 40: // > Down Arrow
+			CancelEvent(evt, 1);
+			break;
+		default:
+			CancelEvent(evt, 1);
+			break;
+	}
+	detectTableKeys (evt, val);
+}
+
+
+function getEventModifiers(evt) {
+	var modifier_list = {
+		'shift': false,
+		'ctrl': false,
+		'alt': false
+	}
+	
+	if (evt.modifiers && Event && Event.SHIFT_MASK) {
+		modifier_list['shift'] = true;
+	} else if (evt.shiftKey && evt.shiftKey == true) {
+		modifier_list['shift'] = true;
+	}
+
+	if (evt.modifiers && Event && Event.CTRL_MASK) {
+		modifier_list['ctrl'] = true;
+	} else if (evt.ctrlKey && evt.ctrlKey == true) {
+		modifier_list['ctrl'] = true;
+	}
+	
+	if (evt.modifiers && Event && Event.ALT_MASK) {
+		modifier_list['alt'] = true;
+	} else if (evt.altKey && evt.altKey == true) {
+		modifier_list['alt'] = true;
+	}
+	
+	
+	return modifier_list;
+}
+
+function detectedScroll (){
+	if (frame_edit_displayed && current_frame_type != null) {
+		var popupObj = "frame" + current_frame_type;
+		
+		if (popupObj.style.display == "block"){
+			//Using return object to find height and width of td cell
+			var cell_obj = Grids[Grids.length - 1].GetCell(current_focus_row, current_focus_col, 0);
+			
+			//Using returned position to get top and left values of td cell
+			var cell_pos = findPos(cell_obj);
+			
+			//Passing values to size and position function
+			positionFrame(current_text_val, cell_obj.offsetWidth, cell_obj.offsetHeight, cell_pos[1], cell_pos[0]);
+		}
+	}			
+}
+
+
+
+
+
+////////////////////////////////////////
+//
+//        STOP EVENT FUNCTIONS
+//
+////////////////////////////////////////
+
+
+
+
+/**
+ * Convenience method for stopPropagation + preventDefault
+ * @method stopEvent
+ * @param {Event} ev the event
+ * @static
+ */
+function stopEvent(ev) {
+	this.stopPropagation(ev);
+	this.preventDefault(ev);
+}
+
+/**
+ * Stops event propagation
+ * @method stopPropagation
+ * @param {Event} ev the event
+ * @static
+ */
+function stopPropagation(ev) {
+	if (ev.stopPropagation) {
+		ev.stopPropagation();
+	} else {
+		ev.cancelBubble = true;
+	}
+}
+
+/**
+ * Prevents the default behavior of the event
+ * @method preventDefault
+ * @param {Event} ev the event
+ * @static
+ */
+function preventDefault(ev) {
+	if (ev.preventDefault) {
+		ev.preventDefault();
+	} else {
+		ev.returnValue = false;
+	}
+}
+
+
+////////////////////////////////////////
+//
+//        TEMP FUNCTIONS
+//
+////////////////////////////////////////
+
+
+function createTempDatepicker() {
+	var temp_datepicker = make("img","temp_datepicker", "temp_datepicker");
+	
+	var frame_enclosure = document.getElementById("frame_enclosure");
+	frame_enclosure.appendChild(temp_datepicker);
+}
+
+function callTempDatepicker(obj){
+	var temp_datepicker = document.getElementById("temp_datepicker");
+	
+	var obj_pos = findPos(obj);
+	
+	var pos = detectFit(temp_datepicker, obj_pos[1], obj_pos[0]);
+	
+	//shift above of below calendar edit frame
+	if (pos == "tr" || pos == "tl") {
+		temp_datepicker.style.top = obj_pos[1] - temp_datepicker.offsetHeight + "px";
+	} else {
+		temp_datepicker.style.top = obj_pos[1] + 2 + obj.offsetHeight + "px";
+	}
+	
+	temp_datepicker.style.left = obj_pos[0] - 182 + "px";
+	
+	datepicker_displayed = true;
+}
+
+function hideTempDatepicker(){
+	var temp_datepicker = document.getElementById("temp_datepicker");
+	temp_datepicker.style.left = -1000 + "px";
+	temp_datepicker.style.top = -1000 + "px";
+}
+
+
+function testScroll() {
+	
+}
+
+
+
+
+function test(){
+	//table_enclosure is the id of our table as named in XML
+	var table_enclosure = document.getElementById("agile_table");
+	var divs = table_enclosure.getElementsByTagName("div");
+	
+	var gpageone = new Array;
+	var j = 0;
+	for (var i = 0; i < divs.length; i++){
+		if (divs[i].className == "GPageOne"){
+			gpageone[j] = divs[i];
+			j++;
+		}
+	}
+	
+	//0 is left handle (gray), 1 is middle body (content)
+	var gTable = gpageone[1].getElementsByTagName("table");
+	
+	//this is the inner table I am talking about
+	alert(gTable[0].offsetWidth);
+}
+</script>
+
+</head>
+
+<body onload="createFrames();"><!-- class="agile_table" onkeyup="alert('hi'); detectTableKeys(event, 'agile_table');">-->
+
+	<div style="width:100%;">
+<!--************************************
+	TABLE ACTIONS
+*************************************-->
+		<div class="table_actions">
+			<div class="column_one no_width">
+				<p>
+					<a href="#" class="button"><span>Add</span></a>
+					<a href="#" class="button disabled"><span>Remove</span></a>
+					<a href="#" class="button"><span>Show Filter</span></a>
+					<a href="#" class="button"><span>More Actions<em class="dropdown">&nbsp;</em></span></a>
+				</p>
+			</div>
+			<div class="column_three">
+				<p>
+					<a href="#" class="button"><span>Save</span></a>
+					<a href="#" class="button"><span>Cancel</span></a>
+				</p>
+			</div>
+		</div>
+
+		<div style="height:300px; clear:both; width: 100%;" id="treegrid">
+			<treegrid Data_Url="agile_table.xml"> </treegrid>
+		</div>		
+	</div>
+	
+	<div id="frame_enclosure">
+		
+	</div>
+	
+
+
+</body>
+</html>

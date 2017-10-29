@@ -1,0 +1,19 @@
+/******************************************************************************
+	CONTENTS OF THIS FILE HAVE NO BUSINESS IN PRODUCTION!!!!
+	THESE ARE STYLES ONLY USED IN THE PROTOTYPE
+******************************************************************************/
+/******************************************************************************
+OBJ HEADER - STATUS INDICATOR
+******************************************************************************/
+.header_wrapper	.traffic_red { 
+	background-image: url(../images/icn_traffic_red.png); 
+}
+.header_wrapper	.traffic_yellow { 
+	background-image: url(../images/icn_traffic_yellow.png); 
+}
+.header_wrapper	.traffic_green { 
+	background-image: url(../images/icn_traffic_green.png); 
+}
+.header_wrapper	.traffic_grey {
+	background-image: url(../images/icn_traffic_gray.png); 
+}

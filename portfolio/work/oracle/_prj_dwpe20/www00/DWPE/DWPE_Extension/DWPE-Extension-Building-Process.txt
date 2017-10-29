@@ -1,0 +1,42 @@
+Dialog Creation process
+
+1. Create a ux_[componentname].js file to hold dwpe2 delivered templates.  
+2. Place it in Configuration\shared\dwpe2_design_time\templates\components
+3. Update the MXI.
+
+4. Copy an exisiting dialog html file of similar kind and rename it.
+5. Update the MXI.
+6. Update the dialog to include the component name wherever appropriate
+7. Copy the form structures from scout into the dialog and wire up field pointers and events
+
+8. Update editable tree to point to the correct default item definition, if it's needed
+9. Update the runtime js to have a default item def, if it's needed
+
+10. Update spec link in dialog
+
+11. Add Save to Template feature in dialog
+
+
+12. Update the inspector file to trap for this component type
+
+13. Update objects\menu... to create an access point for the dialog
+
+14. Update startup script to ensure the user_[component_name].js file is created
+
+15. Update component help
+
+16. Update JS and CSS libraries
+
+17. Update build number in shared\dwpe2_design_time\scripts\dwpe2_extension_support.js 
+
+Reload extension and test.
+
+
+Testing Steps:
+
+Create via dialog
+Check Output
+Select component in design mode
+Render in firefox
+Reenter dialog and change settings
+Templatize and reconstitute from template

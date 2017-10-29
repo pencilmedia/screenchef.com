@@ -1,0 +1,146 @@
+UX.dwpe-tree {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display:inline-block;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.dwpe-tree .actionBar {
+    width: auto;
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 0;
+    white-space: nowrap;
+    margin: 0;
+}
+.dwpe-tree .actionBar > * {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+.dwpe-tree .clear {
+    float: none;
+    clear: both;
+}
+.dwpe-tree .scrollPane {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    background: white;
+}
+.dwpe-tree .scrollPane:focus {
+    outline: 0px solid black;
+}
+.dwpe-tree .root a, 
+.dwpe-tree .root a:active, 
+.dwpe-tree .root a:visited, 
+.dwpe-tree .root a:hover {
+    color: #002A90;
+    text-decoration: none;
+}
+.dwpe-tree ul.root {
+    font: normal 11px Tahoma;
+    color: #002A90;
+    padding-left: 1px;
+}
+.dwpe-tree .hierSelector {
+    margin-top:2px;
+    height: 16px;
+    width: 16px;
+}
+.dwpe-tree .hierPanel {
+    padding: 2px;
+    background-color: white;
+    border: 1px solid #879483;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.45);
+    -webkit-box-shadow: rgba(0,0,0,0.45) 5px 5px 7px;
+    -moz-box-shadow: rgba(0,0,0,0.45) 5px 5px 7px;
+    color:black;
+    top: 5px;
+    left: 20px;
+    position: absolute;
+}
+.dwpe-tree .hierPanel .hierBranch {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+.dwpe-tree .hierPanel .hierBranch .hierBranch {
+    padding-left: 15px;
+    background: transparent url(../images/connector.png) no-repeat 5px 0px;
+}
+.dwpe-tree .hierPanel .hierBranch .hierNode {
+    padding: 1px;
+    cursor: default;
+}
+.dwpe-tree .branch {
+    margin: 0;
+    list-style: none;
+}
+.dwpe-tree .root ul.branch {
+    padding-left: 28px;
+}
+.dwpe-tree .root .node.closed > .branch,
+.dwpe-tree .scratch {
+    display: none;
+}
+.dwpe-tree .root .node {
+    line-height: 14px;
+    white-space: nowrap;
+    padding: 0;
+}
+.dwpe-tree .root .node > span {
+    vertical-align: middle;
+    display: inline-block;
+    height: 16px;
+    margin: 1px;
+}
+.dwpe-tree .root .node > .disclosure {
+    width: 9px;
+    height: 9px;
+    background: transparent none no-repeat center center;
+}
+.dwpe-tree .root .node.open > .disclosure {
+    background-image:url(../images/common_icons_normal.png);
+    background-position:0px -189px;
+}
+.dwpe-tree .root .node.closed > .disclosure {
+    background-image:url(../images/common_icons_normal.png);
+    background-position:-9px -189px;
+}
+.dwpe-tree .root .node.loading > .disclosure {
+    background-image: url('../images/tree/node_anim.gif');
+}
+.dwpe-tree .root .node > .status {
+    width: 12px;
+    background: transparent none no-repeat center center;
+}
+.dwpe-tree .root .node > .status.warning {
+    background-image: url(../images/tree/status_warning.png);
+}
+.dwpe-tree .root .node.open > .icons {
+    background: transparent url(../images/tree/folderopen_ena.png) no-repeat 1px 1px;
+}
+.dwpe-tree .root .node.closed > .icons,
+.dwpe-tree .root .node.loading > .icons {
+    background-position:-160px -16px;
+}
+.dwpe-tree .root .node > .label {
+    cursor: default;
+    height: 14px;
+    padding: 0px 1px;
+    border: 1px solid transparent;
+}
+.dwpe-tree .root .node.focused > .label {
+    border: 1px dotted #002A90;
+}
+.dwpe-tree .root .node.selected > .label {
+    background-color: #b5bdd6;
+}
+.dwpe-tree .root .node.focused.selected > .label {
+    background-color: #d6e2ef;
+}

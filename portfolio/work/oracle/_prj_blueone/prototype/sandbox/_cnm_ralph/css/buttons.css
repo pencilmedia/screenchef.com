@@ -1,0 +1,8 @@
+button {
+	border: 1px solid #ccc;
+	background-color: #e4e4e4;
+	padding: 1px 3px;
+}
+.content_header .column_two button {
+	margin-right: 3px;
+}

@@ -1,0 +1,44 @@
+/* BEGIN: dialogs.scss
+// -----------------------------------------------------*/
+
+// Dialogs
+.modal-dialog {
+    &.confirmation {
+        .modal-header, .modal-footer {
+            border: none;
+            text-align: center;
+        }
+    }
+    &.wizard {
+        .wizard-steps {
+            font-size: 110%;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+    }
+    .modal-content {
+        @include border-radius(0);
+    }
+    .modal-header {
+        h4 {
+            font-size: 22px;
+            text-transform: capitalize;
+        }
+    }
+    .modal-body {
+        padding: 20px 30px 10px 30px;
+        form {
+            fieldset {
+                .checkbox, .radio {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-sm {
+        width: 350px;
+    }
+}

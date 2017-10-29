@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HDividedBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" horizontalGap="10" >
+<mx:XMLList id="actionItems">
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        <actionItems>
+            <Description>A description of the requirement would appear here and here and ofcourse here. A description of the requirement would appear here and here and ofcourse here.</Description>
+            <Date>12/12/2012</Date>
+            <Owner>JSmith</Owner>
+        </actionItems>
+        
+  
+
+    </mx:XMLList>
+    
+    <mx:XMLList id="Members">
+    <Members>
+    	<Member>JSmith</Member>
+    </Members>
+    <Members>
+    	<Member>JSmith</Member>
+    </Members>
+    <Members>
+    	<Member>JSmith</Member>
+    </Members>
+    <Members>
+    	<Member>JSmith</Member>
+    </Members>
+    <Members>
+    	<Member>JSmith</Member>
+    </Members>
+    <Members>
+    	<Member>JSmith</Member>
+    </Members>
+      </mx:XMLList>
+    
+<mx:XMLList id="cnmListData">
+        		<quote id="quote_details" title="Quote1" label="Ultra Fast Road Bicycle" data="10" icon="quoteInprogress" code="100">
+        			<req label="Capabilities Requirements" icon="requirementInprogress">
+	        			<req id="load" label="Load" icon="requirementInprogress" />
+	        			<req id="speed" label="Speed" icon="requirementInprogress" />
+	        			<req id="braking" label="Braking" icon="requirementInprogress" />
+	        			<req id="terrain" label="Terrain" icon="requirementInprogress" />
+	        			<req id="safety" label="Safety" icon="requirementInprogress" />
+	        			<req id="maintenance" label="Maintenance" icon="requirementInprogress" />
+	        			<req id="servicing" label="Servicing" icon="requirementInprogress" />
+        			</req>
+        			<req label="Contraint Requirements" icon="requirementInprogress">
+	        			<req label="Requirement 1" icon="requirementComplete" />
+	        			<req label="Requirement 2" icon="requirementComplete" />
+	        			<req label="Requirement 3" icon="requirementInprogress" />
+	        		</req>
+        		</quote>
+</mx:XMLList>
+
+
+	<mx:Panel width="200" title="Explorer" height="50%"> 
+	<mx:VBox verticalGap="0" width="100%" height="100%">
+		<mx:MenuBar id="myMenuBar" width="100%" labelField="@label" fontFamily="Tahoma" fontSize="11">
+	<mx:XMLList>
+            <menuitem label="File">
+                <menuitem label="Create"/>
+                <menuitem label="Add"/>
+                <menuitem label="Remove"/>
+            </menuitem>
+
+        </mx:XMLList>
+
+	</mx:MenuBar>
+	
+	
+	<mx:Tree 
+		                	id="quoteTree" width="100%" height="100%" 
+		                	labelField="@label" styleName="listTitle" borderStyle="none" 
+		                	paddingLeft="10" textIndent="3" backgroundColor="#ffffff"
+		                	iconField="@icon" fontSize="11" fontFamily="Arial"
+		                	folderOpenIcon="@Embed(source='/assets/images/icons/ico_obj_folder_open.png')"
+		                	folderClosedIcon="@Embed(source='/assets/images/icons/ico_obj_folder_closed.png')"
+		                	defaultLeafIcon="@Embed(source='/assets/images/icons/ico_obj_folder_open.png')"
+		 			        dragEnabled="true"
+		   					dragMoveEnabled="true"
+		   					dropEnabled="true"
+		   					borderThickness="1"
+		   					dataProvider="{cnmListData}" 
+		   					 />
+
+	</mx:VBox>
+	
+	
+	</mx:Panel>
+	<mx:VBox width="100%" height="100%" backgroundColor="#FFFFFF" paddingBottom="10" verticalGap="10" paddingLeft="10" paddingRight="10" paddingTop="10" >
+		<mx:Grid width="100%">
+		<mx:GridRow width="100%" height="30">
+			<mx:GridItem width="50%" verticalAlign="middle">
+				<mx:Text text="Requirement - 1144 (In Progress)" fontSize="18" />	
+			</mx:GridItem>
+			<mx:GridItem width="50%" verticalAlign="middle" horizontalAlign="right" paddingRight="10">
+				<mx:Button label="Change Status" borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				<mx:Button label="Add to Favourites" borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				<mx:Button id="moreAction" label="More Actions" color="#000000"  labelPlacement="left" icon="@Embed(source='/assets/images/icons/ico_dropdown.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+	<mx:HDividedBox width="100%" height="100%"  >
+		<mx:VBox width="100%" height="100%">
+			<mx:Panel verticalGap="0" title="Requirement Details" width="100%" paddingTop="5" paddingLeft="5" paddingRight="5">
+				<mx:TextArea width="100%" text="This is a short description of the requirement. This is a short description of the requirement. This is a short description of the requirement. This is a short description of the requirement. This is a short description of the requirement." borderThickness="0"/>
+				<mx:Button label="View Attributes" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+			</mx:Panel>
+			<mx:Panel title="Action Items" width="100%" height="200">
+				<mx:DataGrid dataProvider="{actionItems}" width="100%" height="100%" verticalGridLines="false" rowHeight="25" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn dataField="Description" paddingLeft="5">
+						<mx:itemRenderer>
+								<mx:Component>
+									<mx:CheckBox label="{data.Description}"/>
+								</mx:Component>
+							</mx:itemRenderer>
+						</mx:DataGridColumn>
+                		<mx:DataGridColumn dataField="Owner"  width="100"/>
+                		<mx:DataGridColumn dataField="Date" width="100" />
+               		</mx:columns>
+				</mx:DataGrid>
+	</mx:Panel>
+	<mx:Panel title="Notes" width="100%" horizontalScrollPolicy="off" height="300">
+		<mx:VBox  verticalGap="0" width="100%" height="100%" backgroundColor="#ffffff" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid" >
+				<mx:VBox verticalGap="0" width="100%">
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:Text text="Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:Button  paddingLeft="5" label="Show 2 Comments" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				</mx:VBox>	
+				<mx:VBox verticalGap="0" width="100%" backgroundColor="#eff1f2">
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:Text text="Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:Button  paddingLeft="5" label="Show 2 Comments" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				</mx:VBox>	
+				<mx:VBox verticalGap="0" width="100%">
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:Text text="Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:Button  paddingLeft="5" label="Show 2 Comments" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				</mx:VBox>	
+				<mx:VBox verticalGap="0" width="100%" backgroundColor="#eff1f2">
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:Text text="Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:Button  paddingLeft="5" label="Show 2 Comments" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				</mx:VBox>	
+				<mx:VBox verticalGap="0" width="100%">
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:Text text="Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:Button  paddingLeft="5" label="Show 2 Comments" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				</mx:VBox>	
+				<mx:VBox verticalGap="0" width="100%" backgroundColor="#eff1f2">
+				<mx:HBox width="100%" horizontalGap="0" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5">
+					<mx:VBox width="66%" verticalGap="0">
+						<mx:Text text="Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here. Note would appear here and here." width="100%"  />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="34%" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:Button  paddingLeft="5" label="Show 2 Comments" color="#000000"  labelPlacement="right" icon="@Embed(source='/assets/images/icons/ico_expand.png')"  borderColor="#a6b3cb" upSkin="@Embed(source='assets/images/spacer.gif')"/>
+				</mx:VBox>	
+		</mx:VBox>
+	</mx:Panel>	
+	</mx:VBox>
+	<mx:VBox width="200">
+	<mx:Panel title="Team" width="100%" height="150">
+		<mx:DataGrid dataProvider="{Members}" headerHeight="0" width="100%" height="100%" verticalGridLines="false" rowHeight="25" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn dataField="Member"/>
+               		</mx:columns>
+				</mx:DataGrid>
+	</mx:Panel>
+	<mx:Panel title="Attachments" width="100%" height="150">
+		<mx:DataGrid dataProvider="{Members}" headerHeight="0" width="100%" height="100%" verticalGridLines="false" rowHeight="25" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn dataField="Member"/>
+               		</mx:columns>
+				</mx:DataGrid>
+	</mx:Panel>
+	<mx:Panel title="Similar To" width="100%" height="200">
+		<mx:DataGrid dataProvider="{Members}" headerHeight="0" width="100%" height="100%" verticalGridLines="false" rowHeight="25" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn dataField="Member"/>
+               		</mx:columns>
+				</mx:DataGrid>
+	</mx:Panel>
+	</mx:VBox>
+	</mx:HDividedBox>
+	</mx:VBox>
+</mx:HDividedBox>

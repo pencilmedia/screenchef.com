@@ -1,0 +1,31 @@
+/*
+#auto_complete_container { border: 1px solid silver; height:70px; float:left; }
+#auto_complete_search_div {position:relative;margin-bottom:1em;}
+#auto_complete_search_div {overflow: hidden;}
+#auto_complete_search_div #q {_position:absolute;width:99%;z-index:0; border: none; }
+#query_container { position:absolute;top:1.7em; width:100%; left:0px;}
+#query_container ul .yui-ac-content{position:absolute;border:1px solid #f5f5f5;background:#fff;overflow:hidden;z-index:9050;}
+#query_container .yui-ac-shadow {position:absolute;margin:.3em;width:100%;background:#a0a0a0;z-index:9049;}
+#query_container ul {padding:5px 0;width:100%; }
+#query_container li {padding:0 5px;cursor:default;white-space:nowrap;}
+#query_container li.yui-ac-highlight {background:silver}
+#query_container li.yui-ac-prehighlight {background:#ffffcc;}
+#results_container { position:relative; height:50px; overflow:auto; top:-15px; margin-top:15px; background-color:#fff;}
+#results li { white-space:nowrap; float:left; border:1px solid #a4bdec; background-color:#dee7f8; color:#333; padding:2px 3px; margin: 2px 2px 0 0;}
+#results_container a.delete_button { font-size:8px; font-weight: bold; border:1px solid gray; padding:0px 3px 1px 3px; background-color:#fff; text-decoration:none; color:#94b2f6; margin: 1px 0px 3px 4px; font-weight: bold; position:relative; top:-2px; }
+*/
+#ysearchmod {position:relative;padding:1em;}   
+2 #ysearchautocomplete0, #ysearchautocomplete1, #ysearchautocomplete2 {position:relative;margin-bottom:1.5em;width:40%;}/* set width of widget here*/   
+3 #ysearchautocomplete0 {z-index:9001;} /* for IE z-index of absolute divs inside relative divs issue */   
+4 #ysearchautocomplete1 {z-index:9000;} /* for IE z-index of absolute divs inside relative divs issue */   
+5 #ysearchinput0, #ysearchinput1, #ysearchinput2 {_position:absolute;width:100%;height:1.4em;} /* abs for ie quirks */   
+6 #ysearchcontainer0, #ysearchcontainer1, #ysearchcontainer2 {position:absolute;top:1.7em;width:100%;}   
+7 #ysearchcontainer0 .yui-ac-content, #ysearchcontainer1 .yui-ac-content, #ysearchcontainer2 .yui-ac-content {position:absolute;width:100%;border:1px solid #404040;background:#fff;overflow:hidden;z-index:9050;}   
+8 #ysearchcontainer0 .ysearchquery, #ysearchcontainer1 .ysearchquery {position:absolute;right:10px;color:#808080;z-index:10;}   
+9 #ysearchcontainer0 .yui-ac-shadow, #ysearchcontainer1 .yui-ac-shadow, #ysearchcontainer2 .yui-ac-shadow {position:absolute;margin:.3em;width:100%;background:#a0a0a0;z-index:9049;}   
+10 #ysearchcontainer0 ul, #ysearchcontainer1 ul, #ysearchcontainer2 ul {padding:5px 0;width:100%;}   
+11 #ysearchcontainer0 li, #ysearchcontainer1 li, #ysearchcontainer2 li {padding:0 5px;cursor:default;white-space:nowrap;}   
+12 #ysearchcontainer0 li.yui-ac-highlight {background:#ff0;}   
+13 #ysearchcontainer1 li.yui-ac-highlight {background:#0ff;}   
+14 #ysearchcontainer2 li.yui-ac-highlight {background:#a0a0a0;}   
+15 #ysearchcontainer2 li.yui-ac-prehighlight {background:pink;}   

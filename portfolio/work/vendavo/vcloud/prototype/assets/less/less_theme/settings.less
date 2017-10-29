@@ -1,0 +1,331 @@
+/* Settings.less
+// Theme: Vendavo
+// -----------------------------------------------------*/
+// Core variables and mixins
+@import "../less_bootstrap/variables.less";
+@import "../less_bootstrap/mixins.less";
+@import "variables.less"; // custom variables
+@import "mixins.less"; // custom mixins
+
+// SETTINGS
+// -----------------------------------------------------
+	// TODO: Does it belong here?
+	section {
+		.settings {
+			margin: 0 @pageMargin;
+			padding: 0;
+			h2 {
+				margin: 0;
+			}
+			dl {
+				overflow: auto;
+				margin: 0 0 25px 0;
+				dd {
+					float: left;
+					margin: 10px 0 0 0;
+					padding: 0;
+					width: 50%;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					h3 {
+						margin: 0;
+						padding: 0 0 0 0;
+						font-size: 125%;
+						line-height: 18px;
+					}
+					.block {
+						display: block;
+						padding: 0 0 10px 20px;
+					}
+				}
+			}
+		}
+		.about {
+			padding: 0;
+			.grid-container {
+				margin: 0 @pageMargin;
+				.table {
+					background-color: @white;
+					thead {
+						tr:first-child {
+							border-bottom: 3px solid @blueLightBorder;
+							background-color: @white;
+						}
+						th {
+							color: @blueDarkest;
+							text-transform: uppercase;
+						}
+					}
+					tbody {
+						td.text-green {
+							color: @green;
+						}
+						td.text-gray {
+							color: @blueDark;
+						}
+					}
+					tr {
+						&:hover {
+							background-color: #f4f6f7;
+						}
+					}
+				}
+			}
+			h1 {
+				margin: 0px 0px 0px 20px;
+			}
+			h3 {
+				margin: 25px 0px 4px 19px;
+			}
+		}
+		.account {
+			margin: 0 @pageMargin;
+			padding: 0;
+			h2 {
+				margin: 0;
+			}
+			dl {
+				float: left;
+				width: 50%;
+				dt {
+					margin-left: 10px;
+					h3 {
+						margin-bottom: -5px;
+						padding: 0;
+						line-height: 25px;
+					}
+					span {
+						display: inline-block;
+						font-size: 70%;
+						line-height: 14px;
+					}
+				}
+			}
+			// NOTE: This is the same as whats in the forms.less article aside .info-unit
+			// Needed to add it here because regression does not allow me to fix
+			.info-unit {
+				box-sizing: border-box;
+				margin: 20px 0;
+				min-height: 85px;
+				dd {
+					list-style: none;
+					a {
+						word-wrap: break-word;
+					}
+					h1 {
+						margin: 0;
+						padding: 0 10px 0 0;
+						white-space: normal;
+						word-wrap: break-word;
+						font-size: 145%;
+						line-height: 22px;
+					}
+					h4 {
+						margin: 0;
+						padding: 0;
+					}
+					p {
+						margin: 0;
+						padding-top: @baseFontSize;
+						white-space: normal;
+						font-size: 90%;
+					}
+					.instructions {
+						padding-top: 0;
+					}
+				}
+				.no-trunc {
+					overflow: visible;
+					text-overflow: visible overflow;
+					white-space: normal;
+					li:first-child {
+						outline: none;
+						&:hover {
+							outline: none;
+						}
+					}
+				}
+				.edit {
+					display: inline-block;
+					float: right;
+					margin: 2px 1px; //Allows the border to be visible on hover
+					padding: 3px;
+					button, .btn {
+						border-radius: 0;
+						padding: 8px 0;
+						width: 40px;
+						border: none;
+						background: none;
+						box-shadow: none;
+						color: @blueDarkest;
+						font-size: 145%;
+						&:hover {
+							outline: 1px solid @blueDark;
+							background-color: @blue;
+							color: @navyBlue;
+						}
+					}
+				}
+				// Form with photo
+				&.with-photo {
+					> dd {
+						margin-left: 95px;
+					}
+					dd {
+						&:first-child {
+							float: left;
+							margin: 0;
+							min-height: 90px; 
+							width: 90px; // gives space to see dotted border when in edit mode
+							text-align: center;
+							img {
+								margin-top: 5px;
+								width:75px;
+								height:auto;
+							    border:1px solid @blueLight;
+								box-shadow: 0 0 10px 2px @grayLighter;
+							}
+							img.device {
+								border: none;
+								box-shadow: none;
+							}
+						}
+					}
+					.photo {
+						margin: 2px;
+						padding: 3px 5px; 
+						width: 75px; // gives space to see dotted border when in edit mode // TODO: Not sure if this class is still needed.. don't think so... verify and remove.
+						float: left;
+					}
+				}
+				// Form with info-box
+				&.with-info {
+					margin-bottom: 0;
+					min-height: 60px;
+					dd {
+						&:first-child {
+							float: left;
+							margin: 0;
+							min-height: 70px; 
+							width: 150px; // gives space to see dotted border when in edit mode
+							text-align: center;
+							.info-box {
+								display: table-cell;
+								height: 70px;
+								color: @gray;
+								vertical-align: middle;
+								font-weight: bold;
+								line-height: 14px;
+								strong {
+									display: block;
+									margin: 7px;
+									color: @green;
+									font-size: 200%;
+								}
+							}
+							+ dd {
+									display: table-cell;
+									padding: 5px 0 0 15px;
+									vertical-align: middle;
+								
+							}
+						}
+						p {
+							&:first-child {
+								padding-top: 0;
+							}
+							&:last-child {
+								margin-bottom: @pageMargin;
+							}
+						}
+					}
+					&.no-info {
+						dd {
+							&:first-child {
+								float: none;
+								width: 100%; // undo previous set width in .with-info
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+			.row {
+				.apps {
+					overflow:auto;
+					margin:0 auto;
+					width: 950px; //75%
+					dl {
+						min-height: 400px;
+						width: 300px;
+						border: 1px solid @blueLightBorder;
+						padding: 0;
+						margin-top: 10px;
+						&:nth-child(n+2) {
+							margin-left: 15px;
+						}
+						dt, dd {
+							margin: 0 10px;
+						}
+						.lead {
+							margin-bottom: 10px;
+						}
+						dd {
+							img {
+								max-width: 100%;
+							}
+							&:first-child {
+								margin: 5px 5px 15px 5px;
+								a {
+									position: relative;
+									top: -50px;
+									display: block;
+									float: left;
+									margin-bottom: -50px;
+									width: 100%;
+									height: 50px;
+									border: none;
+									background: rgba(0,0,0,.5);
+									color: @white;
+									text-shadow: 0 1px 0 @black;
+									font-size: 125%;
+									span, 
+									i {
+										display: inline-block;
+										padding: 5px 10px;
+										width: 75%;
+										height: 50px;
+									}
+									i {
+										float: right;
+										padding-top: 15px;
+										width: 25%;
+										text-align: right;
+									}
+									&:hover {
+										color: @linkColorHover;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+// RESPONSIVE SETTINGS
+@media (max-width: 705px) {
+	.tab-pane {
+		section {
+			.settings {
+				dd {
+					display: block;
+					float: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+html { margin: 0; padding: 0; overflow-x: hidden; }
+body {
+	font-family: "Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+#logo { margin: 10px; }
+
+a { color: #999; text-decoration: underline; }
+a:hover { color: #000; text-decoration: none; }
+
+h1 { color: #000; font-size: 1.5em; margin: 0; }
+h2 { color: #333; font-size: 1.25em; margin: 0; padding: 5px; background-color: #fafafa; border: 1px solid #eaeaea;}
+h3 { color: #666; font-size: 1.10em; margin: 0 0 10px 0; padding: 5px; border-bottom: 1px dashed #e5e5e5; }
+h4 { color: #966; font-size: 1em; margin: 20px 0 0 0; text-transform: uppercase; }
+h2 span { color: #668CFF; font-size: .85em; line-height: 1.5em; }
+
+ul { list-style: none; margin: 0 0 0 10px; padding: 0; }
+li { margin: 5px 0; color: #ccc; }
+li.concept_car a { font-size: 1em; }
+
+p { margin: 5px; color: #009; }
+
+#toc { border: 1px solid #f3f3f3; margin: 10px; width: 35%; }
+#toc h4 { margin: 0 0 0 10px; }
+#toc p { margin: 0 0 10px 10px; }
+
+#prj_status { width: 35%; margin: 0 0 10px 10px; padding: 0; border: 1px solid #f3f3f3;  }
+#prj_status h2 { border-top: 0; border-left: 0; border-right: 0; }
+#prj_status ul { border: 0; margin: 0 0 10px 15px; }
+
+#current_sprint,
+#completed_sprint,
+#archive { clear: both; margin: auto 10px; overflow: hidden; }
+
+
+.columns { clear: both; margin-bottom: 10px; overflow: hidden; }
+.lt_column, .rt_column { float: left; width: 45%; padding: 0 5px; }
+.lt_column { border-right: 1px solid #e5e5e5; }
+.rt_column { border-left: 1px solid #e5e5e5; margin-left: -1px; }
+
+li.current_sprint a { font-weight: bold; color: #333; }
+
+
+img.xml_notes { border: 0; vertical-align:middle; padding-left: 5px;}

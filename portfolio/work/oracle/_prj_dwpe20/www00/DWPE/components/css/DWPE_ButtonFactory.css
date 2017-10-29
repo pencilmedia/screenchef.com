@@ -1,0 +1,411 @@
+/*
+	Rules:
+	1. TextButtons show button chrome in toolbar & overflow
+	2. IconButtons show button chrome in toolbar & overflow when part of a radio button group
+	3. IconButtons show button chrome when they are a command button
+	4. IconButtons don't show chrome in toolbar
+	5. IconButtons show chrome in overflow
+	
+*/
+
+
+
+
+/*-------------------------Only Place Streamlined CSS below--------------------------------*/
+
+
+
+
+
+/*--------------------*/
+/*  Base Button       */
+/*--------------------*/
+
+UX.dwpe-button,
+LI.dwpe-button
+{
+   -moz-user-select: none;
+   -khtml-user-select: none;
+    user-select: none;
+	
+	line-height:19px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	position:relative;
+	display:inline-block;
+
+	font-family: Tahoma;
+	font-size: 11px;
+	
+	background:#d8dfe6 url(../images/button_bg_ena.png) bottom left repeat-x;
+	border-color:#708ba4;
+	border-style:solid;
+	border-width:1px;	
+
+	color: #263340;
+	padding:0px 9px;
+	text-decoration:none;
+	white-space:nowrap;
+	margin:0px 1px;
+	
+	
+}/*base button*/
+
+
+UX.dwpe-button:hover,
+LI.dwpe-button:hover
+{	
+	cursor:pointer;
+	color:#263340;
+	border-color:#3f6a9c;
+	background:#7aaada url(../images/button_bg_ovr.png) bottom left repeat-x;
+	
+}/*button rollover state*/
+	
+UX.dwpe-button:active,
+UX.dwpe-button:active
+{	
+	color: #263340;
+	border-color:#54697b;
+	background:#a3a8ad url(../images/button_bg_dwn.png) top left repeat-x;		
+}/*button click and selected state*/	
+
+/*end base button*/
+
+/* Note: we place the following items last to enforce their concepts
+   over any earlier definitions*/
+
+
+/*--------------------*/
+/*  Disabled Button   */
+/*--------------------*/
+
+UX.Button_Disabled,
+LI.Button_Disabled
+{
+	background:#f0f0f0;
+}
+
+UX.Button_Disabled,
+LI.Button_Disabled,
+UX.Button_Disabled:hover,
+LI.Button_Disabled:hover,
+UX.dwpe-button.IconicButton.Button_Disabled,
+LI.dwpe-button.IconicButton.Button_Disabled,
+UX.dwpe-button.IconicButton.Button_Disabled:active,
+LI.dwpe-button.IconicButton.Button_Disabled:active,
+UX.dwpe-button.IconicButton.Button_Disabled:hover,
+LI.dwpe-button.IconicButton.Button_Disabled:hover
+{
+	color:#000000;
+	cursor:default;
+	opacity:.5;
+	background:#d8dfe6 url(../images/button_bg_ena.png) bottom left repeat-x;
+	border-color:#708ba4;
+}
+
+/*end disabled button*/
+
+
+/*--------------------*/
+/*  Active Button     */
+/*--------------------*/
+UX.Button_Active,
+LI.Button_Active,
+UX.Button_Active:hover,
+LI.Button_Active:hover
+{
+	color: #263340;
+	border-color:#54697b;
+	background:#a3a8ad url(../images/button_bg_dwn.png) top left repeat-x;	
+}
+
+/*end active button*/
+
+
+
+/*--------------------*/
+/*  Inline Selector   */
+/*--------------------*/
+
+
+
+.ButtonContainer{display:inline-block;margin:0px;padding:0px;}
+.DWPE_Menu .ButtonContainer{display:block}
+
+
+UX.InlineSelector,
+UX.InlineSelectorSplit,
+UX.IconicButton.InlineSelector,
+UX.IconicButton.InlineSelectorSplit,
+LI.InlineSelector,
+LI.InlineSelectorSplit,
+LI.IconicButton.InlineSelector,
+LI.IconicButton.InlineSelectorSplit
+{
+	position:relative;
+	padding:0px 0px 0px 9px;
+	margin:0px 1px;
+}
+
+
+
+.dwpe-toolbar LI.IconicButton.InlineSelector,
+.dwpe-toolbar LI.IconicButton.InlineSelectorSplit,
+
+.dwpe-toolbar LI.IconicButton.InlineSelector.Button_Disabled,
+.dwpe-toolbar LI.IconicButton.InlineSelectorSplit.Button_Disabled,
+
+.DWPE_window_overflow LI.IconicButton.InlineSelector,
+.DWPE_window_overflow LI.IconicButton.InlineSelectorSplit,
+
+.DWPE_window_overflow LI.IconicButton.InlineSelector.Button_Disabled,
+.DWPE_window_overflow LI.IconicButton.InlineSelectorSplit.Button_Disabled
+{	background-image:none;
+	border:1px solid transparent;
+	background-color:transparent;
+	padding:0px 0px 0px 9px;
+	}
+/*we override DWPE_Buttton; in Normal and disabled states Iconic Buttons don't show chrome when inside toolbars*/
+
+
+UX.IconicButton.InlineSelector:hover,
+UX.IconicButton.InlineSelectorSplit:hover,
+LI.IconicButton.InlineSelector:hover,
+LI.IconicButton.InlineSelectorSplit:hover
+{
+	cursor:pointer;
+	color:#263340;
+	border-color:#3f6a9c;
+	background:#7aaada url(../images/button_bg_ovr.png) bottom left repeat-x;
+}
+
+.GlobalRegion UX.IconicButton.InlineSelector>SPAN.label,
+.GlobalRegion UX.IconicButton.InlineSelectorSplit>SPAN.label,
+.PrimaryRegion UX.IconicButton.InlineSelector>SPAN.label,
+.PrimaryRegion UX.IconicButton.InlineSelectorSplit>SPAN.label,
+.GlobalRegion LI.IconicButton.InlineSelector>SPAN.label,
+.GlobalRegion LI.IconicButton.InlineSelectorSplit>SPAN.label,
+.PrimaryRegion LI.IconicButton.InlineSelector>SPAN.label,
+.PrimaryRegion LI.IconicButton.InlineSelectorSplit>SPAN.label
+{
+	color:#ffffff;
+}
+
+UX.InlineSelector>SPAN.label,
+UX.InlineSelectorSplit>SPAN.label,
+LI.InlineSelector>SPAN.label,
+LI.InlineSelectorSplit>SPAN.label
+{
+	color:#000000;
+	display:inline-block;
+	position:relative;
+	padding:0px 8px 0px 0px;
+
+} /*the label*/
+
+UX.InlineSelector>SPAN.icons,
+UX.InlineSelectorSplit>SPAN.icons,
+LI.InlineSelector>SPAN.icons,
+LI.InlineSelectorSplit>SPAN.icons
+{
+	margin-right:5px;
+
+} /*the icon*/
+
+
+
+UX.InlineSelector>SPAN.arw,
+UX.InlineSelectorSplit>SPAN.arw,
+LI.InlineSelector>SPAN.arw,
+LI.InlineSelectorSplit>SPAN.arw
+{
+	background:url(../images/inline_selector_ena.png);
+	position:relative;
+	display:inline-block;
+	width:17px;
+	height:19px;
+}/*the drop-down arrow*/
+
+
+
+
+UX.InlineSelectorSplit>SPAN.arw,
+LI.InlineSelectorSplit>SPAN.arw
+{	
+	border-left:1px solid #708ba4;	
+} /*modifies inline selector adding a border to the side of the arrow*/
+
+UL.inline-selector-menu{display:none}
+
+/*end inline selector*/
+
+
+/****************************************************
+	Toolbar Button Separator
+****************************************************/
+
+UX.dwpe-button.Separator,
+LI.dwpe-button.Separator
+{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+	background:none;
+	border:none;
+}
+UX.dwpe-button.Separator>SPAN,
+LI.dwpe-button.Separator>SPAN
+{	position:relative;
+	border:1px solid #000000;
+	border-color:transparent #f5f6f8 transparent #6e89a2;
+	width:0px;
+	height:21px;
+	padding:0px;
+	margin:0px 5px;
+	
+}
+	
+UL.DWPE_window_overflow>UX.dwpe-button.Separator, 
+UL.DWPE_window_overflow>LI.dwpe-button.Separator 
+{	
+	display:none
+} /*spec says to hide seperators in overflow menus*/
+
+/*end button separator*/
+
+
+/*-----------------------------------*/
+/*  IconicButton & IconicTextButton  */
+/*-----------------------------------*/
+
+UX.IconicButton,
+LI.IconicButton
+{
+	padding:0px 3px;
+	-moz-user-select: none;
+   -khtml-user-select: none;
+    user-select: none;
+ }  /*don't let us appear selectable*/ 
+
+.dwpe-toolbar UX.IconicButton ,
+.dwpe-toolbar UX.dwpe-button.IconicButton.Button_Disabled,
+.DWPE_window_overflow UX.IconicButton ,
+.DWPE_window_overflow UX.dwpe-button.IconicButton.Button_Disabled,
+.dwpe-toolbar LI.IconicButton ,
+.dwpe-toolbar LI.dwpe-button.IconicButton.Button_Disabled,
+.DWPE_window_overflow LI.IconicButton ,
+.DWPE_window_overflow LI.dwpe-button.IconicButton.Button_Disabled,
+ux.dwpe-button.Button_Disabled LI.dwpe-button.IconicButton
+{	background-image:none;
+	border:1px solid transparent;
+	background-color:transparent;
+	cursor:default;}
+/*we override DWPE_Buttton; in Normal and disabled states Iconic Buttons don't show chrome when inside toolbars*/
+
+
+
+
+UX.dwpe-button.IconicButton:hover,
+LI.dwpe-button.IconicButton:hover
+{
+	cursor:pointer;
+	color:#263340;
+	border-color:#3f6a9c;
+	background:#7aaada url(../images/button_bg_ovr.png) bottom left repeat-x;
+}
+
+UX.dwpe-button.IconicButton.Button_Active,
+UX.dwpe-button.IconicButton.Button_Active:hover,
+UX.dwpe-button.IconicButton:active ,
+LI.dwpe-button.IconicButton.Button_Active,
+LI.dwpe-button.IconicButton.Button_Active:hover,
+LI.dwpe-button.IconicButton:active 
+{
+	color: #263340;
+	border-color:#54697b;
+	background:#a3a8ad url(../images/button_bg_dwn.png) top left repeat-x;	
+}
+
+/*
+UX.IconicButton>SPAN:first-child
+{
+	position:relative;
+	display:inline-block;
+	text-decoration:none;
+	width:16px;
+	height:16px;
+}
+*/
+
+
+
+
+/*------------------------------------------*/
+/* Radio Button Group & Toggle Type Buttons */
+/*------------------------------------------*/
+
+UX.RadioButtonGroup,
+LI.RadioButtonGroup
+{
+	-moz-user-select: none;
+   -khtml-user-select: none;
+    user-select: none;
+ }  /*don't let us appear selectable*/
+
+UX.dwpe-button.RadioButtonGroup,
+UX.ToggleButton,
+UX.dwpe-button.RadioButtonGroup:hover,
+UX.ToggleButton:hover,
+LI.dwpe-button.RadioButtonGroup,
+LI.ToggleButton,
+LI.dwpe-button.RadioButtonGroup:hover,
+LI.ToggleButton:hover
+{	background-image:none;
+	background-color:transparent;
+	border:none;}
+
+UX.RadioButtonGroup>UL,
+UX.ToggleButton>UL,
+LI.RadioButtonGroup>UL,
+LI.ToggleButton>UL
+{
+	position:relative;
+	margin:0px;
+	padding:0px;
+	z-index:0;
+	display:inline;
+	
+}
+
+UX.RadioButtonGroup>UL>UX,
+UX.ToggleButton>UL>UX,
+LI.RadioButtonGroup>UL>LI,
+LI.ToggleButton>UL>LI
+{	display:inline-block;		}
+
+
+
+
+/*----------------------------------*/
+/* Region Support                   */
+/*----------------------------------*/
+
+.GlobalRegion .IconicButton,
+.PrimaryRegion .IconicButton,
+.SecondaryRegion .IconicButton,
+.TiertiaryRegion .IconicButton
+{
+	color:#000;
+	padding-left:9px;
+	padding-right:9px;
+	
+} /*Defines the Command  Button Style for buttons 
+    that don't live on toolbars*/
+
+
+
+
+
+

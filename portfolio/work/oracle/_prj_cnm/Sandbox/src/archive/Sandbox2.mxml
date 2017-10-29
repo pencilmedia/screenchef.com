@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml"
+	title="Oracle CNM: Welcome Anthony Moquette"
+	xmlns:cnm="components.*"
+	width="1024" 
+	height="768" 
+	layout="vertical" 
+	verticalGap="0" 
+	showStatusBar="false" 
+	paddingLeft="0" 
+	paddingRight="0" 
+	paddingTop="0" 
+	paddingBottom="0" 
+	backgroundColor="#ffffff" >
+	
+	<mx:Style source="styles/default.css"/>
+	<mx:Script source="script/global.as" />
+	<mx:XML xmlns="" id="quotesXML" source="../assets/data/quotes.xml" />
+	<mx:XML xmlns="" id="statusXML" source="../assets/data/projectStatus.xml" />
+	<mx:XML xmlns="" id="ownersXML" source="../assets/data/owners.xml" />
+	<mx:XML xmlns="" id="customersXML" source="../assets/data/customers.xml" />
+
+	<mx:Script>
+		<![CDATA[
+			
+			function barClickEvent(event:ItemClickEvent):void
+			{
+				if (searchResults.visible) { // for search results to appear
+					searchResults.visible = false;
+					searchResults.percentHeight=0;
+					mainNav.visible = true;
+					mainNav.percentHeight=100;
+					mainNav.selectedIndex = globalTabBar.selectedIndex;
+				} else {
+					mainNav.selectedIndex = globalTabBar.selectedIndex;
+					if(globalTabBar.selectedIndex == 1) {
+						//changeQuote();
+					}
+				}
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:Grid x="0" y="0" horizontalGap="0" verticalGap="1" width="100%" height="40">
+		<mx:GridRow width="100%" height="40" paddingBottom="0" paddingTop="0" paddingRight="0">
+			<mx:GridItem paddingBottom="0" paddingTop="0" paddingRight="0" paddingLeft="0">
+				<mx:ApplicationControlBar styleName="globalAppBar" width="45" height="40" paddingLeft="8" paddingTop="5" fillAlphas="[1.0, 1.0]" fillColors="[#5C85AA, #3D71AE]">
+					<mx:Image x="10" y="8" id="l1" styleName="globalAppBarLogo" source="@Embed(source='../assets/images/logos/o_logo_white.png')" />
+				</mx:ApplicationControlBar>			
+			</mx:GridItem>
+			<mx:GridItem paddingBottom="0" paddingTop="0" paddingLeft="0" paddingRight="0" width="137">
+				<mx:TabBar id="globalTabBar" styleName="mainNav" dataProvider="{mainNav}" height="40" width="100%" tabWidth="35" tabHeight="41" itemClick="barClickEvent(event);" verticalGap="0"/>
+			</mx:GridItem>
+			<mx:GridItem width="100%" height="100%" verticalAlign="middle" paddingLeft="0" paddingRight="0" paddingBottom="0" paddingTop="0">
+				<mx:ApplicationControlBar width="100%" paddingLeft="5" paddingRight="10" paddingBottom="0" paddingTop="0" height="100%">
+					<mx:LinkButton icon="@Embed('../assets/images/icons/ico_dropdown.png')" height="30" label="Go To" labelPlacement="left" color="#666666" paddingTop="5" fontWeight="normal" fontSize="12" />
+					<mx:Spacer width="50%"/>
+					<mx:TextInput width="80%" height="22" fontSize="11" borderColor="#999999"/>
+					<mx:Button  id="searchButton" click="
+					mainNav.visible = false; 
+					mainNav.height = 0;
+					searchResults.visible = true;
+					searchResults.percentHeight=100;"
+					color="#666666" height="22" fontSize="10" fontWeight="normal">
+						<mx:icon>@Embed(source='../assets/images/icons/ico_global_forward.png')</mx:icon>
+					</mx:Button>
+				    <mx:ButtonBar styleName="globalButtonBar" paddingLeft="10">
+				        <mx:dataProvider>
+							<mx:Object icon="@Embed(source='../assets/images/icons/ico_global_settings.png')"/>
+							<mx:Object icon="@Embed(source='../assets/images/icons/ico_global_help.png')"/>
+							<mx:Object icon="@Embed(source='../assets/images/icons/ico_global_logout.png')"/>
+				        </mx:dataProvider>
+				    </mx:ButtonBar>	
+				</mx:ApplicationControlBar>
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+	<mx:ViewStack
+		id="mainNav"
+		width="100%"
+		height="100%">
+		<mx:Canvas id="home"
+			icon="@Embed(source='../assets/images/icons/ico_home_dark.png')"
+			backgroundColor="#ffffff">
+			<cnm:home id="testHome" />
+		</mx:Canvas>
+		<mx:Canvas id="quotes"
+			icon="@Embed(source='../assets/images/icons/ico_quote_dark.png')"
+			backgroundColor="#ffffff">
+			<cnm:quotes id="testQuote" />
+		</mx:Canvas>
+		<mx:Canvas id="ideas"
+			icon="@Embed(source='../assets/images/icons/ico_idea_dark.png')"
+			backgroundColor="#ffffff">
+			<cnm:ideas/>
+		</mx:Canvas>
+		<mx:Canvas id="requirements"
+			icon="@Embed(source='../assets/images/icons/ico_requirement_dark.png')"
+			backgroundColor="#ffffff">
+			<cnm:requirements/>
+		</mx:Canvas>
+	</mx:ViewStack>
+	
+	
+	
+	<mx:Canvas id="searchResults" height="0" width="100%" visible="false">
+		<cnm:search_results />
+	</mx:Canvas>
+	
+</mx:WindowedApplication>

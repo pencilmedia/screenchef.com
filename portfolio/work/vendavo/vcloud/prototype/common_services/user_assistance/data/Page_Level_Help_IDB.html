@@ -1,0 +1,340 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-gb"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en-gb"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-gb"> <!--<![endif]-->
+<head>
+  <title>Vendavo Profit Advisor Help</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+   <!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="/vss/plugins/cloudshell-1.1.0/public/css/main.css">
+</head>
+<body>
+<div class="wrapper page_help">
+	<section>
+		<div class="app">
+			<header>
+ 				<h1>
+
+  				<!-- ////////////////////////////// -->
+  				<!-- EDIT HERE: Page Title -->Editing Data Template<!-- ////////////////////////////// -->
+			  	<!-- END EDIT HERE: Page Title -->
+  				<!-- ////////////////////////////// -->
+
+			    </h1>
+				<article class="page-tools">
+					<a href="JavaScript: window.close();" class="btn close-window" title="Close This Page">Close</a>
+				</article>
+			</header>
+			<section class="content">
+
+  			<!-- ////////////////////////////// -->
+  			<!-- EDIT HERE: Page Content -->
+  			<!-- ////////////////////////////// -->
+
+				  <p id="EditTemplatePageHelp-EDITINGDATATEMPLATE">The data template defines the data structure Vendavo Profit Advisor uses for opportunity analysis. It includes dimensions and dimension hierarchies as well as the waterfall elements and other numeric measures. Dimensions and dimension hierarchies describe a transaction, and the waterfall elements provide the quantifiable pricing-related information of a transaction.</p>
+				  <p>Vendavo Profit Advisor provides the data template that you customize to fit the data model in your business. You customize the template on the Edit Template page. You download your customized template, fill in transaction data according to the template, and upload the data file to Vendavo Profit Advisor for profit opportunity analysis.</p>
+				  <h2 id="EditTemplatePageHelp-MakingChangestoDataTemplate">Making Changes to Data Template</h2>
+				  <p>The Edit Template page has the following sections:</p>
+				  <ul>
+				    <li>WATERFALL - The PRICE WATERFALL chart is at the top in the main section and is used for visual reference of a waterfall element in relation to the entire waterfall.</li>
+				    <li>FIELD - A list of the template fields below the waterfall chart is where you select the fields you want to use in Vendavo Profit Advisor analysis.</li>
+				    <li>LABEL - Next to the FIELD column, specify the label for each field you want to include in the data template.</li>
+				    <li>LEARNING CENTER - Reference information on the right-hand side of the page contains videos, whitepapers, and other information for you to better understand the Vendavo Profit Advisor data structure.</li>
+			      </ul>
+				  <p>You customize the data template by selecting the fields and specifying the field labels.</p>
+				  <ul>
+				    <li>To add a field to your template, select the check box next to the field name.</li>
+				    <li>To omit a field from your template, clear the check box next to the field name. You can't clear the check box if a field is a required field.</li>
+				    <li>Specify a field label in the LABEL text box. <span style="font-size: 10.0pt;line-height: 13.0pt;">When you click TAB out of a label field, your input is validated against the rules listed below. When a rule is violated, an error message appears directly under the label field.</span></li>
+			      </ul>
+				  <p>Tooltips are available on waterfall fields. When you click on a waterfall element field or click on a waterfall element in the chart, the element is highlighted, and a tooltip about the element displays.</p>
+				  <p><i class="icon-warning-sign"></i><span style="color: rgb(0,0,0);">If you refresh the Edit Template page in the middle of field edits or when you navigate away from the page before saving, your unsaved changes will be lost.</span><br />
+			      </span></p>
+				  <h2 id="EditTemplatePageHelp-TemplateRulesandRecommendations">Template Rules and Recommendations</h2>
+				  <p>Conform to the following rules and recommendations when editing your transaction data template.</p>
+				  <h3 id="EditTemplatePageHelp-TemplateFieldLabels">Template Field Labels</h3>
+				  <p>Field labels are used throughout the application to denote specific values, such as on the Opportunity List and Opportunity Detail pages. You should give a careful consideration when labeling each template field to ensure a common understanding about the field among all users of the application.</p>
+				  <p>Vendavo Profit Advisor uses each template field data for specific analyses. You can re-label fields to match the naming convention used in your business, but you should not repurpose a particular field, a dimension field or a waterfall element, to store different type of transaction data. It may result in misleading analyses. For example, you should not rename the Rebates field and use it for Volume Discount.</p>
+				  <p>The following rules apply to field labels:</p>
+				  <ul>
+				    <li>A label must be unique among the selected fields in your template.</li>
+				    <li>A label can only contain alpha numeric characters and the space character.</li>
+				    <li>A label can't contain more than 50 characters.</li>
+				    <li>A label can't be empty. </li>
+			      </ul>
+				  <h3 id="EditTemplatePageHelp-Hierarchies">Hierarchies</h3>
+				  <p>Vendavo Profit Advisor uses the organizational information given in the hierarchies when analyzing data for profit opportunities.</p>
+				  <ul>
+				    <li>In the hierarchy lists in the FIELD column, the general to specific levels are shown from top to bottom in each hierarchy. For example, in Customer Hierarchy, Global Customer is the most general level at the top, and Ship-to Customer is the most specific level at the bottom.</li>
+				    <li><span style="font-size: 10.0pt;line-height: 13.0pt;">All hierarchies should maintain a one-parent-to-many-children relationship when traversing down the hierarchy. </span></li>
+				    <li><span style="font-size: 10.0pt;line-height: 13.0pt;">Geography Hierarchy represents the geographic location of the transaction.  It is NOT meant to represent the sales hierarchy.</span></li>
+				    <li><span style="font-size: 10.0pt;line-height: 13.0pt;">Three hierarchies are provided out of the box. You can't add more levels to a hierarchy, and you can't define new hierarchies. </span></li>
+				    <li><span style="font-size: 10.0pt;line-height: 13.0pt;">You don't need to use every level of a hierarchy. For example, you can choose to specify only two out of five Geography levels, and those two can be Region Level 3 and Region Level 5.</span></li>
+			      </ul>
+				  <h3 id="EditTemplatePageHelp-Dimensions"><span style="color: rgb(0,0,0);">Dimensions</span></h3>
+				  <p><span style="color: rgb(0,0,0);">A minimum of nine dimensions fields are required in your template. Dimension fields are shown in the Transaction Identification, Product Hierarchy, Customer Hierarchy, and Geography Hierarchy sections on the Edit Template page.</span></p>
+				  <h3 id="EditTemplatePageHelp-Waterfall"><span style="color: rgb(0,0,0);">Waterfall</span></h3>
+				  <p><span style="color: rgb(0,0,0);"><span style="font-size: 10.0pt;line-height: 13.0pt;">A minimum of three waterfall adjustment fields are required in your template. </span><span style="background-color: transparent;font-size: 10.0pt;line-height: 13.0pt;">Waterfall adjustments fields are shown in the Waterfall Element section between bold-faced pricepoints.</span></span></p>
+				  <h2 id="EditTemplatePageHelp-FieldDescriptions">Field Descriptions</span></h2>
+				  <h3 id="EditTemplatePageHelp-WaterfallElements"><span style="color: rgb(0,0,0);">Waterfall Elements</span></h3>
+				  <p><span style="color: rgb(0,0,0);">The price waterfall consists of pricepoints and adjustments, which describe revenues, discounts, costs, and profits.</span></p>
+				  <div class="table-container">
+				    <table>
+				      <tbody>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Field</strong></span></p></th>
+				          <th><span style="color: rgb(0,0,0);">Description</span></th>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);">Market Price</span></p></th>
+				          <td><p><span style="color: rgb(0,0,0);">Starting price in the waterfall. </span><span style="color: rgb(0,0,0);">This is typically a Region or Channel specific price, such as Country Price or Distributor Price. This can also be Base Price or List Price.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Negotiated Discount</strong></span></p></th>
+				          <td><p><span style="color: rgb(0,0,0);">Discount agreed upon with the customer. </span><span style="color: rgb(0,0,0);">This discount is subtracted from Market Price.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1"><span style="color: rgb(0,0,0);">Customer Negotiated Price Adjustments</span></th>
+				          <td colspan="1"><p><span style="color: rgb(0,0,0);font-size: 10.0pt;line-height: 13.0pt;">Miscellaneous adjustments <span style="color: rgb(0,0,0);">to Customer Negotiated Price. An example</span><span style="color: rgb(0,0,0);"> is a price protection/price cap cost. If you provide both Market Price and Customer Negotiated Price, system will calculate this placeholder adjustment.</span></span></p></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Customer Negotiated Price</strong></span></p></th>
+				          <td><p><span style="color: rgb(0,0,0);">The negotiated price that the customer will pay.</span><br />
+				            <span style="color: rgb(0,0,0);">If you don't provide a value, the value is calculated by applying Negotiated Discount to Market Price.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Freight Charges</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Fees charged for freight and logistics, for example, packing, unloading, and transportation.</span></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Surcharges</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Miscellaneous fees charged to cover costs of goods sold, for example, fuel surcharge, small order surcharge, hazard material processing surcharge.</span></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Service Charges</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Fees charged for services, for example, engineering and installation.</span></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Invoice Price Adjustments</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Miscellaneous adjustments to Invoice Price. </span><span style="color: rgb(0,0,0);">If you provide both Customer Negotiated Price and Invoice Price, system will calculate this placeholder adjustment.</span></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Invoice Price</strong></span></p></th>
+				          <td><p><span style="color: rgb(0,0,0);">Total price paid by the customer or total revenue for the company.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Rebates</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Total rebates offered to the customer.</span></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Net Price Adjustments</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Miscellaneous adjustments to Net Price. If you provide both Invoice Price and Net Price, system will calculate this placeholder adjustment.</span></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Net Price</strong></span></p></th>
+				          <td><p><span style="color: rgb(0,0,0);">Final price that remains after deducting all discounts, charges, and rebates.</span><span> </span><span style="color: rgb(0,0,0);">If you don't provide a value, the value is calculated.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th><p><span style="color: rgb(0,0,0);"><strong>Payment Cost</strong></span></p></th>
+				          <td><span style="color: rgb(0,0,0);">Cost of carrying extended payment terms.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Freight Cost</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Cost of logistics to deliver the product.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Service Cost</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Cost of the services provided.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Pocket Price Adjustments</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Miscellaneous adjustments to Pocket Price. If you provide both Net Price and Pocket Price, system will calculate this placeholder adjustment.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Pocket Price</strong></span></p></th>
+				          <td ><p><span style="color: rgb(0,0,0);">Net Price minus all costs-to-serve.</span><span> </span><span style="color: rgb(0,0,0);">If you don't provide a value, the value is calculated.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Cost of Goods Sold</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Fixed and variable costs of goods sold, for example, a cost for creating a new mold or a package.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(255,0,0);"><span style="color: rgb(0,0,0);">Pocket Margin Adjustments</span></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Miscellaneous adjustments to Pocket Margin. If you provide both Pocket Price and Pocket Margin, system will calculate this placeholder adjustment.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Pocket Margin</strong></span></p></th>
+				          <td ><p><span style="color: rgb(0,0,0);">Margin after all revenue and costs associated with the transaction have been accounted for. </span></p></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+				  <h3 id="EditTemplatePageHelp-TransactionInformation"><span style="color: rgb(0,0,0);">Transaction Information</span></h3>
+				  <p><span style="color: rgb(0,0,0);font-size: 10.0pt;font-weight: normal;line-height: 13.0pt;">The following attributes describe a transaction. Vendavo Profit Advisor uses these attributes to analyze and categorize transactions when looking for profit opportunities.</span></p>
+				  <div class="table-container">
+				    <table>
+				      <tbody>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Field</strong></span></p></th>
+				          <th ><span style="color: rgb(0,0,0);">Description</span></th>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Transaction ID</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Unique ID for the transaction. </span><span style="color: rgb(0,0,0);">Typically, it is a combination of Invoice ID and Line Item ID. </span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Transaction Date</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Date of the transaction, typically the Invoice Date. Could be the Order Date or the Shipment Date if the Invoice Date is not available. </span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);">Transaction Type</span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Type of the transaction, for example, Standard Order, Credit, Return, Consignment. The transaction type may be similar or different from the order type.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Sales Representative</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Person assigned as the representative for the account at the time of the sale </span><span style="color: rgb(0,0,0);">and who has full access to all transactions for the account.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);">Channel</span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Route to market, for example, Direct, Indirect, Distributor, or Wholesale.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Freight Method</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Transportation method for delivery, for example, Land or Sea.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Manufacturing Plant</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Manufacturing plant for the product.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Payment Terms</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Terms of Payment, for example, 1% 10 Net 30.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Order Currency</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Transaction currency specified using ISO code.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Unit of Measure</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Standard unit of measure, for example, Each, Piece, or LB.</span></td>
+			            </tr>
+				        <tr>
+				          <th colspan="1" ><span style="color: rgb(0,0,0);"><strong>Order Quantity</strong></span></th>
+				          <td colspan="1" ><span style="color: rgb(0,0,0);">Quantity of product or service order, specified in Unit of Measure.</span></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+				  <h3 id="EditTemplatePageHelp-ProductHierarchy"><span style="color: rgb(0,0,0);">Product Hierarchy</span></h3>
+				  <p><span style="color: rgb(0,0,0);">The Product Hierarchy represents products and their relationship. Both products and services may be represented in this hierarchy.</span></p>
+				  <div class="table-container">
+				    <table>
+				      <tbody>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Field</strong></span></p></th>
+				          <th ><span style="color: rgb(0,0,0);">Description</span></th>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Product Level 1</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Highest level in the Product Hierarchy, for example, Business Unit or Operating Unit.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Product Level 2</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Second level in the Product Hierarchy, for example, Product Line.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Product Level 3</strong></span></p></th>
+				          <td ><p><span style="color: rgb(0,0,0);">Third level in the Product Hierarchy, for example, Product Family or Product Grade.</span></p></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Product</strong></span></p></th>
+				          <td ><p><span style="color: rgb(0,0,0);">Lowest level in the Product Hierarchy, most likely the product sold. This is also typically known as Item or Material.</span></p></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+				  <h3 id="EditTemplatePageHelp-CustomerHierarchy"><span style="color: rgb(0,0,0);">Customer Hierarchy</span></h3>
+				  <p><span style="color: rgb(0,0,0);">The Customer Hierarchy represents customers and their relationship. Customers could be of the type specified in the Channel field, such as Direct or Distributors.</span></p>
+				  <div class="table-container">
+				    <table>
+				      <tbody>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Field</strong></span></p></th>
+				          <th ><span style="color: rgb(0,0,0);">Description</span></th>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Global Customer</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Highest level in the Customer Hierarchy.  Global customers are generally part of a specific sales program that may also be called National or Enterprise accounts.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Sold To Customer</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Name of the customer and may correspond to a specific division or location where price and terms are negotiated.  Bill-to customer may also populate this level in the hierarchy. </span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Ship To Customer</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Customer to whom the product is shipped. Typically, the Ship-to Customer name has the Sold-to Customer name appended with a location. </span></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+				  <h3 id="EditTemplatePageHelp-GeographyHierarchy">Geography Hierarchy</h3>
+				  <p><span style="color: rgb(0,0,0);"><span style="font-size: 10.0pt;line-height: 13.0pt;">The Geography Hierarchy represents the customer geography. </span></span></p>
+				  <div class="table-container">
+				    <table>
+				      <tbody>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Field</strong></span></p></th>
+				          <th ><span style="color: rgb(0,0,0);">Description</span></th>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Region Level 1</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Highest level in the Geography Hierarchy, such as, Region.  May also be known as Pole. Example values are Americas, Europe, Asia.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Region Level 2</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Second level in the Geography Hierarchy, such as, Sub-Region.  Examples values are Eastern Europe, Western Europe.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Region Level 3</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Third level in the Geography Hierarchy, such as, Country.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Region Level 4</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Fourth level in the Geography Hierarchy, such as, Zone.  Example values are New England, Mid-Atlantic, Southeast.</span></td>
+			            </tr>
+				        <tr>
+				          <th ><p><span style="color: rgb(0,0,0);"><strong>Region Level 5</strong></span></p></th>
+				          <td ><span style="color: rgb(0,0,0);">Fifth level in the Geography Hierarchy, such as, State or Province. In most cases, refrain from loading City or Zip Code into this field as these will have a large amount of overlap to the Ship-to Customer.</span></td>
+			            </tr>
+			          </tbody>
+			        </table>
+			      </div>
+			  </div>
+                <div class="pageSection group">
+                  <div class="pageSectionHeader">
+                    <h2 id="comments" class="pageSectionTitle"></h2>
+                  </div>
+                </div>
+                <p>&nbsp;</p>
+
+  			<!-- ////////////////////////////// -->
+  			<!-- END EDIT HERE: Page Content -->
+  			<!-- ////////////////////////////// -->
+			</section>
+		</div>
+	</section>
+</div>
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="extras/h5bp/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+<!-- Vendavo Custom Scripts-->
+<script type="text/javascript" src="../../js/page_help.js"></script>
+
+</body>
+</html>

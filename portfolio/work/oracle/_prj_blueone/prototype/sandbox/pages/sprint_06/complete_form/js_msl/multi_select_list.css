@@ -1,0 +1,325 @@
+/*************************
+	AUTO COMPLETE
+*************************/	
+.sss, .agileautocomplete {
+	float: left;
+	height: 84px;
+	margin-bottom: 1em; 
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+	background-color: #fff;
+}/* set width of widget here*/
+
+.mscl 
+{
+	position: relative; 
+	float: left;
+	height: 43px;
+	margin-bottom: 1em; 
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+	background-color: #fff;
+}
+#agileautocomplete { z-index: 8002 } /* for IE z-index of absolute divs inside relative divs issue */
+
+.agileautocomplete.disabled .selected_container{
+	border-top: 1px solid transparent;
+}
+
+.sss input { 
+	width:99% !important;
+	border-bottom: 1px solid #ccc !important; 
+}
+
+.focus_border { border:1px solid #c3d5f1; }	
+
+.agile_border
+{
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+}
+.search_query {
+	_position: absolute;
+	z-index: 0;
+	width: 98.5% !important;
+	height: 1.5em;
+	border: 0;
+	background-color: transparent;
+} /* abs for ie quirks */
+.results_container {
+	top: 1.7em;
+	left: -1px;
+	z-index: 10;
+	width: 100%; 
+	font-size: 11px;
+}
+.yui-ac-content {
+	z-index: 99999;
+	width: 100%; 
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+	background-color: #fff;
+	overflow: hidden;
+	color: #333;
+	
+}
+.yui-ac-shadow {
+	position: absolute;
+	z-index: 9049;
+	margin: .3em;
+	width: 100%;
+	background: #a0a0a0;
+}
+.results_container ul {
+	padding: 5px 0;
+	width: 100%;
+}
+.results_container li {
+	padding: 0 5px;
+	cursor: default;
+	white-space: nowrap; 
+}
+.results_container li.yui-ac-highlight {
+	background-color: #dee7f8;
+}
+.results_container li.yui-ac-prehighlight {
+	/*background-color: #fefefe;*/
+}
+.selected_container { 
+	top: 20px;
+	left: 0; 	
+	height: 60px; 
+	overflow: auto; 
+	width: 100%; 
+	border-top: 1px solid #d1d1d1;
+	position:relative;
+	top:0;
+}
+.mscl_container { 
+	top: 0px;
+	left: 0; 	
+	height: 42px; 
+	overflow: auto; 
+	width: 99%; 
+	border-top: 1px solid #f5f5f5;	
+}
+/************************
+	PILL STYLES
+************************/
+ul.pillbox li.selected div { background-color: #A4C8F6; }
+
+ul.pillbox li, .selected_container li, .mscl_container li { 
+	float: left;
+	font-size: 9px;
+	border: 1px solid #a4bdec;
+	padding: 0 1px 0 3px; /* old */
+	margin: 3px 0 0 3px;
+	height: 12px;
+	line-height: 12px;
+	background-color: #dee7f8;
+	cursor: pointer;
+	letter-spacing: .115em;
+	color: #333;
+	white-space: nowrap;
+}
+div.sss ul.pillbox li { 	padding: 0 15px 0 3px; }
+
+/* ellipsis div */
+.pillbox li div 
+{
+	position: absolute;
+	background-color: #dee7f8;
+	text-transform: none;
+	text-decoration: none;
+	margin: 0 0 0 2px;
+	padding: 0 3px;
+	height: 12px; 
+	display: none;
+}
+
+ul.pillbox a, .selected_container a, .mscl_container a{
+	background: url(../../../../global/images/btn_pill_close.png) no-repeat right center;
+	text-decoration: none;
+	margin: 0 0 0 2px;
+	padding: 0 3px;
+	height: 12px; 
+}
+div.sss ul.pillbox a { position: absolute; }
+
+ul.pillbox a span, .selected_container a span, .mscl_container a span{
+	visibility: hidden;
+}
+ul.pillbox li.selected, .selected_container2 li.selected, .selected_container li.selected { 
+	border-color: #6a9eea;
+	background-color: #a4c8f6;
+}
+ul.pillbox li.selected a, .selected_container2 li.selected a, .selected_container li.selected a { 
+	background: url(../../../../global/images/btn_pill_selected_close.png) no-repeat right center;
+}
+/* disabled pill styles */
+.selected_container ul.disabled_pills li, .selected_container ul.disabled_pills li a {
+	cursor: default;
+	background-color: #eee;
+	border-color: #999;
+	color: #666;
+}
+.selected_container ul.disabled_pills li a { 
+	background: url(../../../../global/images/btn_pill_disabled.png) no-repeat right center;
+}
+
+
+/************************
+	PILL ADDED NOTICE STYLES
+************************/
+.added_notice, .palette_added_notice {
+	border: 1px solid #333;
+	background-color: #8cd921;	
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.added_notice {
+	position: absolute;
+	top: 5px;
+	left: 40%;
+	padding: 7px 5px;
+}
+.palette_added_notice {
+	position: absolute;
+	top: 20px;
+	right: 14px;
+	width: 50px;
+	padding: 2px;
+}
+
+
+/*************************
+	PALETTE
+*************************/	
+.palette, .agile_palette { 
+	position:absolute;
+	z-index: 9000;
+	display:none;
+	top:75px;
+	left:70px;
+    background: url(../../../../global/images/inset_shadow.png) no-repeat right bottom;
+	min-width: 400px;
+	width: 400px;
+	height: auto;
+	min-height:72px;
+}
+.palette_content {
+	position: relative;
+	top: -4px;
+	left: -4px;
+	width: auto;
+	height: auto;
+	background-color:#f5f5f5;
+	padding:0 0 10px 0;
+	border:1px solid #ccc;
+	overflow:hidden;
+	min-height:60px;
+}
+.handlebar {
+	background: url(../../../../global/images/inset_handle.png) repeat-x;
+	background-color: #efefef;	
+	height: 15px;
+	margin-left: 3px;
+	cursor: move;
+	text-align: right;
+}
+a.close_palette {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	background: #f5f5f5 url(../../../../global/images/inset_close.png) no-repeat right top;
+	height: 14px;
+	width: 15px; 
+}
+a.close_palette span {
+	visibility: hidden;
+}
+.palette_filter {
+	margin: 10px 10px 0 10px;
+	white-space: nowrap;
+}
+.palette_filter input {
+	width: 90%;
+}
+.palette_results_list {
+	height: 140px;
+	border: 1px solid silver;
+	background-color: white;
+	margin: 10px 10px 0 10px;
+	padding: 5px;
+}
+.palette_results_list { 
+	list-style: none;
+ }
+.palette_results_list li.selected { 
+	background-color: blue;
+	 color: white;
+}
+.palette_results_list li:hover { 
+	background-color: #efefef; 
+	cursor: pointer; 
+}
+.palette_resizer {
+	position: absolute;
+	background: url(../../../../global/images/inset_stretcher.png) no-repeat top right;
+	bottom: 0;
+	right: 0;
+	font-size: x-small;
+	width: 12px;
+	height: 12px;
+	float: right;
+	color: #000;
+	cursor: nw-resize;
+}
+
+.palette_results_list table { 
+	width:100%; 
+	border:none;
+}
+.palette_results_list table thead { 
+	display: none; 
+}
+.palette_results_list th,
+.palette_results_list td { 
+	border-bottom: 1px solid #ccc; 
+}
+.palette_results_list th { 
+	color: #333; 
+	background-color: #e8e8e8;  
+}
+.palette_results_list table td { 
+	padding-left: 4px; 
+	cursor:pointer; 
+}
+.palette_results_list {
+	overflow-x:hidden !important;
+	overflow-y:scroll;
+	padding:0;
+}
+
+.palette_title {
+	color:#333;
+	font-weight:bold;
+	cursor:default;
+	margin:5px 0 0 10px;
+}
+tr.yui-dt-selected td { 
+	background-color: #dee7f8;
+}
+
+	

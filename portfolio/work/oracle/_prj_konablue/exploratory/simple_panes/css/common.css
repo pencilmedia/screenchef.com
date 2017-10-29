@@ -1,0 +1,74 @@
+/* For all portions of the demo */
+body {
+	background: #e6e6e6;
+	margin: 0px;
+	padding: 0px;
+}
+
+body, div, p, td, a {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	color: #333
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+#container {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 934px;
+	height: 646px;
+	background: #fff;
+	border: 2px solid #999;
+}
+
+#box_find,
+#box_user_tasks,
+#box_collab_nav,
+#box_courtesy_controls,
+#box_window_controls,
+#box_switcher,
+#box_content {
+	position: absolute;
+	background: #fff;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#box_find                { border: 1px solid #ccc; width: 200px; height: 50px; top: 10px; left: 10px; }
+#box_user_tasks          { border: 1px solid #ccc; width: 200px; height: 500px; top: 134px; left: 10px; }
+#box_collab_nav          { border: 1px solid #ccc; width: 200px; height: 50px; top: 72px; left: 10px; }
+#box_window_controls     { border: 1px solid #ccc; width: 700px; height: 50px; top: 10px; left: 222px; }
+#box_switcher            {                         width: 702px; height: 50px; top: 72px; left: 222px; }
+#box_content             { border: 1px solid #ccc; width: 700px; height: 500px; top: 134px; left: 222px; }
+
+
+#box_user_tasks,
+#box_content {
+	overflow: auto;
+}
+
+#chooser {
+	position: absolute;
+	top: 20px;
+	left: 1000px;
+	background: #fff;
+	border: 2px solid #999;
+	padding: 10px;
+}
+
+#chooser p {
+	margin: 0px 0px 10px 0px;
+}

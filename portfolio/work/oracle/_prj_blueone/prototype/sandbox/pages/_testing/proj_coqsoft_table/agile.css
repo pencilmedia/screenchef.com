@@ -1,0 +1,66 @@
+/*
+ * Agile BlueOne style modifications for the coqsoft table.
+ *
+ * NOTE: Link this *after* the default Grid.css.
+ *
+ * Copyright (c) 2007 Agile
+ */
+
+.GTable {
+    border: none;
+    font-family: Arial;
+}
+
+.GHeadMid, .GHeadLeft {
+    border-bottom: 0px;
+}
+
+.GHeader {
+    border-bottom: 0px;
+    background-color: #F2F2F2;
+}
+.GHeaderHover {
+    border-bottom: none !important;
+    background: #FAF8F3;
+}
+.GPanelTopHover {
+    border-right: none !important;
+    border-bottom: 1px dotted #999;
+    background: #FAF8F3;
+}
+
+.GBodyMid, .GBodyLeft {
+    border-top: 0px;
+}
+
+.GBodyMid {
+    border-left: 1px solid #999;
+}
+
+.GPanel, .GPanelTop {
+    background-color: #D8D8D8;
+    border-bottom: 1px dotted #999;
+    border-right: 0px;
+}
+.GPanelHover {
+    background-color: #ADADAD;
+    border-bottom: 1px dotted #999;
+    border-right: 0px;
+}
+
+.GHeadText {
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.GText,.GTextB,.GTextM,.GNumber,.GNumberB,.GNumberM,.GIText,.GINumber,.GLines,.GTextArea, .GHtml,.GRadio, .GIHtml {
+    font-family: Arial;
+    font-size:11px;
+    padding-left:3px;
+    padding-right:3px;
+    border:0px solid;
+    background:inherit;
+}

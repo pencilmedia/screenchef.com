@@ -1,0 +1,55 @@
+Further reading: http://localhost/pages/_testing/proj_coqsoft_table/
+
+Important Includes:
+CSS:
+/global/js/grid/Grid.css - Coqsoft required
+/global/css/default.css - must be called after Grid.css; imports table.css which is the important file
+
+JS:
+/global/js/grid/GridE.js - Coqsoft required
+/global/js/table.js
+
+
+To call the coqsoft table (please change info path as necessary):
+<div style="height:300px; clear:both; width: 100%;" id="treegrid" class="agile_table">
+	<treegrid Data_Url="/pages/sprint_05/car_templates/table/table.xml"></treegrid>
+</div>
+
+Needs div around it so that it can be contained - otherwise it defaults to whatever max size.
+Relies on <treegrid /> tags and takes in XML
+
+XML Documentation:
+http://treegrid.com/TreeGrid5_0/Html/EJSTreeGrid.html
+
+Tags you can touch:
+
+<Color /> - http://treegrid.com/TreeGrid5_0/Doc/TreeGridXmlStyles.htm#Colors
+Coqsoft uses RGB to create colors on columns, rows and headers
+- Default: the color of all cells and you can specify that classed cells be another color later
+
+
+<Cols /> - http://treegrid.com/TreeGrid5_0/Doc/TreeGridXmlCols.htm#C
+<C /> is one column and has a variety of attributes.
+The only ones you'll ever likely need are:
+- Name - mandatory value of how you refer to each column.  
+In our table, every cell in one column uses one frame type.  
+So, I've defined the frame type here within the name.
+The frame types are:
+- noedit
+- textbox (text input)
+- multitext (textarea)
+- dropdown (select)
+- uom (unit of measurement: text input and select)
+Name each column in order: col01[frame type], col02[frame type], ...
+All columns have the atttribute CanEdit="0"
+
+<B /> <I /> - http://treegrid.com/TreeGrid5_0/Doc/TreeGridXmlRows.htm#I
+<I /> - This is one row; you can have many
+The attributes are called by column name; For instance attr col01textbox would indicate Row N, Col N and by default it is blank (if not written)
+To give it a value, write the attr and equal it to a value.  Remember there are various other attributes you can use to maipulate what you see in Row N, Col N
+
+<Header /> - http://treegrid.com/TreeGrid5_0/Doc/TreeGridXmlCols.htm#Header
+Important: All columns must be named here.  If you want to leave column name blank just use don't write anything in quotes.
+To name columns, use format of attributes: col01[frame type] = "[text]"
+
+Functions

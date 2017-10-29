@@ -1,0 +1,311 @@
+/* vsnb.less
+// -----------------------------------------------------*/
+// Core variables and mixins
+@import "../less_bootstrap/variables.less";
+@import "../less_bootstrap/mixins.less";
+// Custom variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// VSN-B
+// -----------------------------------------------------
+body {
+	padding-top: 25px; // Override theme.css body top padding
+}
+.vsnb {
+	&.app {
+		> section {
+			padding-bottom: 0; // Override theme.css bottom padding
+		}
+		.modal-overlay {
+			background: @white;
+			display: none;
+			height: 100%;
+			left: 0;
+			position:fixed;
+			top: 0;
+			width: 100%;
+			z-index: 10000;
+			nav {
+				background: @grayLightest;
+				border-bottom: 1px solid @grayLighter;
+				height: @navbarHeight;
+				h1 {
+					display: inline-block;
+					float: left;
+					font-size: 125%;
+					line-height: @navbarHeight;
+					margin: 0;
+					padding-left: @pageMargin;
+					width: 80%;
+				}
+				.butcon {
+					color: @black;
+					height: @navbarHeight;
+					padding-left: 9px;
+					width: 45px;
+					&:hover {
+						background: darken(@grayLightest, 5%);
+						border-bottom: 1px solid @grayLighter;
+						color: @white;
+						outline: none;
+					}
+				}
+			}
+			section {
+				.nav { }
+			}
+		}
+	}
+	> header {
+		min-height: @navbarHeight;
+		.columns {
+			.lt-column,
+			.ct-column,
+			.rt-column {
+				float: left;
+				height: @navbarHeight;
+				width: 33.3%;
+			}
+			.lt-column {
+				.logo-vendavo {
+					margin-left: 10px;
+				}
+			}
+			.ct-column {
+				h1 {
+					display: block;
+					font-size: 100%;
+					height: @navbarHeight;
+					min-width: 100px;
+					padding: 10px 0 0 0;
+					text-align: center;
+					width: 100%;
+				}
+				.btn {
+					display: none;
+					background: @navbarBtnBG;
+					border: none;
+					box-shadow: none;
+					color: @white;
+					height: @navbarHeight;
+					text-shadow: none;
+					width: 100%;
+					b {
+						margin-left: 5px;
+					}
+					&:hover {
+						color: @navbarHvr;
+					}
+				}
+			}
+			.rt-column {
+				.btn-group {
+					margin-right: 0;
+					.butcon {
+						color: @white;
+						font-size: 125%;
+						height: @navbarHeight;
+						margin-left: 5px;
+						i {
+							text-shadow: none;
+						}
+						&:hover {
+							background: @navbarBtnBG;
+							outline: none;
+							i {
+								color: @navbarHvr;
+							}
+						}
+						// Hide last button for responsive design
+						&:nth-child(4) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	> section {
+		.colonnade {
+			overflow: hidden; /* Key property - equal heights */ 
+			.lt-column, .rt-column { 
+				margin-bottom: -9000px; /* Key property - equal heights */
+				padding: 0 @pageMargin; 
+				padding-bottom: 9000px; /* Key property - equal heights */
+			}
+			.lt-column {
+				background: @grayLighter;
+				width: 25%;
+				.nav {
+					margin-top: @pageMargin;
+				}
+			}
+			.rt-column {
+				background: @white;
+				width: 75%;
+			}
+		}
+		// Deal list view
+		.deal-list {
+			form {
+				margin-top: 20px;
+				min-width: 0;
+			}
+			dl {
+				border-top: 1px solid @grayLightest;
+				margin: 0 @pageMargin;
+				padding: 10px;
+				&:first-of-type {
+					margin-top: @pageMargin;
+				}
+				&:last-of-type {
+					border-bottom: 1px solid @grayLightest;
+				}
+				dd {
+					margin: 0;
+					padding: 0;
+				}
+				.deal-indicator {
+					color: @grayLight;
+					float: left;
+					margin-right: 10px;
+					&.green {
+						color: @green;
+					}
+					&.orange {
+						color: @orange;	
+					}
+					&.red {
+						color: @red;
+					}
+				}
+				.deal-id {
+					font-weight: bold;
+				}
+				.deal-status {
+					float: right;
+					position: relative;
+					right: 0;
+				}
+				.deal-date {
+					float: right;
+					position: relative;
+					right: 0;
+				}
+				.deal-description {
+					color: @gray;
+					margin: 5px 0 5px 21px;
+				}
+				.deal-customer {
+					font-weight: bold;
+					margin-left: 21px;
+				}
+			}
+		}
+	}
+}
+
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*//////////////////////////////
+/* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
+
+/* Tablet - 768px */
+@media (max-width: @screen-sm) {
+	.vsnb {
+		> header {
+			.columns {
+				.lt-column,
+				.ct-column,
+				.rt-column {
+					
+				}
+				.ct-column {
+					/* Show Responsive Menu/Hide Title */
+					h1 {
+						display: none;
+					}
+					.btn {
+						display: block;
+					}
+				}
+				.rt-column {
+					.btn-group {
+						.butcon {
+						
+						}
+					}
+				}
+			}
+		}
+		> section {
+			.colonnade {
+				// Hide lt-column for responsive design
+				.lt-column {
+					display: none;
+				}
+				// Extend rt-column for responsive design
+				.rt-column {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* Phone - 480px */
+@media (max-width: @screen-xs) {
+	.vsnb {
+		> header {
+			.columns {
+				.lt-column,
+				.ct-column,
+				.rt-column {
+					
+				}
+				.ct-column {
+					h1 {
+				
+					}
+					.btn {
+				
+					}
+				}
+				.rt-column {
+					.btn-group {
+						.butcon {
+							// Hide butcons for responsive design
+							&:nth-child(2) {
+								display: none;
+							}
+							&:nth-child(3) {
+								display: none;
+							}
+							// Reveal butcon for responsive design
+							&:nth-child(4) {
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+		> section {
+			.colonnade {
+				.lt-column {
+					
+				}
+				.rt-column {
+					
+				}
+			}
+			// Deal List - Phone view
+			.deal-list {
+				dl {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

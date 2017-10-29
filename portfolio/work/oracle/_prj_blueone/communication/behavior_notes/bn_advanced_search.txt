@@ -1,0 +1,155 @@
+
+Advanced Search
+updated by Uday Gajendar
+on 12/06/2007
+
+Advanced search is a general phrase describing multiple levels of search functionality of increasing power/control and complexity for users needing to refine their initial basic search further.
+
+Advanced search is accessed in two ways:
+1. Running a simple search and then on the results page clicking the Advanced button
+2. Clicking the advanced search icon (magnifying lens with a plus sign) to directly go to the advanced search
+-- When clicking the advanced search icon, the page that loads is the last used search functionality (basic or advanced)
+
+
+The advanced search screen has four functional areas:
+1. Basic Search Controls
+2. Filters
+3. Results
+4. Actions
+
+
+
+** Search region splitter
+
+This behaves exactly like the splitter for the left pane, but for the search controls, filter options, and global actions above the splitter, open and closing vertically and draggable by manual resizing
+
+If user comes to advanced search page directly by clicking the advanced search icon, then what is exposed is based upon last search used: basic search controls, advanced filter options, and an empty results section
+
+If user comes to this page after running a search in the top pane search field, then the basic search controls are collapsed, with the full results section below
+
+
+
+
+** Warning and information messages
+
+In the event of erroneous data or improper formats entered in the search and filter fields, then an error DMS pop/fade directly below the top pane as defined in previous behavior notes.
+
+Related warning/error icons and field-level indicators appear per previous behavior notes and PSD mockup.
+
+Upon successfully saving a search, an informational DMS pop/fade directly below the top pane as defined in previous behavior notes informing the user.
+
+
+
+1. Basic Search Controls
+- Class and subclass dropdown choices impact the attribute, operator, and value fields in the filters section, causing them to refresh appropriately
+- Class has impact first, then the subclass in that order
+- Today the default class is Items
+- At a minimum we retain the last searched subclass
+- Place the most common and recently used classes and subclasses at the top of their respective menus, with a divider underneath, just like the Font menu in Photoshop or Word
+
+
+
+
+2. Filters
+There are two kinds of filters: basic and advanced, accessed by clicking the appropriately labeled button, Advanced or Basic (switches based upon the filters current shown)
+
+Most of the behavior is based upon filters found in the personalization palette and view manager. See those behavior notes for details.
+
+
+
+
+BASIC FILTERS
+
+- Search text attachments: Check this box to run a full-text search of all attachments
+
+Attribute:
+- Attributes are initially defaulted to what has been predefined by the admin per the class and subclass
+- User changes to the class and subclass dropdowns above will refresh the attribute options (and thus the operator and value)
+- Selecting an attribute will dynamically update the Value control (droplist, datepicker, MSL, etc.) to the appropriate UI control for value selection or data entry.
+- For all the different types of controls that are possible, follow the spacing example in the PSD (10px vertical spacing)
+
+Operator:
+- Operator list of all the possible operations the user can perform in the Agile system to filter the table (equal, not equal, less than, etc.)
+
+(TBD: Need a comprehensive listing of all possible operators documented)
+
+Value: 
+- Dependent upon attribute chosen
+- It is acceptable to have MSL, and other UI controls with their own palettes, to trigger their palette as usual just like in table or form layouts 
+- Calendar appears BELOW the date picker icon, just like in the form and table situations; no edge detection with palette edge. It's OK for the calendar to overlap the palette edge
+- MSL, SSL, MSCL palettes appear above to the right of the search icon triggering the palette; no edge detection with palette edge. It's OK for the search palettes to overlap the palette edge
+
+- CLICK Add button to add another criteria row
+-- Row pops in, no wait or reloading
+- CLICK Remove button to remove the criteria row
+-- Row disappears, no wait or reloading
+
+Scrollbar:
+- As user adds more rows of filter criteria, then the scrollbar appears
+- As user drags and resizes the splitter, then scrollbar resizes accordingly
+
+
+
+ADVANCED FILTERS
+ 
+Same functionality as Basic mode PLUS the following:
+
+Search Type: This dropdown features a set of search types (TBD)
+
+Parenthetical groupings: user clicks the radio button on the left column to start the parenthetical grouping, and then clicks the radio button on the right column to finish the grouping
+
+Prompt: checking this box causes the Value input field to gray out (disabled look) as this indicates that the user will be prompted for the value when the search is saved and executed
+
+Join: Select either AND or OR join condition
+
+Match case checkbox: select this to force case matching on all the values fields; unselect to remove case matching
+
+Grouping actions: menu of various grouping options, Add, Remove, and Add Group (TBD)
+
+
+
+3. Results Table
+- Table title indicates number of results found total (see mockup)
+- Table actions:
+1. Export: Click to export the results (TBD)
+2. Print: Click to print the results (TBD)
+- Table rows can be selected by clicking the row handle and dragged to another location; table behaviors for multi-row selection and keyboarding  defined earlier are relevant here
+- Table is NOT editable, no edit frames or input controls
+- Table rows can be copied into other locations per defined table behaviors
+
+If no results found, then:
+-- Results: None Found is the title with brief text telling user to try again with different criteria (ask Vern for verbiage)
+
+If too many results found, then:
+-- Results: Too Many Found, with brief text telling user to try again with more refined criteria (ask Vern for verbiage)
+
+If some results found, then:
+-- Results table appears with first 20 (number TBD) results, lazy load scrolling, need to set the pinning and width (TBD), and Results table title says how many was found in total (ask Vern for verbiage)
+
+
+
+4. Global Actions
+Clear: Click to clear all fields of their inputted values
+
+Format: Click to launch action dialog for formatting search results
+-- button label is TBD
+
+Format results is a two step wizard dialog box.
+Step 1: user selects the fields via a shuttle control by clicking the right/left arrow buttons or by clicking ENTER upon highlighting a field in the "Available Fields" section. User can drag values up/down in the "Selected Fields" section to re-order the values as desired.
+Step 2: user chooses the multi-sort options, exactly as described for the table personalization palette (see behavior notes).
+At any time user may click Cancel to dismiss the dialog box.
+Upon clicking Finish (TBD).
+Clicking Back takes user back to previous step.
+
+
+Run: Click to run or execute a search per user's inputs
+- page reloads with the new results table per filter criteria
+
+Save: Click to save the search parameters (NOTE: This is a menu button)
+
+Save As: Click to save the search parameters as a separate search, launches action dialog with save criteria for later recall
+
+Cancel: Click to cancel the search operation and go back to the previous screen from which user came
+
+
+

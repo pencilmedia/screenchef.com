@@ -1,0 +1,167 @@
+/******************************************************************************
+BUTTONS.CSS
+Description: Button related styles and definitions.
+******************************************************************************/
+
+/******************************************************************************
+Button Styles
+******************************************************************************/
+
+a.button {
+	background: url('../images/btn_left_nrm.png') left center no-repeat;
+	color: #333;
+	height: 22px;
+	line-height: 18px;
+	margin: 0 -8px 0 6px;
+	padding: 5px 0 5px 8px;
+}
+
+a.button span {
+	background: url('../images/btn_right_nrm.png') right center no-repeat;
+	color: #333;
+	height: 22px;
+	line-height: 18px;
+	margin: 0 5px 0 0;
+	padding: 5px 8px 5px 0;
+}
+
+a.button:hover {
+	background: url('../images/btn_left_ovr.png') left center no-repeat;
+}
+
+a.button:hover span {
+	background: url('../images/btn_right_ovr.png') right center no-repeat;
+}
+
+a.button.disabled span			{ color: #888; cursor:default; }
+a.button.disabled:hover			{ background: url('../images/btn_left_nrm.png') left center no-repeat; }
+a.button.disabled:hover span	{ background: url('../images/btn_right_nrm.png') right center no-repeat; }
+
+.button em							{ background-position: center left; background-repeat: no-repeat; padding: 3px 8px; }
+.button em.iconic					{ background-position: center center; padding: 3px 7px; }
+
+/******************************************************************************
+Button ICONS
+******************************************************************************/
+.cancel					{ background-image: url('../images/icn_action_cancel_checkout.png'); }
+.save					{ background-image: url('../images/icn_action_save.png'); }
+.edit							{ background-image: url('../images/icn_action_edit.png'); }
+.remove							{ background-image: url('../images/icn_action_remove.png'); }
+
+.auto_number 		    		{ background-image: url('../images/icn_action_autonumber.png'); }
+.auto_number_disabled 			{ background-image: url('../images/icn_action_autonumber_disabled.png'); }
+.action_item 		    		{ background-image: url('../images/icn_obj_action_item.png'); }
+.add      		    			{ background-image: url('../images/icn_action_add.png'); }
+.addressbook 		    		{ background-image: url('../images/icn_action_addressbook.png'); }
+.approve						{ background-image: url('../images/icn_obj_approve.png'); }
+.ato							{ background-image: url('../images/icn_obj_auto_transfer_order.png'); }
+.attachment		    			{ background-image: url('../images/icn_action_attachment.png'); }
+.attention		   				{ background-image: url('../images/icn_status_attention.png'); }
+.audit			   			 	{ background-image: url('../images/icn_obj_audit.png'); }
+
+.bom				    		{ background-image: url('../images/icn_obj_bom.png'); }
+.bom_tree			    		{ background-image: url('../images/icn_bom_tree.png'); }
+.bookmark			    		{ background-image: url('../images/icn_obj_bookmark.png'); }
+.calendar 		    			{ background-image: url('../images/icn_action_calendar.png'); }
+
+.capa		 		    		{ background-image: url('../images/icn_obj_capa.png'); }
+.canceled						{ background-image: url('../images/icn_status_cancelled.png'); }
+.complete						{ background-image: url('../images/icn_action_check_names.png'); }
+.collapse						{ background-image: url('../images/icn_action_collapse.png'); }
+.comment						{ background-image: url('../images/icn_action_comment.png'); }
+.cto				    		{ background-image: url('../images/icn_obj_content_transfer_order.png'); }
+.customer			    		{ background-image: url('../images/icn_obj_customer.png'); }
+
+.deviation						{ background-image: url('../images/icn_obj_deviation.png'); }
+.divet							{ background-image: url('../images/icn_menu.png'); padding-right: 12px!important; }
+.document						{ background-image: url('../images/icn_obj_document.png'); }
+.dropdown						{ background-image: url('../images/icn_menu.png'); background-position: right center !important; padding: 0 0 0 10px; }
+/*.dropdown						{ background-image: url('../images/icn_menu.png'); background-position: right center !important; padding-left: 6px !important; padding-right: 18px!important; } */
+/*.dropdown						{ background-image: url('../images/icn_menu.png');}/*special case icon (is on the right instead of left of text) */
+
+.eng_change_order				{ background-image: url('../images/icn_obj_eng_change_order.png'); }
+.eng_change_request				{ background-image: url('../images/icn_obj_eng_change_request.png'); }
+.expand							{ background-image: url('../images/icn_action_expand.png'); }
+
+.file_closed					{ background-image: url('../images/icn_obj_folder_closed.png'); }
+.file_folder					{ background-image: url('../images/icn_obj_file_folder.png'); }
+.file_open						{ background-image: url('../images/icn_obj_folder_open.png'); }
+
+.gate							{ background-image: url('../images/icn_obj_gate.png'); }
+
+.inbox							{ background-image: url('../images/icn_obj_inbox.png'); }
+
+.level_collapsed				{ background-image: url('../images/icn_action_expand.png'); }
+.level_expanded					{ background-image: url('../images/icn_action_collapse.png'); }
+.lock							{ background-image: url('../images/icn_action_lock.png'); }
+
+.material						{ background-image: url('../images/icn_obj_material.png'); }
+.material_declaration			{ background-image: url('../images/icn_obj_material_declaration.png'); }
+.manufacturer					{ background-image: url('../images/icn_obj_manufacturer.png'); }
+.manufacturer_change_order		{ background-image: url('../images/icn_obj_manufacturer_change_order.png'); }
+.manufacturer_part				{ background-image: url('../images/icn_obj_manufacturer_part.png'); }
+
+.non_conformance	   			{ background-image: url('../images/icn_obj_non_conformance.png'); }
+.notification_read				{ background-image: url('../images/icn_obj_notification_read.png'); }
+
+.off_track						{ background-image: url('../images/icn_status_off_track.png'); }
+.on_track						{ background-image: url('../images/icn_status_on_track.png'); }
+.organization					{ background-image: url('../images/icn_obj_organization.png'); }
+
+.package						{ background-image: url('../images/icn_obj_package.png'); }
+.parameter						{ background-image: url('../images/icn_obj_parameter.png'); }
+.part							{ background-image: url('../images/icn_obj_part.png'); background-position:0px 1px; }
+.part_concept					{ background-image: url('../images/icn_obj_part_concept.png'); }
+.part_variant					{ background-image: url('../images/icn_obj_part_variant.png'); }
+.pending						{ background-image: url('../images/icn_status_pending.png'); }
+.phase							{ background-image: url('../images/icn_obj_phase.png'); }
+.price							{ background-image: url('../images/icn_obj_price.png'); }
+.price_change_order				{ background-image: url('../images/icn_obj_price_change_order.png'); }
+.problem_report					{ background-image: url('../images/icn_obj_problem_report.png'); }
+.product						{ background-image: url('../images/icn_obj_product.png'); }
+.product_family					{ background-image: url('../images/icn_obj_product_family.png'); }
+.product_variant				{ background-image: url('../images/icn_obj_product_variant.png'); }
+.program						{ background-image: url('../images/icn_obj_program.png'); }
+.project						{ background-image: url('../images/icn_obj_project.png'); }
+.published_price				{ background-image: url('../images/icn_obj_published_price.png'); }
+
+.report							{ background-image: url('../images/icn_obj_report.png'); }
+.requirement					{ background-image: url('../images/icn_obj_requirement.png'); }
+.rfq							{ background-image: url('../images/icn_obj_rfq.png'); }
+.rfq_response					{ background-image: url('../images/icn_obj_rfq_response.png'); }
+
+.saved_search					{ background-image: url('../images/icn_obj_saved_search.png'); }
+.site							{ background-image: url('../images/icn_obj_site.png'); }
+.site_change_order				{ background-image: url('../images/icn_obj_site_change_order.png'); }
+.sourcing_project				{ background-image: url('../images/icn_obj_sourcing_project.png'); }
+.specification					{ background-image: url('../images/icn_obj_specification.png'); }
+.stop_ship						{ background-image: url('../images/icn_obj_stop_ship.png'); }
+.structure						{ background-image: url('../images/icn_obj_structure.png'); }
+.subpart						{ background-image: url('../images/icn_obj_subpart.png'); }
+.substance						{ background-image: url('../images/icn_obj_substance.png'); }
+.substance_group				{ background-image: url('../images/icn_obj_substance_group.png'); }
+.summary						{ background-image: url('../images/icn_action_view_summary.png'); }
+.supplier						{ background-image: url('../images/icn_obj_supplier.png'); }
+
+.task							{ background-image: url('../images/icn_obj_task.png'); }
+
+.unlock							{ background-image: url('../images/icn_action_unlock.png'); }
+.user							{ background-image: url('../images/icn_obj_user.png'); }
+.user_group						{ background-image: url('../images/icn_obj_user_group.png'); }
+
+.view_details					{ background-image: url('../images/icn_action_view_details.png'); }
+.view_gannt						{ background-image: url('../images/icn_action_view_gannt.png'); }
+
+.workflow_progress				{ background-image: url('../images/icn_obj_workflow_process.png'); }
+
+/* PAGINATION BUTTONS *******************************************************/
+p.pagination					{ float: right; margin-top:2px; }
+.pagination a 					{ background-position: 0 center; background-repeat: no-repeat; display: block; float: left; height: 20px; margin: 0 2px 0 2px; width: 10px; }
+.page_first 					{ background: url('../images/icn_pagination_first.png'); }
+.page_first_disabled 			{ background: url('../images/icn_pagination_first_disabled.png'); }
+.page_prev 						{ background: url('../images/icn_pagination_prev.png'); }
+.page_prev_disabled 			{ background: url('../images/icn_pagination_prev_disabled.png'); }
+.page_next 						{ background: url('../images/icn_pagination_next.png'); }
+.page_next_disabled  			{ background: url('../images/icn_pagination_next_disabled.png'); }
+.page_last 						{ background: url('../images/icn_pagination_last.png'); }
+.page_last_disabled	    		{ background: url('../images/icn_pagination_last_disabled.png'); }

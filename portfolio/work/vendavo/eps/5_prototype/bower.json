@@ -1,0 +1,36 @@
+{
+  "name": "prototype_components",
+  "version": "0.0.0",
+  "authors": [
+    "Jan Rudovsky <jrudovsky@vendavo.com>, Ralph Garcia <rgarcia@vendavo.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "modernizer": "~2.8.2",
+    "fastclick": "~1.0.6",
+    "highlightjs": "~8.4.0",
+    "fontawesome": "~4.3.0",
+    "icomoon": "~0.0.3",
+    "animate.css": "latest",
+    "select2-ng": "~3.5.2",
+    "jquery.truncator": "*",
+    "eonasdan-bootstrap-datetimepicker": "~4.7.14",
+    "bootstrap-datepicker": "~1.4.0",
+    "bootstrap3-dialog": "~1.34.2"
+  },
+  "resolutions": {
+    "bootstrap": "~3.3.2"
+  }
+}

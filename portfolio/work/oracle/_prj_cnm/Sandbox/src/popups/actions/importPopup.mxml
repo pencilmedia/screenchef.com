@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="450" title="Import"
+	 paddingBottom="0" paddingTop="10" paddingLeft="0" paddingRight="0"
+	horizontalScrollPolicy="off" borderAlpha="100" dropShadowEnabled="true" cornerRadius="0" 
+	showCloseButton="true" close="closeImportPopup();">
+	<mx:Script>
+	    <![CDATA[
+	        import mx.collections.ArrayCollection;
+	        import mx.controls.Alert;
+	        import mx.managers.PopUpManager;
+	        import popups.actions.importPopup;
+	            
+	        // CLOSE POPUP
+			private function closeImportPopup():void
+	        {
+	        	PopUpManager.removePopUp(this);
+			}
+			
+	        // DROPDOWN CONTENT
+	        [Bindable]
+	        public var format:ArrayCollection = new ArrayCollection(
+	        [ 
+	        	{label:"Quotes", data:1}, 
+	            {label:"Requirements", data:2}, 
+	            {label:"Ideas", data:3} 
+	        ]);
+	        
+	        private var _arrUploadFiles:Array;
+            private var _numCurrentUpload:Number = 0;
+            private var _refAddFiles:FileReferenceList;    
+            private var _refUploadFile:FileReference;
+
+// Called to add file(s) for upload
+            private function addFiles():void {
+                _refAddFiles = new FileReferenceList();
+                _refAddFiles.addEventListener(Event.SELECT, onSelectFile);
+                _refAddFiles.browse();
+            }
+            // Called when a file is selected
+            private function onSelectFile(event:Event):void {
+                var arrFoundList:Array = new Array();
+                // Get list of files from fileList, make list of files already on upload list
+                for (var i:Number = 0; i < _arrUploadFiles.length; i++) {
+                    for (var j:Number = 0; j < _refAddFiles.fileList.length; j++) {
+                        if (_arrUploadFiles[i].label == _refAddFiles.fileList[j].name) {
+                            arrFoundList.push(_refAddFiles.fileList[j].name);
+                            _refAddFiles.fileList.splice(j, 1);
+                            j--;
+                        }
+                    }
+                }
+                if (_refAddFiles.fileList.length >= 1) {
+                    for (var k:Number = 0; k < _refAddFiles.fileList.length; k++) {
+                        _arrUploadFiles.push({label:_refAddFiles.fileList[k].name, data:_refAddFiles.fileList[k]});
+                    }
+                    listFiles.dataProvider = _arrUploadFiles;
+                    listFiles.selectedIndex = _arrUploadFiles.length - 1;
+                }                
+                if (arrFoundList.length >= 1) {
+                    Alert.show("The file(s): \n\n• " + arrFoundList.join("\n• ") + "\n\n...are already on the upload list. Please change the filename(s) or pick a different file.", "File(s) already on list");
+                }
+                if (_arrUploadFiles.length == 0) {
+                    btnUpload.enabled = false;
+                } else {
+                    btnUpload.enabled = true;
+                }
+            }
+            
+			
+	    ]]>
+	</mx:Script>
+	<mx:VBox id="addBox" label="Search" width="100%" height="100%">
+        <mx:Grid width="100%" paddingLeft="10" paddingRight="20" paddingBottom="20">
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="Type"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%">
+        			<mx:ComboBox dataProvider="{format}" width="100%" />
+        		</mx:GridItem>
+        	</mx:GridRow>
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="File Upload" id="label1"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%" id="griditem1">
+        			<mx:List id="listFiles" width="100%" height="25" allowMultipleSelection="false" cornerRadius="0" />
+        			<mx:Button id="btnUpload" label="Browse..." click="addFiles()"/>
+        		</mx:GridItem>
+        	</mx:GridRow>
+        </mx:Grid>
+		<mx:HBox styleName="footer" width="100%">
+		    <mx:Button label="Help" />
+		    <mx:Spacer width="80%" />
+		    <mx:Button label="Close" click="closeImportPopup()" />    	
+		    <mx:Button id="addBtn" label="OK" />
+	    </mx:HBox>
+	</mx:VBox>
+</mx:TitleWindow>
+
+
+
+
+
+
+

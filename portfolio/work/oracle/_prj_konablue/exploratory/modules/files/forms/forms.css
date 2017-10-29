@@ -1,0 +1,101 @@
+/*
+	FORM CONTAINER STYLES
+*/
+
+
+div.form_std {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+div.form_std div.form_row {
+	clear: both;
+}
+
+div.form_std div.form_row p.text {
+	width: 120px;
+	margin: 0px;
+	padding: 4px 0px 0px 0px;
+	font-weight: bold;
+	text-align: right;
+	float: left;
+}
+
+div.form_std div.form_row p {
+	margin: 0px 5px 10px 5px;
+	padding: 0px;
+	float: left;
+}
+
+hr {
+	clear: both;
+	height: 1px;
+	visibility: hidden;
+}
+
+
+/*
+	FORM ELEMENT STYLES
+*/
+
+input[text],input[type=text], p.disabled, select, textarea {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	color: #333;
+	border: 1px solid #a9bad8;
+	margin-top: 2px;
+}
+
+input[text], input[type=text], p.disabled, select {
+	height: 16px;
+}
+
+p.disabled {
+	border: 1px solid #cbcbcb;
+	margin-left: 10px;
+}
+
+select {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	color: #333;
+	border: 1px solid #a9bad8;
+	width: 120px;
+}
+
+
+/*
+	BUTTONBAR STYLES
+*/
+
+/*
+	The buttonbar style is modified for popups in popup.css
+*/
+
+div.buttonbar {
+	height: 30px;
+	color: #333;
+	background-color: #eee;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div.bb_left {
+	float: left;
+	margin: 5px 0px 0px 5px;
+	text-align: left;
+}
+
+div.bb_middle {
+	margin: 5px 0px 0px 0px;
+}
+
+div.bb_right {
+	float: right;
+	margin: 5px 5px 0px 0px;
+	text-align: right;
+}

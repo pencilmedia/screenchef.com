@@ -1,0 +1,665 @@
+/*Form Factory CSS*/
+
+/* 
+	Non-stacked forms:
+		1. place 8px between label and field 
+		2. place 8px between columns
+	
+	Stacked Forms
+		1. Place 8px between columns
+		2. Place 5px above label
+		3. Place 3px below label
+	
+	
+*/
+
+
+TABLE.dwpe-form-layout
+{	_width:100%;	padding:0px;margin:0px;}
+
+
+
+
+
+TABLE.dwpe-form-layout-inner
+{	_width:100%;	padding:0px;margin:3px 0px 0px 0px;}
+
+TABLE.dwpe-form-layout-inner.stacked
+{	_width:100%;	padding:0px;margin:0px 0px 0px 0px;}
+
+
+TABLE.dwpe-form-layout>TBODY>TR,
+TABLE.dwpe-form-layout-inner>TBODY>TR
+{	vertical-align:top;	
+}
+	
+TABLE.dwpe-form-layout-inner>TBODY>TR>TD
+{
+	padding:5px 0px 3px 0px;
+	margin:0px;
+	line-height:12px;
+}
+
+TABLE.dwpe-form-layout-inner.stacked>TBODY>TR
+{
+	line-height:12;
+}
+TABLE.dwpe-form-layout-inner.stacked>TBODY>TR>TD
+{
+	padding:0px 0px 0px 8px;
+	margin:0px;
+	
+}
+
+
+.r1{width:250px}
+.r2{width:250px}
+.r3{width:250px}
+.r4{width:225px}
+.r5{width:150px}
+.r6{width:16.5%}
+.r8{width:12.5%}
+.r50{width:50%}
+.r100{width:100%}
+
+
+
+
+
+
+/*    Prompts   */
+UX.dwpe-prompt
+{	text-align:right;
+	margin:2px 8px 0px 8px;
+	padding:0px 0px 0px 0px;
+	font-size:11px;
+	color:#765715;
+	white-space:nowrap;
+	display:block;
+	}
+
+UX.dwpe-prompt>SPAN.icons
+{	margin:0px 2px 0px 0px;}
+	
+
+UX.dwpe-prompt.wrap{white-space:normal}
+UX.dwpe-prompt.nowrap{white-space:nowrap}
+
+
+UX.dwpe-prompt.stacked
+{	text-align:left;
+	vertical-align:bottom;
+	margin:0px;
+	padding:5px 0px 1px 1px;
+	line-height:12px;
+	display:inline-block;
+}
+
+	
+
+
+UX.dwpe-prompt.disabled
+{
+	opacity:.5;
+}
+
+
+
+
+/* Single Select Choice List */
+UX.dwpe-lov select,
+UX.dwpe-singleselectchoicelist  { width: 100%; }
+
+UX.dwpe-lov select,
+SELECT.dwpe-singleselectchoicelist 
+{
+	width:100%; 
+	font-size: 11px; 
+	border: 1px solid #ccc; 
+	background-color:#fff; 
+	padding:0px;
+}
+
+UX.dwpe-singleselectchoicelist span 
+{
+	padding:2px 3px 2px 5px;
+	display: inline-block;
+}
+UX.dwpe-lov span
+{
+	padding:3px 3px 2px 4px;
+	display: inline-block;
+}
+
+/*   TextBox & TextArea   */
+INPUT.dwpe-textbox,
+TEXTAREA.dwpe-textarea
+{
+	width:100%;
+	background-color:#fff;
+	font-size: 11px;
+	border: 1px #ccc solid;
+	padding:1px;
+}
+
+/*Textarea*/
+TEXTAREA.dwpe-textarea 
+{
+	overflow-x: hidden; 
+	min-height:40px;
+}
+UX.dwpe-spinbox INPUT,
+INPUT.dwpe-textbox 
+{
+	_height:17px;  /*Roy removes forced height*/
+}
+
+/* TextBox, TextArea & Single Select Choice List States */
+UX.dwpe-spinbox.disabled input,
+UX.dwpe-lov.disabled select,
+SELECT.dwpe-singleselectchoicelist.disabled,
+INPUT.dwpe-textbox.disabled,
+TEXTAREA.dwpe-textarea.disabled,
+SELECT.dwpe-singleselectchoicelist.disabled
+{
+	background-color:transparent; 
+	color:#7E807A;
+}
+UX.dwpe-lov.read-only select,
+UX.dwpe-spinbox.read-only input,
+SELECT.dwpe-singleselectchoicelist.read-only,
+INPUT.dwpe-textbox.read-only,
+TEXTAREA.dwpe-textarea.read-only,
+SELECT.dwpe-singleselectchoicelist.read-only
+{
+	border: 1px transparent solid;
+	background-color:transparent;
+	color:#000;
+}
+
+
+
+/*Text Box*/
+INPUT.dwpe-textbox.right
+{
+	text-align: right;
+}
+
+
+
+
+
+
+UX.dwpe-lov.error select,
+SELECT.dwpe-singleselectchoicelist.error,
+INPUT.dwpe-textbox.error,
+TEXTAREA.dwpe-textarea.error,
+SELECT.dwpe-singleselectchoicelist.error,
+ux.dwpe-multiselectchoicelist.error>input
+{
+	border: 2px #C70000 solid;
+	padding:0px;
+}
+UX.dwpe-lov.warning select,
+SELECT.dwpe-singleselectchoicelist.warning,
+INPUT.dwpe-textbox.warning,
+TEXTAREA.dwpe-textarea.warning,
+SELECT.dwpe-singleselectchoicelist.warning,
+ux.dwpe-multiselectchoicelist.warning>input
+{
+	border: 2px #FFAA2B solid;
+	padding:0px;
+}
+
+
+ux.dwpe-multiselectchoicelist.error>input,
+ux.dwpe-multiselectchoicelist.warning>input
+{
+	background-position: right -1px
+}
+
+
+/* CheckBox */
+
+INPUT.check-box{
+	margin-right:3px;	
+	background-color:#fff; 
+	font-size:11px; 
+	border: 1px blue solid;	
+	vertical-align:text-bottom;
+	margin-top:3px;
+}
+
+LABEL.checkbox-label{
+	text-transform:capitalize;	 
+	white-space:nowrap;  
+	overflow: hidden;
+}
+
+LABEL.checkbox-label.disabled{
+	color: #7E807A;
+}
+
+INPUT.check-box.disabled{
+	background-color:transparent; 
+	color:#7E807A; 
+}
+
+INPUT.check-box.read-only{ 
+	border: 1px solid #000000;
+	background-color:transparent;
+	color:#000;
+}
+
+INPUT.check-box.error{ 
+	outline: 2px solid #C70000;
+}
+
+INPUT.check-box.warning{ 
+	outline: 2px solid #FFAA2B; 
+}
+
+
+/* Radio Gruop */
+
+A.dwpe-radiogroup,
+A.dwpe-radiogroup:link,
+A.dwpe-radiogroup:visited,
+A.dwpe-radiogroup:hover
+{
+	display:inline-block;
+	color:#000;
+	outline:none;
+	text-decoration:none;
+}
+
+INPUT.radio-group{
+	margin-right:3px;
+	margin-top:3px;
+	background-color:#fff; 
+	font-size:11px; 
+	border: 1px blue solid;	
+	vertical-align:text-bottom;
+}
+
+LABEL.radiogroup-label{
+	text-transform:capitalize;	 
+	_white-space:nowrap;
+	overflow: hidden;
+	margin-top:6px;
+	vertical-align:top;
+	color:#000;
+}
+
+LABEL.radiogroup-label.disabled{
+	color: #7E807A;
+}
+
+INPUT.radio-group.disabled{
+	background-color:transparent; 
+	color:#7E807A; 
+}
+
+INPUT.radio-group.read-only{ 
+	border: 1px solid #000000;
+	background-color:transparent;
+	color:#000;
+}
+
+INPUT.radio-group.error{ 
+	outline: 2px solid #C70000;
+	-moz-outline-radius:9px 9px 9px 9px;
+}
+
+INPUT.radio-group.warning{ 
+	outline: 2px solid #FFAA2B; 
+	-moz-outline-radius:9px 9px 9px 9px;
+}
+
+
+/* File Upload */
+
+DIV.file-upload{
+	display:inline-block;
+	white-space:nowrap;
+}
+
+INPUT.dwpe-fileupload{ 	
+	font-size: 11px; 	
+	padding: 2px 2px 1px 2px;
+	background-color:#fff; 
+	border: 1px #B9B9B4 solid;	
+	min-width:170px;
+	font-family: Tahoma;	
+}
+
+INPUT.dwpe-fileupload.disabled{
+	color:#7E807A;
+	background-color:transparent;
+}
+
+INPUT.dwpe-fileupload.read-only{ 
+	border:1px solid transparent; 
+}
+
+INPUT.dwpe-fileupload.error{
+	border:2px solid #C70000; 
+}
+
+INPUT.dwpe-fileupload.warning{
+	border:2px solid #FFAA2B;
+}
+
+DIV.file-upload>SPAN.browse-button.read-only{
+	visibility:hidden;
+}
+
+/* Multiselect-listbox */
+
+UX.dwpe-multiselectlistbox{	
+	border-color:#AEB4BD #E0E3E8 #E0E3E8 #AEB4BD;
+	border-width:1px;
+	border-style:solid ;	
+	color:#333333;
+	font-family:Tahoma;
+	font-size:11px;	
+	white-space:nowrap;		
+	padding:2px;
+	width:96%;
+	line-height:1.5em;
+	background-color:#FFFFFF;
+	display:inline-block;
+}
+
+DIV.multiselect-listbox{
+	overflow:hidden;
+	overflow-y:auto;
+	width:100%;
+}
+
+INPUT.multiselect-listbox,
+INPUT.multiselect-listbox-selectall{
+	margin-right:3px;
+	background-color:#fff; 
+	font-size:11px; 
+	border: 1px solid #B9B9B4;
+	vertical-align:middle;
+	margin-bottom:3px;
+}
+
+LABEL.multiselectlistbox-label{	
+	_white-space:nowrap;   /*Roy: these labels can wrap*/
+	overflow: hidden;
+	vertical-align:middle;
+}
+
+LABEL.multiselectlistbox-label.disabled{
+	color: #7E807A;
+}
+
+INPUT.multiselect-listbox.disabled{
+	background-color:transparent; 
+	color:#7E807A; 
+}
+
+UX.dwpe-multiselectlistbox.error{ 
+	border: 2px solid #C70000;
+}
+
+UX.dwpe-multiselectlistbox.warning{ 
+	border: 2px solid #FFAA2B; 
+}
+
+UX.dwpe-multiselectlistbox.read-only{
+	border-color:#FFFFFF;
+	border-width:0px;
+	border-style:none;	
+}
+
+.multiselect-separator{
+	border-left:1px none;	
+	color:white;
+	overflow:hidden;
+	margin:0px;
+	width:100%;
+	padding:0;
+}
+
+DIV.multiselect-all-separator{
+	border-top:1px solid #979993;
+	padding:0;
+	overflow:hidden;
+	overflow-y:auto;
+	width:100%;
+}
+
+
+ux.dwpe-multiselectchoicelist>input
+{
+	background: url("../images/disclosure-strip-mscl.png") no-repeat right 0 transparent;
+	background-color: #fff;
+	padding: 1px 19px 1px 3px;
+	border: 1px solid #ccc;	
+	width: 100%;
+	cursor: default;
+}
+
+UX.dwpe-multiselectchoicelist>input.error{ 
+	border: 2px solid #C70000;
+	padding: 0px 18px 0px 2px
+}
+
+UX.dwpe-multiselectchoicelist>input.warning{ 
+	border: 2px solid #FFAA2B; 
+	padding: 0px 18px 0px 2px
+}
+
+ux.dwpe-multiselectchoicelist.disabled >input,
+ux.dwpe-multiselectchoicelist.disabled >input:hover,
+ux.dwpe-multiselectchoicelist.read-only >input,
+ux.dwpe-multiselectchoicelist.read-only >input:hover
+{
+	opacity:.5;	
+}
+
+Ul.DWPE_Window_Body div.mscl-listitems
+{
+	top: 0px;
+	overflow:auto;
+	overflow-x: hidden;
+	max-height: 275px /* Approximately 15 items */
+}
+Ul.DWPE_Window_Body ul.mscl-checkall,
+Ul.DWPE_Window_Body div.mscl-listitems  ul
+{
+	border-bottom: 1px solid #ccc;	
+	background-color: #fff;
+	list-style: none;
+	margin: 0;
+	padding: 3px 0 0 0;
+}
+Ul.DWPE_Window_Body div.mscl-listitems>ul 
+{
+	_border-bottom: none;
+}
+Ul.DWPE_Window_Body ul.mscl-checkall
+{
+	padding-top: 3px;
+}
+Ul.DWPE_Window_Body ul.mscl-checkall li,
+Ul.DWPE_Window_Body div.mscl-listitems ul li
+{
+	padding:1px 0 1px 3px;
+	white-space:nowrap;
+}
+Ul.DWPE_Window_Body div.mscl-listitems ul li label.disabled
+{
+	color: #7E807A;
+}
+Ul.DWPE_Window_Body div.mscl-listitems ul li.selected
+{
+	background-color: #C6CFE7;
+}
+ul.DWPE_Window_Body div.mscl-listitems ul li.disabled
+{
+	background-color: transparent;
+}
+UL.mscl-checkall input[type=checkbox],
+UL.DWPE_Window_Body div.mscl-listitems input[type=checkbox]
+{
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+	margin-right: 5px;
+}
+
+Ul.DWPE_Window_Body div.mscl-listitems UL LI.separator
+{
+	margin-bottom: 3px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #ccc;
+}
+Ul.DWPE_Window_Body ul.mscl-checkall li label,
+Ul.DWPE_Window_Body div.mscl-listitems ul li label
+{
+	height: 16px;
+	cursor: pointer;
+	display:block;
+}
+
+/* DateTimePicker */
+UX.dwpe-datetimepicker
+{
+	white-space:nowrap;
+}
+UX.dwpe-datetimepicker input
+{
+	border:none;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	background: url(../images/datepicker.png) right center no-repeat;
+	border-left: 1px solid #ccc;
+	padding: 3px 23px 2px 2px;
+	cursor: default;
+	width: 100%;
+}
+UX.dwpe-datetimepicker.error input
+{
+	border-left: 1px solid #C70000;
+	background: url(../images/datepicker_error.png) right center no-repeat;
+}
+UX.dwpe-datetimepicker.warning input
+{
+	border-left: 1px solid #FFAA2B;
+	background: url(../images/datepicker_warning.png) right center no-repeat;
+}
+
+UX.dwpe-datetimepicker.read-only input
+{
+	border-color: transparent;
+	background: url();
+	color: #000;
+}
+
+UX.dwpe-datetimepicker.disabled input
+{
+	opacity: 0.5;
+}
+
+UX.dwpe-datetimepicker span
+{
+	margin-left:3px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	width:20%;
+}
+
+/* LOV */
+UX.dwpe-lov input
+{
+	border:none;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	background: url(../images/lov.png) right center no-repeat;
+	border-left: 1px solid #ccc;
+	padding: 3px 23px 2px 2px;
+	cursor: default;
+	min-width: 150px;
+	width: 100%;
+}
+UX.dwpe-lov.error input
+{
+	border-left: 1px solid #C70000;
+	background: url(../images/lov_error.png) right center no-repeat;
+}
+UX.dwpe-lov.warning input
+{
+	border-left: 1px solid #FFAA2B;
+	background: url(../images/lov_warning.png) right center no-repeat;
+}
+
+
+UX.dwpe-lov.read-only input
+{
+	border-color: transparent;
+	background: url();
+	color: #000;
+}
+
+UX.dwpe-lov.disabled input
+{
+	opacity: 0.5;
+}
+
+UX.dwpe-spinbox input
+{
+	border:none;
+	text-align: right;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	background: url(../images/spinbox_sprite.png) right 0 no-repeat;
+	border-left: 1px solid #ccc;
+	padding: 3px 23px 2px 2px;
+	cursor: default;
+	min-width: 150px;
+	width: 100%;
+}
+UX.dwpe-spinbox input.hover-up { background-position: right -162px; }
+UX.dwpe-spinbox input.hover-down { background-position: right -216px; }
+
+UX.dwpe-spinbox input.up { background-position: right -54px; }
+UX.dwpe-spinbox input.down { background-position: right -108px; }
+
+UX.dwpe-spinbox.warning input
+{
+	border-left: 2px solid #FFAA2B;
+	background: url(../images/spinbox_sprite.png) right -18px no-repeat;
+}
+UX.dwpe-spinbox.warning input.hover-up{ background-position: right -180px; }
+UX.dwpe-spinbox.warning input.hover-down { background-position: right -234px; }
+
+UX.dwpe-spinbox.warning input.up{ background-position: right -72px; }
+UX.dwpe-spinbox.warning input.down { background-position: right -126px; }
+
+UX.dwpe-spinbox.error input
+{
+	border-left: 2px solid #C70000;
+	background: url(../images/spinbox_sprite.png) right -36px no-repeat;
+}
+UX.dwpe-spinbox.error input.hover-up{ background-position: right -198px; }
+UX.dwpe-spinbox.error input.hover-down { background-position: right -252px; }
+
+UX.dwpe-spinbox.error input.up { background-position: right -90px; }
+UX.dwpe-spinbox.error input.down { background-position: right -144px; }
+
+UX.dwpe-spinbox.read-only input
+{
+	border-color: transparent;
+	background: url();
+	color: #000;
+}
+
+UX.dwpe-spinbox.disabled input
+{
+	opacity: 0.5;
+}

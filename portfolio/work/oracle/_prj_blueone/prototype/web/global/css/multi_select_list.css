@@ -1,0 +1,74 @@
+div.multi_select_form
+{
+	position:absolute;
+	overflow:hidden;
+	margin:50px;
+	padding:0 0 10px 0;
+	border-left:1px solid silver;
+	border-right:1px solid silver;
+	border-bottom:1px solid silver;
+	background-color:#f5f5f5;
+	width:400px;
+}
+
+div.handlebar
+{
+	background: url(/kb_phase_1/prototype/web/global/images/inset_handle.png) repeat-x; border: 1px solid #ddd; background-color: #efefef;	position:relative;
+	height:13px;
+	cursor:move;
+	text-align: right;
+}
+div.handlebar a
+{
+	font-weight: bold;
+	padding:1px 2px;
+	margin: 1px 1px 0 0;
+	float: right;
+	font-size:8px;
+	border: 1px solid silver;
+	background-color:#f3f3f3;
+	line-height: 9px;
+	color: gray;
+	
+}
+
+
+div.filter
+{
+	margin: 10px 10px 0 10px;
+	white-space: nowrap;
+}
+
+.search { width: 85%; }
+
+div.results
+{
+	height:140px;
+	border:1px solid silver;
+	background-color: white;
+	margin-top:10px;
+	margin:10px 10px 0 10px;
+	padding:5px;
+}
+
+div.results ul { list-style:none; }
+
+div.results li:hover { background-color:#efefef; cursor:pointer; }
+
+p { padding: 2px 0 0 10px; }
+
+
+
+.resizeButton
+{
+	position:absolute;
+	bottom: 0px;
+	right: 0px;
+	font-size:x-small;
+	width:12px;
+	height:12px;
+	float: right;
+	color:#000;
+	cursor:nw-resize;
+	background: url(/kb_phase_1/prototype/web/global/images/inset_stretcher.png) no-repeat top right;
+}

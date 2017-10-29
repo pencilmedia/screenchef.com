@@ -1,8 +1,8 @@
 /* BEGIN: theme.scss
 // -----------------------------------------------------*/
 // Bourbon Library
-@import "bower_components/bourbon/app/assets/stylesheets/_bourbon";
-@import "bower_components/neat/app/assets/stylesheets/_neat";
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/_neat";
 
 // Global Includes
 @import "variables";
@@ -19,6 +19,9 @@
 @import "nav";
 @import "buttons";
 @import "footer";
+
+// Specific Pages
+@import "portfolio";
 
 // Responsive Behaviors
 @import "responsive";

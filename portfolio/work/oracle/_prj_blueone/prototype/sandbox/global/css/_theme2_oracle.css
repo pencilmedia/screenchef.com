@@ -1,0 +1,106 @@
+/******************************************************************************
+	BORDERS AND CREATE NEW BUTTON UNDERLINE
+*****************************************************************************/
+.LeftPane .leftPaneHeader,
+.create_button a:hover,
+.TopPane {
+    border-bottom: 1px solid #666 !important;
+}
+.LeftPane .slideMenuHeader {
+	border-top: 1px solid #666 !important;
+}
+.action_dialog div.footer {
+	border-bottom: none !important;
+}
+
+/******************************************************************************
+	DASHBOARD HEADER & ACTIVE DRAWER
+*****************************************************************************/
+.dashboardTitle { 
+	color: #333;
+}
+.groupItem .itemHeader,
+.LeftPane .slideMenuHeader.selected {
+	background: none !important; 
+	background-color: #E8575D !important;
+}
+/*****************************************************************************
+	TOP PANE
+*****************************************************************************/
+.TopPane,
+.leftPaneHeader  {
+	background-image: none !important;
+    background-color: #CCCCCC !important;
+}
+/*****************************************************************************
+	ACTION DIALOG FOOTER
+*****************************************************************************/
+.action_dialog div.footer {
+	background-image: none !important;
+    background-color: #f0dadc !important;
+}
+/******************************************************************************
+	PALETTE HEADER / FOOTER
+*****************************************************************************/
+.ux_palette
+{
+	background-color: #fff;
+}
+.ux_palette_top,
+.ux_palette_bottom 
+{  
+	background-color: #E8575D !important;
+}
+
+.ux_palette_title { color: #333; }
+
+.ux_palette_bottom_action_bar {
+	margin-left: 0 5px;
+}
+/******************************************************************************
+	TABLE HEADER, LEFT PANE BUTTON BG, DRAWER & CREATE NEW BUTTON HOVERS, SELECTED PALETTE TAB
+*****************************************************************************/
+th,
+tr.header td,
+.GHeader,
+
+th.handle,
+td.handle,
+table.rbr td.handle,
+.GPanel,
+.GPanelTop,
+
+div.yuimenu li.selected,
+div.yuimenubar li.selected,
+
+.LeftPane .slideMenuHeader:hover,
+.LeftPane .action_buttons,
+.create_button a:hover {
+	background: none !important;	
+	background-color: #faf7ed !important;
+}
+
+/******************************************************************************
+	HIGHTLIGHTS & PALETTE TAB BACKGROUND
+*****************************************************************************/
+.palette_tabs {
+	border-top: 1px solid #A60000;
+	border-bottom: 1px solid #A60000;
+	background: url(../images/bgd_palette_tabs.png) repeat-x left top; 
+}
+
+.palette_tabs .selected { 
+	border: none;
+}
+
+.palette_tabs,
+.palette_tabs .selected {
+	background-color: #E8575D !important;
+}
+/******************************************************************************
+	PALETTE AND LEFT PANE BACKGROUNDS
+*****************************************************************************/
+.LeftPane .slideMenu,
+.ux_palette_main {
+	background-color: #fff;
+}

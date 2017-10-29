@@ -1,0 +1,71 @@
+.ux_palette,
+.ux_palette.ui-draggable.ui-resizable
+{
+    position: absolute;
+	z-index: 10;
+	border-top:1px solid silver;
+	border-left:1px solid silver;
+	border-right:2px solid silver;
+	border-bottom:2px solid silver;
+	background-color: #f5f5f5;
+	overflow:hidden;
+	width: 300px;
+	height: 200px;
+	min-height: 75px;
+	min-width: 50px;
+}
+
+.ux_palette_handle
+{
+	background: url(/global/images/ux_palette/handle.png) repeat-x 0 0;
+	height: 12px;
+	line-height: 12px;
+	cursor: move;
+	margin:0 15px 0 2px;
+}
+
+.ux_palette_title
+{
+	white-space: nowrap;
+	font-weight: bold;
+	color:#666;
+	background-color: #f5f5f5;
+	padding: 2px 0 0 5px;
+}
+.ux_palette_close
+{
+	position: absolute;
+	right: 0px;
+	height: 10px;
+	width:10px;
+	z-index:9;
+}
+.ux_palette_close a 
+{ 
+	background: #F5F5F5 url(/global/images/ux_palette/close_button.png) no-repeat scroll -1px 0;
+	position: absolute;
+	left: -3px;
+	line-height:12px;
+	text-decoration: none; font-weight:bold; color:gray;
+	padding:0px 4px 1px 3px;
+}
+
+.ux_palette_content_wrapper{
+	overflow:auto;
+	margin: 1px;
+	background-color: transparent;
+}
+
+.ux_palette_resize
+{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	cursor: se-resize;
+	background: url(/global/images/ux_palette/resize.png) center center;
+}
+
+
+

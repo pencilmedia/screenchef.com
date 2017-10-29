@@ -1,0 +1,23 @@
+<ai>
+	<item>
+		<id>QTE-14658 - 2.1</id>
+		<description>Add sensor CAD files in dwg.pdf and doc formats.</description>
+		<date>03/06/2009</date>
+	</item>
+	<item>
+		<id>QTE-36524 - 1.0</id>
+		<description>Add something else to the file in PDF format.  Here is some text to show wrapping.</description>
+		<date>03/06/2009</date>
+	</item>
+	<item>
+		<id>QTE-54293 - 3.2</id>
+		<description>Hmmm... not sure that the dot dividers will work well here.</description>
+		<date>03/06/2009</date>
+	</item>
+	<item>
+		<id>QTE-87745 - 1.10</id>
+		<description>Anthony Moquette Was here!</description>
+		<date>03/06/2009</date>
+	</item>
+
+</ai>

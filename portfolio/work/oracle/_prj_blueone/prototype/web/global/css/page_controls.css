@@ -1,0 +1,11 @@
+/******************************************************************************
+PAGE_CONTROLS.CSS
+Description: Page control related styles and definitions.
+******************************************************************************/
+.page_controls 					{ margin: 20px 10px 20px 10px; padding-bottom: 1px;  }
+.page_controls p 				{ text-align: right; padding-top: 10px; }
+.page_controls select 			{ width: 245px;  margin-right: 5px; }
+/*.page_controls a.button			{ margin: 3px; min-width: 35px; padding-left: 15px; padding-right: 15px; }*/
+/*^ What was this for?*/
+.page_controls label.text_color { color: #333; }
+.page_controls label.checkbox	{ margin-right: 20px; }

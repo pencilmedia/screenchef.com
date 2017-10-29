@@ -1,0 +1,354 @@
+<!-- Page Top
+================================================== -->
+
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/favicon.png">
+    <meta name="description" content="">
+
+    <!-- For iOS web apps-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/portfolio/work/paradata/style-guide/dist/app//assets/img/apple-touch-icon-114x114.png">
+
+    <!--[if lt IE 9]>
+    <script src="/portfolio/work/paradata/style-guide/dist/app/http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Font Library
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/fonts/font-custom/font-custom.css">
+
+    <!-- Plug-Ins Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css">
+
+    <!-- Animate.css
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/animate.css/animate.min.css">
+
+    <!-- Style Guide Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/css/styleguide.css">
+
+    <!-- OLD YETI Styles
+    ================================================== -->
+    <!-- <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/css/_original/style.css"> -->
+
+    <!-- Theme Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/portfolio/work/paradata/style-guide/dist/app//assets/css/theme.css">
+
+    <!-- Code Snippet CSS -->
+    <link rel="stylesheet" href="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/highlightjs/styles/monokai_sublime.css">
+
+    <!-- Modernizr -->
+    <script type="text/javascript" src="/portfolio/work/paradata/style-guide/dist/app//assets/bower_components/modernizer/modernizr.js"></script>
+
+
+    <title>Paradata Style Guide</title>
+  </head>
+
+  <!-- Page <BODY>
+  ================================================== -->
+  <body class="style-guide foundations codestyle" data-id="codestyle">
+    <section class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="sg-content col-xs-12 col-sm-9">
+          <!-- Responsive Navigation Button
+          ================================================== -->
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-link" data-toggle="offcanvas" title="Toggle nav"> <i class="fa fa-bars"></i>
+            </button>
+          </p>
+
+<!-- BEGIN: Template Content
+================================================== -->
+<!-- Content Title
+================================================== -->
+<h2>Coding Style</h2>
+<div class="sg-page-nav">
+  <div>
+    <h6>Navigate To:</h6>
+    <ul>
+      <li><a href="#1">Naming Conventions</a></li>
+      <li><a href="#2">Tools to Help</a></li>
+      <li><a href="#3">HTML5 Style</a></li>
+      <li><a href="#4">CSS3 &amp; SCSS Style</a></li>
+    </ul>
+  </div>
+  <div>
+    Article: Why coding style matters
+    <a href="https://www.smashingmagazine.com/2012/10/why-coding-style-matters/" target="_blank" class="btn btn-default">View Article</a>
+  </div>
+</div>
+<!-- Page Content
+================================================== -->
+<p>
+  <strong>Why does coding style matter?</strong>
+  <br> When you have a style guide, code that otherwise seems innocuous immediately raises a flag because the style isn’t followed. This is one of the most overlooked aspects of style guides: by defining what correct code looks like, we are more easily able to identify incorrect code and therefore potential bugs before they happen.
+</p>
+<p>
+  This document defines formatting and style rules for HTML and CSS. It aims at improving collaboration, code quality, and enabling supporting infrastructure. It applies to raw, working files that use HTML and CSS. Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.
+</p>
+<p>
+  A good code guide covering much of we would like to emulate is located at <a href="http://codeguide.co/" target="_blank">Code Guide for HTML and CSS</a>
+</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="1">Naming Convention</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <h4>Bootstrap Classes and Overrides</h4>
+    <p>Familiarize with Bootstrap classnames. They should appear first in a list of classnames. Try to avoid overriding Bootstrap classes, instead override by creating a new custom class. Why? When Bootstrap updates they may change the name of their classes. It is easier to change our own custom classes.</p>
+    <p><code>class="btn btn-default your-custom-class"</code></p>
+    <h4>CSS Classes</h4>
+    <p>We use a minimal approach by naming just the most necessary rules. Use lower case and names can consist of different words separated by a “-” (dash).</p>
+    <p>Components use a name:
+      <br />
+      <code>.component {…} <br /> .component-name {…}</code>
+    </p>
+    <h4>ID's</h4>
+    <p>ID's should not contained "-" (dash). Instead use capital case.</p>
+    <p><code>id="componentName"</code></p>
+  </div>
+</div><!--/.panel-body-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="2">Tools to help</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <p>
+      Don’t be afraid of using linting tools to help enforce coding style. If these tools are available in your editor as plugins, we encourage the use of them. Here are a few tools that can help keep your team on track:
+    </p>
+    <ul>
+      <li><a href="http://www.html-tidy.org/" target="_blank">HTML Tidy</a></li>
+      <li><a href="http://csslint.net/" target="_blank">CSS Lint</a></li>
+      <li><a href="http://jshint.com/" target="_blank">JSHint</a></li>
+    </ul>
+  </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="3">HTML5 Style</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <p>
+      A consequent use of style, makes it easier for others to understand and use your HTML. In the future, programs like XML readers, may want to read your HTML. Below are a few general principles to follow.
+    </p>
+    <ul>
+      <li>Use correct document type <code>&lt;!doctype html&gt;</code></li>
+      <li>Use lowercase element names such as <code>&lt;div&gt;</code></li>
+      <li>Close empty HTML elements such as <code>&lt;meta charset="utf-8" /&gt;</code></li>
+      <li>Use lowercase attribute names and use quotes around them <code>&lt;div class="menu"&gt;</code></li>
+      <li>Always use the <strong>alt</strong> attribute with images and use that to describe what the image is<code>&lt;img src="path/to/img" alt="describe image" /&gt;</code></li>
+    </ul>
+  </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="4">CSS &amp; SCSS Style</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <h2>CSS Guidelines</h2>
+    <h4>CSS Specificity</h4>
+    <ul>
+      <li>Avoid using ID's for styling. If you must use an id selector (<code>#selector</code>) make sure that you have no more than <em>one</em> in your rule declaration. A rule like <code>#header .search #quicksearch { ... }</code> is considered harmful.</li>
+      <li>When modifying an existing element for a specific use, try to use specific class names. Instead of <code>.listings-layout.bigger</code> use rules like <code>.listings-layout.listings-bigger</code>. Think about <code>ack/grep</code>ing your code in the future.</li>
+      <li>The class names <code>disabled</code>, <code>mousedown</code>, <code>danger</code>, <code>hover</code>, <code>selected</code>, and <code>active</code> should <em>always</em> be namespaced by a class (<code>button.selected</code> is a good example).</li>
+    </ul>
+    <h2>SCSS Guidelines</h2>
+    <h4>Variables and Mixins</h4>
+    <ul>
+      <li>You should use the variables.scss file to declare colors, typography and some formatting.</li>
+      <li>Familiarize and utilize <a href="http://bourbon.io/docs/" target="_blank">Bourbon Mixin Library</a> to reduce redundancy and speed up development.</li>
+    </ul>
+    <p></p>
+    <h4>Spacing</h4>
+    <ul>
+      <li>Use soft-tabs with a two space indent. Spaces are the only way to guarantee code renders the same in any person’s environment.</li>
+      <li>Put spaces after <code>:</code> in property declarations.</li>
+      <li>Put spaces before <code><span class="p">{</span></code> in rule declarations.</li>
+      <li>Put line breaks between rulesets.</li>
+      <li>When grouping selectors, keep individual selectors to a single line.</li>
+      <li>Place closing braces of declaration blocks on a new line.</li>
+      <li>Each declaration should appear on its own line for more accurate error reporting.</li>
+    </ul>
+    <h4>Formatting</h4>
+    <ul>
+      <li>Use hex color codes <code>#000</code> unless using <code>rgba()</code> in raw CSS (SCSS’ <code>rgba()</code> function is overloaded to accept hex colors as a param, e.g., <code>rgba(#000, .5)</code>).</li>
+      <li>Use <code>//</code> for comment blocks (instead of <code>/* */</code>).</li>
+      <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+      <li>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.</li>
+    </ul>
+    <h4>Misc</h4>
+    <p>As a rule of thumb, avoid unnecessary nesting in SCSS. At most, aim for three levels. If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).</p>
+  </div>
+</div>
+<!--/.panel-body-->
+<!-- END/ Page Content
+================================================== -->
+<!-- END: Template Content
+================================================== -->
+<!-- Page Bottom
+================================================== -->
+</div><!--/.col-xs-12.col-sm-9-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <!-- Main Navigation
+          ================================================== -->
+          <!-- Page Header
+================================================== -->
+<!-- INSTRUCTIONS: 
+The navigation item is selected by matching the 'data-id' and the "pageID" variable on the index.html for each page
+-->
+<h1><i class="fa fa-briefcase"></i>Design Library</h1>
+<nav id="styleguideNav" role="navigation">
+   <ul class="nav nav-list">
+       <li>
+           <ul class="nav-stacked tree">
+                <li>
+                    <a href="/" class="btn btn-default" data-id="homepage">Return to Homepage</a>
+                </li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Foundations</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+            <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/code_style.html" data-id="codestyle">Coding Style</a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/typography.html" data-id="typography">Typography</a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/icons.html" data-id="iconography">Iconography</a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/colors.html" data-id="colors"><strike>Colors</strike></a></li>
+                <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/entities.html" data-id="entities">HTML Entities</a></li>
+            <li><a href="/portfolio/work/paradata/style-guide/dist/app/foundations/animation.html" data-id="animation">Animation</a></li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Components</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/breadcrumb/" data-id="component-breadcrumb"><strike>Breadcrumb</strike></a></li>
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/buttons/" data-id="buttons">Buttons</a></li>
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/dialogs/" data-id="dialogs">Modal Dialogs</a></li>
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/forms/" data-id="forms">Forms</a></li>
+<!--               <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/tabs/" data-id="tabs">Tabs</a></li> -->
+              <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/tooltips/" data-id="tooltips"><strike>Tooltips</strike></a></li>
+              <li> <!-- Subtree -->
+                <a href="#/" class="tree-toggler subtree"><i class="fa fa-caret-down"></i>Input Controls</a>
+                <ul class="nav nav-pills nav-stacked tree">
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/date_range/" data-id="date-range"><strike>Date, Date Range</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/date_single/" data-id="date-single"><strike>Date, Single Date</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/long_list_single/" data-id="long-list-single"><strike>List, Long Single Value</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/long_list_multi/" data-id="long-list-multi"><strike>List, Long Multi Value</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/select_angular/" data-id="angular-select">Select2 Box with Angular</a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/money/" data-id="money-input"><strike>Money Input</strike></a></li>
+                  <li><a href="/portfolio/work/paradata/style-guide/dist/app/components/quantity/" data-id="quantity-input"><strike>Quantity Input</strike></a></li>
+                </ul>
+              </li>
+           </ul>
+       </li>
+   </ul>
+</nav>  
+
+
+
+        </div><!--/.sidebar-offcanvas-->
+      </div>
+      <!--/row-->
+    </section><!--/.container-->
+
+    <!-- END/ Page Content
+    ================================================== -->
+
+
+    <!-- JavaScripts
+    ================================================== -->
+
+    <!--jQuery CDN -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Plug-Ins -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.js"></script>
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/jquery.truncator/jquery.truncator.js"></script>
+
+    <!-- Polyfills - create support for unsupported browsers
+    ... Will be added here ... -->
+
+    <!-- Bootstrap Components -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Plugins  -->
+    <!-- plugins go here -->
+
+    <!-- App JS -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/js/app.js"></script>
+
+    <!-- Components JS  -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/js/components.js"></script>
+
+    <!-- Component Library (Style Guide) Specific JS -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/js/styleguide.js"></script>
+
+    <!-- Angular Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+
+
+    <!-- HighLight Plugin for code snippest -->
+    <script src="/portfolio/work/paradata/style-guide/dist/app/assets/bower_components/highlightjs/highlight.pack.js"></script>
+    <script>hljs.configure({ 'languages': ['html', 'javascript'] });</script>
+    <script type="text/javascript">
+      $('pre code').each(function(i, item){
+        var htmlOfElement = $(item).html().replace(/</g, '&lt;');
+        var htmlOfElement = htmlOfElement.replace(/>/g, '&gt;');
+        $(item).html(htmlOfElement);
+        hljs.highlightBlock(item);
+      });
+    </script>
+
+    <!-- Angular module setup -->
+    <script>
+      var angApp = angular.module('myApp',[]);
+        angApp.controller('appCtrl', ['$scope', function($scope){
+          $scope.collection = [
+            {name:'Scott'},
+            {name:'Steve'},
+            {name:'Nick'},
+            {name:'Asha'},
+            {name:'Vishak'},
+            {name:'Joel'},
+            {name:'Ralph'},
+            {name:'Marq'},
+            {name:'Michele'},
+            {name:'Kiavash'}
+          ];
+        }]);
+    </script>
+
+    <!-- FOR DEV PURPOSES: LiveReload -->
+    <script src="//localhost:35729/livereload.js"></script>
+
+  </body>
+</html>

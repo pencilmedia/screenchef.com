@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="450" title="Export"
+	 paddingBottom="0" paddingTop="10" paddingLeft="0" paddingRight="0"
+	horizontalScrollPolicy="off" dropShadowEnabled="true" cornerRadius="0" 
+	showCloseButton="true" close="closeExportPopup();">
+	<mx:Script>
+	    <![CDATA[
+	        import mx.collections.ArrayCollection;
+	        import mx.controls.Alert;
+	        import mx.managers.PopUpManager;
+	        import popups.actions.exportPopup;
+	            
+	        // CLOSE POPUP
+			private function closeExportPopup():void
+	        {
+	        	PopUpManager.removePopUp(this);
+			}
+			
+	        // DROPDOWN CONTENT
+	        [Bindable]
+	        public var format:ArrayCollection = new ArrayCollection(
+	        [ 
+	        	{label:"Excel", data:1}, 
+	            {label:"XML", data:2}, 
+	            {label:"RTF", data:3} 
+	        ]);
+	        [Bindable]
+	        public var levels:ArrayCollection = new ArrayCollection(
+	        [ 
+	        	{label:"Root Only", data:1}, 
+	            {label:"Level One", data:2}, 
+	            {label:"All Levels", data:3} 
+	        ]);
+			
+	    ]]>
+	</mx:Script>
+	<mx:VBox id="addBox" label="Search" width="100%" height="100%">
+        <mx:Grid width="100%" paddingLeft="10" paddingRight="20" paddingBottom="20">
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="Format"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%">
+        			<mx:ComboBox dataProvider="{format}" width="100%" />
+        		</mx:GridItem>
+        	</mx:GridRow>
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="Levels"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%">
+        			<mx:ComboBox dataProvider="{levels}" width="100%" />
+        		</mx:GridItem>
+        	</mx:GridRow>
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="Export References"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%">
+        			<mx:RadioButtonGroup id="radiogroup1"/>
+        			<mx:RadioButton label="No" groupName="radiogroup1" selected="true" />
+        			<mx:RadioButton label="Yes" groupName="radiogroup1" />
+        		</mx:GridItem>
+        	</mx:GridRow>
+        </mx:Grid>
+		<mx:HBox styleName="footer" width="100%">
+		    <mx:Button label="Help" />
+		    <mx:Spacer width="80%" />
+		    <mx:Button label="Close" click="closeExportPopup()" />    	
+		    <mx:Button id="addBtn" label="OK" />
+	    </mx:HBox>
+	</mx:VBox>
+</mx:TitleWindow>
+
+
+
+
+
+
+

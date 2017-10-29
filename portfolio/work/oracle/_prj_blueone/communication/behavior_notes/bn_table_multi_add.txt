@@ -1,0 +1,66 @@
+
+MULTI ADD TO TABLE
+updated by Uday Gajendar
+on 12/17/2007
+
+If a user needs to add multiple objects to a table, there are two ways to do so:
+
+1) Drag multiple objects from search palette
+
+- User CTRL + CLICK or SHIFT + CLICK to select multiple objects in search results list; Based on the display type on the list, it will either be MSL or MSS
+
+- User drags objects from palette to table row
+- Entire row is considered the acceptable drop target zone, not just the text field or edit frame
+- As user drags, a numeric indicator appears telling how many objects are being dragged (visual TBD)
+- Upon acceptable drop target hover, the table row highlights (visual TBD) as visual feedback that it is indeed the drop target zone
+?? - When user drags, this adds to the blank rows already in place, for BOM situation that's a separate case TBD; Uday to define Save behavior for allowing and disallowing blank rows on tables per Siva verify
+
+- Once user releases the dragged objects, then:
+-- Original edit frame disappears
+-- New rows pop and fade in with blue highlight color and new row indicator in row handle per PSD visuals; then number of new rows equal dragged objects minus 1 (since one row has already been added, which was used to launch the search palette to add new objects in the first place)
+-- All pertinent/relevant values populate the proper cells for the new rows
+-- Focus is on the topmost row cell (first primary identifier)
+- User clicks SAVE to sort the newly added rows accordingly into the table's sort order
+
+-- When does validation occur? Need to check with Siva
+-- If user has 10 newly added rows, but 2 are dupes, then what happens? Uday has idea, using the DMS but need to check with Siva
+-- If an object is invalid, how is that shown and what actions can user take? We use the red bold font indication just like in forms
+-- If user wants to remove a row, how is it done? User clicks the row handle of the row to be removed and clicks REMOVE button in table toolbar. Need to verify with Siva.
+
+2) Type-in multiple values in text field
+
+- User types in values into the edit frame text field separated by a semicolon
+
+** If user does not use proper delimiter (for ex, a comma), then upon validation, show red DMS saying improper delimiter used, keep the erroneous edit frame up and in focus so user can fix it, and have the text be in bold red error font
+
+-- In addition, user can copy/paste values in from another place (like text file or email message); delimiter must still be semicolon
+
+- Upon ENTER or clicking off the cell or tabbing off the final button, validation occurs (pressing TAB moves cursor to the Create and Search icons in order)
+
+- ESC to dismiss the edit frame and throw away any typed-in values
+
+
+
+Auto-complete behavior:
+- Per consistent auto-completion behavior throughout BlueOne, whether based upon first letter or third letter
+- Auto-completion menu appears, user arrows down to choice, presses Enter to choose it, semicolon appears and cursor placed immediately after semicolon ready to start typing another value
+
+
+CASE 1- If all values are Valid, then:
+-- then new rows appear for each valid value typed in at the top of the table, with appropriate color highlighting and new row indicator in row handle per PSD visuals
+-- rest of the columns for newly added rows have their values either automatically filled in per validation OR user has to manually edit their values by directly clicking into the respective cells
+
+
+
+CASE 2- If some values are Not Valid, then:
+-- valid values are loaded into new rows at the top of the table, with approp color highlights and new row indicators in row handles per PSD visuals, just as described above
+-- and invalid values are loaded as well in their own rows (highlighted red just like error/warnings) but have the "unknown resolution" indicator (to be designed) in the row handle & red DMS appears at top saying there are invalid values to be reviewed before saving
+
+---- Click the UR icon to bring up the message div; message explains the issue. User has 3 options (depending on table)
+---- Don't Add radio choice: UR icon becomes checkmark icon
+---- Add it Anyway radio choice:  UR icon becomes checkmark icon
+---- CREATE button: launches Create dialog box, user goes thru dialog actions, creates the object (or Cancel which simply dismisses the dialog and persists the invalid value in the table), get yellow DMS saying object successfully created, and UR icon becomes checkmark icon (must click SAVE above table to fully complete/finalize)
+
+
+CASE 3- If all values are Not Valid, then:
+-- for now, treat as same as Case 2 due to time/work loads...

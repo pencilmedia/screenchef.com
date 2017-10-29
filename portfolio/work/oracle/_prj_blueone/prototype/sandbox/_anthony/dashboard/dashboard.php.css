@@ -1,0 +1,112 @@
+﻿html
+{
+	height: 100%;
+}
+img{
+	border: none;
+}
+body
+{
+	background: #fff;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+p { text-align:right; margin-right: 10px; }
+
+.groupWrapper
+{
+	width: 77%;
+	float: left;
+	margin-right: 1%;
+	min-height: 400px;
+	height: 400px;
+}
+.groupWrapper.widgets
+{
+	width: 19%;
+	float: right;
+	margin-right: 1%;
+}
+
+.serializer
+{
+	clear: both;
+}
+.groupItem
+{
+	margin-bottom: 10px;
+	border: 1px solid silver;
+}
+.groupItem .itemHeader
+{
+	line-height: 22px;
+	border-bottom: 1px solid silver;
+	color: #000;
+	padding: 0 0 0 5px;
+	cursor: move;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.groupItem .itemHeader a.closeEl
+{
+	background: url(/global/images/ux_palette/palette_expand.png) no-repeat 0 -1px;
+	font-weight: normal;
+	text-decoration: none;
+	color: gray;
+	padding: 0 6px;
+}
+
+.groupItem .itemHeader a.closeEl.expanded
+{
+	background: url(/global/images/ux_palette/palette_collapse.png) no-repeat 0 0;
+}
+
+.groupItem .itemHeader a.cmdA, 
+.groupItem .itemHeader a.cmdB
+{
+	text-decoration:none;
+	margin-top: -22px;
+	padding:0 8px;
+	float: right;
+}
+.groupItem .itemHeader a.cmdA 
+{
+	background:url(images/gear.gif) no-repeat center center;
+	margin-right: 30px;
+}
+.groupItem .itemHeader a.cmdA:hover
+{
+	background:url(images/gear_on.gif) no-repeat center center;
+}
+
+.groupItem .itemHeader a.cmdB 
+{
+	background:url(images/reload.gif) no-repeat center center;
+	margin-right: 10px;
+}
+.groupItem .itemHeader a.cmdB:hover
+{
+	background:url(images/reload_on.gif) no-repeat center center;
+}
+
+.groupItem column_two.no_width
+{
+	text-align: right;
+}
+
+.sortHelper
+{
+	border: 1px dashed #ccc;
+	width: auto !important;
+}
+.groupWrapper p
+{
+	height: 1px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+ul { list-style: none; padding:5px; }

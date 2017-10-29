@@ -1,0 +1,146 @@
+
+Table Views
+updated by Uday Gajendar
+on 12/17/2007
+
+Table views are definitions for the layout and data display of a table, either pre-defined by an admin (admin views) or customized by the user with appropriate privileges (user views). Views result from the combination of settings and values for the following:
+-- hiding a column
+-- freezing a column
+-- sorting multiple or single columns
+-- filter criteria for columns
+
+A view definition can be modified and then overwritten (saved) or saved as new definition with a different name and description. 
+
+See PSD for visuals. 
+
+General Behaviors: see below...
+
+VIEWS SELECTOR
+- A data table will have one views selector which consists of:
+
+1. A dropdown menu of views: This menu lists all possible views defined for a table, including admin defined views and user customized views. 
+
+Personal views are grouped at the top.
+Global views are grouped at the bottom.
+Each group is displayed alphabetically.
+Any new view created/saved goes into its relevant group and ordered alphabetically.
+
+
+2. Views Action menu: The menu lists specific commands for views interaction
+
+a. Save: This saves the view, overwriting the current definition per user manipulation of the table columns (resizing, ordering, sorting, etc.). Particularly useful if the user has already closed the tabbed palette and decides to save it for future use across sessions.
+b. Save As: This saves the view into a new definition file with a different name and description. A dialog box is triggered asking the user for name and description, with Save/Cancel buttons.
+c. Manage: This triggers the dialog box containing the controls and data for managing all the views for this table, including ordering, setting as default, and delete views as needed, with appropriate Save/Cancel buttons.
+
+
+SAVING A VIEW
+- a view can be modified and saved over itself (overwritten) or saved as a new definition (depending upon user permissions)
+
+1. Overwrite: 
+
+** NOTE: when user makes changes to the currently selected view definition, then "Modified" appears in the view selector dropdown, indicating that the view has changed (is "dirty") and thus eligible to be saved
+
+- The Save View dialog box appears, centered above the table
+- The name is already defaulted in and non-editable
+- If user has proper permissions, then can choose either Personal or Global view type
+- If user does not have proper permissions, then Personal is the default view type, and shown as read-only
+- Description is optional and editable
+- Click SAVE to save the definition
+-- upon successful save, DMS message appears telling user of successful save with a link to manage views as a convenience
+- Click CANCEL to dismiss, nothing changes, no impact on table
+
+** A non-admin user cannot overwrite an admin-defined view definition, must do a Save As action instead, so the Save command in the actions menu will be disabled for that case, but Save As will be enabled
+
+-- If user modifies the view, and then changes the view selector choice to a different view, user is prompted about saving the modified view
+
+-- if user modifies the view, and then navigates to another tab or logout from the current page, then a prompt will appear (joel will give text)
+
+
+2. Save As:
+- The Save View As dialog box appears, centered above the table
+- User must enter a name (required field)
+-- Default name is "Copy of [previous name]"
+- If user has proper permissions, then can choose either Personal or Global view type
+- If user does not have proper permissions, then Personal is the default view type, and shown as read-only
+- Description is optional
+- Click SAVE to save the definition
+-- upon successful save, DMS message appears telling user of successful save with a link to manage views as a convenience
+-- also the the newly saved view name appears as the selected view in the dropdown in the view selector
+- Click CANCEL to dismiss, nothing changes, no impact on table
+
+
+
+MANAGING VIEWS
+- The user can manage all the views (per user permissions) in a convenient dialog box
+- Choose the Manage Views command to launch the View Manager dialog box
+
+
+Default:
+- One view must be chosen as the default at all times
+- Use the radio button to exclusively choose a different view as the default
+- Cannot have more than one default at one time
+
+
+View Name:
+To edit the view name...
+- Double-click the text to bring up the text field where the user can directly enter a new view name
+- Focus is on the view name text field, with the text selected so the user can immediately start typing new values
+- ENTER: commits the value for the field
+- TAB: moves focus from view input field to view description field and so on
+- Tabbing from one field to another field selects the text value of that field so user can start typing to replace current value
+- ESC: cancels editing, removes the input fields, reverts to existing value
+
+If user does not have requisite privileges to edit the view name, then we will follow the designed behavior for "read-only cells"...
+
+- CLICK: dotted pattern appears
+- CLICK + DRAG: select/highlight the data value for copy/paste
+- DOUBLE-CLICK: causes an FYI in the message area to "pop and fade" in telling user that the cell is not editable + dotted pattern appears
+
+(** NOTE: the user is still able to ARROW to the read-only cells, resulting in standard cell focus, not a dot pattern but TAB skips the read-only cells)
+
+
+
+Description: 
+- Exactly the same as editing the view name... see above.
+
+
+
+View Type: 
+- A view can be either global or personal
+- Use the dropdown menu to choose
+- Users who have proper permissions can set the personal and global view types
+- For those that the user does not permission to edit, then the value is read-only, no dropdown menu
+
+
+
+Edit View:
+- FOr those views that the user has privilege to edit, then:
+- User clicks Edit icon, which loads the personalization palette content (with the tabs) directly within the dialog box
+- First tab shown is the Sort Columns tab
+- Focus on the tab, so user can TAB across tabs to load the tab content accordingly upon clicking ENTER
+- UPon clicking SAVE, return to Manage Views table with DMS FYI that the view definition has been successfully edited and saved
+- Upon clicking CANCEL, return to Manage Views table with no data saved
+
+Impact on the data table:
+-- Upon clicking SAVE on the Manage Views dialog box, then if the just modified view definition is the currently applied view on the table, then the table reloads per the new view definition modification accordingly.
+-- Otherwise, if some other view that is not currently applied to the table was modified, then no change to the table
+
+For admin-defined views:
+- User can still click the Edit icon for admin-defined views
+- This loads the personalization palette content just like described above
+- However, instead of Save, there is a Save As button which asks the user for a name for the view (see the Save As functionality described above), allowing the user to save the admin view as a personal view, which then populates the Manage Views table and the View Selector droplist accordingly
+- The newly named personal view is added to the top of the Manage Views table
+
+
+Delete:
+- Click the delete button, which deletes the row from the table (table refreshes)
+- Click SAVE in order for deletion to fully happen, impacting the database
+- Else click CANCEL to cancel/dismiss any operations
+- For global views or views the user does not have permission to edit, then Delete button is not shown for that row
+
+NOTE:
+-- If user deletes a default row, then TBD
+-- If user deletes a row which is the currently selected view for the table (including the default row), then TBD 
+
+
+

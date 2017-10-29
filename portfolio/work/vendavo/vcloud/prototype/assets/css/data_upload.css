@@ -1,0 +1,551 @@
+/* BEGIN: Data_upload.less
+// -----------------------------------------------------*/
+.data-upload > header h1 span {
+  display: inline-block;
+  line-height: 30px;
+}
+.data-upload > header h1 .dropdown {
+  top: 0;
+  display: inline-block;
+}
+.data-upload > header h1 .dropdown .butcon {
+  display: inline-block;
+  box-shadow: none;
+  border-radius: 0;
+}
+.data-upload > header .page-tools .dropdown-menu {
+  left: -180px;
+}
+.data-upload > header .page-tools .btn-group a i,
+.data-upload > header .page-tools .btn-group a span {
+  vertical-align: middle;
+}
+.data-upload > header .page-tools .btn-group a span {
+  text-transform: capitalize;
+}
+.data-upload > header .page-tools .btn-group .btn-group > a:before {
+  margin: 0 14px 0 0;
+  content: '|';
+}
+.data-upload > section .upload-analyze > h2:first-child {
+  border-bottom: none;
+}
+.data-upload > section .upload-analyze .upload-prompt-box-container {
+  margin: 0 auto;
+  width: 95%;
+}
+.data-upload > section .upload-analyze .upload-analyze-table {
+  margin: 10px auto;
+  width: 95%;
+  border-collapse: separate;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.first td {
+  border-top: 3px solid #e6eaed;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.first td:first-child {
+  border-top-left-radius: 10px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.first td:last-child {
+  border-top-right-radius: 10px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.first:hover {
+  background: #ffffff;
+  cursor: default;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped td:first-child {
+  border-left: 3px solid #e6eaed;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped td:last-child {
+  border-right: 3px solid #e6eaed;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.group.last td {
+  border-bottom: 3px solid #e6eaed;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.group.last td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.group.last td:last-child {
+  border-bottom-right-radius: 10px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.group.last + tr {
+  /* Empty Row for spacing between groups */
+}
+.data-upload > section .upload-analyze .upload-analyze-table .zipped.group.last + tr td {
+  padding: 0;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr:hover {
+  background: #ecf2fc;
+  cursor: pointer;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr.highlighted {
+  background: #e2eef6;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td {
+  padding: 10px 0;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td h4,
+.data-upload > section .upload-analyze .upload-analyze-table tr td h5,
+.data-upload > section .upload-analyze .upload-analyze-table tr td span {
+  color: #1a3643;
+  padding: 0 15px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td h4 {
+  font-size: 125%;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td h4 span,
+.data-upload > section .upload-analyze .upload-analyze-table tr td h5 span {
+  margin: 5px 0;
+  padding: 0;
+  color: #999;
+  font-size: 13px;
+  display: block;
+  font-weight: normal !important;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td span {
+  display: block;
+  overflow: hidden;
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 17px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td span:first-child {
+  font-weight: bold;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td:last-child {
+  padding-right: 10px;
+  text-align: center;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .progress {
+  min-width: 35px;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .danger {
+  color: #ba2b36;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .danger.progress-bar {
+  background-color: #ba2b36;
+  background-image: none;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .success {
+  color: #74ae42;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .success.progress-bar {
+  background-color: #74ae42;
+  background-image: none;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .validate {
+  color: #4bb1cf;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .validate.progress-bar {
+  background-color: #4bb1cf;
+  background-image: none;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .warning {
+  color: #f89406;
+}
+.data-upload > section .upload-analyze .upload-analyze-table tr td .warning.progress-bar {
+  background-color: #f89406;
+  background-image: none;
+}
+.data-upload > section .grid-container {
+  margin: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.data-upload > section .grid-container table th:hover {
+  color: #333;
+  cursor: default;
+}
+.data-upload > section .placeholder-text {
+  padding-top: 20%;
+  text-align: center;
+}
+.data-upload > section .placeholder-text > h3 {
+  color: #999999;
+  font-weight: normal;
+  font-size: 200%;
+}
+.data-upload > section form {
+  margin: 0 20px;
+}
+.data-upload > section form fieldset {
+  padding: 0 5px;
+  /* Common style for all list items <li>'s' */
+  /* Nested Fieldset */
+}
+.data-upload > section form fieldset header {
+  margin: 10px 0;
+  border-bottom: 1px solid #e6eaed;
+}
+.data-upload > section form fieldset header hgroup {
+  overflow: hidden;
+}
+.data-upload > section form fieldset header hgroup h2 {
+  display: inline;
+  float: left;
+  width: 33.3%;
+  clear: none;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+}
+.data-upload > section form fieldset header hgroup .butcon {
+  float: right;
+  margin: 2px 5px 0 0;
+}
+.data-upload > section form fieldset ol {
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+.data-upload > section form fieldset ol li > div {
+  padding: 5px 0;
+}
+.data-upload > section form fieldset ol li > div.inactive {
+  color: #999999;
+}
+.data-upload > section form fieldset ol li > div label {
+  width: 33%;
+  font-weight: normal;
+  line-height: 25px;
+}
+.data-upload > section form fieldset ol li > div label i {
+  margin-left: 7px;
+  color: #f89406;
+}
+.data-upload > section form fieldset ol li > div label input[type="checkbox"] {
+  margin: 0 5px 0 5%;
+}
+.data-upload > section form fieldset ol li > div input[type="text"] {
+  width: 40%;
+  min-width: 425px;
+}
+.data-upload > section form fieldset ol li > div .butcon {
+  float: right;
+  margin: 0 5px 0 0;
+}
+.data-upload > section form fieldset ol li > div .butcon i + i {
+  margin-left: 3px;
+}
+.data-upload > section form fieldset ol li > div .butcon.disabled {
+  color: #333333;
+  opacity: 1;
+}
+.data-upload > section form fieldset ol li > div .butcon.disabled i {
+  color: #333333;
+  font-size: 80%;
+}
+.data-upload > section form fieldset ol li > div:hover,
+.data-upload > section form fieldset ol li > div#selected {
+  color: #333;
+  background-color: #ecf2fc;
+}
+.data-upload > section form fieldset ol li > div.inactive:hover {
+  color: #999999;
+}
+.data-upload > section form fieldset ol li > div.error label {
+  color: #333333;
+}
+.data-upload > section form fieldset ol li > div.error span {
+  display: block;
+  margin-left: 33%;
+  padding: 2px 5px;
+}
+.data-upload > section form fieldset ol.sortable .highlight {
+  margin-left: 20px;
+}
+.data-upload > section form fieldset ol.sortable li:not(.no-sort):hover {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+.data-upload > section form fieldset ol.sortable li:not(.no-sort):hover > div label {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+.data-upload > section form fieldset ol.sortable .highlight {
+  margin: 2px 0;
+  padding: 0;
+  width: 100%;
+  height: 38px;
+  border: 1px dashed #000;
+  cursor: move;
+}
+.data-upload > section form fieldset ol.sortable .ui-sortable-helper {
+  width: 100%;
+  background-color: #e8edef;
+}
+.data-upload > section form fieldset fieldset.hierarchy {
+  margin: 20px -5px;
+  padding: 0 10px;
+  border: 1px solid #e6eaed;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 {
+  margin: 0 -10px;
+  padding: 5px 0;
+  font-size: 100%;
+  background: #e6eaed;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 .butcon {
+  font-size: 13px;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 .butcon:hover i {
+  color: #2d4f62;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 .butcon.collapse-section {
+  float: none;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 .butcon.collapse-section + label input[type="checkbox"] {
+  margin-left: 0;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 .butcon.collapse-section:hover {
+  outline: none;
+  background: none;
+}
+.data-upload > section form fieldset fieldset.hierarchy h1 .butcon:last-child {
+  margin-right: 5px;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol {
+  margin: 10px 0;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol li ol li label input[type="checkbox"] {
+  margin-left: 10%;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol li ol li ol li label input[type="checkbox"] {
+  margin-left: 15%;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol li ol li ol li ol li label input[type="checkbox"] {
+  margin-left: 20%;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol li ol li ol li ol li ol li label input[type="checkbox"] {
+  margin-left: 25%;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol.linked .linked-file > div {
+  border-right: 1px solid #e6eaed;
+  border-left: 1px solid #e6eaed;
+  background: #f2f4f6;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol.linked .linked-file > div:hover {
+  background: #ecf2fc;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol.linked .linked-file:first-child > div {
+  border-top: 1px solid #e6eaed;
+  border-bottom: none;
+}
+.data-upload > section form fieldset fieldset.hierarchy ol.linked .linked-file:last-child > div {
+  border-bottom: 1px solid #e6eaed;
+  border-top: none;
+}
+.data-upload > section form.waterfall-tab .alert {
+  margin-right: 0;
+  margin-left: 0;
+}
+.data-upload > section form.waterfall-tab .graph {
+  /*  Waterfall  */
+  position: relative;
+  margin: 10px 0;
+}
+.data-upload > section form.waterfall-tab .graph .butcon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  float: right;
+}
+.data-upload > section form.waterfall-tab .graph .butcon.fade {
+  transition: .5s;
+}
+.data-upload > section form.waterfall-tab .graph .butcon.fade.in {
+  visibility: visible;
+}
+.data-upload > section form.waterfall-tab .graph ul {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 10px 0;
+  height: 225px;
+  border: 1px solid #e6eaed;
+  background: #ffffff;
+  list-style: none;
+}
+.data-upload > section form.waterfall-tab .graph ul li {
+  float: left;
+  margin: 0 0.3366%;
+  padding: 0;
+  width: 3.1%;
+  height: 200px;
+  list-style: none;
+}
+.data-upload > section form.waterfall-tab .graph ul li:first-child {
+  margin-left: 2%;
+}
+.data-upload > section form.waterfall-tab .graph ul li:last-child {
+  margin-right: 2%;
+}
+.data-upload > section form.waterfall-tab .graph ul li span {
+  display: block;
+  background: #d9d9d9;
+}
+.data-upload > section form.waterfall-tab .graph ul #selected {
+  outline: 1px solid #efb73e;
+  background: #f2f4f6;
+  box-shadow: 0 0 10px 0 #efb73e;
+}
+.data-upload > section form.waterfall-tab .graph ul .active {
+  background: #8d9fad;
+}
+.data-upload > section form.waterfall-tab .graph ul .price_point {
+  background: #d7dee2;
+}
+.data-upload > section form.waterfall-tab .graph ul .price_drop {
+  background: #ff485a;
+}
+.data-upload > section form.waterfall-tab .graph ul .price_rise {
+  background: #71c665;
+}
+.data-upload > section form.waterfall-tab .sortable li .price-point {
+  background-color: #e6eaed;
+}
+.data-upload > section form.waterfall-tab .sortable li > div.row {
+  margin: 0;
+}
+.data-upload > section form.waterfall-tab .sortable li > div.cost label i:nth-of-type(1) {
+  color: #ff485a;
+}
+.data-upload > section form.waterfall-tab .sortable li > div.charge label i:nth-of-type(1) {
+  color: #71c665;
+}
+.data-upload > section form.waterfall-tab .sortable li > div.cost.disabled label i:nth-of-type(1),
+.data-upload > section form.waterfall-tab .sortable li > div.charge.disabled label i:nth-of-type(1) {
+  color: #a6a6a6;
+}
+.data-upload > section form.waterfall-tab .sortable .highlight {
+  margin: 2px 0;
+  padding: 0;
+  width: 100%;
+  height: 38px;
+  border: 1px dashed #000;
+}
+.data-upload > section form.waterfall-tab .sortable .no-nest {
+  cursor: default;
+}
+.data-upload > section form.waterfall-tab .sortable .no-nest > div label {
+  cursor: default;
+}
+.data-upload > section .grouping {
+  padding: 0;
+}
+.data-upload > section .grouping fieldset.hierarchy {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.data-upload > section .grouping fieldset.hierarchy .linked .linked-file:first-child > div label {
+  padding-left: 15px;
+  font-weight: bold;
+}
+.data-upload-details article .pull-right + h1,
+.data-upload-details article .pull-right + p.upload-info {
+  margin: 0;
+  padding: 0;
+}
+.data-upload-details article .upload-info {
+  margin: 5px 0;
+  padding: 0;
+  color: #999;
+  font-size: 13px;
+}
+.data-upload-details article .general-list {
+  margin: 0;
+  padding: 0;
+}
+.data-upload-details article .general-list dt {
+  float: left;
+  margin-right: 5px;
+  line-height: 18px;
+}
+.data-upload-details article .no-data-uploaded {
+  margin: 10% 0;
+  color: #a6a6a6;
+  text-align: center;
+}
+.data-upload-details article .no-data-uploaded i[class*='fa-'] {
+  font-size: 800%;
+}
+.data-upload-details article .cost {
+  color: #ff485a;
+}
+.data-upload-details article .charge {
+  color: #71c665;
+}
+.modal-dialog .modal-content .modal-header h4 .butcon {
+  box-shadow: none;
+  border-radius: 0;
+  position: absolute;
+  top: 12px;
+  margin-left: 3px;
+}
+.modal-dialog .modal-content .modal-body h2 {
+  margin-bottom: 20px;
+}
+.modal-dialog .modal-content .modal-body dl dd label {
+  display: inline-block;
+  margin: 0;
+  line-height: 22px;
+}
+.modal-dialog .modal-content .modal-body dl dd label input[type="checkbox"] {
+  margin-right: 5px;
+}
+.modal-dialog .modal-content .modal-body dl dd label + span {
+  display: block;
+  margin: 0 0 10px 20px;
+}
+.modal-dialog .modal-content .modal-body dl dd.date-field {
+  padding-left: 20px;
+}
+#split-dimension-dialog .modal-dialog .custom-content {
+  /* Animation container */
+  overflow: hidden;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .modal-body {
+  min-height: 240px;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled {
+  margin: 0 20px;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled li {
+  margin-bottom: 10px;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled li span {
+  display: block;
+  color: #a6a6a6;
+  margin: 5px 0 0 20px;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled li label {
+  font-weight: normal;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled li.divider {
+  margin: 10px 0;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled li:last-child label {
+  width: 100%;
+}
+#split-dimension-dialog .modal-dialog .custom-content .dialog-page .list-unstyled li:last-child label input[type="text"] {
+  margin-left: 5px;
+  width: 96%;
+}
+.dropdown-menu {
+  z-index: 1060 !important;
+}
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*/
+@media all and (max-width: 1000px) {
+  .data-upload > header .page-tools > .btn-group > a span {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .data-upload .waterfall-tab > section dd {
+    height: 50px;
+  }
+}
+/* END: Data_upload.less
+// -----------------------------------------------------*/

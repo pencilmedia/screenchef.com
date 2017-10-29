@@ -1,0 +1,380 @@
+// Vendavo Variables.less
+// -----------------------------------------------------
+
+// VENDAVO STYLE GUIDE : GLOBAL VALUES
+// --------------------------------------------------
+@viewportWidth:		1279px;
+@viewportLandscape:      1024px;
+@viewportPortrait:       768px;
+@viewportSmall:          767px;
+@minWidthContent:		700px;
+@maxWidthContent:		1440px;
+
+// Page Background
+@pageBG:				#16323F;
+@pageBGHighlight:		#2D5263;
+@pageMargin:			20px;
+
+// Links
+@linkColor:             @textColor;
+@linkColorHover:        @green;
+@navTabs: 			#9eb4c2;
+
+// Actions Icons
+@actionIconColor:       @blueDark;
+@actionIconColorHover:  darken(@actionIconColor, 15%);
+
+// Basics
+@black:                 #000;
+@white:                 #fff;
+
+// Hover colors
+@lavender: #e2eef6;
+@aliceBlue: #ecf2fc;
+
+// Grays
+@gray:                  #999;
+@grayLight:             lighten(@gray, 5%);
+@grayLighter:           lighten(@gray, 15%);
+@grayLightest:          lighten(@gray, 25%);
+@grayDark:              darken(@gray, 20%);
+@grayDarker:            darken(@gray, 30%);
+@grayDarkest:           darken(@gray, 40%);
+@uploadGray:			#eee;
+
+// Blues
+@blue:                  #E6EAED;
+@blueLight:             lighten(@blue, 2%);
+@blueLighter:           lighten(@blue, 4%);
+@blueLightest:          lighten(@blue, 6%);
+@blueDark:              darken(@blue, 5%);
+@blueDarker:            darken(@blue, 15%);
+@blueDarkest:           darken(@blue, 30%);
+
+// Accent colors
+@blueAccent:            #98B3CD;
+@blueHighlight:	    #b6cedc;
+@blueSelectState: 	    #7ea3b8;
+@blueSelectStateHvr:    #8eb6cb;
+@navHighlight:		    lighten(@blueHighlight,5%);
+@blueHover:		    @aliceBlue;
+@navyBlue:              #2D4F62;
+
+// Tables
+// -------------------------
+@tableBackground:                   transparent; // overall background-color
+@tableBackgroundAccent:             @blueLightest; // for striping
+@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBorder:                       #ddd; // table and cell border
+
+// Slats
+// -------------------------
+@slatBlue:				#E0E9FF;
+@slatBlueLight:		lighten(@slatBlue,3%);
+
+// Error colors
+// -------------------------
+@red:                   #ba2b36;
+@redLight:				lighten(@red, 30%);
+@redLighter:			lighten(@red, 40%);
+@redLightest:			lighten(@red, 50%);
+
+@green:                 #74ae42;
+@greenLight:            lighten(@green, 5%);
+@greenLighter:          lighten(@green, 10%);
+@greenLightest:         lighten(@green, 15%);
+@greenDark:             darken(@green, 5%);
+@greenDarker:           darken(@green, 15%);
+@greenDarkest:          darken(@green, 30%);
+
+// Midas Opportunity Greens
+@premiumGreen:          #4F851D; // #407020; //#349644; Original Brighter Colors
+@bestGreen:             lighten(@premiumGreen, 7%); // #609040; //#4bb542;
+@betterGreen:           lighten(@premiumGreen, 14%); // #80b060; //#73c655;
+@greatGreen:            lighten(@premiumGreen, 21%); // #a0d080; //#94e06d;
+@goodGreen:             lighten(@premiumGreen, 28%); // #c0e090; //#c4ffbb;
+
+@yellow:                #EFB73E;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #772953;
+
+// Typography
+@baseFontSize:          13px;
+@baseFontFamily:        'Helvetica Neue', Helvetica, Arial, sans-serif;
+@baseLineHeight:        28px;
+@textColor:             @grayDarkest;
+@spanSize:				12px;
+
+// Buttons
+@primaryButtonBackground:    @linkColor;
+
+// Borders
+@blueLightBorder:       @blue;
+@radius:				5px;
+
+// Tables
+@tableHeaderBG:       #F3F5F6;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid assetsizing these :)
+@zindexDropdown:        1000;
+@zindexPopover:         1010;
+@zindexTooltip:         1020;
+@zindexFixedNavbar:     1030;
+@zindexModalBackdrop:   1040;
+@zindexModal:           1050;
+@zindexModeless:        1060;
+
+// Sprite icons path
+@iconSpritePath: "../bootstrap/img/glyphicons-halflings.png";
+@iconWhiteSpritePath: "../bootstrap/img/glyphicons-halflings-white.png";
+
+
+
+// Forms
+// -------------------------
+
+@inputBorder:                   @grayLighter;
+@inputBorderRadius:             4px;
+@inputDisabledBackground:       @grayLighter;
+@formActionsBackground:         #f5f5f5;
+
+// Input placeholder text color
+@placeholderText:     @gray;
+
+// Hr border color
+@hrBorder:                @grayLighter;
+
+// Navbar
+@navbarHeight:                    45px;
+@navbarBackground:                #1a3643;
+@navbarBackgroundHighlight:       #346172;
+@navbarLinkBackgroundHover:       transparent;
+
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            @white;
+
+@navbarBtnBG:		transparent;
+@navbarHvr:         saturate(@blueDark, 40%);
+@navbarIcon:        saturate(@blueDark, 40%);
+
+
+// User Assistance
+@uaIcon:				#0088cc;
+
+// Alerts
+@infoText:               #0B72B5;
+@infoBackground:         lighten(@infoText, 45%);
+@infoBorder:             lighten(@infoText, 45%);
+
+@warningText:            @orange;
+@warningBackground:      lighten(@warningText, 45%);
+@warningBorder:          lighten(@warningText, 45%);
+
+@errorText:              #BA2B37;
+@errorBackground:        lighten(@errorText, 45%);
+@errorBorder:            lighten(@errorText, 45%);
+
+@successText:            #75AE42;
+@successBackground:      lighten(@successText, 45%);
+@successBorder:          lighten(@successText, 45%);
+
+
+// Status Colors
+@notLicensedText:		 #a0a2a4;
+@licensedText:			 #75ae21;
+@trialText:			 #008fC0;
+@trialEndingText:		 #ff8000;
+@deactivatedText: 		 #d40000;
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// Fluid grid
+@fluidGridColumnWidth:    6.382978723%;
+@fluidGridGutterWidth:    2.127659574%;
+
+// Images
+@bgTexture:  url("../img/bg_texture.png");
+@bgWatermarkEmail:  url("../img/watermark_email.png");
+@bgWatermarkError:  url("../img/watermark_error.png");
+
+@switcher: url('../img/btn_switcher.png');
+@switcherHover: url('../img/btn_switcher_hvr.png');
+
+@actionPrimaryBtn: url('../img/btn_bg_primary.png');
+@actionPrimaryBtnHover: url('../img/btn_bg_primary_hvr.png');
+
+@actionBtn: url('../img/btn_bg.png');
+@actionBtnHover: url('../img/btn_bg_hvr.png');
+
+@listDrill: url('../img/ico_list_drill.png');
+@listDrillHover: url('../img/ico_list_drill_hvr.png');
+@listDrillDown: url('../img/ico_drilldown.png');
+
+@back-button-left: url('../img/btn_back_left.png');
+@back-button-right: url('../img/btn_back_right.png');
+@back-button-left-hover: url('../img/btn_back_left_hover.png');
+@back-button-right-hover: url('../img/btn_back_right_hover.png');
+
+
+// BUTTONS
+// --------------------------------------------------
+
+// SWITCHER BUTTON
+// BG Colors
+@btnSwitcher: @navbarBackgroundHighlight;
+@btnSwitcherBaseWebkit: -webkit-radial-gradient(80% 80%, farthest-corner, darken(@navbarBackground, 5%), @navbarBackground);
+@btnSwitcherBaseMoz: -moz-linear-gradient(top, darken(@navbarBackground, 5%), @navbarBackground);
+@btnSwitcherBaseMS: -ms-linear-gradient(top, darken(@navbarBackground, 5%), @navbarBackground);
+@btnSwitcherBaseOpera: -o-linear-gradient(top, darken(@navbarBackground, 5%), @navbarBackground);
+@btnSwitcherBase: radial-gradient(50% 50%, farthest-corner, darken(@navbarBackground, 5%), @navbarBackground);
+@btnSwitcherBaseMSFilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='darken(@navbarBackground, 5%)', endColorstr='@navbarBackground', GradientType=0);
+
+@btnSwitcherHvr: @navbarBackground;
+@btnSwitcherHvrBaseWebkit: -webkit-radial-gradient(50% 50%, farthest-corner, lighten(@navbarBackground, 25%), lighten(@navbarBackground, 5%));
+@btnSwitcherHvrBaseMoz: -moz-linear-gradient(top, lighten(@navbarBackground, 25%), lighten(@navbarBackground, 5%));
+@btnSwitcherHvrBaseMS: -ms-linear-gradient(top, lighten(@navbarBackground, 25%), lighten(@navbarBackground, 5%));
+@btnSwitcherHvrBaseOpera: -o-linear-gradient(top, lighten(@navbarBackground, 25%), lighten(@navbarBackground, 5%));
+@btnSwitcherHvrBase: radial-gradient(50% 50%, farthest-corner, lighten(@navbarBackground, 25%), lighten(@navbarBackground, 5%));
+@btnSwitcherHvrBaseMSFilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten(@navbarBackground, 25%)', endColorstr='lighten(@navbarBackground, 5%)', GradientType=0);
+
+// PRIMARY BUTTON
+// BG Colors
+@btnPrimary: @blueSelectState;
+@btnPrimaryBaseWebkit: -webkit-radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimary, 10%), @btnPrimary);
+@btnPrimaryBaseMoz: -moz-linear-gradient(top, lighten(@btnPrimary, 10%), @btnPrimary);
+@btnPrimaryBaseMS: -ms-linear-gradient(top, lighten(@btnPrimary, 10%), @btnPrimary);
+@btnPrimaryBaseOpera: -o-linear-gradient(top, lighten(@btnPrimary, 10%), @btnPrimary);
+@btnPrimaryBG: radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimary, 10%), @btnPrimary);
+@btnPrimaryBaseMSFilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7ea3b8', endColorstr='#7ea3b8', GradientType=0);
+
+// Border Colors
+// Order : Top Right Bottom Left
+@btnPrimaryBorder: lighten(#465A64, 25%) lighten(#465A64, 10%) lighten(#465A64, 10%) lighten(#465A64, 25%);
+
+// Hover State BG Colors
+@btnPrimaryBaseHvr: @blueSelectStateHvr;
+@btnPrimaryHvrWebkit: -webkit-radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimaryBaseHvr, 10%), @btnPrimaryBaseHvr);
+@btnPrimaryHvrMoz: -moz-radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimaryBaseHvr, 10%), @btnPrimaryBaseHvr);
+@btnPrimaryHvrOpera: -o-radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimaryBaseHvr, 10%), @btnPrimaryBaseHvr);
+@btnPrimaryHvrMS: -ms-radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimaryBaseHvr, 10%), @btnPrimaryBaseHvr);
+@btnPrimaryHvr: radial-gradient(50% 50%, farthest-corner, lighten(@btnPrimaryBaseHvr, 10%), @btnPrimaryBaseHvr);
+
+// DEFAULT BUTTONS
+// BG Colors
+@btnDefault: #e6e6e6;
+@btnDefaultBaseWebkit: -webkit-radial-gradient(50% 50%, farthest-corner, @btnDefault, @btnDefault);
+@btnDefaultBaseMoz: -moz-radial-gradient(50% 50%, farthest-corner, @btnDefault, @btnDefault);
+@btnDefaultBaseMS: -ms-linear-gradient(@btnDefault, @btnDefault 25%, @btnDefault);
+@btnDefaultBaseOpera: -o-linear-gradient(@btnDefault, @btnDefault 25%, @btnDefault);
+@btnDefaultBG: radial-gradient(50% 50%, farthest-corner, @btnDefault, @btnDefault);
+@btnDefaultBaseMSFilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@btnDefault', endColorstr='@btnDefault', GradientType=0);
+
+@btnDefaultBaseWebkitHvr: -webkit-radial-gradient(50% 50%, farthest-corner, lighten(@btnDefault, 5%), @btnDefault);
+@btnDefaultBaseMozHvr: -moz-radial-gradient(50% 50%, farthest-corner, lighten(@btnDefault, 5%), @btnDefault);
+@btnDefaultBaseOperaHvr: -o-radial-gradient(50% 50%, farthest-corner, lighten(@btnDefault, 5%), @btnDefault);
+@btnDefaultBaseMSHvr: -ms-radial-gradient(50% 50%, farthest-corner, lighten(@btnDefault, 5%), @btnDefault);
+@btnDefaultBGHvr: radial-gradient(50% 50%, farthest-corner, lighten(@btnDefault, 5%), @btnDefault);
+
+// DANGER BUTTONS
+
+// btn-danger
+@btnDanger: @red;
+@btnDangerBaseWebkit: -webkit-radial-gradient(50% 50%, farthest-corner, lighten(@red, 10%), @red);
+@btnDangerBaseMoz: -moz-linear-gradient(top, lighten(@red, 10%), @red);
+@btnDangerBaseMS: -ms-linear-gradient(top, lighten(@red, 10%), @red);
+@btnDangerBaseOpera: -o-linear-gradient(top, lighten(@red, 10%), @red);
+@btnDangerBG: radial-gradient(50% 50%, farthest-corner, lighten(@red, 10%), @red);
+@btnDangerBaseMSFilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c09', endColorstr='#c09', GradientType=0);
+// Hover State BG Colors
+@btnDangerBaseHvr: lighten(@red,10%);
+@btnDangerHvrWebkit: -webkit-radial-gradient(50% 50%, farthest-corner, lighten(@btnDangerBaseHvr, 10%), @btnDangerBaseHvr);
+@btnDangerHvrMoz: -moz-radial-gradient(50% 50%, farthest-corner, lighten(@btnDangerBaseHvr, 10%), @btnDangerBaseHvr);
+@btnDangerHvrOpera: -o-radial-gradient(50% 50%, farthest-corner, lighten(@btnDangerBaseHvr, 10%), @btnDangerBaseHvr);
+@btnDangerHvrMS: -ms-radial-gradient(50% 50%, farthest-corner, lighten(@btnDangerBaseHvr, 10%), @btnDangerBaseHvr);
+@btnDangerHvr: radial-gradient(50% 50%, farthest-corner, lighten(@btnDangerBaseHvr, 10%), @btnDangerBaseHvr);
+
+
+
+// Border Colors
+@btnDefaultBorder: 1px solid #ccc;
+@btnDefaultBorderRGB: rgba(70, 90, 100, 0.15) rgba(70, 90, 100, 0.25) rgba(70, 90, 100, .5);
+
+// Pagination
+@paginationRadiusSmall: 5px;
+@paginationPagerOffset: 3px;
+
+
+	
+	
+	
+// HIGH CHARTS - Donut Chart Colors
+// --------------------------------------------------
+	@customerNegotiatedPriceAdjustments: #8B3175;
+	@customerNegotiatedPriceAdjustmentsSelected: lighten(#8B3175,10%);
+
+	@customerNegotiatedPrice: #FF1F12;
+	@customerNegotiatedPriceSelected: lighten(#FF1F12,10%);
+
+	@cogs: #8b132a;
+	@cogsSelected: #eed5d9;
+
+	@negotiatedDiscount: #C80664;
+	@negotiatedDiscountSelected: #fbdce5;
+
+	@freightCharges: #f71e43;
+	@freightChargesSelected: #ffe9ec;
+
+
+	@pocketPriceAdjustments: #ef7159; 
+	@pocketPriceAdjustmentsSelected: #ffe7e3;
+
+	@serviceCost: #f5b69f;
+	@serviceCostSelected: #ffefea;
+
+	@freightCost: #fbd1c9;
+	@freightCostSelected: #fff2f0;
+
+	@paymentCost: #c0daff;
+	@paymentCostSelected: #f0f7fb;
+
+	@netPriceAdjustments: #94c5ff;
+	@netPriceAdjustmentsSelected: #e3f3fe;
+
+	@rebates: #44adef;
+	@rebatesSelected: #e3f4fc;
+
+	@invoicePriceAdjustments: #0079d1;
+	@invoicePriceAdjustmentsSelected: #e4f2f9;
+
+	@serviceCharges: #1538A9;
+	@serviceChargesSelected: #e7ebf6;
+
+	@surcharges: #183256;
+	@surchargesSelected: #dee3e8;
+
+// HIGH CHARTS - opportunities charts
+	@chartRed: #ef4c59;
+	@chartOrange: #fbaf17;
+	@chartBlueDark: #2d4f62;
+	@chartBlueLight: #0088ce;
+
+	@chartFadeRed: #facace;
+	@chartFadeOrange: #fee7ba;
+	@chartFadeBlueDark: #d5dce0;
+	@chartFadeBlueLight: #cce7f5;

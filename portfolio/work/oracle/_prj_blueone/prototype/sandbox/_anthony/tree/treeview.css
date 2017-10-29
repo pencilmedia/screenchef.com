@@ -1,0 +1,29 @@
+.treeview .hitarea {
+	background: url(/_anthony/tree/images/collapse.png) center center no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+
+.filetree .title { font-weight: bold; }
+.treeview .hover { cursor: pointer; text-decoration: underline; }
+
+.treeview li { padding: 3px 0 4px 16px; }
+
+.treeview .expandable-hitarea { background: url(/_anthony/tree/images/expand.png) 0 0 no-repeat; }
+
+.filetree span.folder, 
+.filetree span.file { padding: 1px 0 0 20px; }
+
+.filetree span.folder { background: url(/_anthony/tree/images/folder_open.png) 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url(/_anthony/tree/images/folder_close.png) 0 0 no-repeat; }
+.filetree span.file { background: url(/_anthony/tree/images/document.png) 0 0 no-repeat; }
+
+
+.filetree span.folder.bookmark,
+.filetree li.expandable span.folder.bookmark { background: url(/global/images/icn_obj_bookmark.png) 0 0 no-repeat; }
+
+.filetree span.folder.history,
+.filetree li.expandable span.folder.history { background: url(/global/images/icn_obj_history.png) 0 0 no-repeat; }

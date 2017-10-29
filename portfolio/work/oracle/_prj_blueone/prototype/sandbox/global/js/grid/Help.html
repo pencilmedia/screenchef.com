@@ -1,0 +1,219 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="en-us">
+		<style>
+			div {
+				display:inline;
+				margin-left:3px;
+				margin-right:3px;
+				height:17px;
+				overflow:hidden;
+				background-image:url('Grid.gif');
+				background-repeat:no-repeat;
+			}
+			div.t {
+				background-image:url('Toolbar.gif');	
+				height:16px;
+				}
+	    </style>
+	</head>
+	<body>
+		<p align="center"><b><font size="5">Using EJS TreeGrid</font></b></p>
+		<p><font color="#008000"><i><b><a name="Mouse">Mouse functions</a></b></i></font></p>
+		<ul>
+			<li><b>Click to cell</b> focuses and edits (editable) cell
+			<li><b>Click to</b><div STYLE='padding-left:13px;background-position:0px -384px;'></div>
+				selects or un-selects row. You can select or unselect more rows by clicking first icon and dragging over next rows.
+			<li><b>Click to</b><div STYLE='padding-left:13px;background-position:-13px -384px;'></div>
+				deletes or un-deletes row
+			<li><b>Click to<div style='padding-left:13px;background-position:0px -384px;'></div>in header</b>
+				selects or unselects all rows
+			<li><b>Click to<div style='padding-left:13px;background-position:-13px -384px;'></div>in header</b>
+				(un) deletes selected rows
+			<li><b>Click to<div style='padding-left:14px;background-position:0px -416px;'></div> in header</b>
+				sorts rows by this column descent, next click sorts ascent. 
+				You can click anywhere in header cell to perform sorting. 
+				Sort direction and order is indicated by sorting icon: 
+				<div style='padding-left:14px;background-position:-14px -416px;'></div>first column descending, 
+				<div style='padding-left:14px;background-position:-56px -416px;'></div>first column ascending, 
+				<div style='padding-left:14px;background-position:-28px -416px;'></div>,
+				<div style='padding-left:14px;background-position:-70px -416px;'></div>second column,
+				<div style='padding-left:14px;background-position:-42px -416px;'></div>,
+				<div style='padding-left:14px;background-position:-84px -416px;'></div>third column,
+			<li><b>Dragging column's edge</b> <b>in header</b> 
+				resizes column
+			<li><b>Dragging column's header</b>
+				moves column to new position, you can move column inside its section only. 
+				New potential position is marked by blue line inside columns.
+			<li><b>Dragging any cell</b> moves row to new position indicated by icon in the tree:
+				<div style='padding-left:29px;background-position:-156px -256px;'></div>cannot drop to this position,
+				<div style='padding-left:29px;background-position:-182px -256px;'></div>drop in front of this row,
+				<div style='padding-left:29px;background-position:-234px -256px;'></div>drop behind this row, 
+				<div style='padding-left:29px;background-position:-208px -256px;'></div>drop into row's children, to the end.<br>
+				If you drag <b>selected</b> row, all selected rows are dragged together to new place, but only if they are all of the same type.<br> 
+				You can drag rows even among more grids, if these are present. In master-detail you can drag rows from detail to master to move rows from one detail row to another.<br>
+				<b>When dragging</b>, there are other functions available:<br>
+				<ul>
+				<li>&nbsp;When mouse moves above <div style='padding-left:26px;background-position:-130px -256px;'></div> icon, the row expands its children.</li> 
+				<li>&nbsp;When mouse moves above header or head rows, the grid scrolls up, above toolbar or foot rows, the grid scrolls down. To scroll you can use mouse wheel too.</li>
+				<li>&nbsp;When mouse moves above pager, the grid switches to page under mouse cursor.</li>
+				</ul>
+			<li><b>Click to</b><div style='padding-left:17px;background-position:-34px -480px;'></div>
+				shows calendar to change date value.
+			<li><b>Click to</b><div style='padding-left:26px;background-position:-130px -256px;'></div>
+				expands row's children
+			<li><b>Click to</b><div style='padding-left:26px;background-position:-78px -256px;'></div>
+				collapses rows' children
+			<li><b>Ctrl + Click</b> selects or unselects clicked row.
+			<li><b>Shift + Click</b> selects range of rows between focused and clicked, include these two. If any row in the range is selected, unselects the range.
+		</ul>
+		<p><font color="#008000"><i><b><a name="Keys">Control keys</a></b></i></font></p>
+		<ul>
+			<li><b>Arrow keys</b> change focused cell
+			<li><b>Tab</b> moves focus to the next cell
+			<li><b>Shift + Tab</b> moves focus to the prior cell
+			<li><b>Tab</b> in edit mode edits next editable cell
+			<li><b>Shift + Tab</b> in edit mode edits prior editable cell
+			<li><b>Enter</b> or <b>F2</b> starts edit focused cell
+			<li><b>Enter</b> in edit mode confirms edit changes
+			<li><b>Alt + Enter</b> in edit mode in multi line textarea confirms edit changes
+			<li><b>Ctrl + Enter</b> in edit mode in multi line textarea confirms edit changes
+			<li><b>Esc</b> in edit mode cancels edit changes
+			<li><b>Gray</b> <b>plus</b> in edit mode confirms edit changes
+			<li><b>Gray</b> <b>minus</b> in edit mode cancels edit changes
+			<li><b>Space</b> selects or unselects row
+			<li><b>Ctrl + Space</b> selects or unselects all rows
+			<li><b>Del</b> deletes or un-deletes row
+			<li><b>Ctrl + Del </b>deletes or un-deletes selected rows
+			<li><b>Ins</b> inserts new row to cursor position
+			<li><b>Ctrl + Ins</b> inserts new row into children of focused row
+			<li><b>Ctrl + Enter </b>expands / collapses row's children
+			<li><b>Home</b> focuses first variable row
+			<li><b>End</b> focuses last variable row
+			<li><b>Page Up</b> moves focus up by one page
+			<li><b>Page Down</b> moves focus down by one page
+			<li><b>Ctrl + Enter</b> not in edit mode expands or collapses row's children
+			<li><b>Gray</b> <b>plus</b> not in edit mode expands row's children
+			<li><b>Gray</b> <b>minus</b> not in edit mode collapses row's children
+		</ul>
+		<p><font color="#008000"><i><b><a name="CopyPaste">Copy & paste</a></b></i></font></p>
+		<ul>
+			<li><b>Ctrl + C</b> copies values from all selected rows to clipboard. If no row is selected, copies focused row. 
+			Only if grid is not in edit mode. Data are in plain text, cells are separated by tabulator, rows are separated by enter (CRLF).
+			This data can be pasted back to the grid or to any text editor or spreadsheet program like MS Excel. 
+            Not in Opera browser.<li><b>Ctrl + V</b> pastes values from clipboard to selected rows. If no row is selected, copies first row to focused row. 
+            Only if grid is not in edit mode.
+			Cells in data are tab separated, rows are CRLF or CR or LF separated. Changes only cells that can be edited. 
+			If pasted data has less columns than grid, pastes them from actual focused column, otherwise from first column. 
+            Not in Opera browser.</ul>
+		<p><font color="#008000"><i><b><a name="Toolbar">Toolbar</a></b></i></font></p>
+		<ul>
+			<li><div class=t style='padding-left:20px;background-position:-2px 0px;'></div>
+			<b>Submits</b> <b>changed data</b> to server and accepts all pending changes, if server validated them, otherwise marks invalid values.
+            <li><div class=t style='padding-left:20px;background-position:-27px 0px;'></div>
+			<b>Reloads</b> <b>data</b> from server and cancels pending changes.
+            <li><div class=t style='padding-left:20px;background-position:-52px 0px;'></div>
+			<b>Refreshes</b> <b>pages</b> if grid slows down (if too many pages were already rendered)
+            <li><div class=t style='padding-left:20px;background-position:-377px 0px;'></div>
+			<b>Prints the grid</b>, opens new browser window with printable version of the grid
+            <li><div class=t style='padding-left:20px;background-position:-77px 0px;'></div>
+			<b>Adds</b> <b>new row</b> to the cursor position if parent row accepts children.<br> 
+			Or if there are <b>selected</b> rows, the menu is displayed and you can choose to move or copy selected rows or to ignore selection and add new row.
+			<li><div class=t style='padding-left:20px;background-position:-102px 0px;'></div>
+			<b>Adds</b> <b>new row</b> to focused row's <b>children</b>, to the end, if this row accepts children.<br>
+			Or if there are <b>selected</b> rows, the menu is displayed and you can choose to move or copy selected rows or to ignore selection and add new row.
+			<li><div class=t style='padding-left:20px;background-position:-127px 0px;'></div>
+			<b>Enables</b> or disables <b>sorting</b>. When enabling sorting, re-sorts grid according to actual sorting.
+			<br>You can disable sorting, if you need to choose new sorting according to more columns to avoid multiple re-sorting, especially in paged grids.
+            <li><div class=t style='padding-left:20px;background-position:-177px 0px;'></div>
+			<b>Enables</b> or disables <b>calculations</b>. When enabling calculations, re-calculates all cells.
+            <br>You can disable calculations when editing large grids.
+			<li><div class=t style='padding-left:20px;background-position:-227px 0px;'></div>
+			<b>Expands all rows</b>. 
+				For large grids expands only some rows to avoid locking browser. Starts expanding from focused row.
+			<li><div class=t style='padding-left:20px;background-position:-252px 0px;'></div>
+			<b>Collapses all rows</b>.
+			<li><div class=t style='padding-left:20px;background-position:-327px 0px;'></div>
+			Displays menu to choose what <b>columns</b> will be <b>displayed</b>. 
+			<li><div class=t style='padding-left:20px;background-position:-277px 0px;'></div>
+			<b>Displays</b> TreeGrid <b>configuration</b> window. 
+				These settings are saved to client cookies and therefore are persistent. See Configuration description below.
+			<li><div class=t style='padding-left:20px;background-position:-302px 0px;'></div>
+			<b>Displays</b> this <b>help</b>
+			<li><div class=t style='padding-left:20px;background-position:-352px 0px;'></div>
+			You can <b>resize grid</b> by mouse dragging this icon on the right bottom corner. By double click you can restore to original size.
+			</ul>
+		<p><font color="#008000"><i><b><a name="Configuration">Configuration</a></b></i></font></p>
+		<ul>
+			<li><b>Show deleted rows (in red)</b>. 
+				If checked, deleted rows are still visible and colored and can be undeleted. If you check Auto updates, this option have no sense.
+			<li><b>Auto sort rows after change</b>. 
+				If checked, after user modify value in column according to is grid sorted, row is sorted and moved to the new position
+			<li><b>Auto update changes to server</b>.
+				If checked, all modifications (value changing, rows moving, adding, deleting) are immediately uploaded to server. 
+				Does not wait for server response, grid is still accessible. After server response clears changed flags.
+				If it is not checked, updates can be send by submit button<div class=t style='padding-left:20px;background-position:-2px 0px;'></div>.
+			<li><b>Mouse hover</b>. What blinks under mouse cursor. Hovering all cells can slow down browser responses.
+			<li><b>Show dragged object</b>. If checked, dragging rows or moving columns are attached to the mouse cursor.
+			<li><b>Show row's left panel</b>. If it is not checked, the left panel<div STYLE='padding-left:26px;background-position:0px -384px;'></div>
+                is hidden and its functions can be performed by keys only.
+			<li><b>Show sorting icons</b>. If sorting icons in header are visible.
+			<li><b>Show pager</b>. If checked, the pager with page names is visible on the right of the grid.
+			<li><b>Show all pages</b>. If checked, all pages are visible at once and can be accessed by sliding scrollbar or moving cursor. 
+				The page is rendered only when is scrolled to the window. 
+				<br>If it is not checked, only one page is visible at a time and other pages can be accessed by clicking on pager or by PgUp and PgUp keys.
+		</ul>
+		<p><font color="#008000"><b><i><a name="Filter">Filter row</a></i></b></font></p>
+		<ul>
+			<li>Filter row is special row, usually displayed on the top, under header.
+				There can be set filter conditions for every column.
+				If other rows has in this column value which satisfies the filter condition, the row is displayed, otherwise is hidden.
+			<li>Filtered can be only variable rows. Some rows can be marked as always visible. 
+				These are often rows with children rows in tree to filter only some levels.
+			<li>A cell in filter row contains filter operator and its parameter value. 
+				Some operators are used for some column types only. Filtering is fired after operator or value changes.
+			<li>You can select filter operator from menu. 
+				By default filter is disabled:<div style='padding-left:17px;background-position:0px -448px;'></div>.
+		</ul>
+		<p><font color="#008000"><b><i><a name="Group">Group row</a></i></b></font></p>
+		<ul>
+			<li>Group row is special row, usually displayed on the top, under header and fixed rows. 
+			   You can group rows to tree according same values in appropriate column(s).
+			<li>Grouped can be only variable rows. Some rows can be marked that cannot be grouped. 
+				In tree there will be only one level of rows to be grouped.
+			<li>You can select predefined grouping from select box.
+			<li>Or you can drag column caption to the group row to be grouped by this column. If some column(s) are placed there already, 
+			you can put the new column to appropriate place. To remove column from grouping, just drag its caption from group row outside.
+		</ul>
+		<p><font color="#008000"><i><b><a name="Other">Other</a></b></i></font></p>
+		<ul>
+			<li>If you move focus to another cell in edit mode, the changed value is accepted as if you pressed Enter.
+			<li>After confirm new value after edit, calculated cells are recalculated. 
+				If Auto sort is set and sorting is enabled by this column, row is moved to another position by sort order. 
+				If Auto update is set, value is submitted to server.
+		</ul>
+		<p><font color="#008000"><i><b><a name="Colors">Colors</a></b></i></font></p>
+		<ul><li><span style="background:rgb(255,205,205); padding-left:50px">&nbsp;</span> - Deleted row</li>
+			<li><span style="background:rgb(205,255,205); padding-left:50px">&nbsp;</span> - Added row</li>
+			<li><span style="background:rgb(215,235,235); padding-left:50px">&nbsp;</span> - Moved row - row has been moved to another parent</li>
+			<li><span style="background:rgb(235,235,255); padding-left:50px">&nbsp;</span> - Changed row - any cell value has been changed</li>
+			<li><span style="background:rgb(205,205,255); padding-left:50px">&nbsp;</span> - Changed cell</li>
+			<li><span style="background:rgb(255,255,127); padding-left:50px">&nbsp;</span> - Selected row</li>
+			<li><span style="background:rgb(230,230,230); padding-left:50px">&nbsp;</span> - Focused row</li>
+			<li><span style="background:rgb(90,255,255);  padding-left:50px">&nbsp;</span> - Focused cell</li>
+			<li><span style="background:rgb(255,220,255); padding-left:50px">&nbsp;</span> - Focused cell in edit mode</li>
+			<li><span style="background:rgb(255,238,255); padding-left:50px">&nbsp;</span> - Focused cell in read only edit mode</li>
+			<li><span style="background:rgb(240,240,240); padding-left:50px">&nbsp;</span> - Cell cannot be focused</li>
+			<li><span style="background:rgb(244,244,244); padding-left:50px">&nbsp;</span> - Read only cell</li>
+			<li><span style="background:rgb(255,240,255); padding-left:50px">&nbsp;</span> - Master row in master / detail relationship</li>
+			<li><span style="background:rgb(255,240,225); padding-left:50px">&nbsp;</span> - Master row displayed in detail table</li>
+			<li><span style="background:rgb(255,255,240); padding-left:50px">&nbsp;</span> - Child page</li>
+			<li><span style="background:rgb(250,250,245); padding-left:50px">&nbsp;</span> - Row under mouse cursor</li>
+			<li><span style="background:rgb(220,240,255); padding-left:50px">&nbsp;</span> - Cell under mouse cursor</li>
+		</ul>
+		<p><font color="#008000"><i><b>More info</b></i></font></p>
+		<ul>
+			<li><a href="http://www.treegrid.com/" target="_top">http://www.treegrid.com/</a></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+ /******************************************************************************
+ACTION_DIALOGS.CSS
+Description: Action Dialogs related styles and definitions.
+******************************************************************************/
+
+/******************************************************************************
+ACTION DIALOG PAGE CONTAINERS
+******************************************************************************/
+.action_dialog div.header 		{ position: fixed; width: 100%; }
+.action_dialog div.content		{ position: fixed; width: 100%; overflow: auto; padding-top:15px; }
+
+.print_preview div.header 		{ position: fixed; width: 100%; } 
+.print_preview div.content		{ position: fixed; width: 100%; overflow: auto; padding-top:15px; }
+
+/******************************************************************************
+ACTION DIALOG HEADER STYLES
+******************************************************************************/
+.action_dialog 										 	{ margin-bottom:10px; }
+.action_dialog .header_wrapper 						 	{ background: #f7f7f7 url(../images/bgd_dialog.png) repeat-x right bottom; border-bottom: 1px solid #999; height: 40px; min-width:475px; }
+.action_dialog .column_three 						 	{ padding: 15px 10px 10px 10px; white-space:nowrap; }
+.action_dialog .column_three span.dialog_check 		 	{ margin-right:10px; }
+.action_dialog .column_three span.dialog_check input 	{ margin: 0; padding: 0; }
+.action_dialog .container							 	{ width: 700px; margin: 0 0 0 40px; }
+.action_dialog .left_space							 	{ margin-left: 15% !important; }
+.action_dialog .header_wrapper h2						{ margin-bottom: 2px;}
+.action_dialog .top_space								{ margin-top: 10px;}
+.action_dialog .top_space_large							{ margin-top: 30px; }
+.action_dialog span.dialog_check label					{ color: #333; }
+
+/******************************************************************************
+ACTION DIALOG FORM STYLES
+******************************************************************************/
+.action_dialog fieldset 					{ border: 1px solid #ddd; margin: 0 20px 20px 20px;  padding-bottom: 5px; min-width: 475px;  }
+.action_dialog fieldset.dynamic		 		{ border: none; margin: 0 20px; }
+.action_dialog fieldset.full 				{ border: none; border-top: 1px solid #666; padding: 20px 0 0 0; clear: both; margin-top: 20px; }
+.action_dialog fieldset.fixed_set			{ min-width: 665px; }
+.action_dialog fieldset input, 
+.action_dialog fieldset select,
+.action_dialog fieldset textarea			{ width: 250px; line-height: 12px; }
+.action_dialog fieldset select 				{ width: 255px; padding-top: 2px; padding-bottom: 2px; }
+.action_dialog fieldset.with_bottom_margin 	{ margin-bottom: 20px; }
+.action_dialog fieldset.dynamic dd input,
+.action_dialog fieldset.dynamic dd textarea	{ margin-right: 0px; }
+.action_dialog fieldset.first_fieldset 		{ margin-bottom: -6px; *margin-bottom: -12px; }
+
+.action_dialog legend						{ margin-left: 20px; }
+.action_dialog legend input 				{ height: 14px; margin: 0; border: none; }
+
+.auto_number_field							{ color: #666; }
+
+/******************************************************************************
+UNORDERED LISTS
+******************************************************************************/
+.action_dialog fieldset.input_lists					{ overflow: auto; }
+.action_dialog fieldset.input_lists ul.column_one	{ margin-left: 23%; width: 150px; }
+.action_dialog fieldset.input_lists ul li 			{ line-height: 30px; }
+
+span.single_line input.form_selectors				{ margin-left: 10px; }
+span.single_line label								{ margin-left: 5px; }
+
+/******************************************************************************
+Drag and Drop Cursor
+******************************************************************************/
+
+div.drag_tooltip {
+	color: #000;
+	background-color: #fff;
+	border: 1px dotted #787878;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	width: 15px;
+	height: 15px;
+	line-height: 14px;
+	padding: 2px;
+	opacity: .75;
+	filter: alpha(opacity=75);
+}
+div.drag_tooltip.over_target {
+	background-color: #D3FF00;
+}

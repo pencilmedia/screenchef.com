@@ -1,0 +1,17 @@
+<script>
+    window.addEventListener('DOMContentLoaded', function domloaded(){
+
+        var referrerEl = document.querySelector('form>input[name="referrer"]');
+
+        referrerEl.value = document.referrer;
+    });
+</script>
+
+<form name='login' method='post' action='/auth' accept-charset='utf-8'>
+    <input type='hidden' name='referrer'>
+    <label for='email'>Email</label>
+    <input type='email' name='email' required>
+    <label for='password'>Password</label>
+    <input for='password' name='password' type="password" required>
+    <input type='submit' value='Login'>
+</form>

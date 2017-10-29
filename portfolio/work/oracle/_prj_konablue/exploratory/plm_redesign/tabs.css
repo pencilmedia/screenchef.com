@@ -1,0 +1,71 @@
+/* TAB CONTAINER */
+
+#tabs {
+	height: 25px;
+	margin: 0;
+	padding: 0 3px 0 0;
+	border-bottom: 1px solid #999;
+	overflow: hidden;
+}
+
+
+/* TAB BACKGROUNDS */
+
+#tabs div.tab_mid_nrm    { background: url('images/tab_normal_middle.png') repeat-x top left; }
+#tabs div.cap_lft_nrm    { background: url('images/tab_normal_cap_left.png') no-repeat top left; }
+#tabs div.cap_rgt_nrm    { background: url('images/tab_normal_cap_right.png') no-repeat top left; }
+#tabs div.sep_mid_nrm    { background: url('images/tab_normal_separator.png') no-repeat top left; }
+#tabs div.tab_mid_ovr    { background: url('images/tab_over_middle.png') repeat-x top left; }
+#tabs div.cap_lft_ovr    { background: url('images/tab_over_cap_left.png') no-repeat top left; }
+#tabs div.cap_rgt_ovr    { background: url('images/tab_over_cap_right.png') no-repeat top left; }
+#tabs div.sep_lft_ovr    { background: url('images/tab_over_separator_left.png') no-repeat top left; }
+#tabs div.sep_rgt_ovr    { background: url('images/tab_over_separator_right.png') no-repeat top left; }
+
+
+/* COMMON ATTRIBUTES */
+
+#tabs div.cap_rgt_nrm,
+#tabs div.sep_mid_nrm,
+#tabs div.cap_lft_ovr,
+#tabs div.cap_rgt_ovr,
+#tabs div.sep_lft_ovr,
+#tabs div.sep_rgt_ovr {
+	float: left;
+	height: 25px;
+	width: 15px;
+}
+
+
+/* SPECIFIC ATTRIBUTES*/
+
+#tabs div.cap_lft_nrm,
+#tabs div.cap_lft_ovr {
+	float: left;
+	height: 25px;
+	width: 5px;
+}
+
+#tabs div.tab_mid_nrm,
+#tabs div.tab_mid_ovr {
+	float: left;
+	height: 25px;
+}
+
+#tabs div.gap { 
+	float: left;
+	height: 25px;
+	width: 50px;
+}
+
+
+/* LINK SETUP & TEXT COLOR */
+
+#tabs div.tab_mid_nrm a,
+#tabs div.tab_mid_ovr a {
+	display: block;
+	margin: 10px 0px 0px 0px;
+	text-decoration: none;
+}
+
+#tabs div.tab_mid_nrm a { color: #333; }
+#tabs div.tab_mid_ovr a { color: #fff; }

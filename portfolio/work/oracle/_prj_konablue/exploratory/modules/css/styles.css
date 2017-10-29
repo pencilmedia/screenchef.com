@@ -1,0 +1,84 @@
+body, div, form, td, p {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, sans-serif;
+	font-size: 11px;
+}
+
+div {
+ 	color: #333;
+ }
+ 
+ 
+.obj_display_block {
+	display: block;
+}
+
+.obj_display_none {
+	display: none;
+}
+
+
+
+
+h5 {
+	font-weight: bold;
+	font-size: 11px;
+	margin: 1em 0em 1em 0em;
+	border-bottom: 5px solid #ccc;
+	width: 140px;
+}
+
+.enclose {
+	border-top: 1px dashed #36c;
+	border-bottom: 1px dashed #36c;
+	padding-top: 10px;
+}
+
+.heading {
+	font-weight: bold;
+}
+
+td {
+	padding: 5px 5px 0px 5px;
+}
+
+td.subhead {
+	padding-top: 10px;
+	font-weight: normal;
+	font-style: italic;
+	border-bottom: 1px solid #ccc;
+}
+
+.tag {
+	border: 1px solid #ccc;
+	padding: 5px 5px 5px 5px;
+	margin: 10px 10px 10px 10px;
+	width: 375px;
+}
+
+.example {
+	float: left;
+	margin: 5px 0px 5px 0px;
+	padding: 5px 20px 5px 0px;
+}
+
+.rev_code {
+	float: left;
+	padding-left: 10px;
+	width: 80%;
+}
+
+.clear {
+	clear: both;
+	line-height: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+
+img.btn {
+	cursor: pointer;
+	border: none;
+	vertical-align: middle;
+}

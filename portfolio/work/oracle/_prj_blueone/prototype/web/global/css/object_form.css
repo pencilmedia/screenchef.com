@@ -1,0 +1,34 @@
+/******************************************************************************
+OBJECT_FORM.CSS
+Description: Object Form related styles and definitions.
+******************************************************************************/
+.obj_form .page_controls{ padding-right:16px; }
+
+.obj_form div.header 			{ position: fixed; width: 100%; }
+.obj_form div.content			{ position: fixed; width: 100%; overflow: scroll; padding-top:15px; }
+
+body.obj_form div.container 	{ margin:0; padding: 0 10px 0 10px; }
+body.obj_form div.container  p 	{ margin-bottom: 10px; }
+body.obj_form table 			{ margin-bottom: 30px; }
+body.obj_form dl 				{ margin-bottom: 30px; }
+body.obj_form dt.input_row		{ padding-top:3px; }
+body.obj_form dd 				{ margin-bottom:5px; width:50%; }
+
+body.obj_form table.grid		{ width:98% }
+
+/* Form Styling */
+body.obj_form textarea			{ height:85px !important; }
+
+.container textarea.long_width	{ width:80% }
+.container input,
+.container textarea.long_width	{ width:80% }
+.container select.long_width	{ width:82%; }
+
+.container a.button 			{ margin-left:3px; }
+.container dt, .container dd 	{ float: left;}
+
+.container h3					{ margin-top:0px !important; }
+
+/*
+.container dt { border: 1px solid red; }
+*/

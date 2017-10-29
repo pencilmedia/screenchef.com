@@ -2,9 +2,9 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<header>
-    <hgroup class="animated">
-        <h1><a href="<?php echo $thisPage ?>/">Ralph Adrian Garcia</a></h1>
+<header class="page-header animated zoomInUp">
+    <hgroup>
+        <h1><a href="<?php echo $ROOT ?>">Ralph Adrian Garcia</a></h1>
         <h2>Interaction Designer and Prototyper</h2>
         <p><?php echo $yearsExperience; ?> years of experience in web development, visual and interaction design.</p>
     </hgroup>

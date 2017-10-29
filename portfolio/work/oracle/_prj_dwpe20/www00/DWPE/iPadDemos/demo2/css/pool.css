@@ -1,0 +1,108 @@
+BODY{	font-family:helvetica;margin:0px;padding:0px;
+		background:url(../images/background.png);
+		-webkit-user-select: none;
+		}
+		
+		.swim-lane
+		{
+			display:inline-block;
+			position:relative;
+			overflow:hidden;
+			
+			background:url('../images/swim-lane-back.png') repeat-x;
+			
+			border-top:2px solid #ccc;
+			border-bottom:2px groove #ccc;
+			
+			padding-top:2px;
+			padding-bottom:2px;
+			border-top-width:0px;
+			border-bottom-width:2px;
+		}
+		
+		.swim-lane.focus
+		{
+			background:#666;
+			border-top-width:2px;
+			border-bottom-width:2px;
+			padding-top:0px;
+			padding-bottom:0px;
+		}
+		
+		body.portrait .swim-lane
+		{
+			background-image:none;
+		}
+		
+		#dynamic-pool
+		{
+			display:block;
+			overflow:hidden;
+		}
+		
+		.pool
+		{
+			position:relative;
+			width:auto;
+		}
+		
+		.pool>TBODY>TR
+		{
+			vertical-align:top;
+			background:url('../images/swim-lane-header-back.png') repeat-y;
+			
+			
+		}
+		
+		
+		
+		}
+		
+		.swim-lane-header
+		{	position:relative;
+			color:#999;
+			text-align:right;
+			font-weight:bold;
+			font-size:14px;
+			-webkit-user-select: none;
+			
+			
+			
+		}
+		
+		.swim-lane-title
+		{
+			position:relative;
+			width:90px;
+			margin:5px 5px 20px 0px;
+			background:transparent;
+			text-align:right;
+			-webkit-user-select: none;
+			
+				
+		}
+		
+		.swim-lane-row
+		{
+			position:relative;
+			-webkit-user-select: none;
+		}
+		
+		.swim-lane-title>h3
+		{
+			font-size:18px;
+			font-weight:bold;
+			margin:0;
+		}
+
+.item-container
+	{	position:relative;
+		white-space:nowrap;}
+		
+
+body.portrait .item-container
+	{	position:relative;
+		white-space:normal;}
+		
+
+		

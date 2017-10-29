@@ -1,0 +1,349 @@
+<script type="text/javascript">	
+$(document).ready(function() {
+	comCurHeight = $(".search_filter.collapsed").parent().height(); //grabs correct height of component ONLOAD
+ });
+
+	$(".search_filter.collapsed").parent().height(25);
+	$(".widget_header").click(widgetHeaderClickHandler);
+</script>
+<style>
+	table.search_advanced td {
+		border: none;
+	}
+</style>
+<div id="" class="com"> 
+	<div class="widget_header search_filter collapsed">
+        <h3>Search</h3>
+        <div>
+            <button><span>Advanced Search</span></button>
+            <label for="saved_searches" class="with_divider">Saved Search
+                <select id="saved_searches">
+                    <option>Unfinished Models</option>
+                    <option>Finished Sequences</option>
+                    <option>Search Three</option>
+                </select>
+             </label>
+         </div>
+    </div>
+    <div class="widget_layout search_page">
+  		<div class="com_container">
+        	<div class="table_notes">
+            	* Required
+            </div>
+        	<table cellpadding="0" cellspacing="0" border="0" class="search_advanced">
+            <colgroup>
+            	<col width="200px;" />
+            </colgroup>
+            	<tr>
+                	<td class="required"><label>Name</label></td>
+                    <td><input type="text" /></td>
+                </tr>
+            	<tr>
+                	<td><label>Process</label></td>
+                    <td><input type="text" /></td>
+                </tr>
+            	<tr>
+                	<td><label>Status</label></td>
+                    <td><input type="text" /></td>
+                </tr>
+            	<tr>
+                	<td><label>Last Update</label></td>
+                    <td><input type="text" /></td>
+                </tr>
+            	<tr>
+                	<td><label>Actions</label></td>
+                    <td><input type="text" /></td>
+                </tr>
+            </table>
+            <div class="table_footer">
+           	 <button><span>Save&hellip;</span></button>
+             <button><span>Search</span></button>
+             <button><span>Reset</span></button>
+            </div>
+      	</div>
+</div>
+    
+</div>
+    
+    <div id="" class="com">
+        <div class="widget_header results_filter">
+             <label for="view_as">View As
+                <select id="view_as">
+                    <option>List</option>
+                    <option>Grid</option>
+                </select>
+             </label>
+             <label for="group_by">Group By
+                <select id="group_by">
+                    <option>None</option>
+                    <option>Something</option>
+                </select>
+             </label>
+        </div>
+        <div class="widget_layout">
+            <div class="com_container">
+                <table cellpadding="0" cellspacing="0" border="0" class="search_results">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Process</th>
+                        <th>Status</th>
+                        <th>Last Update</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>Po</td>
+                        <td>Model</td>
+                        <td>Model Rigging</td>
+                        <td>Checked Out</td>
+                        <td>3 Days Ago</td>
+                        <td>Main Character</td>
+                        <td><a href="#">Watch</a></td>
+                    </tr>
+                </table>
+            </div>
+    </div>

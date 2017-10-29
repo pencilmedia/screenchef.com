@@ -1,0 +1,44 @@
+<Grid>
+
+<!-- BEGIN: cut/paste to your XML config file -->
+<Cfg id='Simple2' SortIcons='0' MaxWidth='0' MaxHeight='0' ResizingMain="0" Version='37' Hover="1" />
+<Colors Default="255,255,255" Selected="-22,-12,0"
+        EditedCell="240,240,240" Focused="0,0,0"
+        Changed="0,0,0" />
+<Panel Visible="1" Select="1" Delete="0" />
+<Img Grid="agile.gif" />
+<Toolbar Visible="0" />
+<!-- END: cut/paste to your XML config file -->
+
+<Cols>
+      <C Name='A'/>
+      <C Name='B'/>
+      <C Name='C'/>
+      <C Name='D'/>
+      <C Name='E'/>
+      <C Name='F'/>
+</Cols>
+<Body>
+<B>
+<I A="Text" />
+<I B="Text" />
+<I C="Text" />
+<I D="Text" />
+<I E="Text" />
+<I F="Text" />
+<I A="Text" />
+<I B="Text" />
+<I C="Text" />
+<I D="Text" />
+<I E="Text" />
+<I F="Text" />
+<I A="Text" />
+<I B="Text" />
+<I C="Text" />
+<I D="Text" />
+<I E="Text" />
+<I F="Text" />
+</B>
+</Body>
+<Header RowSelect="" A="Column 1" B="Column 2" C="Column 3" D="Column 4" E="Column 5" F="Column 6" />
+</Grid>

@@ -1,0 +1,488 @@
+/* Full TreeGrid CSS, to know how to modify it, see TreeGridStyles.htm documentation. */
+
+/* -------------
+--- Sections --- 
+------------- */
+
+.GGBodyLeft, .GGBodyMid, .GGBodyRight, .GGHeadLeft, .GGHeadMid, .GGHeadRight, .GGFootLeft, .GGFootMid, .GGFootRight {
+	border-left:1px solid #ddbbbb;
+	}
+.GGBodyLeft, .GGBodyMid, .GGBodyRight { 
+	
+	}
+.GGHeadLeft, .GGHeadMid, .GGHeadRight { 
+	border-top:1px solid #a0a0f0;
+	}
+.GGFootLeft, .GGFootMid, .GGFootRight { 
+	border-top:1px solid #a0a0f0;
+	}
+.GGVScroll {
+   border-top:1px solid #b0b0a0;
+   border-right:1px solid #b0b0a0;
+   }
+.GGXScroll {
+   
+   }
+.GGVScroll {
+
+	}
+
+/* -----------------
+--- Special rows --- 
+----------------- */
+	
+.GGFillRow {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	background:#f4f4f4;
+	}
+.GGFillUserRow {
+	border-bottom:1px solid #d0d0c0;
+	background:#F4F4F4;
+	}	
+.GGSpace,.GGGroup,.GGSearch,.GGPager {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	background:#C0F0C0;
+	white-space:nowrap;
+	}
+
+/* ----------
+--- Cells --- 
+---------- */
+
+.GGHeader, .GGPanelTop {
+	background: #F0F000;
+	padding-bottom:1px;
+	}
+.GGPanelTop,.GGPanelTopHover,.GGPanel,.GGPanelHover,.GGHeader,.GGHeaderHover {
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GGPanel,.GGPanelHover {
+	background: #F0F000; 
+	border-top:1px solid #ffffff; 
+	}
+.GGCell, .GGCellNE, .GGHeader, .GGHeaderHover, .GGPanel, .GGPanelHover, .GGPanelTopHover, .GGPanelTop, .GGHeaderHoverMulti, .GGHeaderGroup,.GGHeaderGroupFocus,.GGHeaderGroupDelete { 
+	border-bottom:1px solid #a0a0f0;
+	border-right:1px solid #ddbbbb;
+	vertical-align:top;
+	}
+.GGHeaderGroup,.GGHeaderGroupFocus,.GGHeaderGroupDelete {
+	background: #E0E080;
+	border-right:1px solid #b0b0a0;
+	cursor:default;
+	}
+.GGHeaderGroupFocus {
+	background: #C0C0A0;
+	}
+.GGHeaderGroupDelete {
+	background: #F0F0E0;
+	color: #F0F0E0;
+	}
+.GGCell {
+	
+	}
+.GGCellNE {
+	cursor:default;
+	}
+.GGHeaderHover,.GGPanelTopHover {
+	border-bottom:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GGHeaderHoverMulti {
+	background: #FAF8F3; 
+	cursor:default;
+	}
+.GGHeaderFocus {
+	background: #DEDFD8; 
+	}
+.GGPanelHover,.GGPanelTopHover {
+	border-right:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GGHeader,.GGHeaderHover,.GGHeaderHoverMulti,.GGHeaderGroup { 
+	white-space:nowrap;
+	overflow:hidden;
+	}
+.GGRightButton, .GGFilterButton, .GGTreeIcon {
+	vertical-align:top;
+	}
+.GGCellSpaceButton {
+	overflow:hidden;
+	height:18px;
+	width:42px;
+	}
+
+/* -----------------
+--- Cell content --- 
+----------------- */
+
+.GGHeadText { 
+	font-size:10pt;
+	font-family:Garamond;
+	padding-left:3px;
+	padding-right:3px;
+	color:#AA7788;
+	font-weight:bold;
+	white-space:nowrap;
+	}
+.GGHeadSort { 
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GGText,.GGTextB,.GGTextM,.GGNumber,.GGNumberB,.GGNumberM,.GGIText,.GGINumber,.GGLines,.GGTextArea,.GGHtml,.GGRadio, .GGIHtml {
+	font-family:Monotype Corsiva;
+	font-size:8pt;
+	padding-left:3px;
+	padding-right:3px;
+	border:0px solid;
+	background:inherit;
+	}
+.GGRadio {
+	padding-left:0px;
+	padding-right:5px;
+	}
+.GGText,.GGTextB,.GGTextM {
+	white-space:nowrap;
+	color:#7755AA;
+	padding-top:2px;
+	}
+.GGHtml {
+	padding-top:2px;
+	}
+.GGIText,.GGINumber,.GGIHtml,.GGIList { 
+	white-space:nowrap;
+	_margin-top:-1px;
+	_margin-bottom:-1px;
+	padding-top:2px;
+	padding-bottom:0px;
+   display:block;
+	}
+.GGNumber,.GGNumberB,.GGNumberM,.GGINumber {
+	text-align:right;
+	white-space:nowrap;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GGTextB,.GGNumberB,.GGNumberM {
+	color:green;
+	}
+.GGTextM,.GGNumberM {
+	font-weight:bold;
+	}
+.GGLines,.GGTextArea {
+	padding-top:1px;
+	padding-bottom:1px;	
+	}
+.GGTextArea {
+	margin:0px;
+	_padding-top:0px;
+	_padding-bottom:0px;
+	_padding-left:3px;
+	padding-right:0px;
+	_line-height:13px;
+	}
+.GGSelect {
+	font-size:10px;
+	font-family:Verdana;
+	}
+.GGButton,.GGButtonSpace,.GGButtonSpaceChecked {
+   font-family:Garamond;
+	font-size:11px;
+	height:18px; 
+	cursor:pointer;
+	_cursor:hand;	
+	padding-bottom:3px;
+	margin-bottom:4px;
+	}
+.GGButtonImg {
+	cursor:pointer;
+	_cursor:hand;
+	text-align:right;
+	}
+.GGGroupCustom {
+   font-family:Monotype Corsiva;
+	font-size:8pt;
+	color:#BBB;
+	font-style:italic;
+	padding-left:5px;
+	cursor:default;
+	white-space:nowrap;
+	height:17px
+	}
+.GGButtonSpace {
+	width:42px;
+	background:#C0F0C0;
+   }
+.GGButtonSpaceChecked {
+	color:blue;
+	font-weight:700;
+	width:42px;
+	background:#C0F0C0;
+	}
+
+/* ------------
+--- Toolbar --- 
+------------ */
+
+.GGControlPanel {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	border-bottom:1px solid #a0a0f0;
+	background: #F0F000;
+	}
+.GGControlPanelCell {
+	
+	}
+.GGControlPanelImg,.GGControlPanelImgHover,.GGControlPanelImgChecked,.GGControlPanelImgHoverChecked {
+   font-family:Garamond;
+	cursor:pointer;	
+	_cursor:hand;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:2px;
+	border-right:1px solid #d0d0c0;
+	font-size:12px;
+	}
+.GGControlPanelImgHover,.GGControlPanelImgHoverChecked {
+	margin-top:0px;
+	margin-bottom:1px;
+	padding-top:3px;
+	padding-bottom:1px;
+	border-bottom:1px solid #FCC247;
+	background: #FFFFFF; 
+	}
+.GGControlPanelImgChecked,.GGControlPanelImgHoverChecked {
+	color:#8080FF;
+	font-weight:700;
+	}
+.GGControlPanelFormula {
+	padding-left:5px;
+	padding-right:5px;
+	white-space:nowrap;
+   }
+
+/* -------------
+--- Cfg menu --- 
+------------- */
+   
+.GGCfgMenu {
+	border:3px outset #DDD;
+	padding:6px;
+	background:#d0e0d0;
+	margin:3px;
+	}
+.GGCfgMenuItem {
+	font-size:10pt;
+	font-family:Monotype Corsiva;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GGCfgMenuHover {
+	background:#ffeeaa;
+	font-size:10pt;
+	font-family:Monotype Corsiva;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GGCfgMenuButton {
+	width:70px;
+	font-size:8pt;
+	margin:2px;
+	}
+
+
+/* ----------------
+--- Popup menus --- 
+---------------- */
+
+.GGFilterMenu {
+	border:1px outset #aaaaff;
+	background:#d0e0d0;
+	margin-top:1px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GGFilterMenuItem {
+	font-size:8pt;
+	font-family:Monotype Corsiva;
+	}
+.GGFilterMenuHover {
+	background:#ffeeaa;
+	font-size:8pt;
+	font-family:Monotype Corsiva;
+	}
+
+
+/* ----------------
+--- Date picker --- 
+---------------- */
+
+.GGPickTag {
+	background:#d0e0d0;
+	padding:5px;
+	margin-top:1px;
+	}
+.GGPickMS{
+	width:77px;
+	font:12px;
+	}
+.GGPickB{
+	font:bold 10pt Monotype Corsiva;	
+	font-size:10px;
+	font-weight:bold; 
+	cursor:pointer;
+	_cursor:hand;
+	width:20px;
+	}
+.GGPickMY{
+	font-family:Monotype Corsiva;
+	font-size:13px;
+	font-weight:bold; 
+	color:#2200cc;
+	}
+.GGPickWDN {
+	background-color:#bbbbbb;
+	text-align:center; 
+	width:20px; 
+	font-family:Monotype Corsiva;
+	font-size:11px;
+	}
+.GGPickWD, .GGPickSa, .GGPickSu, .GGPickSel, .GGPickNow, .GGPickWDNE, .GGPickSaNE, .GGPickSuNE, .GGPickSelNE, .GGPickNowNE {
+   font-family:Monotype Corsiva;
+   font-size:12px;
+	text-align:center; 
+	width:20px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GGPickWDNE, .GGPickSaNE, .GGPickSuNE, .GGPickSelNE, .GGPickNowNE {
+	cursor:default;
+	}
+.GGPickWD {
+	background-color:#ffffff;
+	}
+.GGPickSa {
+	background-color:#ddddff;
+	}
+.GGPickSu {
+	background-color:#aaaaff;
+	}
+.GGPickSel {
+	background-color:#ffff77;
+	}
+.GGPickNow {
+	background-color:#dd44dd;
+	}
+
+
+/* ----------
+--- Pager --- 
+---------- */
+
+.GGPagerBody {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #a0a090;
+	background: #F0F000;
+	}
+.GGPagerHeader {
+	border-bottom:1px solid #b0b0a0;
+	border-top:1px solid #b0b0a0;
+	border-left:1px solid #a0a090;
+	border-right:1px solid #a0a090;
+	}
+.GGPagerItem, .GGPagerHover, .GGPagerCaption {
+	font-family:Monotype Corsiva;
+	font-size:8pt;
+	border-top:1px solid #ffffff; 
+	border-bottom:1px solid #d0d0c0;
+	border-left:1px solid #d0d0c0;
+	border-right:1px solid #d0d0c0;
+	padding-left:3px;
+	padding-right:3px;
+	background: #F0F000;
+	}
+.GGPagerCaption {
+	height:17px;
+	cursor:default;
+	font-size:10pt;
+	font-family:Garamond;
+	color:#AA7788;
+	font-weight:bold;
+	}
+.GGPagerItem {
+	cursor:pointer;
+	_cursor:hand;
+	background: #FFFFFF;
+	}
+.GGPagerHover {
+	cursor:pointer;
+	_cursor:hand;
+	background: #DCF0FF;
+	}
+.GGPagerCursor {
+	cursor:pointer;
+	_cursor:hand;
+	background:#aFaFFF;
+	opacity:0.5;              /* Mozilla */
+	filter:alpha(opacity=50); /* IE */
+	}
+.GGPagerSort1 {
+	color: #006600;
+	}
+.GGPagerSort2 {
+	color: #00AE00;
+	}
+.GGPagerSort3 {
+	color: #00FF00;
+	}
+.GGPagerSortS {
+	color: black;
+	}
+
+.GGSimplePager {
+   padding-left:3px;
+   padding-top:2px;
+   padding-bottom:2px;
+   margin-top:2px;
+   margin-bottom:2px;
+   font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	cursor:pointer;
+	color:blue;
+	display:inline-block;
+   }
+.GGSimplePager:visited {
+   color:blue;
+   }
+.GGSimplePager:hover {
+   color:red;
+   }
+
+/* ----------
+--- Other --- 
+---------- */
+
+GMessage, .GGMessage {
+	background:#E0D0E0;
+	border:3px outset #DDD;
+	padding:10px;
+	white-space:nowrap;
+	}
+.GGTable {
+	background:#f0fff0;
+	}
+.GGPage {
+	border-top:1px solid #d0d0c0;
+	}
+.GGPageOne {
+	
+	}
+.GGPageMessage {
+	background:#FaFaFa;
+	border:1px solid #f77;
+	padding:10px;
+	}

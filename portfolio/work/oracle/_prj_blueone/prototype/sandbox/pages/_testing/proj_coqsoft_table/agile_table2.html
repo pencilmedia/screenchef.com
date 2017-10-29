@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Table Test</title>
+
+<link id="GridCSS" href="./grid/Grid.css" title="GridStyle" type="text/css" rel="stylesheet" />
+<link href="./agile_table2.css" type="text/css" rel="stylesheet" />
+<link href="./../../../global/css/default.css" type="text/css" rel="stylesheet" />
+<script src="./grid/GridE.js" type="text/javascript"></script>
+
+<style type="text/css">
+
+UL.toolbar {
+	height: 30px;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 15px;
+	font-family: Arial;
+	font-size: 13px;
+}
+
+.toolbar LI {
+	border: 1px solid #C1C1C1;
+	background-color: #F7F7F7;
+	float: left;
+	margin-right: 5px;
+	padding: 2px 5px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+
+var gSelectedRow = null;
+var gGrid = null;
+
+Grids.OnSelect = function(grid, row, type) {
+	gGrid = grid;
+	gSelectedRow = row;
+}
+
+function deleteSelectedRow() {
+	if (gGrid && gSelectedRow) {
+		gGrid.DelRow(gSelectedRow);
+		gSelectedRow = null;
+	}
+}
+
+////////////////////////////////////////
+////////////////////////////////////////
+//
+//        TIFFANY
+//
+////////////////////////////////////////
+////////////////////////////////////////
+
+
+var allFrames = new Array ();
+allFrames[0] = "edit_frame_textbox";
+allFrames[1] = "edit_frame_calendar";
+
+
+var current_text_val = null;
+var current_sel_row = null;
+var current_sel_col = null;
+var current_frame_type = null;
+var edit_frame_displayed = false;
+
+Grids.onclick = function (G,row,col,x,y) {
+	for (var i = 0; i < allFrames.length; i++){
+		displayNone(allFrames[i]);	
+	}
+	edit_frame_displayed = false;
+}
+
+Grids.OnDblClick = function (G,row,col,x,y) {
+
+	current_sel_row = Grids[0].FRow;
+	current_sel_col = Grids[0].FCol;
+	current_frame_type = determinePopup(current_sel_col);
+	
+	//if no frame should be showed, return
+	if (current_frame_type == null){ return; }
+	
+	//Getting text value from td cell
+	current_text_val = Grids[0].GetString(current_sel_row, current_sel_col);
+	
+	//Using return object to find height and width of td cell
+	var cell_obj = Grids[0].GetCell(current_sel_row, current_sel_col, 0);
+	
+	//Using returned position to get top and left values of td cell
+	//var cell_pos = findPos(cell_obj);
+	
+	
+	//Passing values to size and position function
+	displayFrame(cell_obj, current_text_val);
+
+}
+
+Grids.OnKeyPress = function (grid, key, evt) {
+	if (!edit_frame_displayed) {return;}
+	
+	if (key == 13){
+		detectedEnter();
+	}
+}
+
+
+
+////////////////////////////////////////
+//
+//        DISPLAY FUNCTIONS
+//
+////////////////////////////////////////
+
+function displayBlock(objId) {
+	var obj = document.getElementById(objId);
+	obj.style.display = "block";
+}
+
+function displayNone(objId) {
+	var obj = document.getElementById(objId);
+	obj.style.display = "none";
+}
+
+function determinePopup(column){
+	if (column.match("noedit") != null){
+		return null;
+	} else if (column.match("textbox") != null){
+		return "textbox";
+	} else if (column.match("multitext") != null){
+		return "multitext";
+	} else if (column.match("calendar") != null){
+		return "calendar";
+	}
+}
+
+
+
+////////////////////////////////////////
+//
+//        POSITIONING FUNCTIONS
+//
+////////////////////////////////////////
+
+function findPos(obj) {
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+		curleft = obj.offsetLeft
+		curtop = obj.offsetTop
+		while (obj = obj.offsetParent) {
+			curleft += obj.offsetLeft
+			curtop += obj.offsetTop
+		}
+	}
+	return [curleft,curtop];
+}
+
+//This function is passed values for default frame placement
+//Any alternate sizing is made within
+function displayFrame(cell, text_value) {
+	var parent = null;
+	var obj = null;
+	
+	
+	if (current_frame_type == "calendar"){
+	
+	} else { //default to text popup
+		cell.innerHTML = "<div class='outer_block'><input type='text' class='frame' value='" + text_value + "' /></div>";
+	}
+	
+	/*if (current_frame_type == "calendar"){
+		obj = document.getElementById('frame_calendar');
+		parent = obj.parentNode;
+	
+		obj.style.width = cell_width - 4 + "px";
+		obj.style.height = cell_height - 5 + "px";
+		parent.style.width = cell_width + 45 + "px";
+		
+		parent.style.top = cell_top - 5 + "px";
+		parent.style.left = cell_left - 4 + "px";
+		
+		obj.value = text_value;
+		current_text_val = text_value;
+		
+		//Display edit frame as block and set flag for frame as displayed
+		displayBlock('edit_frame_calendar');
+		edit_frame_displayed = true;
+		
+	} else { //default to text popup
+		obj = document.getElementById('frame_textbox');
+		parent = obj.parentNode;
+		
+		obj.style.width = cell_width - 4 + "px";
+		obj.style.height = cell_height - 5 + "px";
+		
+		parent.style.top = cell_top - 5 + "px";
+		parent.style.left = cell_left - 4 + "px";
+		
+		obj.value = text_value;
+		current_text_val = text_value;
+		
+		//Display edit frame as block and set flag for frame as displayed
+		displayBlock('edit_frame_textbox');
+		edit_frame_displayed = true;
+		
+		if(obj.select){
+			obj.select();
+		}
+	}*/
+	
+}
+
+
+
+////////////////////////////////////////
+//
+//        EVENT DETECTION FUNCTIONS
+//
+////////////////////////////////////////
+
+function detectTableKeys (evt) {
+	
+
+	if (!edit_frame_displayed) {return;}
+
+	evt = getEvent(evt);
+	var characterCode = (evt && evt.which) ? evt.which : event.keyCode;
+	var modifiers = getEventModifiers(evt);
+	if (!characterCode) { return; }
+	
+	switch (characterCode) {
+		case 9:
+			//if (modifiers && modifiers['shift']) { detectedTab(true); } else { detectedTab(); }
+			break;
+		case 13:
+			detectedEnter();
+			break;
+		case 27:
+			//detectedESC();
+			break;
+		case 37:
+			//detectedLeftArrow();
+			break;
+		case 38:
+			//detectedUpArrow();
+			break;
+		case 39:
+			//detectedRightArrow();
+			break;
+		case 40:
+			//detectedDownArrow();
+			break;
+		default:
+			break;
+	}
+}
+
+function detectedEnter(){
+	switch (current_frame_type) {
+		case "textbox":
+			if (edit_frame_display == false) {
+			
+			} else if (edit_frame_displayed == true) {
+				var obj = document.getElementById('frame_textbox');
+				current_text_val =  obj.value;
+				Grids[0].SetString(current_sel_row, current_sel_col, current_text_val, refresh = true);
+				displayNone('edit_frame_textbox');
+				edit_frame_displayed = false;
+			}
+			break;
+		case "multitext":
+			if (edit_frame_display == false) {
+			
+			} else if (edit_frame_displayed == true) {
+				var obj = document.getElementById('frame_textbox');
+				current_text_val =  obj.value;
+				Grids[0].SetString(current_sel_row, current_sel_col, current_text_val, refresh = true);
+				displayNone('edit_frame_textbox');
+				edit_frame_displayed = false;
+			}
+			break;
+		case "calendar":
+			if (edit_frame_display == false) {
+			
+			} else if (edit_frame_displayed == true) {
+				current_text_val =  obj.value;
+				Grids[0].SetString(current_sel_row, current_sel_col, current_text_val, refresh = true);
+				displayNone('edit_frame_calendar');
+				edit_frame_displayed = false;
+			}
+			break;
+	}
+	/*
+	if (current_frame_type == "calendar"){
+		var obj = document.getElementById('frame_calendar');
+		current_text_val =  obj.value;
+		Grids[0].SetString(current_sel_row, current_sel_col, current_text_val, refresh = true);
+		displayNone('edit_frame_calendar');
+		edit_frame_displayed = false;
+	} else if (current_frame_type == "textbox") {
+		var obj = document.getElementById('frame_textbox');
+		current_text_val =  obj.value;
+		Grids[0].SetString(current_sel_row, current_sel_col, current_text_val, refresh = true);
+		displayNone('edit_frame_textbox');
+		edit_frame_displayed = false;
+	}*/
+}
+
+/* Need cross browser grabbing of event */
+function getEvent(evt) {
+	evt = (evt) ? evt : ((window.event) ? window.event : "");
+	return (evt);
+}
+
+function getEventModifiers(evt) {
+	var modifier_list = {
+		'shift': false,
+		'ctrl': false,
+		'alt': false
+	}
+	
+	if (evt.modifiers && Event && Event.SHIFT_MASK) {
+		modifier_list['shift'] = true;
+	} else if (evt.shiftKey && evt.shiftKey == true) {
+		modifier_list['shift'] = true;
+	}
+
+	if (evt.modifiers && Event && Event.CTRL_MASK) {
+		modifier_list['ctrl'] = true;
+	} else if (evt.ctrlKey && evt.ctrlKey == true) {
+		modifier_list['ctrl'] = true;
+	}
+	
+	if (evt.modifiers && Event && Event.ALT_MASK) {
+		modifier_list['alt'] = true;
+	} else if (evt.altKey && evt.altKey == true) {
+		modifier_list['alt'] = true;
+	}
+	
+	
+	return modifier_list;
+}
+
+function detectedScroll (){
+	if (edit_frame_displayed && current_frame_type != null) {
+		var popupObj = "frame" + current_frame_type;
+		
+		if (popupObj.style.display == "block"){
+			//Using return object to find height and width of td cell
+			var cell_obj = Grids[0].GetCell(current_sel_row, current_sel_col, 0);
+			
+			//Using returned position to get top and left values of td cell
+			var cell_pos = findPos(cell_obj);
+			
+			//Passing values to size and position function
+			positionFrame(current_text_val, cell_obj.offsetWidth, cell_obj.offsetHeight, cell_pos[1], cell_pos[0]);
+		}
+	}			
+}
+
+
+
+
+
+function test(){
+	alert(Grids[0].ColNames);
+}
+</script>
+
+</head>
+
+<body onkeypress="detectTableKeys(event);">
+
+	<div style="width:100%;">
+<!--************************************
+	TABLE ACTIONS
+*************************************-->
+		<div class="table_actions">
+			<div class="column_one no_width">
+				<p>
+					<a href="#" class="button"><span>Add</span></a>
+					<a href="#" class="button disabled"><span>Remove</span></a>
+					<a href="#" class="button"><span>Multi-Level<em class="dropdown">&nbsp;</em></span></a>
+					<a href="#" class="button"><span>Find</span></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#" class="button"><span>Save</span></a>
+					<a href="#" class="button"><span>Cancel</span></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#" class="button"><span>Undo</span></a>
+					<a href="#" class="button"><span onclick="test();">Redo</span></a>
+				</p>
+			</div>
+			<div class="column_three">
+				<p class="pagination">
+					<p>Selected: 0 of 10</p>
+				</p>
+			</div>
+		</div>
+
+		<div style="height:300px; clear:both; width: 100%;">
+			<treegrid Data_Url="agile_table2.xml"> </treegrid>
+		</div>
+	</div>
+
+</body>
+</html>

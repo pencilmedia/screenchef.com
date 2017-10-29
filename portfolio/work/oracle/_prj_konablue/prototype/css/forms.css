@@ -1,0 +1,29 @@
+input.text, p.disabled, select, textarea {
+	border: 1px solid #cbcbcb;
+	color: #333;
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	margin-top: 2px;
+	padding: 0px 2px 0px 2px;
+}
+
+textarea {
+	padding: 2px 2px 2px 2px;
+}
+
+input.text, p.disabled, select {
+	height: 16px;
+}
+
+p.disabled {
+	border: 1px solid #cbcbcb;
+	margin-left: 10px;
+}
+
+select {
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	color: #333;
+	border: 1px solid #cbcbcb;
+	width: 120px;
+}

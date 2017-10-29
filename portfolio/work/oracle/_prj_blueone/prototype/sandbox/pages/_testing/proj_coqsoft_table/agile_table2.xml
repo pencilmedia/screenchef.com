@@ -1,0 +1,155 @@
+<Grid>
+
+<!-- BEGIN: cut/paste to your XML config file -->
+<Cfg id='agile_table' SortIcons='0' MaxWidth='0' MaxHeight='0' ResizingMain="0" Version='37' Hover="1" />
+<Colors Default="255,255,255"
+        EditedCell="228,238,255" FocusedCell="228,238,255" ChangedCell="0,0,0"
+        Changed="0,0,0" Focused="-27,-17,0"
+        CannotFocus="255,255,255"  ReadOnly="0,0,0"/>
+<!-- ^ Focused is somehow based on Read Only -->
+<Panel Visible="1" Select="1" Delete="0" />
+<Img Grid="agile.gif" />
+<Toolbar Visible="0" />
+<!-- END: cut/paste to your XML config file -->
+
+<!-- WITHIN COLUMN NAME: -->
+<!-- SET column number (col00...) -->
+<!-- SET column type   (textbox...) -->
+<Cols>
+      <C Name='col01noedit' CanEdit='0'/>
+      <C Name='col02noedit' CanEdit='0'/>
+      <C Name='col03noedit' CanEdit='0'/>
+      <C Name='col04noedit' CanEdit='0'/>
+      <C Name='col05noedit' CanEdit='0'/>
+      <C Name='col06textbox' CanEdit='0'/>
+      <C Name='col07textbox' CanEdit='0'/>
+      <C Name='col08multitext' CanEdit='0'/>
+      <C Name='col09textbox' CanEdit='0'/>
+      <C Name='col10textbox' CanEdit='0'/>
+      <C Name='col11textbox' CanEdit='0'/>
+      <C Name='col12textbox' CanEdit='0'/>
+      <C Name='col13calendar' CanEdit='0'/>
+      <C Name='col14textbox' CanEdit='0'/>
+      <C Name='col15textbox' CanEdit='0'/>
+</Cols>
+<Body>
+<B>
+<!-- EACH I denotes a row -->
+<!-- VALUES for rows are declared horizontally COLUMN="VALUE" x N -->
+<!-- ROW 01 --><I id="row01"
+	
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment" 
+	col02noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col02noeditClassOuter="GCell has_attachment"
+	col03noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col03noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="1232-01"
+	col07textbox="No Privilege"
+	col08multitext="180W POWER SUPPLY"
+	col09textbox="A"
+	col11textbox="Production"
+	col12textbox="Production"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 02 --><I id="row02" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment" 
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+ 	col06textbox="23-8751"
+	col07textbox="No Privilege"
+	col08multitext="HYDRO-BLATOR 5F, 60 CM, IN POUCH, NON STERILE"
+	col09textbox="B"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 03 --><I id="row03" 
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="23-8752"
+	col07textbox="No Privilege"
+	col08multitext="HYDRO-BLATOR 5F, 90 CM, IN POUCH, NON STERILE"
+	col09textbox="A"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 04 --><I id="row04" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col0noedit5HtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="23-8755"
+	col07textbox="No Privilege"
+	col08multitext="HYDRO-BLATOR 5F, 50 CM, IN POUCH, NON STERILE"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 05 --><I id="row05" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment" 
+	col03noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col03noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="250-0400"
+	col07textbox="No Privilege"
+	col08multitext="INTEL CORE DUO PROCESSOR"
+	col09textbox="B"
+	col11textbox="Production"
+	col12textbox="Production"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 06 --><I id="row06" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment" 
+	col03noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col03noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="301-4160"
+	col07textbox="No Privilege"
+	col08multitext="IC CNTR 4 BIT SYN PSET ASCL"
+	col09textbox="A"
+	col11textbox="Production"
+	col12textbox="Production"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 07 --><I id="row07" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="32-43-234-41"
+	col07textbox="No Privilege"
+	col08multitext="TEST LONG PN"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 08 --><I id="row08" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment" 
+	col0noedit2HtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col02noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="32-5354"
+	col07textbox="No Privilege"
+	col08multitext="16K GATES QUICKRAM FPGA, TQFP-100, PROGRAMMED AS IR32112.CHP"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 09 --><I id="row09" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="32-5356"
+	col07textbox="No Privilege"
+	col08multitext="EMBEDDED LINUX PROCESSOR, PBGA-256"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 10 --><I id="row10" 
+	col01noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col01noeditClassOuter="GCell has_attachment"
+	col04noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col04noeditClassOuter="GCell has_attachment"
+	col05noeditHtmlPrefix="&lt;img src='../../../global/images/icn_status_dot_gray.png'&gt;" col05noeditClassOuter="GCell has_attachment"
+	col06textbox="37-4503"
+	col07textbox="No Privilege"
+	col08multitext="DIP SWITCH (SERIES 218), HALF PITCH, 2 POSITIONS, 218-2LPST"
+	col13calendar="05/30/06 11:45 AM"
+	/>
+<!-- ROW 11 --><I id="row11" col06textbox="Extra" />
+<!-- ROW 12 --><I id="row12" col06textbox="Extra" />
+<!-- ROW 13 --><I id="row13" col06textbox="Extra" />
+<!-- ROW 14 --><I id="row14" col06textbox="Extra" />
+<!-- ROW 15 --><I id="row15" col06textbox="Extra" />
+<!-- ROW 16 --><I id="row16" col06textbox="Extra" />
+<!-- ROW 17 --><I id="row17" col06textbox="Extra" />
+<!-- ROW 18 --><I id="row18" col06textbox="Extra" />
+</B>
+</Body>
+<Header RowSelect="" col01noedit="" col02noedit="" col03noedit="" col04noedit="" col05noedit="" col06textbox="Item Number" col07textbox="Old Item Description" col08multitext="New Item Description" col09textbox="Old Rev" col10textbox="New Rev" col11textbox="Old Lifecycle Phase" col12textbox="New Lifecycle Phase" col13calendar="Effective Date" col14textbox="Mass" col15textbox="Product Lines" />
+</Grid>

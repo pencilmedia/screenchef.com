@@ -1,0 +1,1108 @@
+/* BEGIN: Forms.less
+// ----------------------------------------------------*/
+
+// GLOBAL FORM ELEMENTS
+// -----------------------------------------------------
+a {
+	border-bottom: 1px dotted @grayDarkest; 
+	color: @linkColor;
+	text-decoration: none;
+	&:hover {
+		color: @linkColorHover;
+		text-decoration: none;
+	}
+	&.jargon {
+		cursor: help;
+		text-decoration: none; // Users Assistance
+	}
+}
+label {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+input[type="checkbox"],
+input[type="radio"] { 
+	box-shadow: none; 
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	.border-radius(@inputBorderRadius);
+	.box-shadow(inset 0 0px 5px rgba(100,100,100,.3));
+	border: 1px solid @inputBorder;
+	border-bottom: 1px solid lighten(@grayLight, 25%);
+	border-right: 1px solid lighten(@grayLight, 25%);
+	color: @grayDark;
+	display: inline-block;
+	font-size: @baseFontSize;
+	margin: 0;
+	padding: 4px 6px; // Color Gradient
+	height: @baseLineHeight;
+	line-height: inherit;
+	// Focus state
+	&:focus {
+		background: @white;
+		border-color: @blueHighlight;
+		box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 104, 139, .4);
+		&:required {
+			&:invalid {
+			  border-color: @red;
+			  color: @red;
+			  &:focus {
+			    .box-shadow(0 0 6px lighten(#ee5f5b, 20%));
+			  	border-color: lighten(@red, 10%);
+			  }
+			}
+		}
+	}
+}
+textarea {
+	height: auto;
+}
+.checkbox input[type="checkbox"] {
+	margin-left: 0; //override Bootstrap
+}
+// HTML5 invalid states
+// Shares styles with the .control-group.error above
+textarea:focus:required:invalid,
+select:focus:required:invalid,
+input:focus:required:invalid,
+input[type="text"]:focus:required:invalid,
+input[type="password"]:focus:required:invalid,
+input[type="datetime"]:focus:required:invalid,
+input[type="datetime-local"]:focus:required:invalid,
+input[type="date"]:focus:required:invalid,
+input[type="month"]:focus:required:invalid,
+input[type="time"]:focus:required:invalid,
+input[type="week"]:focus:required:invalid,
+input[type="number"]:focus:required:invalid,
+input[type="email"]:focus:required:invalid,
+input[type="url"]:focus:required:invalid,
+input[type="search"]:focus:required:invalid,
+input[type="tel"]:focus:required:invalid,
+input[type="color"]:focus:required:invalid {
+	border-color: @green;
+	&:focus,
+	&:active {
+		border-color: @blueDarker;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 104, 139, .4);						
+	}
+}
+input[readonly] {
+	background: @grayLightest;
+	// Focus state
+	&:focus {
+		background: @grayLightest;
+		border-color: @grayLight;
+		box-shadow: none;
+		outline: 0;
+		outline: thin dotted \9; /* IE6-9 */
+	}
+}
+
+.input-large { width: 60%; }
+.input-xlarge { width: 80%; }
+.input-xxlarge { width: 100%; }
+
+.divider {
+	border-bottom: 1px solid @blueLightBorder;
+}
+
+// Disabled fields
+button[disabled], html input[disabled], input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+	cursor: not-allowed;
+     color: @grayLighter !important;
+	background-color: #eee;
+}
+
+// Status Colors
+// -----------------------------------------------------
+.not-licensed {
+	color: @notLicensedText;
+}
+.licensed {
+	color: @licensedText;
+}
+.trial {
+	color: @trialText;
+}
+.trial-ending {
+	color: @trialEndingText;
+}
+.deactivated {
+	color: @deactivatedText;
+}
+.trial-expired {
+	color: @deactivatedText;
+}
+
+
+// SHARED STYLES
+// -----------------------------------------------------
+.instructions {
+	color: @gray;
+	font-style: italic;
+	line-height: 16px;
+	margin-top: 10px;
+}
+
+dl {
+	dd {
+		label.checkbox {
+			cursor: pointer;
+			display: inline-block;
+			font-size: 90%;
+			font-weight: normal;
+			margin: 0 0 10px 0;
+			text-align: left;
+			line-height: 22px;
+			input[type='checkbox'] {
+				width: 15px;
+			}
+		}
+	}
+}
+
+
+// STATBOX
+// -----------------------------------------------------
+.statbox {
+	border-bottom: 1px solid @blue;
+	border-top: 1px solid @blue;
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+	overflow: auto;
+	li {
+		border-right: 1px solid @blue;
+		float: left;
+		height: auto;
+		padding: 10px 0;
+		text-align: center;
+		width: 33%;
+		&:last-child {
+			border-right: none;
+		}
+		h3, h4, 
+		span {
+			display: block;
+			margin: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+			em {
+				display: block;
+				line-height: 10px;
+			}
+		}
+		h3, h4 {
+			color: @grayLighter;
+		}
+		h3 {
+			font-size: 135%;
+			line-height: 20px;
+		}
+		span {
+			color: @blueDarkest;
+			font-size: 85%;
+		}
+	}
+	&.dual {
+		li {
+			width: 50%;
+		}
+	}
+}
+
+
+// INFO LIST
+// -----------------------------------------------------
+aside {
+	article {
+		> dl, 
+		.info-unit {
+			box-sizing: border-box;
+			margin: 20px 0;
+			min-height: 85px;
+			dd {
+				list-style: none;
+				a {
+					word-wrap: break-word;
+				}
+				h1 {
+					font-size: 145%;
+					line-height: 22px;
+					margin: 0;
+					padding: 0 10px 0 0;
+					white-space: normal;
+					word-wrap: break-word;
+				}
+				h4 {
+					margin: 0;
+					padding: 0;
+				}
+				p {
+					font-size: 90%;
+					margin: 0;
+					padding-top: @baseFontSize;
+					white-space: normal;
+				}
+				.instructions {
+					padding-top: 0;
+				}
+			}
+			.no-trunc {
+				overflow: visible;
+				text-overflow: visible overflow;
+				white-space: normal;
+				li:first-child {
+					outline: none;
+					&:hover {
+						outline: none;
+					}
+				}
+			}
+			.edit {
+				display: inline-block;
+				float: right;
+				margin: 2px 1px; //Allows the border to be visible on hover
+				padding: 3px;
+				button, .btn {
+					.border-radius(0);
+					background: none;
+					border: none;
+					box-shadow: none;
+					color: @blueDarkest;
+					font-size: 145%;
+					padding: 8px 0;
+					width: 40px;
+					&:hover {
+						background-color: @blue;
+						color: @navyBlue;
+						outline: 1px solid @blueDark;
+					}
+				}
+			}
+			// Form with photo
+			&.with-photo {
+				> dd {
+					margin-left: 95px;
+				}
+				dd {
+					&:first-child {
+						float: left;
+						margin: 0;
+						min-height: 90px; 
+						width: 90px; // gives space to see dotted border when in edit mode
+						text-align: center;
+						img {
+						    border:1px solid @blueLight;
+							box-shadow: 0 0 10px 2px @grayLighter;
+							height:auto;
+							margin-top: 5px;
+							width:75px;
+						}
+						img.device {
+							border: none;
+							box-shadow: none;
+						}
+					}
+				}
+				.photo {
+					margin: 2px;
+					padding: 3px 5px; 
+					width: 75px; // gives space to see dotted border when in edit mode // TODO: Not sure if this class is still needed.. don't think so... verify and remove.
+					float: left;
+				}
+			}
+			// Form with info-box
+			&.with-info {
+				margin-bottom: 0;
+				min-height: 60px;
+				dd {
+					&:first-child {
+						float: left;
+						margin: 0;
+						min-height: 70px; 
+						width: 150px; // gives space to see dotted border when in edit mode
+						text-align: center;
+						.info-box {
+							color: @gray;
+							display: table-cell;
+							font-weight: bold;
+							height: 70px;
+							line-height: 14px;
+							vertical-align: middle;
+							strong {
+								color: @green;
+								display: block;
+								font-size: 200%;
+								margin: 7px;
+							}
+						}
+						+ dd {
+								display: table-cell;
+								padding: 5px 0 0 15px;
+								vertical-align: middle;
+							
+						}
+					}
+					p {
+						&:first-child {
+							padding-top: 0;
+						}
+						&:last-child {
+							margin-bottom: @pageMargin;
+						}
+					}
+				}
+				&.no-info {
+					dd {
+						&:first-child {
+							float: none;
+							width: 100%; // undo previous set width in .with-info
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// Info Unit for License Details
+.info-unit.license-details {
+	width: 100%;
+}
+.optional {
+	color: @gray;
+	font-style: italic;
+	font-weight: normal;
+	padding-left: 3px;
+}
+
+
+// LAYOUTS FOR FORM PAGES
+// -----------------------------------------------------
+article.account-details {
+	.info-unit {
+		float: left;
+		width: 50%;
+		&:nth-of-type(2) {
+			padding-left: 20px; 
+		}
+		.datepicker, 
+		.timepicker {
+			width: 140px !important;
+		}
+		span {
+			margin: 0 5px;
+		}
+	}
+}
+article.communication {
+	dl {
+		dd {
+			margin: 0 0 10px 15px;
+			white-space: normal;
+			&:first-child {
+				font-weight: bold;
+			}
+			&:last-child {
+				font-style: italic;
+				color: @grayLighter;
+			}
+		}
+	}
+}
+
+
+// CHANGE PASSWORD - APP SETTINGS
+// -----------------------------------------------------
+.change-password {
+	form {
+		dl {
+			margin: 0 40px; // Less width so it looks better
+			input {
+				width: 95%; // allow room for icon validators
+			}
+		}
+	}
+}
+
+
+// INFO LIST FOR AUTHENTICATION
+// -----------------------------------------------------
+.authenticate {
+	legend + .info-unit  { // .info-unit immediately following an h1, reduce top margin
+		margin-top: 0;
+	}
+}
+
+
+// DRILL-DOWN LISTS - drills into another page
+// -----------------------------------------------------
+.drill-list {
+	margin: 0;
+	dd {
+		background: @listDrill no-repeat 98% center;
+		border-bottom: 1px solid @blue;
+		list-style: none;
+		margin-left: 0;
+		min-height: 45px;
+		padding: 10px 0 10px 10px;
+		vertical-align: middle;
+		> span {
+			display: block;
+		}
+		&:first-child {
+			margin-top: -10px;
+		}
+		.checkbox {
+			cursor: pointer;
+			display: inline;
+		}
+		&:hover {
+			background: @blueLight @listDrillHover no-repeat 98% center;
+			cursor: pointer;
+		}
+	}
+}
+.drill-list.read-only {
+	dd {
+		background: none;
+		cursor: default;
+		&:hover {
+			background: none;
+		}
+	}
+}
+
+
+// DROP-DOWN LISTS - Opens dropdown menu
+// -----------------------------------------------------
+.drop-list {
+	margin: 0;
+	padding: 0;
+	dd {
+		background-position: 98% center;
+		background-repeat: no-repeat;
+		border-bottom: 1px solid @blue;
+		line-height: 18px;
+		list-style: none;
+		margin: 0;
+		&:last-child {
+			border-bottom: none;
+		}
+		.row {
+			text-decoration: none;
+			color: @grayDarkest;
+			border-bottom: none;
+			display: block;
+			margin: 0;
+			min-height: 40px;
+			padding: 15px 10px;
+			> h5 {border: none;
+				line-height: 14px;
+				margin: 0;
+				font-size: 100%;
+				font-weight: normal;
+			}
+			> p {
+				display: block;
+				margin: 0;
+				padding: 0;
+				&.subtitle {
+					color: @gray;
+					padding-top: 3px;
+					line-height: 12px;
+				}
+			}
+			i[class*='fa-'] {
+				color: @blueDarker;
+				float: right;
+				font-size: 110%;
+				margin: 10px 10px 0 0;
+			}
+			&:hover {
+				background-color: @blueLightest;
+				color: @grayDarkest;
+				i[class*='fa-'] {
+					color: @grayDarkest;
+				}
+			}
+		}
+	}
+	&.user-list {
+		dd {
+			cursor: default;
+			min-height: 40px;
+			padding: 15px 0;
+			h4, h5 {
+				font-size: 97%;
+				font-weight: normal;
+				margin: 0;
+			}
+			h5 {
+				color: @gray;
+			}
+		}
+	}
+}
+
+.wipe-device-menu {
+	height: 250px;
+}
+
+
+// DATA LISTS - i.e. usage tracking, billing, etc.
+// -----------------------------------------------------
+.data-list {
+	margin: 0;
+	dd {
+		list-style: none;
+		padding: 5px 0;
+	}
+	span {
+		display: inline-block;
+		width: 50%;
+		&:last-child {
+			text-align: right;
+		}
+	}
+}
+
+
+
+// DATA MENUS - History Switcher Listings, Courtesy Menu
+// -----------------------------------------------------
+ .data-listings {
+   > ul, > dl {
+     max-height: 365px;
+     overflow: auto; // lock height and scroll
+   }
+   > ul {
+     margin: 5px 0;
+     li {
+       border-bottom: 1px solid @blueLightBorder;
+       cursor: pointer;
+       list-style: none;
+       margin: 0;
+       padding: 10px 15px;
+       position: relative;
+       text-align: left;
+       &:hover {
+         background-color: @blueHover;
+         p + i {
+           color: @navyBlue;
+         }
+         button {
+           i {
+             color: @blueDarkest;
+           }
+         }
+       }
+       &:last-child {
+         border-bottom: 0;
+       }
+       h4 {
+         font-size: 1em;
+         margin: 0;
+         > i {
+           color: @blueDarkest;
+           margin-left: 5px;
+         }
+         + p {
+           color: @gray;
+           +i, 
+           + .drill-action {
+               .border-radius(0);
+               background: none;
+               border: none;
+               box-shadow: none;
+               display: table-cell;
+               height: 30px;
+               padding: 0;
+               position: absolute;
+               right: 10px;
+               top: 16px;
+               width: 12%;
+               &:hover {
+                 background-color: @blue;
+                 outline: 1px solid @blueDark;
+                 i {
+                   color: @navyBlue;
+                 }
+               }
+             i {
+               color: @blueDarkest;
+             }
+           }
+           + i {
+             color: @blueDarkest;
+             padding-top: 8px;
+             &:hover {
+               background: none;
+               outline: none;
+             }
+           }
+         }
+       }
+       h4, p {
+         width: 85%;
+       }
+     }
+   }
+ }
+ 
+
+// LABELS & LABEL LISTS - i.e. privilege pill list
+// -----------------------------------------------------
+.label-list,
+.pill-list {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	li {
+		float: left;
+		line-height: 25px;
+		list-style: none;
+		width: auto;
+		padding: 3px;
+	}
+}
+.label-info {
+	display: inline-block;
+	font-size: 85%;
+	background-color: @blueDarkest;
+	margin: 3px 0;
+}
+
+// FILTERS
+// -----------------------------------------------------
+.form-inline {
+	clear:both;
+	margin-bottom: 0;
+	margin-left: @pageMargin;
+	margin-right: @pageMargin;
+	min-width: @minWidthContent;
+	> fieldset {
+		display: inline-block;
+		width: 100%; // USERS/CUSTOMERS USES THIS
+		position: relative; // MIDAS USES THIS
+		//border: 1px solid @blueDark;
+		.chosen-container {
+			width: 100%;
+			+ .btn {
+				+ em {
+					float: right;
+					position: absolute;
+					right: 65px;
+					top: 10px;
+				}
+			}
+			.chosen-choices {
+				padding: 1px 35px 1px 0;
+			}
+		}
+		p {
+			float: left;
+			margin: 0;
+			min-height: 70px;
+			padding: 20px 0;
+			&:first-child {
+				padding-left: @pageMargin;
+				text-align: right;
+				width: 35%;
+				select {
+					margin-right: 20px;
+					width: 45%;
+				}
+				&:empty {
+					width: 20%;
+				}
+			}
+			&:last-child {
+				padding-left: 5px;
+				padding-right: 10%;
+				position: relative;
+				width: 65%;
+				label {
+					float: left;
+					margin-right: 5px;
+				}
+				.chosen-container {
+					//width: 85%
+				}
+				.chosen-container + .btn {
+					background: none;
+					border: 1px solid transparent;
+					box-shadow: none;
+					color: @blueDarkest;
+					cursor: pointer;
+					float: right;
+					padding: 6px;
+					position: absolute;
+					right: 15.5%;
+					top: 20px;
+					visibility: hidden;
+					width: 35px; // This is the "CLEAR" icon that appears in the "input" field - Hidden by default
+					&:hover {
+						background-color: @blue;
+						border: 1px solid @grayLighter;
+						border-bottom-left-radius: 0;
+						border-top-left-radius: 0;
+						color: @navyBlue;
+					}
+				}
+				.chosen-container-active + .btn { // Show Go "Arrow" icon when active
+					visibility: visible;
+				}
+				input.btn {
+					display: none;
+				}
+			}
+			label {
+				line-height: 30px;
+			}
+		}
+		p[style*="display:none"] + p {
+			left: 20%;
+		}
+		//.border-radius(@inputBorderRadius)
+	}
+}
+.manage-customers-users {
+	.form-search {
+		> fieldset {
+			p {
+				&:last-child {
+					.chosen-container {
+						width: 80%;
+					}
+					.chosen-container + .btn {
+						right: 32.25%;
+					}
+				}
+			}
+		}
+	}
+}
+.filter-container {
+	&:after { 
+	   clear: both;
+	   content: "."; 
+	   display: block; // Clear the float 
+	   height: 0; 
+	   visibility: hidden;
+	}
+	dd {
+		box-sizing: border-box;
+		float: left;
+		margin: 0;
+		min-height: 30px;
+		white-space: nowrap;
+		label {
+			line-height: 28px;
+			margin: 0 5px 0 0;
+		}
+		&:first-child { 
+			width: 30%;
+			label {
+				float: left;
+				width: auto;
+			}
+			select {
+				float: left;
+				height: 28px;
+				width: auto;
+			}
+			.chosen-container {
+				width: 91%;
+			}
+		}
+		&:last-child {
+			padding-left: 25px;
+			width: 70%;
+		}		
+	}
+}
+
+
+// ERRORS, ALERTS & MESSAGES
+// -----------------------------------------------------
+.confirmation {
+	.border-radius(@inputBorderRadius);
+	box-shadow: 0 0 10px 2px @grayLighter;
+	color: @white;
+	display: none; //inline-block;
+	float: right;
+	font-weight: bold;
+	padding: 10px 20px;
+	position: absolute;
+	right: 35%;
+	text-align: center;
+	top: 65px;
+	width: auto; // Dark Pill Message
+	background: @grayDark;
+}
+.confirmation-wipe {
+	.border-radius(10px);
+	background: @grayDark;
+	box-shadow: 0 0 10px 2px @grayLighter;
+	color: @white;
+	float: right;
+	font-size: 135%;
+	padding: 10px 20px 10px 20px;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+	width: 250px; // Dark Pill Message
+	height: 250px;
+}
+.error { // ERRORS for labels, inputs and span message on forms
+	label {
+		color: @red;
+		span {
+			display: inline;
+			font-style: 90%;
+		}
+	}
+	a {
+		color: @red;
+	}
+	input,
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	.uneditable-input {
+		background: @redLightest;
+		border: 1px solid @redLight;
+	}
+	.chosen-container-multi {
+		.chosen-choices {
+			background: @redLightest !important;
+			border: 1px solid @redLight !important;
+		}
+	}
+	label + span, input + span, div + span {
+		color: @red;
+		display: block;
+	}
+	.help-block {
+		margin-bottom: 0;
+	}
+}
+
+
+// EDIT FORM
+// -----------------------------------------------------
+form {
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	dd {
+		margin: 0;
+		label {
+			margin-top: 15px;
+			i {
+				margin-left: 5px;
+				color: @infoText;
+			}
+		}
+		label.checkbox:first-child {
+			margin-top: 10px;
+		}
+		input[type="checkbox"] {
+			float: left;
+			margin-right: 5px;
+			margin-bottom: 10px;
+		}
+		.radio {
+			font-weight: normal;
+			input[type="radio"] {
+				width: 15px;
+				vertical-align: middle;
+				margin: 0 5px;
+				float: none;
+			}
+		}
+		input:not([type="radio"]),
+		input[readonly],
+		textarea.email-message,
+		select {
+			width: 99%;
+		}
+		input[type="date"],
+		input[type="time"] {
+			width: 140px;			
+		}
+		input.hours {
+			width: 50px;
+		}
+		&.list-actions {
+			margin: 20px 0 10px 0;
+			padding: 3px 0; // Button Actions Container
+			.btn {
+				margin: 0 .5em 0 0;
+				width: 48.5%;
+				&:last-child {
+					margin-right: 2px;
+				}
+				i {
+					text-shadow: none;
+					font-weight: bold;
+				}
+				+ p { // Add Another User
+					padding: 0;
+					i {
+						margin-right: 5px;
+					}
+				}
+			}
+			p {
+				margin-top: 10px;
+			}
+		}
+		&.checkbox-level {
+			margin-left: 20px;
+		}
+		.checkbox + .field-description {
+			margin-left: 20px;
+		}
+		.chosen-container + .field-description {
+			margin-top: 10px;
+		}
+		.field-description {
+			display: block;
+			color: @gray-light;
+		}
+	}
+}
+
+
+// VIEW SPECIFIC
+// -----------------------------------------------------
+.app-details {
+	.info-unit {
+		dd {
+			&:first-child {
+				img {
+				    border: none;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+// FILE UPLOADER AND DRAG AND DROP
+// -----------------------------------------------------
+.grid-action-items {
+	margin-bottom:10px;
+	text-align:center;
+	a.link,
+	a.link:visited {
+		color:#75b01f;
+	}
+	.btn {
+		margin: 0 7px;
+		min-width: 225px;
+	}
+}
+optgroup {
+        border-color: navy;
+        border-style: double;
+        border-width: thin;
+}
+
+
+// NOTE: these exact styles also exist in data_upload.less, Couldnt delete because of regression
+// DRAG AND DROP UPLOAD
+.upload-prompt-box { // special radius not following .border-radius(@inputBorderRadius)
+	 overflow: hidden;
+	 .border-radius(10px);
+	 border: 3px dashed @blueDark;
+	 cursor: pointer;
+	 cursor: pointer;
+	 position: relative;
+	 text-align: center;
+	 z-index: 2;
+	 width: 100%;
+	 span {
+	   &:last-child { font-size: 80%; }
+	 }
+	 .btn {
+	   background: none;
+	   border: none;
+	   box-shadow: none;
+	   color: @gray;
+	   font-size: 140%;
+		margin: 40px 0;
+		padding: 0;
+	   span { 
+	     display: block;
+	   }
+	 }
+	 &:hover,
+	 &.hover {
+	   	//.box-shadow(inset 0 1px 15px rgba(0,0,0,.15));
+		background: @aliceBlue;
+	   	border-color: @blueSelectState;
+	   	cursor: pointer;
+	   	.btn { 
+	    	color: @blueSelectState;
+	   	}
+	 }
+	 input[type="file"] {
+	   cursor: pointer; 
+	   font-size: 328px; 
+	   height: 100%; 
+	   left: 0;
+	   opacity: 0;
+	   position: absolute; 
+	   top: 0;
+	   width: 100%;
+	   z-index: 100;
+	   &:hover { cursor: pointer; } 
+	 }
+}
+
+
+/* END: Forms.less
+// ----------------------------------------------------*/
+

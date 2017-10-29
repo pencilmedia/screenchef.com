@@ -1,0 +1,73 @@
+// Tabs.less
+// Theme: Vendavo
+// -----------------------------------------------------
+.nav-tabs {
+	border-bottom: 5px solid @blueSelectState;
+	padding-bottom: 1px;
+	> li {
+		margin-left: -1px;
+		&:first-child {
+			margin-left: 0;
+		}
+		> a {
+			background: @white;
+			border: 1px solid @blueLightBorder;
+			border-bottom: none;
+			border-radius: 6px 6px 0 0;
+			color: @navyBlue;
+			margin-right: 0;
+			text-align: center;
+			&:hover {
+				background: @blueLightest;
+				border-bottom: none;
+			}
+		}
+	}
+	li.active {
+		a {
+			background-color: @blueSelectState;
+			border-bottom: 1px solid @blueSelectState;
+			color: @white;
+			font-weight: bold;
+			text-shadow:0 1px 0 rgba(0, 0, 0, 0.25);
+			&:hover,
+			&:focus {
+				background: @blueSelectState;
+				color: @white;
+			}
+		}
+	}
+	&.sub-level { // NOTE: Thinner line to represent "sub-level"
+		border-bottom-width: 2px;
+	}
+}
+
+// Tabs in MIDAS
+// Main Tabs
+.midas {
+	.nav-tabs {
+		margin: 10px @pageMargin 0 @pageMargin;
+		> li {
+			width: 50%;
+		}
+	}
+}
+// Details Tabs
+.midas.details {
+	.nav-tabs {
+		margin: 0;
+		> li {
+			width: auto;
+			> a {
+				span {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
+.data-upload {
+	.nav-tabs {
+		margin: 0 @pageMargin;
+	}
+}

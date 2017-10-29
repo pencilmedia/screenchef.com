@@ -1,0 +1,88 @@
+<html>
+<head>
+<script type="text/javascript" src="./js_library/invo.main.js"></script>
+<script type="text/javascript" src="./js_library/invo.metrics.js"></script>
+<script type="text/javascript" src="./js_library/invo.dom.js"></script>
+<script type="text/javascript" src="./js_library/invo.event.js"></script>
+<script type="text/javascript">
+function showPopup(trigger_obj) {
+	var pop_obj = document.getElementById('popup');
+
+	var window_w = invo.metrics.getInsideWindowWidth();
+	var window_h = invo.metrics.getInsideWindowHeight();
+
+	var trigger_x = invo.metrics.getObjectLeft(trigger_obj);
+	var trigger_y = invo.metrics.getObjectTop(trigger_obj);
+	var trigger_w = invo.metrics.getObjectWidth(trigger_obj);
+	var trigger_h = invo.metrics.getObjectHeight(trigger_obj);
+
+	pop_obj.style.display = "block";
+	var popup_w = invo.metrics.getObjectWidth(pop_obj);
+	var popup_h = invo.metrics.getObjectHeight(pop_obj);
+	
+	var use_loc_x = 0;
+	var use_loc_y = 0;
+	
+	if ((trigger_x + popup_w) > window_w) {
+		use_loc_x = trigger_x - popup_w;
+	} else {
+		use_loc_x = trigger_x + trigger_w;
+	}
+	
+	if ((trigger_y + popup_h) > window_h) {
+		use_loc_y = trigger_y - popup_h;
+	} else {
+		use_loc_y = trigger_y + trigger_h;
+	}
+	
+	invo.metrics.setObjectLeft(pop_obj, use_loc_x);
+	invo.metrics.setObjectTop(pop_obj, use_loc_y);
+}
+function hidePopup() {
+	var pop_obj = document.getElementById('popup');
+	pop_obj.style.display = "none";
+}
+</script>
+<style type="text/css">
+div {
+	background: #fff;
+	border: 1px solid #000;
+}
+#div1, #div2, #div3, #div4 {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+}
+#div1 {
+	top: 10px;
+	left: 10px;
+}
+#div2 {
+	top: 10px;
+	right: 10px;
+}
+#div3 {
+	bottom: 10px;
+	left: 10px;
+}
+#div4 {
+	bottom: 10px;
+	right: 10px;
+}
+#popup {
+	position: absolute;
+	display: none;
+	width: 100px;
+	height: 100px;
+	z-index: 100;
+}
+</style>
+</head>
+<body>
+<div id="div1" onmouseover="showPopup(this)" onmouseout="hidePopup()"></div>
+<div id="div2" onmouseover="showPopup(this)" onmouseout="hidePopup()"></div>
+<div id="div3" onmouseover="showPopup(this)" onmouseout="hidePopup()"></div>
+<div id="div4" onmouseover="showPopup(this)" onmouseout="hidePopup()"></div>
+<div id="popup">Hello</div>
+</body>
+</html>

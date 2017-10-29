@@ -1,0 +1,296 @@
+Keyboarding and Shortcut Guidelines
+author: Uday Gajendar
+updated: 07/31/2007 by Joel Nave
+
+
+************************************************
+>> OVERVIEW
+************************************************
+
+It is the intent of the Agile application design to allow power users to keep their hands on the keyboard to complete their tasks.  This allows users to complete their tasks in a productive manner.  However, there are significant challenges to keyboarding and keyboard shortcut support due to the limitations of, and conflicts with, web browsers and operating systems.  This document provides:
+ 
+- guidelines to follow when defining keyboard interactions 
+- a list of all current keyboard shortcuts
+
+    
+TERMINOLOGY:
+Keyboarding = user completing tasks in the application using their keyboard without using other devices such as their mouse
+Tabbing = using TAB (SHIFT + TAB), ENTER and ESC to move focus within application pages and execute functions
+Shortcuts = a key, combination of keys, combination of keys and pointer device that execute a specific function  
+
+
+
+************************************************
+>> GENERAL GUIDELINES
+************************************************
+
+1. "Tabbing" allows users to move focus across major UI elements on a page and execute key functions.  This basic level of keyboard interaction must be supported for all features.  Any exceptions must be called out within this document, as this is the base level of keyboard support.
+
+2. Additional keyboard "shortcuts" are used for optimizing user productivity for **high value, repetitive tasks**.  Be very judicious when adding accelerators.  Limiting accelerators:
+
+- avoids confusing users with an endless list of Agile shortcuts
+- makes best use of keyboard combinations available to us
+- avoids conflicts with browser keyboard shortcuts
+
+
+
+************************************************
+>> TABBING GUIDELINES
+************************************************
+
+When defining Tabbing rules use these guidelines:
+
+- Use TAB to move the focus across major UI elements on a page
+- Use TAB to move focus 'onto' a tree or menu component, but not within the tree or menu component
+-- Use ARROW keys to move focus within a tree or menu UI component  
+- When using TAB to move focus within a UI control (e.g. Date Picker), tabbing will be a closed loop within the control.  The user must exit the control to begin tabbing UI elements
+
+
+
+************************************************
+>> SHORTCUT GUIDELINES
+************************************************
+
+To add a shortcut for a function it must:
+
+- be a repetitive task/action
+- be found in many places in Agile UI
+- significantly increase efficiency, productivity, convenience
+
+When assigning keyboard combinations to an accelerator follow these guidelines: 
+
+- use CTRL as the primary modifier (e.g. CTRL + L to launch palette)
+- SHIFT can be used in conjunction with CTRL
+- a single character can be used, but ensure that input fields won't interfere with its desired behavior
+- be consistent with user's mental model of what seems sensible
+- be consistent across contexts like form and table, for instance
+- keep in mind existing keyboard combinations for Agile 9.x products and leverage them as appropriate
+
+- DO NOT use ALT
+- DO NOT use CMD for the Mac
+- DO NOT use + or - (DEL or Backspace to be evaluated)
+- DO NOT use common browser and OS combinations (e.g. CTRL + S for Save).  exceptions for special cases only 
+
+NOTE: For some UI components we will need to suppress / override the contextual menu on Macs in order to reduce accelerator conflicts.  This currently will apply to all table and tree components
+
+
+
+************************************************
+>> TABBING and SHORTCUT KEYS
+************************************************
+
+-----------------------------
+GENERIC TABBING
+-----------------------------
+
+TAB	     =  move focus ahead
+SHIFT + TAB  =  move focus back
+ENTER	     =  executes function with focus
+
+
+-----------------------------
+TABBING - UI CONTROLS
+-----------------------------
+
+TAB	     =  move focus ahead within control
+SHIFT + TAB  =  move focus back within control
+ENTER	     =  executes function with focus and commits changes.  may close control
+ESC	     =  cancels edits and closes ui control, returning focus to previous ui element
+
+
+-----------------------------
+TABBING - ACTION DIALOGS
+-----------------------------
+
+TAB	     =  move focus ahead within dialog
+SHIFT + TAB  =  move focus back within dialog
+ENTER	     =  executes function with focus
+
+
+-----------------------------
+GLOBAL ACTIONS  
+-----------------------------
+The following Shortcuts can be used from any location on a page and are not specific to a component or location. 
+
+CTRL + SHIFT + H  =  Home
+CTRL + SHIFT + C  =  Create New  (display menu)
+CTRL + SHIFT + S  =  Search  (jump to search input)
+CTRL + SHIFT + Q  =  Parametric Search
+
+CTRL + SHIFT + N  =  Windowing
+CTRL + SHIFT + E  =  Logout
+
+
+-----------------------------
+TABLE
+-----------------------------
+
+TAB  	     =  move focus to next EDITABLE cell
+SHIFT + TAB  =  move focus to previous EDITABLE cell
+
+ARROW DOWN   =  move focus to cell below current cell
+ARROW UP     =  move focus to cell above current cell
+ARROW RIGHT  =  move focus to next cell on right
+ARROW LEFT   =  move focus to previous cell left
+
+SHIFT + CLICK       =  contiguous range selection
+CTRL + CLICK        =  non-contiguous selection toggle   
+SHIFT + ARROW UP    =  range select up  
+SHIFT + ARROW DOWN  =  range select down
+CTRL + A	    =  select all
+Note: for all selections, rows will be selected if the user is on the handle, or cells will be selected if the user is not on the handle 
+
+CTRL + C  =  copy row (agile copy)
+CTRL + V  =  paste row (agile paste)
+Note: copying / pasting cell text and values is supported by standard browser copy / paste
+
+ENTER		  =  invoke cell edit mode
+ENTER     	  =  commit cell edit and maintains focus on current cell
+ESC		  =  cancel cell edit and maintains focus on current cell
+CTRL + S  	  =  save table edits and maintains focus on current cell
+CTRL + K 	  =  cancel table edits and maintains focus on current cell
+CTRL + I	  =  add new table row (under debate)
+
+CTRL + SHIFT + CLICK  =  (on link) launches link in new window
+CTRL + E	      =  open table contents in excel 
+
+
+-----------------------------
+TREE
+-----------------------------
+
+TAB  	     =  move focus onto tree from previous outside UI element
+SHIFT + TAB  =  move focus to next UI element outside tree
+
+ARROW DOWN   =  move focus to visible tree value below current value
+ARROW UP     =  move focus to visible tree value above current value
+ARROW RIGHT  =  expand parent value that has focus 
+ARROW LEFT   =  collapse parent value that has focus
+Note: Expand ALL and Collapse ALL are supported by tabbing onto the Expand All and Collapse All buttons and hitting ENTER
+
+SHIFT + CLICK       =  contiguous range selection
+CTRL + CLICK        =  non-contiguous selection toggle   
+SHIFT + ARROW UP    =  range select up  
+SHIFT + ARROW DOWN  =  range select down
+CTRL + A	    =  select all
+
+ENTER  =  display link content in main window (view trees)
+ENTER  =  add selected values to target (selectable trees)
+
+
+-----------------------------
+MENU
+-----------------------------
+
+ARROW DOWN   =  move focus to next menu value
+ARROW UP     =  move focus to previous menu value
+ARROW RIGHT  =  displays sub-menu
+ARROW LEFT   =  returns focus to parent menu
+
+ENTER  =  executes menu function with focus
+ESC    =  closes menu without executing a function
+
+
+-----------------------------
+DATE CONTROL CALENDAR POP-UP
+-----------------------------
+
+TAB	     =  move focus ahead within control
+SHIFT + TAB  =  move focus back within control
+ENTER	     =  executes function and commits changes.  may close control
+ESC	     =  cancels edits and closes ui control, returning focus to previous ui element
+T  	     =  sets focus to today's date
+
+CTRL + L     =  launch calendar pop-up
+
+-----------------------------
+MULTI-SELECT TYPE-IN AREA
+-----------------------------
+
+Auto-complete menu NOT displayed
+ARROW DOWN   =  move focus to pill area
+ENTER	     =  validates typed-in or pasted values and maintains focus on field
+
+Auto-complete menu displayed
+ARROW DOWN   =  move focus to next menu value
+ARROW UP     =  move focus to previous menu value 
+ENTER	     =  adds selected menu value as a pill
+ESC	     =  closes menu without selection and maintains focus on type-in area
+
+CTRL + L     =  launch palette or calendar control
+
+
+-----------------------------
+MULTI-SELECT PILL AREA
+-----------------------------
+
+ARROW RIGHT  =  move focus to next pill 
+ARROW LEFT   =  move focus to previous pill
+
+SHIFT + CLICK       =  contiguous range selection
+CTRL + CLICK        =  non-contiguous selection toggle   
+SHIFT + ARROW UP    =  range select all pills left and up  
+SHIFT + ARROW DOWN  =  range select all pills right and down
+CTRL + A	    =  select all
+
+DELETE  =  delete selected pills
+
+
+-----------------------------
+PALETTE - TABLE
+-----------------------------
+
+TAB  	     =  move focus to next ui element
+SHIFT + TAB  =  move focus to previous ui element
+
+ARROW DOWN   =  move focus to row below current row
+ARROW UP     =  move focus to row above current row
+
+SHIFT + CLICK       =  contiguous range selection
+CTRL + CLICK        =  non-contiguous selection toggle   
+SHIFT + ARROW UP    =  range select up  
+SHIFT + ARROW DOWN  =  range select down
+
+ENTER     	  =  add rows with focus to target
+ESC		  =  closes palette
+
+
+-----------------------------
+PALETTE - TREE
+-----------------------------
+
+TAB  	     =  move focus to next palette ui element
+SHIFT + TAB  =  move focus to previous palette ui element
+
+ARROW DOWN   =  move focus to visible tree value below current value
+ARROW UP     =  move focus to visible tree value above current value
+ARROW RIGHT  =  expand parent value that has focus 
+ARROW LEFT   =  collapse parent value that has focus
+
+SHIFT + CLICK       =  contiguous range selection
+CTRL + CLICK        =  non-contiguous selection toggle   
+SHIFT + ARROW UP    =  range select up  
+SHIFT + ARROW DOWN  =  range select down
+CTRL + A	    =  select all
+
+ENTER  =  add tree values with focus to target
+
+
+-----------------------------
+SEARCH
+-----------------------------
+
+ENTER  =  executes search
+
+
+
+
+
+
+
+
+
+
+
+
+

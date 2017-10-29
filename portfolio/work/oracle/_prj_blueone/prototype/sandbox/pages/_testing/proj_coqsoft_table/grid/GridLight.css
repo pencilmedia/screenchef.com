@@ -1,0 +1,470 @@
+/* Full TreeGrid CSS, to know how to modify it, see TreeGridStyles.htm documentation. */
+
+/* -------------
+--- Sections --- 
+------------- */
+
+.GLBodyLeft, .GLBodyMid, .GLBodyRight, .GLHeadLeft, .GLHeadMid, .GLHeadRight, .GLFootLeft, .GLFootMid, .GLFootRight {
+
+	}
+.GLBodyLeft, .GLBodyMid, .GLBodyRight { 
+	border-top:1px solid #b0b0a0;
+	}
+.GLHeadLeft, .GLHeadMid, .GLHeadRight { 
+	border-bottom:1px solid #e0e0e0;
+	}
+.GLFootLeft, .GLFootMid, .GLFootRight { 
+	border-top:1px solid #e0e0e0;
+	}
+.GLVScroll,.GLHScroll,.GLXScroll {
+	background:#F0F0E0;
+	}
+   
+/* -----------------
+--- Special rows --- 
+----------------- */
+	
+.GLFillRow {
+	border-top: 1px solid #e0e0e0;
+	background:#f4f4f4;
+	}
+.GLFillUserRow {
+	background:#F4F4F4;
+	}	
+.GLSpace,.GLGroup,.GLSearch,.GLPager {
+	border-left:0px solid #a0a090;
+	border-right:0px solid #d0d0c0;
+	border-bottom:1px solid #e0e0e0;
+	background:#F0F0E0;
+	white-space:nowrap;
+	}
+
+/* ----------
+--- Cells --- 
+---------- */
+
+.GLHeader, .GLPanelTop {
+	background: #F0F0E0;
+	}
+.GLPanelTop,.GLPanelTopHover,.GLPanel,.GLPanelHover,.GLHeader,.GLHeaderHover {
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GLPanel,.GLPanelHover {
+	background: #F0F0E0; 
+	}
+.GLCell, .GLCellNE, .GLHeader, .GLHeaderHover, .GLPanel, .GLPanelHover, .GLPanelTopHover, .GLPanelTop, .GLHeaderHoverMulti, .GLHeaderGroup,.GLHeaderGroupFocus,.GLHeaderGroupDelete { 
+	vertical-align:top;
+	padding-bottom:1px;
+	}
+.GLPanelTop,.GLHeader {
+	border-bottom:1px solid #e0e0e0;
+	}
+.GLHeaderGroup,.GLHeaderGroupFocus,.GLHeaderGroupDelete {
+	background: #E0E0D0;
+	border-right:1px solid #b0b0a0;
+	cursor:default;
+	}
+.GLHeaderGroupFocus {
+	background: #C0C0A0;
+	}
+.GLHeaderGroupDelete {
+	background: #F0F0E0;
+	color: #F0F0E0;
+	}
+.GLCellNE {
+	cursor:default;
+	}
+.GLHeaderHover,.GLPanelTopHover {
+	border-bottom:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GLHeaderHoverMulti {
+	background: #FAF8F3; 
+	cursor:default;
+	}
+.GLHeaderFocus {
+	background: #DEDFD8; 
+	}
+.GLPanelHover,.GLPanelTopHover {
+	border-right:0px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GLHeader,.GLHeaderHover,.GLHeaderHoverMulti,.GLHeaderGroup { 
+	white-space:nowrap;
+	overflow:hidden;
+	}
+.GLRightButton, .GLFilterButton, .GLTreeIcon {
+	vertical-align:top;
+	}
+.GLCellSpaceButton {
+	overflow:hidden;
+	height:18px;
+	width:42px;
+	}
+
+
+/* -----------------
+--- Cell content --- 
+----------------- */
+
+.GLHeadText { 
+	font-size:13px;
+	padding-left:3px;
+	padding-right:3px;
+	white-space:nowrap;
+	}
+.GLHeadSort { 
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GLText,.GLTextB,.GLTextM,.GLNumber,.GLNumberB,.GLNumberM,.GLIText,.GLINumber,.GLLines,.GLTextArea,.GLHtml,.GLRadio, .GLIHtml {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	padding-left:3px;
+	padding-right:3px;
+	border:0px solid;
+	background:inherit;
+	}
+.GLRadio {
+	padding-left:0px;
+	padding-right:5px;
+	}
+.GLText,.GLTextB,.GLTextM {
+	white-space:nowrap;
+	padding-top:2px;
+	}
+.GLHtml {
+	padding-top:2px;
+	cursor:default;
+	}
+.GLIText,.GLINumber, .GLIHtml, .GLIList { 
+	display:block;
+	white-space:nowrap;
+	_margin-top:-1px;
+	_margin-bottom:-1px;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GLNumber,.GLNumberB,.GLNumberM,.GLINumber {
+	text-align:right;
+	white-space:nowrap;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GLTextB,.GLNumberB,.GLNumberM {
+	color:blue;
+	}
+.GLTextM,.GLNumberM {
+	font-weight:bold;
+	}
+.GLLines,.GLTextArea {
+	padding-top:1px;
+	padding-bottom:1px;	
+	}
+.GLTextArea {
+	margin:0px;
+	_padding-top:0px;
+	_padding-bottom:0px;
+	_padding-left:3px;
+	_padding-right:0px;
+	_line-height:13px;
+	}
+.GLSelect {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:10px;	
+	}
+.GLButton,.GLButtonSpace,.GLButtonSpaceChecked {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:9px;
+	height:18px; 
+	cursor:pointer;
+	_cursor:hand;	
+	padding-bottom:3px;
+	margin-bottom:4px;
+	}
+.GLButtonImg {
+	cursor:pointer;
+	_cursor:hand;
+	text-align:right;
+	}
+.GLGroupCustom {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	color:#BBB;
+	font-style:italic;
+	padding-left:5px;
+	cursor:default;
+	white-space:nowrap;
+	height:17px
+	}
+.GLButtonSpace {
+	width:42px;
+   	}
+.GLButtonSpaceChecked {
+	color:blue;
+	font-weight:700;
+	width:42px;
+	}
+
+
+/* ------------
+--- Toolbar --- 
+------------ */
+.GLControlPanel {
+	border-top:1px solid #b0b0a0;
+	background: #F0F0E0;
+	}
+.GLControlPanelCell {
+	background: #F0F0E0;
+	}
+.GLControlPanelImg,.GLControlPanelImgHover,.GLControlPanelImgChecked,.GLControlPanelImgHoverChecked {
+	cursor:pointer;	
+	_cursor:hand;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:2px;
+	border-right:1px solid #d0d0c0;
+	font-size:12px;
+	}
+.GLControlPanelImgHover,.GLControlPanelImgHoverChecked {
+	margin-top:0px;
+	margin-bottom:1px;
+	padding-top:3px;
+	padding-bottom:1px;
+	border-bottom:1px solid #FCC247;
+	background: #FFFFFF; 
+	}
+.GLControlPanelImgChecked,.GLControlPanelImgHoverChecked {
+	color:#8080FF;
+	font-weight:700;
+	}
+.GLControlPanelFormula {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	padding-left:5px;
+	padding-right:5px;
+	white-space:nowrap;
+	}
+	
+/* -------------
+--- Cfg menu --- 
+------------- */
+   
+.GLCfgMenu {
+	border:3px outset #DDD;
+	padding:6px;
+	background:#ddddff;
+	margin:3px;
+	}
+.GLCfgMenuItem {
+	font-size:13px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GLCfgMenuHover {
+	background:#ffeeaa;
+	font-size:13px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GLCfgMenuButton {
+	width:70px;
+	font-size:11px;
+	margin:2px;
+	}
+
+
+/* ----------------
+--- Popup menus --- 
+---------------- */
+
+.GLFilterMenu {
+	border:1px outset #aaaaff;
+	background:#eeeeee;
+	margin-top:1px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GLFilterMenuItem {
+	font-size:11px;
+	}
+.GLFilterMenuHover {
+	background:#ffeeaa;
+	font-size:11px;
+	}
+
+
+/* ----------------
+--- Date picker --- 
+---------------- */
+
+
+.GLPickTag {
+	background:#eeeeee;
+	padding:5px;
+	margin-top:1px;
+	}
+.GLPickMS{
+	width:77px;
+	font-size:11px;
+	}
+.GLPickB{
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:10px;
+	font-weight:bold; 
+	cursor:pointer;
+	_cursor:hand;
+	width:20px;
+	}
+.GLPickMY{
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:13px;
+	font-weight:bold; 
+	color:#2200cc;
+	}
+.GLPickWDN {
+	background-color:#bbbbbb;
+	text-align:center; 
+	width:20px; 
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:11px;
+	}
+.GLPickWD, .GLPickSa, .GLPickSu, .GLPickSel, .GLPickNow, .GLPickWDNE, .GLPickSaNE, .GLPickSuNE, .GLPickSelNE, .GLPickNowNE {
+	text-align:center; 
+	width:20px;
+	font-family:Verdana,Microsoft Sans Serif,Arial;
+	font-size:12px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GLPickWDNE, .GLPickSaNE, .GLPickSuNE, .GLPickSelNE, .GLPickNowNE {
+	cursor:default;
+	}
+.GLPickWD {
+	background-color:#ffffff;
+	}
+.GLPickSa {
+	background-color:#ddddff;
+	}
+.GLPickSu {
+	background-color:#aaaaff;
+	}
+.GLPickSel {
+	background-color:#ffff77;
+	}
+.GLPickNow {
+	background-color:#dd44dd;
+	}
+
+
+/* ----------
+--- Pager --- 
+---------- */
+
+.GLPagerBody {
+	border-left:1px solid #e0e0e0;
+	border-right:0px solid #a0a090;
+	background: #F0F0E0;
+	}
+.GLPagerHeader {
+	border-bottom:0px solid #b0b0a0;
+	border-top:0px solid #b0b0a0;
+	border-left:1px solid #e0e0e0;
+	border-right:0px solid #a0a090;
+	}
+.GLPagerItem, .GLPagerHover, .GLPagerCaption {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	border-top:0px solid #ffffff; 
+	border-bottom:0px solid #d0d0c0;
+	border-left:0px solid #d0d0c0;
+	border-right:0px solid #d0d0c0;
+	padding-left:3px;
+	padding-right:3px;
+	background: #F0F0E0;
+	}
+.GLPagerCaption {
+	height:17px;
+	cursor:default;
+	}
+.GLPagerItem {
+	cursor:pointer;
+	_cursor:hand;
+	background: #FFFFFF;
+	}
+.GLPagerHover {
+	cursor:pointer;
+	_cursor:hand;
+	background: #DCF0FF;
+	}
+.GLPagerCursor {
+	cursor:pointer;
+	_cursor:hand;
+	background:#aFaF00;
+	opacity:0.5;              /* Mozilla */
+	filter:alpha(opacity=50); /* IE */
+	}
+.GLPagerSort1 {
+	color: #006600;
+	}
+.GLPagerSort2 {
+	color: #00AE00;
+	}
+.GLPagerSort3 {
+	color: #00FF00;
+	}
+.GLPagerSortS {
+	color: black;
+	}
+	
+/* -----------------
+--- Simple pager --- 
+----------------- */
+
+.GLSimplePager {
+   padding-left:3px;
+   padding-top:2px;
+   padding-bottom:2px;
+   margin-top:2px;
+   margin-bottom:2px;
+   font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11px;
+	cursor:pointer;
+	color:blue;
+	display:inline-block;
+   }
+.GLSimplePager:visited {
+   color:blue;
+   }
+.GLSimplePager:hover {
+   color:red;
+   }
+
+/* ----------
+--- Other --- 
+---------- */
+
+.GMessage, .GLMessage {
+	background:#F0F0E0;
+	border:3px outset #DDD;
+	padding:10px;
+	white-space:nowrap;
+	}
+.GLPageMessage {
+	background:#FaFaFa;
+	border:1px solid #f77;
+	padding:10px;
+	}
+.GLPage {
+	border-top:0px solid #d0d0c0;
+	}
+.GLPageOne {
+	
+	}
+.GLTable {
+	border-left:1px solid #e0e0e0;
+	border-right:1px solid #e0e0e0;
+	}

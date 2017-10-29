@@ -1,0 +1,121 @@
+div.switcher p img {
+	margin: 20px 0px 20px 30px;
+}
+
+p.heading {
+	padding: 0 0 0 30px;
+}
+
+/* Styles for collab prototypes */
+#collab1,
+#collab2,
+#collab3 {
+	font-family: Arial;
+	font-size: 11px;
+	color: #000;
+}
+
+#mod_1,
+#mod_2,
+#mod_3 {
+	position: absolute;
+	width: 160px;
+	height: 50px;
+	overflow: hidden;
+	border: 1px solid #000;
+}
+
+#mod_1 p,
+#mod_2 p,
+#mod_3 p {
+	margin: 0;
+	padding: 0;
+}
+
+
+div.module {
+	float: left;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	width: 20px;
+
+}
+
+div.module p {
+	font-size: 13px;
+}
+
+div.module p img {
+	margin: 0px 0px 5px 0px;
+}
+
+div.message em {
+	font-style: normal;
+	font-weight: bold;
+	color: #aaa;
+	font-size: 13px;
+}
+
+#title {
+	float: left;
+}
+
+
+
+/* Collab 1 */
+
+#collab1 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+
+}
+
+#mod_1 {}
+
+
+/* Collab 2 */
+
+#collab2 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+
+}
+
+#mod_2 {}
+
+#mod_2 div.message p {
+	font-size: 10px;
+}
+
+/* Collab 3 */
+
+#collab3 {
+	position: absolute;
+	top: 100px;
+	left: 40px;
+
+}
+
+#mod_3 {
+	top: 170px;
+}
+
+.hideme {display: none;}
+.showme {display: block;}
+
+#details_1,
+#details_2,
+#details_3,
+#details_4 {
+	position: absolute;
+}
+#details_2 {left: 30px;}
+#details_3 {left: 70px;}
+#details_4 {left: 110px;}
+
+
+
+
+

@@ -1,0 +1,38 @@
+#collab {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+}
+
+#collab p {
+	margin: 0;
+	padding: 0;
+}
+
+#collab div.module {
+	float: left;
+	padding: 10px;
+	text-align: center;
+	width: 30px;
+}
+
+#collab div.module p {
+	font-size: 13px;
+	color: #666;
+}
+
+#collab div.module p img {
+	margin: 0px 0px 5px 0px;
+}
+
+#collab_1,
+#collab_2,
+#collab_3,
+#collab_4 {
+	position: relative;
+	top: 20px;
+	left: 0px;
+}

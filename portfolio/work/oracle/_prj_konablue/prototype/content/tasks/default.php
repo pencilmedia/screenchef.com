@@ -1,0 +1,1 @@
+<img src="<?=$content_path;?>/tasks/default.png" />

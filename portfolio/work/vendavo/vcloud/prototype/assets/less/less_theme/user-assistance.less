@@ -1,0 +1,263 @@
+/* BEGIN: USER ASSISTANCE
+// -----------------------------------------------------*/
+
+.help, .info {
+  border: none;
+  color: @uaIcon;
+  cursor: pointer;
+  padding: 0 2px;
+  text-decoration: none;
+  &:hover {
+    color: @green;
+  }
+}
+h1 {
+  .help {
+    font-size: 70%;
+    margin-left: 3px;
+  }
+}
+
+.user-assistance {
+  overflow: auto;
+  padding-top: @navbarHeight;
+  .navbar {
+    background: @blueLightest;
+    min-width: 480px;
+    .navbar-inner {
+      background-color: transparent;
+      height: @navbarHeight;
+      .brand {
+        border: none;
+        margin-left: 5px;
+      }
+      .btn {
+        i[class='icon-print'] {
+          margin-right: 5px;
+        }
+      }
+      .pull-right {
+        padding-right: @pageMargin;
+        width: auto%;
+      }
+    }
+  }
+  .app {
+    margin: @pageMargin auto;
+    padding: @pageMargin;
+    width: 95%;
+    //border: 1px solid @blueLightBorder;
+    .accordion {
+      margin: 0;
+      padding: 0;
+      .accordion-group {
+        border: none;
+        border-bottom: 1px solid @blueLightBorder;
+        margin: 0;
+        &:last-child {
+          border-bottom: none;
+        }
+        .accordion-heading {
+          a {
+            border: none;
+            font-weight: bold;
+            padding: 15px 10px;
+            i {
+              margin-right: 5px;
+              text-align: center;
+              width: 15px;
+            }
+            &:hover {
+            background: @blueHighlight;
+              color: @grayDarkest;
+            }
+          }
+          &:hover {
+          }
+        }
+        .accordion-inner {
+          border: none;
+          padding: 0;
+          img {
+            .box-shadow(0 0 7px rgba(0,0,0,0.3));
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            width: auto;
+          }
+          p {
+            display: block;
+            margin: 20px auto;
+            max-width: 95%;
+            i[class*='icon-'] {
+              color: @blueDarkest;
+              font-size: 120%;
+              margin: 0 5px;
+              width: 20px;
+            }
+          }
+          .span6 p {
+            max-width: 90%;
+          }
+        }
+      }
+    }
+    footer {
+      font-size: 90%;
+      margin-top: 40px;
+      p {
+        padding: 0 @pageMargin;
+        span {
+          color: @grayLighter;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+// Page Help - Layout Style
+// --------------------------------------------------
+
+.page_help {
+  section {
+    > h1, > p {
+      margin-left: @pageMargin;
+      margin-right: @pageMargin;
+    }
+    h2 {
+      border-bottom: 1px solid @blueDark;
+      clear: both;
+      color: @blueDarkest;
+      font-size: 110%;
+      line-height: 24px;
+      margin: 15px @pageMargin 10px @pageMargin;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-size: 110%;
+      margin: 0 @pageMargin;
+    }
+    > ul {
+      margin-bottom: @pageMargin;
+      li {
+        margin-left: @pageMargin;
+      }
+    }
+    i {
+      color: @uaIcon;
+      margin-right: 5px;
+    }
+  }
+  .table-container {
+    border-radius: @radius;
+    border: 1px solid @blueLightBorder;
+    margin: 0 @pageMargin @pageMargin @pageMargin;
+    width: 95%;
+    // TABLES
+    // -----------------------------------------------------
+    table {
+      border-collapse: separate; // Done so we can round those corners!
+      border-left: 0;
+      width: 100%;
+      th,
+      td {
+        border-bottom: 1px solid red;
+        border-left: 1px solid @blueLightBorder;
+        padding: 5px;
+        vertical-align: top;
+      }
+      // Prevent a double border
+      caption + thead tr:first-child th,
+      caption + tbody tr:first-child th,
+      caption + tbody tr:first-child td,
+      colgroup + thead tr:first-child th,
+      colgroup + tbody tr:first-child th,
+      colgroup + tbody tr:first-child td,
+      thead:first-child tr:first-child th,
+      tbody:first-child tr:first-child th,
+      tbody:first-child tr:first-child td {
+        border-top: 0;
+      }
+      // For first th or td in the first row in the first thead or tbody
+      thead:first-child tr:first-child th:first-child,
+      tbody:first-child tr:first-child td:first-child {
+            -moz-border-radius-topleft: 4px;
+        -webkit-border-top-left-radius: 4px;
+                border-top-left-radius: 4px;
+      }
+      thead:first-child tr:first-child th:last-child,
+      tbody:first-child tr:first-child td:last-child {
+            -moz-border-radius-topright: 4px;
+        -webkit-border-top-right-radius: 4px;
+                border-top-right-radius: 4px;
+      }
+      // For first th or td in the first row in the first thead or tbody
+      thead:last-child tr:last-child th:first-child,
+      tbody:last-child tr:last-child td:first-child,
+      tfoot:last-child tr:last-child td:first-child {
+        border-radius: 0 0 0 4px;
+            -moz-border-radius-bottomleft: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+      }
+      thead:last-child tr:last-child th:last-child,
+      tbody:last-child tr:last-child td:last-child,
+      tfoot:last-child tr:last-child td:last-child {
+            -moz-border-radius-bottomright: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+      }
+
+      // Special fixes to round the left border on the first td/th
+      caption + thead tr:first-child th:first-child,
+      caption + tbody tr:first-child td:first-child,
+      colgroup + thead tr:first-child th:first-child,
+      colgroup + tbody tr:first-child td:first-child {
+            -moz-border-radius-topleft: 4px;
+        -webkit-border-top-left-radius: 4px;
+                border-top-left-radius: 4px;
+      }
+      caption + thead tr:first-child th:last-child,
+      caption + tbody tr:first-child td:last-child,
+      colgroup + thead tr:first-child th:last-child,
+      colgroup + tbody tr:first-child td:last-child {
+             -moz-border-radius-topleft: 4px;
+        -webkit-border-top-right-radius: 4px;
+                border-top-right-radius: 4px;
+      }
+      thead th {
+        text-align: left;
+      }
+      thead tr {
+        cursor: pointer;
+        &:first-child {
+          background-color: @blue;
+          border: none;
+        }
+      }
+      td {
+        b {
+          display: block;
+          font-weight: normal;
+        }
+      }
+      th {
+        border-color: @blue;
+      }
+      td {
+        border-color: @blue;
+      }
+    }
+    tbody tr:nth-child(odd) td, 
+    tbody tr:nth-child(odd) th {
+      background-color: @blueLightest;
+    }
+
+  }
+}
+
+/* END: USER ASSISTANCE
+// -----------------------------------------------------*/
+

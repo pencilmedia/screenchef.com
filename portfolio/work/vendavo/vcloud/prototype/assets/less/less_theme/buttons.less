@@ -1,0 +1,287 @@
+/* BEGIN: Buttons.less
+// ----------------------------------------------------*/
+
+// Reversed gradient on primary button
+.btn-primary {
+  .buttonBackground(lighten(@primaryButtonBackground, 15%), @primaryButtonBackground);
+}
+
+
+// Made warning button yellow since orange is taken
+.btn-warning {
+  .buttonBackground(lighten(@yellow, 15%), @yellow);
+  
+  .caret {
+    .opacity(75);
+    border-top-color: @white;
+  }
+}
+
+.btn {
+	background-color: @btnDefault;
+	background-image: @btnDefaultBaseWebkit;
+	background-image: @btnDefaultBaseMoz;
+	background-image: @btnDefaultBaseMS;
+	background-image: @btnDefaultBaseOpera;
+	background-image: @btnDefaultBG;
+	background-repeat: no-repeat;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	color: @grayDark;
+	cursor: pointer;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: 20px;
+	padding: 6px 16px;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+	border-color: @btnDefaultBorderRGB;
+}
+
+.btn:hover {
+	background-color: @btnDefault;
+	background-image: @btnDefaultBaseWebkitHvr;
+	background-image: @btnDefaultBaseMozHvr;
+	background-image: @btnDefaultBaseMSHvr;
+	background-image: @btnDefaultBaseOperaHvr;
+	background-image: @btnDefaultBGHvr;
+	background-position:0 -15px;
+	text-decoration:none;
+	-moz-transition:background-position 0.1s linear;
+	-ms-transition:background-position 0.1s linear;
+	-o-transition:background-position 0.1s linear;
+	-webkit-transition:background-position 0.1s linear;
+	transition:background-position 0.1s linear;
+}
+.btn.disabled,.btn[disabled]{
+	background-color: @grayLightest;
+	background-image:none;
+	color: #aaa;
+	filter:alpha(opacity=5);
+	opacity:0.5;
+}
+.btn-primary.active, .btn-warning.active, .btn-success.active, .btn-info.active {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-primary, .btn-primary:hover, .btn-warning, .btn-warning:hover, .btn-danger, .btn-danger:hover {
+	color: @white;
+	font-weight: bold;
+	text-shadow: 0 0 2px rgba(0, 0, 0, .85);
+	//letter-spacing: 1px
+}
+.btn-primary {
+	background-color: @btnPrimary;
+	background-image: @btnPrimaryBaseWebkit;
+	background-image: @btnPrimaryBaseMoz;
+	background-image: @btnPrimaryBaseMS;
+	background-image: @btnPrimaryBaseOpera;
+	background-image: @btnPrimaryBG;
+	background-repeat: repeat-x;
+	border-color: @btnPrimaryBorder;
+	filter: @btnPrimaryBaseMSFilter;
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled] {
+	background-color: @btnPrimaryBaseHvr;
+	background-image: @btnPrimaryHvrWebkit;
+	background-image: @btnPrimaryHvrMoz;
+	background-image: @btnPrimaryHvrOpera;
+	background-image: @btnPrimaryHvrMS;
+	background-image: @btnPrimaryHvr;
+}
+
+.btn-primary:active, .btn-primary.active {
+	background-color: #003399 \9;
+}
+
+.btn-danger {
+	background-color:  @red;
+	background-image:-moz-radial-gradient(50% 50%, farthest-corner,  @red,  lighten( @red, 10%));
+	background-image:-ms-linear-gradient(top,  @red,  lighten( @red, 10%));
+	background-image:-webkit-radial-gradient(50% 50%, farthest-corner,  @red,  lighten( @red, 10%));
+	background-image:-o-linear-gradient(top,  @red,  lighten( @red, 10%));
+	background-image:radial-gradient(50% 50%, farthest-corner,  @red,  lighten( @red, 10%));
+	background-repeat:repeat-x;
+	border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-danger:hover,.btn-danger:active,.btn-danger.active,.btn-danger.disabled,.btn-danger[disabled] {
+	background-color: @btnDangerBaseHvr;
+	background-image: @btnDangerHvrWebkit;
+	background-image: @btnDangerHvrMoz;
+	background-image: @btnDangerHvrOpera;
+	background-image: @btnDangerHvrMS;
+	background-image: @btnDangerHvr;
+}
+.btn-danger:hover, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+	background-color: lighten( @red, 10%);
+}
+.btn-danger:active, .btn-danger.active {
+	background-color:#942a25 \9;
+}
+.btn-primary.disabled,.btn-primary[disabled]{
+	background-color:#cad9e2;
+	background-image:none;
+	border:1px solid #a7bfcd;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	color: @white;
+	cursor:default;
+	filter:alpha(opacity=50);
+	font-weight:normal;
+	letter-spacing:0;
+	opacity:0.50;
+	text-shadow:none;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+	border-radius: 0;
+}
+
+.btn-danger {
+	background-color:  @red;
+	background-image:-moz-radial-gradient(50% 50%, farthest-corner,  @red,  lighten( @red, 10%));
+	background-image:-ms-linear-gradient(top,  @red,  lighten( @red, 10%));
+	background-image:-webkit-radial-gradient(50% 50%, farthest-corner,  @red,  lighten( @red, 10%));
+	background-image:-o-linear-gradient(top,  @red,  lighten( @red, 10%));
+	background-image:radial-gradient(50% 50%, farthest-corner,  @red,  lighten( @red, 10%));
+	background-repeat:repeat-x;
+	border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-danger:hover,.btn-danger:active,.btn-danger.active,.btn-danger.disabled,.btn-danger[disabled] {
+	background-color: @btnDangerBaseHvr;
+	background-image: @btnDangerHvrWebkit;
+	background-image: @btnDangerHvrMoz;
+	background-image: @btnDangerHvrOpera;
+	background-image: @btnDangerHvrMS;
+	background-image: @btnDangerHvr;
+}
+.btn-danger:hover, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+	background-color: lighten( @red, 10%);
+}
+.btn-danger:active, .btn-danger.active {
+	background-color:#942a25 \9;
+}
+.btn-primary.disabled,.btn-primary[disabled]{
+	background-color:#cad9e2;
+	background-image:none;
+	border:1px solid #a7bfcd;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	color: @white;
+	cursor:default;
+	filter:alpha(opacity=50);
+	font-weight:normal;
+	letter-spacing:0;
+	opacity:0.50;
+	text-shadow:none;
+}
+
+// BUTCONS
+// -----------------------------------------------------
+
+.butcon {
+	background: none;
+	border: none;
+	color: @blueDarkest;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	width: 30px;
+	i {
+		display: block;
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+	&:hover {
+		background-color: @blue;
+		color: @navyBlue;
+		outline: 1px solid @blueDark;
+	}
+	&.active {
+		color: @navyBlue;
+		outline: 1px solid @blueDark;// active state butcon 
+		background-color: @blue;
+		i {
+			color: @navyBlue;
+		}
+	}
+	&[disabled='disabled'], &.disabled {
+		color: @gray;
+		color: lighten(@grayLightest, 10%);
+		cursor: default;
+		i {
+			color: @grayLighter;
+		}
+		&:hover {
+			background: none;
+			border: none;
+			outline: none;
+		}
+	}
+}
+
+// BACK BUTTON
+// -----------------------------------------------------
+
+.btn-back {
+	background: @back-button-left no-repeat left center;
+	background-position: left center;
+	background-repeat: no-repeat;
+	border-bottom: none;
+	color: @grayDark;
+	cursor: pointer;
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	margin: 0;
+	outline-style: none;
+	padding: 0 0 0 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	white-space: nowrap;
+	span {
+		background: @back-button-right no-repeat right center;
+		background-position: right center;
+		background-repeat: no-repeat;
+		height: 35px;
+		line-height: 35px;
+		margin: 0;
+		padding: 8px 15px 8px 0;
+	}
+}
+.btn-back:hover {
+  background: @back-button-left-hover no-repeat left center;
+  border-bottom: none;
+  color: #333;
+  text-decoration: none;
+}
+.btn-back:hover span {
+  background: @back-button-right-hover no-repeat right center;
+}
+
+
+// BUTTON TOOLBAR
+// -----------------------------------------------------
+.btn-toolbar {
+	margin: 0;
+	.btn-group.open .btn-primary.dropdown-toggle {
+		background-color: @btnPrimaryBaseHvr;
+		background-image: @btnPrimaryHvrWebkit;
+		background-image: @btnPrimaryHvrMoz;
+		background-image: @btnPrimaryHvrOpera;
+		background-image: @btnPrimaryHvrMS;
+		background-image: @btnPrimaryHvr;
+	}
+}
+
+
+

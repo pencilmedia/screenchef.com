@@ -1,0 +1,2 @@
+<h1>@@productMaterial</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni officia qui mollitia nulla asperiores, maxime sapiente! Earum explicabo itaque, nobis perspiciatis deleniti voluptas quam magni necessitatibus quibusdam, vero consequatur eligendi!</p>

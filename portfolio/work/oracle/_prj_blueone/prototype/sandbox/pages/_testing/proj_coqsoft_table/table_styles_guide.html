@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<title>Coqsoft Table Styles Guide</title>
+
+<style type="text/css" media="screen">
+
+body {
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+
+table.coqsoft {
+	border-style: solid none none solid;
+	border-width: 1px;
+	border-color: #333;
+	empty-cells: show;
+
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 10;
+}
+
+.coqsoft td, th {
+	border-style: none solid solid none;
+	border-color: #333;
+	border-width: 1px;
+	height: 80px;
+	width: 120px;
+	text-align: left;
+}
+
+.coqsoft th {
+	background-color: #eee;
+	font-weight: normal;
+}
+.coqsoft th:first-child {
+	background-color: #dde;
+}
+.coqsoft td:first-child {
+	background-color: #eef;
+}
+
+div.gpaneltop,
+div.gheader,
+div.gpanel,
+div.gtext {
+	border: 1px solid blue;
+	margin: 8px;
+	padding: 2px;
+}
+
+div.gheadtext {
+	border: 1px solid green;
+	margin: 4px;
+	padding: 2px;
+}
+
+
+
+div.gheadleft,
+div.gheadmid,
+div.gbodyleft,
+div.gbodymid {
+	border: 1px dotted red;
+
+	position: absolute;
+	z-index: 100;
+}
+
+div.gheadleft,
+div.gbodyleft {
+	left: 25px;
+	width: 109px;
+}
+
+div.gheadmid,
+div.gbodymid {
+	left: 146px;
+	width: 352px;
+}
+
+div.gheadleft,
+div.gheadmid {
+	top: 25px;
+	height: 68px;
+}
+
+div.gbodyleft,
+div.gbodymid {
+	top: 105px;
+	height: 229px;
+}
+
+span {
+	display: block;
+	padding: 2px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table class="coqsoft" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<th>
+		<div class="gpaneltop">GPanelTop</div>
+	</th>
+	<th>
+		&nbsp;
+	</th>
+	<th>
+		<div class="gheader">
+			GHeader
+			<div class="gheadtext">
+				GHeadText
+			</div>
+		</div>
+	</th>
+	<th>
+		&nbsp;
+	</th>
+</tr>
+<tr>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+</tr>
+<tr>
+	<td>
+		<div class="gpanel">GPanel</div>
+	</td>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		<div class="gtext">GText</div>
+	</td>
+	<td>
+		&nbsp;
+	</td>
+</tr>
+<tr>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+	<td>
+		&nbsp;
+	</td>
+</tr>
+</table>
+
+<div class="gheadleft">
+	<span>GHeadLeft</span>
+</div>
+
+<div class="gheadmid">
+	<span>GHeadMid</span>
+</div>
+
+<div class="gbodyleft">
+	<span>GBodyLeft</span>
+</div>
+
+<div class="gbodymid">
+	<span>GBodyMid</span>
+</div>
+
+</body>
+</html>

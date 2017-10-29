@@ -1,0 +1,32 @@
+/* BEGIN: theme.scss
+// -----------------------------------------------------*/
+
+// Bourbon Mixin Library
+@import "bourbon/_bourbon";
+
+// Global Includes
+@import "theme/variables";
+@import "theme/mixins";
+
+// Plugins Restyling
+// @import "theme/select2";
+
+// Bootstrap Overrides
+// Page Layout
+@import "theme/layout";
+
+// Global/Common
+@import "theme/typography";
+@import "theme/common";
+@import "theme/tabs";
+@import "theme/forms";
+@import "theme/alerts";
+@import "theme/buttons";
+@import "theme/animation";
+
+// Components
+@import "theme/dialogs";
+
+// Application Themes
+@import "theme/themes";
+

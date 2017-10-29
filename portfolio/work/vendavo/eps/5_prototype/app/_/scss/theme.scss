@@ -1,0 +1,33 @@
+/* BEGIN: theme.scss
+// -----------------------------------------------------*/
+
+// Global Includes
+@import "theme/variables";
+@import "theme/mixins";
+
+// Plugins Restyling
+// @import "theme/select2";
+
+// Vendavo Bootstrap Overrides
+// Page Layout
+@import "theme/offcanvas";
+@import "theme/layout";
+@import "theme/navbar";
+
+// Global/Common
+@import "theme/typography";
+@import "theme/animation";
+@import "theme/breadcrumb";
+@import "theme/common";
+@import "theme/components";
+@import "theme/tabs";
+@import "theme/forms";
+@import "theme/alerts";
+@import "theme/buttons";
+
+// Components
+@import "theme/dialogs";
+
+// Application Themes
+@import "theme/themes";
+

@@ -1,0 +1,124 @@
+   1.
+      <?xml version="1.0" encoding="utf-8"?>
+   2.
+      <mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml"
+   3.
+          layout="vertical"
+   4.
+          creationComplete="init()">
+   5.
+          <mx:Script>
+   6.
+              <![CDATA[
+   7.
+                  import flash.desktop.DragActions;
+   8.
+                  import mx.controls.Alert;
+   9.
+                  import mx.controls.Image;
+  10.
+                  import flash.filesystem.File;
+  11.
+                  import flash.desktop.TransferableData;
+  12.
+                  import flash.desktop.TransferableFormats;
+  13.
+                  import flash.events.NativeDragEvent;
+  14.
+                  import flash.desktop.DragManager;
+  15.
+       
+  16.
+                  private function init():void{
+  17.
+                      this.addEventListener(NativeDragEvent.NATIVE_DRAG_ENTER,onDragIn);
+  18.
+                                  this.addEventListener(NativeDragEvent.NATIVE_DRAG_DROP,onDrop);
+  19.
+                                  this.addEventListener(NativeDragEvent.NATIVE_DRAG_EXIT,onDragExit);
+  20.
+                  }
+  21.
+       
+  22.
+              public function onDragIn(event:NativeDragEvent):void{
+  23.
+                         DragManager.acceptDragDrop(this);
+  24.
+                  }
+  25.
+       
+  26.
+                  public function onDrop(event:NativeDragEvent):void{
+  27.
+                      DragManager.dropAction = DragActions.COPY;
+  28.
+                      var dropfiles:Array = event.transferable.dataForFormat(TransferableFormats.FILE_LIST_FORMAT) as Array;
+  29.
+                      for each (var file:File in dropfiles){
+  30.
+                          switch (file.extension){
+  31.
+                              case "png" :
+  32.
+                                  addImage(file.nativePath);
+  33.
+                                  break;
+  34.
+                              case "jpg" :
+  35.
+                                  addImage(file.nativePath);
+  36.
+                                  break;
+  37.
+                              case "gif" :
+  38.
+                                  addImage(file.nativePath);
+  39.
+                                  break;
+  40.
+                              default:
+  41.
+                                 Alert.show("Unmapped Extension");
+  42.
+                          }
+  43.
+                    }
+  44.
+                  }
+  45.
+       
+  46.
+                  public function onDragExit(event:NativeDragEvent):void{
+  47.
+                      trace("Drag exit event.");
+  48.
+                  }
+  49.
+       
+  50.
+                  private function addImage(nativePath:String):void{
+  51.
+                      var i:Image = new Image();
+  52.
+                  if(Capabilities.os.search("Mac") >= 0){
+  53.
+                                  i.source = "file://" + nativePath;
+  54.
+                              } else {
+  55.
+                          i.source = nativePath;
+  56.
+                              }
+  57.
+                  this.addChild(i);
+  58.
+                  }
+  59.
+       
+  60.
+              ]]>
+  61.
+          </mx:Script>
+  62.
+      </mx:WindowedApplication>

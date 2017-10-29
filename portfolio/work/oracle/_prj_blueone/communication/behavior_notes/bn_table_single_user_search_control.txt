@@ -1,0 +1,16 @@
+
+SINGLE USER SELECT SEARCH (for table)
+updated by Uday Gajendar
+on 09/06/2007
+
+>> see single_select_table.txt
+
+Positioning:
+If on the far Right column:
+- UOM, datepicker, MSL, and multitext all move in leftward so nothing is jutting outside of the table frame
+
+If on the bottom row:
+- multitext read and edit div goes upward from the cell
+- MSL read div goes upward from the cell
+- datepicker calendar appears above the cell when the button is pressed
+- MSL edit div and single-select search goes upward

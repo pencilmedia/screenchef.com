@@ -1,0 +1,51 @@
+/* BEGIN: navbar.scss
+// -----------------------------------------------------*/
+
+.global-navbar {
+	background: $main;
+	z-index: 9999999999; /* High z-index for dropdown menus to be top most level */
+	.nav-box {
+		display: inline-block;
+		height: $navbarHeight;
+		vertical-align: middle;
+		&.app-switcher {
+			> .btn {
+				padding-bottom: 0;
+				padding-top: 0;
+				&.btn-link {
+					.fa {
+						color: $main-tint;
+						font-size: 110%;
+						margin-left: 5px;
+						margin-right: 5px; /* App Switcher Button */
+					}
+					> span {
+						color: $main-tint;
+						font-weight: 300;
+						font-size: 90%;
+						letter-spacing: 1px;
+					}
+				}
+			}
+		}
+		&.pull-right .btn-link {
+			background: transparent;
+			border: none;
+			color: $main-tint;
+			font-size: 90%;
+			font-weight: 300;
+			.caret {
+				margin-left: 5px;
+				margin-right: 10px;
+			}
+		}
+		.btn {
+			&.btn-link { /* All Link Buttons on navbar hover BG color*/
+				height: $navbarHeight;
+				&:focus, &:hover {
+					background: darken($main, 3%);
+				}
+			}
+		}
+	}
+}

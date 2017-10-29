@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<title>How to Style the Coqsoft Table</title>
+
+<style type="text/css" media="screen">
+
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	margin: 20px 25% 20px 20%;
+	line-height: 1.7em;
+}
+
+h1 {
+	font-family: Georgia, serif;
+	color: #600;
+}
+
+#iframe_guide {
+	width: 560px;
+	height: 400px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>How to Style the Coqsoft Table</h1>
+
+<p>
+	Follow these simple instructions to make the Coqsoft table
+	conform to Agile's BlueOne look and feel. Style changes are
+	confined to three files: agile.gif, agile.css and your table's
+	XML configuration file.
+</p>
+
+<ul>
+	<li>
+		agile.gif - By default, Coqsoft includes Grid.gif to retrieve the
+		icons that make up its toolbar. Agile.gif is a modification of Grid.gif
+		that removes the ugly icons for row selection and deletion.
+	</li>
+	<li>
+		agile.css - This CSS overrides some of the styles defined in Coqsoft's
+		required Grid.css file. This file must be included <i>after</i> Grid.css.
+	</li>
+	<li>
+		XML configuration file - This is the XML configuration required by every
+		Coqsoft table. You'll need to copy and paste a snippet of configuration
+		code to your table's XML file.
+	</li>
+</ul>
+
+<p>
+	<a href="table.html">Table.html</a> and <a href="table.xml">table.xml</a> are
+	provided as an example on how to stylize the
+	Coqsoft table. You'll need to follow these 3 steps:
+</p>
+
+<ol>
+	<li>Verify that agile.css and agile.gif are in Coqsoft's Grid folder (the folder
+		containing Grid.css). If the files aren't there, copy them into this
+		folder.
+	</li>
+	<li>Copy and paste the XML snippet delimited by the BEGIN and END comments
+		to your XML configuration file. The XML here will do the job of setting colors,
+		hiding the bottom toolbar, removing icons, etc.
+	</li>
+	<li>In your HTML file, link to agile.css after linking to Grid.css.
+	</li>
+</ol>
+
+<p>
+	That's it! These instructions represent the current state of the Coqsoft table's
+	BlueOne makeover. I'll be updating these steps as I continue to make progress.
+</p>
+
+<h1>Understanding Coqsoft's Grid.css</h1>
+<p>
+	Some of the BlueOne style changes are achieved by overriding Coqsoft's default styles.
+	These overrides are found in agile.css. The diagram below will help you understand these
+	style definitions as well as facilitate the inclusion of additional styles that might be needed:
+</p>
+
+<iframe id="iframe_guide" src="table_styles_guide.html" frameborder="0"></iframe>
+
+</body>
+</html>

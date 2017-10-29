@@ -1,0 +1,52 @@
+/******************************************************************************
+DEFAULT.CSS
+Description: Master include.		
+*******************************************************************************
+	DO NOT CHANGE IMPORT ORDER!!!!!!!
+******************************************************************************/
+@import "reset.css";
+@import "base.css";
+@import "common.css";
+@import "menu.css";
+/*@import "icons.css";*/
+@import "header.css";
+@import "object_level_controls.css";
+@import "tabs.css";
+@import "subtabs.css";
+@import "buttons.css";
+@import "messages.css";
+@import "palette_base.css";
+@import "ux_palette_base.css";
+@import "page_controls.css";
+@import "print.css";
+@import "view_controls.css";
+@import "tables.css";
+@import "forms.css";
+@import "object_discussion.css";
+@import "object_form.css";
+@import "action_dialogs.css";
+@import "widths.css";
+@import "_temp.css";
+@import "_prototype.css";
+@import "concept_car_tree.css";
+@import "search.css";
+@import "tooltip.css";
+@import "wizards.css";
+@import "activity_indicator.css";
+
+/*why cant we include this here?*/
+@import "multi_list.css";
+
+@import "lists.css";
+@import "dashboard.css";
+
+@import "info_pop.css";
+
+@import "pop_up.css";
+
+
+@import "supplier.css";
+
+@import "__current_theme.css";
+/*@import "__current_theme_gradient.css"*/
+

@@ -1,0 +1,1326 @@
+/******************************************************************************
+TABLES.CSS
+Description: Tables and table-related elements styles and definitions.
+******************************************************************************/
+
+/******************************************************************************
+TABLE
+******************************************************************************/
+table							{ width: 100%; border-collapse: collapse; border-spacing: 0;  }
+th, td							{ height: 20px; padding: 0; }
+th 								{ background-color: #f2f2f2;  border-bottom: 1px solid #ddd; font-weight: bold; }
+
+
+/******************************************************************************
+TABLE
+******************************************************************************/
+table.normal
+{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.normal th 	{ background-color: #f2f2f2;  font-weight: bold; }
+table.normal th,
+table.normal td		{ height: 16px; padding: 0; border: 1px solid #ddd; padding: 2px 3px; vertical-align: top; }
+
+/******************************************************************************
+TABLE ACTIONS
+NOTE- The styles below apply to the objects in "table_actions".  This is the
+bar that is at either end of tables and provides users with tools to use the 
+table.
+******************************************************************************/
+div.table_actions 						{ background-color: #e3e3e3; border-top: 1px solid #d6d6d6; border-bottom: 1px solid #9f9f9f; height: 22px; padding: 3px 10px 7px 10px; white-space:nowrap;  }
+div.table_actions .column_one			{ width:33%; }
+div.table_actions .column_two 			{ text-align: center; width:33%; padding-top:3px; }
+div.table_actions .column_three			{ width: 33%; padding: 0; }
+div.table_actions .pagination span 		{ float: left; }
+div.simple_actions						{ background: #e3e3e3; padding: 6px 0 6px 5px; border-bottom: 1px solid #ddd; white-space:nowrap;  }
+div.table_actions span.page				{ padding:3px 5px 0 0;}
+div.table_actions span.of				{ padding:3px 5px 0 5px;}
+div.table_actions p.pagination select,
+div.table_actions div.column_one span.page	{ float:left; }
+div.table_actions div.column_one p,
+div.table_actions div.column_two p,
+div.table_actions div.column_three p		{ margin: 2px 0; line-height: 22px; }
+
+div.noScrollTableDiv table th,
+div.noScrollTableDiv table td{ padding:0 0 0 5px; white-space: nowrap; }
+div.noScrollTableDiv table td.icon_cell { padding:0;}
+/******************************************************************************
+TABLE
+******************************************************************************/
+/*td								{ white-space: nowrap; width: 100px; overflow: auto;}*/
+div.scrollHeaderDiv table,
+div.scrollTableDiv table,	
+div.scrollTableDivPinned table 	{ border: 0; }
+div.noScrollTableDiv table td,
+div.scrollTableDiv table td 	{ border-bottom: 1px solid #ddd; }
+
+/**************************************************
+Table Footer Styles
+**************************************************/
+table.table_footer
+{
+	background-color:#f5f5f5;
+	height: 16px;
+}
+table.table_footer td.status 		{ padding-left: 15px; }
+table.table_footer td.filter_text 	{ text-align: right; padding-right: 5px; }
+table.table_footer td.filter_icon 	{ width: 20px; }
+table.table_footer td.filter_pop	{ border-left:1px solid #999999; width: 20px; }
+
+td.filter_icon.on 	{ background: url('../images/tables/ico_table_filter_on.png') no-repeat center center; }
+td.filter_icon.off	{ background: url('../images/tables/ico_table_filter_off.png') no-repeat center center; }
+td.filter_pop 		{ background: url('../images/tables/ico_pop_out.png') no-repeat center center; width:15px; }
+
+/******************************************************************************
+TABLE HANDLE
+******************************************************************************/
+th.resize,
+th.no_resize 			{ border-right: 1px solid #ddd; padding: 0; width: 5px; }
+th.resize 				{ cursor: e-resize; }
+th.no_resize 			{ cursor: default; }
+td.resize,
+td.no_resize 			{ border-right: 1px solid #ddd; cursor: default; padding: 0 !important; width: 5px; }
+th.handle,
+td.handle 				{ background-color: #d0d0d0 !important; border-right: 1px solid #666 !important; border-bottom: 1px dotted #666 !important; border-top: none !important; padding: 0 3px !important; cursor: pointer; width: 10px; } 
+/******************************************************************************
+TABLE GRID
+******************************************************************************/
+table.grid 				{ border: 1px solid #ddd; width: 100%; border-collapse: collapse; border-spacing: 0; min-width: 600px; }
+table.grid.edit_mode    { min-width: 900px; }
+table.grid th,
+table.grid td			{ height:20px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  padding: 0 2px;}
+table.grid th           { background-color: #f2f2f2;  border-bottom: 1px solid #ddd; font-weight: bold; }
+.add_row_icon 			
+{
+	background-image: url('../images/ico_status_added_row.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+table.grid td.date_cell { white-space:nowrap; }
+table.grid td input.medium_width { width: 58%; }
+table td.center_text { text-align: center; }
+input.grid_short_width { width: 30px; }
+/******************************************************************************
+TABLE SIMPLE 
+******************************************************************************/
+table.table_simple td 	{ 
+	border: none; 
+	border-left: 1px solid #ddd; 
+	padding: 0 2px; 
+}
+
+table.simple th { 
+	background-color: #efefef;
+	border-left: 1px solid #ddd; 
+	padding: 0 2px;
+}
+div.scrollTableDiv table.table_simple td 	{ border-bottom: 0; }
+
+/******************************************************************************
+SCROLLING TABLE DIV
+******************************************************************************/
+.scrollHeaderDiv table,
+.scrollTableDiv table 	{ width: 101%; }
+/******************************************************************************
+SELECTED ROWS AND HANDLES
+******************************************************************************/
+.selected td		{ background-color: #e4eeff; }
+.selected .handle 	{ background-color: #adadad; }
+/******************************************************************************
+NONSELECTED ROW HANDLES
+******************************************************************************/
+.nonselect .handle 	{ background: #e5e5e5 url('../images/bgd_gray_dot_td_handle.png') right top !important; }
+/******************************************************************************
+SCROLL DIVS
+******************************************************************************/
+div.scrollHeaderDiv			{ position: relative; overflow: hidden; }
+div.scrollTableDiv 			{ position: relative; height: 100px; overflow-y: auto; overflow-x: hidden; }
+div.scrollTableDivPinned 	{ height: auto; }
+div.scrollTreeDiv 		{ position: relative; overflow: scroll; height: 400px; overflow-x:hidden; }
+div.scrollDiv 			{ overflow: auto; max-height: 400px;}
+/******************************************************************************
+PAGE DIVIDER
+******************************************************************************/
+.prvMoveDiv 	{ background-color: #7a7a7a; cursor: s-resize; height: 4px; }
+
+/******************************************************************************
+PREVIEW PANE TABLE
+******************************************************************************/
+.preview_page_empty { 
+	background-color: #fafafa;
+}
+.preview_page_empty .table_display { 
+	border: none;
+	margin-top: 10%;
+}
+.preview_page_empty .table_display td {
+	background-color: #fafafa; 
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+}
+body.preview_content table.simple th {
+	width: 30%;
+	border-left: 1px solid #ccc;}
+body.preview_content table.table_simple td {
+	width: 33%;
+	border-left: 1px solid #ccc;
+}
+/******************************************************************************
+EMPTY ROWS PART OF EMPTY GENERIC TABLE (PREVIOUSLY PINNED ROWS?)
+******************************************************************************/
+div.empty_rows 	   { background-color: #fafafa; height: 200px; padding-top: 0px; text-align: center; vertical-align: top; }
+td.empty_table_row { text-align: left; }
+/******************************************************************************
+TREE LEVEL STYLES
+******************************************************************************/
+.level_00 em,
+.level_01 em, 
+.level_02 em,
+.level_03 em,
+.level_04 em { padding: 1px 0 2px 14px; }
+
+.level_00 {  }
+.level_01 { margin-left: 35px; }
+.level_02 { margin-left: 18px; }
+.level_03 { margin-left: 35px; }
+.level_04 { margin-left: 55px; }
+
+
+/******************************************************************************
+TREE STYLE FOR CELLS WITH ICONS
+******************************************************************************/
+.has_attachment { cursor:pointer; padding: 0; margin: 0; }
+.has_attachment .truncate { margin: 0; }
+.has_attachment img { margin: -2px -5px; }
+
+/******************************************************************************
+TABLE VIEW MANAGER
+******************************************************************************/
+div.view_manager {
+	padding: 30px;
+}
+
+div.view_manager input.radio {
+	height: 12px;
+}
+
+div.view_manager td {
+	height: 35px;
+	padding: 5px 2px;
+}
+
+input.manage_text {
+	width: 96%;
+}
+
+/******************************************************************************
+TABLE STATUS BAR
+******************************************************************************/
+.table_status_bar {
+	background-color: #f2f2f2;
+	height: 20px !important;
+	border-bottom:1px solid #ddd;
+}
+
+.table_status_bar .column_one {
+	overflow: hidden;
+	width: 75% !important;
+}
+
+.table_status_bar .column_one,
+.table_status_bar .column_two,
+.table_status_bar .column_three {
+	color: #333;
+	padding: 2px 0;	
+}
+
+.table_status_bar .info {
+	margin: 0 20px 0 15px;
+}
+
+.table_status_bar .filter {
+	margin-right: 3px;
+}
+
+
+/******************************************************************************
+COQSOFT TABLE STYLES
+
+++IMPORTANT: This code must overwrite coqsoft default style therefore this entire file
+must be declared after Grid.css
+******************************************************************************/
+
+.GTable {
+    border: none;
+    font-family: Arial;
+}
+
+.GHeadMid {
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.GHeadLeft {
+    border-top: 0;
+    height: 23px;
+	border-top: 0;
+	background-color: #efefef;
+	border-top: #d0d0d0;
+}
+
+.GHeader {	
+	border-bottom: 1px solid #ddd;
+	border-left: 0;
+	background: #efefef;
+	height: 22px;
+	text-align:center;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.GHeaderHover {
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
+    background-color: #efefef;
+    height: 20px;
+}
+.GPanelTopHover {
+    border-right: none !important;
+    border-bottom: 1px dotted #999;
+    background: #FAF8F3;
+}
+
+.GBodyMid, .GBodyLeft {
+    border-top: 0px;
+}
+
+.GBodyMid {
+    border-left: 1px solid #999;
+}
+
+.GPanel, .GPanelTop {
+    background-color: #d0d0d0;
+    border-bottom: 1px dotted #666;
+    border-left: 0;
+    border-right: 0;
+	border-top: #d0d0d0;
+	width: 16px;
+}
+.GPanelHover {
+    background-color: #d0d0d0;
+    border-bottom: 1px dotted #666;
+    border-left: 0;
+    border-right: 0;
+	border-top: #d0d0d0;
+	width: 16px;
+}
+
+.GPanelTop,.GPanelTopHover,.GPanel,.GPanelHover,.GHeader,.GHeaderHover {
+	cursor:default;
+}
+
+.GHeadText {
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.GText,.GTextB,.GTextM,.GNumber,.GNumberB,.GNumberM,.GIText,.GINumber,.GLines,.GTextArea, .GHtml,.GRadio, .GIHtml {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    height: 100%;
+    line-height: 12px;
+    margin: auto;
+    padding: 0 2px;
+    border: 0px solid;
+    background: inherit;
+	overflow: hidden;
+}
+
+.GRightButton, .GFilterButton, .GTreeIcon {
+	vertical-align: middle;
+}
+
+.GPage {
+	border-top: 0;
+}
+
+
+.GCell, .GCellNE {
+	border-color: #d6d6d6;
+	vertical-align: middle;
+}
+
+.GCell div, .GCellNE div {
+	margin: auto;
+	vertical-align: middle;
+}
+
+.GCellBorder {
+	border-right:2px solid black;
+}
+
+.GHeaderSortedASC {
+	background: #fff url('../images/bgd_gray_dot.png') right top;
+}
+
+.noedit_bgd {
+	color: #333;
+	background: #fff url('../images/bgd_gray_dot.png') repeat !important;
+}
+
+.has_attachment .GText {
+	text-align: center;
+	padding-left: 5px;
+}
+
+.selected_row {
+	background-color: #9f9f9f;
+}
+
+.selected_col {
+	background-color: #9f9f9f;
+}
+
+.warning_icon {
+	background-image: url('../images/ico_status_warning.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.error_icon {
+	background-image: url('../images/icn_status_error.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.changed_icon {
+	background-image: url('../images/ico_status_changed.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.added_icon {
+	background-image: url('../images/ico_status_added.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.selected_error {
+	background-color: #5f0303;
+}
+
+.error_row {
+	color: #333;
+}
+
+div.frozen_col_icon {
+	position: absolute;
+	background-image: url('../images/ico_status_frozen.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	line-height: 10px;
+	margin-right: 5px;
+	width: 18px;
+	z-index: 15;
+}
+
+div.frozen_col_line {
+	position: absolute;
+	background-color: #000;
+	width: 2px;
+	z-index: 16;
+}
+
+
+/**************************************************
+Frames
+**************************************************/
+#frame_edit_textbox,
+#frame_edit_calendar,
+#frame_edit_dropdown,
+#frame_edit_uom,
+#frame_edit_msl,
+#frame_edit_multitext,
+#frame_read,
+#error_block
+ {
+	display: none;
+}
+
+#frame_enclosure {
+	display: none;
+}
+
+.frame_edit .outer_block { 
+	position: absolute; 
+	background-color: #e5e5e5; 
+	border: 1px solid #999; 
+	overflow: hidden; 
+}
+
+.outer_block {
+	z-index: 9000;
+}
+
+.outer_block input,
+.outer_block select,
+.outer_block textarea {
+	background-color: #fff; 
+	border: 1px solid #33b0ff; 
+	cursor: text; 
+	font: 11px Arial, Verdana, sans-serif; 
+	padding: 2px; 
+	margin: 3px;
+	vertical-align: middle;
+}
+
+.outer_block textarea {
+	height: 120px;
+	width: 360px;
+}
+
+
+
+.outer_block a {
+	line-height: 12px;
+	vertical-align: middle;
+}
+
+
+.outer_block input.uom {
+	width: 30px;
+}
+
+.frame_read .outer_block { 
+	position: absolute; 
+	background-color: #c4d9ff; 
+	border: 1px solid #ddd;
+	overflow: auto; 
+	height: 120px;
+	width: 360px;
+	z-index: 3000;
+}
+
+.outer_block p {
+	cursor: text; 
+	font: 11px Arial, Verdana, sans-serif; 
+	padding: 2px; 
+	vertical-align: middle;
+	-moz-outline: none;
+}
+
+
+/******************************
+Pillbox Frame
+******************************/
+.outer_block.pillbox_control input {
+	margin: 0;
+	border: none;
+	vertical-align: middle;
+	width: 98% !important;
+}
+
+.outer_block.pillbox_control fieldset {
+	min-width: 0 !important;
+	margin: 2px 1px 0 4px !important;
+	padding-bottom: 0px;
+}
+
+.outer_block.pillbox_control dl {
+	min-width: 0 !important;
+	margin: 0 !important;
+	width: 250px;
+}
+
+.outer_block.pillbox_control dt {
+	height: 0;
+}
+
+.outer_block.pillbox_control dd {
+	margin: 0;
+	width: 100%;
+}
+
+.outer_block.pillbox_control a.button {
+	*line-height: 50px;
+	margin-left: 0 !important;
+}
+
+.outer_block .controlOuterContainer.medium_width, 
+.outer_block .mscl.medium_width, 
+.outer_block .sss.medium_width, 
+.outer_block .agileautocomplete.medium_width {
+	border: 1px solid #33B0FF;
+	width: 84%;
+	height: 80px;
+}
+
+.outer_block .selected_container {
+	border-top: 1px solid #33B0FF;
+	height: 73%;
+}
+
+
+.outer_block p.action_dialog_foot_spacer,
+.outer_block .results_container {
+	height: 0;
+}
+
+/******************************
+Tree 
+******************************/
+
+/*.GTreeIcon {
+    height: 16px; 
+    min-width:16px; 
+    max-width:16px; 
+    width: 16px; 
+	margin: 0px; 
+	border:1px solid white
+}*/
+
+.GText img {
+	vertical-align: middle;
+}
+
+a.image_link {
+	font-size: 11px; 
+	padding:2px 5px 2px 5px
+}
+
+a.image_link:hover{
+	text-decoration: underline;
+}
+
+a.table_links {
+
+}
+
+a.table_links:hover{
+	text-decoration: underline;
+}
+
+/******************************
+Palette
+******************************/
+#table_control_palette {
+	position: absolute;
+	top: 200px;
+	left: 500px;
+	display: none;
+}
+
+.table_control_palette_buttons {
+	position: absolute;
+	bottom: 8px;
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+	width: 96%;
+	margin: 0 0 10px 0;
+	padding: 10px 10px 0 10px;
+}
+
+.table_control_palette_reset {
+	float: left;
+}
+
+.table_control_palette_commit {
+	float: right;
+	text-align: right;
+	width: 160px;
+}
+
+
+/* Palette: Sort Columns */
+.multi_sort_col_content {
+	overflow: hidden;
+	width: 100%
+}
+
+.multi_sort_col_labels,
+.multi_sort_col_content0,
+.multi_sort_col_content1,
+.multi_sort_col_content2 {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 275px;
+}
+
+.multi_sort_col_labels p {
+	margin-top: 30px;
+}
+
+.multi_sort_col_labels p {
+	font-weight: bold;
+}
+
+.multi_sort_col_left {
+	float: left;
+	width: 65%;
+}
+
+.multi_sort_col_left p,
+.multi_sort_col_right p{
+	padding: 2px 0;
+}
+
+.multi_sort_col_left p select {
+	width: 95%;
+}
+
+.multi_sort_col_right p select {
+	width: 100%;
+}
+
+.multi_sort_col_right {
+	float: left;
+	width: 30%;
+}
+
+/* Palette: Format Columns */
+
+.format_div {
+	border: 1px solid #ccc;
+	height: 140px;
+	margin: 10px;
+	overflow: auto;
+	width: 96%;
+}
+
+.format_table {
+	border-bottom: 1px solid #ccc;
+}
+
+.format_table input.checkbox,
+.format_table input.radio {
+	border: none;
+	height: 12px;
+}
+
+.format_table th {
+	background-color: #efefef;
+	height: 20px;
+	padding: 3px 5px;
+}
+
+.format_table .fixed {
+	border-right: 1px solid #ccc;
+	padding: 3px 0;
+	text-align: center;
+	width: 55px;
+}
+
+.format_table td {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+	height: 20px;
+	padding: 3px 5px;
+}
+
+/* Palette: Filter Table */
+
+.filter_table_content_wrapper{
+	height: 220px;
+	overflow: auto;
+	width: 100%;
+}
+
+.filter_table_content_align{
+	margin: 0 auto;
+	width: 590px;
+}
+
+.filter_table_content{
+	margin: 10px;
+}
+
+.filter_table_content p.directions {
+	margin: 0 0 15px 20px;
+}
+
+.filter_options {
+	overflow: hidden;
+}
+
+.filter_options .filter_icon {
+	float: left;
+	margin: 0 6px 5px 0;
+	width: 14px;
+}
+
+.filter_icon .error_icon {
+	background-image: url('../images/icn_status_error.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-right: 5px;
+	padding: 5px 8px 16px 8px;
+}
+
+.filter_options .filter_attributes,
+.filter_options .filter_operator {
+	float: left;
+	font-weight: bold;
+	margin: 0 6px 5px 0;
+	width: 120px;
+}
+
+.filter_options .filter_value {
+	float: left;
+	font-weight: bold;
+	margin: 0 10px 5px 0;
+	padding: 0 6px 0 2px;
+	width: 200px;
+}
+
+.filter_options .filter_value.between_1 {
+	border-left: 2px solid #666;
+	margin: 0 11px 0 -3px;
+	padding: 0 3px 5px 5px;
+	width: 200px;
+}
+
+.filter_options .filter_value.between_2 {
+	border-left: 2px solid #666;
+	margin: 0 11px 5px -3px;
+	padding: 0 3px 0 5px;
+	width: 200px;
+}
+
+.filter_options .filter_value.between_1 input.text,
+.filter_options .filter_value.between_2 input.text {
+	width: 200px;
+	vertical-align: middle;
+}
+
+.filter_options  input.addr {
+	width: 151px !important;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+.filter_value span {
+	color: red;
+	font-weight: normal;
+}
+
+.filter_options .button_add,
+.filter_options .button_remove {
+	float: left;
+	margin: 0 -5px 5px 0;
+	width: 42px;
+}
+
+.filter_options input.text {
+	height: 16px;
+	width: 98%;
+	padding: 3px 0 1px 0;
+}
+
+.filter_options select {
+	height: 20px;
+	width: 96%;
+}
+
+.filter_options input.weight {
+	height: 16px;
+	margin-right: 8px;
+	width: 45%;
+}
+
+.filter_options select.weight {
+	height: 20px;
+	width: 46%;
+}
+
+/**************************************************
+AML TABLE STYLES
+**************************************************/
+div.aml { height: 160px; *height: 167px; } /* prototyping purposes only */
+div.aml th,
+div.aml tr.header td { background-position: center center; background-color:#f2f2f2; border-right: 1px solid #ccc; padding-left: 5px; font-weight:bold; }
+div.aml td { border-right: 1px solid #ccc; padding-left: 5px; background-position:center center; }
+div.aml .manufacturer_part { background-position: center center; }
+div.aml .level_03 { margin-left: 38px; }
+.center { text-align:center; }
+
+/**************************************************
+ RESOURCE TABLE STYLES
+**************************************************/
+table.resource th,
+table.resource tr.header td { background-position: center center; background-color:#f2f2f2; padding-left: 5px; font-weight:bold; border-bottom: 1px solid #ccc !important; }
+table.resource td { padding-left: 5px; }
+table.resource tr.first td{ border-bottom: 1px solid #ccc !important; padding-left: 5px; }
+table.resource tr.last td{ border-bottom: 1px solid #ccc !important; padding-left: 5px; }
+
+/**************************************************
+RECORD BY RECORD TABLE STYLES
+**************************************************/
+table.rbr th,
+table.rbr tr.header td { background-position: center center; background-color:#f2f2f2; border-left: 1px solid #ccc;  padding-left: 5px; font-weight:bold; }
+table.rbr td { border-left: 1px solid #ccc !important; border-bottom: 1px solid #ccc !important; padding-left: 5px; }
+table.rbr td.handle	{ background-color: #d0d0d0 !important; border-right: 1px solid #666 !important; border-bottom: 1px dotted #666 !important; border-top: none !important; padding: 0 3px !important; cursor: pointer; width: 10px; } 
+table.rbr tr.last td{  border-left: 1px solid #ccc !important; padding-left: 5px;  border-bottom: none !important;}
+/**************************************************
+BASELINE TABLE STYLES
+**************************************************/
+table.baseline th,
+table.baseline tr { 
+		border-bottom: 0px ;
+		background-color:#FFFFFF; 	
+} 
+table.baseline td { font-weight:normal; width: 25%;}
+table.baseline th { font-weight:bold;}
+table.baseline th.text { text-align: right; font-weight:normal; width: 40%; padding-right: 20px;}
+
+/**************************************************
+ACTIONLESS TABLE
+To be used with tables without top action bar.
+**************************************************/
+.actionless_table { border-top:2px solid #ddd !important }
+
+/********************************************************
+	PPM ATTACHMENTS SPECIFIC STYLES
+********************************************************/
+div.ux_palette.ppm_attachments .table_actions,
+div.ux_palette.ppm_attachments .ux_palette_main { overflow: auto !important; }
+div.ux_palette.ppm_attachments .toggle_content { margin-top:0 !important; }
+div.ux_palette.ppm_attachments .rbr th,
+div.ux_palette.ppm_attachments .rbr td { white-space: nowrap; padding-right: 5px;}
+div.ux_palette.ppm_attachments .ux_palette_bottom{ padding:0px; }
+div.ux_palette.ppm_attachments .ux_palette_bottom_action_bar{ padding:5px 15px; }
+div.ux_palette.ppm_attachments .ppm_attachments_header { background-color:#fff; }
+div.ux_palette.ppm_attachments h2
+{
+	font-size: 16px;
+	margin: 0 0 0 10px;
+	line-height: 12px;
+	padding-top: 40px;
+}
+div.ux_palette.ppm_attachments .ico_cell
+{
+	background-repeat: no-repeat;
+	background-position: 3px 1px;
+	padding-left: 25px !important;
+}
+div.ux_palette.ppm_attachments .table_actions { margin-top: 15px; }
+
+/**************************************************
+	TABLE LINEAR
+**************************************************/
+table.linear th,
+table.linear td
+{
+	padding-left: 5px;
+	border-bottom:1px solid #ddd;
+}
+
+/**************************************************
+Temp - DELETE
+**************************************************/
+
+img.temp_datepicker {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	background: url(../../pages/_testing/proj_coqsoft_table/temp_datepicker.png) no-repeat center center;
+	height: 188px;
+	width: 222px;
+	z-index: 1000;
+}
+
+div.temp_test {
+	position: absolute;
+	background-color: #000;
+	display: none;
+	height: 100px;
+	width: 100px;
+}
+
+.test_panel {
+	background-image: url('../images/icn_action_remove.png');
+}
+
+/***********************
+	TABLE ICONS
+***********************/
+.icon_cell
+{
+	width:18px;
+	height:18px;
+	background-position: center 2px;
+	background-repeat: no-repeat;
+	min-width: 18px;
+}
+.ico_obj_discussion 	{ background: url(/global/images/ico_obj_discussion.png) no-repeat 2px center; }
+.ico_obj_discussion_reply 	{ background: url(/global/images/ico_obj_discussion_reply.png) no-repeat 2px center; }
+.icn_attachments 		{ background: #F2F2F2 url(/global/images/icn_action_attachment.png) no-repeat center center; }
+.icn_redlined 			{ background: #F2F2F2 url(/global/images/tables/icn_status_redlined.png) no-repeat center center; }
+.icn_checked_out		{ background: #F2F2F2 url(/global/images/tables/icn_status_checked_out.png) no-repeat center center; }
+.icn_selected_dot		{ background: #F2F2F2 url(/global/images/icn_status_dot_gray.png) no-repeat center center;}
+.ico_replace_file		{ background: url(/global/images/ico_replace_file.png) no-repeat center center;}
+.ico_obj_file			{ background: url(/global/images/ico_obj_file.png) no-repeat center center;}
+th.icon { width: 15px; }
+.icn_status_dependency {background: #F2F2F2 url(/global/images/icn_status_dependency.png) no-repeat center center;}
+.icn_obj_discussion {background: #F2F2F2 url(/global/images/ico_obj_discussion.png) no-repeat center center;}
+.icn_obj_action_item 	{background: #F2F2F2 url(/global/images/icn_obj_action_item.png) no-repeat center center;}
+.icn_obj_status_content {background: #F2F2F2 url(/global/images/icn_obj_document.png) no-repeat center center;}
+.icn_obj_status_attachment {background: #F2F2F2 url(/global/images/icn_action_attachment.png) no-repeat center center;}
+.icn_obj_gate {background: #F2F2F2 url(/global/images/icn_obj_gate.png) no-repeat center center;}
+
+
+
+
+
+
+
+
+/******************************
+Error Frame
+******************************/
+.frame_error_top,
+.frame_error_bottom,
+.frame_error_mid {
+	width: 500px;
+}
+
+.frame_error_top .left {
+	position: absolute;
+	top: 0;
+	left: -16px;
+	background: url('../images/bgd_table_msg_flipped_top_left.png') no-repeat top left;
+	height: 17px;
+	width: 16px;
+	z-index: 105;
+}
+
+.frame_error_top .right {
+	position: absolute;
+	top: 0;
+	right: -16px;
+	background: url('../images/bgd_table_msg_top_right.png') no-repeat top right;
+	height: 17px;
+	width: 16px;
+}
+
+.frame_error_top .mid {
+	position: relative;
+	top: 1px;
+	background: url('../images/bgd_table_msg_top_mid.png') repeat-x center center;
+	height: 17px;
+	margin: 0 16px;
+}
+
+.frame_error_mid .left {
+	position: absolute;
+	top: 1px;
+	left: -10px;
+	background: url('../images/bgd_table_msg_mid_left.png') repeat-y center left;
+	height: 100%;
+	width: 10px;
+}
+
+.frame_error_mid .right {
+	position: absolute;
+	top: 1px;
+	right: -10px;
+	background: url('../images/bgd_table_msg_mid_right.png') repeat-y center right;
+	height: 100%;
+	width: 10px;
+}
+
+.frame_error_mid .mid {
+	position: relative;
+	background: #fff url('../images/bgd_table_msg_mid_mid.png') repeat-x top center;
+	margin: 0 10px;
+}
+
+.frame_error_bottom .left {
+	position: absolute;
+	top: 0;
+	left: -16px;
+	background: url('../images/bgd_table_msg_bot_left.png') no-repeat top left;
+	height: 17px;
+	width: 16px;
+}
+
+.frame_error_bottom .right {
+	position: absolute;
+	top: 0;
+	right: -16px;
+	background: url('../images/bgd_table_msg_bot_right.png') no-repeat top right;
+	height: 17px;
+	width: 16px;
+}
+
+.frame_error_bottom .mid {
+	position: relative;
+	background: url('../images/bgd_table_msg_bot_mid.png') repeat-x top center;
+	height: 17px;
+	margin: 1px 16px;
+}
+
+/*Bottom Pointing*/
+.frame_error_top .left.pointer {
+	position: absolute;
+	top: 0;
+	left: -16px;
+	background: url('../images/bgd_table_msg_top_left.png') no-repeat top left;
+	height: 17px;
+	width: 16px;
+	z-index: 105;
+}
+
+.frame_error_bottom .left.pointer {
+	position: absolute;
+	top: 0;
+	left: -16px;
+	background: url('../images/bgd_table_msg_flipped_bot_left.png') no-repeat top left;
+	height: 17px;
+	width: 16px;
+	z-index: 105;
+}
+
+.frame_error_content{
+	margin: 0;
+	padding: 0;
+}
+
+.error_top, .error_bottom {
+	overflow: hidden;
+}
+
+.error_top_content {
+	height: auto;
+	margin-top: 15px;
+}
+
+.error_top_content p {
+	margin-left: 20px;
+}
+
+.error_top_options {
+	min-height: 100px;
+}
+
+.error_top_options p {
+	margin: 0 20px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+.error_top_options dl.side_by_side_mixed {
+	margin-top: 10px;
+}
+
+.error_top_options dl.side_by_side_mixed dt {
+	width: 15px;
+}
+
+.error_bottom_nav {
+	border-top: 1px solid #ddd;
+	padding: 5px 30px 0 20px;
+	white-space: nowrap;
+}
+
+.error_similar {
+	float: left;
+	padding: 5px 0 5px 0;
+	overflow: hidden;
+}
+
+.error_nav_buttons {
+	float: right;
+	padding: 5px 0;
+	overflow: hidden;
+}
+
+.error_close {
+	width: 15px;
+}
+
+a.close_error_frame {
+	position: absolute;
+	top: -5px;
+	right: 5px;
+	z-index: 2;
+	background: url(../images/inset_close.png) no-repeat right top;
+	height: 14px;
+	width: 15px; 
+}
+
+a.close_error_frame span {
+	visibility: hidden;
+}
+
+/******* error ITEMS (DOTS) ********/
+.error_nav_buttons {
+	margin-right: -15px;
+}
+.error_nav_buttons a.button {
+	float: left;
+}
+.tips {
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.error_nav_buttons ul.error_items {
+	float: left;
+}
+
+.error_nav_buttons ul.error_items li {
+	font-weight: bold;
+	float: left;
+	margin: 0 1px 0 0;
+	padding: 5px 10px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.error_nav_buttons  ul.error_items li a {
+	color: #333;
+	background: url(../images/bgd_error_deselected.png) no-repeat -1px center;
+	font-weight: bold;
+	margin: 0 -8px;
+	padding: 15px 10px;
+	line-height: 20px;
+}
+
+.error_nav_buttons ul.error_items li.issue_deselected a,
+.error_nav_buttons ul.error_items li.issue_deselected a:hover {
+	color: #333;
+	background: url(../images/bgd_error_deselected.png) no-repeat 0 center;
+}
+
+.error_nav_buttons ul.error_items li.issue  a,
+.error_nav_buttons ul.error_items li.issue  a:hover {
+	color: #fff;
+	background: url(../images/bgd_error_changed_selected.png) no-repeat -1px center;
+}
+
+.error_nav_buttons ul.error_items li.issue_resolved  a,
+.error_nav_buttons ul.error_items li.issue_resolved  a:hover {
+	background: url(../images/bgd_error_changed_deselected.png) no-repeat -1px center;
+}
+
+.error_nav_buttons ul.error_items li.issue_selected  a,
+.error_nav_buttons ul.error_items li.issue_selected  a:hover {
+	color: #fff;
+	background: url(../images/bgd_error_selected.png) no-repeat -1px center;
+}
+
+.error_nav_buttons ul.error_items li a:hover {
+	background: #fafafa;
+	color: #333;
+}
+
+.error_bottom_nav a.error_num {
+	background-image: url('../images/bgd_error_deselected.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #000;
+	cursor: pointer;
+	margin: 0 7px 0 2px;
+	padding: 6px 8px 6px 11px;
+}
+
+.error_bottom_nav a.error_num.selected {
+	background-image: url('../images/bgd_error_selected.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #fff;
+	cursor: pointer;
+	margin: 0 7px 0 2px;
+	padding: 6px 8px 6px 12px;
+}
+
+.error_bottom_nav a.error_num.changed {
+	background-image: url('../images/bgd_error_changed_deselected.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #000;
+	cursor: pointer;
+	margin: 0 7px 0 2px;
+	padding: 6px 8px 6px 11px;
+}
+
+.error_bottom_nav a.error_num.changed.selected {
+	background-image: url('../images/bgd_error_changed_selected.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #fff;
+	margin: 0 7px 0 2px;
+	padding: 6px 8px 6px 12px;
+}
+
+.has_nopriv {
+	 text-align: center;
+}
+
+.error_check {
+	border: none;
+	vertical-align: middle;
+}
+
+.error_radio {
+	border: none;
+	height: auto;
+	vertical-align: middle;
+}
+
+form.error_nums select {
+	*margin-right: 4px;
+	width: 81px;
+	vertical-align: middle;
+}
+
+
+.new_addition {
+	color: #f00;
+	font-style: italic;
+}
+.redline {
+	display: block;
+	text-decoration: line-through;
+	color: #f00;
+}
+.redline span {
+    color: #333;
+}
+
+
+/**************************************************
+SIDE BY SIDE NESTED TABLE
+**************************************************/
+.side_by_side_mixed dd table 	{ border: 1px solid #ccc; margin: 5px 0 10px 15%; width:75%; }
+.side_by_side_mixed dd table th,
+.side_by_side_mixed dd table tr.header td { background-position: center center; background-color:#f2f2f2; border-left: 1px solid #ccc;  padding-left: 5px; font-weight:bold; }
+.side_by_side_mixed dd table td { border-left: 1px solid #ccc !important; border-bottom: 1px solid #ccc !important; padding-left: 5px; }
+.side_by_side_mixed dd table td.handle	{ background-color: #d0d0d0 !important; border-right: 1px solid #666 !important; border-bottom: 1px dotted #666 !important; border-top: none !important; padding: 0 3px !important; cursor: pointer; width: 10px; } 
+
+
+/**************************************************
+TARGET PRICE TABLE
+**************************************************/
+table.target_price th
+{
+	background-color: #fff;
+}
+table.target_price td
+{
+	padding: 10px 5px 0 5px;
+}
+td.twenty_percent
+{
+	width: 20% !important;
+}
+
+td.no_wrap { white-space: nowrap; }

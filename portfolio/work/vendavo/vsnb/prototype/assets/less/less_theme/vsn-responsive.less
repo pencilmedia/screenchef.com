@@ -1,0 +1,356 @@
+/* BEGIN: vsn-responsive.less
+// -----------------------------------------------------*/
+
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*//////////////////////////////
+
+/* Tablet - 940px */ // Preserve table in main pane from becoming misaligned
+
+// NOTE: Previously max-width: 768px, also changed global.js and vsn-layout.less
+
+@media (max-width: 940px) {
+    .vsnb {
+        aside {
+            &.sidebar-menu {
+                header {
+                    .butcon {
+                        visibility: visible;
+                    }
+                }
+            }
+            &.contextual-pane {
+                width: 480px;
+                box-shadow: 0 0 5px @grayDarker;
+                border-left: none;
+                .contextual-overflow {
+                    .navbar-fixed-top {
+                        .close-pane {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        > header {
+            &.navbar-fixed-top {
+                padding-left: 0;
+                width: 100%;
+                &.drill-out {
+                    padding-right: 0;
+                }
+                .butcon {
+                    visibility: visible;
+                }
+                .sidebar-action {
+                    .butcon {
+                        display: inline-block;
+                        + h1 {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        > section {
+            /* Deal List Responsive */
+            &.drill-list {
+                // Smaller screen has nav-back button
+                .deal-detail-close {
+                    display: none;
+                }
+                &.deal-listings {
+                    .rt-column {
+                        &.details-pane {
+                            width: 100%;
+                        }
+                    }
+                }
+                /* Price Lookup */
+                .rt-column {
+                    &.details-pane {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        footer {
+            .footer-actions {
+                .btn-group {
+                    .btn {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+        .drill-list {
+            .lt-column {
+                form {
+                    fieldset {
+                        &.group-w-btn {
+                            .group-set {
+                                width: 92%;
+                            }
+                            .group-btn {
+                                width: 8%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.price-lookup {
+            .drill-list {
+                .lt-column {
+                    form {
+                        fieldset {
+                            &.group-w-btn {
+                                .group-set {
+                                    padding: 0 0 10px 0;
+                                    width: 100%;
+                                }
+                                .group-btn {
+                                    width: 8%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // MENU OVERLAYS
+    .modal-overlay {
+        .navbar-fixed-top {
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        .content {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+/* Phone - 480px */
+/*****************/
+@media (max-width: @screen-xs) {
+    .vsnb {
+        .navbar-fixed-top {
+            border-bottom: 0; // Remove border
+        }
+        aside {
+            &.contextual-pane {
+                width: 100%;
+                box-shadow: none;
+                border-left: none;
+                footer {
+            
+                }
+            }
+        }
+        details {
+            summary {
+                width: 100%;
+            }
+        }
+        .drill-list {
+            &.deal-listings {
+                .lt-column {
+                    form {
+                        fieldset {
+                            &.group-w-btn {
+                                .group-set {
+                                    width: 88%;
+                                }
+                                .group-btn {
+                                    width: 12%;
+                                    padding: 11px 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .rt-column {
+                    &.details-pane {
+                            .alert {
+                                margin: 10px -10px;
+                                h2 {
+                                    line-height: 24px;
+                                }
+                                .action-group {
+                                    position: relative;
+                                    top: 5px;
+                                    left: 0;
+                                    .btn {
+                                        width: 49%;
+                                    }
+                                }
+                            }
+                        article {
+                            ul {
+                                &.key-values {
+                                    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+                                    -moz-column-count: 1; /* Firefox */
+                                    column-count: 1;
+                                    &.linked {
+                                        //background: url("/assets/img/fa-chevron-right-lrg.png") no-repeat right 25%;
+                                    }
+                                    li {
+                                        float: none;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .stat-box, .table-wrapper {
+                                margin-right: -20px;
+                                margin-left: -20px;
+                            }
+                            .stat-box {
+                                li {
+                                    height: 60px;
+                                    a {
+                                        padding: 10px;
+                                    }
+                                    em {
+                                            font-size: 85%;
+                                    }
+                                }
+                            }
+                            .table-wrapper {
+                                table {
+                                    &.table-full {
+                                        display: none;
+                                    }
+                                    &.table-mobile {
+                                        display: table;
+                                    }
+                                    thead {
+                                        tr {
+                                            background: @white;
+                                            border: none;
+                                            th {
+                                                border-bottom-color: @mintDark;
+                                                &:first-child {
+                                                    width: 45px;
+                                                }
+                                                &:last-child {
+                                                    text-align: right;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    tbody {
+                                        tr {
+                                            td {
+                                            	padding: 8px;
+                                                h1 {
+                                                    margin: 0;
+                                                    line-height: 16px;
+                                                    font-weight: bold;
+                                                    span {
+                                                        display: block;
+                                                        color: @grayDark;
+                                                        font-weight: normal;
+                                                        font-size: 90%;
+                                                        font-weight: normal;
+                                                    }
+                                                }
+        										&:first-child {
+        											vertical-align: middle;
+        											padding: 0 0 0 8px;
+        											width: @pageMargin;
+        										}
+                                                &:nth-child(2) {
+                                                	width: 400px;
+                                                    em {
+                                                        display: block;
+                                                        font-style: normal;
+                                                        color: @grayDark;
+                                                        font-size: 95%;
+                                                    }
+                                                }
+                                                &:last-child {
+                                                    text-align: right;
+                                                    padding-right: 10px;
+                                                    width: 100px;
+                                                    vertical-align: top;
+                                                }
+                                            }
+                                            &.hierarchy-child {
+                                                display: table-row;
+                                                > td {
+                                                    padding: 0;
+                                                    width: auto;
+                                                    font-weight: normal;
+                                                    text-align: left;
+                                                    table {
+                                                        margin: 0;
+                                                        tr {
+                                                            td {
+                                                                border-bottom: 1px solid @borderColor;
+                                            	   				padding: 8px;
+                                                                &:last-child {
+                                                                    padding-right: 10px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .edit-form {
+            form {
+                fieldset {
+                    h2 {
+                        
+                    }
+                    dl {
+                        dd {
+                            select {
+                                &.transparent-select {
+                                   height: 44px;    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal-overlay {
+            .content {
+                > section {
+                    > article {
+                        > section {
+                            nav {
+                                dl {
+                                   &.nav-stacked {
+                                        dt, dd {
+                                            a {
+                                                -webkit-text-size-adjust: 120%;
+                                                -ms-text-size-adjust: 120%;
+                                                text-size-adjust: 120%;
+                                            }
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* END: vsn-responsive.less
+// -----------------------------------------------------*/

@@ -1,0 +1,34 @@
+/* BEGIN: FOOTER
+// -----------------------------------------------------*/
+// Core variables and mixins
+@import "../less_bootstrap/variables.less";
+@import "../less_bootstrap/mixins.less";
+@import "variables.less"; // custom variables
+@import "mixins.less"; // custom mixins
+
+sup {
+	font-size: 110%;
+	top: 0;
+	margin-right: 3px;
+}
+footer {
+	padding: @pageMargin 0;
+	&.footnotes {
+		background: @white;
+		sup {
+			margin-right: 5px;
+			color: @gray;
+			top: -.2em;
+			font-size: 90%;
+			&.asterisk {
+				font-size: 125%;
+				top: 0;
+			}
+		}
+		p {
+			margin: 0 @pageMargin 10px @pageMargin;
+			font-size: 90%;
+			color: @gray;
+		}
+	}
+}

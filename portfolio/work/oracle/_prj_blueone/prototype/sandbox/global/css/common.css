@@ -1,0 +1,411 @@
+/******************************************************************************
+COMMON.CSS
+Description: Shared / Common Styles.
+******************************************************************************/
+/******************************************************************************
+QUICKVIEW
+******************************************************************************/
+span.dual_launch {
+	position: relative;
+	top: -30px;
+	left: -7%;
+	z-index: 999;
+	padding: 4px 0 12px 0;
+	background: url(../images/util_preview_link.png) no-repeat left top;
+}
+span.dual_launch a {
+	padding: 4px 10px 12px 8px;
+	background: url(../images/util_preview_link_endcap.png) no-repeat right top;
+
+	/*background: url(../images/icn_action_popout.png) no-repeat top left;*/
+}
+span.left.dual_launch {
+	position: relative;
+	top: -20px;
+	left: -20%;
+	z-index: 999;
+	padding: 4px 0 12px 0;
+	background: url(../images/util_preview_link_left.png) no-repeat right top;
+}
+span.left.dual_launch a {
+	padding: 4px 10px 12px 8px;
+	background: url(../images/util_preview_link_endcap_left.png) no-repeat left top;
+}
+span.dual_launch a:hover {
+	text-decoration: none;
+}
+
+/* POC */
+span.quickie {
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 30px;
+	height: 16px;
+	margin-right: -30px;
+	margin-bottom: -30px;
+	z-index: 999;
+	padding: 2px 0 0 0;
+	background: url(../images/bg_quickview.png) no-repeat left top;
+}
+span.quickie a {
+	background: url(../images/icn_quickview.png) no-repeat left top;
+	padding: 4px 8px;
+}
+
+/******************************************************************************
+DIVS 
+******************************************************************************/
+div.container { 
+	margin: 0 10px;
+}
+/******************************************************************************
+GLOBAL TOGGLE STYLES 
+******************************************************************************/
+.toggle_content {
+ 	margin: 5px 0 !important;
+ }
+/******************************************************************************
+3 COLUMN LAYOUT 
+******************************************************************************/
+.column_zero,
+.column_one, 
+.column_two { 
+	display: inline; 
+	float: left; 
+	overflow: hidden; 
+}
+.column_three { 
+	float: right; 
+	overflow: hidden; 
+	text-align: right;
+}
+.no_width {
+	width:50% !important;
+	overflow: visible;
+}
+
+
+/******************************************************************************
+BUTTON BAR
+******************************************************************************/
+div.button_bar 						{ height: 22px; padding: 3px 10px 7px 10px; white-space:nowrap;  }
+div.button_bar .column_one			{ width:33%; }
+div.button_bar .column_two 			{ text-align: center; width:33%; padding-top:3px; }
+div.button_bar .column_three			{ width: 33%; }
+div.button_bar .pagination span 		{ float: left; }
+
+div.button_bar input,
+div.button_bar select, 
+div.button_bar textarea             { margin-top: 3px; vertical-align: middle;  }
+
+
+div.button_bar span.page				{ padding:3px 5px 0 0;}
+div.button_bar span.of				{ padding:3px 5px 0 5px;}
+div.button_bar p.pagination select,
+div.button_bar div.column_one span.page	{ float:left; }
+div.button_bar div.column_one p,
+div.button_bar div.column_two p,
+div.button_bar div.column_three p		{ margin: 2px 0; line-height: 22px; }
+
+/******************************************************************************
+HEADERS
+******************************************************************************/
+.column_two h2 { 
+	line-height: 24px;
+}
+.container h3 {
+	margin: 0 0 20px 0 !important;
+	line-height: 22px;
+}
+.container h4 {
+	line-height: 20px;
+}
+h4.table_title { 
+	margin: 0 0 10px 0; 
+}
+
+/******************************************************************************
+DEFINITION LISTS
+******************************************************************************/
+/* Side by Side: When a <dl> contains ONLY field elements */
+dl.side_by_side {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	min-width: 475px;
+} 
+dl.side_by_side dt {
+	float: left;
+	width: 25%;
+	text-align: right;
+	margin-right: 5px;
+	padding-top: 3px;
+}
+dl.side_by_side dd {
+	float: left;
+	margin: 0 0 5px 0;
+	width: 73%;
+}
+dl.side_by_side dd a:hover {
+	text-decoration: underline;
+}
+
+dl.side_by_side dd a.button { 
+	margin-left:5px !important;
+}
+
+dl.side_by_side dd a.button:hover {
+	text-decoration: none;
+}
+dl.side_by_side dd input { 
+	vertical-align: middle;
+}
+
+
+
+/* Side by Side Text: When a <dl> contains ONLY text */
+dl.side_by_side_text {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	min-width: 525px;
+} 
+dl.side_by_side_text dt {
+	float: left;
+	width: 30%;
+	clear: left;
+	text-align: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+dl.side_by_side_text dd {
+	float: left;
+	*float: none;
+	width: 69%;
+	margin-bottom: 8px;
+}
+dl.side_by_side_text dd a:hover {
+	text-decoration: underline;
+}
+dl.side_by_side_text dd a.button:hover {
+	text-decoration: none;
+}
+
+
+/* Side by Side Mixed: When a <dl> contains text AND field elements */
+dl.side_by_side_mixed {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	min-width: 525px;
+} 
+dl.side_by_side_mixed dt {
+	float: left;
+	width: 30%;
+	clear: left;
+	text-align: right;
+	min-height: 17px;
+	margin-right: 4px;
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+dl.side_by_side_mixed dd {
+	float: left;
+	*float: none;
+	width: 68.5%;
+	min-height: 22px;
+	margin-bottom: 10px;
+	white-space: nowrap;
+}
+dl.side_by_side_mixed dd label {
+	color: #333;
+}
+dl.side_by_side_mixed dt.mixed_text {
+	min-height: 12px;
+	padding-top: 0;
+}
+dl.side_by_side_mixed dd.mixed_text {
+	min-height: 12px;
+}
+
+dl.side_by_side_mixed dd.buffer { /* keeps labels that wrap looking good */
+	float: none;
+	width: 100% !important;
+	clear: both;
+	margin: 0;
+	height: 0;
+	min-height: 0;
+}
+
+dl.side_by_side_mixed dd a:hover {
+	text-decoration: underline;
+}
+dl.side_by_side_mixed dd a.button:hover {
+	text-decoration: none;
+}
+
+dl.side_by_side_mixed input {
+	vertical-align: middle;
+}
+dl.side_by_side_mixed dd select {
+	vertical-align: middle;
+}
+
+
+/* Shared Side by Side styles */
+dl.side_by_side.with_top_margin,
+dl.side_by_side_text.with_top_margin,
+dl.side_by_side_mixed.with_top_margin { 
+	margin-top: 10px;
+}
+dl.side_by_side.with_bottom_margin,
+dl.side_by_side_text.with_bottom_margin,
+dl.side_by_side_mixed.with_bottom_margin { 
+	margin-bottom: 20px;
+}
+
+dd.urgent_space {
+	line-height: 18px;
+	height: 18px !important;
+}
+dd.urgent_space label { 
+	margin-left: 2px; 
+}
+
+dd.urgent_space {
+	line-height: 18px;
+	height: 18px !important;
+}
+dd.urgent_space label { 
+	margin-left: 2px; 
+}
+
+/* Side by Side: Compound this class to decrease spacing between dd lines in side_by_side dl */
+dl.selector_list dt,
+dl.selector_list dd {
+	margin-bottom: 0 !important;
+}
+dl.selector_list dt {
+	padding: 0 !important;
+}
+
+dl.selector_list.less_left_margin dt{
+	width: 15% !important;
+}
+
+
+fieldset.full dl.side_by_side_mixed dt { 
+	float: left; 
+	text-align: right; 
+	margin: 0 5px 8px 0; 
+	clear: left; 
+	width: auto; 
+}
+
+dl.field_list { 
+	margin-right: 10px; 
+}
+dl.field_list span { 
+	margin: 0 0 0 3px; 
+}
+dl.field_list span label { 
+	margin-left: -3px; 
+} 
+dl.field_list dd { 
+	height: 26px; 
+	white-space: nowrap; 
+}
+dl.field_list dd input { 
+	float: left; 
+}
+dl.field_list dd label { 
+	margin-left: 3px; 
+}
+dl.field_list dd a.button { 
+	line-height: 22px;
+}
+dl.field_list input.form_selectors { 
+	margin-left: 10px;
+}
+dl.field_list input.long_width { 
+	width: 95%; 
+}
+
+/* SIDE BY SIDE SUMMARY - TWO COLUMN */
+dl.side_by_side_lt_summary,
+dl.side_by_side_rt_summary {
+	float: left;
+	width: 48%;
+	margin: 0 0 5px 0;
+} 
+dl.side_by_side_lt_summary dt,
+dl.side_by_side_rt_summary dt {
+	float: left;
+	width: 35%;
+	text-align: right;
+}
+dl.side_by_side_lt_summary dd,
+dl.side_by_side_rt_summary dd {
+	width: 60%;
+	margin: 0 0 5px 35.5%;
+}
+
+dt.place_holder { 
+	visibility: hidden;
+}
+
+.inline_dropdown {
+	margin-left: 20px;
+}
+.inline_dropdown select {
+	margin-left: 5px;
+}
+
+.step { min-width: 600px; }
+li.indent { padding-left: 25px; }
+.with_file_extension { width: 36% !important; }
+ul.column_zero.left_10 { margin-left: 7% !important; }
+
+
+
+/* Side by Side REDLINED TEXT: For Redlined Content */
+.updated dd span {
+	margin-right: 10px;
+}
+.updated dd.multivalue span {
+	float: left;
+	width: 47%;
+	margin-right: 15px;
+	overflow: hidden;
+	white-space: normal;
+}
+.updated dd.multivalue textarea {
+	width: 88%;
+}
+.updated.edit_mode dd.multivalue span.multivalue_redline {
+	width: 51%;
+	margin-right: 0;
+}
+.updated.edit_mode dd.multivalue span.redlined {
+	width: 46%;
+}
+
+span.redlined {
+	color: #f00;
+	font-weight: normal;
+	text-decoration: line-through;
+}
+span.redlined em {
+	color: #333;
+	font-weight: normal;
+}
+.updated dd.multilist span {
+	margin-right: 0;
+}
+
+span.new {
+	color: #f00;
+	 font-style: italic
+}

@@ -1,0 +1,69 @@
+/* OBJECT LEVEL CONTROLS *****************************************************/
+.object_level_controls { 
+	margin: 0 10px 10px 10px; 
+	overflow: hidden; 
+	padding: 5px 0;
+	min-width: 450px;
+}
+.object_level_controls select { 
+	margin-right: 15px;
+	vertical-align: middle; 
+}
+.object_level_controls .button {
+	margin-left: 0;
+	margin-right: -3px; /* overrides the default button padding */
+}
+
+/******************************************************************************
+USED BY PREVIEW PANE CONTENT PAGE
+******************************************************************************/
+.pane_title {
+	color: #333;
+	font-size: 16px; 
+	background-color: #f9f9f9; 
+	border-bottom: 1px solid #ddd; 
+	height: 25px; 
+	margin-bottom: 20px; 
+	padding: 10px 0 0 10px; 
+	white-space: normal; 
+}
+
+body.preview_content .container {
+	float: left;
+	width: 97.5%;
+	margin-top: -45px;
+}
+
+body.preview_content dl.side_by_side_text {
+	float: left;
+	width: 49%;
+	min-width: 250px; 
+} 
+body.preview_content dl.side_by_side_text.left {
+	margin-top: 55px !important;
+}
+body.preview_content dl.side_by_side_text.left,
+body.preview_content dl.side_by_side_text.right {
+	margin: 0 0 5px 0; 
+	width: 49%; 
+	float: left; 
+	clear: none; 
+	position: relative; 
+	top: -48px; 
+}
+body.preview_content dl.side_by_side_text.left dd,
+body.preview_content dl.side_by_side_text.right dd {
+	width: 68%;
+}
+dt.special_control {
+	padding-right: 5px;
+	padding-bottom: 25px;
+	line-height: 22px;
+	white-space: nowrap;
+}
+dd.special_control {
+	width: 67% !important;
+	padding-bottom: 25px;
+	line-height: 22px;
+	white-space: nowrap;
+}

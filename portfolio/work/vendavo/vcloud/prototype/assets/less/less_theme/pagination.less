@@ -1,0 +1,100 @@
+// Pagination.less
+// -----------------------------------------------------*/
+
+.grid-container {
+	+ .pagination { // Pagination under table
+		padding-bottom: @pageMargin;
+	}
+}
+
+.pagination-container {
+	text-align: center;
+	/* Table Pagination */
+	.pagination {
+		.border-radius(0);
+		border: 1px solid @blueLightBorder;
+		margin: 15px 0;
+		padding: 0;
+		> .disabled > span, 
+		> .disabled > a,  
+		> .disabled > a:hover, 
+		> .disabled > a:focus {
+			background-color: @blueLighter;
+			cursor: default;
+			i {
+				color: @grayLightest;
+			cursor: default;
+			}
+			&:hover {
+				background-color: @blueLighter;
+			}
+		}
+		> li {
+			> a {
+				background-color: @white;
+				border: none;
+				color: @blueDarkest;
+				float: left;
+				line-height: 24px;
+				padding: 4px;
+				text-decoration: none; // Collapse white-space
+				span {
+					.border-radius(0);
+					display: inline-block;
+					border: 1px solid transparent;
+					min-width: 30px;
+				}
+				&:hover {
+					background-color: @white;
+					span {
+						border: 1px solid @blueDark;
+					}
+				}
+			}
+			&.active {
+				> a {
+					background-color: @white;
+					span {
+					    .border-radius(0);
+					    background-color: @blueDarkest;
+					    color: @white;
+					}
+					&:hover {
+						span {
+						    border: 1px solid transparent;
+						}
+					}
+				}
+			}
+			&:first-child {
+				> a {
+					.border-left-radius(0);
+					margin-right: @paginationPagerOffset;
+					padding: 5px 8px;
+					&:hover {
+					    background-color: @blueDark;
+					}
+				}
+			}
+			&:last-child {
+				> a {
+					.border-right-radius(0);
+					margin-left: @paginationPagerOffset;
+					padding: 5px 8px;
+					&:hover {
+					    background-color: @blueDark;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Midas List Page Pagination */
+.list { // MIDAS bottom list pagination
+	+ div {
+		.pagination {
+			background: @white; // bottom table pagination
+		}
+	}
+}

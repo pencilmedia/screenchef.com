@@ -1,0 +1,124 @@
+<html>
+
+<head>
+
+<style type="text/css">
+#foo  {
+	width: 50%;
+	border: 1px solid #000;
+	overflow: hidden;
+} 
+#bar {
+	width: 50%;
+	height: 100px;
+	border: 1px solid #000;
+	overflow: auto;
+}
+
+#t1 {
+	background: #ccf;
+	width: 1600px;
+	position: relative;
+}
+#t2 {
+	background: #fff;
+	width: 1600px;
+}
+
+td {
+	border: 1px solid #ccc;
+	width: 400px;
+}
+th {
+	width: 400px;
+}
+</style>
+
+
+<script type="text/javascript">
+function doHeader(src_div, tgt_table) {
+	var sDiv = src_div
+	var tTable = document.getElementById(tgt_table);
+	
+	tTable.style.left = (-1 * (sDiv.scrollLeft)) + "px";
+	
+}
+</script>
+
+</head>
+<body>
+
+<div id="foo">
+
+	<table id="t1">
+		<thead>
+			<tr>
+				<th>dfsjkahfjkdashfdsjhdfksjhfdskfhds</th>
+				<th>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</th>
+				<th>fcasdkjnoqweouifdhjashnjkashdjashjd</th>
+				<th>asjhjkhasdkjhaskjdhasksjdhakjshdjas</th>
+			</tr>
+		</thead>
+	</table>
+
+</div>
+
+<div id="bar" onscroll="doHeader(this, 't1');">
+
+	<table id="t2">
+		<tbody>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+			<tr>
+				<td>dfsjkahfjkdashfdsjhdfksjhfdskfhds</td>
+				<td>ashjkldjaskldjaskldjalkdjaksdjjlkasjd</td>
+				<td>fcasdkjnoqweouifdhjashnjkashdjashjd</td>
+				<td>asjhjkhasdkjhaskjdhasksjdhakjshdjas</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+</body>
+</html>

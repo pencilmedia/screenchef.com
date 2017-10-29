@@ -1,0 +1,330 @@
+/* BEGIN: navbar.scss
+// -----------------------------------------------------*/
+/* BEGIN: variables.scss - for theme.scss
+// -----------------------------------------------------*/
+/* BEGIN: Include Mixins
+// -----------------------------------------------------*/
+/* BEGIN: mixin border-radius.scss
+// -----------------------------------------------------*/
+/* BEGIN: border-radius.scss
+// -----------------------------------------------------*/
+/* BEGIN: box-shadow.scss
+// -----------------------------------------------------*/
+/* BEGIN: flex-box.scss
+// -----------------------------------------------------*/
+/* BEGIN: transition.scss
+// -----------------------------------------------------*/
+/* BEGIN: gradient.scss
+// -----------------------------------------------------*/
+/* COMMON REUSABLE MIXINS
+// -----------------------------------------------------*/
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+  font-size: 14px;
+  padding-top: 45px; }
+
+/* BEGIN: global navbar and menu styles
+// -----------------------------------------------------*/
+.paradata-global-navbar {
+  background: #576472;
+  box-sizing: border-box;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999; }
+  .paradata-global-navbar .paradata-go-back {
+    display: none; }
+  .paradata-global-navbar .paradata-nav-box {
+    background: #576472;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    display: inline-block; }
+    .paradata-global-navbar .paradata-nav-box > button {
+      background: transparent;
+      border: 0;
+      box-sizing: border-box;
+      color: #d2d7dd;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 400;
+      height: 45px;
+      padding-left: 10px;
+      padding-right: 10px;
+      vertical-align: middle;
+      white-space: nowrap; }
+      .paradata-global-navbar .paradata-nav-box > button .paradata-caret {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px dashed;
+        display: inline-block;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        width: 0; }
+      .paradata-global-navbar .paradata-nav-box > button:focus, .paradata-global-navbar .paradata-nav-box > button:hover {
+        background: #414b55;
+        color: #fff;
+        cursor: pointer;
+        outline: none; }
+        .paradata-global-navbar .paradata-nav-box > button:focus .fa, .paradata-global-navbar .paradata-nav-box > button:hover .fa {
+          color: #fff; }
+      .paradata-global-navbar .paradata-nav-box > button:active:focus, .paradata-global-navbar .paradata-nav-box > button:active.focus, .paradata-global-navbar .paradata-nav-box > button.active:focus, .paradata-global-navbar .paradata-nav-box > button.active.focus {
+        outline: none; }
+      .paradata-global-navbar .paradata-nav-box > button.paradata-app-switcher-trigger {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 1px;
+        min-width: 175px; }
+        .paradata-global-navbar .paradata-nav-box > button.paradata-app-switcher-trigger > img, .paradata-global-navbar .paradata-nav-box > button.paradata-app-switcher-trigger > span {
+          height: 23px; }
+        .paradata-global-navbar .paradata-nav-box > button.paradata-app-switcher-trigger > img {
+          float: left;
+          margin-right: 10px; }
+        .paradata-global-navbar .paradata-nav-box > button.paradata-app-switcher-trigger > span {
+          vertical-align: middle; }
+      .paradata-global-navbar .paradata-nav-box > button.paradata-btn-icon {
+        color: #d2d7dd; }
+      .paradata-global-navbar .paradata-nav-box > button.paradata-courtesy-menu-trigger {
+        font-weight: 300; }
+    .paradata-global-navbar .paradata-nav-box:last-child {
+      text-align: right; }
+      .paradata-global-navbar .paradata-nav-box:last-child .paradata-btn.paradata-btn-icon {
+        padding-left: 15px;
+        padding-right: 15px; }
+      .paradata-global-navbar .paradata-nav-box:last-child .paradata-btn.paradata-dropdown-toggle {
+        font-size: 90%;
+        padding-right: 15px; }
+    .paradata-global-navbar .paradata-nav-box .paradata-courtesy-menu-trigger.active + .paradata-courtesy-menu {
+      display: block; }
+  .paradata-global-navbar .paradata-app-menu {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0; }
+    .paradata-global-navbar .paradata-app-menu > li {
+      display: block;
+      float: none;
+      position: relative; }
+      .paradata-global-navbar .paradata-app-menu > li + li {
+        margin-left: 0;
+        margin-top: 2px; }
+      .paradata-global-navbar .paradata-app-menu > li > a {
+        -moz-transition: 0.25s ease;
+        -ms-transition: 0.25s ease;
+        -o-transition: 0.25s ease;
+        -webkit-transition: 0.25s ease;
+        transition: 0.25s ease;
+        color: #0387ab;
+        display: block;
+        font-weight: 300;
+        padding: 7px 45px;
+        position: relative;
+        text-decoration: none;
+        border: none; }
+        .paradata-global-navbar .paradata-app-menu > li > a:hover, .paradata-global-navbar .paradata-app-menu > li > a:focus {
+          text-decoration: none; }
+      .paradata-global-navbar .paradata-app-menu > li.paradata-dropdown-header {
+        color: #777;
+        display: block;
+        font-size: 12px;
+        line-height: 1.42857143;
+        padding: 3px 20px;
+        white-space: nowrap; }
+      .paradata-global-navbar .paradata-app-menu > li.paradata-divider {
+        background-color: #E7EAEC;
+        height: 1px;
+        margin: 4px 0;
+        overflow: hidden; }
+      .paradata-global-navbar .paradata-app-menu > li.active a {
+        color: #333333;
+        font-weight: bold;
+        position: relative; }
+        .paradata-global-navbar .paradata-app-menu > li.active a:hover {
+          background: transparent;
+          cursor: default; }
+      .paradata-global-navbar .paradata-app-menu > li.disabled > a {
+        color: #c7c7c7; }
+        .paradata-global-navbar .paradata-app-menu > li.disabled > a:hover, .paradata-global-navbar .paradata-app-menu > li.disabled > a:focus {
+          background-color: transparent;
+          color: #c7c7c7;
+          cursor: disabled;
+          text-decoration: none; }
+    .paradata-global-navbar .paradata-app-menu > li > a > img {
+      max-width: none; }
+  .paradata-global-navbar .paradata-app-switcher-menu {
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.175);
+    background: #f8f8f9;
+    border: 1px solid #d9dee1;
+    display: none;
+    margin-right: 5px;
+    position: absolute;
+    z-index: -1;
+    /* z-index under navbar */ }
+    .paradata-global-navbar .paradata-app-switcher-menu:focus {
+      outline: none; }
+    .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-apps {
+      background: #fff;
+      border-bottom: 1px solid #d9dee1; }
+      .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-apps > li > a {
+        font-weight: 400; }
+        .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-apps > li > a:hover, .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-apps > li > a:focus {
+          background: #0387ab;
+          color: #fff;
+          outline: none; }
+      .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-apps > li.active > a {
+        font-weight: bold; }
+    .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-admin > li > a {
+      color: #7b8a9a;
+      font-size: 13px; }
+      .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-admin > li > a:hover, .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-admin > li > a:focus {
+        background: #d2d7dd;
+        outline: none; }
+    .paradata-global-navbar .paradata-app-switcher-menu .paradata-app-menu.paradata-admin > li.active > a:hover {
+      background: transparent;
+      cursor: default; }
+    .paradata-global-navbar .paradata-app-switcher-menu .paradata-branding {
+      border-top: 1px solid #E7EAEC;
+      color: #576472;
+      font-size: 90%;
+      margin: 3px 0;
+      text-align: center; }
+      .paradata-global-navbar .paradata-app-switcher-menu .paradata-branding > img {
+        margin: 10px 0 5px 0;
+        width: 55%; }
+  .paradata-global-navbar .paradata-courtesy-menu {
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.175);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #E7EAEC;
+    display: none;
+    float: left;
+    list-style: none;
+    margin: 0;
+    min-width: 175px;
+    padding: 5px 0;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 100%;
+    z-index: 998; }
+    .paradata-global-navbar .paradata-courtesy-menu > li.paradata-divider {
+      background-color: #E7EAEC; }
+    .paradata-global-navbar .paradata-courtesy-menu > li > a {
+      -moz-transition: 0.25s ease;
+      -ms-transition: 0.25s ease;
+      -o-transition: 0.25s ease;
+      -webkit-transition: 0.25s ease;
+      transition: 0.25s ease;
+      clear: both;
+      color: #4d4d4d;
+      display: block;
+      font-weight: normal;
+      line-height: 1.4;
+      padding: 3px 20px;
+      text-decoration: none;
+      white-space: nowrap; }
+    .paradata-global-navbar .paradata-courtesy-menu > li > a:hover, .paradata-global-navbar .paradata-courtesy-menu > li > a:focus {
+      background-color: #d8e2eb;
+      color: #333333;
+      text-decoration: none; }
+    .paradata-global-navbar .paradata-courtesy-menu > .active > a, .paradata-global-navbar .paradata-courtesy-menu > .active > a:hover, .paradata-global-navbar .paradata-courtesy-menu > .active > a:focus {
+      background-color: #d8e2eb;
+      color: #333333;
+      outline: 0;
+      text-decoration: none; }
+    .paradata-global-navbar .paradata-courtesy-menu > .disabled > a, .paradata-global-navbar .paradata-courtesy-menu > .disabled > a:hover, .paradata-global-navbar .paradata-courtesy-menu > .disabled > a:focus {
+      color: #dbdbdb; }
+    .paradata-global-navbar .paradata-courtesy-menu:hover, .paradata-global-navbar .paradata-courtesy-menu:focus {
+      background-color: transparent;
+      background-image: none;
+      text-decoration: none; }
+
+/* BEGIN: global navbar animation
+// -----------------------------------------------------*/
+.paradata-animate {
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes paradata-fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes paradata-fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.paradata-fadeInDownBig {
+  -webkit-animation-name: paradata-fadeInDownBig;
+  animation-name: paradata-fadeInDownBig; }
+
+@-webkit-keyframes paradata-fadeOutUpBig {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); } }
+@keyframes paradata-fadeOutUpBig {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0); } }
+.paradata-fadeOutUpBig {
+  -webkit-animation-name: paradata-fadeOutUpBig;
+  animation-name: paradata-fadeOutUpBig; }
+
+@-webkit-keyframes paradata-fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes paradata-fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.paradata-fadeIn {
+  -webkit-animation-name: paradata-fadeIn;
+  animation-name: paradata-fadeIn; }
+
+/* BEGIN: Font Awesome Icons - Web Fonts
+// -----------------------------------------------------*/
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg"); }
+.paradata-fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  transform: translate(0, 0);
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.paradata-chevron-left:before {
+  content: "\f053"; }
+
+.paradata-inbox:before {
+  content: "\f01c"; }

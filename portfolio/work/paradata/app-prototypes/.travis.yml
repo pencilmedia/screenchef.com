@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- '0.12'
+sudo: false
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_6f9d64d9f885_key -iv $encrypted_6f9d64d9f885_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+
+after_success:
+- ./deploy.sh
+
+notifications:
+    email:
+        recipients:
+        - shaheen@paradata.io
+        - ralph@paradata.io
+        on_success: change
+        on_failure: always
+    hipchat:
+        rooms:
+        - RrHqilAKwy1zDpx0vSu0PJFsC82CZoBLseIzxqnu@1600934
+        template:
+        - 'CS App Prototypes <a href="%{build_url}">build #%{build_number}</a>, repo <a
+          href="https://github.com/%{repository_slug}/tree/%{branch}">%{repository_slug}/{branch}</a><br/><b>%{message}</b>
+          (duration %{duration})<br/><a href="https://github.com/%{repository_slug}/commit/%{commit}">Commit
+          %{commit}</a> by %{author}:<br/><i>%{commit_message}</i>'
+        format: html
+        on_success: change
+        on_failure: always

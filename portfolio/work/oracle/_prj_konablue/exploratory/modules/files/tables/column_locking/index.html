@@ -1,0 +1,1209 @@
+<html>
+<head>
+<title>Lock Columns, Column Locking, Freeze Columns in HTML Tables</title>
+<link rel="stylesheet" href="locked-column.css" type="text/css">
+
+
+<script type="text/javascript">
+var lockedCols=0;
+function lockCol(tblID, n) {
+
+	var table = document.getElementById(tblID); 
+	var cTR = table.getElementsByTagName('TR');  //collection of rows
+	var newDiv;
+	for (i = 0; i < cTR.length; i++)
+		{
+		var tr = cTR.item(i);
+		for (var k=0; k<n; k++){
+			newDiv = document.createElement("DIV");
+			tr.cells[k].className = 'lockedCol';
+			newDiv.className="lockedColDiv";
+			if (k == (n-1)){
+				newDiv.className += " lastLockedColDiv";
+				}
+			if (tr.cells[k].hasChildNodes()){
+				for (j=0; j< tr.cells[k].childNodes.length; j++){
+					newDiv.appendChild(tr.cells[k].childNodes[0].cloneNode(true));
+					tr.cells[k].removeChild(tr.cells[k].childNodes[0]);
+					}
+				}
+			tr.cells[k].appendChild(newDiv);
+			}
+		}
+		lockedCols = n;
+	}
+
+function unlockCol(tblID) {
+
+	if (lockedCols > 0){
+		var table = document.getElementById(tblID); 
+		var cTR = table.getElementsByTagName('TR');  //collection of rows
+		var newDiv;
+		for (i = 0; i < cTR.length; i++){
+			var tr = cTR.item(i);
+			for (var k=0;k<lockedCols;k++) {
+				tr.cells[k].className = ''
+				newDiv = tr.cells[k].childNodes[0].cloneNode(true);
+				tr.cells[k].removeChild(tr.cells[k].childNodes[0]);
+				for (j=0; j<newDiv.childNodes.length; j++) {
+					tr.cells[k].appendChild(newDiv.childNodes[j]);
+					}
+				}
+			}
+		lockedCols = 0;
+		}
+	}
+
+function scrollit(container){
+	if (document.styleSheets[0].deleteRule) {  // Firefox
+         	if (lockedCols > 0){
+
+			document.styleSheets[0].insertRule(".lockedColDiv { left: " + container.scrollLeft + "px; }",0) ;	
+			document.styleSheets[0].deleteRule(1);
+			}
+		document.styleSheets[0].insertRule(".lockedHdrDiv { top: " + container.scrollTop + "px; }",1) ;	
+		document.styleSheets[0].deleteRule(2);
+		}
+	}
+
+
+</script>
+
+</head>
+<body>
+
+<h2 style="color:navy">Lock or Freeze HTML Table Columns</h2>
+	
+<h4>(Click on column heading to lock)</h4>
+	
+<h4>(IE complete; Firefox needs minor work)</h4>
+
+<div id="tbl-container" onscroll="scrollit(this)"><table id="tbl">
+<thead>
+<tr>
+<th onclick="unlockCol('tbl');lockCol('tbl',1)"><div class="lockedHdrDiv">Name</div></th>
+<th onclick="unlockCol('tbl');lockCol('tbl',2)"><div class="lockedHdrDiv">Major</div></th>
+<th width="100" onclick="unlockCol('tbl');lockCol('tbl',3)"><div class="lockedHdrDiv">Sex</div></th>
+<th onclick="unlockCol('tbl');lockCol('tbl',4)"><div class="lockedHdrDiv">English</div></th>
+<th onclick="unlockCol('tbl');lockCol('tbl',5)"><div class="lockedHdrDiv">Japanese</div></th>
+<th onclick="unlockCol('tbl');lockCol('tbl',6)"><div class="lockedHdrDiv">Calculus</div></th>
+<th onclick="unlockCol('tbl');lockCol('tbl',7)"><div class="lockedHdrDiv">Geometry</div></th>
+<th onclick="unlockCol('tbl');lockCol('tbl',7)"><div class="lockedHdrDiv">History</div></th>
+</tr>
+</thead>
+
+<tbody>
+
+  <tr>
+    <td>Student01</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>80</td>
+    <td>70</td>
+    <td>75</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student02</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>90</td>
+    <td>88</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student03</td>
+    <td>Mathematics</td>
+    <td>female</td>
+    <td>85</td>
+    <td>95</td>
+    <td>80</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student04</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>60</td>
+    <td>55</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student05</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>68</td>
+    <td>80</td>
+    <td>95</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student06</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student07</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>85</td>
+    <td>68</td>
+    <td>90</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student08</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>100</td>
+    <td>90</td>
+    <td>90</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student09</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>80</td>
+    <td>50</td>
+    <td>65</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student10</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student11</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>86</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student12</td>
+    <td>Mathematics</td>
+    <td>female</td>
+    <td>100</td>
+    <td>75</td>
+    <td>70</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student13</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>80</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student14</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>50</td>
+    <td>45</td>
+    <td>55</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student15</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>95</td>
+    <td>35</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student16</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>50</td>
+    <td>30</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student17</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>80</td>
+    <td>100</td>
+    <td>55</td>
+    <td>65</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student18</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>30</td>
+    <td>49</td>
+    <td>55</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student19</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>68</td>
+    <td>90</td>
+    <td>88</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student20</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>40</td>
+    <td>45</td>
+    <td>40</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student21</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>50</td>
+    <td>45</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student22</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student23</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student24</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student25</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student01</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>80</td>
+    <td>70</td>
+    <td>75</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student02</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>90</td>
+    <td>88</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student03</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>95</td>
+    <td>80</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student04</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>60</td>
+    <td>55</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student05</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>68</td>
+    <td>80</td>
+    <td>95</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student06</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student07</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>85</td>
+    <td>68</td>
+    <td>90</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student08</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>100</td>
+    <td>90</td>
+    <td>90</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student09</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>80</td>
+    <td>50</td>
+    <td>65</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student10</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student11</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>86</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student12</td>
+    <td>Mathematics</td>
+    <td>female</td>
+    <td>100</td>
+    <td>75</td>
+    <td>70</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student13</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>80</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student14</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>50</td>
+    <td>45</td>
+    <td>55</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student15</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>95</td>
+    <td>35</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student16</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>50</td>
+    <td>30</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student17</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>80</td>
+    <td>100</td>
+    <td>55</td>
+    <td>65</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student18</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>30</td>
+    <td>49</td>
+    <td>55</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student19</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>68</td>
+    <td>90</td>
+    <td>88</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student20</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>40</td>
+    <td>45</td>
+    <td>40</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student21</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>50</td>
+    <td>45</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student22</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student23</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student24</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student25</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student01</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>80</td>
+    <td>70</td>
+    <td>75</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student02</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>90</td>
+    <td>88</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student03</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>95</td>
+    <td>80</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student04</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>60</td>
+    <td>55</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student05</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>68</td>
+    <td>80</td>
+    <td>95</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student06</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student07</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>85</td>
+    <td>68</td>
+    <td>90</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student08</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>100</td>
+    <td>90</td>
+    <td>90</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student09</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>80</td>
+    <td>50</td>
+    <td>65</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student10</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student11</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>86</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student12</td>
+    <td>Mathematics</td>
+    <td>female</td>
+    <td>100</td>
+    <td>75</td>
+    <td>70</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student13</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>80</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student14</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>50</td>
+    <td>45</td>
+    <td>55</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student15</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>95</td>
+    <td>35</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student16</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>50</td>
+    <td>30</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student17</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>80</td>
+    <td>100</td>
+    <td>55</td>
+    <td>65</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student18</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>30</td>
+    <td>49</td>
+    <td>55</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student19</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>68</td>
+    <td>90</td>
+    <td>88</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student20</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>40</td>
+    <td>45</td>
+    <td>40</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student21</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>50</td>
+    <td>45</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student22</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student23</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student24</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student25</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student01</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>80</td>
+    <td>70</td>
+    <td>75</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student02</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>90</td>
+    <td>88</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student03</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>95</td>
+    <td>80</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student04</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>60</td>
+    <td>55</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student05</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>68</td>
+    <td>80</td>
+    <td>95</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student06</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student07</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>85</td>
+    <td>68</td>
+    <td>90</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student08</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>100</td>
+    <td>90</td>
+    <td>90</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student09</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>80</td>
+    <td>50</td>
+    <td>65</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student10</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student11</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>86</td>
+    <td>85</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student12</td>
+    <td>Mathematics</td>
+    <td>female</td>
+    <td>100</td>
+    <td>75</td>
+    <td>70</td>
+    <td>85</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student13</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>80</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student14</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>50</td>
+    <td>45</td>
+    <td>55</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student15</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>95</td>
+    <td>35</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student16</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>100</td>
+    <td>50</td>
+    <td>30</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student17</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>80</td>
+    <td>100</td>
+    <td>55</td>
+    <td>65</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student18</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>30</td>
+    <td>49</td>
+    <td>55</td>
+    <td>75</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student19</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>68</td>
+    <td>90</td>
+    <td>88</td>
+    <td>70</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student20</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>40</td>
+    <td>45</td>
+    <td>40</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student21</td>
+    <td>Languages</td>
+    <td>male</td>
+    <td>50</td>
+    <td>45</td>
+    <td>100</td>
+    <td>100</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student22</td>
+    <td>Mathematics</td>
+    <td>male</td>
+    <td>100</td>
+    <td>99</td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student23</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student24</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  <tr>
+    <td>Student25</td>
+    <td>Languages</td>
+    <td>female</td>
+    <td>85</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+    <td>80</td>
+
+  </tr>
+  </tbody>
+</table>
+
+
+</div> <!-- end tbl-container -->
+
+<div style="margin-top:100px">
+<button onClick="unlockCol('tbl')"  id="toggle">Unlock</button>
+</div>
+
+
+</body>
+</html>

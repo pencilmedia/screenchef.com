@@ -1,0 +1,380 @@
+/* Carousel */
+
+UX.dwpe-carousel{
+	border:1px solid #888888;
+	bottom:0;
+	left:0;
+	overflow-y:auto;
+	right:0;
+	width:100%;
+	height:60%;
+	display:inline-block;
+}
+	
+DIV.object-title{
+	color:black;
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:bold;
+	height:5%;
+	text-align:center;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+DIV.carousel-slider-hor{
+	top:60%;
+	width:100%;
+}
+
+DIV.carousel-spin-left{
+	background-image:url(../images/carousel/carousel-spin-left.png);
+	background-repeat:no-repeat;
+	right:85%;	
+	position:absolute;
+	height:24px;
+	width:11px;
+}
+
+DIV.carousel-spin-left-d{
+	background-image:url(../images/carousel/carousel-spin-left-d.png);
+	background-repeat:no-repeat;
+	right:85%;	
+	position:absolute;
+	height:24px;
+	width:11px;
+}
+
+DIV.carousel-spin-bar{
+	background-image:url(../images/carousel/carousel-spin-bar.png);
+	background-position:center center;
+	background-repeat:repeat-x;
+	height:24px;
+	left:15%;
+	overflow:hidden;
+	position:absolute;
+	right:15%;
+}
+
+DIV.carousel-spin-bar-d{
+	background-image:url(../images/carousel/carousel-spin-bar-d.png);
+	background-position:center center;
+	background-repeat:repeat-x;
+	height:24px;
+	left:15%;
+	overflow:hidden;
+	position:absolute;
+	right:15%;
+}
+
+DIV.carousel-spin-right{
+	background-image:url(../images/carousel/carousel-spin-right.png);
+	background-repeat:no-repeat;
+	height:24px;
+	left:85%;
+	position:absolute;
+	width:11px;
+}
+
+DIV.carousel-spin-right-d{
+	background-image:url(../images/carousel/carousel-spin-right-d.png);
+	background-repeat:no-repeat;
+	height:24px;
+	left:85%;
+	position:absolute;
+	width:11px;
+}
+
+DIV.carousel-spin-marker{
+	background-image:url(../images/carousel/carousel-spin-marker.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	height:24px;
+	position:absolute;
+	width:11px;
+	left:auto;
+	right:auto;
+}
+
+DIV.carousel-spin-marker-d{
+	background-image:url(../images/carousel/carousel-spin-marker-d.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	height:24px;
+	position:absolute;
+	width:11px;
+	left:auto;
+	right:auto;
+}
+
+DIV.carousel-spin-bar>DIV.ui-widget-content, DIV.carousel-spin-bar-d>DIV.ui-widget-content, DIV.properties-dropzone-container>DIV.ui-widget-content, DIV.carousel-object>DIV.ui-widget-content{
+border:0px solid #FFFFFF;
+}
+
+DIV.object-set-number{
+	left:15%;
+	right:15%;
+	position:absolute;
+}
+
+DIV.menu-tool-container{	
+ 	position:relative;
+ 	white-space:nowrap;
+	display:block;	
+	border:none;
+	padding:0px;	
+	width:100%;
+}
+
+DIV.filterbar{
+	height:10%;
+	padding:2px;
+}
+
+DIV.menu-tool-container>DIV.left
+{	
+	padding:0px;
+	margin:0px;
+	position:relative;
+	display:inline-block;
+	white-space:nowrap;
+	overflow:hidden;
+	width:7%;
+	float:left;
+	_z-index:1;
+}
+
+DIV.menu-tool-container>DIV.right
+{	
+	position:relative;
+	padding:0px;
+	margin:0px;
+	display:inline-block;
+	white-space:nowrap;
+	float:right;
+	width:25%;
+}
+
+
+DIV.menu-tool-container>DIV.center
+{	
+	position:relative;
+	padding:0px;
+	margin:0px;
+	display:inline-block;
+	white-space:nowrap;
+	float:left;
+	width:68%;
+}
+
+DIV.menu-tool-container>DIV.right>UX.dwpe-singleselectchoicelist>select.dwpe-singleselectchoicelist{
+	width:39%;
+}
+
+DIV.menu-tool-container>DIV.right>INPUT.dwpe-textbox{
+	width:33%;
+}
+
+DIV.carousel-objects-container{
+	width:100%;
+	height:55%;
+	overflow:hidden;
+	z-index:1;
+	left:0%;
+	right:0%;
+	top:0%;
+	bottom:0%;
+}
+
+DIV.carousel-object{
+	height:55%;
+	width:20%;	
+	border:1px solid black;
+	overflow:hidden;
+	position:absolute;
+	display:none;
+	top:10%;
+	text-align:center;	
+}
+
+DIV.carousel-child-object{
+	height:100%;
+	width:100%;	
+	border:1px solid black;
+	overflow:hidden;
+	position:absolute;	
+	top:10%;
+	text-align:center;
+	display:none;
+}
+
+DIV.carousel-object>UL{
+	list-style-type:none;
+}
+
+DIV.properties-dropzone-container{
+	top:70%;
+	width:100%;
+}
+
+DIV.carousel-object-properties{
+	float:left;
+	width:50%;
+	border: 1px solid gray;
+	color:black;
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:normal;	
+	padding:1px;
+	margin:1px;
+}
+
+DIV.carousel-drop-zone{
+	float:right;
+	width:15%;
+	_border:1px solid gray;
+	margin:5px;
+	height:130px;
+	position:relative;
+	display:block;		
+	overflow-x:auto;
+	overflow-y:hidden;
+	_-moz-border-radius:10px;
+}
+
+_DIV.drop-objects{
+	display:block;
+	width:32%;
+	margin: 2px;
+	height:96%;
+	border:1px solid black;
+}
+
+DIV.carousel-object-properties>P{
+	margin:0px;
+}
+
+DIV.carousel-custom-toolbar{	
+	height:23px;
+	min-height:4px;
+	position:relative;
+	text-align:left;
+	vertical-align:top;
+	height:10%;
+	opacity: 0.01;
+}
+
+DIV.carousel-navigation-bar{
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:normal;
+	text-decoration:none;
+	white-space:nowrap;
+	text-align:center;
+	height:10%;
+	position:relative;
+	opacity:0.01;
+}
+
+DIV.carousel-custom-toolbar:hover{
+	opacity:1;
+}
+
+DIV.carousel-navigation-bar:hover{
+	opacity:1;
+}
+
+DIV.objectimg{
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+DIV.objecturl{
+	height:100%;
+	width:100%;
+	_position:absolute;
+	_display:block;
+	_background-position:center;
+}
+
+DIV.pagecontent{
+	height:80%;
+	width:100%;
+	display:inline-block;
+	position:relative;
+}
+
+DIV.dropobject{
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	_border:1px solid black;
+	_float:left;
+	_margin: 2px;
+	_-moz-border-radius:10px;	
+}
+
+_DIV.drop-zone-object{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	white-space:nowrap;
+}
+
+_DIV.dropnav-left{
+	float:left;
+	vertical-align:middle;
+	text-align:center;
+	width:5%;
+	height:100%;
+}
+
+_DIV.dropnav-right{
+	float:right;
+	width:5%;
+	height:100%;
+	position:relative;	
+	display:inline-block;
+	white-space:nowrap;
+}
+
+_DIV.dropContent{
+	border:1px solid gray;
+	width:90%;
+	float:left;
+	height:100%;
+	position:relative;	
+	display:inline-block;
+	white-space:nowrap;
+}
+
+DIV.drop-text{
+	text-align:center;
+	font-size:11px;
+	font-family:Tahoma;
+	color:black;
+}
+
+DIV.innerBox{
+	border:1px solid gray;
+	-moz-border-radius:10px;
+	width:96%;
+	height:86%;
+}
+
+DIV.menubar>UX.dwpe-menu>ul>li:hover, 
+DIV.carousel-custom-toolbar>UX.dwpe-menu>ul>li:hover
+{ 
+	color:#fff;
+	background-color:   #7aaada;
+	background-image:	url('../images/menus/top-level-menu-active.png'),
+						url('../images/button_bg_ovr.png'); 
+	
+	background-repeat:no-repeat,repeat-x;
+	background-position:center right,bottom left;
+}

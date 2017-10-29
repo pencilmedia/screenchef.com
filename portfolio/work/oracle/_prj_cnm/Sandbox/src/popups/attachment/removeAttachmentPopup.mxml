@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="250" title="Remove Attachment/Reference"
+	 paddingBottom="0" paddingTop="10" paddingLeft="0" paddingRight="0"
+	horizontalScrollPolicy="off" borderAlpha="100" dropShadowEnabled="true" cornerRadius="0" 
+	showCloseButton="true" close="closeRemovePopup();">
+	<mx:Script>
+	    <![CDATA[
+	        import mx.collections.ArrayCollection;
+	        import mx.controls.Alert;
+	        import mx.managers.PopUpManager;
+	        import popups.create.createPopup;
+	            
+	        // CLOSE POPUP
+			private function closeRemovePopup():void
+	        {
+	        	PopUpManager.removePopUp(this);
+			}
+	    ]]>
+	</mx:Script>
+	<mx:VBox id="removeBox" width="100%" height="100%">
+        <mx:Text text="Are you sure you want to remove 'Description appears here' attachment?" 
+        	width="100%" textAlign="center" 
+        	paddingTop="10" paddingRight="10" paddingBottom="10" paddingLeft="10" />
+		<mx:HBox styleName="footer" width="100%">
+		    <mx:Button label="Help" />
+		    <mx:Spacer width="80%" />
+		    <mx:Button label="Cancel" click="closeRemovePopup();" />    	
+		    <mx:Button label="OK" />
+	    </mx:HBox>
+	</mx:VBox>
+</mx:TitleWindow>
+
+
+
+
+
+
+

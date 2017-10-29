@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="40">
+<mx:Script>
+	<![CDATA[
+             // Save Requirment Popup
+	        import mx.managers.PopUpManager;
+	        import popups.actions.saveRequirementPopup;
+	        import popups.actions.exportPopup;
+       		import popups.actions.viewHistoryPopup;
+	        
+	        public var saveRequirementPop:saveRequirementPopup;
+	        public function saveAsAction():void
+	        {
+				saveRequirementPop = new saveRequirementPopup();
+				PopUpManager.addPopUp(saveRequirementPop, this, false);
+				saveRequirementPop.x = 300;
+				saveRequirementPop.y = 100;
+			}
+	        public var exportPop:exportPopup;
+	        public function exportAction():void
+	        {
+				exportPop = new exportPopup();
+				PopUpManager.addPopUp(exportPop, this, false);
+				exportPop.x = 300;
+				exportPop.y = 100;
+			}
+	        public var historyPop:viewHistoryPopup;
+	        public function viewHistoryAction():void
+	        {
+				historyPop = new viewHistoryPopup();
+				PopUpManager.addPopUp(historyPop, this, false);
+				historyPop.x = 300;
+				historyPop.y = 100;
+			}
+			
+// MORE ACTIONS DROPDOWN MENU
+			import mx.controls.Menu;
+            import mx.events.MenuEvent;   
+            import flash.geom.Point;
+            
+            private var point1:Point = new Point();
+            private var myMenu:Menu;
+   
+            // Create and display the Menu control.
+            private function moreActions():void {
+                myMenu= Menu.createMenu(moreActionsBtn, createNewMenu, false);
+                myMenu.labelField="@label"
+                myMenu.addEventListener("itemClick", menuClickHandler);
+                
+                // Calculate position of Menu in Application's coordinates. 
+                point1.x = moreActionsBtn.x;
+                point1.y = moreActionsBtn.y;                
+                //point1 = createNew.localToGlobal(point1);
+
+                myMenu.show(point1.x + 430, point1.y + 85);
+            }
+	        
+			  import mx.events.MenuEvent;
+
+			  private function menuClickHandler(event:MenuEvent):void {
+			   switch (event.label) {
+			    case "Import":
+			    	//exportAction();
+			     break;
+			    case "Export":
+			    	exportAction();
+			     break;
+			    case "View History":
+			    	viewHistoryAction();
+			     break;
+			    case "Save As":
+			    	saveAsAction();
+			     break;
+			   }
+			  }
+            
+
+			//MENU ITEMS - XML  
+			import mx.collections.XMLListCollection;
+            
+            [Bindable]
+            public var createNewMenu:XML =
+            <root>
+			    <menuitem label="Import" />
+			    <menuitem label="Export" />
+			    <menuitem label="View History" />
+			    <menuitem label="Save As" />
+        	</root>;
+			
+	]]>
+</mx:Script>
+	<mx:Grid id="footer" horizontalGap="0" verticalGap="1" width="100%" height="40" verticalScrollPolicy="off">
+		<mx:GridRow width="100%" paddingBottom="0" paddingTop="0" paddingRight="0">
+			<mx:GridItem paddingBottom="0" paddingTop="0" paddingRight="0" paddingLeft="0" width="25%">
+				<mx:Label id="objTitle" text="Load" fontSize="15" color="#666666" paddingLeft="5" />
+				<mx:Label text="[In Progress]" fontSize="15" color="#666666" />
+			</mx:GridItem>
+			<mx:GridItem paddingBottom="0" paddingTop="0" paddingLeft="0" paddingRight="0" width="75%" verticalAlign="middle">
+				<mx:Spacer width="80%" />
+				<mx:LinkButton label="Change Status" />
+				<mx:LinkButton label="Add to Favorites" />
+				<mx:LinkButton id="moreActionsBtn" icon="@Embed('../assets/images/icons/ico_dropdown.png')" label="More Actions" labelPlacement="left"
+					click="moreActions();" />
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+</mx:Canvas>
+
+	

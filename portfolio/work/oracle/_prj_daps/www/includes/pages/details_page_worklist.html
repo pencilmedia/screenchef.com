@@ -1,0 +1,214 @@
+<script>
+function comInit()
+{
+	var image;
+	$('#details_page_form1_object_title, #details_page_form1_asset_name').text( $('.ui-tabs-selected a span').html() );
+	$('#details_page_form1_subtabs').tabs();
+	switch ( $('.ui-tabs-selected a span').html() )
+	{
+		case 'Po Group Shot':
+			image = "/images/asset_1.jpg"
+			break;
+		case 'Po High Kick':
+			image = "/images/asset_2.jpg"
+			break;
+		case 'Po Head Shot':
+			image = "/images/asset_3.jpg"
+			break;
+		case 'Master High Kick':
+			image = "/images/asset_4.jpg"
+			break;
+		case 'Monkey Character':
+			image = "/images/asset_5.jpg"
+			break;
+		case 'Tiger Character':
+			image = "/images/asset_6.jpg"
+			break;
+		case 'Leopard Shot':
+			image = "/images/asset_7.jpg"
+			break;
+		default:
+			image = "/images/asset_1.jpg"
+			break;
+	}
+	//alert($('.ui-tabs-selected a span').html());
+	$("#details_page_form1_asset_image").attr("src",image);
+	applicationLayout.resizeAll();
+	resize_details();
+	$(window).bind('resize', resize_details)
+}
+function resize_details()
+{
+	var formHeight = 	$(window).height() - 113;
+	var subTabsHeight = formHeight - 250
+	$("#details_page_form1").height( formHeight  );
+	$("#details_page_form1_subtabs div.com").height( subTabsHeight );
+}
+$(document).ready(comInit);
+</script>
+<style>
+#details_page_form1 div.widget_header
+{
+	background: url();
+	padding-left:5px;
+}
+#details_page_form1_subtabs div.com
+{
+	border: 1px solid #ccc;
+	margin: 0 3px
+}
+#details_page_form1_subtabs div.com
+{
+	padding:0;
+}
+#details_page_form1_subtabs div.widget_action_bar h3 {margin-top: 4px; }
+.form_description{
+	position: absolute;
+	top:50px;
+	right: 30px;
+	width: 35%;
+}
+div.path_map {
+	text-align: center;
+	padding-top: 20px;
+}
+div.path_map div
+{
+	position: relative;
+	display:inline-block;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin: 10px;
+	text-align:center;
+	background-color: #fff;
+	z-index: 2;
+}
+div.path_map div h3
+{
+	margin-bottom: 5px;
+}
+div.path_map hr
+{
+	position:relative;
+	top: 50px;
+	text-align: center;
+	z-index:0;
+	margin:0 20%;
+	border:1px solid #ccc;
+	height:0px;
+}
+</style>
+<div id="details_page_form1" class="com">
+    <div class="widget_header">
+        <h3>Model: <span id="details_page_form1_object_title"></h3>
+    </div>
+    <!--
+    <div class="widget_action_bar">
+     	<span>
+        	<button>Edit</button>
+        	<button>Watch This</button>
+        </span>
+    	<span>&nbsp;</span>
+    </div>
+    -->
+    <div class="widget_layout">
+        <dl>
+            <dt class="img"><img id="details_page_form1_asset_image" src="../../images/kfpanda.jpg" alt="Asset One" /></dt>
+            <dt>Name:</dt>
+            <dd id="details_page_form1_asset_name">Asset One</dd>
+            <dt>Project:</dt>
+            <dd id="dd_asset_project">WBFA</dd>
+            <dt>Type:</dt>
+            <dd>3D Model</dd>
+            <dt>Process:</dt>
+            <dd>Rigging</dd>
+            <dt>Status:</dt>
+            <dd id="dd_asset_status">Checked In</dd>
+            <dt>When:</dt>
+            <dd>1 Hour Ago</dd>
+        </dl>
+        <div class="form_description">
+        	<h3>Description:</h3>
+        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet neque at magna varius viverra.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam et leo tellus.</p>
+        </div>
+        <p>&nbsp;</p>
+        <div id="details_page_form1_subtabs" class="details_subtabs">
+            <ul>
+                <li><a href="#detail_1"><span>Other Details</span></a></li>
+                <li><a href="#detail_2"><span>Sub Assets</span></a></li>
+                <li><a href="#detail_3"><span>Process</span></a></li>
+                <li><a href="#detail_4"><span>Revisions</span></a></li>
+                <li><a href="#detail_5"><span>Levels</span></a></li>
+                <li><a href="#detail_6"><span>Publishers</span></a></li>
+                <li><a href="#detail_7"><span>History</span></a></li>
+            </ul>
+            <div id="detail_1"  class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>Other Details</h3>
+                </div>
+            </div>    
+            <div id="detail_2" class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>Sub Assets</h3>
+                </div>
+            </div>
+            <div id="detail_3" class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>Process</h3>
+                </div>
+                <div class="path_map">
+                	<hr/>
+                	<div>
+                    	<h3>Render</h3>
+                        <p>Model Department</p>
+                    </div>
+                	<div>
+                    	<h3>Rig</h3>
+                        <p>Model Department</p>
+                    </div>
+                	<div>
+                    	<h3>Texture Map</h3>
+                        <p>FX Department</p>
+                    </div>
+                	<div>
+                    	<h3>Add Hair</h3>
+                        <p>FX Department</p>
+                    </div>
+                	<div>
+                    	<h3>Color</h3>
+                        <p>Art Department</p>
+                    </div>
+                </div>
+            </div>
+            <div id="detail_4" class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>Revisions</h3>
+                </div>
+            </div>
+            <div id="detail_5" class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>Levels</h3>
+                </div>
+            </div>
+            <div id="detail_6" class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>Publishers</h3>
+                </div>
+            </div>
+            <div id="detail_7" class="com">
+                <div class="widget_action_bar">
+                    <span><!--<button>Edit</button>--></span>
+                    <h3>History</h3>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+

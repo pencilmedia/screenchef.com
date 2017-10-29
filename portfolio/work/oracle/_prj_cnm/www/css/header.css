@@ -1,0 +1,155 @@
+/******************************************************************************
+HEADER.CSS
+Description: Header related styles and definitions.
+******************************************************************************/
+.header_wrapper {
+	padding: 10px 10px 5px 10px; 
+	overflow: hidden;
+	min-width: 600px;
+}
+
+.header_wrapper	div.column_one.layout {
+	width: 50%;
+}
+.header_wrapper .column_one {
+	position: relative;
+}
+.header_wrapper	.column_two { 
+	width: 30%;
+	margin-top: -2px; /* brings up column two to match column one header alignment */
+}
+.header_wrapper .column_two p {
+	margin-top: -2px;
+}
+.header_wrapper	.column_three {
+	width: 20%;
+}
+
+.header_wrapper .column_two.extended {
+	width:  50%;
+}
+ 
+ 
+.header_wrapper	.progress_bar { 
+	border: 1px solid #ccc; 
+	float: left; 
+	height: 5px; 
+	margin: 5px 5px 5px 0; 
+	padding: 1px;
+	width: 100px;
+}
+
+
+.header_wrapper	.progress_bar_background { 
+	background-color:#ccc; 
+	height: 100%;
+	width: 100%;
+}
+.header_wrapper	.progress_bar_inner {
+	background-color: #333; 
+	height: 100%; 
+	width: 30%; 
+}
+.header_wrapper .progress_percentage {
+	float: left;
+	padding: 3px 0;
+}
+
+.header_wrapper	.container_header_action { 
+	background: url('../images/bgd_dialog.png') repeat-x bottom; 
+	border-bottom: 1px solid #999; 
+	height: 50px; 
+	padding: 11px 10px 0 10px; 
+}
+.header_wrapper	.column_three ul.rating li { 
+	background-position: right top;
+	background-repeat: no-repeat;
+	list-style-type: none;
+	margin: 0 0 2px 0;
+	padding-right: 50px;
+	white-space:nowrap;
+	text-align: right;
+}
+
+
+/*************************
+	QUICK LINKS
+*************************/
+.quickLinks h5 {
+	display: inline;
+	font-weight: bold;
+	border-right: 1px solid #ccc;
+}
+.quickLinks h5 span {
+	margin-right: 5px;
+	border: none;
+}
+.quickLinks img {
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+.quickLinks span {
+	margin-right: 5px;
+	border-right: 1px solid #ccc;
+}
+.quickLinks span a {
+	padding-right: 5px;
+	white-space: nowrap;
+}
+.quickLinks span a:hover {
+	text-decoration: underline;
+}
+
+.quickLinks span.ql {
+	margin-right: 0;
+}
+.quickLinks span.ql a {
+	font-weight: bold;
+	color: #333;
+}
+
+.quicklink_links {
+	margin-top: 5px !important;
+}
+.quicklink_links a.showall {
+	font-size: 10px;
+}
+.quicklink_links a.showall:hover {
+	text-decoration: underline;
+}
+
+/*************************
+	QUICK LINKS DIV
+*************************/
+.utility_links {
+	width: auto;
+	text-align: right;
+}
+.utility_links span {
+	border-right: 1px solid #ccc;
+	padding: 0 3px;
+}
+.utility_links span:first-child, 
+.utility_links span:last-child {
+	border-right: none;
+}
+
+.global_search {
+	text-align: right;
+	margin-top: 5px;
+}
+.global_search button {
+	margin-left: 5px;
+}
+
+.content_header {
+	overflow: auto;
+	padding: 10px;
+}
+.content_header .column_one {
+	width: 50%;
+}
+.content_header .column_two {
+	width: 50%;
+}

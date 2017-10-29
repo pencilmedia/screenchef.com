@@ -1,0 +1,28 @@
+/* BEGIN: Include Mixins
+// -----------------------------------------------------*/
+
+@import "_mixins/border-radius";
+@import "_mixins/box-shadow";
+
+@mixin hoverTransition() {
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@mixin half-transition() {
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+@mixin transitionDelay() {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}

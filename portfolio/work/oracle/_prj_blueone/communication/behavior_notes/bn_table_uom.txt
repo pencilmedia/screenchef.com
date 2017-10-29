@@ -1,0 +1,228 @@
+
+UNIT of MEASURE (for table)
+updated by Uday Gajendar
+on 09/06/2007
+
+
+************************************************
+>> OVERVIEW
+************************************************
+
+prototype available? N
+
+mockup available? Y
+
+mockup file/location: table_actions.psd
+
+
+
+UI COMPONENT DEFINITION:
+
+The Unit of Measure (UOM) attribute includes a numeric value and a unit that describes what the unit of the value is.  This attribute is completed by entering the numeric value in a Text Control and then selecting a unit from a Drop-Down List.  
+
+Currently, the UOM type attributes are only used for PG&C to record Mass.  UOM fields are available in the following places in the app:
+Items | Title Block | Mass
+Manufacturer Parts | General Info | Mass
+Part Groups | General Info | Mass
+Declarations | Items, Manufacturers, and Part Groups | Composition Table and Substance Table | Mass fields
+
+No other UOM fields can be configured.
+
+LIMITS:
+
+Limited by Order, Scale, Min Value, and Max Value set in Classes Admin at the attribute level.
+
+DEPENDENCIES:
+ 
+Understanding of Text Control and Drop-Down List elements.
+
+TERMINOLOGY:
+
+UOM = 1) abbreviation for Unit of Measure; 2) a Classes Admin attribute type
+
+Unit Drop-Down = the drop-down list to specify the unit of measure.  For example, for a Mass field the UOM is the list of weights.
+
+UI LAYOUT:
+
+UOM elements display in forms and tables, based on the attribute order defined in Classes Admin.  
+
+
+Positioning:
+If on the far Right column:
+- UOM, datepicker, MSL, and multitext all move in leftward so nothing is jutting outside of the table frame
+
+
+If on the bottom row:
+- multitext read and edit div goes upward from the cell
+- MSL read div goes upward from the cell
+- datepicker calendar appears above the cell when the button is pressed
+- MSL edit div and single-select search goes upward
+
+
+VISUAL DISPLAY:
+
+The UOM Element consists of a short Text Control for the number and a Drop-Down List for the unit, separated by 5 pixels.  If the page is resized, the Unit Drop-Down will not wrap to the next row.  
+
+ICONOGRAPHY:
+
+None
+
+
+VISUAL DISPLAY:
+table_actions.psd
+
+
+************************************************
+>> BEHAVIORS
+************************************************
+------------------------------
+IN GENERAL...
+------------------------------
+
+MOUSE ACTIONS:
+
+The UOM Element will work in accordance with the Text Control and Drop-Down List specifications.
+
+- CLICK on a cell: cell is highlighted
+- DOUBLE-CLICK on a cell: UI control appears
+- FOCUS is on the input field with numeric value highlighted, ready to be changed by keystroke
+- CLICK menu divot: measurement units menu appears showing the entire list of values (including any disabled values, if that is applicable)
+- for long string values within the menu: the list itself is clipped
+- width of the list of values is dependent upon OS behavior
+- HOVER the list items: browser/platform-based highlighting appears for each item the user hovers
+
+
+
+
+KEYBOARD COMMANDS:
+
+
+The UOM Element will work in accordance with the Text Control and Drop-Down List specifications.
+
+- TAB: puts focus on cell, visually selected
+- ENTER: UI control appears  (same as DOUBLE-CLICK above)
+- ENTER again: confirms search selection, UI controls disappear, focus on current cell
+
+< QUESTION: what if user presses enter after typing in numbers but hasn't selected a measurement value yet? does a default unit appear? error? >
+
+- ESC: discards changes, and shows the cell with prior data, focus on current cell
+- ARROW UP/DOWN: puts focus on above/below cell
+
+- TAB: moves focus from input field to measurement units drop-down list
+- measurement units list keyboarding behavior follows the drop-down list spec
+
+- Use browser-defined behaviors for text input area (ARROW, HOME, PAGE DOWN, PAGE UP, END, etc.)
+
+
+
+MEASUREMENT UNITS:
+
+If user enters standard abbreviation
+- Preserve abbreviation within text field
+
+If user enters wrong abbreviation
+- Resolve to closest abbreviation within menu 
+- If no match found, then abbreviation shows in RED text
+- Cell has RED outline   
+
+If user selects a different unit than already selected 
+- The unit value simply switches, NOT conversion
+
+
+
+
+TAB INDEX ORDER:
+
+- The user can tab from the Text Control to the Drop-Down List and then to the next cell on the row
+
+
+
+
+DEFAULT STATES:
+
+Initially, no number value is specified in the Text Control.  It defaults to blank.  The Unit Drop-Down must default to the standard value, as defined by the ÒIs StandardÓ property of the unit options in Admin.  
+
+
+
+SYSTEM BEHAVIORS: 
+
+Text Control
+-	Only numbers and number delimiters (period and comma) are allowed in the Text Control
+
+Unit Drop-Down
+-	[NEW] The option values will be the Abbreviation as defined in Admin
+-	[NEW] The tooltip for each option will be the Name as defined in Admin (known issue that option tooltips donÕt currently work in Safari 3 Beta)
+-	[NEW] The options will be listed in size order from smallest to largest, based on the ÒConversion FactorÓ property of the unit options in Admin.  
+-	Changing the unit does not convert the number value
+-	[NEW] The Unit Drop-Down defaults to the standard value (where Conversion Factor = 1.0)
+o	Only applicable in edit mode, when no value was previously entered.  In that case, the previously saved option would display.
+o	Also applicable when searching on a UOM field/parameter.
+
+[NEW] The Text Control size will be determined by the Display Width property for the attribute.  The default Display Width for UOM attributes is Short.  The Unit Drop-Down size will float to be as wide as it needs to be to display the abbreviations.
+
+
+=================================================
+
+FUNCTIONAL BUCKETS: 
+
+---------
+Read Mode
+---------
+
+If no number value is saved, the value is blank.  
+
+If a number value and unit is saved, that value displays as text.  For example, Ò15 gÓ.
+
+---------
+Edit Mode
+---------
+
+If no number value is saved, the number value Text Control is blank, and the Unit Drop-Down displays the default value.
+
+If a number value and unit is saved, the number value displays in the Text Control and the Unit Drop-Down displays the previously saved value.
+
+
+
+SPECIAL CASES: 
+
+----------
+Validation
+----------
+
+When the user saves a form or table with UOM, if no number value is entered in the field, then no value is saved in the database for the field.  Blank is not the same as zero.
+
+--------------
+Data Migration
+--------------
+
+Should not be an issue, because the values stored in the DB are the IDs.
+
+
+************************************************
+>> TBD's/Issues Outstanding
+************************************************
+
+- Will require server support in order to get the Name, Abbreviation, and IDs to display and save.
+- Compare to IEEE UOM spec (if/when Dries provides it)
+
+************************************************
+>> RELATED COMMENTS/DISCUSSIONS:
+************************************************
+
+Spoke with Yao 7/30/2007
+- Data Migration issues.  Need to consult Adler.  Checked with Yao and should not be a problem because the IDs are what is stored in the DB.  Will need server support to get the Name, Abbreviation, and ID.
+
+Spoke with Joel 7/30/2007
+- Investigate the effort to allow admin to set a default Unit per attribute.  Per Kanda, would take more than 1 sprint to do.  Will not do as part of the initial UOM implementation.  Might add to backlog.
+
+
+Discussion 7/23/2007:
+Dev and QA estimates less than one sprint (8 points)
+Really just an improvement to the existing UOM
+Need to default the unit drop-down list to the standard
+
+
+
+
+
+

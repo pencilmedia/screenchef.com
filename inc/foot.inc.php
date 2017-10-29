@@ -8,7 +8,14 @@
 <?php echo '<script type="application/javascript" src="' . $ROOT . 'bower_components/fastclick/lib/fastclick.js"></script>'; ?>
 
 <!-- Custom JS -->
-<?php echo '<script type="application/javascript" src="' . $ROOT . 'assets/javascripts/global.js"></script>'; ?>
+<?php echo '<script type="application/javascript" src="' . $ROOT . 'assets/js/global.js"></script>'; ?>
+
+
+
+    <!-- FOR DEV PURPOSES: LiveReload -->
+    <script src="//localhost:35729/livereload.js"></script>
+
+    
 
 <!-- Google Analytics -->
 <script>

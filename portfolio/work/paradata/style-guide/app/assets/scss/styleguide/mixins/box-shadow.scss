@@ -1,0 +1,19 @@
+/* BEGIN: box-shadow.scss
+// -----------------------------------------------------*/
+
+// Box Shadow
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin no-box-shadow() {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	box-shadow:  none;
+}
+

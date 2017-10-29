@@ -1,0 +1,98 @@
+ /******************************************************************************
+ACTION_DIALOG_REPORT_OUTPUT.CSS
+******************************************************************************/
+.action_dialog.report_output .header_wrapper
+{
+	padding: 5px 0 10px 10px;
+	height: 18px;
+	min-width: 500px;
+}
+
+.action_dialog.report_output .header_wrapper .column_one
+{
+	width: 70%;
+}
+.action_dialog.report_output .header_wrapper .column_two span.tracker
+{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.action_dialog.report_output .header_wrapper .column_two
+{
+	text-align: right;
+	padding: 0px;
+	width: 25%;
+	float: right;
+	padding-top: 2px;
+}
+
+.action_dialog.report_output .header_wrapper .column_two select
+{
+	vertical-align: middle;
+	margin: 0 5px;
+}
+.action_dialog.report_output .top_margin
+{
+	margin-top: 20px;
+}
+
+.action_dialog.report_output .foot
+{
+	background: #fff url(/global/images/orc_logo_xsml_black.png) 10px center no-repeat !important;
+	height: 20px;
+	margin-top: 20px;
+}
+
+.action_dialog.report_output .foot div.col1
+{
+	padding: 0 0 0 85px;
+	white-space: nowrap;
+	padding-top:3px;
+	width: 65%;
+	float: left;
+}
+.action_dialog.report_output .foot div.col2
+{
+	float: right;
+	text-align: right;
+	padding: 3px 10px 0 0;
+}	
+.action_dialog.report_output .content
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size: 13px;
+}
+.action_dialog.report_output .content .title
+{
+	margin: -10px 0 5px 10px;
+}
+.action_dialog.report_output table 
+{ 
+	border-collapse: collapse; 
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	width:97%;
+	margin:0 0 10px 10px;
+}
+.action_dialog.report_output th	
+{
+	text-align: left;
+	background-color: #f2f2f2; 
+}
+.action_dialog.report_output th,
+.action_dialog.report_output td	
+{ 
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding-left: 5px;
+}	
+.action_dialog.report_output table tfoot td
+{
+	border-right: 0;
+	border-bottom: 0;
+}
+.action_dialog.report_output table tfoot td.right
+{ 
+	text-align: right;
+}

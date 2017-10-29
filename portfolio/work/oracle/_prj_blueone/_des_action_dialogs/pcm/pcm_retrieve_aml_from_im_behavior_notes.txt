@@ -1,0 +1,79 @@
+Retrieve AML Content from Item Master action dialog
+prototype: 
+author: Joel Nave
+updated: 11/13/2007 by Joel Nave
+
+
+* This action dialog adheres to all Action Dialog general specifications unless noted in this document. 
+
+
+Title:  Retrieve AML from Item Master
+Subtitle:  [Subclass . Object Identifier]
+Help Text:  "Select the update options below.  The "overwrite" option will overwrite AML content from this project with AML content from the Item Master.  Note that overwriting project content cannot be undone." 
+Errors:  
+
+
+
+************************************************
+Message Area
+************************************************
+- Every Action Dialog has a message area that displays instructional text and errors that occur.  
+- Instructional text must be kept to a minimum, however there is not maximum number of characters that can be displayed in this area.  A maximum of 300 characters is a good guideline
+- If an error occurs a generic error statement shall display in the message area and details of that error will be displayed within the content area.  
+
+
+************************************************
+Content Area
+************************************************
+- Every Action Dialog has a content area.  The content area displays the form or table that must be completed by the user to execute the action.
+
+- Forms can include the following UI controls:
+-- Text
+-- Multi-Text
+-- Select Controls (list, MSL, MSS, SSS, CL, MSCL, MUSL, SUSL  
+-- List w/Search (flat list, cascade list, or table)
+-- Shuttle control
+-- Date / Date and Time
+-- Auto-Number
+-- Checkboxes
+-- Radio Buttons
+-- Money
+-- Unit of Measure
+
+- UI controls can be grouped in two ways; Field Sets or Invisible Field Sets.  Both will group related fields, but the Field Set will have a line surrounding the group of fields
+- Note that an Invisible Field Set can be used within a Field Set.    
+
+- Each field can be displayed as a short, medium or long width
+- Multi-text controls can be displayed as as 4 rows or 7 rows
+- Multi-select Lists (including search, filter, users, cascades) are displayed as 4 rows
+
+- Required fields are displayed according to the current required field convention (red asterisks, bold label) 
+- Action dialogs may also include tabular data displayed in tables.  Definition of table requirements and interactions shall be covered separately 
+
+
+************************************************
+Action Bar
+************************************************
+- Every Action Dialog contains an action bar.  These actions will vary based on the dialog.  
+- The action name in most cases is contextual to the action.  For example, for the Send action dialog, the options will be "Send" and "Cancel"
+- Actions will display in the bottom right of the dialog in the action bar
+
+- Some action bars will contain Action Options.  These options include things like "Process in Background", "Apply to Sub-levels", "Continue in Creation Wizard", "Options"...  
+- Action Options display in the bottom left of the dialog in the action bar
+- These options can display as a checkbox or button
+- Option selections shall be persisted across sessions per dialog, per user
+
+
+************************************************
+Dialog Interactions
+************************************************
+- Ideally, a dialog will have defaulted values and the focus will be set to the "primary" dialog action (e.g. "Send", "OK"...).  This allows the user to hit their enter key to execute the action immediately.  When designing action dialogs this approach should be taken whenever possible.   
+- There are many cases where defaults are not provided and users must complete required content to execute the action.  In this case, the focus shall be displayed in the first active / enabled UI control within the Content Area (not the header).
+
+- Users can tab through the UI controls in order to support efficient entry (tabbing behaviors shall follow the guidelines in the Keyboarding Guidelines document).
+-- If a control includes a button (e.g. Calendar button to select a date), then tab should move from the input field to the button, then from the button to the next control. 
+-- Disabled controls shall be skipped when tabbing.
+-- When the tab lands on a button, the user can use the Enter key to execute the button action.  In most cases this will launch a palette that users can search or select from.  The Escape key shall bring the cursor back to the button without entering data into the element.  Enter shall bring the cursor back to the button and will set data within the element based on selections in the dialog.  
+-- Once the user reaches the end of the form, the tab shall navigate the user to the dialogs primary action.  Tab will then go to secondary actions from left to right, then to Action Options.
+-- When the cursor is on a checkbox or radio button, the spacebar shall select the element.
+-- Once the user has tabbed through all action bar controls, tab shall take the user back to the first editable control in the content area.   

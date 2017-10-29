@@ -1,0 +1,252 @@
+/* BEGIN: layout.scss
+// -----------------------------------------------------*/
+
+html, body {
+    height: 100%;    
+}
+body {
+	/* Full Height Layout */
+	.full-height-flex {
+		@include flexbox();
+		height: 100%;
+		main {
+			@include flex(1 1 auto);
+			min-height: 0px;
+			// overflow-y: auto
+		}
+		@include flexDirection(column);
+	}
+	&.app-layout {
+		padding-top: 74px; // .analysis-navbar + .filter-container
+		.page-actionbar {
+			height: $shortSlatHeight;
+			top: $navbarHeight;
+			.btn-link {
+				font-weight: 400;
+				margin-left: 5px;
+				.fa {
+					margin-left: 5px;
+				}
+			}
+			.page-navigator, .page-actions {
+				line-height: $shortSlatHeight;
+			}
+			.page-actions {
+				padding-right: $pageMargin;
+				> label {
+					color: $main-tint;
+					cursor: pointer;
+					font-size: 90%;
+					font-weight: normal;
+					line-height: $shortSlatHeight;
+					margin: 0 $pageMargin 0 0;
+					input[type="checkbox"] {
+						margin-right: 5px;
+					}
+				}
+				.search-analysis {
+					position: relative;
+					margin-top: 5px;
+					> .btn-link {
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+				}
+				&.dropdown-analysis-open {
+					display: none;
+					.btn-link {
+						margin-right: 5px;
+					}
+				}
+			}
+			/* Analyses Menu */
+			.page-navigator {
+				&.open {
+					position: static;
+					.dropdown-analysis {
+						background: $main-shade;
+						display: table;
+						left: 0;
+						margin-top: 1px;
+						right: 0;
+						text-align: center;
+						width: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+		.filter-container {
+			@include box-shadow();
+			min-height: $shortSlatHeight;
+			.btn-link {
+				border: none;
+				height: $shortSlatHeight;
+				.fa {
+					margin: auto 5px;
+				}
+			}
+			.add-filters, .apply-filters {
+				position: relative;
+			}
+			.add-filters {
+				input {
+					border: none;
+					position: absolute;
+					top: 0;
+					width: 100%; // Temporary - will be replaced with Select2 component or something
+					height: 100%;
+					-webkit-appearance: none; /* to remove inset shadow for iOS */
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+			.apply-filters {
+				@media(min-width: $screen-sm-min) {
+					width: 15%;
+				}
+				@media(min-width: $screen-sm-min) {
+					width: 10%;
+				}
+				@media(min-width: $screen-lg-min) {
+					width: 5%;
+				}
+				.btn {
+					font-size: 80%;
+					height: 100%;
+					position: absolute;
+					text-transform: uppercase;
+					top: 0;
+					width: 100%;
+				}
+			}
+			.comparison-filter {
+				border-top: 1px solid $borderColor;
+				// Hide Flexbox - to support show/hide of flexboxes
+				&.flex-show {
+					@include flexbox();
+				}
+				&.flex-hide {
+					display: none;
+				}
+			}
+		}
+		main {
+			position: relative;
+			width: 100%;
+			.workarea-container {
+				border: 1px solid $borderColor;
+				bottom: 0;
+				left: 0;
+				margin: 10px;
+				overflow-y: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+				> .nav-tabs {
+					height: 100%;
+					position: absolute;
+				}
+				&.tabs-left {
+					> .nav-tabs > li > a {
+						@include transition(.4s);
+					     &:hover {
+							@include transition(.4s);
+					     	background: none;
+					     	border-color: transparent;
+					     }
+					}
+				}
+				.tab-content {
+					> .tab-pane {
+						min-height: 400px;
+						.workarea {
+							.workarea-actions {
+								line-height: 31px;
+								padding-left: 40px; // Same as .tabs-left width + padding width
+								.chart-title {
+									text-align: center;
+									h2 {
+										display: inline-block;
+										font-size: 115%;
+										margin-top: 10px;
+										width: auto;
+									}
+								}
+								.nav-pills {
+									> li {
+										> a {
+											@include border-radius(0);
+										}
+									}
+								}
+								.flex-column {
+									&:last-child {
+										padding-right: 5px;
+									}
+								}
+							}
+							.workspace {
+								margin-left: 40px;
+								padding: $pageMargin;
+								#highchart {
+									min-height: 300px;
+									.highcharts-container {
+										
+									}
+								}
+							}
+						}
+						.workarea-pane {
+							border-left: 1px solid $borderColor;
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							> section {
+								margin: 0 10px;
+							}
+						}
+						.workarea {
+							@include transition(.25s);
+							width: 100%;
+						}
+						.workarea-pane {
+							@include transition(.25s);
+							display: none;
+						}
+						&.pane-open {
+							.workarea {
+								@include transition(.25s);
+								width: 70%;
+							}
+							.workarea-pane {
+								@include transition(.25s);
+								display: block;
+								width: 30%;
+							}
+							@media(min-width: $screen-sm-min) {
+								.workarea {
+									width: 60%;
+								}
+								.workarea-pane {
+									width: 40%;
+								}
+							}
+							@media(min-width: $screen-lg-min) {
+								.workarea {
+									width: 80%;
+								}
+								.workarea-pane {
+									width: 20%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}

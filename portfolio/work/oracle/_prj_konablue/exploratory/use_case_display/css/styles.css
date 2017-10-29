@@ -1,0 +1,59 @@
+#content {
+	width: 600px;
+}
+
+h1.padded_break,
+h2.padded_break,
+h3.padded_break {
+	clear: both;
+	padding-top: 2em;
+	margin-top: 0;
+}
+
+img.float_right {
+	float: right;
+}
+
+div.use_case,
+div.use_case_content_pane {
+	width: 100px;
+	height: 200px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+	background: #fff;
+	float: left;
+}
+
+div.use_case_content_pane {
+	width: 225px;
+}
+
+ul {
+	margin: 10px 0px 10px 10px;
+	padding: 0px;
+}
+
+ul ul {
+	margin: 0px 0px 0px 10px;
+}
+
+ul li {
+	margin: 0px 0px 3px 10px;
+}
+
+div.use_case ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-position: inside;
+}
+
+div.use_case ul li {
+	margin: 0px 0px 0px 0px;
+}
+
+div.use_case ul ul {
+	margin: 0px 5px;
+	padding: 0px 0px 5px 5px;
+	list-style-position: inside;
+}

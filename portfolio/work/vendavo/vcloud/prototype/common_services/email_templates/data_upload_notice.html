@@ -1,0 +1,305 @@
+<html>
+<head>  
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+	<title>Notification Template</title>  
+	<style type="text/css">  
+		.mobile_centered{padding: 5px 10px 10px 0;}
+	    @media only screen and (max-width:650px) {
+	    	body{padding:0 !important;}
+			table {width:100% !important;}
+			.decimal-list {width:200px !important;}
+			.mobile_centered {padding:0;text-align:center;}
+			.action_button {width:90%;padding: 3% 5% !important;display:inline-block;text-align:center;}
+	    }
+	</style>
+</head>
+<body style="background-color:#dfdfdf;margin:0;padding:20px 0;">
+	<table id="wrapper" style="box-shadow: 4px 4px 2px #888;-moz-box-shadow: 4px 4px 2px #888;-webkit-box-shadow: 4px 4px 2px #888;" cellpadding="0" cellspacing="0" width="640" align="center">
+	    <tr>  
+	        <td> 
+				<table id="header" bgcolor="#fcf9fc" style="border-bottom: 1px solid #f0eff1;" cellpadding="20" cellspacing="0" width="640" align="center">
+				    <tr>  
+				        <td align="left">  
+				            <h1 style="margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;font-size:17px;color:#f68e28;">Data Upload Notice</h1>
+				        </td>
+				        <td align="right">
+				        	<img style="margin:0;padding:0;" src="../../assets/img/EM_vendavo_logo.png" width="25" height="25">
+				        </td>
+				    </tr> 
+				</table>
+			  
+			    <table bgcolor="#ffffff" cellpadding="10" cellspacing="0" width="640" align="center">
+					<tr>  
+			            <td>
+			            	<table cellpadding="10" cellspacing="0" width="100" align="left">
+								<tr>  
+						            <td class="mobile_centered">
+						            	<img style="margin:0;padding:10px;" src="../../assets/img/EM_i-time.png" width="80" height="80">
+						            </td>  
+						        </tr> 
+			            	</table>
+						    <table cellpadding="10" cellspacing="0" width="500" align="right">
+								<tr>  
+						            <td>
+						            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Hi Peter,</p>
+						            </td>  
+						        </tr>
+								<tr>  
+						            <td>
+						            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>$filename</strong></p>
+						            </td>  
+						        </tr>
+								<tr>  
+						            <td>
+						            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>$transactionsLoaded</strong> transactions were successfully loaded.</p>
+						            </td>  
+						        </tr>
+								<tr>  
+						            <td>
+						            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>$transactionsFailed transactions</strong> had a total of <strong>$issuesTotal issues</strong> and weren't loaded.</p>
+						            </td>  
+						        </tr>
+								<tr>  
+						            <td>
+						            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">You can finish the upload using only the successful transactions. Some statistics are listed below to help with your decision, or you can go to Vendavo Cloud to review the error log to determine which transactions need attention.</p>
+						            </td>  
+						        </tr>
+								<tr>  
+					        		<td class="padding_y_34" style="padding:34px 10px;width:250px;">
+										<!--[if mso]>
+										  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="$link" style="height:40px;v-text-anchor:middle;width:250px;" arcsize="10%" stroke="f" fillcolor="#74c166">
+										    <w:anchorlock/>
+										    <center style="color:#ffffff;font-family:sans-serif;font-size:17px;font-weight:bold;">
+										      Sign in to continue
+										    </center>
+										  </v:roundrect>
+										  <![endif]-->
+										  <!--[if !mso]> <!-->
+											<a href="$link" style="color:#ffffff;text-decoration:none" target="_blank">
+												<table cellspacing="0" cellpadding="0" width="250" bgcolor="#74c166" style="display:block;border-radius:3px;font-size:17px;">
+													<tbody>
+														<tr>
+															<td height="12" colspan="3" style="line-height:12px">&nbsp;</td>
+														</tr>
+														<tr>
+															<td width="16" style="display:block;width:16px">&nbsp;</td>
+															<td width="100%" style="text-align:center">
+																<a href="$link" class="action_button" style="color:#ffffff;text-decoration:none;display:block" target="_blank">
+																	<center>
+																		<font size="3">
+																			<span style="font-family:Helvetica,Arial,sans-serif;font-style:normal;white-space:nowrap;font-size:17px;color:#ffffff">Sign in to continue</span>
+																		</font>
+																	</center>
+																</a>
+															</td>
+															<td width="16" style="display:block;width:16px">&nbsp;</td>
+														</tr>
+														<tr>
+															<td height="12" colspan="3" style="line-height:12px">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+											</a>
+										<!-- <![endif]-->
+									</td>
+						        </tr>
+							</table>
+			            </td>  
+			        </tr> 
+			    </table>
+
+			    <table bgcolor="#ffffff" cellpadding="20" cellspacing="0" width="640" align="center">  
+					<tr>  
+			            <td>
+			            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><h2 style="margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#8a8b8d;">GENERAL STATISTICS</h2></p>
+			            </td>  
+			        </tr> 
+			    </table>
+
+			    <table bgcolor="#ffffff" cellpadding="20" cellspacing="0" width="640" align="center"> 
+			    	<tr>
+			    		<td style="padding: 0 20px;">
+						    <table cellpadding="0" cellspacing="0" width="220" align="left">  
+						    	<tr>
+									<td style="padding:0 0 10px 0;">
+										<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Jan. 1, 2012 - Dec. 30, 2012</p>
+										<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Total &lt;Invoice Price&gt; of $1,205,294</p>
+						    			<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">25% Average &lt;Pocket Margin&gt;</p>
+										<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">2% of all Transactions were Credit Transactions</p>
+									</td>
+								</tr>
+							</table>
+						    <table cellpadding="0" cellspacing="0" width="200" align="right">  
+						    	<tr>
+									<td style="padding:0 0 10px 0;">
+										<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">5,000 &lt;Customers&gt;</p>
+										<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">20,000 &lt;Products&gt;</p>
+										<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">16 &lt;Geography Level&gt;</p>
+						    			<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">32 Plant</p>
+									</td>
+								</tr>
+							</table>
+			    		</td>
+			    	</tr>
+			    </table>
+
+			    <table bgcolor="#ffffff" cellpadding="20" cellspacing="0" width="640" align="center">
+					<tr>  
+			            <td>
+			            	<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><h2 style="margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#8a8b8d;">TOP 5 LISTS</h2></p>
+			            </td>  
+			        </tr>
+			    </table>
+			  
+			    <table bgcolor="#ffffff" cellpadding="20" cellspacing="0" width="640" align="center">
+			    	<tr>
+			    		<td style="padding: 0 20px;">
+						    <table cellpadding="0" cellspacing="0" width="200" align="left">  
+						    	<tr>
+									<td style="padding:0 0 10px 0;">
+						    			<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>CUSTOMERS</strong></p>
+										<table class="decimal-list" cellpadding="1" cellspacing="1" border="0"> 
+										    <tr>
+										        <td valign="top" style="width:1em;margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">1.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">ACME Corporation</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">2.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Apple</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">3.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Adobe</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">4.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Pepperidge Farms</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">5.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Starbucks</td>
+										    </tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						    <table cellpadding="0" cellspacing="0" width="200" align="right">  
+						    	<tr>
+									<td style="padding:0 0 10px 0;">
+						    			<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>PRODUCTS</strong></p>
+										<table class="decimal-list" cellpadding="1" cellspacing="1" border="0"> 
+										    <tr>
+										        <td valign="top" style="width:1em;margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">1.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">cv-2853</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">2.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">osd-1384</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">3.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">pvg-1834</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">4.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">nge-1234</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">5.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">prc-1840</td>
+										    </tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+			    		</td>
+			    	</tr>
+			    </table>
+
+			    <table bgcolor="#ffffff" cellpadding="20" cellspacing="0" width="640" align="center"> 
+			    	<tr>
+			    		<td style="padding: 0 20px;">
+						    <table cellpadding="0" cellspacing="0" width="200" align="left">  
+						    	<tr>
+									<td class="padding_y_bottom_10">
+						    			<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>GEOGRAPHY LEVEL 5</strong></p>
+										<table class="decimal-list" cellpadding="1" cellspacing="1" border="0"> 
+										    <tr>
+										        <td valign="top" style="width:1em;margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">1.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Mountain View</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">2.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Reno</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">3.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Tacoma</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">4.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Missouri</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">5.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Michigan</td>
+										    </tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						    <table cellpadding="0" cellspacing="0" width="200" align="right">  
+						    	<tr>
+									<td class="padding_y_bottom_10">
+						    			<p style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><strong>PLANT</strong></p>
+										<table class="decimal-list" cellpadding="1" cellspacing="1" border="0"> 
+										    <tr>
+										        <td valign="top" style="width:1em;margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">1.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Plant 5</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">2.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Plant 18</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">3.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Plant 9</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">4.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Plant 2</td>
+										    </tr>
+										    <tr>
+										        <td valign="top" style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">5.</td>
+										        <td style="margin:0;padding:0;font-size:14px;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">Plant 15</td>
+										    </tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+			    		</td>
+			    	</tr>
+			    </table>
+
+			    <table bgcolor="#ffffff" cellpadding="20" cellspacing="0" width="640" align="center"> 
+			    	<tr>
+			    		<td></td>
+			    	</tr>
+			    </table>
+
+			    <table id="footer" bgcolor="#f2f8e9" cellpadding="20" cellspacing="0" width="640" align="center">
+					<tr>  
+			            <td>
+			            	<p style="margin:0;padding:0;font-size:12px;text-align:center;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;">&copy;$currentyear Vendavo Inc. | All Rights Reserved</p>
+			            	<p style="margin:0;padding:0;font-size:12px;text-align:center;font-family:Arial, Helvetica, sans-serif;line-height:1.5;color:#808285;"><a style="color:#74c166;" href="http://www.vendavo.com">Vendavo.com</a> | <a style="color:#74c166;" href="http://www.vendavo.com/blog/">Vendavo Pricing Blog</a></p>
+			            </td>  
+			        </tr> 
+			    </table>
+
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

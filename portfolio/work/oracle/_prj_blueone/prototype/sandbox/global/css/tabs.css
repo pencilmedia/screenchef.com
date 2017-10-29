@@ -1,0 +1,536 @@
+/******************************************************************************
+TAB.CSS
+Description: Tab related styles and definitions. 
+******************************************************************************/
+.agile_tabs { 
+	background:url(../images/bgd_tabs.png) repeat-x; 
+	height: 21px;
+	margin: 0; 
+	overflow: hidden;
+	width: 100%; 
+	padding: 0;
+	min-width: 450px;
+}
+.agile_tabs li { 
+	float: left; 
+	margin-bottom: 3px;
+}
+
+.agile_tabs li.first_tab a { 
+	border-left: none; 
+	padding-left: 25px;
+}
+
+.agile_tabs li.more { 
+	  float: right; 
+	  margin: 2px 10px 6px 5px;
+	  width: 65px;
+}
+
+.agile_tabs a { 
+	border-left: 1px dotted #333;
+	height: 21px;
+	cursor: pointer; 
+	float: left; 
+	padding: 0 0 0 14px; 
+}
+.agile_tabs span { 
+	color: #333; 
+	float: left; 
+	margin-right: -1px; 
+	padding: 5px 2px 2px 0;
+	white-space: nowrap;
+}
+.agile_tabs a:hover,a.onTabFocus {
+	background: url(../images/bgd_tabs_ovr.png) 0 0; 
+}
+.agile_tabs a:hover { 
+	background: url(../images/bgd_tabs_ovr.png) 0 0; 
+}
+.agile_tabs .selected a { 
+	position: relative; 
+	top: 0;
+	font-weight: bold;
+	border: 1px solid #adadad;
+	border-bottom: none;
+	background: #f3f3f4;
+	margin-right: -1px;
+	*margin-left: 0;
+}
+.agile_tabs .selected a:hover {
+	background: url(../images/bgd_tabs_selected_ovr.png) 0 0;
+}
+.agile_tabs em { 
+	padding: 0 14px 0 0;
+}
+
+.tab_list a {
+	background-image: none;
+ }
+.tab_list span { 
+	background: url(../images/icn_more_menu.png) no-repeat 2px 4px;
+	width:16px;
+}
+
+/* changes to these two styles inform developer */
+em.indicator_red {
+	background:url(../images/icn_status_dot_red.png) no-repeat center top;
+}
+em.indicator_gray { 
+	background:url(../images/icn_status_dot_gray.png) no-repeat center top; 
+	position:relative;
+}
+/* used in tab menus */
+.icn_status_dot_gray
+{
+	background: url(../images/icn_status_dot_gray.png) 8px center no-repeat;
+	padding-left: 8px;
+}
+.icn_status_dot_red
+{
+	background: url(../images/icn_status_dot_red.png) 8px center no-repeat;
+	padding-left: 8px;
+}
+
+.indicator_gray em { background-image:url(../images/icn_status_dot_gray.png); }
+.indicator_red em  { background-image:url(../images/icn_status_dot_red.png); }
+
+.agile_tabs em,
+.tabs em,
+.sub_tabs em  { background-repeat: no-repeat; background-position: 7px 0; }
+
+
+
+
+
+
+
+/******************************************************************************
+SKINNABLE TABS
+Description: Base tab styles NEVER change, Tab Skins are changeable
+******************************************************************************/
+/* Base Tab Styles */
+.tabs { 
+	width: 100%; 
+	min-width: 450px;
+}
+.tabs li { 
+	float: left; 
+}
+.tabs li.more { 
+	  float: right; 
+}
+.tabs a {
+	float: left;
+	cursor: pointer;
+}
+.tabs span { 
+	float: left; 
+	white-space: nowrap;
+}
+
+/* Tab Skins */
+.tabs_container.skin_default .tabs { 
+	overflow: hidden;
+	background:url(../images/bgd_tabs.png) repeat-x; 
+	height: 21px;
+	margin: 0; 
+	padding: 0;
+}
+.tabs_container.skin_default .tabs li { 
+	margin-bottom: 3px;
+}
+.tabs_container.skin_default .tabs li:first-child a { 
+	border-left: none; 
+	padding-left: 25px;
+}
+.tabs_container.skin_default .tabs li.more { 
+	  margin: 2px 10px 6px 5px;
+	  width: 65px;
+}
+.tabs_container.skin_default .tabs a { 
+	border-left: 1px dotted #333;
+	height: 21px;
+	padding: 0 14px; 
+}
+.tabs_container.skin_default .tabs span { 
+	color: #333; 
+	margin-right: -1px; 
+	padding: 4px 2px 2px 0;
+}
+.tabs_container.skin_default .tabs a:hover,a.onTabFocus {
+	background: url(../images/bgd_tabs_ovr.png) 0 0; 
+}
+.tabs_container.skin_default .tabs a:hover { 
+	background: url(../images/bgd_tabs_ovr.png) 0 0; 
+}
+.tabs_container.skin_default .tabs .selected a { 
+	font-weight: bold;
+	border: 1px solid #adadad;
+	border-bottom: none;
+	background: #f3f3f4;
+	margin-right: -1px;
+	*margin-left: 0;
+}
+.tabs_container.skin_default .tabs .selected a:hover {
+	background: url(../images/bgd_tabs_ovr.png) 0 0;
+}
+.new_tabs ul li em,
+.tabs_container.skin_default .tabs li em {
+	margin-left: -4px;
+	margin-right: -14px;
+	*margin-left: -2px;
+	*margin-right: -7px;
+	padding: 0 5px 0 9px;
+}
+
+/* Fusion Tabs Skin */
+.tabs_container.skin_fusion {
+	background-color: #adc2cf;
+	height: 25px;
+}
+.tabs_container.skin_fusion .tabs {
+	background: #fff;
+	height: 20px;
+}
+div.tabs_container.skin_fusion .tabs li {
+	margin-right: -10px;
+	background: url(../images/tabs/skins/fusion/bgd_rt_tab.png) no-repeat right bottom;
+}
+div.tabs_container.skin_fusion .tabs li a {
+	padding: 0 10px 0 25px;
+	background: url(../images/tabs/skins/fusion/bgd_lt_tab.png) no-repeat left bottom;
+}
+div.tabs_container.skin_fusion .tabs li span {
+	padding: 3px;
+	background: #0c4179 url(../images/tabs/skins/fusion/bgd_mid_tab.png) repeat-x right bottom;
+}
+div.tabs_container.skin_fusion .tabs a {
+	color: #a6b3c8;
+}
+div.tabs_container.skin_fusion .tabs li:first-child {
+	border-left: none;
+}
+div.tabs_container.skin_fusion .tabs li:last-child {
+	border-right: none;
+	margin-right: 0;
+}
+div.tabs_container.skin_fusion .tabs li:last-child:hover {
+	margin-right: 0;
+}
+div.tabs_container.skin_fusion .tabs .selected {
+	position: relative;
+	margin-right: -15px;
+	background: url(../images/tabs/skins/fusion/bgd_tab_rt_selected.png) no-repeat right bottom;
+}
+div.tabs_container.skin_fusion .tabs .selected a {
+	color: #333;
+	font-weight: bold;
+	background: url(../images/tabs/skins/fusion/bgd_tab_lt_selected.png) no-repeat left bottom;
+}
+div.tabs_container.skin_fusion .tabs .selected a span {
+	background: url(../images/tabs/skins/fusion/bgd_tab_mid_selected.png) repeat-x right bottom;
+}
+div.tabs_container.skin_fusion .tabs li:hover a {
+	color: #333;
+}
+div.tabs_container.skin_fusion .tabs li:hover {
+	margin-right: -10px;
+	background: url(../images/tabs/skins/fusion/bgd_rt_tab_hover.png) no-repeat right center;
+}
+div.tabs_container.skin_fusion .tabs li a:hover {
+	background: url(../images/tabs/skins/fusion/bgd_lt_tab_hover.png) no-repeat left center;
+}
+div.tabs_container.skin_fusion.tabs li span:hover {
+	background: url(../images/tabs/skins/fusion/bgd_mid_tab_hover.png) repeat-x right center;
+}
+div.tabs_container.skin_fusion .tabs .selected a:hover  {
+	background: url(../images/tabs/skins/fusion/bgd_tab_lt_selected.png) no-repeat left center;
+}
+div.tabs_container.skin_fusion .tabs .selected a span:hover  {
+	background: url(../images/tabs/skins/fusion/bgd_tab_mid_selected.png) repeat-x right center;
+}
+div.tabs_container.skin_fusion .tabs .selected:hover {
+	margin-right: -15px;
+	background: url(../images/tabs/skins/fusion/bgd_tab_rt_selected.png) no-repeat right center;
+}
+
+div.tabs_container.skin_fusion .tabs li.spanHover span {
+	background: url(../images/tabs/skins/fusion/bgd_mid_tab_hover.png) repeat-x right center;
+}
+div.tabs_container.skin_fusion .tabs li.selected.spanHover span {
+	background: url(../images/tabs/skins/fusion/bgd_tab_mid_selected.png) repeat-x right center;
+}
+
+
+/* Special Case Tabs Skin */
+.tabs_container.skin_default.special_case .selected {
+	position: static;
+}
+.tabs_container.skin_default.special_case .selected + li a { /* hides conflicting border-left of adjacent anchor */
+	border-left: none;
+}
+.tabs_container.skin_default.special_case {
+	overflow: visible;
+	position: relative;
+	margin-bottom: 20px;
+	z-index: 1;
+}
+.tabs_container.skin_default.special_case li ul {
+	position: absolute;
+	top: 21px;
+	left: 0;
+	z-index: 19;
+	height: 20px;
+	width: 100%;
+	background-color: #F4F4F4;
+	border-bottom: 1px solid silver /* nt testing */
+}
+.tabs_container.skin_default.special_case li.selected ul li {
+	display: block;
+	line-height: 20px;
+}
+.tabs_container.skin_default.special_case li.selected ul li:hover {
+	background-color: #e4e4e4;
+}
+.tabs_container.skin_default.special_case li.selected ul li a {
+	color: #333;
+	font-weight: normal;
+	border: none;
+	/*border-left: 1px dotted #333; nt testing */
+	height: auto;
+	padding: 3px 10px;
+	*padding: 3px 10px 0 10px;
+	background: none;
+	
+}
+.tabs_container.skin_default.special_case li.selected  ul li a:hover {
+	background: none;
+	*padding-bottom: 3px;
+}
+.tabs_container.skin_default.special_case li ul li:first-child {
+	padding-left: 15px;
+}
+.tabs_container.skin_default.special_case li ul li:first-child a {
+	border-left: none;
+}
+.tabs_container.skin_default.special_case li.selected ul li.selected  { /* nt testing */
+	background-color: #fff;
+	border-top: 1px solid silver;
+	border-right: 1px solid silver;
+	border-left: 1px solid silver;
+	*padding-bottom: 3px;
+}
+.tabs_container.skin_default.special_case li.selected ul li a span
+{
+	padding: 0 2px 0 0;
+	*padding: 1px 2px 0 0;
+}
+
+.tabs_container.skin_default.special_case li.selected ul li.selected:first-child  { /* nt testing */
+
+	border-left: none;
+}
+
+
+.tabs_container.skin_default.special_case li.selected ul li.selected a {
+	font-weight: bold !important;
+}
+.tabs_container.skin_default.special_case li.selected ul li.selected a:hover {
+	*padding-bottom: 0;
+}
+
+
+/* PATTERN MATCHING: If .special_case exists, bump up the dms to decrease extra white space */
+.tabs_container.skin_default + .message {
+	margin-bottom: -13px;
+}
+.tabs_container.skin_default + .message.info {
+	margin-bottom: -14px; /* add one for the border-bottom on DMS */
+}
+.tabs_container.skin_default + .message.error {
+	margin-bottom: -14px;
+}
+.tabs_container.skin_default + .message + .page_controls {
+	margin-top: 18px;
+}
+
+.tabs_container.skin_fusion + .message {
+	margin-bottom: -13px;
+}
+.tabs_container.skin_fusion + .message.info {
+	margin-bottom: -14px; /* add one for the border-bottom on DMS */
+}
+.tabs_container.skin_fusion + .message.error {
+	margin-bottom: -14px;
+}
+
+.tabs_container.skin_default.special_case + .message {
+	margin-bottom: -13px;
+}
+.tabs_container.skin_default.special_case + .message.info {
+	margin-bottom: -14px;
+}
+.tabs_container.skin_default.special_case + .message.error {
+	margin-bottom: -14px;
+}
+
+
+
+/* new tabs */
+/* Anthony's testing */
+	/* test tabs */
+.new_tabs 
+{
+	background:	transparent url(/global/images/bgd_tabs.png) repeat-x scroll 0 0;
+	clear: both;
+	color: #666;
+	height: 21px;
+	*height: 21px;
+	min-width:2000px;
+}
+
+.new_tabs ul 
+{
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	white-space:nowrap;
+}
+
+.new_tabs li { float: left; white-space:nowrap; }
+.new_tabs li:first-child span { border-left: none; }
+.new_tabs li.selected span { background-color: #f4f4f4; }
+.new_subtabs span,
+.new_tabs span { font-weight:; }
+
+.new_tabs li img { margin: 0 0 4px 3px; }
+
+.new_tabs span,
+.new_tabs a.active,
+.new_tabs a.active:hover,
+.new_subtabs
+{
+	background: #F4F4F4;
+}
+
+.new_tabs span {
+	position: relative;
+	margin: 0 1px 0 0;
+	float: left;
+	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+	border-top: 1px solid #999;
+	padding: 2px 8px 4px 8px;
+	*padding: 2px 8px 5px 8px;
+	text-decoration: none;
+	color: #333;
+}
+
+.new_tabs a {
+	position: relative;
+	top: 0;
+	margin: 1px 1px 0 0;
+	float: left;
+	border-right: 1px dotted #999;
+	padding: 2px 8px 3px 8px;
+	text-decoration: none;
+	color: #333;
+}
+
+.new_tabs a:hover {
+	background: transparent url(/global/images/bgd_tabs_ovr.png) repeat scroll 0 0 !important;
+	position: relative;
+	top: 0;
+	margin-top: 1px;
+}
+
+.new_tabs a.active {
+	position: relative;
+	top: 0;
+	margin: 0 0px 0 0;
+	float: left;
+	border-right: 1px solid #666;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	padding: 2px 5px;
+	text-decoration: none;
+	color: #333;
+}
+
+.new_tabs a.active:hover {
+	position: relative;
+	top: 0;
+	margin: 0 0px 0 0;
+	float: left;
+	border-right: 1px solid #666;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	padding: 6px 4px 7px 7px;
+	text-decoration: none;
+	color: #333;
+}
+
+.new_subtabs {
+	clear: both;
+	color: #666;
+	height:13px;
+	padding:2px 5px 2px 0px;
+	border-bottom: 1px solid silver;
+}
+
+.new_subtabs li:hover {
+	background: transparent url(/global/images/bgd_tabs_ovr.png) repeat scroll 0 0 !important;
+	padding-bottom: 1px;
+}
+
+.new_subtabs li.selected:hover
+{
+	background: none !important;
+}
+.new_subtabs span
+{
+	border-right: 1px solid silver;
+	border-top: 1px solid silver;
+	border-left: 1px solid silver;
+	background-color: #fff;
+	padding:0px 8px 2px 8px;
+	color: #333;
+}
+.new_subtabs ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	min-width:2000px;	
+}
+
+.new_subtabs li {
+	float: left;
+	padding: 0 8px;
+	*padding: 2px 8px 1px 8px;
+	white-space: nowrap;
+}
+
+.new_subtabs li.selected:first-child
+{
+	border-left: none;
+	padding-left:0px;
+}
+.new_subtabs li:first-child span
+{
+	border-left: none;
+}
+
+
+
+
+
+.create_button a 
+{
+	*padding:9px 10px 17px 10px !important;
+}
+
+
+
+

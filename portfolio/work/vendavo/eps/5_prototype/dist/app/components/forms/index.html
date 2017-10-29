@@ -1,0 +1,645 @@
+<!-- Page Top
+================================================== -->
+
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.png">
+    <meta name="description" content="">
+
+    <!-- For iOS web apps-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-114x114.png">
+
+    <!--[if lt IE 9]>
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/apphttp://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Font Library
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/icomoon/dist/css/style.css">
+
+    <!-- Plug-Ins Styles
+    ================================================== -->
+    <!-- Animate.css
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.css">
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+
+    <!-- Vendavo Style Guide Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/css/styleguide.css">
+
+    <!-- Theme Styles
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/css/theme.css">
+
+    <!-- Modernizr -->
+    <script type="text/javascript" src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/modernizer/modernizr.js"></script>
+
+
+    <link rel="stylesheet" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/styles/monokai_sublime.css">
+
+    <!-- Temporary solution (should be in Vendavo npm repository => we need budget) -->
+    <!-- Versioning maybe needed too -->
+    <script src="http://ux01-paux.xenre.vendavo.com/pezzi/Pezzi.build.js"></script>
+
+
+    <title>Enterprise Prototype</title>
+  </head>
+
+  <!-- Page <BODY>
+  ================================================== -->
+  <body class="style-guide components forms" data-id="forms">
+    <section class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="sg-content col-xs-12 col-sm-9">
+          <!-- Responsive Navigation Button
+          ================================================== -->
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-link" data-toggle="offcanvas" title="Toggle nav"> <i class="fa fa-bars"></i>
+            </button>
+          </p>
+
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h1>Forms</h1>
+<p>A form is a collection of labels and input fields on a single page, panel or dialog. Try to keep forms as semantic as possible and consider hidden HTML tags that aid in accessibility.</p>
+
+<!-- Page Nav
+================================================== -->
+<div class="sg-page-nav">
+	<div>
+		<h6>Go To:</h6>
+		<ul>
+			<li><a href="#section-1">Form Layouts</a></li>
+			<li><a href="#section-2">Form with Errors</a></li>
+			<li><a href="#section-3">Form Field Styles</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="https://confluence.vendavo.com/x/gJJi" target="_blank" class="btn btn-primary">View Guidelines</a>
+	</div>
+</div>
+<div class="alert alert-info" role="alert">
+	<p> <i class="fa fa-info-circle"></i>
+		Forms are an extension of Bootstrap forms. Please visit
+		<a href="http://getbootstrap.com/css/#forms" class="alert-link" target="_blank">bootstrap forms</a>
+		to get more information on them if you don't see what you need here.
+	</p>
+</div>
+
+<!-- Page Content
+================================================== -->
+<h2 id="section-1">Form Layouts</h2>
+<h3>Inline Form</h3>
+<p>Inline forms have labels to the left of the input fields. Use the class <code>.form-inline</code> on the <code>&lt;form&gt;</code> element.</p>
+<form class="form-inline">
+	<h3>Form Title</h3>
+	<fieldset>
+		<legend>Form Group Headline</legend>
+		<div class="form-group">
+			<label for="identifier">ID</label>
+			<input id="identifier" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+		</div>
+		<div class="form-group">
+			<label for="full_name">Name</label>
+			<input id="full_name" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<input id="description" class="form-control" placeholder="Required" required>
+		</div>
+	</fieldset>
+	<hr class="form-divider">
+	<fieldset>
+		<legend>Form Group Headline 2</legend>
+		<div class="form-group">
+			<label for="keywords">Keywords</label>
+			<input id="keywords" class="form-control">
+		</div>
+		<div class="form-group">
+			<!-- Presentation style in the form -->
+			<label class="control-label">Presentation Label</label>
+		     <p class="form-control-static">Text instead of a field</p>
+		</div>
+		<div class="form-group">
+			<label for="status">Password</label>
+			<select id="status" class="form-control">
+				<option value="draft">Draft</option>
+				<option value="revised">Revised</option>
+			</select>
+		</div>
+		<div class="form-group multi-line">
+			<label for="notes">Notes</label>
+			<textarea id="notes" class="form-control" rows="3"></textarea>
+		</div>
+		<p class="help-block">Example block-level help text here.</p>
+	</fieldset>
+	<footer class="dual-btns">
+		<input type="button" value="Cancel" class="btn btn-default" role="button" /><input type="submit" value="Save" class="btn btn-primary" role="button" />
+	</footer>
+</form>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+	<pre>
+<code class="html">
+<form class="form-inline">
+	<h3>Form Title</h3>
+	<fieldset>
+		<legend>Form Group Headline</legend>
+		<div class="form-group">
+			<label for="identifier">ID</label>
+			<input id="identifier" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+		</div>
+		<div class="form-group">
+			<label for="full_name">Name</label>
+			<input id="full_name" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<input id="description" class="form-control" placeholder="Required" required>
+		</div>
+	</fieldset>
+	<hr class="form-divider">
+	<fieldset>
+		<legend>Form Group Headline 2</legend>
+		<div class="form-group">
+			<label for="keywords">Keywords</label>
+			<input id="keywords" class="form-control">
+		</div>
+		<div class="form-group">
+			<!-- Presentation style in the form -->
+			<label class="control-label">Presentation Label</label>
+		     <p class="form-control-static">Text instead of a field</p>
+		</div>
+		<div class="form-group">
+			<label for="status">Password</label>
+			<select id="status" class="form-control">
+				<option value="draft">Draft</option>
+				<option value="revised">Revised</option>
+			</select>
+		</div>
+		<div class="form-group multi-line">
+			<label for="notes">Notes</label>
+			<textarea id="notes" class="form-control" rows="3"></textarea>
+		</div>
+		<p class="help-block">Example block-level help text here.</p>
+	</fieldset>
+	<footer class="dual-btns">
+		<input type="button" value="Cancel" class="btn btn-default" role="button" /><input type="submit" value="Save" class="btn btn-primary" role="button" />
+	</footer>
+</form>
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+<h3>Vertical Form</h3>
+<p>Using no class on the <code>&lt;form&gt;</code> element will bring the labels above the input fields.</p>
+<form>
+	<h3>Form Title</h3>
+	<fieldset>
+		<legend>Form Group Headline</legend>
+		<div class="form-group">
+			<label for="identifier2">ID</label>
+			<input id="identifier2" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+		</div>
+		<div class="form-group">
+			<label for="full_name2">Name</label>
+			<input id="full_name2" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="description2">Description</label>
+			<input id="description2" class="form-control" placeholder="Required" required>
+		</div>
+	</fieldset>
+</form>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+	<pre>
+<code class="html">
+<form>
+	<h3>Form Title</h3>
+	<fieldset>
+		<legend>Form Group Headline</legend>
+		<div class="form-group">
+			<label for="identifier2">ID</label>
+			<input id="identifier2" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+		</div>
+		<div class="form-group">
+			<label for="full_name2">Name</label>
+			<input id="full_name2" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="description2">Description</label>
+			<input id="description2" class="form-control" placeholder="Required" required>
+		</div>
+	</fieldset>
+</form>
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+
+<h3>Two Column Form</h3>
+<p>Using <code>.row</code> on the <code>&lt;form&gt;</code> element and wrapping fields in a <code>.col-md-6</code> will give a two column layout.</p>
+<form class="form-inline row">
+	<h3>Form Title</h3>
+	<fieldset>
+		<legend>Form Group Headline</legend>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="identifier">ID</label>
+				<input id="identifier" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+			</div>
+			<div class="form-group">
+				<label for="full_name">Name</label>
+				<input id="full_name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<input id="description" class="form-control" placeholder="Required" required>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="keywords">Keywords</label>
+				<input id="keywords" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="status">Password</label>
+				<select id="status" class="form-control">
+					<option value="draft">Draft</option>
+					<option value="revised">Revised</option>
+				</select>
+			</div>
+			<div class="form-group multi-line">
+				<label for="notes">Notes</label>
+				<textarea id="notes" class="form-control" rows="3"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+	<pre>
+<code class="html">
+<form class="form-inline row">
+	<h3>Form Title</h3>
+	<fieldset>
+		<legend>Form Group Headline</legend>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="identifier">ID</label>
+				<input id="identifier" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+			</div>
+			<div class="form-group">
+				<label for="full_name">Name</label>
+				<input id="full_name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<input id="description" class="form-control" placeholder="Required" required>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="keywords">Keywords</label>
+				<input id="keywords" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="status">Password</label>
+				<select id="status" class="form-control">
+					<option value="draft">Draft</option>
+					<option value="revised">Revised</option>
+				</select>
+			</div>
+			<div class="form-group multi-line">
+				<label for="notes">Notes</label>
+				<textarea id="notes" class="form-control" rows="3"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+<hr class="divider">
+
+<h2 id="section-2">Form with Errors</h2>
+<p>Utilize the bootstrap class <code>.has-error</code> on the <code>.form-group</code> wrapper to call out errors.</p>
+<p>Tap on the error icon to view the error message. A bootstrap popover was used and binded to the <code>.field-indicator</code>.</p>
+<form class="form-inline">
+	<div class="alert alert-danger" role="alert">
+		<p><i class="fa fa-exclamation-triangle"></i>Please resolve the issues below.</p>
+	</div>
+	<fieldset>
+		<legend>Form Title</legend>
+		<div class="form-group">
+			<label for="identifier3">ID</label>
+			<input id="identifier3" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+		</div>
+		<div class="form-group">
+			<label for="full_name3">Name</label>
+			<input id="full_name3" class="form-control">
+		</div>
+		<div class="form-group has-error">
+			<label class="control-label" for="description3">Description</label>
+			<input type="text" class="form-control" id="description3" placeholder="Required" required>
+			<button type="button" class="btn btn-link field-indicator"><i class="fa fa-exclamation-triangle"></i></button>
+		</div>
+		<div class="form-group">
+			<label for="keywords3">Keywords</label>
+			<input id="keywords3" class="form-control">
+		</div>
+	</fieldset>
+</form>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+	<pre>
+<code class="html">
+<form class="form-inline">
+	<div class="alert alert-danger" role="alert">
+		<p><i class="fa fa-exclamation-triangle"></i>Please resolve the issues below.</p>
+	</div>
+	<fieldset>
+		<legend>Form with Error</legend>
+		<div class="form-group">
+			<label for="identifier3">ID</label>
+			<input id="identifier3" class="form-control" value="WKB_000494400449" placeholder="Required" required>
+		</div>
+		<div class="form-group">
+			<label for="full_name3">Name</label>
+			<input id="full_name3" class="form-control">
+		</div>
+		<div class="form-group has-error">
+			<label class="control-label" for="description3">Description</label>
+			<input type="text" class="form-control" id="description3" placeholder="Required" required>
+			<button type="button" class="btn btn-link field-indicator"><i class="fa fa-exclamation-triangle"></i></button>
+		</div>
+		<div class="form-group">
+			<label for="keywords3">Keywords</label>
+			<input id="keywords3" class="form-control">
+		</div>
+	</fieldset>
+</form>
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+<hr class="divider">
+
+<h2 id="section-3">Form Field Styles</h2>
+<p>Below are the different styles of fields. Editable, required, active, error, disabled and read-only fields. You can also disable an entire group by applying <code>disabled</code> to the fieldset. <a href="http://getbootstrap.com/css/#forms-control-disabled" target="_blank">Read more here</a>.</p>
+<p>The editable field contains a <code>placeholder</code>. When you are in focus and type 1 character it disappears and replaces with the character typed. Also, when any field contains a value and focus is put on it the value is highlighted through javascript <code>this.select()</code>.</p>
+
+<h3>Field Styles</h3>
+<form class="form-inline">
+	<fieldset>
+		<legend>Form Title</legend>
+		<div class="form-group">
+			<label for="full_name4">Editable Field</label>
+			<input id="full_name4" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="identifier4">Required Field</label>
+			<input id="identifier4" class="form-control" placeholder="Required" required>
+		</div>
+		<div class="form-group has-error">
+			<label class="control-label" for="description4">Error Field</label>
+			<input type="text" class="form-control" id="description4">
+			<button type="button" class="btn btn-link field-indicator"><i class="fa fa-exclamation-triangle"></i></button>
+		</div>
+		<div class="form-group">
+			<label for="keywords4">Disabled Field</label>
+			<input id="keywords4" class="form-control disabled" value="Disabled Value" disabled>
+		</div>
+	</fieldset>
+</form>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+	<pre>
+<code class="html">
+<div class="form-group">
+	<label for="full_name4">Editable Field</label>
+	<input id="full_name4" class="form-control">
+</div>
+<div class="form-group">
+	<label for="identifier4">Required Field</label>
+	<input id="identifier4" class="form-control" placeholder="Required" required>
+</div>
+<div class="form-group has-error">
+	<label class="control-label" for="description4">Error Field</label>
+	<input type="text" class="form-control" id="description4">
+	<button type="button" class="btn btn-link field-indicator"><i class="fa fa-exclamation-triangle"></i></button>
+	
+</div>
+<div class="form-group">
+	<label for="keywords4">Disabled Field</label>
+	<input id="keywords4" class="form-control disabled" value="Disabled Value" disabled>
+</div>
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+<h3>Field Widths</h3>
+<p>To create specific width fields there are 5 sizes available. Use <code>.xlarge, .large, .medium, .small, .xsmall</code> on the <code>.form-control</code> element.</p>
+<form class="form-inline">
+	<fieldset>
+		<legend>Form Title</legend>
+		<div class="form-group">
+			<label for="full_name4">X-Large Field</label>
+			<input id="full_name4" class="form-control xlarge">
+		</div>
+		<div class="form-group">
+			<label for="full_name4">Large Field</label>
+			<input id="full_name4" class="form-control large">
+		</div>
+		<div class="form-group">
+			<label for="full_name4">Medium Field</label>
+			<input id="full_name4" class="form-control medium">
+		</div>
+		<div class="form-group">
+			<label for="full_name4">Small Field</label>
+			<input id="full_name4" class="form-control small">
+		</div>
+		<div class="form-group">
+			<label for="full_name4">X-Small Field</label>
+			<input id="full_name4" class="form-control xsmall">
+		</div>
+	</fieldset>
+</form>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+	<pre>
+<code class="html">
+<input id="full_name4" class="form-control xlarge">
+<input id="full_name4" class="form-control large">
+<input id="full_name4" class="form-control medium">
+<input id="full_name4" class="form-control small">
+<input id="full_name4" class="form-control xsmall">
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+<hr class="divider">
+
+
+<!-- END: Template Content
+================================================== -->
+
+<!-- Page Bottom
+================================================== -->
+</div><!--/.col-xs-12.col-sm-9-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <!-- Main Navigation
+          ================================================== -->
+          <!-- Page Header
+================================================== -->
+<h1><i class="fa fa-briefcase"></i>Component Library</h1>
+<nav id="styleguideNav" role="navigation">
+   <ul class="nav nav-list">
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Overview</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+			       <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/" data-id="overview">Overview</a></li>
+             <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/explorer" data-id="pa-explorer">Price Explorer</a></li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Foundations</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+        		<li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/entities.html" data-id="entities">HTML Entities</a></li>
+        		<li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/typography.html" data-id="typography">Typography</a></li>
+        		<li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/colors.html" data-id="colors">Colors</a></li>
+        		<li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/icons.html" data-id="iconography">Iconography</a></li>
+        		<li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/animation.html" data-id="animation">Animation</a></li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Components</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+              <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/breadcrumb/" data-id="component-breadcrumb">Breadcrumb</a></li>
+              <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/buttons/" data-id="buttons">Buttons</a></li>
+              <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/forms/" data-id="forms">Forms</a></li>
+              <li> <!-- Subtree -->
+                <a href="#/" class="tree-toggler subtree"><i class="fa fa-caret-down"></i>Input Controls</a>
+                <ul class="nav nav-pills nav-stacked tree">
+                  <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/date_range/" data-id="date-range">Date, Date Range</a></li>
+                  <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/date_single/" data-id="date-single">Date, Single Date</a></li>
+                  <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/long_list_single/" data-id="long-list-single">List, Long Single Value</a></li>
+                  <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/long_list_multi/" data-id="long-list-multi">List, Long Multi Value</a></li>
+                  <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/money/" data-id="money-input">Money Input</a></li>
+                  <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/components/quantity/" data-id="quantity-input">Quantity Input</a></li>
+                </ul>
+              </li>
+           </ul>
+       </li>
+       <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Patterns</h2>
+           <ul class="nav nav-pills nav-stacked tree">
+              <li><a href="http://screenchef.com/portfolio/work/vendavo/eps/5_prototype/dist/app/patterns/tables/" data-id="tables">Table</a></li>
+           </ul>
+       </li>
+   </ul>
+</nav>	
+
+
+        </div><!--/.sidebar-offcanvas-->
+      </div>
+      <!--/row-->
+    </section><!--/.container-->
+          
+    <!-- END/ Page Content
+    ================================================== -->
+
+
+    <!-- JavaScripts
+    ================================================== -->
+
+    <!--jQuery CDN -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Plug-Ins -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.min.js"></script>
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/jquery.truncator/jquery.truncator.js"></script>
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <!-- Polyfills - create support for unsupported browsers
+    ... Will be added here ... -->
+
+    <!-- Bootstrap Components -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Plugins  -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+
+    <!-- Vendavo App JS -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/js/app.js"></script>
+
+    <!-- Vendavo Components JS  -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/js/components.js"></script>
+
+    <!-- Component Library (Style Guide) Specific JS -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/js/styleguide.js"></script>
+
+
+    <!-- HighLight Plugin for code snippest -->
+    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/highlight.pack.js"></script>
+    <script>hljs.configure({ 'languages': ['html'] });</script>
+    <script type="text/javascript">
+      $('pre code').each(function(i, item){ 
+        var htmlOfElement = $(item).html().replace(/</g, '&lt;');
+        var htmlOfElement = htmlOfElement.replace(/>/g, '&gt;');
+        $(item).html(htmlOfElement);
+        hljs.highlightBlock(item);
+      });
+    </script>
+
+    <!-- FOR DEV PURPOSES: LiveReload -->
+    <script src="//localhost:35729/livereload.js"></script>
+    
+  </body>
+</html>

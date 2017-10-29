@@ -1,0 +1,271 @@
+body, td, a, p, div {
+	font-family: helvetica;
+	font-size: 9px;
+	color: #666;
+}
+
+/* Switcher Children */
+
+#switcher {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: url('../images/proto_bgd_center.png') repeat-x top left;
+	overflow: hidden;
+}
+
+#switcher_left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: url('../images/proto_bgd_left.png') no-repeat top left;
+}
+
+#switcher_right {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: url('../images/proto_bgd_right.png') no-repeat top right;
+}
+
+#switcher table {
+	height: 50px;
+}
+
+#switcher table td {
+	height: 50px;
+}
+
+#switcher table td.icn {
+	text-align: center;
+	vertical-align: top;
+}
+
+#switcher table td.icn p {
+	padding: 10px 0 0 0;
+	margin: 0;
+}
+
+#switcher table td.hack {
+	width: 10px;
+}
+
+#switcher a {
+	text-decoration: none;
+}
+
+#switcher a img {
+	border: none;
+}
+
+
+/* Use case childern */
+#usecase_module {
+	width: 150px;
+	border-left: 1px solid #ccc;
+}
+
+#usecase_module p {
+	margin: 0;
+	padding: 0;
+}
+
+#usecase_icons { 
+	height: 24px;
+	margin: 0px;
+	padding: 0px;
+	background: url('../images/proto_slider_highlight.png') no-repeat top center;
+}
+
+#usecase_images,
+#usecase_mask {
+	width: 100%;
+	height: 24px;
+}
+
+#usecase_images {
+	padding: 0px;
+	overflow: hidden;
+}
+
+#usecase_images ul {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: 62px;
+	top: 0px;
+}
+
+#usecase_images ul li {
+	display: block;
+	float: left;
+	width: 24px;
+	height: 24px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#usecase_mask {
+	position: relative;
+	top: -24px;
+	left: 0px;
+	background: url('../images/proto_slider_mask.png') no-repeat top center;
+}
+
+#usecase_name            { height: 15px; }
+#usecase_name:hover      { cursor: pointer; }
+#usecase_name p			 { text-align: center; padding: 3px 0 0 0; }
+#usecase_menu			 { float: left; }
+#usecase_scrollbar       { height: 11px; }
+#usecase_scrollbar_left  { float: left; }
+#usecase_scrollbar_right { float: right; }
+
+#usecase_scrollbar_center {
+	background: url('../images/proto_slider_bar.png') repeat-x top left;
+	margin: 0px 10px 0px 10px;
+}
+
+
+#usecase_dropdown {
+	position: relative;
+	top: 0px;
+	left: 400px;
+	background: #fff;
+	border: 1px solid #ccc;
+	z-index: 10;
+	width: 129px;
+	padding: 10px;
+}
+
+#usecase_dropdown:hover {
+	cursor: pointer;
+}
+
+#usecase_dropdown ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#usecase_dropdown li {
+	padding: 2px 0 2px 15px;
+}
+
+#usecase_dropdown li img {
+	margin: 0 0 0 -12px;
+	padding: 0 2px 0 0;
+}
+
+/* Window children */
+#window_module {
+	width: 150px;
+	border-left: 1px solid #ccc;
+}
+
+#window_module p {
+	margin: 0;
+	padding: 0;
+}
+
+#window_icons {
+	height: 24px;
+	margin: 0px;
+	padding: 0px;
+	background: url('../images/proto_slider_highlight.png') no-repeat top center;
+}
+
+#window_images,
+#window_mask {
+	width: 100%;
+	height: 24px;
+}
+
+#window_images {
+	padding: 0px;
+	overflow: hidden;
+}
+
+#window_images ul {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: 62px;
+	top: 0px;
+}
+
+#window_images ul li {
+	display: block;
+	float: left;
+	width: 24px;
+	height: 24px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#window_mask {
+	position: relative;
+	top: -24px;
+	left: 0px;
+	background: url('../images/proto_slider_mask.png') no-repeat top center;
+}
+
+#window_name			{ height: 15px; }
+#window_name:hover      { cursor: pointer; }
+#window_name p			{ text-align: center; padding: 3px 0 0 0; }
+#window_menu			{ float: left; }
+#window_scrollbar		{ height: 11px; }
+#window_scrollbar_left  { float: left; }
+#window_scrollbar_right { float: right; }
+
+#window_scrollbar_center {
+	background: url('../images/proto_slider_bar.png') repeat-x top left;
+	margin: 0px 10px 0px 10px;
+	height: 10px;
+}
+
+#window_dropdown {
+	position: relative;
+	top: 0px;
+	left: 550px;
+	background: #fff;
+	border: 1px solid #ccc;
+	z-index: 10;
+	width: 128px;
+	padding: 10px;
+}
+
+#window_dropdown:hover {
+	cursor: pointer;
+}
+
+#window_dropdown ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#window_dropdown li {
+	padding: 2px 0 2px 15px;
+}
+
+/* Dont touch ! */
+#dot1, #dot2 {
+	width: 10px;
+	height: 10px;
+	background: url('../images/proto_dot.png') no-repeat top left;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.draggable {
+	position: absolute;
+	cursor: pointer;
+}
+

@@ -1,0 +1,12 @@
+div#musPalette { width: 475px; }
+div#musPalette div.palette_filter select { float: left; margin-right: 3px; }
+div#musPalette div.palette_filter input { float: left; width: 50% !important; }
+div#musPalette div.palette_filter .button { *position: relative;*top:-3px; /* IE positioning */}
+/* Multi User Search Custom Icons */
+.treeContainer .itemIconFolderOpen,
+.treeContainer .itemIconFolderClosed
+{ background: transparent url(/global/images/icn_obj_user_group.png) no-repeat scroll 0px 2px; }
+.treeContainer .itemIconDocument
+{ background: transparent url(/global/images/icn_obj_user.png) no-repeat scroll 0px 1px; }
+span#agileTreeNodeIcon1.itemIconFolderOpen { background: transparent url(/global/images/folder_open.png) no-repeat scroll 0px 1px; }
+span#agileTreeNodeIcon1.itemIconFolderClosed { background: transparent url(/global/images/folder_closed.png) no-repeat scroll 0px 1px; }

@@ -1,0 +1,156 @@
+/* BEGIN: forms.scss
+// -----------------------------------------------------*/
+
+form {
+    h3, h4 {
+        color: $smoke;
+        margin-top: 30px;
+        &:first-of-type {
+            margin-top: 10px;
+        }
+    }
+    fieldset {
+        border: 1px solid transparent;
+        margin-bottom: 0;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        position: relative;
+        legend {
+            border-bottom: none;
+            color: #0387ab;
+            font-size: 16px;
+            font-weight: 200;
+            left: 0;
+            position: absolute;
+            top: 0;
+            + .form-group {
+                margin-top: 10px;
+            }
+        }
+    }
+    label {
+        color: $smoke;
+        font-size: 95%;
+    }
+    .radio, .checkbox {
+        label {
+            @extend label;
+        }
+    }
+    [class^="text"] { // spaces helper text beneath inputs (bootstrap classes: text-danger, text-muted, etc.)
+        margin: 5px 0 0 0;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        height: auto !important;
+    }
+    .form-control {
+        margin-bottom: 0;
+        @include hoverTransition();
+        border: 1px solid $borderColor;
+        box-shadow: none;
+        &::-webkit-input-placeholder {
+            color: $gray8;
+            font-family: $baseFont;
+            font-size: 14px;
+        }
+        &:-moz-placeholder {
+            color: $gray8;
+            font-family: $baseFont;
+            font-size: 14px;
+        }
+        &::-moz-placeholder {
+            color: $gray8;
+            font-family: $baseFont;
+            font-size: 14px;
+        }
+        &:-ms-input-placeholder {
+            color: $gray8;
+            font-family: $baseFont;
+            font-size: 14px;
+        }
+        &:focus {
+            @include hoverTransition();
+            border-color: darken($borderColor, 10%);
+            outline: none !important;
+        }
+    }
+    &.form-horizontal {
+        label {
+            padding-right: 0;
+        }
+        .form-group {
+                textarea {
+                @include hoverTransition();
+                min-height: 85px;
+                max-height: 85px;
+                resize: none;
+            }
+        }
+    }
+    &.form-divider {
+        border-top-color: #e6e6e6;
+        margin: 20px 0;
+    }
+    &.inline-status label {
+        display: block;
+    }
+    &.inline-status {
+        .form-control {
+            display: inline-block;
+            width: 90%;
+        }
+    }
+    &.inline-status .field-indicator .fa {
+        margin-left: 5px;
+        width: 16px;
+    }
+    &.inline-status .has-error .fa {
+        color: #a94442;
+    }
+    &.pd-horizontal *[class^='col-sm'] {
+        padding-left: 0;
+    }
+    .field-mapping {
+        margin: 0 $pageMargin;
+        *[class^='col-sm'] {
+            padding-left: 0;
+        }
+        .title-group {
+            border-bottom: 1px solid $borderColor;
+        }
+        .row {
+            line-height: 34px;
+            margin-bottom: 10px;
+            .form-control {
+                margin-bottom: 0;
+            }
+            div {
+                &:last-child {
+                    .fa {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* FORMS IN DIALOGS */
+.modal-body {
+    form {
+        fieldset {
+            dl {
+                dt {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                dt, dd {
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+

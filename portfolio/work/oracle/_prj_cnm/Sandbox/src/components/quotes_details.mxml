@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" verticalGap="0" xmlns:cnm="components.*">
+	<mx:XML xmlns="" id="quotesXML" source="../assets/data/quotes.xml" />
+	<mx:XML xmlns="" id="statusXML" source="../assets/data/projectStatus.xml" />
+	<mx:XML xmlns="" id="ownersXML" source="../assets/data/owners.xml" />
+	<mx:XML xmlns="" id="customersXML" source="../assets/data/customers.xml" />
+	<mx:XML xmlns="" id="attachmentsXML" source="../assets/data/attachments.xml" />
+	
+	<mx:Script>
+        <![CDATA[
+            import mx.events.DataGridEvent;
+            import mx.events.DataGridEventReason;
+            import flash.events.KeyboardEvent;
+            import flash.events.*;
+            import mx.events.*;
+            import mx.controls.*;
+            import mx.events.TreeEvent;
+            import mx.utils.ObjectUtil;
+            import mx.collections.ArrayCollection;
+
+                    
+			[Embed(source="../assets/images/icons/ico_expanded.png")] 
+			public var expandedImage:Class
+			[Embed(source="../assets/images/icons/ico_collapsed.png")] 
+			public var collapsedImage:Class
+			[Embed(source="../assets/images/icons/ico_edit.png")] 
+			public var editIconImage:Class
+  
+            
+            //Set icons classes`
+	        [Bindable]
+	        [Embed(source="../assets/images/icons/ico_obj_bom.png")] 
+	        public var iconBom:Class; 
+	        [Embed(source="../assets/images/icons/ico_obj_file.png")] 
+	        public var iconFile:Class;
+	         
+	        
+	        //Status In Progress
+	        [Embed(source="../assets/images/icons/ico_obj_quote.png")] 
+	        public var quoteInprogress:Class; 
+	        [Embed(source="../assets/images/icons/ico_obj_idea.png")] 
+	        public var ideaInprogress:Class; 
+	        [Embed(source="../assets/images/icons/ico_obj_requirement.png")] 
+	        public var requirementInprogress:Class; 
+	        //Status Completed
+	        [Embed(source="../assets/images/icons/ico_obj_quote_complete.png")] 
+	        public var quoteComplete:Class; 
+	        [Embed(source="../assets/images/icons/ico_obj_idea_complete.png")] 
+	        public var ideaComplete:Class; 
+	        [Embed(source="../assets/images/icons/ico_obj_requirement_complete.png")] 
+	        public var requirementComplete:Class; 			
+ 
+	        public function setIcons():void 
+	        {
+	            quoteTree.setItemIcon(quoteTree.dataProvider.getItemAt(0), 
+	               quoteInprogress, quoteInprogress);
+	         }
+	         
+             // CREATE NODE POPUP
+	        import mx.managers.PopUpManager;
+	        import popups.create.createPopup;
+	        
+	        public var createPop:createPopup;
+	        
+	        public function createNode():void
+	        {
+				createPop = new createPopup();
+				PopUpManager.addPopUp(createPop, this, false);
+				createPop.x = 300;
+				createPop.y = 100;
+			}
+			
+			// TREE - Change Pages
+			import mx.controls.Alert;
+	        [Bindable]
+	       	public var selectedNode:XML;
+	
+	        public function changeHandler(event:ListEvent):void
+	        {
+	        	var node:XML = event.target.selectedItem as XML;
+	        	if (node.@id == 'quote_details') {
+	        		parentApplication.quotePage.qStack.selectedChild = parentApplication.quotePage.qOne;
+	        	}
+	        	if (node.@id == 'load') {
+	        		parentApplication.quotePage.qStack.selectedChild = parentApplication.quotePage.load; //qOne is called in ActionScript...need to change before changing id
+	        	}
+	        	if (node.@id == 'speed') {
+	        		parentApplication.quotePage.qStack.selectedChild = parentApplication.quotePage.speed;
+	        	}
+	        	if (node.@id == 'braking') {
+	        		parentApplication.quotePage.qStack.selectedChild = parentApplication.quotePage.braking;
+	        	}
+	        	
+	        }
+			//TREE - XML Data Provider     
+			import mx.collections.XMLListCollection;
+            
+            [Bindable]
+            public var cnmList:XML =
+            <list>
+        		<quote id="quote_details" title="Quote1" label="Ultra Fast Road Bicycle" data="10" icon="quoteInprogress" code="100">
+        			<req label="Capabilities Requirements" icon="requirementInprogress">
+	        			<req id="load" label="Load" icon="requirementInprogress" />
+	        			<req id="speed" label="Speed" icon="requirementInprogress" />
+	        			<req id="braking" label="Braking" icon="requirementInprogress" />
+	        			<req id="terrain" label="Terrain" icon="requirementInprogress" />
+	        			<req id="safety" label="Safety" icon="requirementInprogress" />
+	        			<req id="maintenance" label="Maintenance" icon="requirementInprogress" />
+	        			<req id="servicing" label="Servicing" icon="requirementInprogress" />
+        			</req>
+        			<req label="Contraint Requirements" icon="requirementInprogress">
+	        			<req label="Requirement 1" icon="requirementComplete" />
+	        			<req label="Requirement 2" icon="requirementComplete" />
+	        			<req label="Requirement 3" icon="requirementInprogress" />
+	        		</req>
+        		</quote>
+        	</list>;
+              
+            [Bindable]
+            public var cnmListData:XMLListCollection = new XMLListCollection(cnmList.quote);
+            
+            //TREE - Add/Remove Nodes from Tree  
+            public function treeLabelType(item:Object):String
+            {
+                var node:XML = XML(item);
+                if( node.localName() == "quote" )
+                    return node.@title;
+                else
+                    return node.@label;
+            }
+            public function tree_openItems_change(evt:TreeEvent):void {
+                openItemArr = quoteTree.openItems as Array;
+            }
+			
+			public function addNode():void
+            {
+            	var qLabelData:TextInput = parentApplication.quotePage.createPop.qLabel;
+                var newNode:XML = <req/>;
+                newNode.@label = qLabelData.text;
+                newNode.@icon =  "requirementInprogress";
+                var qt:XMLList = cnmList.quote.(@title == "Quote1");
+                var branchOpen:int = openItemArr.length;
+                
+                if (qLabelData.text == "") {
+                	Alert.show("You have not entered a value.");
+                	return;
+                }
+                if (branchOpen < 1) {
+                	addNewBranch();
+                } else {
+	                
+	                    qt[0].appendChild(newNode);
+	                    qLabelData.text = "";
+	                    qLabelData.setFocus();
+	                
+                }
+            }
+            public function removeNode():void
+            {
+                var node:XML = XML(quoteTree.selectedItem);
+                if( node == null ) return;
+                if( node.localName() != "req" ) return;
+            
+                var children:XMLList = XMLList(node.parent()).children();
+                for(var i:Number=0; i < children.length(); i++) {
+                    if( children[i].@label == node.@label ) {
+                        delete children[i];
+                    }
+                }
+            }
+            public function addNewBranch():void
+            {
+               // var newBranch:XML = <quote title="New Quote" label="4.0 - This is a new branch." icon="requirementInprogress" isBranch="true"></quote>;
+            	var qLabelData:TextInput = parentApplication.quotePage.createPop.qLabel;
+                var newBranch:XML = <quote/>;
+                newBranch.@icon =  "requirementInprogress";
+                newBranch.@title = "New Quote"
+                newBranch.@label = qLabelData.text;
+
+                quoteTree.dataProvider.addItemAt(newBranch, 1);
+                qLabelData.text = "";
+                qLabelData.setFocus();
+                
+            }
+
+            [Bindable]
+            public var cards:ArrayCollection = new ArrayCollection(
+                [ {label:"Idea", data:1}, 
+                  {label:"Requirement", data:2}, 
+                  {label:"Quote", data:3} ]);
+
+
+        ]]>
+    </mx:Script>
+    <mx:Array id="openItemArr" />
+	<mx:HDividedBox width="100%" height="100%" paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10" horizontalGap="6">
+		<mx:Panel title="Explorer" width="30%" height="50%" id="panelLeft" verticalGap="6" titleStyleName="panelTitle" styleName="treePanel">		
+			<mx:VBox width="100%" height="100%" verticalGap="0" horizontalScrollPolicy="off" backgroundColor="#F7F7F7">
+		            <mx:VBox label="LISTS" width="100%" height="100%" backgroundColor="#ffffff" paddingTop="0" verticalGap="0" horizontalAlign="right" borderStyle="solid" borderThickness="1" borderColor="#cccccc">
+		                <mx:VBox backgroundColor="#eeeeee" width="100%" verticalGap="0">
+							<mx:HBox styleName="panelControls" width="100%" height="25">
+					            <mx:LinkButton id="create" styleName="expControl" label="Create" height="25"
+					            	click="createNode();" />
+					            <mx:LinkButton id="add" styleName="expControl" label="Add" height="25" />
+					            <mx:LinkButton id="remove" styleName="expControl" label="Remove" height="25"
+					            	click="removeNode()" />
+					        </mx:HBox>
+		                </mx:VBox>
+		                <mx:Spacer height="10" />
+		                <mx:Tree 
+		                	id="quoteTree" width="100%" height="100%" 
+		                	labelField="@label" styleName="listTitle" borderStyle="none" 
+		                	paddingLeft="10" textIndent="3" backgroundColor="#ffffff"
+		                	iconField="@icon" fontSize="11" fontFamily="Arial"
+		                	folderOpenIcon="@Embed(source='../assets/images/icons/ico_obj_folder_open.png')"
+		                	folderClosedIcon="@Embed(source='../assets/images/icons/ico_obj_folder_closed.png')"
+		                	defaultLeafIcon="@Embed(source='../assets/images/icons/ico_obj_folder_open.png')"
+		 			        dragEnabled="true"
+		   					dragMoveEnabled="true"
+		   					dropEnabled="true"
+		   					borderThickness="1"
+		   					dataProvider="{cnmListData}" 
+		   					itemClick="changeHandler(event)"
+                			itemOpen="tree_openItems_change(event);"
+		   					creationComplete="setIcons();" />
+		            </mx:VBox>  
+			</mx:VBox>
+		</mx:Panel>
+		<mx:HBox id="quoteDetailsBox" width="100%" height="100%">
+			<mx:ViewStack id="qStack" height="100%" width="100%">
+				<mx:Canvas id="qOne">
+					<cnm:quotes_details1 id="qd1" />
+				</mx:Canvas>
+				<mx:Canvas id="load">
+					<cnm:load_details id="qd2" />
+				</mx:Canvas>
+				<mx:Canvas id="speed" visible="false">
+					<cnm:speed_details id="qd3"  />
+				</mx:Canvas>
+				<mx:Canvas id="braking" visible="false">
+					<cnm:braking_details id="qd4"  />
+				</mx:Canvas>
+			</mx:ViewStack>
+		</mx:HBox>
+	</mx:HDividedBox>
+</mx:VBox>
+

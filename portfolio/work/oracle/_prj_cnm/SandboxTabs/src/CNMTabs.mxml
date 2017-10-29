@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml"
+	layout="vertical" 
+	title="Oracle CNM: Welcome Ralph Garcia"
+	xmlns:cnm="components.*"
+	width="1024" 
+	height="768" 
+	verticalGap="0" 
+	showStatusBar="false" 
+	paddingLeft="0" 
+	paddingRight="0" 
+	paddingTop="0" 
+	paddingBottom="0" 
+	backgroundColor="#0a4c8b"
+	creationComplete="menuInit()"
+	initialize="init()" 
+	xmlns:Extended="com.*"
+	xmlns:local="*"
+	>
+	<mx:Script>
+	<![CDATA[
+		import mx.containers.VBox;
+		import mx.controls.Label;
+		import mx.containers.Canvas;
+	 	
+		[Embed (source="assets/Bulb On.png")]
+		[Bindable]
+		public var bmlip:Class;
+		
+	]]>
+</mx:Script>
+	
+	
+	<mx:Style source="styles/default.css"/>
+	<mx:Script source="script/global.as" />
+	<mx:Script>
+		<![CDATA[
+            import mx.events.MenuEvent;
+            import mx.controls.Alert;
+            import mx.collections.*;
+            // Event handler to initialize the MenuBar control.
+            private function menuInit():void {
+                menuBarCollection = new XMLListCollection(menubarXML);
+            }		
+		
+	        [Bindable]
+	        public var selectedNode:XML;
+	        [Bindable]
+	        public var navPage:XML;
+	        [Bindable]
+	        public var page:String = 'home';
+
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_idea.png")]
+            public var iconIdea:Class;
+    
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_quote.png")]
+            public var iconQuote:Class;
+
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_requirement.png")]
+            public var iconRequirement:Class;
+
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_requirement.png")]
+            public var menuColor:Class;
+
+
+
+           [Bindable]
+            public var menuBarCollection:XMLListCollection;
+    
+            private var menubarXML:XMLList =
+                <>
+                    <menuitem label="Favorites" data="top">
+                    	<menuitem label="Ideas" icon="iconIdea">
+	                        <menuitem label="Idea 1" data="1A" />
+	                        <menuitem label="Idea 2" data="1A" />
+	                        <menuitem label="Idea 3" data="1A" />
+                    	</menuitem>
+                    	<menuitem label="Quotes" icon="iconQuote">
+	                        <menuitem label="Quote 1" data="1A" />
+	                        <menuitem label="Quote 2" data="1A" />
+	                        <menuitem label="Quote 3" data="1A" />
+                    	</menuitem>
+                    	<menuitem label="Requirements" icon="iconRequirement">
+	                        <menuitem label="Requirement 1" data="1A" />
+	                        <menuitem label="Requirement 2" data="1A" />
+	                        <menuitem label="Requirement 3" data="1A" />
+                    	</menuitem>
+                        <menuitem type="separator"/>
+                        <menuitem label="Manage Favorites" data="1B"/>
+                    </menuitem>
+                    <menuitem label="Recently Visited" data="top">
+                        <menuitem label="Recently Visited 1" data="1A" styleName="menuColor" />
+                        <menuitem label="Recently Visited 2" data="1B"/>
+                        <menuitem label="Recently Visited 3" data="1A" icon="iconA"/>
+                        <menuitem label="Recently Visited 4" data="1B"/>
+                        <menuitem label="Recently Visited 5" data="1A" icon="iconB"/>
+                        <menuitem label="Recently Visited 6" data="1B" icon="iconB"/>
+                    </menuitem>
+                </>;
+
+            private function menuHandler(event:MenuEvent):void  {
+                // Don't open the Alert for a menu bar item that 
+                // opens a popup submenu.
+                    Alert.show("Item Clicked");
+            }
+            
+             // SEARCH DROPDOWN CONTENT
+	        [Bindable]
+	        public var searchType:ArrayCollection = new ArrayCollection(
+	        [ 
+	        	{label:"All", data:1}, 
+	            {label:"Any", data:2}
+	        ]);
+
+		]]>
+	</mx:Script>
+	<mx:XML xmlns="" id="quotesXML" source="../assets/data/quotes.xml" />
+	<mx:XML xmlns="" id="statusXML" source="../assets/data/projectStatus.xml" />
+	<mx:XML xmlns="" id="ownersXML" source="../assets/data/owners.xml" />
+	<mx:XML xmlns="" id="customersXML" source="../assets/data/customers.xml" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<mx:Style>
+extendedPopUpMenuButton{
+   cornerRadius: 0;
+   alpha: 1;
+   borderColor: #DCEBFE;
+   color: #000000;
+   textRollOverColor: #000000;
+   textSelectedColor: #000000;
+   paddingLeft: 5;
+   paddingRight: 5;
+   upSkin: ClassReference('com.extended_TabListToolButtonSkin');
+   overSkin: ClassReference('com.extended_TabListToolButtonSkin');
+   downSkin: ClassReference('com.extended_TabListToolButtonSkin');
+   popUpDownSkin : ClassReference('com.extended_TabListToolButtonSkin');
+   popUpOverSkin : ClassReference('com.extended_TabListToolButtonSkin');
+   
+}
+
+.CloseButton{
+   upSkin: Embed(source="assets/Close_Up.png"); 
+   overSkin: Embed(source="assets/Close_Over.png");
+   downSkin: Embed(source="assets/Close_Down.png");
+}
+
+Tab { 	
+   borderStyle: "none";
+   fillAlphas: 1,1,1,1;
+   alpha: .2;
+   fillColors: #aec1d1,#aec1d1,#aec1d1,#aec1d1;
+   cornerRadius: 5;
+   borderColor: #aec1d1;
+   backgroundColor: #aec1d1;
+   fontWeight: "normal";
+   paddingLeft: 5;
+   showCloseButton: true;
+}
+.TabNav {
+   backgroundAlpha: 1;
+   borderColor: #0a4c8b;
+   backgroundColor: #0a4c8b;
+   fontWeight: "normal";
+   themeColor: #aec1d1;
+}
+
+
+</mx:Style>
+	
+	<mx:Script>
+		<![CDATA[
+			
+			private function additem(parent:DisplayObjectContainer):void{
+				
+				var xitem:VBox = new VBox;
+				xitem.label = "Tab" + parent.numChildren + 1;
+				xitem.name=xitem.label;
+				xitem.id=xitem.label;
+				
+				var itemlabel:Label = new Label();
+				itemlabel.name = "label" + parent.numChildren + 1;
+				itemlabel.id = "label" + parent.numChildren + 1;
+				itemlabel.text = "Container item for " + xitem.label.toString();
+				
+				xitem.addChild(itemlabel);
+				
+				parent.addChild(xitem);
+				
+			}
+						
+			
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" verticalGap="0">
+		<mx:HBox width="100%" height="30" paddingTop="5" paddingBottom="5" paddingLeft="10" paddingRight="10" verticalGap="0" backgroundSize="100%" backgroundImage="@Embed(source='../assets/images/bg/bg_topbar.png')">
+			<mx:Image source="@Embed(source='../assets/images/logos/logo_oracle_red.png')" />
+			<mx:Text text="Customer Needs Management" width="100%" color="#0a4c8b"  paddingTop="0" fontSize="16" height="25" fontWeight="bold"/>
+			<mx:Spacer width="80%" />
+			<mx:Text text="Welcome Administrator" color="#ffffff" />
+		        <mx:Image source="@Embed(source='../assets/images/nav/line_vertical_dotted.png')" width="1" height="20" />
+			<mx:Text text="Settings" color="#ffffff" />
+		        <mx:Image source="@Embed(source='../assets/images/nav/line_vertical_dotted.png')" width="1" height="20" />
+			<mx:Text text="Logout" color="#ffffff" />
+		</mx:HBox>		
+		<mx:HBox width="100%" height="30" styleName="menuAppBar" verticalScrollPolicy="off" horizontalGap="5">
+		        <mx:LinkButton height="20" label="Home" click="navStack.selectedChild=home;" paddingRight="15" paddingLeft="15" color="#ffffff"  paddingBottom="0" paddingTop="0"/>
+		        <mx:Image source="@Embed(source='../assets/images/nav/line_vertical_dotted.png')" width="1" height="16" />
+        		<mx:MenuBar labelField="@label" iconField="@icon" backgroundSkin="@Embed(source='../assets/images/spacer.gif')" 
+        			height="20" dataProvider="{menuBarCollection}" styleName="HeaderMenu" itemClick="menuHandler(event);">
+        		</mx:MenuBar>
+			<mx:Spacer width="50%"/>
+			<mx:Label text="Search" color="#FFFFFF"/>
+			<mx:ComboBox width="75" dataProvider="{searchType}"></mx:ComboBox>
+			<mx:TextInput width="80%" height="22" fontSize="11" borderColor="#999999"/>
+			<mx:Button id="searchButton" click="navStack.selectedChild=searchResults;" height="22">
+				<mx:icon>@Embed(source='../assets/images/icons/ico_global_forward.png')</mx:icon>
+			</mx:Button>
+		</mx:HBox>
+		<mx:HBox width="100%" height="20" paddingLeft="10">
+			<mx:Button click="additem(main1)" icon="@Embed(source='../assets/images/icons/ico_add.png')" />
+			<Extended:extended_TabNavigator CloseClick="trace('close clicked')" styleName="TabNav" id="main1"  height="50%" width="100%">
+				<mx:VBox label="Tab 1" width="100%" height="100%">
+					<mx:Label text="Label 1"/>
+				</mx:VBox>
+				<mx:VBox label="Tab 2" width="100%" height="100%">
+					<mx:Label text="Label 2"/>
+				</mx:VBox>
+				<mx:VBox label="Tab 3" width="100%" height="100%">
+					<mx:Label text="Label 3"/>
+				</mx:VBox>
+				<mx:VBox label="Tab 4" width="100%" height="100%">
+					<mx:Label text="Label 4"/>
+				</mx:VBox>
+			</Extended:extended_TabNavigator>
+		</mx:HBox>
+		
+	</mx:VBox>
+	<mx:VBox height="100%" width="100%" paddingLeft="10">
+		<mx:ViewStack id="navStack" height="100%" width="100%" backgroundColor="#aec1d1">
+			<mx:Canvas id="home">
+				<cnm:home />
+			</mx:Canvas>
+			<mx:Canvas id="quote">
+				<cnm:quotes id="myQuotes"/>
+			</mx:Canvas>
+			<mx:Canvas id="quoteDetail" visible="false">
+				<cnm:quotes_details id="quotePage" />
+			</mx:Canvas>
+			<mx:Canvas id="idea" visible="false">
+				<cnm:ideas />
+			</mx:Canvas>
+			<mx:Canvas id="requirement" visible="false">
+				<cnm:requirements />
+			</mx:Canvas>
+			<mx:Canvas id="searchResults" visible="false">
+				<cnm:search_results />
+			</mx:Canvas>
+		</mx:ViewStack>
+	</mx:VBox>
+	
+</mx:WindowedApplication>

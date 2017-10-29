@@ -1,0 +1,141 @@
+<!-- Page Top
+================================================== -->
+@@include('./../template_head.tpl', {"pageID": "codestyle", "pageCategory": "foundations"})
+<!-- BEGIN: Template Content
+================================================== -->
+<!-- Content Title
+================================================== -->
+<h2>@@titleCodeStyle</h2>
+<div class="sg-page-nav">
+  <div>
+    <h6>Navigate To:</h6>
+    <ul>
+      <li><a href="#1">Naming Conventions</a></li>
+      <li><a href="#2">Tools to Help</a></li>
+      <li><a href="#3">HTML5 Style</a></li>
+      <li><a href="#4">CSS3 &amp; SCSS Style</a></li>
+    </ul>
+  </div>
+  <div>
+    Article: Why coding style matters
+    <a href="https://www.smashingmagazine.com/2012/10/why-coding-style-matters/" target="_blank" class="btn btn-default">View Article</a>
+  </div>
+</div>
+<!-- Page Content
+================================================== -->
+<p>
+  <strong>Why does coding style matter?</strong>
+  <br> When you have a style guide, code that otherwise seems innocuous immediately raises a flag because the style isn’t followed. This is one of the most overlooked aspects of style guides: by defining what correct code looks like, we are more easily able to identify incorrect code and therefore potential bugs before they happen.
+</p>
+<p>
+  This document defines formatting and style rules for HTML and CSS. It aims at improving collaboration, code quality, and enabling supporting infrastructure. It applies to raw, working files that use HTML and CSS. Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.
+</p>
+<p>
+  A good code guide covering much of we would like to emulate is located at <a href="http://codeguide.co/" target="_blank">Code Guide for HTML and CSS</a>
+</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="1">Naming Convention</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <h4>Bootstrap Classes and Overrides</h4>
+    <p>Familiarize with Bootstrap classnames. They should appear first in a list of classnames. Try to avoid overriding Bootstrap classes, instead override by creating a new custom class. Why? When Bootstrap updates they may change the name of their classes. It is easier to change our own custom classes.</p>
+    <p><code>class="btn btn-default your-custom-class"</code></p>
+    <h4>CSS Classes</h4>
+    <p>We use a minimal approach by naming just the most necessary rules. Use lower case and names can consist of different words separated by a “-” (dash).</p>
+    <p>Components use a name:
+      <br />
+      <code>.component {…} <br /> .component-name {…}</code>
+    </p>
+    <h4>ID's</h4>
+    <p>ID's should not contained "-" (dash). Instead use capital case.</p>
+    <p><code>id="componentName"</code></p>
+  </div>
+</div><!--/.panel-body-->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="2">Tools to help</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <p>
+      Don’t be afraid of using linting tools to help enforce coding style. If these tools are available in your editor as plugins, we encourage the use of them. Here are a few tools that can help keep your team on track:
+    </p>
+    <ul>
+      <li><a href="http://www.html-tidy.org/" target="_blank">HTML Tidy</a></li>
+      <li><a href="http://csslint.net/" target="_blank">CSS Lint</a></li>
+      <li><a href="http://jshint.com/" target="_blank">JSHint</a></li>
+    </ul>
+  </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="3">HTML5 Style</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <p>
+      A consequent use of style, makes it easier for others to understand and use your HTML. In the future, programs like XML readers, may want to read your HTML. Below are a few general principles to follow.
+    </p>
+    <ul>
+      <li>Use correct document type <code>&lt;!doctype html&gt;</code></li>
+      <li>Use lowercase element names such as <code>&lt;div&gt;</code></li>
+      <li>Close empty HTML elements such as <code>&lt;meta charset="utf-8" /&gt;</code></li>
+      <li>Use lowercase attribute names and use quotes around them <code>&lt;div class="menu"&gt;</code></li>
+      <li>Always use the <strong>alt</strong> attribute with images and use that to describe what the image is<code>&lt;img src="path/to/img" alt="describe image" /&gt;</code></li>
+    </ul>
+  </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="4">CSS &amp; SCSS Style</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: CONTENT HERE -->
+    <h2>CSS Guidelines</h2>
+    <h4>CSS Specificity</h4>
+    <ul>
+      <li>Avoid using ID's for styling. If you must use an id selector (<code>#selector</code>) make sure that you have no more than <em>one</em> in your rule declaration. A rule like <code>#header .search #quicksearch { ... }</code> is considered harmful.</li>
+      <li>When modifying an existing element for a specific use, try to use specific class names. Instead of <code>.listings-layout.bigger</code> use rules like <code>.listings-layout.listings-bigger</code>. Think about <code>ack/grep</code>ing your code in the future.</li>
+      <li>The class names <code>disabled</code>, <code>mousedown</code>, <code>danger</code>, <code>hover</code>, <code>selected</code>, and <code>active</code> should <em>always</em> be namespaced by a class (<code>button.selected</code> is a good example).</li>
+    </ul>
+    <h2>SCSS Guidelines</h2>
+    <h4>Variables and Mixins</h4>
+    <ul>
+      <li>You should use the variables.scss file to declare colors, typography and some formatting.</li>
+      <li>Familiarize and utilize <a href="http://bourbon.io/docs/" target="_blank">Bourbon Mixin Library</a> to reduce redundancy and speed up development.</li>
+    </ul>
+    <p></p>
+    <h4>Spacing</h4>
+    <ul>
+      <li>Use soft-tabs with a two space indent. Spaces are the only way to guarantee code renders the same in any person’s environment.</li>
+      <li>Put spaces after <code>:</code> in property declarations.</li>
+      <li>Put spaces before <code><span class="p">{</span></code> in rule declarations.</li>
+      <li>Put line breaks between rulesets.</li>
+      <li>When grouping selectors, keep individual selectors to a single line.</li>
+      <li>Place closing braces of declaration blocks on a new line.</li>
+      <li>Each declaration should appear on its own line for more accurate error reporting.</li>
+    </ul>
+    <h4>Formatting</h4>
+    <ul>
+      <li>Use hex color codes <code>#000</code> unless using <code>rgba()</code> in raw CSS (SCSS’ <code>rgba()</code> function is overloaded to accept hex colors as a param, e.g., <code>rgba(#000, .5)</code>).</li>
+      <li>Use <code>//</code> for comment blocks (instead of <code>/* */</code>).</li>
+      <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+      <li>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.</li>
+    </ul>
+    <h4>Misc</h4>
+    <p>As a rule of thumb, avoid unnecessary nesting in SCSS. At most, aim for three levels. If you cannot help it, step back and rethink your overall strategy (either the specificity needed, or the layout of the nesting).</p>
+  </div>
+</div>
+<!--/.panel-body-->
+<!-- END/ Page Content
+================================================== -->
+<!-- END: Template Content
+================================================== -->
+<!-- Page Bottom
+================================================== -->
+@@include('./../template_foot.tpl')

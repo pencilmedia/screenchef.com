@@ -1,0 +1,77 @@
+/******************************************************************************
+OBJECT_DISCUSSION.CSS
+Object Discussion related styles and definitions.
+******************************************************************************/
+.object_messages { 
+	width: auto; 
+	height: 260px; 
+	border: 1px solid #ccc; 
+	overflow: auto; 
+	margin-top: 5px;
+	margin-bottom: 30px; 
+	padding: 10px;
+}
+.object_messages .column_one { 
+	width: 70%; 
+	overflow: auto; 
+	margin-bottom: 10px;
+}
+.object_messages .column_two { 
+	width: 15%; 
+	overflow: auto; 
+	text-align: left; 
+	text-transform: uppercase; 
+	padding-left: 30px;
+}
+.object_messages .column_three { 
+	text-align: right;
+	overflow:visible;
+}
+.object_messages hr { 
+	display: block; 
+	clear: both; 
+	color: #ccc; 
+	height: 1px; 
+	width: 100%; 
+	margin-bottom: 15px;
+}
+.message_author { 
+	margin: 10px 0 5px 0; 
+	color: #666;
+}
+
+/*.message_buttons a.button { display: block; clear: both; margin-bottom: 3px; text-align: center; min-width: 35px; }*/
+.message_buttons a.button { 
+	clear: both; 
+	text-align: center; 
+	min-width: 35px;
+}
+
+dl.side_by_side_discussion { 
+	clear: both; 
+	margin: 15px 50px 10px 0; 
+	min-width: 475px;
+} 
+dl.side_by_side_discussion dt { 
+	float: left; 
+	text-align: right; 
+	clear: left; 
+	width: 25%;
+}
+dl.side_by_side_discussion dd { 
+	margin: 0 0 8px 25%; 
+	padding-left: 5px;
+}
+
+div.table_simple_wrapper { 
+	border: 1px solid #ddd; 
+} 
+div.table_simple_wrapper .scrollHeaderDiv { 
+	margin: 0;
+}
+div.table_simple_wrapper .scrollTableDiv { 
+	margin: 0 0 0 5px;
+}
+div.table_simple_wrapper .table_actions { 
+	margin: 0;
+}

@@ -1,0 +1,1928 @@
+/* Midas.less
+// -----------------------------------------------------*/
+// Core variables and mixins
+@import "../less_bootstrap/variables.less";
+@import "../less_bootstrap/mixins.less";
+// Custom variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+
+// MIDAS
+// -----------------------------------------------------
+// alert box
+.alert.opportunity-removed {
+	display: none;
+}
+// dialog
+.modal-share {
+	.modal-body {
+		form {
+			min-height: 100px;
+			fieldset {
+				margin: 0 40px;
+				label {
+					margin: 15px 0 3px 0;
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+				input, select, textarea {
+					margin: 0 auto;
+					width: 100%;
+					.border-radius(0);
+				}
+				.error {
+                      margin-top: 10px;
+                  }
+			}
+		}
+	}
+}
+.midas {
+	> header {
+		.page-tools {
+			.sidebar-responsive {
+				display: none;
+			}
+		}
+	}
+	> section {
+		article {
+			margin: @pageMargin @pageMargin 0 @pageMargin;
+			&.root-cause-analysis {
+				+ article {
+					margin-top: 40px;
+				}
+			}
+		}
+		// BEGIN: This was added to hide the autocomplete/results for chosen plugin. Joel approved. 
+		.form-inline {
+			.advisor-search {
+				.btn {
+					position: absolute;
+					top: 1px;
+					.border-radius(0);
+					background: none;
+					border: none;
+					box-shadow: none;
+					color: @blueDarkest;
+					display: none;
+					float: right;
+					padding: 5px 0;
+					width: 25px;
+					&:hover {
+						background-color: @blue;
+						color: @navyBlue;
+						outline: 1px solid @grayLighter;
+					}
+					&.disabled{
+						&:hover {
+							background-color: transparent;
+							color: @gray;
+							outline: none;
+						}
+					}
+					&.clear-search {
+						right: 40px;
+					}
+					&.save-search {
+						right: 15px;
+					}
+				}
+				.select2-container-multi {
+					.select2-choices {
+						.select2-search-field {
+							input:not([type="checkbox"]):not([type="radio"]), 
+							input[type="text"] {
+								border-radius: 0;
+							}
+							input:not([type="checkbox"]):not([type="radio"]):focus, 
+							input[type="text"]:focus {
+								border: none;
+								box-shadow: none;
+							}
+						}
+					}
+					&.select2-container-active {
+						.select2-choices {
+							box-shadow: inset 0 0 5px rgba(0, 100, 175, 0.1), 0 0 8px rgba(0, 100, 175, 0.3);
+						}
+					}
+				}
+				// Hide Dropdown
+				.select2-drop-active {border: 1px solid red !important;
+					//display: none;
+				}
+				.form-control.select2-container.select2-dropdown-open {
+				   border-color: #ccc;
+				}
+				.form-control.select2-container.select2-dropdown-open {
+					border-radius: 0;
+				}
+				.form-control.select2-container {
+					border-radius: 0;
+				}
+				/*Remove border on input*/
+				.form-control.select2-container.select2-dropdown-open {
+				  border: none !important;
+				}
+			}
+		}
+		// End
+
+		// NOTE: Tabs Styles in vendavo/tabs.less
+		.tab-content.opportunities {
+			margin: 0 @pageMargin;
+			.tab-pane.active {
+				background: @white;
+				border: 1px solid @blueLightBorder;
+				border-top: none;
+				min-height: 400px;
+				padding: 1px 0 0 0;
+				.list {
+					border-bottom: 1px solid @blueLightBorder;
+					margin: 0;
+					min-height: 500px;
+					overflow: auto;
+					padding: 0;
+					> dd {
+						background-color: @white;
+						border-bottom: 1px solid @blueLightBorder;
+						margin: 0;
+						min-height: 90px;
+						overflow: auto;
+						.lt-column, .rt-column {
+							float: left;
+							margin: 0;
+							padding: 0;
+							h3 {
+								font-size: 120%;
+								line-height: 25px;
+							}
+						}
+						> .lt-column {
+							max-width: 285px;
+							text-align: right;
+							width: 25%;
+						//	min-width: 150px;
+							h3 {
+								font-size: 120%;
+								line-height: 20px;
+								margin: 0;
+								min-height: 89px;
+								padding: 15px 0 0 0;
+								width: 100%;
+							}
+						}
+						> .rt-column {
+							position: relative;
+							width: 75%;
+							h3 {
+								font-size: 120%;
+								line-height: 20px;
+								margin: 0;
+								overflow: hidden;
+								span {
+									display: block;
+									float: left;
+									margin-top: 15px;
+									overflow: hidden;
+									padding-left: 15px;
+									white-space: nowrap;
+									width: 90%; // Compensate room for read only icons span:last-childs
+									text-overflow: ellipsis;
+								}
+							}
+							.status-indicators {
+								position: absolute;
+								right: 5px;
+								top: 3px;
+								i {
+									display: inline-block;
+									margin: 0 3px;
+									visibility: hidden; // inline-block needed for animation fx
+									color: @navyBlue;
+									background: transparent;
+								}
+								.mark {
+									&.active {
+										visibility: visible; // Show active indicator icon
+									}
+								}
+							}
+							dl {
+								margin: 3px 0 10px -33%;
+								overflow: hidden;
+								dt, dd {
+									float: left;
+									line-height: 20px;
+									margin: 0;
+								}
+								dt {
+									color: @gray;
+									font-weight: normal;
+									overflow: hidden;
+									text-align: right;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									width: 25%;
+								}
+								dd {
+									padding-left: 15px;
+									width: 75%;
+								}
+							}
+						}
+						+ .preview {
+							background: @white;
+							border: 1px solid @blueSelectState;
+							display: none;
+							max-height: 0;
+							min-height: 0;
+							overflow: visible;
+							padding: 0;
+							width: 100%;
+							em {
+								background: url('/img/preview-divet.png') no-repeat center top;
+								display: block;
+								height: 20px;
+								left: 50%;
+								position: relative;
+								top: -10px;
+								width: 35px; // Divet Image
+							}
+							&:hover {
+								background: @white;
+								cursor: default; // Cancels hover effect on dd's
+							}
+							nav {
+								margin: @pageMargin 0;
+								min-width: 600px;
+								text-align: center;
+								.btn {
+									margin-right: 1em;
+									min-width: 100px;
+									width: 22%;
+									i { 
+										margin: 0 3px 0 -3px;
+									}
+									&:last-child {
+										margin-right: 0;
+									}
+								}
+							}
+							.colonnade {
+								margin: 0 auto;
+								max-width: 800px;
+								min-width: 600px;
+								> .lt-column, > .rt-column {
+									padding: 0;
+									width: 50%;
+									li {
+										display: block;
+										overflow: hidden;
+										label, span {
+											display: inline-block;
+											float: left;
+											line-height: 14px;
+											padding: 5px;
+											text-align: left;
+										}
+										label {
+											width: 50%;
+										}
+										span {
+											overflow: hidden;
+											text-overflow: ellipsis;
+											white-space: nowrap;
+											width: 50%;
+										}
+									}
+								}
+								> .lt-column {
+									padding-left: @pageMargin;
+								}
+								> .rt-column {
+									padding-right: @pageMargin;
+								}
+							}
+						}
+						&:hover {
+							background: @blueHover;
+							cursor: pointer;
+							.status-indicators {
+							}
+							// Animation Effect when row is hovered
+						    .transition(background .2s linear);
+						}
+						&.active {
+						    .transition(background-color .2s linear); // Row Highlight
+							// Animation Effect when row is hovered
+							background: @lavender;
+							&:hover {
+								background: @lavender;
+							}
+						}
+						&.no-results {
+							padding: 20% 0 0 0;
+							border-bottom: none;
+							text-align: center;
+							h3 {
+								color: #999;
+								font-size: 200%;
+								font-weight: 400;
+							}
+							&:hover {
+								background: none;
+								cursor: default;
+							}
+						}
+						&.list-msg {
+							color: @gray;
+							padding: @pageMargin;
+							i {
+								color: @orange;
+							}
+							&:hover {
+								background: none;
+								cursor: default;
+							}
+						}
+					}
+				}
+				.watch-list {
+					background-color: @white;
+					min-height: 500px;
+					padding-top: 30px;
+					dl {
+						border: 1px solid @blueLightBorder;
+						border-bottom: none;
+						margin: 0;
+						overflow: auto;
+						dt, dd {
+							background-color: @white;
+							border-bottom: 1px solid @blueLightBorder;
+							float: left;
+							margin: 0;
+							min-height: 75px;
+						}
+						> dt {
+							border-left: 1px solid @blueLightBorder;
+							font-size: 85%;
+							font-weight: normal;
+							text-align: center;
+							width: 20%;
+							> span {
+								display: block;
+								font-style: normal;
+								font-weight: bold;
+							}
+							.completed {
+								color: #4eb857;
+								font-size: 150%;
+								margin-top: 25px;
+							}
+							.percent {
+								color: @gray;
+								font-size: 125%;
+								margin-top: 15px;
+							}
+							.progress {
+								height: 12px;
+								margin-left: 20%;
+								margin-top: 5px;
+								width: 60%;
+								.bar {
+									background-color: #4eb857;
+									background-image: none;
+								}
+							}
+						}
+						> dd {
+							width: 80%;
+							h3 {
+								font-size: 125%;
+								line-height: 25px;
+								margin: 10px 0 0 0;
+								padding-left: 15px;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								width: 100%;
+							}
+							p {
+								height: 30px;
+								line-height: 16px;
+								margin: 0;
+								min-height: 34px;
+								overflow: hidden;
+								padding: 0 15px;
+							}
+							&:hover {
+								background: @blueLight;
+								cursor: pointer;
+								a {
+									color: @black;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	> aside {
+		article {
+			.saved-search {
+				position: relative;
+				.view-favorites {
+					background: @grayLightest;
+					left: 3px;
+					line-height: 13px;
+					padding: 4px 10px;
+					position: absolute;
+					top: 2px;
+					vertical-align: baseline;
+					i {
+						color: @grayDark;
+						display: block;
+						font-size: 80%;
+					}
+					&.active {
+						background: @blueSelectState;
+						box-shadow: 0 0 3px 1px @grayLightest;
+						i {
+							color: @navyBlue;
+						}
+					}
+					&.disabled {
+						pointer-events: none;
+						background: @grayLightest;
+						cursor: default;
+						i {
+							color: @gray;
+						}
+					}
+					&:hover {
+						background: @btnPrimaryBaseHvr;
+					}
+					&:focus {
+						outline: none;
+					}
+				}
+				.pill-list {
+					margin: 5px 0 0 0;
+					padding: 0;
+					li {
+						&.label {
+							letter-spacing: 1px;
+							text-shadow: none;
+						}
+						&.label-info {
+							background: @blueHighlight;
+							cursor: pointer;
+							display: inline-block;
+							line-height: 13px;
+							margin: 3px;
+							span {
+								display: inline-block;
+								float: left;
+								max-width: 235px;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+							}
+							i {
+								display: none;
+								margin-left: 3px;
+								&:hover {
+									color: @blueDarkest;
+								}
+							}
+							&:active {
+								box-shadow: inset 0 0 8px @blueDarkest;
+							}
+							&:first-child {
+								margin-left: 40px;
+								span {
+									max-width: 200px;
+								}
+							}
+						}
+						&.info-msg {
+							background: none;
+							max-width: 240px;
+							font-weight: normal;
+							margin: 3px 0 3px 40px;
+							padding: 0 5px;
+							line-height: 20px;
+							width: 100%; // Empty List Message
+							color: @gray;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Responsive Layout popover
+.popover {
+	.popover-content {
+		.butcon {
+			float: right;
+			position: absolute;
+			right: 10px;
+			top: 3px;
+		}
+		.pill-list {
+			li {
+				&:first-child {
+					color: @white;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+// OPPORTUNITY RANGE
+// -----------------------------------------------------
+
+.modified {
+	.lt-column {
+		h3 {
+			&:before {
+				color: @orange;
+				content: "\2022";
+				padding: 0 5px;
+				//font-size: 200%
+			}
+		}
+	}
+}
+// Opportunity Types - Classes are: Best, Better, Good, Neutral 
+.premium {
+	.lt-column {
+		h3 {
+			border-left: 15px solid @premiumGreen;
+			color: @premiumGreen;
+		}
+	}
+}	
+.best {
+	.lt-column {
+		h3 {
+			border-left: 15px solid @bestGreen;
+			color: @bestGreen;
+		}
+	}
+}	
+.better {
+	.lt-column {
+		h3 {
+			border-left: 15px solid @betterGreen;
+			color: @betterGreen;
+		}
+	}
+}	
+.great {
+	.lt-column {
+		h3 {
+			border-left: 15px solid @greatGreen;
+			color: @greatGreen;
+		}
+	}
+}	
+.good {
+	.lt-column {
+		h3 {
+			border-left: 15px solid @goodGreen;
+			color: @goodGreen;
+		}
+	}
+}	
+
+// DETAILS PAGE
+// -----------------------------------------------------
+.midas.details {
+	> section {
+		// Opportunity Description
+		.summary {
+			margin: 0;
+			min-height: 175px;
+			overflow: hidden;
+			.summary-chart {
+				margin-top: -15px;
+				max-height: 200px;
+				max-width: 200px;
+				min-height: 200px;
+				text-align: center;
+				width: 25%;
+				img {
+					margin-top: @pageMargin;
+				}
+			}
+			.summary-details {
+				padding: 0 5% 0 10px;
+				width: 75%;
+				h2 {
+					border: none;
+					margin: 0;
+					padding: 2px 0;
+					overflow: auto;
+					line-height: 30px;
+					span {
+						color: @grayDarkest;
+						display: inline-block;
+						float: left;
+						font-size: 200%;
+						line-height: 30px;
+						text-transform: none;
+					}
+					.butcon {
+						float: left;
+						font-size: 14px;
+						margin-left: 5px;
+						i {
+							font-size: 140%;
+						}
+					}
+					.tooltip {
+						text-transform: none;
+					}
+				}
+				p {
+					margin: 10px 0 0 0;
+					&.segment {
+						margin: 0;
+						& label {
+							display: inline;
+							font-weight: normal;
+							margin: 0;
+							padding: 0;
+							&:after {
+								content: ":";
+								margin-right:3px;
+							}
+						}
+						span {
+							color: @orange;
+						}
+					}
+				}
+			}
+		}
+		.root-cause-analysis {
+			margin: 0 @pageMargin;
+			h2:first-child {
+				border-bottom: 5px solid;
+			}
+			.root-cause-nav {
+				font-size: 100%;
+				font-weight: normal;
+				line-height: 32px;
+				margin-top: 18px;
+				max-height: 34px;
+				overflow: hidden;
+				padding: 1px;
+				position: relative;
+				text-align: center;
+				span {
+					display: inline-block;
+					width: 90%;
+					.butcon {
+						margin-left: 5px;
+						i {
+							&:hover {
+								color: @uaIcon;
+							}
+						}
+					}
+				}
+				button {
+					max-width: 30px;
+					position: absolute;
+					width: 10%;
+					&:first-child {
+						left: 1px;
+					}
+					&:last-child {
+						right: 1px;
+					}
+					&:disabled {
+						outline: none;
+						background: none;
+						i {
+							color: @grayLightest;
+							&:hover {
+								background: none;
+							}
+						}
+					}
+				}
+			}
+			.root-cause-sel {
+				margin: @pageMargin 0;
+				min-width: 300px;
+			}
+			.root-cause-chart {
+				border: 1px solid @blueLightBorder;
+				margin-bottom: @pageMargin;
+				width: 100%;
+			}
+			.root-cause-legend {
+				min-width: 350px;
+
+				li {
+					cursor: pointer;
+					position: static;
+
+					span {
+						margin-left: 5px;
+						font-size: 85%;
+					}
+
+				}
+
+				i {
+					font-size: 10px;
+					margin-right: 5px;
+				}
+				.bad-bad {
+					color: @chartRed;
+				}
+				.bad-good {
+					color: @chartOrange;
+				}
+				.good-bad {
+					color: @chartBlueDark;
+				}
+				.good-good {
+					color: @chartBlueLight;
+				}
+				.hidden {
+					color: @grayLighter;
+					  display: block !important; // Added from Jan R.
+					  visibility: visible !important; // Added from Jan R.
+					.bad-bad {
+						color: @chartFadeRed;
+					}
+					.bad-good {
+						color: @chartFadeOrange;
+					}
+					.good-bad {
+						color: @chartFadeBlueDark;
+					}
+					.good-good {
+						color: @chartFadeBlueLight;
+					}	
+				}
+			}
+		}
+		.opportunity {
+			> dt.modified {
+				span {
+					&:nth-child(1) {
+						margin: 20px 0 0 0;
+					}
+				}
+			}
+		}
+		.tab-content.analytics {
+			.tab-pane {
+				background: @white;
+				border: 1px solid @blueLightBorder;
+				padding: 0;
+				text-align: center;
+				> h3 {
+					line-height: 22px;
+					margin-left: 15px;
+					padding-right: 45%;
+					text-align: left;
+				}
+				img {
+					margin: 10px 0;// FOR PROTOTYPE PURPOSES
+					max-width: 675px;
+				}
+			}
+		}
+		.tab-content.contributors {
+			margin: 0;
+			.tab-pane {
+				min-height: 300px; // Prevents jumping when switching tabs (long table to short table)
+				> .alert {
+					margin-left: 0;
+					margin-right: 0;
+				}
+				> .table {
+					margin-top: @pageMargin;
+					thead {
+						tr {
+							th {
+								border-bottom: none;
+							}
+						}
+					}
+					tr {
+						th, td {
+							max-width: 400px;
+							white-space: normal;
+							word-wrap: break-word;
+							&.align-rt {
+								text-align: right;
+							}
+						}
+						th {
+							border-top: none;
+							color: @blueDarkest;
+							font-size: 85%;
+							padding-bottom: 0;
+							padding-top: 0;
+							text-transform: uppercase;
+						}
+						td {
+							border-top: 1px solid @blueLightBorder;
+							line-height: 16px;
+							max-width: 500px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							vertical-align: middle;
+							white-space: nowrap;
+							word-wrap: break-word;
+							&.action-divet {
+								border-left: 1px solid transparent;
+								width: 25px; // retain box-model width
+							}
+							&:first-child {
+								padding: 0;
+								width: 13px; // lock width for icon td
+								border: none; // ICON INDICATOR CELL
+							}
+							&:last-child {
+								width: 150px;
+							}
+							.margin-bar {
+								background: @green;
+								border: 1px solid @greenDark;
+								display: inline-table;
+								line-height: 12px;
+								margin-right: 3px;
+							}
+						}
+						&.actions {
+							display: none;
+							td {
+								background: @blueHover;
+								line-height: 0;
+								padding: 0;
+								&:first-child {
+									background: @white;
+								}
+								&:hover {
+									background: @blueHover;
+								}
+								.btn {
+									background: none;
+									border: 1px solid transparent;
+									box-shadow: none;
+									margin: 0 5px 0 0;
+									i {
+										text-shadow: none;
+									}
+									&:hover {
+										background: @blueDark;
+										border: 1px solid @blueSelectState;
+									}
+									&.disabled {
+										color: @grayDarkest; // disabled styles overwritten so Bootstrap Loading button can be seen
+										opacity: 1;
+										i {
+											color: @grayDarkest;
+											font-size: 80%;
+										}
+									}
+								}
+								> p {
+									margin: 0;
+									margin-left: 25px;
+									max-height: 0;
+									overflow: hidden; // beginning height of animation // ACTION BUTTON ROW in table
+								// ROW ANIMATION IS IN animation.less - slideUpRow/DownRow // hide content when it is 0 height
+									.btn {
+										margin: 3px;
+										&:first-child {
+											margin-left: 0;
+										}
+									}
+								}
+							}
+						}
+						&:hover { // hide icon placeholder cell bg
+							td {
+								&:first-child {
+									background: none;
+								}
+							}
+						}
+						&.excluded {
+							th, td {
+								color: @grayLighter;
+							}
+							td {
+								&.action-divet {
+									color: @grayDarkest;
+								}
+								.margin-bar {
+									background: @blue;
+									border:1px solid @blueDark;
+								}
+							}
+							&:hover {
+								td {
+									color: @blueDarkest;
+								}
+								> td { // preserve color of light gray icon
+									&:first-child {
+										color: @grayLighter;
+									}
+								}
+							}
+						}
+						// Selected State
+						&.selected {
+							> td {
+								border-bottom: 1px solid @blueSelectState;
+								border-top: 1px solid @blueSelectState;
+								&:first-child {
+									background: @white;
+									border: none;
+								}
+								&:last-child {
+									border-right: 2px solid @blueSelectState;
+								}
+								&.action-divet {
+									background: @blueHover;
+									border: 1px solid @blueSelectState;
+									border-bottom: 1px solid @blueHover;
+									i[class^='icon-'] {
+										color: @grayDarkest;
+									}
+								}
+							}
+							&.excluded { // Remove exclusion row thick border when active
+								td {
+									color: @blueDarker; // retain disabled color look on dark bg
+									&:first-child {
+										border: none;
+										i {
+											color: @grayLighter;
+										}
+									}
+								}
+								&:hover {
+									td {
+										color: @blueDarker;
+									}
+								}
+							}
+							&:hover {
+								td {
+									background: @blueSelectState;
+									&.action-divet {
+										background: @blueHover;
+									}
+								}
+								> td:first-child {
+									background: @white;
+								}
+							}
+							 // Add bottom border when next to .selected row
+							+ .actions {
+								td {
+									border-bottom: 1px solid @blueSelectState; // border to end .action table row
+									&:first-child {
+										border-bottom: none;
+										border-right: 1px solid @blueSelectState;
+									}
+									&:last-child {
+										border-right: 2px solid @blueSelectState; // disappears at 1px width
+									}
+								}
+							}
+						}
+					}
+					&.non-collapsible {
+						tr {
+							td {
+								&.action-divet {
+									i {
+										&.fa {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+					// Nested columns table
+					&.complex {
+						tr {
+							th, td {
+								&.multi-col {
+									border-left: 1px solid @blueLightBorder;
+									border-right: 1px solid @blueLightBorder;
+									overflow: auto;
+									text-align: center;
+									white-space: normal;
+									.table { // nested table
+										background: none;
+										tr {
+											th, td {
+												max-width: 55px;
+											}
+											td {
+												text-align: right;
+												width: 33%
+
+												&:first-child {
+													padding: 0 8px;
+													width: 33%;
+													text-align: right;
+												}
+											}
+										}
+									}
+								}
+								&.bordered-rt {
+									border-right: 1px solid @blueLightBorder;
+								}
+								&.bordered-lt {
+									border-left: 1px solid @blueLightBorder;
+								}
+							}
+							th {
+								&.mid-align {
+									text-align: center;
+								}
+							}
+							td {
+								&.multi-col {
+									padding-left: 0;
+									padding-right: 0; // Nested Table
+									.table { 
+										margin: 0;
+										td {
+											border-top: none;
+											padding-bottom: 0;
+											padding-top: 0;
+											text-align: center;
+										}
+									}
+								}
+								&:last-child {
+									width: auto;
+								}
+							}
+						}
+					}
+				}
+				> .btn-group {
+					padding: 3px 0;
+					> .dropdown-toggle {
+						.border-radius(0);
+						background: none;
+						border: none;
+						box-shadow: none;
+						height: 34px;
+						padding: 0;
+						text-align: center;
+						width: 40px;
+						i {
+							color: @blueDarkest;
+							font-size: 130%;
+						}
+						&:hover {
+							background-color: @blue;
+							border: 1px solid @blueDark;
+							color: @navyBlue;
+						}
+					}
+					&.open {
+						.dropdown-toggle {
+							background-color: @blue;
+							border: 1px solid @blueDark;
+							color: @navyBlue;
+						}
+					}
+					+ .table {
+						margin-top: 0; // Cancel margin when it comes after .btn-group
+					}
+				}
+			}
+		}
+	}
+	&.perspective-based {
+		> header {
+			background: @blueLighter;
+		}
+	}
+}
+
+
+// DETAILS PAGE - RIGHT PANEL
+// -----------------------------------------------------
+.midas-details {
+	// Headers with span
+	h2 {
+		&.with-badge {
+			margin-top: @pageMargin;
+			label {
+				display: inline;
+				font-size: 100%;
+				text-transform: none;
+				&:after {
+					content: ':';
+					margin-right: 5px;
+				}
+			}
+			span {
+				display: inline-block;
+				float: right;
+				margin-top: 6px;
+				width: auto;
+			}
+
+		}
+	}
+	.revenue-graph {
+		p {
+			font-size: 85%;
+			label {
+				display: inline-block;
+				font-size: 100%;
+				font-weight: normal;
+				margin-right: 5px;
+				min-width: 175px;
+				text-align: right;
+			}
+			span {
+				background-color: @green;
+				display: inline-block;
+				line-height: 12px;
+				margin-right: 5px;
+				max-width: 275px;
+			}
+			&:first-child {
+				span {
+					background-color: @blueDarkest;
+				}
+			}
+			&:last-child {
+				margin-top: 0;
+				span {
+					background-color: @grayLight;
+				}
+			}
+		}
+		+ h2 {
+			margin-top: 0;
+		}
+	}
+}
+
+
+// MIDAS TRANSACTION POPOVER
+// --------------------------------------------------
+
+.transaction-popover-content() {
+	.statbox {
+		border-top: none;
+		margin: -10px 0 0 0;
+		li {
+			h3 {
+				color: @grayDarkest;
+				line-height: 24px;
+		          &.red {
+		            color: @red;
+		          }
+		          &.orange {
+		            color: @orange;
+		          }
+		          &.dark_blue {
+		            color: @navyBlue;
+		          }
+		          &.light_blue {
+		            color: @blueAccent;
+		          }
+			}
+			span {
+				em {
+					line-height: 20px;
+					color: @grayDark;
+				}
+			}
+		}
+	}
+	.transaction-list {
+		margin-bottom: 0;
+		margin-top: 15px;
+		min-width: 150px;
+		dt, dd {
+			float: none;
+			padding: 0;
+			width: 100%;
+		}
+		dt {
+			color: @blueDarkest;
+			display: block;
+			text-align: left;
+			text-transform: uppercase;
+			&:after {
+				content: '' !important; // Remove label : 
+			}
+			&:first-child {
+				+ dd {
+					float: left;
+					width: 90%;
+					+ dd {
+						margin: 0;
+						min-height: 35px;
+						padding: 0;
+						position: relative;
+						top: -10px;
+						width: 10%;
+						.btn {
+							.border-radius(0);
+							background: none;
+							border: none;
+							box-shadow: none;
+							color: @blueDarkest;
+							font-size: 145%;
+							height: 35px;
+							padding: 0;
+							text-align: center;
+							width: 35px;
+							&:hover {
+								background-color: @blue;
+								border: 1px solid @blueDark;
+								color: @navyBlue;
+							}
+						}
+					}
+				}
+			}
+		}
+		dd {
+			font-weight: normal;
+			line-height: 14px;
+			margin-bottom: 10px;
+			margin-left: 0;
+			overflow: hidden;
+			width: 100%;
+		}
+		&.lt-column,
+		&.rt-column {
+			float: left;
+			margin-top: 0;
+			width: 50%;
+		}
+	}
+	.popover-actions {
+		display: block;
+		float: left;
+		padding: 10px 0;
+		width: 100%;
+		.btn {
+			width: 100%;
+		}
+	}
+}
+// Midas Popovers
+.popover {
+	.popover-content {
+		.transaction-popover-content();
+	}
+	&.chart-popover {
+		display: block;
+		min-width: 400px;
+		position: relative;
+		.popover-content {
+			overflow: auto;
+		}
+	}
+	&.bar-tooltip {
+		display: block;
+		position: relative;
+		.popover-content {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&.timeseries-tooltip {
+		display: block;
+		position: relative;
+		.popover-content {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.highcharts-tooltip {
+     z-index: 99999;	
+     pointer-events: none;
+	dl {
+		margin: 0;
+		padding: 0;
+	}
+	dt, dd {
+		float: none;
+		font-weight: bold;
+		padding: 0;
+		width: 100%;
+	}
+	dt {
+		color: @blueDarkest;
+		display: block;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	dd {
+		line-height: 14px;
+		margin-bottom: 10px;
+		margin-left: 0;
+		overflow: hidden;
+		width: 100%;
+	}
+}
+
+.highslide-maincontent {
+	.transaction-popover-content();
+	margin: 15px auto;
+	min-width: 350px;
+}
+
+.highcharts-container {
+
+	overflow: visible !important;
+	
+	.popover { /* Added because BS3 update made popovers on charts too narrow */
+		min-width: 175px;
+	}
+}
+
+
+// RIGHT PANEL
+.opportunity-exclusions {
+	.list-info {
+		color: @gray;
+		font-size: 90%;
+		&:before {
+			color: @green;
+			content: '*';
+			font-size: 125%;
+			font-weight: bold;
+			margin-right: 3px;
+			margin-top: 5px;
+			vertical-align: bottom;
+		}
+	}
+	.drill-list {
+		margin-top: 20px;
+		dd {
+			background: none;
+			color: @gray;
+			cursor: default;
+			min-height: 40px;
+			overflow: hidden;
+			padding-left: 0;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			&:last-child {
+				border-bottom: none;
+			}
+			label {
+				font-weight: normal;
+				margin-top: 0;
+			}
+			.badge {
+				background-color: @gray;
+				float: right;
+				padding-left: 15px;
+				text-align: center;
+				width: auto;
+			}
+			&.in-this-opp {
+				label {
+					color: @navyBlue;
+					//font-weight: bold
+				}
+				.badge {
+					background-color: @navyBlue;
+				}
+				&.last {
+					border-bottom: 1px dashed @blueDarkest; /* Final Opp In List*/
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	/* MIDAS Details Page Pagination after a drill list */
+	.pagination-container {
+		.pagination {
+			border: none;
+			margin: @pageMargin auto;
+			min-height: 35px;
+			padding-top: 6px;
+			position: relative;
+			text-align: center;
+			p {
+				color: @grayDarker;
+			}
+			&.one-page {
+				.btn {
+					display: none;
+				}
+			}
+		}
+	}
+	.form-inline {
+		margin: 0;
+		min-width: 200px;
+		> span {
+			display: inline-block;
+			padding-top: 15px;
+			position: relative;
+			width: 100%;
+			input[type="search"] {
+				height: 35px;
+				width: 100%;
+				+ i {
+					color: @blueDarkest;
+					cursor: pointer;
+					display: none;
+					float: right;
+					position: absolute;
+					right: 10px;
+					top: 25px;
+				}
+			}
+		}
+	}
+	.assistance-info {
+		color: @grayLight;
+		font-size: 90%;
+		margin: 2px;
+		&:before {
+			color: @navyBlue;
+			content: '*';
+			font-size: 125%;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+/*/////////////////////////////
+/* COMPONENT OVERRIDES IN MIDAS
+*//////////////////////////////
+
+/* alert box
+/////////////////////////*/
+.alert.opportunity-removed {
+	display: none;
+}
+
+/* share dialog
+/////////////////////////*/
+.modal-share {
+	.modal-body {
+		form {
+			min-height: 100px;
+			fieldset {
+				margin: 0 40px;
+				label {
+					margin: 15px 0 3px 0;
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+				input, select, textarea {
+					margin: 0 auto;
+					width: 100%;
+				}
+				.select2-container-multi .select2-choices {
+					border: 1px solid @inputBorder;
+					border-bottom: 1px solid lighten(@grayLight, 25%);
+					border-right: 1px solid lighten(@grayLight, 25%);
+				}
+				.select2-hidden {
+					display: none !important;
+				}
+			}
+		}
+
+		.select2-container-multi {
+			.select2-choices {
+				.select2-search-field {
+					input:not([type="checkbox"]):not([type="radio"]), 
+					input[type="text"] {
+						border-radius: 0;
+					}
+					input:not([type="checkbox"]):not([type="radio"]):focus, 
+					input[type="text"]:focus {
+						border: none;
+						box-shadow: none;
+					}
+				}
+			}
+			&.select2-container-active {
+				.select2-choices {
+					box-shadow: inset 0 0 5px rgba(0, 100, 175, 0.1), 0 0 8px rgba(0, 100, 175, 0.3);
+				}
+			}
+		}
+	}
+}
+
+
+// TO DO LIST
+.to-do-list {
+	margin: @pageMargin 0 0 0;
+	.to-do-item {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		input[type=checkbox] {
+			height: 22px;
+			margin: 0 5px 3px 5px;
+			padding: 0;
+		}
+		input[type=text] {
+			height: 28px;
+			width: 92%;
+		}
+		a {
+			width: 8%;
+		}
+		label {
+			display: inline-block;
+			font-size: 12px;
+			font-weight: normal;
+			margin-top: 0;
+			text-decoration: none;
+		}
+		&:hover {
+			background-color: #e8edef;
+		}
+		span {
+			color: @blueDarkest;
+			display: inline-block;
+			float: right;
+			margin-right: 10px;
+		}
+	}
+	.completed > label {
+		text-decoration: line-through;
+	}
+}
+
+
+
+/*/////////////////////////////
+/* HIGH CHART OVERRIDES
+*//////////////////////////////
+/* Developer Added Style - Do Not Remove */
+.tooltip-head {
+    border-radius: 15px;
+    padding:4px;
+    padding-left: 6px;
+}
+
+#total-margin {
+	border-bottom: 1px solid @blueLightBorder;
+	p {
+		font-size: 14px;
+		margin-left: 20px;
+		margin-top: 10px;
+		a {
+			float: right;
+			margin-right: 20px;
+		}
+	}
+}
+
+.down{
+	margin-top: 100px;
+}
+
+#chart-container { 
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	width: 300px;	
+}
+#donut { 
+	height: 300px;
+	width: 300px;
+}
+#annulus {
+	border-radius: 124px;
+	height: 124px;
+	left: 88px;
+	position: absolute;
+	top: 86px;
+	width: 124px;
+	a {
+		border-radius: 114px;
+		height: 114px;
+		margin: 5px 0 0 5px;
+		width: 114px;
+
+		span {
+			display: block;
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 40px;
+			text-align: center;
+		}
+	}
+}
+
+.btn-transparent { 
+	background-color: transparent !important;
+	background-image: none !important;
+}
+
+.set-splitButtonColors(@normal, @selected) {
+	.left {
+		background-color: @normal;
+	}
+	.left.selected {
+		border-color: @normal !important;
+	}
+	.right.selected {
+		background-color: @selected;
+		border-color: @normal !important;
+	}
+}
+
+.customerNegotiatedPriceAdjustments {
+	.set-splitButtonColors(@customerNegotiatedPriceAdjustments, @customerNegotiatedPriceAdjustmentsSelected);
+}
+.customerNegotiatedPrice {
+	.set-splitButtonColors(@customerNegotiatedPrice, @customerNegotiatedPriceSelected);
+}
+.cogs {
+	.set-splitButtonColors(@cogs, @cogsSelected);
+}
+.negotiatedDiscount {
+	.set-splitButtonColors(@negotiatedDiscount, @negotiatedDiscountSelected);
+}
+.freightCharges {
+	.set-splitButtonColors(@freightCharges, @freightChargesSelected); 
+}
+.pocketPriceAdjustments {
+	.set-splitButtonColors(@pocketPriceAdjustments, @pocketPriceAdjustmentsSelected); 
+}
+.serviceCost {
+	.set-splitButtonColors(@serviceCost, @serviceCostSelected); 
+}
+.freightCost {
+	.set-splitButtonColors(@freightCost, @freightCostSelected);
+}
+.paymentCost {
+	.set-splitButtonColors(@paymentCost, @paymentCostSelected);
+}
+.netPriceAdjustments {
+	.set-splitButtonColors(@netPriceAdjustments, @netPriceAdjustmentsSelected);
+}
+.rebates {
+	.set-splitButtonColors(@rebates, @rebatesSelected);
+}
+.invoicePriceAdjustments {
+	.set-splitButtonColors(@invoicePriceAdjustments, @invoicePriceAdjustmentsSelected);
+}
+.serviceCharges {
+	.set-splitButtonColors(@serviceCharges, @serviceChargesSelected);
+}
+.surcharges {
+	.set-splitButtonColors(@surcharges, @surchargesSelected);
+}
+
+
+.set-popoverButtonColors(@normal, @selected) {
+	background-color: @selected;
+	border-color: @normal;
+	&:hover {
+		background-color: @selected !important;
+		background-image: none;
+		border-color: @normal;
+	}
+}
+
+.popover-content {
+     p {
+     	> span {
+     		display: block;
+			margin-bottom: 10px;
+			max-width: 250px;
+		}
+     }
+	.popoverButton {
+		background-color: #e6e7e8;
+		border: 1px solid @grayLighter;
+		margin-top: 5px;
+		min-height: 40px;
+		min-width: 200px;
+		overflow: hidden;
+		.left {
+			border: 1px solid @white;
+			float: left;
+			height: 30px;
+			margin: 5px 10px 0px 5px;
+			width: 30px;
+		}
+		span {
+			display: block;
+			float: left;
+			font-size: 13px;
+			line-height: @baseFontSize;
+			margin: 12px 0;
+			max-width: 200px;
+			padding-right: 10px;
+			word-break: break-word;
+			&.percentage {
+				float: left;
+				line-height: 40px;
+				margin: 0;
+				margin-right: 5px;
+				padding: 0;
+				text-align: center;
+				width: 35px;
+			}
+		}
+		&.cogs.selected {
+			.set-popoverButtonColors(@cogs, @cogsSelected);
+		}
+		&.negotiatedDiscount.selected {
+			.set-popoverButtonColors(@negotiatedDiscount, @negotiatedDiscountSelected);
+		}
+		&.freightCharges.selected {
+			.set-popoverButtonColors(@freightCharges, @freightChargesSelected); 
+		}
+		&.pocketPriceAdjustments.selected {
+			.set-popoverButtonColors(@pocketPriceAdjustments, @pocketPriceAdjustmentsSelected); 
+		}
+		&.serviceCost.selected {
+			.set-popoverButtonColors(@serviceCost, @serviceCostSelected); 
+		}
+		&.freightCost.selected {
+			.set-popoverButtonColors(@freightCost, @freightCostSelected);
+		}
+		&.paymentCost.selected {
+			.set-popoverButtonColors(@paymentCost, @paymentCostSelected);
+		}
+		&.netPriceAdjustments.selected {
+			.set-popoverButtonColors(@netPriceAdjustments, @netPriceAdjustmentsSelected);
+		}
+		&.rebates.selected {
+			.set-popoverButtonColors(@rebates, @rebatesSelected);
+		}
+		&.invoicePriceAdjustments.selected {
+			.set-popoverButtonColors(@invoicePriceAdjustments, @invoicePriceAdjustmentsSelected);
+		}
+		&.serviceCharges.selected {
+			.set-popoverButtonColors(@serviceCharges, @serviceChargesSelected);
+		}
+		&.surcharges.selected {
+			.set-popoverButtonColors(@surcharges, @surchargesSelected);
+		}
+		&:hover {
+	  		background: @grayLightest;
+	  		border: 1px solid @gray;
+			cursor: pointer;
+		}
+	}
+}
+
+
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*//////////////////////////////
+@media all and (max-width: 950px) {
+  .root-cause-analysis {
+    .col-sm-4 {
+      	width: auto;
+    }
+    .col-sm-8 {
+      	width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+	.root-cause-nav {
+		span {
+			display: inline-block;
+			max-width: 200px;
+		}
+	}
+}
+// iPad Portrait
+@media all and (max-width: 1023px) {
+	.midas {
+		> header {
+			.page-tools {
+				.sidebar-responsive {
+					border-right: 1px solid @blueLightBorder;
+					display: inline-block;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+	.app {
+		&.w_column {
+			> section {
+				border-right: none;
+				width: 100%;
+				.form-inline {
+					min-width: 300px;
+				}
+			}
+			> aside {
+				display: none;
+			}
+		}
+	}
+}
+
+/* iPad specific styles */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+	/* your css rules for ipad portrait */
+	.midas {
+		> section {
+			.tab-content.opportunities {
+				.tab-pane.active {
+					.list {
+						> dd {
+							> .rt-column {
+								.status-indicators {
+									.butcon {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+	/* your css rules for ipad landscape */
+	.midas {
+		> section {
+			.tab-content.opportunities {
+				.tab-pane.active {
+					.list {
+						> dd {
+							> .rt-column {
+								.status-indicators {
+									.butcon {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.chzn-container .select2SearchInput {
+  width: 100%;
+}
+.chzn-container .select2SearchInput input {
+  width: 100%;
+}
+.chzn-container .select2-container-active .select2-choice,
+.chzn-container .select2-container-active .select2-choices {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+
+/* cross in IE input text */
+::-ms-clear {
+    display: none;
+}

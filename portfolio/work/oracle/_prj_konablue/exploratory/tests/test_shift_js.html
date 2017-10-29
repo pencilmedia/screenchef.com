@@ -1,0 +1,96 @@
+<html>
+<head>
+	<style type="text/css">
+		div.fun { 
+			border: 1px solid #000;
+			padding: 20px;
+			background: #fff;
+		}
+		
+		div.more_fun {
+			background: #ccf;
+		}
+	</style>
+	<script type="text/javascript">
+		var g_normal_class = 'fun';
+		var g_highlight_class = 'more_fun';
+	
+		function highlighter(evt) {
+			evt = getEvent(evt);
+			var tgt = getEventTarget(evt);
+			var is_actual_tgt = false;
+			var keep_highlighted = false;
+			
+			// See if shift key was pressed
+			if (evt.modifiers & Event.SHIFT_MASK) {
+				keep_highlighted = true;
+			} else if (evt.shiftKey && evt.shiftKey == true) {
+				keep_highlighted = true;
+			}
+			
+			// See if we have the div or not
+			while (!is_actual_tgt && tgt != document) {
+				if (tgt.className && tgt.className.indexOf(g_normal_class) > -1) {
+					is_actual_tgt = true;
+				} else {
+					tgt = tgt.parentNode;
+				}
+			}
+			
+			// If we don't keep others highlighted, then unhighlight them
+			if (!keep_highlighted) {
+				var kill_list = getElementsByClass(g_highlight_class, null, 'div');
+				for (var i=0; i<kill_list.length; i++) {
+					if (kill_list[i] != tgt) {
+						kill_list[i].className = kill_list[i].className.replace(g_highlight_class, '');
+					}
+				}
+			}
+			
+			// Now handle the target
+			if (tgt.className.indexOf(g_highlight_class) > -1) {
+				tgt.className = tgt.className.replace(g_highlight_class, '');
+			} else {
+				tgt.className = tgt.className + " " + g_highlight_class;
+			}
+			
+			return false;
+		}
+
+		/* These are in invo.event, so use that */		
+		function getEvent(evt) {
+			evt = (evt) ? evt : ((window.event) ? window.event : "");
+			return (evt);
+		}
+
+		function getEventTarget(evt) {
+			tgt = (evt.target) ? evt.target : evt.srcElement;
+			return (tgt);
+		}
+
+		/* These are in invo.dom, so use that */	
+		function getElementsByClass(needle, elem, tag) {
+			var children = new Array();
+			if (elem == null) { elem = document; }
+			if (tag == null) { tag = '*'; }
+			var elem_list = elem.getElementsByTagName(tag);
+			var elem_list_len = elem_list.length;
+			var pattern = new RegExp("(^|\\s)" + needle + "(\\s|$)");
+			for (i = 0, j = 0; i < elem_list_len; i++) {
+				if ( pattern.test(elem_list[i].className) ) {
+					children[j] = elem_list[i];
+					j++;
+				}
+			}
+			return (children);
+		}
+	</script>
+</head>
+<body>
+<div class="fun" onclick="highlighter(event);">hello</div>
+<div class="fun" onclick="highlighter(event);">hello</div>
+<div class="fun" onclick="highlighter(event);">hello</div>
+<div class="fun" onclick="highlighter(event);">hello</div>
+<div class="fun" onclick="highlighter(event);">hello</div>
+</body>
+</html>

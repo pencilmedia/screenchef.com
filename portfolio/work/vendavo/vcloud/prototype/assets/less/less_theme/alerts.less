@@ -1,0 +1,89 @@
+//
+// Alerts
+// Theme: Vendavo
+// --------------------------------------------------
+
+.alert-block {
+	max-height: 300px;
+	overflow: auto;
+	> ul {
+		margin: 10px 0px 10px 50px;
+		li {
+			line-height: 15px;
+		}
+	}
+}
+.alert-block p {
+	+ p {
+  		margin-top: 0px;
+  	}
+  	+ p button {
+  		margin-top: 5px;	
+  	}
+}
+
+.alert {
+	border-radius: 0;
+	margin: 10px;
+	h4,
+	strong {
+		i {
+			display: inline-block;
+			min-width: 20px;
+			text-align: center;
+			font-size: 125%;
+			margin-right: 5px;
+		}
+	}
+	p {
+		padding-left: 25px;
+		line-height: 18px;
+	}
+	.close {
+	  position: relative;
+	  top: 0;
+	  line-height: 15px;
+	}
+}
+// Alert Box Icon Colors
+.alert-danger,
+.alert-error {
+	border-color: @errorBorder;
+	background-color: @errorBackground;
+	color: @errorText;
+	h4, strong {
+		i {
+            color: @errorText;
+		}
+	}
+}
+.alert-warning {
+	border-color: @warningBorder;
+	background-color: @warningBackground;
+	color: @warningText;
+	h4, strong {
+		i {
+            color: @warningText;
+		}
+	}
+}
+.alert-info {
+	border-color: @infoBorder;
+	background-color: @infoBackground;
+	color: @infoText;
+	h4, strong {
+		i {
+            color: @infoText;
+		}
+	}
+}
+.alert-success {
+	border-color: @successBorder;
+	background-color: @successBackground;
+	color: @successText;
+	h4, strong {
+		i {
+            color: @successText;
+		}
+	}
+}

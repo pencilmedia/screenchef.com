@@ -1,0 +1,222 @@
+/*
+	This is for the STRUCTURE and COMMON visuals of the tab block and basic tabs ONLY
+*/
+div.switcher_tabs {
+	height: 185px;
+	width: 100%;
+	overflow: hidden;
+	margin: 0px;
+}
+
+div.switcher_tab {
+	float: left;
+	width: 100%;
+	cursor: pointer;
+}
+
+div.switcher_tab span {
+	float: left;
+	font-size: 7px;
+	height: 30px;
+	background: #fff;
+	margin: 0px;
+	width: 5px;
+}
+
+div.switcher_tab div {
+	height: 25px;
+	background: transparent;
+	padding-top: 5px;
+	margin: 0px 0px 2px 0px;
+}
+
+div.switcher_tab div em {
+	line-height: 1px;
+	float: left;
+	font-size: 1px;
+	height: 20px;
+	width: 30px;
+	background-repeat: no-repeat;
+	background-position: 10px 2px;
+}
+
+div.switcher_tab p {
+	float: left;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333;
+	margin-top: 5px;
+}
+
+/*
+	This is for the VISUAL CUSTOMIZATION of the individual tabs
+	It will likely live in a server config
+*/
+div#switcher_tab_parts    span { background: #800 url('../images/color_red.png'); }
+div#switcher_tab_docs     span { background: #080 url('../images/color_green.png'); }
+div#switcher_tab_projects span { background: #06c url('../images/color_blue.png'); }
+div#switcher_tab_products span { background: #f90 url('../images/color_orange.png'); }
+div#switcher_tab_home span { background: #808 url('../images/color_violet.png'); }
+
+div#switcher_tab_parts    div { background: transparent; }
+div#switcher_tab_docs     div { background: transparent; }
+div#switcher_tab_projects div { background: transparent; }
+div#switcher_tab_products div { background: transparent; }
+div#switcher_tab_home div { background: transparent; }
+
+div#switcher_tab_parts    div.active { background: #fee; }
+div#switcher_tab_docs     div.active { background: #efe; }
+div#switcher_tab_projects div.active { background: #def; }
+div#switcher_tab_products div.active { background: #ffc; }
+div#switcher_tab_home div.active { background: #fef url('../images/back_violet.png') repeat-x; }
+
+div#switcher_tab_parts    div em { background-image: url('../images/icn_drive.png');  }
+div#switcher_tab_docs     div em { background-image: url('../images/icn_doc.png'); }
+div#switcher_tab_projects div em { background-image: url('../images/icn_proj.png'); }
+div#switcher_tab_products div em { background-image: url('../images/icn_computer.png'); }
+div#switcher_tab_home div em { background-image: url('../images/icn_globe.png'); }
+
+
+/*
+	This is for the STRUCTURE and COMMON visuals of the SHORTCUTS ONLY
+	customization comes from "server" data found in the data.switcher.js file
+*/
+
+div.shortcuts {
+	float: left;
+	height: 50px;
+	width: 157px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	overflow: hidden;
+	margin: 0 1px 0 0;
+}
+
+div.shortcut_items {
+	height: 30px;
+	cursor: pointer;
+}
+
+p.shortcut_display_text {
+	height: 13px;
+	font-size: 10px;
+	font-family: arial, sans-serif;
+	padding: 0;
+	text-align: center;
+}
+
+div.shortcut_item {
+	float: left;
+	width: 30px;
+	margin: 0 1px 0 0;
+}
+
+div.shortcut_item span {
+	display: block;
+	line-height: 7px;
+	font-size: 7px;
+	height: 7px;
+	background: #fff;
+	opacity: 0;
+}
+
+div.shortcut_item div {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	height: 22px;
+}
+
+div.shortcut_item div em {
+	line-height: 1px;
+	font-size: 1px;
+	display: block;
+	height: 22px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center 2px;
+}
+
+div.shortcut_item_active {}
+
+div.shortcut_item_active span {
+	background: #0cc;
+	opacity: 0.5;
+}
+
+div.shortcut_item_active div {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+
+
+/*
+	This is for the STRUCTURE and COMMON visuals of the WINDOWS ONLY
+	customization comes from "server" data found in the data.switcher.js file
+*/
+
+div.windows {
+	float: left;
+	height: 50px;
+	width: 157px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	overflow: hidden;
+	margin: 0 1px 0 0;
+}
+
+div.window_items {
+	height: 30px;
+	cursor: pointer;
+}
+
+p.window_display_text {
+	height: 13px;
+	font-size: 10px;
+	font-family: arial, sans-serif;
+	padding: 0;
+	text-align: center;
+}
+
+div.window_item {
+	float: left;
+	width: 30px;
+	margin: 0 1px 0 0;
+}
+
+div.window_item span {
+	display: block;
+	line-height: 7px;
+	font-size: 7px;
+	height: 7px;
+	background: #fff;
+	opacity: 0;
+}
+
+div.window_item div {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	height: 22px;
+}
+
+div.window_item div em {
+	line-height: 1px;
+	font-size: 1px;
+	display: block;
+	height: 22px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center 2px;
+}
+
+div.window_item_active {}
+
+div.window_item_active span {
+	background: #642;
+	opacity: 0.5;
+}
+
+div.window_item_active div {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}

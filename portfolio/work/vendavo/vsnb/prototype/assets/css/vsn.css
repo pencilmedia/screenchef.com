@@ -1,0 +1,2367 @@
+/* vsn.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-layout.less
+// -----------------------------------------------------*/
+/* VSN App Layout */
+.vsnb .mask {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: none;
+  left: 0;
+  outline: 0;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+}
+.vsnb.wideViewport > section {
+  /* 1st <section> desktop*/
+  padding-left: 250px;
+}
+.vsnb.slimViewport > section {
+  /* 1st <section> mobile*/
+  padding-left: 0;
+}
+.vsnb .drill-list {
+  overflow: hidden;
+}
+.vsnb .drill-list .lt-column,
+.vsnb .drill-list .rt-column {
+  float: left;
+}
+.vsnb .drill-list .lt-column {
+  width: 100%;
+}
+.vsnb .drill-list .rt-column {
+  display: none;
+  width: 100%;
+}
+.vsnb.active-drillin > .navbar-fixed-top,
+.vsnb.active-drillin > section {
+  padding-left: 0;
+}
+.vsnb.active-drillin .rt-column {
+  width: 60%;
+  /* After .drill-list mixin because inheritance order */
+}
+.vsnb.sidebar-closed > section {
+  /* Sidebar closed remove padding-left */
+  padding-left: 0;
+}
+.vsnb aside {
+  /* Sidebar Menu - Navigation */
+  /* Contextual Pane */
+}
+.vsnb aside.sidebar-menu {
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 250px;
+  z-index: 1060;
+  -webkit-overflow-scrolling: touch;
+}
+.vsnb aside.sidebar-menu header h1 {
+  font-size: 120%;
+  font-weight: normal;
+  margin: 0;
+  line-height: 45px;
+}
+.vsnb aside.sidebar-menu header h1 img {
+  margin: -2px 10px 0 15px;
+  width: 22px;
+}
+.vsnb aside.sidebar-menu .content {
+  height: 100%;
+  border-right: 1px solid #e6eaed;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li {
+  margin-bottom: -1px;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li:first-child {
+  line-height: 33px;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li:first-child a {
+  font-weight: 500;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li:first-child a .badge {
+  margin-top: 8px;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li:last-child {
+  margin-top: 5px;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li.divider {
+  margin: 0;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a {
+  border: none;
+  font-weight: 400;
+  padding-left: 15px;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a .badge {
+  min-width: 35px;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li.active a {
+  font-weight: 500;
+}
+.vsnb aside.sidebar-menu .content footer {
+  position: fixed;
+  width: 249px;
+  bottom: 10px;
+}
+.vsnb aside.sidebar-menu .content footer .footer-actions .btn-group .btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+.vsnb aside.sidebar-menu .content footer .footer-actions .btn-group .btn i {
+  font-size: 125%;
+  vertical-align: top;
+}
+.vsnb aside.contextual-pane {
+  display: block;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  z-index: 1040;
+  /* FOR IE - fixed navbar needs special love inside a nested container :( */
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .vsnb aside.contextual-pane {
+    right: 17px;
+  }
+}
+.vsnb aside.contextual-pane .contextual-content {
+  border-left: 1px solid #e6eaed;
+  padding-top: 45px;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top {
+  padding: 0;
+  /* FOR IE - fixed navbar needs special love inside a nested container :( */
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .vsnb aside.contextual-pane .contextual-content .navbar-fixed-top {
+    left: auto;
+    right: auto;
+    width: 60%;
+  }
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon i {
+  color: #98b8df;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon:hover {
+  background: #e9f0f8;
+  outline: 1px solid #dae5f3;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon:hover i {
+  color: #5d90cd;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon:hover {
+  outline: none;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top h1 {
+  margin-left: 0;
+  padding: 11px 0 11px 10px;
+  line-height: 20px;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .close-pane {
+  display: none;
+}
+.vsnb aside.contextual-pane .contextual-content article {
+  overflow: hidden;
+}
+.vsnb aside.contextual-pane .contextual-content article h1 {
+  border: none;
+  border-bottom: 1px solid #e6eaed;
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+  padding: 0 0 10px 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article h1 + p {
+  margin-top: 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article p {
+  margin: 0 10px;
+  color: #a6a6a6;
+}
+.vsnb aside.contextual-pane .contextual-content article:first-child h1:first-child {
+  margin-top: 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .stat-box {
+  margin: 10px 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .description {
+  margin: 20px 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart {
+  border: 2px solid red;
+  text-align: center;
+  position: relative;
+  border: 1px solid transparent;
+  min-height: 125px;
+  margin: 0 auto;
+  width: 75%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart {
+  position: relative;
+  z-index: 900;
+  height: 25px;
+  margin-top: 50px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart .marker-target {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 25px;
+  border-left: 1px dashed #333333;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart span {
+  display: block;
+  background-color: #999999;
+  height: 100%;
+  padding: 2px 4px;
+  font-size: 75%;
+  font-weight: bold;
+  text-align: right;
+  color: #ffffff;
+  font-size: 100%;
+  vertical-align: middle;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.good {
+  border: 1px solid #bfbfbf;
+  background-color: #d9d9d9;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.good span {
+  display: block;
+  background-color: #7ed321;
+  height: 100%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.good span:hover {
+  background-color: #71bd1e;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.warning {
+  border: 1px solid #bfbfbf;
+  background-color: #d9d9d9;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.warning span {
+  display: block;
+  background-color: #f5a623;
+  height: 100%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.warning span:hover {
+  background-color: #f39c0b;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.bad {
+  border: 1px solid #bfbfbf;
+  background-color: #d9d9d9;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.bad span {
+  display: block;
+  background-color: #e50015;
+  height: 100%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .chart.bad span:hover {
+  background-color: #b20010;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  padding: 1px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.right-border {
+  border-right: 1px solid #a6a6a6;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.left-border {
+  border-left: 1px solid #a6a6a6;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown > a {
+  padding: 2px 6px;
+  font-size: 80%;
+  border: 0;
+  color: #98b8df;
+  display: block;
+  min-width: 65px;
+  background: #f6faff;
+  outline: 1px solid #e1eaf5;
+  border: 1px solid #ffffff;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown > a:hover {
+  color: #4a90e2;
+  background: #d2e0f1;
+  outline: 1px solid #d2e0f1;
+  border: 1px solid #e1eaf5;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown > a span {
+  display: block;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown > a span:last-child {
+  font-weight: bold;
+  color: #4a90e2;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu {
+  background: #ffffff;
+  border: 1px solid #d2e0f1;
+  color: #666666;
+  font-size: 100%;
+  min-width: 325px;
+  width: 100%;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-top-width: 0;
+  border-bottom-color: #5d90cd;
+  border-width: 15px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  content: " ";
+  margin-left: 0;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+  border-width: 15px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content .alert {
+  margin: 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content .alert p {
+  margin: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h2,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content a,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content li,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dd,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content table {
+  color: #4d4d4d;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 {
+  position: relative;
+  font-size: 125%;
+  font-weight: 500;
+  border-bottom: none;
+  text-transform: none;
+  padding: 0 0 10px 20px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 strong,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 span {
+  display: inline-block;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 strong {
+  margin-right: 5px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 span {
+  margin: 0 5px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 .btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 75%;
+  color: #4a90e2;
+  border: none;
+  box-shadow: none;
+  padding: 3px 6px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content h1 .btn:hover {
+  background: none;
+  outline: none;
+  color: #7ed321;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content > h2 {
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0 20px 10px 20px;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content > h2 em {
+  font-style: normal;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content > h2 em:after {
+  content: '\2022';
+  margin: 0 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content > p {
+  margin: 0 20px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content table {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content table tr td {
+  padding: 2px 5px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content table tr td:first-child {
+  padding-left: 20px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content table tr td:last-child {
+  padding-right: 20px;
+  text-align: right;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd {
+  position: relative;
+  padding: 15px 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li:last-child,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li:last-child,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd:last-child,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd:last-child {
+  border-bottom: none;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li > p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li > p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd > p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd > p {
+  margin: 0;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd > h1 {
+  font-size: 100%;
+  font-weight: normal;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li > p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li > p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd > p,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd > p {
+  margin-top: 5px;
+  line-height: 16px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li a,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li a,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd a,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd a {
+  color: #4a90e2;
+  font-size: 90%;
+  display: inline-block;
+  margin: 0 3px 0 0;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li a:hover,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li a:hover,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd a:hover,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd a:hover {
+  color: #569117;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li a:after,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li a:after,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd a:after,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd a:after {
+  content: ',';
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li a:last-child:after,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li a:last-child:after,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd a:last-child:after,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd a:last-child:after {
+  content: ' ';
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li > button,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li > button,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd > button,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd > button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  position: absolute;
+  right: 10px;
+  top: 32%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li > button:hover,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > li > button:hover,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > dd > button:hover,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl > dd > button:hover {
+  color: #7ed321;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl dd {
+  border-bottom: 1px solid #e6eaed;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl dd > h1,
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl dd > p {
+  padding: 0 50px 0 20px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl dd:last-child {
+  border-bottom: none;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl dd.message strong {
+  margin-bottom: 3px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content dl dd.message p {
+  color: #4d4d4d;
+  margin: 0;
+  padding: 0 20px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol {
+  overflow: inherit;
+  padding: 0;
+  counter-reset: my-badass-counter;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li {
+  list-style: none;
+  width: 100%;
+  padding: 10px 5px 10px 60px;
+  border-bottom: 1px solid #e6eaed;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li:before {
+  content: counter(my-badass-counter);
+  counter-increment: my-badass-counter;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  background: #d9d9d9;
+  position: absolute;
+  left: 10px;
+  width: 35px;
+  height: 35px;
+  padding-top: 2px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li:last-child {
+  margin-bottom: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li h1 {
+  line-height: 18px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li h1 span {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li ul > li {
+  margin: 0;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  position: absolute;
+  right: 5px;
+  top: 24%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown .dropdown-menu .dropdown-content ol > li button:hover {
+  color: #7ed321;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.competition-price {
+  z-index: 1111;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.competition-price .dropdown-menu {
+  left: -75%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.competition-price .dropdown-menu .competition > .arrow {
+  top: -31px;
+  left: 30%;
+  border: 1px solid transparent;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.last-price {
+  bottom: 0;
+  z-index: 920;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.last-price > a {
+  position: relative;
+  top: 50%;
+}
+.vsnb aside.contextual-pane .contextual-content article .competitive-chart .dropdown.last-price .dropdown-menu {
+  top: 125%;
+  left: -250%;
+}
+.vsnb aside.contextual-pane .contextual-content article .history h1 {
+  font-size: 125%;
+  font-weight: 500;
+  border-bottom: none;
+  text-transform: none;
+  padding: 0 0 10px 20px;
+  text-align: left;
+  color: #4d4d4d;
+}
+.vsnb aside.contextual-pane .contextual-content article .history h1 strong,
+.vsnb aside.contextual-pane .contextual-content article .history h1 span {
+  display: inline-block;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .history h1 strong {
+  margin-right: 5px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history h1 span {
+  margin: 0 5px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history h1 .btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 75%;
+  color: #4a90e2;
+  border: none;
+  box-shadow: none;
+  padding: 3px 6px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history h1 .btn:hover {
+  background: none;
+  outline: none;
+  color: #7ed321;
+}
+.vsnb aside.contextual-pane .contextual-content article .history > h2 {
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0 20px 10px 20px;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .history > h2 em {
+  font-style: normal;
+}
+.vsnb aside.contextual-pane .contextual-content article .history > h2 em:after {
+  content: '\2022';
+  margin: 0 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history .chart-summary {
+  overflow: hidden;
+  margin: 0 20px;
+  border-bottom: 1px solid #e6eaed;
+}
+.vsnb aside.contextual-pane .contextual-content article .history .chart-summary span {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history .chart-summary span strong {
+  display: block;
+}
+.vsnb aside.contextual-pane .contextual-content article .history .chart-summary span em {
+  font-style: normal;
+}
+.vsnb aside.contextual-pane .contextual-content article .history ul {
+  display: block;
+  border-bottom: 1px solid #e6eaed;
+  list-style: none;
+  width: 90%;
+  height: 100px;
+  margin: 20px auto;
+  padding: 0;
+}
+.vsnb aside.contextual-pane .contextual-content article .history ul li {
+  float: left;
+  width: 20px;
+  height: 100px;
+  margin: 0 5px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history ul li:first-child {
+  margin-left: 5%;
+}
+.vsnb aside.contextual-pane .contextual-content article .history ul li span {
+  display: block;
+  background-color: #d9d9d9;
+  border: 1px solid #bfbfbf;
+}
+.vsnb aside.contextual-pane .contextual-content article .history ul li span:hover {
+  background-color: #999999;
+}
+.vsnb aside.contextual-pane .contextual-content article .history ul li span.selected {
+  background-color: #bfdfd2;
+}
+.vsnb aside.contextual-pane .contextual-content article .history footer > p {
+  color: #4d4d4d;
+  border: 1px solid transparent;
+}
+.vsnb aside.contextual-pane .contextual-content article .history footer > p strong {
+  display: block;
+}
+.vsnb aside.contextual-pane .contextual-content article .history > .arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: -30px;
+  right: 50%;
+  border-top-width: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-width: 15px;
+}
+.vsnb aside.contextual-pane .contextual-content article .history > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  content: " ";
+  top: -15px;
+  right: -15px;
+  margin-left: 0;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+  border-width: 15px;
+}
+.vsnb aside.contextual-pane .contextual-content footer {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+.vsnb aside.contextual-pane .contextual-content footer.fixed-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1040;
+  /* FOR IE - fixed navbar needs special love inside a nested container :( */
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .vsnb aside.contextual-pane .contextual-content footer.fixed-bottom {
+    left: auto;
+    right: auto;
+    width: 60%;
+  }
+}
+.vsnb.contextual-pane-open aside.contextual-pane {
+  width: 480px;
+  box-shadow: 0 0 5px #4d4d4d;
+  border-left: none;
+}
+.vsnb.contextual-pane-open aside.contextual-pane .contextual-content .navbar-fixed-top .close-pane {
+  display: inline-block;
+}
+.vsnb .stat-box {
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 0;
+}
+.vsnb .stat-box > li {
+  border: 1px solid #e6eaed;
+  float: left;
+  height: 70px;
+  list-style: none;
+  padding: 15px 10px;
+  text-align: center;
+  width: 33.3%;
+}
+.vsnb .stat-box > li strong,
+.vsnb .stat-box > li em {
+  margin: 0;
+  color: #666666;
+}
+.vsnb .stat-box > li strong {
+  display: block;
+}
+.vsnb .stat-box > li em {
+  color: #999999;
+  display: block;
+  font-style: normal;
+  line-height: 13px;
+  font-size: 85%;
+}
+.vsnb .stat-box > li.scorebox .score {
+  border: 1px solid #a6a6a6;
+  border-radius: 50%;
+  display: block;
+  height: 10px;
+  margin: 0 auto;
+  width: 10px;
+}
+.vsnb .stat-box > li.scorebox .score.good {
+  background: #7ed321;
+  border-color: #64a71a;
+}
+.vsnb .stat-box > li.scorebox .score.warning {
+  background: #f5a623;
+  border-color: #db8c0a;
+}
+.vsnb .stat-box > li.scorebox .score.bad {
+  background: #e50015;
+  border-color: #b20010;
+}
+.vsnb .stat-box > li.scorebox span.score {
+  display: inline-block;
+  margin: 3px;
+}
+.vsnb .stat-box > li.scorebox span.score:first-child {
+  margin-left: -10px;
+}
+.vsnb .stat-box > li:first-child {
+  border-left: none;
+  border-right: none;
+}
+.vsnb .stat-box > li:last-child {
+  border-left: none;
+  border-right: none;
+}
+.vsnb .stat-box.with-action li {
+  padding: 0;
+}
+.vsnb .stat-box.with-action li a {
+  border: none;
+  display: block;
+  padding: 15px 10px;
+  position: relative;
+  height: 70px;
+}
+.vsnb .stat-box.with-action li a .fa {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 40%;
+}
+.vsnb .stat-box.with-action li a:hover h4,
+.vsnb .stat-box.with-action li a:hover .fa {
+  display: inline-block;
+}
+.vsnb .stat-box.stacked li {
+  width: 50%;
+}
+.vsnb .stat-box.stacked li strong {
+  font-size: 125%;
+}
+.vsnb .stat-box.stacked li:first-child {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.vsnb .stat-box.stacked li:nth-child(2) {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-left: -1px;
+}
+.vsnb .stat-box.stacked li:nth-child(3) {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.vsnb .stat-box.stacked li:last-child {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-left: -1px;
+}
+.vsnb .stat-box.dropdown-stats {
+  /* Fix dropdown hiding under overflow hidden from .stat-box default styles - need overflow and min-height below */
+  overflow: visible;
+  min-height: 70px;
+}
+.vsnb .stat-box.dropdown-stats > li {
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li.scorebox {
+  padding: 15px 10px;
+}
+.vsnb .stat-box.dropdown-stats > li a {
+  border: none;
+  text-decoration: none;
+  display: block;
+  padding: 15px 10px;
+}
+.vsnb .stat-box.dropdown-stats > li a .fa {
+  display: none;
+}
+.vsnb .stat-box.dropdown-stats > li a:hover .fa {
+  display: inline-block;
+}
+.vsnb .stat-box.dropdown-stats > li .input-group {
+  display: block;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu {
+  background: #ffffff;
+  border: 1px solid #d2e0f1;
+  color: #666666;
+  font-size: 100%;
+  min-width: 325px;
+  width: 100%;
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-top-width: 0;
+  border-bottom-color: #5d90cd;
+  border-width: 15px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  content: " ";
+  margin-left: 0;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+  border-width: 15px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content .alert {
+  margin: 10px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content .alert p {
+  margin: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h2,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content a,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content li,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dd,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content table {
+  color: #4d4d4d;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 {
+  position: relative;
+  font-size: 125%;
+  font-weight: 500;
+  border-bottom: none;
+  text-transform: none;
+  padding: 0 0 10px 20px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 strong,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 span {
+  display: inline-block;
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 strong {
+  margin-right: 5px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 span {
+  margin: 0 5px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 .btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 75%;
+  color: #4a90e2;
+  border: none;
+  box-shadow: none;
+  padding: 3px 6px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content h1 .btn:hover {
+  background: none;
+  outline: none;
+  color: #7ed321;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content > h2 {
+  font-size: 100%;
+  font-weight: 400;
+  margin: 0 20px 10px 20px;
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content > h2 em {
+  font-style: normal;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content > h2 em:after {
+  content: '\2022';
+  margin: 0 10px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content > p {
+  margin: 0 20px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content table {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content table tr td {
+  padding: 2px 5px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content table tr td:first-child {
+  padding-left: 20px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content table tr td:last-child {
+  padding-right: 20px;
+  text-align: right;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd {
+  position: relative;
+  padding: 15px 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li:last-child,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li:last-child,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd:last-child,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd:last-child {
+  border-bottom: none;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li > p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li > p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd > p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd > p {
+  margin: 0;
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd > h1 {
+  font-size: 100%;
+  font-weight: normal;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li > p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li > p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd > p,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd > p {
+  margin-top: 5px;
+  line-height: 16px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li a,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li a,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd a,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd a {
+  color: #4a90e2;
+  font-size: 90%;
+  display: inline-block;
+  margin: 0 3px 0 0;
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li a:hover,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li a:hover,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd a:hover,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd a:hover {
+  color: #569117;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li a:after,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li a:after,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd a:after,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd a:after {
+  content: ',';
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li a:last-child:after,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li a:last-child:after,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd a:last-child:after,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd a:last-child:after {
+  content: ' ';
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li > button,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li > button,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd > button,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd > button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  position: absolute;
+  right: 10px;
+  top: 32%;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li > button:hover,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > li > button:hover,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > dd > button:hover,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl > dd > button:hover {
+  color: #7ed321;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl dd {
+  border-bottom: 1px solid #e6eaed;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl dd > h1,
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl dd > p {
+  padding: 0 50px 0 20px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl dd:last-child {
+  border-bottom: none;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl dd.message strong {
+  margin-bottom: 3px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content dl dd.message p {
+  color: #4d4d4d;
+  margin: 0;
+  padding: 0 20px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol {
+  overflow: inherit;
+  padding: 0;
+  counter-reset: my-badass-counter;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li {
+  list-style: none;
+  width: 100%;
+  padding: 10px 5px 10px 60px;
+  border-bottom: 1px solid #e6eaed;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li:before {
+  content: counter(my-badass-counter);
+  counter-increment: my-badass-counter;
+  border-radius: 50%;
+  border: 1px solid #bfbfbf;
+  background: #d9d9d9;
+  position: absolute;
+  left: 10px;
+  width: 35px;
+  height: 35px;
+  padding-top: 2px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li:last-child {
+  margin-bottom: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li h1 {
+  line-height: 18px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li h1 span {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li ul > li {
+  margin: 0;
+  padding: 0;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  position: absolute;
+  right: 5px;
+  top: 24%;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu .dropdown-content ol > li button:hover {
+  color: #7ed321;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu {
+  left: auto;
+  right: 10%;
+  z-index: 9999;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu > .arrow {
+  top: -30px;
+  right: 10%;
+}
+.vsnb .stat-box.dropdown-stats > li .dropdown-menu > .arrow:after {
+  top: -15px;
+  right: -15px;
+}
+.vsnb .stat-box.dropdown-stats > li:nth-child(2) .dropdown-menu {
+  left: auto;
+  right: -75%;
+  z-index: 9999;
+}
+.vsnb .stat-box.dropdown-stats > li:nth-child(2) .dropdown-menu > .arrow {
+  right: 45%;
+}
+.vsnb .stat-box.dropdown-stats > li:nth-child(2) .dropdown-menu > .arrow:after {
+  top: -15px;
+  right: -15px;
+}
+/* END: vsn-layout.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-common.less
+// -----------------------------------------------------*/
+a {
+  border-bottom: 1px dotted #333333;
+  color: #333333;
+  text-decoration: none;
+}
+a:hover {
+  color: #4a90e2;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0 5px 0;
+}
+details summary {
+  color: #666666;
+  cursor: pointer;
+  outline: none;
+  width: 22%;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary:after {
+  content: "";
+  margin-left: 3px;
+  padding: 0 4px;
+  background: url("/assets/img/fa-caret-down.png") no-repeat 0 5px;
+}
+details[open] summary:after {
+  background: url("/assets/img/fa-caret-up.png") no-repeat 0 5px;
+}
+ul.multi-column {
+  /* Make two columns */
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+}
+ul.key-values,
+ul.notes {
+  overflow: hidden;
+  padding: 0;
+}
+ul.key-values li,
+ul.notes li {
+  list-style: none;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+ul.key-values li em,
+ul.notes li em,
+ul.key-values li span,
+ul.notes li span {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ul.key-values li em,
+ul.notes li em {
+  color: #4d4d4d;
+  font-style: normal;
+  font-weight: 500;
+  width: 30%;
+}
+ul.key-values li em:after,
+ul.notes li em:after {
+  content: ":";
+}
+ul.key-values li span,
+ul.notes li span {
+  color: #666666;
+  width: 65%;
+  margin-right: 5%;
+  line-height: 28px;
+}
+ul.key-values li.full,
+ul.notes li.full {
+  width: 100%;
+}
+ul.key-values li.full.multi-line-truncate,
+ul.notes li.full.multi-line-truncate {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+ul.key-values li.full.multi-line-truncate em,
+ul.notes li.full.multi-line-truncate em,
+ul.key-values li.full.multi-line-truncate span,
+ul.notes li.full.multi-line-truncate span {
+  /* Override the ellipse and left justification for key:values */
+  width: auto;
+  float: none;
+  display: inline;
+  margin: 0;
+  overflow: auto;
+  text-overflow: inherit;
+  white-space: inherit;
+}
+ul.notes li {
+  line-height: 18px;
+}
+dl {
+  margin: 0;
+  padding: 0;
+}
+dl dd {
+  margin: 0;
+}
+dl dd > a {
+  display: block;
+  padding: 0 20px;
+}
+dl dd > a p strong {
+  color: #666666;
+}
+dl > li,
+dl > dd {
+  margin: 0;
+}
+dl > li > a,
+dl > dd > a {
+  border-bottom: 1px solid #e6eaed;
+  padding: 10px;
+}
+dl > li > a:hover,
+dl > dd > a:hover,
+dl > li > a.active,
+dl > dd > a.active {
+  border-bottom: 1px solid transparent;
+  color: #333333;
+}
+dl > li:last-child > a,
+dl > dd:last-child > a {
+  border-bottom: none;
+}
+nav .nav-stacked > li,
+nav .nav-stacked > dd {
+  margin: 0;
+}
+nav .nav-stacked > li > a,
+nav .nav-stacked > dd > a {
+  border-bottom: 1px solid #e6eaed;
+  padding: 10px;
+}
+nav .nav-stacked > li > a:hover,
+nav .nav-stacked > dd > a:hover,
+nav .nav-stacked > li > a.active,
+nav .nav-stacked > dd > a.active {
+  border-bottom: 1px solid transparent;
+  color: #333333;
+}
+nav .nav-stacked > li:last-child > a,
+nav .nav-stacked > dd:last-child > a {
+  border-bottom: none;
+}
+.dropdown-menu {
+  border-radius: 0;
+  min-width: 250px;
+}
+.dropdown-menu > li,
+.dropdown-menu > dd {
+  margin: 0;
+}
+.dropdown-menu > li > a,
+.dropdown-menu > dd > a {
+  border-bottom: 1px solid #e6eaed;
+  padding: 10px;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > dd > a:hover,
+.dropdown-menu > li > a.active,
+.dropdown-menu > dd > a.active {
+  border-bottom: 1px solid transparent;
+  color: #333333;
+}
+.dropdown-menu > li:last-child > a,
+.dropdown-menu > dd:last-child > a {
+  border-bottom: none;
+}
+/* END: vsn-common.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-deals.less
+// -----------------------------------------------------*/
+.vsnb.price-lookup .drill-list .lt-column form fieldset {
+  padding: 10px;
+}
+.vsnb.price-lookup .drill-list .lt-column form fieldset > .select2-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.vsnb.price-lookup .drill-list .lt-column form fieldset.group-w-btn .group-set {
+  padding: 0;
+  width: 100%;
+}
+.vsnb .drill-list .lt-column .nav.nav-pills li {
+  width: 50%;
+}
+.vsnb .drill-list .lt-column header.message p {
+  margin: 20px;
+}
+.vsnb .drill-list .lt-column header.message p strong.warning {
+  color: #f5a623;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set,
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-btn {
+  float: left;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set {
+  padding: 10px 0 10px 20px;
+  width: 94%;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group .btn {
+  box-shadow: none;
+  border-color: #e6eaed;
+  border-right: none;
+  background: #ffffff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: linear-gradient(to bottom, #eeeeee 1%, #ffffff 15%);
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group .btn:hover {
+  color: #999999;
+  box-shadow: none;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group.open .btn {
+  box-shadow: none;
+  color: #bfdfd2;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group .dropdown-menu {
+  max-height: 550px;
+  overflow-y: auto;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group .dropdown-menu dt {
+  border-bottom: 1px solid #e6eaed;
+  padding-left: 10px;
+  color: #bfdfd2;
+  background: #ecf5f1;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group .dropdown-menu dd a {
+  border-bottom: none;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .btn-group .dropdown-menu dd.divider {
+  margin: 5px 0;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set .input-group .search {
+  width: 100%;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-btn {
+  padding: 10px;
+  width: 4%;
+}
+.vsnb .drill-list .lt-column form fieldset.group-w-btn .group-btn .fa {
+  font-size: 135%;
+}
+.vsnb .drill-list .rt-column.details-pane {
+  overflow: auto;
+  padding: 0 20px;
+}
+.vsnb .drill-list .rt-column.details-pane h1 em {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 90%;
+  margin-left: 5px;
+}
+.vsnb .drill-list .rt-column.details-pane .linked {
+  display: block;
+  position: relative;
+  border: none;
+}
+.vsnb .drill-list .rt-column.details-pane .linked .link-affordance {
+  cursor: pointer;
+  display: block;
+}
+.vsnb .drill-list .rt-column.details-pane .linked .link-affordance:hover:after {
+  font-family: FontAwesome;
+  content: "\f054";
+  position: absolute;
+  font-size: 250%;
+  top: 25%;
+  right: 0;
+}
+/* END: vsn-deals.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-deallist.less
+// -----------------------------------------------------*/
+.vsnb .drill-list.deal-listings .nav li a {
+  height: 55px;
+}
+.vsnb .drill-list.deal-listings .nav li.active a {
+  margin-top: 0;
+  background: #ffffff;
+  font-weight: 500;
+}
+.vsnb .drill-list.deal-listings .lt-column .alert.alert-delete {
+  display: none;
+  margin: 10px;
+}
+.vsnb .drill-list.deal-listings .lt-column .alert.alert-delete h4 {
+  font-weight: normal;
+  margin: 0;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a {
+  padding: 0 20px;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a h1 {
+  float: left;
+  font-size: 125%;
+  margin: 15px 0 3px 0;
+  position: relative;
+  width: 85%;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a h1 .fa {
+  color: #5d90cd;
+  font-size: 75%;
+  margin-left: 5px;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a h2 {
+  float: right;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 18px;
+  margin-top: 15px;
+  text-align: right;
+  width: 15%;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a h2 + p span:first-child {
+  display: block;
+  font-weight: normal;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a p .status i {
+  color: #bfbfbf;
+  font-size: 10px;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a p .status.good i {
+  color: #7ed321;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a p .status.warning i {
+  color: #f5a623;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a p .status.bad i {
+  color: #e50015;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd > a p .status {
+  float: right;
+}
+.vsnb .drill-list.deal-listings .lt-column dl.deal-list dd:last-child > a {
+  border-bottom: 1px solid transparent;
+}
+.vsnb .drill-list.deal-listings .rt-column.details-pane .alert.alert-copy {
+  display: none;
+}
+.vsnb .drill-list.deal-listings .rt-column.details-pane .alert.alert-copy h4 {
+  font-weight: normal;
+  margin: 0;
+}
+.vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper {
+  margin-bottom: 20px;
+}
+.vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper .table-full {
+  display: table;
+}
+.vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper .table-mobile {
+  display: none;
+}
+.vsnb aside.contextual-pane section article ul.stat-box {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 0;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval {
+  background: #ffffff;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dt,
+.vsnb aside.contextual-pane section article dl.wf-approval dd {
+  height: 65px;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dt {
+  float: left;
+  padding-top: 2%;
+  text-align: center;
+  width: 15%;
+  min-width: 85px;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dt span.status {
+  border-radius: 25px;
+  border: 1px solid #bfbfbf;
+  background: #d9d9d9;
+  color: #999999;
+  display: block;
+  height: 45px;
+  width: 45px;
+  margin: 0 10px 0 20px;
+  padding: 13px 0 0 4px;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dt span.status.pending {
+  background: #d9d9d9;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dt span.status.approved {
+  background: #a3e55b;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dt span.status.rejected {
+  background: #e50015;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dd {
+  padding-top: 2.5%;
+  width: auto;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dd em {
+  color: #999999;
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 125%;
+}
+.vsnb aside.contextual-pane section article dl.wf-approval dd span {
+  color: #a6a6a6;
+  display: block;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content {
+  overflow: hidden;
+  min-width: 325px;
+  border: 1px solid transparent;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content h2 {
+  color: #999999;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0 20px;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .class {
+  margin: 20px 0;
+  padding: 0 0 0 20px;
+  float: left;
+  width: 50%;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .class dt,
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .class dd {
+  display: inline-block;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .class dt {
+  font-weight: bold;
+  font-size: 125%;
+  vertical-align: top;
+  color: #666666;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .class dd {
+  margin-left: 15px;
+  max-width: 120px;
+  font-size: 85%;
+  color: #999999;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .trends {
+  margin: 20px;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .trends dd {
+  float: left;
+  width: 75%;
+  margin-bottom: 10px;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .trends dd canvas {
+  max-width: 100%;
+  height: 50px;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .trends dt {
+  float: right;
+  width: 25%;
+  color: #4a90e2;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.vsnb aside.contextual-pane section article .customer-class-chart .customer-class-content .trends dt span {
+  display: block;
+  color: #999999;
+  font-size: 85%;
+  font-weight: normal;
+}
+/* END: vsn-deallist.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-create.less
+// -----------------------------------------------------*/
+/* END: vsn-create.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-pricelookup.less
+// -----------------------------------------------------*/
+.vsnb {
+  /* PRICE LOOKUP PAGE
+	///////////////*/
+}
+.vsnb.price-lookup .drill-list .lt-column .search-price-lookup {
+  background: #f6faf9;
+  border-bottom: 1px solid #e9e9e9;
+}
+.vsnb.price-lookup .drill-list .lt-column .search-price-lookup + section {
+  background: #ffffff;
+  overflow: auto;
+}
+.vsnb.price-lookup .drill-list .lt-column dl.price-search-results dd > a {
+  padding: 15px 20px 10px 20px;
+}
+.vsnb.price-lookup .drill-list .lt-column dl.price-search-results dd > a h1 {
+  font-size: 125%;
+  margin: 3px 0;
+  width: 100%;
+}
+.vsnb.price-lookup .drill-list .lt-column dl.price-search-results dd > a h1 span:last-child {
+  color: #4e9d7b;
+  float: right;
+  font-weight: normal;
+  font-size: 90%;
+}
+.vsnb.price-lookup .drill-list .lt-column dl.price-search-results dd > a p {
+  margin: 0;
+}
+.vsnb.price-lookup .drill-list .lt-column dl.price-search-results dd > a p span:last-child {
+  color: #999999;
+  float: right;
+  font-weight: normal;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .infobox {
+  width: 80%;
+  display: inline-block;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .infobox a:hover {
+  color: #000000;
+  border: none;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .infobox p + p {
+  margin-bottom: 0;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox {
+  width: 19%;
+  display: inline-block;
+  text-align: right;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox .score {
+  border: 1px solid #a6a6a6;
+  border-radius: 50%;
+  display: block;
+  height: 10px;
+  margin: 0 auto;
+  width: 10px;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox .score.good {
+  background: #7ed321;
+  border-color: #64a71a;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox .score.warning {
+  background: #f5a623;
+  border-color: #db8c0a;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox .score.bad {
+  background: #e50015;
+  border-color: #b20010;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox strong {
+  display: block;
+  padding-right: 20px;
+  font-size: 125%;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox span.score {
+  display: inline-block;
+  margin: 3px;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .scorebox span.score:first-child {
+  margin-left: -10px;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane h2 {
+  border-bottom: 1px solid #e6eaed;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  font-size: 110%;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane h2 span {
+  color: #999999;
+  font-weight: normal;
+  font-size: 90%;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane p strong.good {
+  color: #71bd1e;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane p strong.warning {
+  color: #db8c0a;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane p strong.bad {
+  color: #b20010;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl {
+  overflow: hidden;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dt,
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dd {
+  float: left;
+  width: 50%;
+  line-height: 24px;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dt {
+  font-weight: normal;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dt .status i {
+  color: #bfbfbf;
+  font-size: 10px;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dt .status.good i {
+  color: #7ed321;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dt .status.warning i {
+  color: #f5a623;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dt .status.bad i {
+  color: #e50015;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.colonnade dd {
+  text-align: right;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .table.periods tbody tr td {
+  border: none;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .table.periods tbody tr td:first-of-type {
+  padding-left: 0;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .table.periods tbody tr td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane .table.periods tbody tr.actual h1,
+.vsnb.price-lookup .drill-list .rt-column.details-pane .table.periods tbody tr.actual p {
+  font-weight: bold;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.price-info {
+  margin: 20px 0 0 0;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.price-info dd span {
+  padding: 3px 7px;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.price-info dd.good span {
+  background: #71bd1e;
+  color: #ffffff;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.price-info dd.warning span {
+  background: #f39c0b;
+  color: #ffffff;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.price-info dd.bad span {
+  background: #e50015;
+  color: #ffffff;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.price-info dd.price-score span {
+  padding: 5px 10px;
+  font-size: 110%;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span {
+  position: relative;
+  display: inline-block;
+  float: left;
+  padding: 8px 0;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span:first-child {
+  width: 23.3%;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span:nth-child(2) {
+  width: 60.3%;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span:last-child {
+  width: 16.3%;
+  padding-right: 30px;
+  text-align: right;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span:last-child .butcon {
+  font-size: 85%;
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span:last-child .butcon i {
+  color: #999999;
+}
+.vsnb.price-lookup .drill-list .rt-column.details-pane dl.deals-archive dd span:last-child dd:hover:after {
+  color: #4a90e2;
+}
+.vsnb.price-lookup aside.contextual-pane article .competitive-chart {
+  margin: 30px 0;
+}
+/* END: vsn-pricelookup.less
+// -----------------------------------------------------*/
+/* BEGIN: vsn-responsive.less
+// -----------------------------------------------------*/
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*/
+/* Tablet - 940px */
+@media (max-width: 940px) {
+  .vsnb aside.sidebar-menu header .butcon {
+    visibility: visible;
+  }
+  .vsnb aside.contextual-pane {
+    width: 480px;
+    box-shadow: 0 0 5px #4d4d4d;
+    border-left: none;
+  }
+  .vsnb aside.contextual-pane .contextual-overflow .navbar-fixed-top .close-pane {
+    display: inline-block;
+  }
+  .vsnb > header.navbar-fixed-top {
+    padding-left: 0;
+    width: 100%;
+  }
+  .vsnb > header.navbar-fixed-top.drill-out {
+    padding-right: 0;
+  }
+  .vsnb > header.navbar-fixed-top .butcon {
+    visibility: visible;
+  }
+  .vsnb > header.navbar-fixed-top .sidebar-action .butcon {
+    display: inline-block;
+  }
+  .vsnb > header.navbar-fixed-top .sidebar-action .butcon + h1 {
+    display: inline-block;
+  }
+  .vsnb > section {
+    /* Deal List Responsive */
+  }
+  .vsnb > section.drill-list {
+    /* Price Lookup */
+  }
+  .vsnb > section.drill-list .deal-detail-close {
+    display: none;
+  }
+  .vsnb > section.drill-list.deal-listings .rt-column.details-pane {
+    width: 100%;
+  }
+  .vsnb > section.drill-list .rt-column.details-pane {
+    width: 100%;
+  }
+  .vsnb footer .footer-actions .btn-group .btn {
+    padding: 15px;
+  }
+  .vsnb .drill-list .lt-column form fieldset.group-w-btn .group-set {
+    width: 92%;
+  }
+  .vsnb .drill-list .lt-column form fieldset.group-w-btn .group-btn {
+    width: 8%;
+  }
+  .vsnb.price-lookup .drill-list .lt-column form fieldset.group-w-btn .group-set {
+    padding: 0 0 10px 0;
+    width: 100%;
+  }
+  .vsnb.price-lookup .drill-list .lt-column form fieldset.group-w-btn .group-btn {
+    width: 8%;
+  }
+  .modal-overlay .navbar-fixed-top {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .modal-overlay .content {
+    margin: 0;
+    width: 100%;
+  }
+}
+/* Phone - 480px */
+/*****************/
+@media (max-width: 480px) {
+  .vsnb .navbar-fixed-top {
+    border-bottom: 0;
+  }
+  .vsnb aside.contextual-pane {
+    width: 100%;
+    box-shadow: none;
+    border-left: none;
+  }
+  .vsnb details summary {
+    width: 100%;
+  }
+  .vsnb .drill-list.deal-listings .lt-column form fieldset.group-w-btn .group-set {
+    width: 88%;
+  }
+  .vsnb .drill-list.deal-listings .lt-column form fieldset.group-w-btn .group-btn {
+    width: 12%;
+    padding: 11px 2px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane .alert {
+    margin: 10px -10px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane .alert h2 {
+    line-height: 24px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane .alert .action-group {
+    position: relative;
+    top: 5px;
+    left: 0;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane .alert .action-group .btn {
+    width: 49%;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article ul.key-values {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article ul.key-values li {
+    float: none;
+    width: 100%;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .stat-box,
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .stat-box li {
+    height: 60px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .stat-box li a {
+    padding: 10px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .stat-box li em {
+    font-size: 85%;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table.table-full {
+    display: none;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table.table-mobile {
+    display: table;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table thead tr {
+    background: #ffffff;
+    border: none;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table thead tr th {
+    border-bottom-color: #cde6db;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table thead tr th:first-child {
+    width: 45px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table thead tr th:last-child {
+    text-align: right;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td {
+    padding: 8px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td h1 {
+    margin: 0;
+    line-height: 16px;
+    font-weight: bold;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td h1 span {
+    display: block;
+    color: #666666;
+    font-size: 90%;
+    font-weight: normal;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td:first-child {
+    vertical-align: middle;
+    padding: 0 0 0 8px;
+    width: 20px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td:nth-child(2) {
+    width: 400px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td:nth-child(2) em {
+    display: block;
+    font-style: normal;
+    color: #666666;
+    font-size: 95%;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr td:last-child {
+    text-align: right;
+    padding-right: 10px;
+    width: 100px;
+    vertical-align: top;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr.hierarchy-child {
+    display: table-row;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr.hierarchy-child > td {
+    padding: 0;
+    width: auto;
+    font-weight: normal;
+    text-align: left;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr.hierarchy-child > td table {
+    margin: 0;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr.hierarchy-child > td table tr td {
+    border-bottom: 1px solid #e6eaed;
+    padding: 8px;
+  }
+  .vsnb .drill-list.deal-listings .rt-column.details-pane article .table-wrapper table tbody tr.hierarchy-child > td table tr td:last-child {
+    padding-right: 10px;
+  }
+  .vsnb .edit-form form fieldset dl dd select.transparent-select {
+    height: 44px;
+  }
+  .vsnb .modal-overlay .content > section > article > section nav dl.nav-stacked dt a,
+  .vsnb .modal-overlay .content > section > article > section nav dl.nav-stacked dd a {
+    -webkit-text-size-adjust: 120%;
+    -ms-text-size-adjust: 120%;
+    text-size-adjust: 120%;
+  }
+}
+/* END: vsn-responsive.less
+// -----------------------------------------------------*/
+/* BEGIN:vsn-theme-default.less
+// ----------------------------------------------------- */
+.vsnb {
+  /* Buttons theme
+	// ------------------------------------------------ */
+  /* Lists theme
+	// ------------------------------------------------ */
+  /* Navbar theme
+	// ------------------------------------------------ */
+  /* Side Menu Navigation theme
+	// ------------------------------------------------ */
+  /* List theme
+	// ------------------------------------------------ */
+  /* Statbox theme
+	// ------------------------------------------------ */
+  /* List theme
+	// ------------------------------------------------ */
+  /* List theme
+	// ------------------------------------------------ */
+  /* Form inside Contextual Pane */
+  /* Tables theme
+	// ------------------------------------------------ */
+}
+.vsnb .butcon {
+  color: #5d90cd;
+}
+.vsnb .butcon:hover {
+  background: #f9fcfd;
+  color: #2d4f62;
+  outline: 1px solid #dff0f3;
+}
+.vsnb ul > li > a:hover,
+.vsnb dl > li > a:hover,
+.vsnb ul > dd > a:hover,
+.vsnb dl > dd > a:hover,
+.vsnb ul > li > a.active,
+.vsnb dl > li > a.active,
+.vsnb ul > dd > a.active,
+.vsnb dl > dd > a.active {
+  background: #f1f9fa;
+}
+.vsnb .navbar-fixed-top {
+  background-color: #18606b;
+  color: #d8f2f6;
+}
+.vsnb .navbar-fixed-top .btn {
+  background: #175c67;
+  border-color: #134d56;
+  color: #d8f2f6;
+}
+.vsnb .navbar-fixed-top .btn:hover {
+  background: #218595;
+  border-color: #1d7380;
+  outline: 1px solid #2698a9;
+}
+.vsnb .navbar-fixed-top .butcon i {
+  color: #d8f2f6;
+}
+.vsnb .navbar-fixed-top .butcon:hover {
+  background-color: #1d7380;
+  outline: none;
+}
+.vsnb .navbar-fixed-top .butcon.back {
+  border-right: 1px solid #218595;
+}
+.vsnb .navbar-fixed-top .butcon.close-view {
+  border-left: 1px solid #218595;
+}
+.vsnb aside {
+  /* Contextual Pane */
+}
+.vsnb aside.sidebar-menu {
+  background: #f9fcfd;
+  /* Side Menu Header theme
+			// ------------------------------------------------ */
+}
+.vsnb aside.sidebar-menu header {
+  background: #1d4950;
+}
+.vsnb aside.sidebar-menu header h1 {
+  color: #f9fcfd;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li.divider {
+  border-top: 1px solid #afe5ed;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a {
+  color: #218595;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a .badge {
+  background: none;
+  border: 1px solid #218595;
+  color: #218595;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a:hover {
+  background: #fafdfe;
+  color: #18606b;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a:hover .badge {
+  border-color: #18606b;
+  color: #18606b;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li a.pending-approval .badge {
+  border-color: #e50015;
+  color: #e50015;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li.active a {
+  background: #e5f6f9;
+  color: #18606b;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li.active a .badge {
+  background: #18606b;
+}
+.vsnb aside.sidebar-menu .content nav .nav-stacked li.active a.pending-approval .badge {
+  background: transparent;
+}
+.vsnb aside.sidebar-menu .content footer .footer-actions .btn-group .btn {
+  color: #6ebecb;
+}
+.vsnb aside.sidebar-menu .content footer .footer-actions .btn-group .btn:hover {
+  color: #1d4950;
+}
+.vsnb aside.contextual-pane {
+  background: #ffffff;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top {
+  background: #288d9f;
+  color: #d2eff4;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon i {
+  color: #d2eff4;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon:hover {
+  background-color: #44bbd0;
+}
+.vsnb aside.contextual-pane .contextual-content .navbar-fixed-top .butcon:hover i {
+  color: #ffffff;
+}
+.vsnb aside.contextual-pane .contextual-content article h1 {
+  color: #288d9f;
+}
+.vsnb aside.contextual-pane .contextual-content footer {
+  background: #ffffff;
+}
+.vsnb aside.contextual-pane .contextual-content footer.fixed-bottom {
+  background: #f9fcfd;
+}
+.vsnb .drill-list .nav li a {
+  height: 55px;
+}
+.vsnb .drill-list .nav li a .badge {
+  background: #1d4950;
+}
+.vsnb .drill-list .nav li.active a {
+  color: #1d4950;
+}
+.vsnb .drill-list .lt-column form {
+  background: #ffffff;
+  border-bottom: 1px solid #e6eaed;
+}
+.vsnb .drill-list .rt-column.details-pane .linked .link-affordance:hover:after {
+  color: #1d4950;
+}
+.vsnb .stat-box.with-action li a .fa {
+  color: #1d4950;
+}
+.vsnb .edit-form form fieldset dl dt {
+  color: #288d9f;
+}
+.vsnb .table-wrapper .table-striped > tbody > tr:nth-child(odd) {
+  background: #eff9fb;
+}
+.vsnb .table-wrapper .table {
+  /* For Product Family Hierarchy Tables */
+}
+.vsnb .table-wrapper .table tbody {
+  border: 1px solid #eff9fb;
+}
+.vsnb .table-wrapper .table tbody tr.selected td {
+  background: #ffffff;
+}
+.vsnb .table-wrapper .table tbody tr:hover {
+  background: #ffffff;
+}
+.vsnb .table-wrapper .table.prod-hierarchy tr td:first-child .butcon i {
+  color: #89d4e1;
+}
+.vsnb .table-wrapper .table.prod-hierarchy tr td:first-child .butcon:hover i {
+  color: #288d9f;
+}
+.vsnb .table-wrapper .table.prod-hierarchy tr.selected td:first-child .butcon i {
+  color: #58c2d5;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr:last-child {
+  background: #fbfefe;
+  border-right: 1px solid #eff9fb;
+  border-left: 1px solid #eff9fb;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr:last-child th {
+  color: #20707e;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th {
+  border-bottom: 1px solid #d2eff4;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th .butcon i {
+  color: #bfbfbf;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th .butcon:hover {
+  background: #daf2f6;
+  outline: 1px solid #b2e3ec;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th .butcon:hover i {
+  color: #37b6cd;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th .butcon.disabled i {
+  color: #d9d9d9;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th .butcon.disabled:hover {
+  background: none;
+  outline: none;
+}
+.vsnb .table-wrapper .table.prod-hierarchy thead tr th .butcon.disabled:hover i {
+  color: #d9d9d9;
+}
+.vsnb .table-wrapper .table.prod-hierarchy tbody tr.hierarchy-parent:hover {
+  background: #bae6ee;
+  /* Hover Row Color */
+}
+.vsnb .table-wrapper .table.prod-hierarchy tbody tr.hierarchy-parent.open {
+  border-top: 2px solid #c6eaf1;
+}
+.vsnb .table-wrapper .table.prod-hierarchy tbody tr.hierarchy-parent.open td {
+  border-color: #c6eaf1;
+}
+.vsnb .table-wrapper .table.prod-hierarchy tbody tr.hierarchy-parent.open:hover {
+  background: #bae6ee;
+  /* Hover Row Color */
+}
+.vsnb .table-wrapper .table.prod-hierarchy tbody tr.hierarchy-child td:first-child table tr:hover {
+  background: #bae6ee;
+  /* Hover Row Color */
+}
+.vsnb .table-wrapper .table.prod-hierarchy tbody tr.selected td {
+  background: #aae0e9;
+}

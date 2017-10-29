@@ -1,0 +1,42 @@
+/*******************************************
+	MULTI SELECT CASCADE LIST TREE STYLES
+*******************************************/
+.treeContainer .ygtvitem  {
+	line-height: 21px;
+	min-height: 20px;
+}
+
+.treeContainer div.agileTreeNode a {
+	cursor: pointer;
+	color: #333;
+}
+.treeContainer .toggleImageNoKids,
+.treeContainer .toggleImageCollapse,
+.treeContainer .toggleImageExpand {
+	float: left;
+	display: block;
+	width: 18px;
+	height: 21px;
+}
+.treeContainer .toggleImageExpand { background: url('/global/images/expand.png') no-repeat 2px 2px; }
+.treeContainer .toggleImageCollapse { background: url('/global/images/collapse.png') no-repeat 2px 2px; }
+.treeContainer .itemIconFolderOpen,
+.treeContainer .itemIconFolderClosed,
+.treeContainer .itemIconDocument {
+	float: left;
+	display: block;
+	width: 20px;
+	height: 21px;
+}
+.treeContainer .itemIconFolderOpen   { background: url('/global/images/folder_open.png') no-repeat 0px 3px; }
+.treeContainer .itemIconFolderClosed { background: url('/global/images/folder_closed.png') no-repeat 0px 3px; }
+.treeContainer .itemIconDocument     { background: url('/global/images/icn_status_dot_gray.png') no-repeat 7px 8px; }
+.treeContainer div.agileTreeNode {
+	background: #fff;
+	min-height: 20px;
+	border-bottom: 1px solid #fff; /* breaks tree structure if not included */
+}
+.treeContainer div.agileTreeNode a {
+	line-height: 20px;
+}
+.treeContainer div.agileTreeNodeSelected {background: #dbeaff;}

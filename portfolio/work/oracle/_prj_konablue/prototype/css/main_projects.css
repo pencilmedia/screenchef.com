@@ -1,0 +1,12 @@
+/*** STARTPAGE ***/
+
+div.projects_startpage div.status_text {background: #fff; height: 30px;}
+
+div.projects_startpage div.status_text div.btn_reg div.search {
+	float: left;
+	height: 25px;
+	margin-top: -5px;
+	padding: 0px 10px 0px 0px;
+}
+
+div.projects_startpage div.status_text div.btn_reg div.search p {	float: left; }

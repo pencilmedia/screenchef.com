@@ -1,0 +1,26 @@
+/* BEGIN: Modals.less
+// ----------------------------------------------------*/
+
+// Background Opacity Override
+.modal,
+.modal.fade.in {
+  .opacity(50);
+}
+.modal {
+	&:focus {
+		outline: none; // Removes focus outline 
+	}
+}
+
+//* Common Modal Overrides
+////////////////////////*/
+
+.modal-dialog {
+	.modal-content {
+		.modal-header {
+			h3 {
+				margin: 0;
+			}
+		}
+	}
+}

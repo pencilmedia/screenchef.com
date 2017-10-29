@@ -1,0 +1,43 @@
+#base {
+	overflow: hidden;
+}
+
+
+table.pane {
+	border: none;
+}
+
+table.pane td {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+table.pane td div.pane_container {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+table.pane td div.pane_container_scroll {
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+table.pane td.splitter {
+	cursor: pointer;
+	font-size: 2px;
+	line-height: 2px;
+	overflow: hidden;
+}
+
+table.pane td.splitter_h {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+table.pane td.splitter_v {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}

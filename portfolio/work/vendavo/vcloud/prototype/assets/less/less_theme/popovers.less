@@ -1,0 +1,582 @@
+//*
+// Popovers.less
+// --------------------------------------------------*/
+// Core variables and mixins
+@import "../less_bootstrap/variables.less";
+@import "../less_bootstrap/mixins.less";
+@import "variables.less"; // custom variables
+@import "mixins.less"; // custom mixins
+
+
+/* Global Popover Overrides
+  /////////////////////////*/
+
+.popover {
+  max-width: 800px;
+  width: auto;
+  .popover-title {
+    color: @grayDarkest;
+    font-weight: bold;
+  }
+  dl {
+    overflow: hidden;
+    width: 100%;
+    dt, dd {
+      float: left;
+      font-size: 90%;
+      padding: 0;
+    }
+    dt {
+      text-align: right;
+      width: 30%;
+      &:after {
+        content: ':';
+      }
+    }
+    dd {
+      padding-left: 5px;
+      width: 65%;
+      p {
+        margin-bottom: 10px;
+      }
+      table {
+        th, td {
+          padding-left: 5px;
+          padding-right: 5px;
+          text-align: center;
+        }
+      }
+    }
+    + p {
+      font-weight: bold;
+      margin-bottom: @pageMargin;
+      text-align: center;
+      em {
+        color: @red;
+      }
+    }
+  }
+
+  .popover-content {
+    margin: 15px;
+    padding: 0;
+    p {
+      .statbox {
+        border-top: none;
+        margin: -10px;
+      }
+    }
+    /* Saved Search Popover
+    /////////////////////////*/
+    .side-section.saved-search {
+      max-width: 350px;
+      margin: -10px;
+      .pill-list {
+        margin: 0;
+        padding: 0;
+        li {
+          &.label {
+            letter-spacing: 1px;
+            text-shadow: none;
+          }
+          &.label-info {
+            background: @blueHighlight;
+            cursor: pointer;
+            display: inline-block;
+            line-height: 13px;
+            margin: 3px;
+            span {
+              display: inline-block;
+              float: left;
+              max-width: 235px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            i {
+              display: none;
+              margin-left: 3px;
+              &:hover {
+                color: @blueDarkest;
+              }
+            }
+            &:active {
+              box-shadow: inset 0 0 8px @blueDarkest;
+            }
+          }
+          &.info-msg {
+            background: none;
+            max-width: 240px;
+            font-weight: normal;
+            margin: 3px 0 3px 40px;
+            padding: 0 5px;
+            line-height: 20px;
+            width: 100%; // Empty List Message
+            color: @gray;
+          }
+        }
+      }
+    }
+    /* Common DrillIn Popover
+    /////////////////////////*/
+    .drillcards {
+      margin: -15px; // undo default bootstrap margin
+      overflow: hidden; // keep animation inside popover
+      &.history-switcher-menu {
+        min-width: 325px;
+        ul {
+          li {// history switcher has separator lines
+            border-bottom: 1px solid @blueLightBorder;
+          }
+        }
+      }
+      &.courtesy-menu-content {
+        width: 275px;
+        ul {
+          li {
+            padding: 0;
+            a {
+              border: none;
+              padding: 10px;
+              width: 100%;
+              display: inline-block;
+              i {
+                  color: @gray;
+                  float: right;
+              }
+            }
+            // .drilldown-back overrides conflict with history switcher drilldown component
+            &.drilldown-back {
+              padding: 10px 0;
+              a {
+                padding: 0 3px;
+                width: 20px;
+              }
+              .drill-action-back {
+                border: none;
+                margin: 0 7px;
+                padding: 0 3px;
+                border-right: 1px solid @grayLight;
+                text-align: center;
+                width: 30px;
+                i {
+                  float: none;
+                  color: @grayDarkest;
+                  margin-right: 5px;
+                }
+              }
+            }
+            &:hover {
+              a {// Don't hover green link color
+                color: @grayDarkest;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Chart Popovers
+  /////////////////////////*/
+  .popover-title {
+    &.red {
+      color: @red;
+      border-bottom: 1px solid @red;
+    }
+    &.orange {
+      color: @orange;
+      border-bottom: 1px solid @orange;
+    }
+    &.dark_blue {
+      color: @navyBlue;
+      border-bottom: 1px solid @navyBlue;
+    }
+    &.light_blue {
+      color: @blueAccent;
+      border-bottom: 1px solid @blueAccent;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    &.comparative {
+      li {
+        span {
+          display: inline-block;
+          width: 10px;
+          line-height: 10px;
+          margin-right: 5px;
+          background: @gray;
+          &.red {
+            background: @red;
+          }
+          &.orange {
+            background: @orange;
+          }
+          &.dark_blue {
+            background: @navyBlue;
+          }
+          &.light_blue {
+            background: @blueAccent;
+          }
+        }
+      }
+    }
+  }
+
+  // Callout Style Popover
+  // --------------------------------------------------
+
+  &.callout {
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 200px;
+    text-align: center;
+    .popover-content {
+      h1 {
+        margin: 10px;
+        line-height: 24px;
+        span {
+          display: block;
+          font-size: 55%;
+          text-transform: uppercase;
+          line-height: 12px;
+        }
+        + em {
+          display: block;
+          position: absolute;
+          top: 50%;
+          height: 1px;
+          width: 25%;
+          border-bottom: 1px solid @grayDarkest;
+        }
+      }
+    }
+    &.right {
+      em {
+        right: 0;
+      }
+    }
+    &.left {
+      em {
+        left: 0;
+      }
+    }
+  }
+
+}
+
+
+// Custom Popovers
+// --------------------------------------------------
+
+.custom-popover {
+  border-radius: @radius;
+  background-color: @popoverBackground;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  display: none;
+  left: 0;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  width: 236px;
+  z-index: @zindexPopover;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+
+  // Offset the popover to account for the popover arrow
+  &.top     { margin-bottom: 10px; }
+  &.right   { margin-left: 10px; }
+  &.bottom  { margin-top: 10px; }
+  &.left    { margin-right: 10px; }
+  .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+}
+
+.custom-popover-title {
+  border-radius: 5px 5px 0 0;
+  background-color: @popoverTitleBackground;
+  border-bottom: 1px solid darken(@popoverTitleBackground, 5%);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  margin: 0; // reset heading margin
+  padding: 8px 14px;
+}
+
+.custom-popover-content {
+  padding: 9px 14px;
+  p, ul, ol {
+    margin-bottom: 0;
+  }
+}
+
+// Arrows
+.custom-popover .arrow,
+.custom-popover .arrow:after {
+  border-color: transparent;
+  border-style: solid;
+  display: inline-block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.custom-popover .arrow:after {
+  content: "";
+  z-index: -1;
+}
+
+.custom-popover {
+  &.top .arrow {
+    border-top-color: @popoverArrowColor;
+    border-width: @popoverArrowWidth @popoverArrowWidth 0;
+    bottom: -@popoverArrowWidth;
+    left: 50%;
+    margin-left: -@popoverArrowWidth;
+    &:after {
+      border-top-color: @popoverArrowOuterColor;
+      border-width: @popoverArrowOuterWidth @popoverArrowOuterWidth 0;
+      bottom: -1px;
+      left: -@popoverArrowOuterWidth;
+    }
+  }
+  &.right .arrow {
+    border-right-color: @popoverArrowColor;
+    border-width: @popoverArrowWidth @popoverArrowWidth @popoverArrowWidth 0;
+    left: -@popoverArrowWidth;
+    margin-top: -@popoverArrowWidth;
+    top: 50%;
+    &:after {
+      border-right-color: @popoverArrowOuterColor;
+      border-width: @popoverArrowOuterWidth @popoverArrowOuterWidth @popoverArrowOuterWidth 0;
+      bottom: -@popoverArrowOuterWidth;
+      left: -1px;
+    }
+  }
+  &.bottom .arrow {
+    border-bottom-color: @popoverArrowColor;
+    border-width: 0 @popoverArrowWidth @popoverArrowWidth;
+    left: 50%;
+    margin-left: -@popoverArrowWidth;
+    top: -@popoverArrowWidth;
+    &:after {
+      border-bottom-color: @popoverArrowOuterColor;
+      border-width: 0 @popoverArrowOuterWidth @popoverArrowOuterWidth;
+      left: -@popoverArrowOuterWidth;
+      top: -1px;
+    }
+  }
+  &.left .arrow {
+    border-left-color: @popoverArrowColor;
+    border-width: @popoverArrowWidth 0 @popoverArrowWidth @popoverArrowWidth;
+    margin-top: -@popoverArrowWidth;
+    right: -@popoverArrowWidth;
+    top: 50%;
+    &:after {
+      border-left-color: @popoverArrowOuterColor;
+      border-width: @popoverArrowOuterWidth 0 @popoverArrowOuterWidth @popoverArrowOuterWidth;
+      bottom: -@popoverArrowOuterWidth;
+      right: -1px;
+    }
+  }
+}
+
+// VSS: Change Password Popover
+// --------------------------------------------------
+
+.change-password {
+  .popover {
+        min-width: 150px;
+  }
+}
+
+// Chart Tooltip
+// --------------------------------------------------
+
+.chart-tip {
+  background: rgba(125, 125, 125, 0.5);
+  padding: 10px 5px 5px 5px;
+  position: relative;
+  top: 0;
+  width: 150px;
+  p {
+    font-size: 125%;
+    span {
+      display: block;
+      font-size: 75%;
+    }
+  }
+}
+
+// Tooltip Content Container
+.tooltip-inner {
+  white-space:pre;
+  max-width:none;
+}
+
+// Popover Divet (Arrow)
+.chart-tip .arrow,
+.chart-tip .arrow:after {
+  border-color: transparent;
+  border-style: solid;
+  display: inline-block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.chart-tip .arrow:after {
+  content: "";
+  z-index: -1;
+}
+.chart-tip {
+  &.top .arrow {
+    border-top-color: @grayLighter;
+    border-width: 10px 10px 0;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    &:after {
+      border-top-color: @grayLighter;
+      border-width: 11px 11px 0;
+      bottom: -1px;
+      left: -11px;
+    }
+  }
+  &.right .arrow {
+    border-right-color: @grayLighter;
+    border-width: 10px 10px 10px 0;
+    left: -10px;
+    margin-top: -10px;
+    top: 50%;
+    &:after {
+      border-right-color: @grayLighter;
+      border-width: 11px 11px 11px 0;
+      bottom: -11px;
+      left: -1px;
+    }
+  }
+  &.bottom .arrow {
+    border-bottom-color: @grayLighter;
+    border-width: 0 10px 10px;
+    left: 50%;
+    margin-left: -10px;
+    top: -10px;
+    &:after {
+      border-bottom-color: @grayLighter;
+      border-width: 0 11px 11px;
+      left: -11px;
+      top: -1px;
+    }
+  }
+  &.left .arrow {
+    border-left-color: @grayLighter;
+    border-width: 10px 0 10px 10px;
+    margin-top: -10px;
+    right: -10px;
+    top: 50%;
+    &:after {
+      border-left-color: @black;
+      border-width: 11px 0 11px 11px;
+      bottom: -11px;
+      right: -1px;
+    }
+  }
+}
+
+
+  /* VPA Observation Perspective Popovers
+  /////////////////////////*/
+.popover {
+  .popover-msg {
+    max-width: 300px;
+    margin: 10px;
+  }
+  .perspective-switcher {
+    border: 1px solid transparent;
+    margin: -15px;
+    max-width: 350px;
+    max-height: 600px;
+    overflow: auto;
+    .perspective-list {
+      margin: 0;
+      li {
+        border-bottom: 1px solid @blueLightBorder;
+        a {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          border: none;
+          min-height: 60px;
+          .fa {
+            position: absolute;
+            top: 45%;
+            right: 10px;
+            font-size: 85%;
+            color: @navyBlue;
+          }
+          h2 {
+            float: left;
+            width: 20%;
+            min-height: 60px;
+            margin: 0;
+            padding: 10px 5px;
+            font-size: 100%;
+            font-weight: normal;
+            border: none;
+            line-height: 18px;
+            text-align: right;
+            text-transform: none;
+            > span {
+              color: @green;
+            }
+            .bar-chart {
+                display: block;
+                height: 8px;
+                width: 100%;
+                margin-top: 7px;
+                overflow: auto;
+              > span {
+                  float: right;
+                  display: block;
+                  height: 8px;
+                  background: @greenLighter;
+                  border: 1px solid @green;
+              }
+            }
+          }
+          > span {
+            display: block;
+            float: left;
+            padding: 10px 25px 10px 5px;
+            width: 80%;
+            min-height: 60px;
+            color: @gray;
+            strong {
+              color: @grayDark;
+            }
+            .root-cause {
+              color: @grayDark;
+            }
+          }
+          &:hover {
+            color: @grayDarkest;
+            background: @blueHover;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      &.favorite-list {
+        border-bottom: 3px solid @blueLightBorder;
+      }
+    }
+
+
+  }
+}

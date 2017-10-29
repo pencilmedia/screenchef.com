@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="test01.xslt" type="text/xsl"?>
+<objLayouts>
+	<page id="001" title="Object 2 Related Tables" class="object_layouts">
+		<header>
+			<identifier>7600 Series Router</identifier>
+			<description><strong>Program</strong> - Develop new product for the September launch cycle.  this has industry leading switching rates and lower power consumption.</description>
+			<progress title="In Progress" value="76" />
+			<status_rating>
+				<rating title="Overall Status" class="rating_100" />
+				<rating title="Schedule Status" class="rating_0" />
+				<rating title="Cost Status" class="rating_50" />
+				<rating title="Resources Status" class="rating_100" />
+				<rating title="Quality Status" class="rating_none" />
+			</status_rating>
+		</header>
+		<objectControls>
+			<select title="Label">
+				<option>Values</option>
+				<option>xxx</option>
+			</select>
+			<buttons>
+				<button icon="xxx">Object Action</button>
+				<button icon="xxx">Action 2</button>
+				<button icon="dropdown">Menu</button>
+			</buttons>
+		</objectControls>
+		
+		<tabs>
+			<tab title="General Info" class="first_tab" />
+			<tab title="Another Tab" class="indicator_gray selected" />
+			<tab title="Relationships" class="indicator_gray" />
+			<tab title="Attachments" class="indicator_gray" />
+			<tab title="History" class="" />
+		</tabs>
+		<message type="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Up to three lines of instructional text are possible.</message>
+	</page>
+</objLayouts>

@@ -1,0 +1,472 @@
+/* Full TreeGrid CSS, to know how to modify it, see TreeGridStyles.htm documentation. */
+
+/* -------------
+--- Sections --- 
+------------- */
+
+.GBBodyLeft, .GBBodyMid, .GBBodyRight, .GBHeadLeft, .GBHeadMid, .GBHeadRight, .GBFootLeft, .GBFootMid, .GBFootRight {
+	border-left:1px solid #a0a090;
+	}
+.GBBodyLeft, .GBBodyMid, .GBBodyRight { 
+	border-top: 1px solid #808070;
+	}
+.GBHeadLeft, .GBHeadMid, .GBHeadRight { 
+	border-top:1px solid #b0b0a0;
+	}
+.GBFootLeft, .GBFootMid, .GBFootRight { 
+	border-top:1px solid #b0b0a0;
+	}
+.GBVScroll {
+   border-top:1px solid #b0b0a0;
+   border-right:1px solid #b0b0a0;
+   }
+.GBXScroll {
+   background:#F4F4F4;
+   }
+.GBHScroll {
+
+	}
+
+/* -----------------
+--- Special rows --- 
+----------------- */
+	
+.GBFillRow {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	background:#f4f4f4;
+	}
+.GBFillUserRow {
+	border-bottom:1px solid #d0d0c0;
+	background:#F4F4F4;
+	}	
+.GBSpace,.GBGroup,.GBSearch,.GBPager {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	background:#F0F0E0;
+	white-space:nowrap;
+	}
+
+/* ----------
+--- Cells --- 
+---------- */
+
+.GBHeader, .GBPanelTop {
+	background: #F0F0E0;
+	}
+.GBPanelTop,.GBPanelTopHover,.GBPanel,.GBPanelHover,.GBHeader,.GBHeaderHover {
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GBPanel,.GBPanelHover {
+	background: #F0F0E0; 
+	border-top:1px solid #ffffff; 
+	}
+.GBCell, .GBCellNE, .GBHeader, .GBHeaderHover, .GBPanel, .GBPanelHover, .GBPanelTopHover, .GBPanelTop, .GBHeaderHoverMulti, .GBHeaderGroup,.GBHeaderGroupFocus,.GBHeaderGroupDelete { 
+	border-bottom:1px solid #d0d0c0;
+	border-right:1px solid #d0d0c0;
+	vertical-align:top;
+	}
+.GBHeaderGroup,.GBHeaderGroupFocus,.GBHeaderGroupDelete {
+	background: #E0E0D0;
+	border-right:1px solid #b0b0a0;
+	cursor:default;
+	}
+.GBHeaderGroupFocus {
+	background: #C0C0A0;
+	}
+.GBHeaderGroupDelete {
+	background: #F0F0E0;
+	color: #F0F0E0;
+	}
+.GBCellNE {
+	cursor:default;
+	}
+.GBHeaderHover,.GBPanelTopHover {
+	border-bottom:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GBHeaderHoverMulti {
+	background: #FAF8F3; 
+	cursor:default;
+	}
+.GBHeaderFocus {
+	background: #DEDFD8; 
+	}
+.GBPanelHover,.GBPanelTopHover {
+	border-right:1px solid #FCC247;
+	background: #FAF8F3; 
+	}
+.GBHeader,.GBHeaderHover,.GBHeaderHoverMulti,.GBHeaderGroup {
+	white-space:nowrap;
+	overflow:hidden;
+	}
+.GBRightButton, .GBFilterButton, .GBTreeIcon {
+	vertical-align:top;
+	}
+.GBCellSpaceButton {
+	overflow:hidden;
+	width:50px;
+	}
+
+
+/* -----------------
+--- Cell content --- 
+----------------- */
+
+.GBHeadText {
+	font-size:12pt;
+	padding-left:3px;
+	padding-right:3px;
+	font-weight:bold;
+	white-space:nowrap;
+	}
+.GBHeadSort {
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GBText,.GBTextB,.GBTextM,.GBNumber,.GBNumberB,.GBNumberM,.GBIText,.GBINumber,.GBLines,.GBTextArea,.GBHtml,.GBIHtml,.GBRadio {
+	font-size:11pt; 
+	font-face:Arial;
+	padding-left:3px;
+	padding-right:3px;
+	border:0px solid;
+	background:inherit;
+	}
+.GBRadio {
+	padding-left:0px;
+	padding-right:5px;
+	}
+.GBText,.GBTextB,.GBTextM {
+	white-space:nowrap;
+	padding-top:2px;
+	}
+.GBHtml {
+	padding-top:2px;
+	}
+.GBIText,.GBINumber,.GBIHtml,.GBIList { 
+	display:block;
+	white-space:nowrap;
+	_margin-top:-1px;
+	_margin-bottom:-1px;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GBNumber,.GBNumberB,.GBNumberM,.GBINumber {
+	text-align:right;
+	white-space:nowrap;
+	padding-top:2px;
+	padding-bottom:0px;
+	}
+.GBTextB,.GBNumberB,.GBNumberM {
+	color:blue;
+	}
+.GBTextM,.GBNumberM {
+	font-weight:bold;
+	}
+.GBLines,.GBTextArea {
+	padding-top:1px;
+	padding-bottom:1px;	
+	}
+.GBTextArea {
+	margin:0px;
+	_padding-top:0px;
+	_padding-bottom:0px;
+	_padding-left:3px;
+	padding-right:0px;
+	_line-height:13px;
+	}
+.GBSelect {
+	font-size:11pt;
+	font-family:Verdana;
+	}
+.GBButton,.GBButtonSpace,.GBButtonSpaceChecked {
+	font-size:10pt;
+	cursor:pointer;
+	padding:0px;
+	_cursor:hand;
+	}
+.GBButtonImg {
+	cursor:pointer;
+	_cursor:hand;
+	text-align:right;
+	}
+.GBGroupCustom {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11pt;
+	color:#BBB;
+	font-style:italic;
+	padding-left:5px;
+	cursor:default;
+	white-space:nowrap;
+	height:21px;
+	}
+.GBButtonSpace {
+	width:50px;
+	font-size:10pt;
+   	}
+.GBButtonSpaceChecked {
+	color:blue;
+	font-weight:700;
+	width:50px;
+	}
+
+
+/* ------------
+--- Toolbar --- 
+------------ */
+
+.GBControlPanel {
+	border-top:1px solid #808070;
+	border-left:1px solid #a0a090;
+	border-right:1px solid #d0d0c0;
+	border-bottom:1px solid #a0a090;
+	padding-top:3px;
+	padding-bottom:3px;
+	background: #F0F0E0;
+	}
+.GBControlPanelCell {
+	background: #F0F0E0;
+	}
+.GBControlPanelImg,.GBControlPanelImgHover,.GBControlPanelImgChecked,.GBControlPanelImgHoverChecked {
+	cursor:pointer;	
+	_cursor:hand;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-top:2px;
+	padding-left:2px;
+	padding-right:2px;
+	border-right:1px solid #d0d0c0;
+	font-size:15px;
+	}
+.GBControlPanelImgHover,.GBControlPanelImgHoverChecked {
+	margin-top:0px;
+	margin-bottom:1px;
+	padding-top:3px;
+	padding-bottom:1px;
+	border-bottom:1px solid #FCC247;
+	background: #FFFFFF; 
+	}
+.GBControlPanelImgChecked,.GBControlPanelImgHoverChecked {
+	color:#8080FF;
+	font-weight:700;
+	}
+.GBControlPanelFormula {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11pt;
+	padding-left:5px;
+	padding-right:5px;
+	white-space:nowrap;
+	}
+
+/* -------------
+--- Cfg menu --- 
+------------- */
+   
+.GBCfgMenu {
+	border:3px outset #DDD;
+	padding:6px;
+	background:#ddddff;
+	margin:3px;
+	}
+.GBCfgMenuItem {
+	font-size:12pt;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GBCfgMenuHover {
+	background:#ffeeaa;
+	font-size:12pt;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GBCfgMenuButton {
+	width:70px;
+	font-size:10pt;
+	margin:2px;
+	}
+
+
+/* ----------------
+--- Popup menus --- 
+---------------- */
+
+.GBFilterMenu {
+	border:1px outset #aaaaff;
+	background:#eeeeee;
+	margin-top:1px;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GBFilterMenuItem {
+	font-size:11pt;
+	}
+.GBFilterMenuHover {
+	background:#ffeeaa;
+	font-size:11pt;
+	}
+
+
+/* ----------------
+--- Date picker --- 
+---------------- */
+
+.GBPickTag {
+	background:#eeeeee;
+	padding:5px;
+	margin-top:1px;
+	}
+.GBPickMS{
+	width:87px;
+	font:12pt;
+	}
+.GBPickB{
+	font:bold 10pt Verdana;	
+	cursor:pointer;
+	_cursor:hand;
+	width:20px;
+	}
+.GBPickMY{
+	color:#2200cc;
+	font:bold 12pt Verdana;
+	}
+.GBPickWDN {
+	background-color:#bbbbbb;
+	text-align:center; 
+	width:20px; 
+	font:12pt Verdana;
+	}
+.GBPickWD, .GBPickSa, .GBPickSu, .GBPickSel, .GBPickNow, .GBPickWDNE, .GBPickSaNE, .GBPickSuNE, .GBPickSelNE, .GBPickNowNE {
+	text-align:center; 
+	width:20px;
+	font:13pt Verdana;
+	cursor:pointer;
+	_cursor:hand;
+	}
+.GBPickWDNE, .GBPickSaNE, .GBPickSuNE, .GBPickSelNE, .GBPickNowNE {
+	cursor:default;
+	}
+.GBPickWD {
+	background-color:#ffffff;
+	}
+.GBPickSa {
+	background-color:#ddddff;
+	}
+.GBPickSu {
+	background-color:#aaaaff;
+	}
+.GBPickSel {
+	background-color:#ffff77;
+	}
+.GBPickNow {
+	background-color:#dd44dd;
+	}
+
+
+/* ----------
+--- Pager --- 
+---------- */
+
+.GBPagerBody {
+	border-left:1px solid #a0a090;
+	border-right:1px solid #a0a090;
+	background: #F0F0E0;
+	}
+.GBPagerHeader {
+	border-bottom:1px solid #b0b0a0;
+	border-top:1px solid #b0b0a0;
+	border-left:1px solid #a0a090;
+	border-right:1px solid #a0a090;
+	}
+.GBPagerItem, .GBPagerHover, .GBPagerCaption {
+	font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:10pt;
+	border-top:1px solid #ffffff; 
+	border-bottom:1px solid #d0d0c0;
+	border-left:1px solid #d0d0c0;
+	border-right:1px solid #d0d0c0;
+	padding-left:3px;
+	padding-right:3px;
+	background: #F0F0E0;
+	}
+.GBPagerCaption {
+	height:21px;
+	cursor:default;
+	}
+.GBPagerItem {
+	cursor:pointer;
+	_cursor:hand;
+	background: #FFFFFF;
+	}
+.GBPagerHover {
+	cursor:pointer;
+	_cursor:hand;
+	background: #DCF0FF;
+	}
+.GBPagerCursor {
+	cursor:pointer;
+	_cursor:hand;
+	background:#aFaF00;
+	opacity:0.5;              /* Mozilla */
+	filter:alpha(opacity=50); /* IE */
+	}
+.GBPagerSort1 {
+	color: #006600;
+	}
+.GBPagerSort2 {
+	color: #00AE00;
+	}
+.GBPagerSort3 {
+	color: #00FF00;
+	}
+.GBPagerSortS {
+	color: black;
+	}
+
+/* -----------------
+--- Simple pager --- 
+----------------- */
+
+.GBSimplePager {
+   padding-left:3px;
+   padding-top:2px;
+   padding-bottom:2px;
+   margin-top:2px;
+   margin-bottom:2px;
+   font-family:Microsoft Sans Serif,Verdana,Arial;
+	font-size:11pt;
+	cursor:pointer;
+	color:blue;
+	display:inline-block;
+   }
+.GBSimplePager:visited {
+   color:blue;
+   }
+.GBSimplePager:hover {
+   color:red;
+   }
+
+/* ----------
+--- Other --- 
+---------- */
+
+GMessage, .GBMessage {
+	background:#F0F0E0;
+	border:3px outset #DDD;
+	padding:10px;
+	white-space:nowrap;
+	}
+.GBPageMessage {
+	background:#FaFaFa;
+	border:1px solid #f77;
+	padding:10px;
+	}
+.GBPage {
+	border-top:1px solid #d0d0c0;
+	}
+.GBPageOne {
+	
+	}
+.GBTable {
+	
+	}

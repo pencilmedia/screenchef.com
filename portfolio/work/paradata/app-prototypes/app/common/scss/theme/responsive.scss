@@ -1,0 +1,144 @@
+/* BEGIN: responsive.scss
+// -----------------------------------------------------*/
+
+/*  RESPONSIVE BEHAVIOR
+// -----------------------------------------------------*/
+// In between Large and Medium 
+@media(max-width: 1440px) and (min-width: $screen-md-min) {
+	main {
+		.app-shell {
+			.alert {
+				&.single-w-btns {
+					p {
+						line-height: 18px;
+						.btn {
+							display: block;
+							position: relative;
+							right: auto;
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Edit Form falls into one column; side by side labels/fields
+	// -----------------------------------------------------*/
+	.edit-form {
+		.form-horizontal {
+			.colonnade.dual {
+				.lt-column, .rt-column {
+					float: none;
+					width: 100%;
+				}
+			}
+			.form-column {
+				dt {
+					width: 20%;
+				}
+				dd {
+					width: 80%;
+				}
+			}
+		}
+	}
+}
+
+// Large Desktop - > 1200px
+@media(min-width: $screen-lg-min) {
+	main {
+		.app-shell {
+
+		}
+	}
+}
+
+// Medium Desktop - > 992px
+@media(min-width: $screen-md-min) {
+	main {
+		.app-shell {
+			margin-right: $contextPaneWidth;
+		}
+		.contextual-pane {
+			display: block;
+			@include no-box-shadow();
+			z-index: 0;
+			> nav {
+				.close-contextual {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// Tablet Portrait - > 768px
+@media(max-width: $screen-sm-min) {
+	main {
+		.app-shell {
+			.alert {
+				&.single-w-btns {
+					p {
+						line-height: 18px;
+						.btn {
+							display: block;
+							position: relative;
+							right: auto;
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+			/* Two column forms fall into one column and gain stacked labels
+			// -----------------------------------------------------*/
+			
+				.colonnade.dual {
+					.lt-column, .rt-column {
+						float: none;
+						width: 100%;
+						.read-state {
+							margin-left: 10px;
+							margin-right: 10px;
+						}
+					}
+				}
+				.form-horizontal {
+					.colonnade.dual {
+						.lt-column, .rt-column {
+							.form-column {
+								dt, dd {
+									float: none;
+									padding-left: 10%;
+									width: 100%;
+								}
+								dt {
+									line-height: 24px;
+									margin-bottom: 0;
+									text-align: left;
+								}
+								dd {
+									margin-bottom: 15px;
+									.form-control {
+										width: 88%;
+									}
+								}
+							}
+						}
+					}
+				}
+			
+		}
+	}
+}
+
+// Phone Portrait - > 480px
+@media(max-width: $screen-xs-min) {
+	main {
+		.contextual-pane {
+			width: 100%;
+			top: -$navbarHeight;
+			z-index: 9999;
+		}
+	}
+}
+

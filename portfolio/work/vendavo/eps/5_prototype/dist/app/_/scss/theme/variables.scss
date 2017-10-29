@@ -1,0 +1,131 @@
+/* BEGIN: variables.scss - for theme.scss
+// -----------------------------------------------------*/
+
+// Base Colors
+// -----------------------------------------------------
+
+$white:				#fff;
+$black:				#000;
+$gray:				#ccc;
+$dark:				#343838;
+
+$green:				#7ED321;
+
+$orange:				#f0ad4e;
+
+$red:				#E50015;
+$redLight:			lighten($red, 25%);
+$redLighter:			lighten($red, 40%);
+$redLightest:			lighten($red, 54%);
+
+$yellow:				#f2e6a7;
+$yellowLight:			lighten($yellow, 15%);
+
+// Grays
+$gray:               	#999;
+$grayLight:          	lighten($gray, 18%);
+$grayLighter:        	lighten($gray, 26%);
+$grayLightest:       	lighten($gray, 34%);
+$grayDark:           	darken($gray, 20%);
+$grayDarker:         	darken($gray, 30%);
+$grayDarkest:        	darken($gray, 40%);
+@uploadGray:			#eee;
+
+// Blues
+$blue:        			#D2E0F1;
+$blueLight:   			lighten($blue, 2%);
+$blueLighter: 			lighten($blue, 4%);
+$blueLightest:			lighten($blue, 6%);
+$blueDark:    			darken($blue, 5%);
+$blueDarker:  			darken($blue, 15%);
+$blueDarkest: 			darken($blue, 30%);
+$navyBlue:			#2D4F62;
+$brightBlue: 		     #4A90E2;
+
+// Primary Color Palette
+// -----------------------------------------------------
+
+$main-shade: #1D444A;
+$main: #1E626D;
+$contextual: #288D9F;
+$action: #52B8CD;
+$main-tint: #E1EAEB;
+$light-tint: #F9FCFD;
+
+
+// Typography
+// -----------------------------------------------------
+
+$baseFontSize:          12px;
+$baseFontFamily:        'Helvetica Neue', Helvetica, Arial, sans-serif;
+$baseLineHeight:        28px;
+
+//** Background color for `<body>`.
+$bodyBG:               $white;
+//** Global text color on `<body>`.
+$textColor:            $grayDarkest;
+
+//** Global textual link color.
+$linkColor:            $brightBlue;
+//** Link hover color set via `darken()` function.
+$linkHoverColor:      darken($linkColor, 15%);
+//** Link hover decoration.
+$linkHoverDecoration: underline;
+
+
+// Forms
+// -----------------------------------------------------
+
+$inputBorder:  					$blueDark;
+
+// Required Placeholder Text
+$required-placeholder:        		$brightBlue;
+
+$errorText:						#a94442;
+$errorBorder:						$redLighter;
+$errorBG:							$redLightest;
+
+
+// Layout
+// -----------------------------------------------------
+
+$pageMargin: 20px;
+$borderColor: $blue;
+$navbarHeight: 30px;
+$shortSlatHeight: 45px;
+$tallSlatHeight: 55px;
+
+
+// Lists
+// -----------------------------------------------------
+
+$dropdown-link-hover-color: $gray;
+$dropdown-link-hover-bg: $grayLightest;
+
+
+// Breadcrumb
+// -----------------------------------------------------
+
+//** Breadcrumb background color
+$breadcrumb-bg:                 $grayLightest;
+//** Breadcrumb text and separator color
+$breadcrumb-color:              $grayLight;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       $gray;
+
+
+// Media queries breakpoints
+// -----------------------------------------------------
+
+// Extra small screen / phone
+$screen-xs-min:              480px;
+
+// Small screen / tablet
+$screen-sm-min:              768px;
+
+// Medium screen / desktop
+$screen-md-min:              992px;
+
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+

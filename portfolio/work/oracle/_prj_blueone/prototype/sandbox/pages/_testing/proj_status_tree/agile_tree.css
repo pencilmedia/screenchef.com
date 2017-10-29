@@ -1,0 +1,71 @@
+body { font-family: sans-serif }
+
+#treeContainer {
+	width: 250px;
+	height: 200px;
+	border: 1px solid #666;
+	background: #fff;
+	overflow: auto;
+	top: 50px;
+	left: 25px;
+	white-space:nowrap;
+}
+
+.ygtvitem,ygtvchildren { 
+	font-size: 12px;
+	line-height: 21px;
+	white-space: nowrap;
+}
+
+.toggleImageNoKids,
+.toggleImageCollapse,
+.toggleImageExpand,
+.itemIconFolderOpen,
+.itemIconFolderClosed,
+.itemIconDocument,
+.itemIconTask 
+{
+	width: 18px;
+	height: 21px;
+	padding: 3px 8px;
+	_padding: 0px 8px;
+	cursor: pointer;
+}
+
+.toggleImageCollapse 	{ background: url('./collapse.gif') no-repeat 3px 4px; }
+.toggleImageExpand 		{ background: url('./expand.gif') no-repeat 3px 4px; }
+
+.itemIconFolderClosed, 
+.itemIconFolderOpen 	{ background: url('/global/images/icn_obj_phase.png') no-repeat 0px 3px; }
+.itemIconDocument     	{ background: url('/global/images/icn_obj_gate.png') no-repeat 0px 2px; }
+.itemIconTask    		{ background: url('/global/images/icn_obj_task.png') no-repeat 0px 2px; width:18px; }
+
+div.agileTreeNode {}
+
+div.agileTreeNode a 
+{
+	position: relative;
+	z-index: 8888;
+	cursor: pointer;
+	color: #333;
+}
+
+.treeNodeStatus 
+{ 
+	width:0;
+	float: right;
+	padding: 0 10px;
+	background-repeat: no-repeat;
+	background-position: center 2px;
+	background-color: #fff;
+	_position: absolute;
+	_right: 0;
+	z-index: 9999;
+	border-left: 1px solid silver;
+}
+
+.treeNodeStatus.complete	{ background-image: url('/global/images/icn_status_complete.png') }
+.treeNodeStatus.pending 	{ background-image: url('/global/images/icn_status_pending.png') }
+.treeNodeStatus.onTrack 	{ background-image: url('/global/images/icn_status_on_track.png') }
+.treeNodeStatus.offTrack 	{ background-image: url('/global/images/icn_status_off_track.png') }
+.treeNodeStatus.rejected 	{ background-image: url('/global/images/icn_status_rejected.png') }

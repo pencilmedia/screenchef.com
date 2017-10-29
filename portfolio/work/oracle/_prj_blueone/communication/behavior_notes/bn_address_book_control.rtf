@@ -1,0 +1,190 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf330
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12940\viewh14440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 Address Book
+\b0 \
+\
+
+\b Overview
+\b0 \
+In 9.3 we will combine multiple My Settings and Administration screens into a common Address Book.  This 9.3 Address Book will replace the following:\
+\
+- 9.2.2.x Address Book\
+- My Settings / Personal Groups\
+- My Settings / Deleted Personal Groups\
+- My Settings / Personal Supplier Groups\
+- Administration / Users\
+- Administration / User Groups\
+- Administration / Supplier Groups\
+- Administration / Deleted Users\
+- Administration / Deleted User Groups\
+\
+
+\b High-level Description\
+
+\b0 - The Address Book will be accessed from the Tools and Settings menu\
+- The Address Book will be displayed in the right pane\
+\
+	Title = Address Book\
+	Sub-title = User's Name\
+	Tabs = Users, User Groups, Supplier Groups	\
+\
+General Note - When navigating away from the Address Book by clicking on an object link (e.g. User or User Group), then the Breadcrumb should include navigation back to the Address Book.  Additionally, when the Address Book is displayed, the breadcrumb will be cleared with the Address Book being the first breadcrumb link\
+\
+\
+
+\b Users Tab
+\b0 \
+Table Title = Users\
+Out-of-Box Views = Active Users (default view), Inactive Users, Deleted Users\
+Personalization = Yes, or need to support a search feature\
+Default Table Columns = First, Last, Middle, User ID, Phone, Email, Status, Login PW for Approval\
+
+\i Enable all GI P1 Attributes for edit, fill-up / down actions
+\i0 \
+\
+Actions Toolbar Structure\
+- Add  \
+- Remove\
+- Change Status\
+ -- Enable User\
+ -- Disable User\
+----------------------------\
+- Add to Group\
+
+\i  -- Add to Group
+\i0 \
+ -- Add to New Group\
+- More\
+  -- Refresh from LDAP\
+  -- Assign Roles\
+  ----------------\
+  -- Copy\
+  -- Paste\
+  -- Fill-Up\
+  -- Fill-Down\
+\
+Add:  \
+- Will only display for those with Admin privileges \
+- Will allow administrators to create new users\
+- Follow known DMS conventions for Add\
+\
+Remove:  \
+- Will only display for those with Admin privileges\
+- Will allow administrators to delete a user \
+- Follow known DMS conventions for Remove\
+\
+Change Status:  \
+- Will only display for those with Admin privileges\
+- Will allow administrators to enable / disable users \
+- DMS message indicating that users have been set to enabled / disabled must be included\
+\
+Add to Group:  \
+- These actions will be available to all users\
+- Whether the user can create a Personal versus Global will be controlled by privilege\
+- Add to Group will display a list of all groups that the user can be added to, including the users personal groups and global groups (depending on privs).\
+- Add to New Group will allow the user to create a new group and add selected users to the new group.  Users can create a personal or global group (depending on privs).  \
+- When creating a new Group the User Group creation dialog will display and normal creation process will occur, however selected users will be added to the group\
+\
+Assign Roles:\
+- Will only display if user has privileges\
+- Will only need if we do not allow editing and fill-up/down of P1 attributes\
+\
+Refresh from LDAP"\
+- Will only display for those with Admin privileges\
+\
+\
+
+\b User Groups Tab
+\b0 \
+Table Title = User Groups\
+Out-of-Box Views = My Personal Groups, Active Groups (default view), Inactive Groups, Deleted Groups\
+Personalization = Yes, or need to support a search feature\
+Default Table Columns = Name, Description, 
+\i Users
+\i0 , Status, Type, 
+\i Resource Pool
+\i0 \
+
+\i Enable all GI P1 Attributes for edit, fill-up / down actions
+\i0 \
+\
+Actions Toolbar Structure\
+- Add  \
+
+\i - Remove\
+- Change Status\
+ -- Enable Group\
+ -- Disable Group
+\i0 \
+----------------------------\
+- More\
+  -- Copy\
+  -- Paste\
+  -- Fill-Up\
+  -- Fill-Down\
+\
+Add:  \
+- Will display for all users\
+- Will allow users to create a personal or global user group (depending on privs)\
+- Follow known DMS conventions for Add\
+\
+Remove:  \
+- Will display for all users\
+- Will allow users to remove personal or global user groups (depending on privs)\
+- Follow known DMS conventions for Remove\
+- If user without proper privs attempts to remove a global user group, dms should indicate this\
+\
+Change Status:  \
+- Will display for all users\
+- Will allow users to enable / disable groups\
+- DMS message indicating that users have been set to enabled / disabled must be included\
+- If user without proper privs attempts to enable / disable a global user group, dms should indicate this\
+\
+\
+
+\b Supplier Groups Tab
+\b0 \
+Table Title = Supplier Groups\
+Out-of-Box Views = My Personal Groups, Active Groups (default view), Inactive Groups\
+Personalization = Yes, or need to support a search feature\
+Table Columns = Name, Description, Suppliers, Status, Type\
+\
+\
+Actions Toolbar Structure\
+- Add  \
+- Remove
+\i \
+- Change Status\
+ -- Enable Group\
+ -- Disable Group
+\i0 \
+----------------------------\
+- More\
+  -- Copy\
+  -- Paste\
+  -- Fill-Up\
+  -- Fill-Down\
+\
+Add:  \
+- Will display for all users\
+- Will allow users to create a personal or global user group (depending on privs)\
+- Follow known DMS conventions for Add\
+\
+Remove:  \
+- Will display for all users\
+- Will allow users to remove personal or global user groups (depending on privs)\
+- Follow known DMS conventions for Remove\
+- If user without proper privs attempts to remove a global user group, dms should indicate this\
+\
+Change Status:  \
+- Will display for all users\
+- Will allow users to enable / disable groups\
+- DMS message indicating that users have been set to enabled / disabled must be included\
+- If user without proper privs attempts to enable / disable a global supplier group, dms should indicate this\
+\
+\
+ }

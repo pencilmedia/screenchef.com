@@ -1,0 +1,388 @@
+/*
+	TABLE STYLES
+*/
+/* .lockedColDiv     {left:0px} */
+.lockedHdrDiv	{top:0px;}
+
+/*
+	BUTTONBAR STYLES
+*/
+
+/*
+	The buttonbar style is modified for popups in popup.css
+*/
+
+div.buttonbar {
+	height: 30px;
+	color: #333;
+	background-color: #eee;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div.bb_left {
+	float: left;
+	margin: 5px 0px 0px 5px;
+	text-align: left;
+}
+
+div.bb_middle {
+	margin: 5px 0px 0px 0px;
+}
+
+div.bb_right {
+	float: right;
+	margin: 5px 5px 0px 0px;
+	text-align: right;
+}
+
+
+
+/*
+	STANDARD TABLE STYLES
+*/
+table {
+	border: none;
+	width: 100%;
+}
+
+thead {
+	vertical-align: bottom;
+}
+
+tbody {
+	vertical-align: top;
+}
+
+th {
+	height: 16px;
+	color: #fff;
+	background-color: #7398dd;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+	padding: 0px 5px 5px 5px;
+}
+
+div.table_wrapper {
+	margin: 1px 0px 0px 0px;
+	height: 200px;
+	border-width: 0px 1px 1px 1px; 
+	border-color: #ccc;
+	border-style: solid;
+	overflow: auto;
+}
+
+/*
+	Put on border-top lines
+*/
+div.data_parent td {
+	padding: 3px 5px 3px 5px;
+	font-size: 11px;
+	border-top: 1px solid #eee;
+}
+
+/*
+	Take off border-top lines
+
+
+div.data_parent table.data_details td {
+	border-top: none;
+}
+
+*/
+
+/* 
+	Use to differentiate sticky and selected columns
+*/
+.d_sticky_col {
+	background-color: #f5f5f5;
+}
+.d_selected {
+	background-color: #faf3da;
+}
+
+/* 
+	Use to differentiate rolling over
+*/
+.d_rollover {
+	background-color: #eee7d0;
+}
+
+/*********************************/
+
+.table_content {
+	position: absolute;
+/*	margin-top:22px; */
+	}
+
+#basic_content {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	}
+
+.table_container {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	overflow: hidden;
+	}
+
+.table_heading_container {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	background: #7398dd;
+	overflow: hidden;
+	}
+		
+.table_footing_container {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	}
+		
+.standard_table_footing {
+	width: 100%;
+	position: relative;
+	}
+		
+.standard_table_heading,
+.standard_table_content {
+	position: relative;		
+	}
+		
+.standard_table_heading,
+.standard_table_footing {
+	padding-right: 15px;
+	}
+		
+td, th {
+	padding: 3px;
+	text-align: left;
+	}
+
+
+/* Default table colors - new sets should be defined for when the table
+   is contained in a "parts" class or "documents" class, etc.
+*/		
+.table_content .row_lo  {
+	background-color:#FFFFFF;
+	}
+.table_content .row_hi {
+	background-color:#FFFFCC;
+	}
+.table_content .row_sel {
+	background-color:#FFCCAA;
+	}
+.table_content .head_lo {
+	background-color:#7398DD;
+	}
+.table_content .head_hi {
+	background-color:#CCCCFF;
+	}
+.table_content .head_sel {
+	background-color:#7398DD;
+	}
+.table_footing_container {
+	background-color:#CCCCFF;
+	}
+
+/* Here's the set of colors for a parts table(?) */
+.parts .table_content .row_lo  {
+	background-color:#FFFFFF;
+	}
+.parts .table_content .row_hi {
+	background-color:#FFF0F0;
+	}
+.parts .table_content .row_sel {
+	background-color:#FFCCAA;
+	}
+.parts .table_content .head_lo {
+	background-color:#CC6666;
+	}
+.parts .table_content .head_hi {
+	background-color:#F0C5C5;
+	}
+.parts .table_content .head_sel {
+	background-color:#CC6666;
+	}
+.parts .table_footing_container {
+	background-color:#F0C5C5;
+	}
+
+/* Here's the set of colors for a documents table(?) */
+.docs .table_content .row_lo  {
+	background-color:#FFFFFF;
+	}
+.docs .table_content .row_hi {
+	background-color:#E0FFE0;
+	}
+.docs .table_content .row_sel {
+	background-color:#CCFFCC;
+	}
+.docs .table_content .head_lo {
+	background-color:#33CC33;
+	}
+.docs .table_content .head_hi {
+	background-color:#99FF99;
+	}
+.docs .table_content .head_sel {
+	background-color:#66CC66;
+	}
+.docs .table_footing_container {
+	background-color:#99FF99;
+	}
+
+.table_head {
+	z-index:10;
+	}
+.table_body {
+	position:relative;
+	}	
+		
+.table_vertical_scrollbar { 
+	width: 11px; 
+	height: 100%;
+	position: absolute;
+	}
+.table_vertical_scrollbar_top  { float: left; }
+.table_vertical_scrollbar_bottom { float: right; }
+.table_vertical_scrollbar_center {
+	margin: 0px 10px 0px 10px;
+	}
+
+
+.table_horizontal_scrollbar { 
+	height: 11px; 
+	width: 100%;
+	position: absolute;
+	}
+.table_horizontal_scrollbar_left  { float: left; }
+.table_horizontal_scrollbar_right { float: right; }
+.table_horizontal_scrollbar_center {
+	margin: 0px 10px 0px 10px;
+	}
+
+#table1_vdot, #table1_hdot,
+#table2_vdot, #table2_hdot,
+#table3_vdot, #table3_hdot {
+	width: 10px;
+	height: 10px;
+	background: url('/design/exploratory/simple_panes/images/sliders/proto_dot.png') no-repeat top left;
+	position: relative;
+	top: 0;
+	left: 0;
+	}
+		
+.draggable {
+	position: absolute;
+	cursor: pointer;
+	}
+	
+
+.lastLockedColDiv,
+.lastLockedCol {
+    border-right:1px solid silver;
+    }
+
+/*
+thead.lockedTHead {position:relative;
+			z-index:30;
+			}
+*/
+
+div#tbl-container {
+			width: 550px;
+			height: 252px;
+			overflow: auto;
+			}
+.table_container {overflow:auto}
+/* div#table1_table_container {
+			width: 550px;
+			height: 252px;
+			overflow: auto;
+			}
+			*/
+
+table {
+			table-layout: fixed; 
+			border-collapse: collapse;
+			background-color: white;
+			text-overflow:ellipsis;
+/*			width:700px; */
+			}
+
+div#tbl-container table th {
+/*			width: 120px;  */
+			}
+
+td                {vertical-align:middle
+                  }
+
+thead th, thead th.lockedCol	{
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			background-color: #6666CC;
+			color: white;
+			cursor: pointer; 
+			position:relative;
+			}
+	
+thead th {		z-index: 20;
+			top: expression(parentNode.parentNode.parentNode.parentNode.scrollTop-2);   /* for IE */
+		
+}
+
+thead th.lockedCol {z-index: 40;
+			background-color:#CC99CC}
+
+
+.lockedColDiv {	position:relative; 
+			height:100%;
+			vertical-align:middle;
+	 		z-index:30}
+.lockedHdrDiv {	position:relative;			
+			height:100%;
+			vertical-align:middle;
+	 		z-index:29;
+			background-color: transparent;
+			color: white;
+}
+
+.lockedColDiv .lockedHdrDiv {background-color:transparent;height:100%;width:100%}
+
+
+
+td.lockedCol,th.lockedCol {padding:0px;
+background-color:#FFEAFF;
+			/* left: expression(document.getElementById("tbl-container").scrollLeft); */
+			/*  for performance reasons, the following is used instead  */
+			left:  expression(parentNode.parentNode.parentNode.parentNode.scrollLeft);  /* for IE */
+			position:relative;
+   }
+.lockedColDiv {padding:4px}
+
+td.lockedCol div.lockedColDiv {background-color:transparent;z-index:100}
+th.lockedCol div.lockedColDiv {background-color:#CC99CC;}
+
+.column_resize_handle,
+.column_resize_handle .lockedColDiv
+				 {width:1px;
+			      background-color:#CCCCCC;
+			      cursor:e-resize;
+			      border:none;
+			      padding:0px;
+			      }
+
+
+
+
+
+

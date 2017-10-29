@@ -1,0 +1,44 @@
+html, body
+{
+	margin: 0;			/* Remove body margin/padding */
+	padding: 0;
+	overflow: hidden;	/* Remove scroll bars on browser window */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+#header { padding: 1em; }
+
+#appContainer {
+	/* Height is set to match window size in $().ready() below */
+}
+#leftContainer {
+	width: 150px;
+	padding: 8px;
+	overflow: auto;		/* Scroll bars appear as needed */
+}
+#topPane {				/* Top nested in right pane */
+	padding: 8px;
+	height: 250px;		/* Initial height */
+	min-height: 75px;	/* Minimum height */
+	overflow: auto;
+}
+#bottomPane {			/* Bottom nested in right pane */
+	padding: 8px;
+	min-height: 10px;
+	min-height: 75px;	/* Minimum height */
+	overflow: auto;
+}
+#appContainer .vsplitbar {
+	width: 6px;
+	background: #D7E8FF url(/global/images/vgrabber.gif) no-repeat center;
+}
+#appContainer .vsplitbar.active, #appContainer .vsplitbar:hover {
+	background: #678FC2 url(/global/images/vgrabber.gif) no-repeat center;
+}
+#appContainer .hsplitbar {
+	height: 6px;
+	background: #D7E8FF url(/global/images/hgrabber.gif) no-repeat center;
+}
+#appContainer .hsplitbar.active, #appContainer .hsplitbar:hover {
+	background: #678FC2 url(/global/images/hgrabber.gif) no-repeat center;
+}

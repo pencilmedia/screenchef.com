@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww15400\viewh17040\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs32 \cf0 Approve and Reject action dialogs\
+prototype: Yes\
+author: Joel Nave\
+updated: 11/13/2007 by Joel Nave\
+\
+The Approve and Reject action dialogs are common global actions available to all workflow objects that support approval and rejection of a workflow state.  It is available as a button in the object-level actions. \'a0This action dialog adheres to all Action Dialog general specifications unless noted in this document.\
+\
+*** General ***\
+Dialog size:  675 x 560\
+Initial Focus: \'a0UserID input field.  If this field is not displayed, then the Password input field.  \
+\
+\
+*** Header ***\
+Title: \'a0"Approve for [X]" or "Reject for [X]", where X is the status \
+Subtitle: \'a0"Type . Unique Identifier"\
+\
+\
+*** Message Area ***\
+Help Text: \'a0\
+- "Provide sign-off identification, specify users to notify and provide necessary comments.  Sign-off notifications can be sent as urgent by selecting the "Send notification as urgent" option.  \
+Errors:\
+- DMS: "You have [2] errors"\
+- Inline:  "[UserID] is a required field"\
+Warnings:  None\
+\
+\
+*** Content Area ***\
+\
+Sign-off field set\
+- The "For" section will contain a list of users / user groups that the logged in user can sign-off for on this object.  \
+- "For" is required\
+- Display order will be 1) logged in user 2) any user groups the logged in user can approve for 3) any sign-offs that have been escalated from another user 4) any sign-offs that have been transfered from another user\
+\
+- The logged in user's name is checked by default under "For:"\
+- If the logged in user is the only name listed under "For:", the checkbox shall be disabled so that the user cannot de-select it.\
+- If applicable, the logged in user's responsibilities shall be displayed in parenthesis to the right of their name.  This will wrap if there are many responsibilities for the user\
+\
+- If a sign-off has been escalated to the user "(escalated)" shall be displayed to the right of their name\
+- If a sign-off has been transfered to the user "(transfered authority)" shall b displayed to the right of their name\
+\
+- If applicable, "User ID" is displayed and indicated as required\
+- Password is required\
+\
+Notify field set\
+- No users shall be defaulted to notify\
+- Notification is not required\
+\
+\
+*** Action Bar ***\
+Approve / Reject: \'a0Executes sign-off action and will send notifications as appropriate\
+   - Note that this action will either be "Approve" or "Reject"\
+Cancel: \'a0Closes dialog without executing action\
+Send notifications as urgent: \'a0\'a0Checkbox option. \'a0Will send notifications with urgent flag. \'a0\
+\
+\
+*** Post Action User Feedback ***\
+There is no user feedback after this action is completed \
+\
+*** Persistence ***\
+There is no persistence associated with this dialog}

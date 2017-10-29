@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="shortcut icon" href="img/favicon.png">
+        <meta name="description" content="">
+        <!-- For iOS web apps-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+        <!-- Global Navigation - Complete Styles
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="css/global_navbar.css">
+        
+        <title>Global Navigation</title>
+    </head>
+
+    <body>
+        
+        <!-- Global Navbar 
+        ================================================== -->
+        <header class="paradata-global-navbar" role="navigation">
+    <!-- App Switcher Menu -->
+    <div class="paradata-nav-box">
+        <button type="button" id="paradata-app-switcher-trigger" class="paradata-app-switcher-trigger">
+            <img src="/global_nav/img/paradata_tile.png" alt="Paradata Solutions">
+            <span>Customer Accounts</span>
+        </button>
+        <nav id="paradata-app-switcher-menu" class="paradata-app-switcher-menu paradata-animate">
+            <ul class="paradata-app-menu paradata-apps" role="menu">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/pages/bom.html" data-id="bom-advantage">BOM Advantage</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/pages/catalog.html" data-id="catalog-optimizer">Catalog Optimizer</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/new_material.html" data-id="@@nmrID">New Material Request</a></li>
+            </ul>
+            <ul class="paradata-app-menu paradata-admin" role="menu">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="/pages/manager.html" data-id="manage-users">Manage Users</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-id="manage-data">Manage Data Dictionary</a></li>
+                <li class="paradata-divider">&nbsp;</li>
+                <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="/" data-id="customer-accounts">Customer Accounts</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-id="manage-use">Manage Usage</a></li>
+            </ul>
+            <p class="paradata-branding"><img src="/global_nav/img/logo_paradata.png"></p>
+        </nav>
+    </div>
+    <!-- Back Button -->
+    <button class="paradata-btn paradata-btn-icon paradata-go-back" title="Back to Previous Page" data-toggle="tooltip" data-placement="right" onclick="window.location.href='index.html'"><i class="paradata-fa paradata-chevron-left"></i></button>
+    <!-- Courtesy Menu -->
+    <div class="paradata-nav-box">
+        <!--<button type="button" class="paradata-btn paradata-btn-icon" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="paradata-fa paradata-inbox"></i></button>-->
+        <button id="paradata-courtesy-menu-trigger" class="paradata-btn paradata-courtesy-menu-trigger" type="button">Henry Lowell<span class="paradata-caret"></span></button>
+        <ul class="paradata-courtesy-menu paradata-app-menu paradata-animate paradata-fadeIn" role="menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Profile</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Settings</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reset Password</a></li>
+            <li role="presentation" class="paradata-divider"></li>
+            <li class="paradata-dropdown-header">Prototype Only</li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/styleguide.html">Style Guide</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="/authenticate.html">Logout</a></li>
+        </ul>
+    </div>
+</header>
+
+        <!-- App Shell
+        ================================================== -->
+        <main role="main">
+            <section class="app-shell">
+                <h1>Conflict-free Global Navigation</h1>
+                <p>App Switcher
+                    <ul>
+                        <li>has slide in/ out animation</li>
+                    </ul>
+                </p>
+                <p>Courtesy Menu
+                    <ul>
+                        <li>has fadeIn animation</li>
+                    </ul>
+                </p>
+                <p>Both Menus
+                    <ul>
+                        <li>will close when you click anywhere on page</li>
+                        <li>will close when content is scrolled</li>
+                        <li>upon close by scroll or click anywere will remove focus state on buttons (selected state)</li>
+                        <li>both menus can be open at same time</li>
+                    </ul>
+                </p>
+            </section>
+        </main>
+
+        <!-- JavaScripts
+        ================================================== -->
+        <script src="js/navigation.js"></script>
+
+    </body>
+</html>

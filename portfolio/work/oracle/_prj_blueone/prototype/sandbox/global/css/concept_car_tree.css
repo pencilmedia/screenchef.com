@@ -1,0 +1,34 @@
+/*******************************************
+	CAR LEFT MENU STYLES
+*******************************************/
+.treemenu .ygtvlm 					{ background: url(global/images/treeview/collapse.png) 7px 0 no-repeat; width: 18px;height: 18px;cursor: pointer;}
+.treemenu .ygtvlmh 					{ background: url(global/images/treeview/collapse.png) 7px 0 no-repeat; width: 18px;height: 18px;cursor: pointer;}
+
+.treemenu .ygtvtp 					{ background: url(global/images/treeview/expand.png) 	7px 0 no-repeat; width: 1.5em; height: 22px; cursor: pointer }
+.treemenu .ygtvtph 					{ background: url(global/images/treeview/expand.png) 	7px 0 no-repeat; width: 1.5em; height: 22px; cursor: pointer }
+
+.treemenu .ygtvtm 					{ background: url(global/images/treeview/collapse.png) 7px 0 no-repeat; width: 1.5em; height: 22px; cursor: pointer }
+.treemenu .ygtvtmh 					{ background: url(global/images/treeview/collapse.png) 7px 0 no-repeat; width: 1.5em; height: 22px; cursor: pointer }
+
+.treemenu .ygtvlp 					{ background: url(global/images/treeview/expand.png) 	7px 0 no-repeat; width: 18px; height: 16px; cursor: pointer;}
+.treemenu .ygtvlph 					{ background: url(global/images/treeview/expand.png) 	7px 0 no-repeat; width: 18px; height: 16px; cursor: pointer;}
+
+.treemenu .ygtvtn 					{ background: transparent;  width: 1.5em; height: 20px; }
+.treemenu .ygtvln 					{ background: transparent; width: 1.5em; height: 20px; }
+
+.treemenu .ygtvloading 				{ background: url(global/images/treeview/loading.gif) 5px 4px no-repeat; width: 1.5em; height: 22px; }
+
+
+.treemenu .ygtvspacer 				{ height: 10px; min-width:16px; max-width:16px; width: 16px; margin: 2px;}
+.treemenu .ygtvdepthcell 			{ background: transparent; width: 1.5em; height: 20px; }
+.treemenu .ygtvblankdepthcell 		{ background: transparent;  width: 1.5em; height: 20px; }
+.treemenu .ygtvitem 				{ border: 0; white-space:nowrap; }  
+.treemenu .ygtvitem table 			{ width:100%; }
+.treemenu .ygtvitem table tr,
+.treemenu .ygtvitem table td 		{ white-space:nowrap; }
+.treemenu .ygtvitem table td img 	{ float: left; margin-right: 5px; }
+.treemenu .ygtvitem table td 		{ white-space: nowrap; }
+.treemenu .ygtvitem table td a 		{ text-transform: capitalize; color: #333; }
+.treemenu .ygtvitem a:hover 		{ text-decoration: underline }
+
+.treemenu .emphasis					{ font-weight: bold; }

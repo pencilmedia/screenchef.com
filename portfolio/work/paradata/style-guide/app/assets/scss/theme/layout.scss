@@ -1,0 +1,26 @@
+/* BEGIN: layout.scss
+// -----------------------------------------------------*/
+
+.field-mapping {
+     margin: 0 $pageMargin;
+     *[class^='col-sm'] {
+          padding-left: 0;
+     }
+     .title-group {
+          border-bottom: 1px solid $borderColor;
+     }
+     .row {
+          line-height: 34px;
+          margin-bottom: 10px;
+          .form-control {
+               margin-bottom: 0;
+          }
+          div {
+               &:last-child {
+                   .fa {
+                    color: $green;
+                   }
+               }
+          }
+     }
+}

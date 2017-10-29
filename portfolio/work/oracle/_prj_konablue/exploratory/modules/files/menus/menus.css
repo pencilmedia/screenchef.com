@@ -1,0 +1,124 @@
+/*
+	MENU STYLES
+*/
+
+.menu {
+	cursor: pointer;
+}
+
+/*
+	Attributes of all menus
+*/
+ul.menu, ul.menu li ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 120px;
+}
+
+ul.menu li:hover,
+ul.menu li.over {
+	background: #7398dd;
+}
+
+
+
+/*
+	FIRST-LEVEL MENUS
+*/
+ul.menu {
+	line-height: 18px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+ul.menu li {
+	padding: 0px 0px 0px 3px;
+}
+
+/*
+	CHILDREN MENUS
+*/
+
+
+/*
+	Hiding children menus
+*/
+ul.menu li ul,
+ul.menu li ul li ul,
+ul.menu li:hover ul li ul,
+ul.menu li.over ul li ul {
+	display: none;
+	position: absolute;
+	border: 1px solid #ccc;
+	margin: -19px 0px 0px 0px;
+	background: #fff;
+	width: 130px;
+	z-index: 1010;
+}
+
+/*
+	Showing children menus
+*/
+ul.menu li:hover ul,
+ul.menu li.over ul,
+ul.menu li:hover ul li:hover ul,
+ul.menu li.over ul li.over ul {
+	display: block;
+}
+
+/*
+	Indicate the li we are on for all children after the top
+	NOTE: No need to add further explicit css, unless you want child
+		li tags to have different behaviors.
+*/
+
+
+/*
+	Position children lists somewhere to the right
+*/
+ul.menu li:hover ul,
+ul.menu li.over ul {
+	left: 99%;
+}
+
+
+
+
+
+
+/*
+	Other definitions
+*/
+
+
+/*
+	This is used to "float" the raquo or graphic indicator as float
+	will not work so hot here.
+*/
+ul.menu span {
+	position: absolute;
+	right: 5px;
+}
+
+
+ul.menu hr {
+	display: none;
+}
+
+ul.menu div.line {
+	height: 1px;
+	width: 98%;
+	border-bottom: 1px solid #ccc;
+	color: #ccc;
+	background-color: #ccc;
+}
+
+/*
+	Positioning menu shell absolutely
+*/
+
+#menu_shell {
+	position: absolute;
+	z-index: 1000;
+}

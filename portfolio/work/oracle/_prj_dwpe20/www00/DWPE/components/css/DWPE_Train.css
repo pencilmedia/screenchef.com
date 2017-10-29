@@ -1,0 +1,394 @@
+
+/*-------------------------------- 
+  Trains
+----------------------------------*/
+UX.dwpe-trainset
+{	position:relative;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+
+UX.dwpe-trainset UL
+{
+	padding: 0;
+}
+
+UX.dwpe-trainset TABLE
+{
+	border-collapse: collapse;
+}
+UX.dwpe-trainset TABLE TR TD
+{
+	padding: 0;
+	maring: 0;
+}
+
+
+UX.dwpe-trainset TABLE TD.track div,
+UX.dwpe-trainset.disabled LI.selected TABLE TD:last-child div,
+UX.dwpe-trainset.disabled LI.selected + LI TABLE TD:first-child div
+{ 
+	height:1px;
+	min-width:20px;
+	width:100%;
+	background-color:#A6B3C8;
+}
+
+
+UX.dwpe-trainset LI.selected TABLE TD:last-child div,
+UX.dwpe-trainset LI.selected + LI TABLE TD:first-child div
+{ background-color: #3463D3 }
+UX.dwpe-trainset LI.visited TABLE TD:last-child div,
+UX.dwpe-trainset LI.visited + LI TABLE TD:first-child div
+{ background-color: #72007C }
+
+
+UX.dwpe-trainset>DIV.trains-container
+{	
+ 	position:relative;
+ 	white-space:nowrap;
+	display:block;	
+	border:none;
+	margin:0px;
+	padding:0px;
+	height:21px;
+
+}
+
+DIV.trains-container>DIV.left
+{	
+	padding:0px;
+	margin:0px;
+	position:relative;
+	display:inline-block;
+	white-space:nowrap;
+	width:75%;
+	z-index:1;
+}
+
+DIV.trains-container>DIV.right
+{	
+	position:relative;
+	padding:0px;
+	margin:0px;
+	display:inline-block;
+	white-space:nowrap;
+	text-align:right;
+	width:25%;
+
+}
+
+
+/* train styles*/
+UL.dwpe-train
+{	
+	position:relative;
+	margin:0px;
+	padding:0px;
+	z-index:0;
+	white-space:nowrap;
+	display:inline-block;
+	border:none;
+	line-height:20px;
+}
+
+LI.train-stop,
+LI.train-parent
+{	
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	position:relative;
+	display:inline-block;
+
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #003286;
+
+	border: none;
+	padding:0px;
+	margin:0px;
+
+	text-decoration:none;
+	white-space:nowrap;
+	cursor: pointer;
+	
+	
+	max-width: 30%;
+}
+
+UL.DWPE_window_overflow LI TABLE TR.train-track { display: none; }
+
+LI.train-stop table tr td { color: #737373; }
+LI.train-stop.selected table tr td { color: #003286; }
+LI.train-stop.visited table tr td { color: #72007C; }
+LI.train-stop.selected+LI.train-stop table tr td { color: #003286; }
+
+
+LI.train-stop.selected table tr td
+{
+	font-weight:bold;	
+}
+LI.train-stop table tr td.track 
+{
+	width: 50%;
+	padding: 0;
+}
+
+
+LI.train-stop table tr td.train-stop-icon,
+LI.train-stop.disabled:hover table tr td.train-stop-icon,
+UX.dwpe-trainset.disabled LI.train-stop table tr td.train-stop-icon,
+UX.dwpe-trainset.disabled LI.train-stop.selected table tr td.train-stop-icon,
+UX.dwpe-trainset.disabled LI.train-stop.selected+LI.train-stop table tr td.train-stop-icon
+{
+	background:url(../images/train_disabled.png) no-repeat;
+	padding:7px 6px 7px 7px;
+}
+
+UX.dwpe-trainset .dwpe-overflow-btn 
+{
+	margin:13px 0;
+}
+
+
+LI.train-stop.selected,
+UX.dwpe-trainset.disabled LI.train-stop,
+LI.train-stop.selected:hover{ cursor: default; }
+
+LI.train-stop.visited.selected table tr td.train-stop-icon,
+LI.train-stop.visited.selected:hover table tr td.train-stop-icon,
+LI.train-stop:hover table tr td.train-stop-icon
+{
+	background:url(../images/train_disabled.png) no-repeat;
+}
+
+LI.train-stop.selected table tr td.train-stop-icon,
+LI.train-stop.visited.selected table tr td.train-stop-icon,
+LI.train-stop.visited.selected:hover table tr td.train-stop-icon
+{
+	background:url(../images/train_active.png) no-repeat;
+}
+
+
+LI.train-stop.selected+LI.train-stop table tr td.train-stop-icon
+{
+	background:url(../images/train_unvisited_enabled.png) no-repeat;
+}
+
+
+LI.train-stop.visited table tr td.train-stop-icon,
+LI.train-stop.selected+LI.train-stop.visited table tr td.train-stop-icon
+
+{
+	background:url(../images/train_visited.png) no-repeat;
+}
+
+LI.train-stop.visited:hover table tr td.train-stop-icon,
+LI.train-stop.selected+LI.train-stop.visited:hover table tr td.train-stop-icon,
+UX.dwpe-trainset.non-sequential LI.train-stop.visited:hover table tr td.train-stop-icon,
+UX.dwpe-trainset.non-sequential LI.train-stop.selected+LI.train-stop.visited:hover table tr td.train-stop-icon
+{
+	background:url(../images/train_visited_hover.png) no-repeat;
+}
+
+LI.train-stop table tr td.train-stop-icon SPAN
+{
+	position: absolute;
+	padding: 4px;
+	background-repeat: no-repeat;
+	background-color: #fff;
+}
+
+/* Stop Warning and Error Icon */
+LI.train-stop.error table tr td.train-stop-icon SPAN { background:url(../images/train_error_alert.png) no-repeat; }
+LI.train-stop.warning table tr td.train-stop-icon SPAN { background:url(../images/train_warning_alert.png) no-repeat; }
+LI.train-stop.complete table tr td.train-stop-icon SPAN { background:url(../images/train_complete_alert.png) no-repeat; }
+LI.train-stop.information table tr td.train-stop-icon SPAN { background:url(../images/train_information_alert.png) no-repeat; }
+
+UX.dwpe-trainset.non-sequential LI.train-stop:hover table tr td.train-stop-icon
+{
+	background:url(../images/train_unvisited_ena.png) no-repeat;
+}
+
+
+/* Non-Sequential allows clicking on any step */
+UX.dwpe-trainset.non-sequential LI.train-stop.selected table tr td.train-stop-icon,
+UX.dwpe-trainset.non-sequential LI.train-stop.visited.selected table tr td.train-stop-icon
+{
+	background:url(../images/train_active.png) no-repeat;
+}
+UX.dwpe-trainset.non-sequential LI.train-stop:hover table tr td
+{
+	color: #003286;
+}
+UX.dwpe-trainset.disabled UL
+{
+	opacity:.5;
+	cursor:default;
+	color:#000000;
+}
+
+UX.dwpe-trainset LI.train-parent.parent-fore,
+UX.dwpe-trainset LI.train-parent.parent-aft
+{
+    top: -14px;
+    height:10px;
+    width:16px;
+}
+UX.dwpe-trainset LI.train-parent.parent-fore
+{
+    background:url(../images/train_parent_fore.png) no-repeat  4px 0 ;
+	margin-right: 5px;
+}
+UX.dwpe-trainset LI.train-parent.parent-aft
+{
+    background:url(../images/train_parent_aft.png) no-repeat;
+	margin-left: 5px;
+}
+/*parent-fore
+parent-aft*/
+UX.dwpe-trainset.disabled UL LI.train-stop table tr td,
+UX.dwpe-trainset.disabled UL LI.train-stop.disabled td,
+UX.dwpe-trainset.disabled UL LI.train-stop.disabled:hover td
+{
+	color: #000;
+	font-weight: normal;
+}
+
+/*level 1 trains*/
+.GlobalRegion LI.train-stop  {}
+.GlobalRegion LI.train-stop.selected{}
+
+/*level 2 trains*/
+.PrimaryRegion LI.train-stop  {}
+.PrimaryRegion LI.train-stop.selected{}
+
+/*level 3 trains*/
+.SecondaryRegion LI.train-stop {}
+.SecondaryRegion LI.train-stop.selected{}
+.WindowRegion LI.train-stop  {}
+.WindowRegion LI.train-stop.selected{}
+
+/*level 4 trains*/
+.TiertiaryRegion LI.train-stop  {}
+.TiertiaryRegion LI.train-stop.selected{}
+
+.TiertiaryRegion LI.train-stop.last,
+.TiertiaryRegion LI.train-stop.selected.last{}
+
+/*hover*/
+LI.train-stop:hover
+{
+	color:#0090cc;
+}
+
+
+.GlobalRegion LI.train-stop.selected:hover
+{	color:#fff;	}
+
+.PrimaryRegion LI.train-stop.selected:hover,
+.SecondaryRegion LI.train-stop.selected:hover,
+.TiertiaryRegion LI.train-stop.selected:hover
+{	color:#000;	}
+
+
+
+/*
+.TiertiaryRegion LI.train-stop:hover
+{	text-decoration:underline	}
+*/
+
+/*disabled*/
+UL.dwpe-train>LI.train-stop.disabled td,
+UL.dwpe-train>LI.train-stop.disabled:hover td
+{	
+	cursor:default;
+	color: #737373;
+}
+
+
+.GlobalRegion UL.dwpe-trains>LI.disabled,
+.GlobalRegion UL.dwpe-trains>LI.disabled:hover
+{	color:#ffffff}
+
+
+.PrimaryRegion UL.dwpe-trains>LI.disabled,
+.PrimaryRegion UL.dwpe-trains>LI.disabled:hover
+{	color:#737373}
+
+
+LI.dwpe-train SPAN.close 
+{
+	margin-left: 6px;
+	opacity:.6;
+}
+
+LI.dwpe-train SPAN.close:hover 
+{
+	opacity:1;
+}
+
+UL.DWPE_window_overflow>LI.train-stop
+{
+	display:block;
+	margin:1px 0px;
+	padding:2px 9px;
+	background:none;
+	border:none;
+}
+
+
+
+UL.DWPE_window_overflow>LI.train-stop:hover
+{
+	background-color:#dce2e8;
+	color:#000000;
+}
+
+UL.DWPE_window_overflow>LI.train-stop.disabled,
+UL.DWPE_window_overflow>LI.train-stop.disabled:hover
+{	background:transparent;
+	opacity:.5;
+	color:#000000;
+	cursor:default;
+}
+
+/*train panels*/
+DIV.dwpe-train-panels
+{	
+	position:relative;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	border:1px solid #708ba4;
+	border-width:1px 1px;
+}
+
+DIV.dwpe-train-panels>DIV
+{
+	display:none;
+	height:50px;
+	text-align:left;
+	overflow: auto;
+	clear: both;
+	border:none;
+	padding:8px;
+}
+
+.dwpe-train-panels>DIV>iframe { background:#fff;overflow-y:auto; width:100%; height:100%; }
+.GlobalRegion DIV.dwpe-train-panels  {	background-color:#53708b; color:#ffffff;border-color:#425b71}
+.GlobalRegion LI.train-stop table tr td,
+.PrimaryRegion LI.train-stop table tr td
+{ color: #fff; }
+
+.SecondaryRegion LI.train-stop table tr td
+{ color: #000; }
+
+
+.PrimaryRegion DIV.dwpe-train-panels  {	background-color:#edf0f3; color:#000000;border-color:#aabac8}
+.SecondaryRegion DIV.dwpe-train-panels  {	background-color:#ffffff; color:#000000;border-color:#aabac8}
+.WindowRegion DIV.dwpe-train-panels  {	background-color:#ffffff; color:#000000;border-color:#aabac8}
+.TiertiaryRegion DIV.dwpe-train-panels  {	background-color:#ffffff; color:#000000;border-color:transparent}
+
+
+

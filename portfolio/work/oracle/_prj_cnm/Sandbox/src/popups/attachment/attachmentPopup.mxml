@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="450" title="Add Attachment/Reference"
+	 paddingBottom="0" paddingTop="10" paddingLeft="0" paddingRight="0"
+	horizontalScrollPolicy="off" borderAlpha="100" dropShadowEnabled="true" cornerRadius="0" 
+	showCloseButton="true" close="closeAttachmentPopup();" currentState="state_attachment">
+	<mx:states>
+		<mx:State name="state_attachment">
+			<mx:SetEventHandler target="{combobox1}" name="change" handler="currentState='state_reference'"/>
+		</mx:State>
+		<mx:State name="state_reference">
+			<mx:SetProperty target="{label1}" name="text" value="Reference"/>
+			<mx:RemoveChild target="{listFiles}"/>
+			<mx:RemoveChild target="{btnUpload}"/>
+			<mx:AddChild relativeTo="{griditem1}" position="lastChild">
+				<mx:HBox horizontalGap="0">
+					<mx:TextInput height="25" cornerRadius="0" />
+					<mx:LinkButton icon="@Embed(source='../assets/images/icons/ico_search.png')" height="25" cornerRadius="0"
+						click="searchRecords();" />				
+				</mx:HBox>
+			</mx:AddChild>
+			<mx:SetEventHandler target="{combobox1}" name="change" handler="currentState='state_attachment'"/>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+	    <![CDATA[
+	        import mx.collections.ArrayCollection;
+	        import mx.controls.Alert;
+	        import mx.managers.PopUpManager;
+	        import popups.create.createPopup;
+	            
+	        // CLOSE POPUP
+			private function closeCreatePopup():void
+	        {
+	        	PopUpManager.removePopUp(this);
+			}
+			
+	        // DROPDOWN CONTENT
+	        [Bindable]
+	        public var attachType:ArrayCollection = new ArrayCollection(
+	        [ 
+	        	{label:"Attachment", data:1}, 
+	            {label:"Reference", data:2}
+	        ]);
+	        
+			private function closeAttachmentPopup():void
+	        {
+	        	PopUpManager.removePopUp(this);
+			}
+			
+			private var _arrUploadFiles:Array;
+            private var _numCurrentUpload:Number = 0;
+            private var _refAddFiles:FileReferenceList;    
+            private var _refUploadFile:FileReference;
+
+// Called to add file(s) for upload
+            private function addFiles():void {
+                _refAddFiles = new FileReferenceList();
+                _refAddFiles.addEventListener(Event.SELECT, onSelectFile);
+                _refAddFiles.browse();
+            }
+            // Called when a file is selected
+            private function onSelectFile(event:Event):void {
+                var arrFoundList:Array = new Array();
+                // Get list of files from fileList, make list of files already on upload list
+                for (var i:Number = 0; i < _arrUploadFiles.length; i++) {
+                    for (var j:Number = 0; j < _refAddFiles.fileList.length; j++) {
+                        if (_arrUploadFiles[i].label == _refAddFiles.fileList[j].name) {
+                            arrFoundList.push(_refAddFiles.fileList[j].name);
+                            _refAddFiles.fileList.splice(j, 1);
+                            j--;
+                        }
+                    }
+                }
+                if (_refAddFiles.fileList.length >= 1) {
+                    for (var k:Number = 0; k < _refAddFiles.fileList.length; k++) {
+                        _arrUploadFiles.push({label:_refAddFiles.fileList[k].name, data:_refAddFiles.fileList[k]});
+                    }
+                    listFiles.dataProvider = _arrUploadFiles;
+                    listFiles.selectedIndex = _arrUploadFiles.length - 1;
+                }                
+                if (arrFoundList.length >= 1) {
+                    Alert.show("The file(s): \n\n• " + arrFoundList.join("\n• ") + "\n\n...are already on the upload list. Please change the filename(s) or pick a different file.", "File(s) already on list");
+                }
+                if (_arrUploadFiles.length == 0) {
+                    btnUpload.enabled = false;
+                } else {
+                    btnUpload.enabled = true;
+                }
+            }
+            
+			// SEARCH RECORDS POPUP
+	        import mx.managers.PopUpManager;
+	        import popups.search.searchRecordsPopup;
+	        
+	        public var searchRecordsPop:searchRecordsPopup;
+	        
+	        public function searchRecords():void
+	        {
+				searchRecordsPop = new searchRecordsPopup();
+				PopUpManager.addPopUp(searchRecordsPop, this, false);
+				searchRecordsPop.x = 300;
+				searchRecordsPop.y = 100;
+				closeAttachmentPopup();
+			}
+
+			
+	    ]]>
+	</mx:Script>
+	<mx:VBox id="attachmentBox" label="Search" width="100%" height="100%" paddingTop="10">
+        <mx:Grid width="100%" paddingLeft="10" paddingRight="20" paddingBottom="20">
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="Type"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%">
+        			<mx:ComboBox dataProvider="{attachType}" width="100%"  id="combobox1"/>
+        		</mx:GridItem>
+        	</mx:GridRow>
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="File Upload" id="label1"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%" id="griditem1">
+        			<mx:List id="listFiles" width="100%" height="25" allowMultipleSelection="false" cornerRadius="0" />
+        			<mx:Button id="btnUpload" label="Browse..." click="addFiles()"/>
+        		</mx:GridItem>
+        	</mx:GridRow>
+        	<mx:GridRow width="100%" height="100%">
+        		<mx:GridItem width="125" height="100%" horizontalAlign="right">
+        			<mx:Label text="Description"/>
+        		</mx:GridItem>
+        		<mx:GridItem width="100%" height="100%">
+        			<mx:TextInput width="100%" height="25" text="" cornerRadius="0" />
+        		</mx:GridItem>
+        	</mx:GridRow>
+        </mx:Grid>
+		<mx:HBox styleName="footer" width="100%">
+		    <mx:Button label="Help" />
+		    <mx:Spacer width="80%" />
+		    <mx:Button label="Cancel" click="closeAttachmentPopup();" />    	
+		    <mx:Button label="OK" />
+	    </mx:HBox>
+	</mx:VBox>
+</mx:TitleWindow>
+
+
+
+
+
+
+

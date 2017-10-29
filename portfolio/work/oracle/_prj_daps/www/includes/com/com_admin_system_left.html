@@ -1,0 +1,48 @@
+<style>
+#com_admin_system_left ul { overflow:hidden;}
+#com_admin_system_left .com_container
+{
+	padding:0;
+}
+#com_admin_system_left ul li a
+{
+	display:block;
+	padding:5px;
+	text-decoration:none;
+}
+#com_admin_system_left ul li a:hover
+{ background-color:#f5f5f5; }
+
+#com_admin_system_left ul li a.selected
+{
+	background:	#CFDEFF;
+}
+</style>
+<div id="com_admin_system_left" class="com">
+    <div class="widget_header">
+        <span class="widget_action maximize">&nbsp;</span>
+        <h3>Pages</h3>
+    </div>
+    <div class="widget_layout">
+        <div class="com_container">
+        	<!-- System Nav -->
+        	<ul id="admin_side_nav_system" class="admin_side_nav">
+            	<li><a href="#" id="sys_path" class="selected">Production Path Library</a></li>
+            </ul>
+
+        	<!-- Production Nav -->
+        	<ul id="admin_side_nav_production" class="admin_side_nav">
+            	<li><a href="#" id="prod_deliverable" class="selected">Deliverable Types</a></li>
+            	<li><a href="#" id="prod_asset">Asset Types</a></li>
+            	<li><a href="#" id="prod_attributes">Attributes Types</a></li>
+            	<li><a href="#" id="prod_path">Production Path Library</a></li>
+            	<li><a href="#" id="prod_workflow">Workflow Library</a></li>
+            </ul>
+
+        	<!-- Users Nav -->
+        	<ul id="admin_side_nav_users" class="admin_side_nav">
+            	<li><a href="#" id="users_workflow" class="selected">Workflow Library</a></li>
+            </ul>
+        </div>
+    </div>
+</div>  

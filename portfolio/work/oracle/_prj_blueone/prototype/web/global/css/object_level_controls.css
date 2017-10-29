@@ -1,0 +1,4 @@
+/* OBJECT LEVEL CONTROLS *****************************************************/
+.object_level_controls			{ margin: 0 10px 10px 5px; overflow: hidden; padding: 5px; }
+.object_level_controls select 	{ margin-right: 15px; }
+.object_level_controls button	{ margin-right: 3px; }

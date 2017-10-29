@@ -1,0 +1,132 @@
+/******************************************************************************
+OBJECT_FORM.CSS
+Description: Object Form related styles and definitions.
+******************************************************************************/
+p.bottom_buffer { /* This adds space to the bottom of a page that can't be padded through CSS cross-browser */
+	height: 20px;
+}
+.obj_form h3.first { 
+	margin-top: 0 !important; 
+}
+.obj_form .page_controls { 
+	padding-right: 16px;
+}
+.obj_form div.header {
+	position: fixed;
+	width: 100%; 
+}
+.obj_form div.content { 
+	position: fixed;
+	width: 100%; 
+	overflow: scroll; 
+	padding-top: 15px;
+ }
+.container.obj_form { 
+	margin: 0; 
+	padding: 0 10px 0 10px; 
+}
+.container.obj_form p { 
+	margin-bottom: 10px; 
+}
+.obj_form table {
+	margin-bottom: 30px; 
+}
+.obj_form table.grid {
+	width: 98%;
+}
+
+
+/******************************************************************************
+OBJECT ITEM WORKFLOW STYLES
+******************************************************************************/
+/* Status Indicator Styles */
+.item_workflow {
+	overflow: auto;
+	margin: 0 -10px;
+}
+
+table.workflow_diagram {
+	margin: 10px 0 10px 50px;
+	width: 0px;
+}
+table.workflow_diagram td {
+	
+}
+
+td.state {
+	color: #000;
+	width: 105px;
+	max-width: 105px;
+	min-width: 105px;
+	height: 50px;
+	text-align: center;
+}
+td.state a {
+	color: #000;
+}
+.completed {
+	background: url(../images/bgd_diagram_box_complete.png) no-repeat center center;
+}
+.completed:hover {
+	cursor: pointer;
+	font-weight: bold;
+	background: url(../images/bgd_diagram_box_complete_hover.png) no-repeat center center;
+}
+.completed.nohover:hover {
+	cursor: default;
+	font-weight: normal;
+	background: url(../images/bgd_diagram_box_complete.png) no-repeat center center;
+}
+.current {
+	font-weight: bold;
+	background: url(../images/bgd_diagram_box_current.png) no-repeat center center;
+}
+.held {
+	background: url(../images/bgd_diagram_box_held.png) no-repeat center center;
+}
+.held:hover {
+	cursor: pointer;
+	font-weight: bold;
+	background: url(../images/bgd_diagram_box_held_hover.png) no-repeat center center;
+}
+.held.nohover:hover {
+	cursor: default;
+	font-weight: normal;
+	background: url(../images/bgd_diagram_box_held.png) no-repeat center center;
+}
+
+.diagram_arrow {
+	width: 44px;
+	min-width: 16px;
+	background: url(../images/bgd_diagram_arrow_right.png) no-repeat right center;
+}
+.diagram_connector {
+	background: url(../images/bgd_diagram_arrow_connector.png) no-repeat center center;
+}
+.diagram_multiconnector {
+	background: url(../images/bgd_diagram_multi_connector.png) center center; /* there is NO no-repeat, creates a gap if you include it */
+}
+.diagram_corner {
+	background: url(../images/bgd_diagram_corner.png) no-repeat center center;
+}
+/******************************************************************************
+SUMMARY AND TABLE STYLES
+******************************************************************************/\
+.summary_object div.summary_container {	
+	width: 100%;
+	overflow: auto;
+	min-width: 625px;
+	clear: both;
+}
+.summary_list {
+	min-height: 85px;
+}
+.summary_object h3 { 
+	margin: 20px 10px 0 10px; 
+	margin-bottom: 15px;
+}
+.summary_object div.summary_container dl {
+	margin-bottom: 10px;
+}
+
+

@@ -1,0 +1,268 @@
+/* BEGIN: layout.scss
+// -----------------------------------------------------*/
+
+html, body {
+    height: 100%;
+}
+body {
+	padding-top: 30px; // account for header
+	&.authenticate {
+		background: lighten($main, 3%);
+		.global-navbar {
+			box-shadow: 0 1px 3px darken($main, 7%);
+		}
+		main {
+			padding-top: 10%;
+			form {
+				width: 50%;
+				margin: 0 auto;
+				label {
+					color: $main-tint;
+				}
+			}
+		}
+	}
+	/* Full Height Layout */
+	.full-height-flex {
+		@include flexbox();
+		height: 100%;
+		main {
+			@include flex(1 1 auto);
+			min-height: 0px;
+			// overflow-y: auto
+		}
+		@include flexDirection(column);
+	}
+	main {
+		padding: $pageMargin;
+		.workarea-container {
+			border: 1px solid $borderColor;
+			bottom: 0;
+			left: 0;
+			margin: 10px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			position: absolute;
+			right: 0;
+			top: 0;
+			> .nav-tabs {
+				height: 100%;
+				position: absolute;
+			}
+			&.tabs-left {
+				> .nav-tabs > li > a {
+					@include transition(.4s);
+				     &:hover {
+						@include transition(.4s);
+				     	background: none;
+				     	border-color: transparent;
+				     }
+				}
+			}
+			.tab-content {
+				> .tab-pane {
+					min-height: 400px;
+					.workarea {
+						.workarea-actions {
+							line-height: 31px;
+							padding-left: 40px; // Same as .tabs-left width + padding width
+							.chart-title {
+								text-align: center;
+								h3 {
+									display: inline-block;
+									margin-top: 10px;
+									width: auto;
+								}
+								h4 {
+									color: $grayDark;
+									margin-top: 0;
+									text-align: center;
+								}
+							}
+							.nav-charts {
+								> li {
+									> a {
+										@include border-radius(0);
+									}
+								}
+							}
+							.flex-column {
+								&:last-child {
+									padding-right: 5px;
+								}
+							}
+						}
+						.workspace {
+							margin-left: 40px;
+							// padding: 0 10px;
+							#highchart {
+								min-height: 300px;
+							}
+							.visualizations {
+								padding-left: 15px;
+								&.add-a-table {
+									width: 200px;
+								}
+								&.add-a-chart {
+									border-left: 1px solid $borderColor;
+								}
+								h3 {
+									margin: 0;
+									padding-left: 5px;
+									line-height: 36px;
+								}
+								header {
+									.chart-toggle {
+										margin-right: 10px;
+										text-align: right;
+										.btn-link {
+											background: $grayLight;
+											color: $grayDarkest;
+											margin-bottom: 3px;
+											margin-top: 5px;
+											padding-bottom: 3px;
+											padding-top: 3px;
+											font-size: 12px;
+											letter-spacing: 0;
+											@include border-radius(3px);
+											&:hover {
+												background: $gray;
+											}
+											&.active {
+												background: $gray;
+												color: $white;
+												@include box-shadow();
+											}
+										}
+									}
+								}
+								> ul {
+									list-style: none;
+									margin-top: $pageMargin;
+									padding: 0;
+									overflow: hidden;
+									li {
+										border: 1px solid $blueLightest;
+										float: left;
+										min-height: 135px;
+										width: 170px;
+										margin: 0 5px 5px 0;
+										@include transition(.25s);
+										&:hover {
+											cursor: pointer;								
+											border-color: $white;
+											background: lighten($blueLightest, 2%);
+											@include box-shadow();
+											.visualization {
+												background: $blueLight;
+											}
+										}
+										.visualization {
+											background: $blueLightest;
+											margin: 3px;
+											height: 85px;
+											padding-bottom: 5px;
+										}
+										> span {
+											display: block;
+											text-align: center;
+										}
+									}
+									&.highlight {
+										li {
+											opacity: .25;
+											&.on {
+												opacity: 1;
+											}
+											&:hover {
+												opacity: 1;
+											}
+										}
+									}
+								}
+							}
+							.lt-column {
+								width: 25%;
+								max-width: 190px;
+							}
+							.rt-column {
+								width: 75%;
+								border-left: 1px solid $borderColor;
+								padding-left: $pageMargin;
+								> li {
+									float: left;
+								}
+							}
+							@media(max-width: $screen-sm-min) {
+								.lt-column {
+									max-width: 100%;
+								}
+								.lt-column, .rt-column {
+									width: 100%;
+									> ul {
+										li {
+											float: left;
+										}
+									}
+								}
+							}
+							@media(max-width: $screen-md-min) {
+								
+							}
+						}
+					}
+					.workarea {
+						@include transition(.25s);
+						width: 100%;
+					}
+					.workarea-pane {
+						@include transition(.25s);
+						border-left: 1px solid $borderColor;
+						display: none;
+						height: 100%;
+						position: absolute;
+						right: 0;
+						top: 0;
+						> section {
+							margin: 0 10px;
+							> footer {
+								padding: 10px;
+								.btn {
+									margin: 0;
+									width: 100%;
+								}
+							}
+						}
+					}
+					&.pane-open {
+						.workarea {
+							@include transition(.25s);
+							width: 70%;
+						}
+						.workarea-pane {
+							@include transition(.25s);
+							display: block;
+							width: 30%;
+						}
+						@media(min-width: $screen-sm-min) {
+							.workarea {
+								width: 60%;
+							}
+							.workarea-pane {
+								width: 40%;
+							}
+						}
+						@media(min-width: $screen-lg-min) {
+							.workarea {
+								width: 80%;
+							}
+							.workarea-pane {
+								width: 20%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}

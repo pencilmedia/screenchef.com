@@ -1,0 +1,277 @@
+@font-face
+{
+font-family: uxdFont;
+src: url('../assets/fonts/Sansation_Light.ttf')
+    ,url('../assets/fonts/Sansation_Light.eot'); /* IE9+ */
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height:100%;
+	font-family: sans-serif;
+	font-size: small;
+	color: #333;
+	overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family:uxdFont; letter-spacing: .1em; }
+
+body { background: url('../img/iStockLady.jpg') no-repeat; background-size: cover; font-size: 14px; }
+
+a, a.visited
+{ text-decoration: none; color: #7988F9}
+
+header { height: 75px; background-color: #eaeaea; color:#fff; border-bottom:1px solid silver;}
+header img.logo { margin: 0; padding:13px 0 0 20px; cursor: pointer;}
+header img.uxd_logo { float:right; margin: 0; padding:15px 15px 0 0; cursor: pointer;}
+
+button { position: absolute; z-index:200; background: transparent;  color:#fff; font-size: 1.2em; padding: 10px 20px; border:none; cursor:pointer; white-space: nowrap;}
+
+button.one,
+button.three { width: 60%; left:0; text-align: right }
+
+button.one { 
+	top: 30%;
+	padding-right:2px;
+}
+button.two { 
+	left: 60%;
+	top: 55%;
+	padding-left:0;
+}
+button.three { 
+	top: 80%;
+	padding-right:2px;
+}
+
+button.one.arrow
+{	
+	left:60%;
+	top: 30%;
+	background:  url("../img/rt_arrow.png") no-repeat left center;
+}
+
+button.two.arrow
+{	
+	left:0%;
+	top: 55%;
+	width: 60%;
+	background:  url("../img/lt_arrow.png") no-repeat right center;
+}
+
+button.three.arrow
+{	
+	left:60%;
+	top: 80%;
+	background:  url("../img/rt_arrow.png") no-repeat left center;
+}
+
+.pane {opacity: 0.8; overflow: hidden; float: left;}
+.pane_title { display:none; font-size:1.0em; line-height: 20px; letter-spacing: 1px; text-align: center; padding-top:30px}
+.pane_title.left { color: #fff; }
+.pane_title.center { margin: 10px 0 20px 20px; text-align: left; padding-top:0;}
+
+#lt_pane { background-color: red; width:60%;}
+#ct_pane { background-color: #fff; width:0%; opacity: 0.5; }
+#rt_pane { background-color: #848484; width:40%;}
+
+.content_wrapper { background-color:#fff; margin-top:10px;height:100%; padding:20px; display:none; overflow:auto;}
+
+.page_tag	  	{ position: absolute; background: #333; text-align: center; opacity: 0.7;  height: 25px; bottom: -16px; z-index: 99; color: #fff; display:none; padding: 10px 0; overflow: hidden; white-space: nowrap;}
+.page_tag h2	{ font-size:1em; font-weight: normal; margin-top:0; cursor: pointer; }
+.marquee {
+  font-weight: lighter;
+  height: 175px;
+  margin: auto;
+  opacity: 0.9;
+  overflow: auto;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+  white-space: normal;
+  width: 90%;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.4em;
+}
+
+.tag_line		{ position: absolute; font-size:.8em; top:35px; right:30px; color:#000; letter-spacing: 2px;}
+
+.cursor { cursor: pointer;}
+
+.shadow { 
+	box-shadow : 0 10px 5px 5px #555 ;
+	-moz-box-shadow : 0 10px 5px 5px #555;
+	-webkit-box-shadow : 0 10px 5px 5px #555;
+	position: relative;
+	z-index: 5;
+}
+
+	/* ///////// Left pane styles /////////// */
+	.pane nav {
+	 	border:1px solid silverx; 
+	 	width:20%;
+	 	float:left;
+	 	padding-top: 5px;
+	 	position: absolute;
+	 	top: 130px;
+	}
+	
+	.pane nav ul {
+	 	padding:0;
+	 	margin: 0;
+	 	list-style: none;
+	}	
+
+	.pane nav ul li {
+	 	text-align: right;
+	 	white-space: nowrap;
+	 	overflow: hidden;
+	 	padding:0 5px 5px 0;
+	 	margin-bottom: 10px;
+	}
+	
+	.pane nav ul li a { paddingx-right:25px;}
+	.pane nav ul li a:visited { color: #333;}
+
+	.pane nav ul li:hover span { background: url('../img/arrow_light.png') no-repeat right center; }
+	.pane nav ul li.selected { font-weight: bold; }
+	.pane nav ul li.selected span { background: url('../img/arrow_dark.png') no-repeat right center; }
+
+
+	.nav_cursor{
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		margin-left:15px;
+	}
+	.pane section { 
+		border: 1px solid silverx; 
+		margin-left: 25%; 
+		padding: 105px 5px 5px 5px;
+		width: 70%;
+	}
+	
+	.pane_title_bar { position: absolute; top: 40px!important; margin: 20px 0 50px 0; text-align: right; width:20%; font-weight:lighter; font-size: 24px; white-space:nowrap; }	
+	.pane section article h3 { margin:0; font-weight: lighter; font-size: 25px; }
+	.pane section article p { line-height: 25px; margin-top:0px;}
+		
+	article.content.checklist  		{ padding-left: 125px; min-height:100px; background: url('../img/ico_checklist.png') no-repeat left center; }
+	article.content.profile_example	{ padding-left: 125px; min-height:100px; background: url('../img/ico_profile.png') no-repeat left center; }
+	article.content.profile_template{ padding-left: 125px; min-height:100px; background: url('../img/ico_profile_template.png') no-repeat left center; }
+	article.content.needs_wants		{ padding-left: 125px; min-height:100px; background: url('../img/ico_needs.png') no-repeat left center; }
+	article.content.task_matrix 	{ padding-left: 125px; min-height:100px; background: url('../img/ico_matrix.png') no-repeat left center; }
+	article.content.pdf 			{ padding-left: 125px; min-height:100px; background: url('../img/ico_pdf.png') no-repeat left center; }
+
+	.pane section article.content .toolkit .checklist {background: url('img/ico_checklist.png') no-repeat left center; }
+	.pane section article h4 { font-size: 22px; font-weight:lighter; margin: 35px 0 0 0; }
+	.pane section article h4+p { margin-top: 0; }
+	
+	#de_goals_section ul,
+	#de_principals_section ul { list-style: none; padding:none; }
+	#de_goals_section ul li,
+	#de_principals_section ul li { line-height: 25px; clear: both;}
+	#de_goals_section ul li span,
+	#de_principals_section ul li span { display:inline-block; height:40px; width: 30px; font-weight: bold; font-size: 18px; padding-right: 0px; float:left; }
+
+	
+/*.cards * { display: none; }*/
+
+		.card_panel {
+			position: relative;
+			width: 85%; 
+			height:80%;
+			margin: auto;
+			-webkit-perspective: 4000px;
+			-moz-perspective: 4000px;
+			opacity: 0.9;	
+		}
+		.card_closure { float: right; background-color:#333; color:#fff; margin:10px 0 0 0; padding: 5px 10px; font-size: 1.2em; font-weight: bold; cursor: pointer;}
+		.card_panel div
+		{ padding: 0 15px;}
+
+		.card_panel .front {
+			float: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 900;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #ccc;
+			background: #fff;
+
+			
+			-webkit-transform: rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateY(0deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			/* -- transition is the magic sauce for animation -- */
+			-o-transition: all .5s ease-in-out;
+			-ms-transition: all .5s ease-in-out;
+			-moz-transition: all .5s ease-in-out;
+			-webkit-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+		}
+
+		.card_panel.flip .front {
+			z-index: 900;
+			border-color: #eee;
+
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			
+			-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+		}
+		
+		.card_panel .back {
+			float: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 800;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #ccc;
+			background: #f5f5f5;
+			
+			-webkit-transform: rotateY(-180deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateY(-180deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			/* -- transition is the magic sauce for animation -- */
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}	
+		
+		.card_panel.flip .back {
+			z-index: 1000;
+			
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+
+			/*
+			-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			*/
+		}
+		
+		
+		/* -- cosmetics -- */
+		.card_panel.flip .action {display: none; }	
+	

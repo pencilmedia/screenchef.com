@@ -1,0 +1,39 @@
+/*** SEARCH ***/
+.search_main {
+
+	padding: 0px 5px 0px 10px;
+}
+
+.search_extra {
+	float: right;
+}
+
+/*** WINDOW CONTROLS ***/
+.controls_main {
+	float: left;
+	padding: 0px 5px 0px 5px;
+}
+
+.controls_main p {
+	color: #333;
+	font-weight: bold;
+}
+
+.controls_main p span.header_text {
+	display: block;
+	float: left;
+	margin: 0px 3px 0px 6px;
+	padding: 6px 0px 0px 0px;
+}
+
+
+/*** SESSION CONTROLS ***/
+.session_ctrls {
+	margin: 0px 10px 0px 0px;
+	padding: 0px 3px 0px 3px;
+}
+
+.session_ctrls img {
+	float: left;
+	padding: 0px 10px 0px 10px;
+}

@@ -1,0 +1,89 @@
+	body.idd div.step input.file_selector
+	{
+		height: 22px;
+	}
+	
+	body.idd div.content
+	{
+		padding-top: 20px;
+	}
+	body.idd div.step div.import_mapping
+	{
+		width: 700px;
+		border:auto;
+		margin:0 auto;
+
+	}
+	body.idd div.step div.import_mapping div
+	{
+		float: left;
+		margin-left: 50px;
+	}
+	body.ew div.step div.import_mapping p {
+		float: left;
+	}
+	
+	body.idd div.import_mapping h3
+	{
+		border:0;
+		margin-bottom: 0px;
+		font-size:12px;
+		font-weight: bold;
+	}
+	
+	body.idd div.import_mapping img
+	{
+		border-right: 1px solid silver;
+		margin-bottom: 5px;
+	}
+	
+	body.idd div.import_review h4,
+	body.idd div.import_review dl 
+	{
+		margin-bottom: 15px;
+	}
+
+	body.idd div.import_review h4, 
+	body.idd div#step_2 h4
+	{
+		padding-left: 60px;
+		cursor:pointer;
+	}
+
+
+	body.idd h4.toggler
+	{
+		margin-bottom: 8px;
+		cursor: pointer;
+	}
+	body.idd dd p 
+	{
+		margin-bottom: 5px;
+	}
+	
+	#step_2.step fieldset
+	{
+		border: 1px solid transparent;
+	}
+	
+	.action_dialog legend label
+	{
+		margin-left: -25px;
+		background-color: #fff;
+	}
+	body.idd legend
+	{
+		font-size: 14px;
+		font-weight: bold;
+		padding: 0 10px 0 0;
+	}
+	body.idd legend img
+	{
+		vertical-align:bottom;
+	}
+	
+	body.idd imput_lists { margin-top: 20px; }
+
+	body.idd dl.side_by_side_text dd { width: 60%; }
+	body.idd .accept { float: right; display:inline; };
+	

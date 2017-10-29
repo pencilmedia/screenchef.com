@@ -1,0 +1,108 @@
+body.print_preview
+{
+	margin: 10px;
+	font-size: 13px;
+	color: #000;
+	min-width: 650px;
+}
+
+body.print_preview p.printCommands
+{
+	font-family:Arial,Verdana,sans-serif;
+	font-size:11px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+body.print_preview h2,
+body.print_preview p { margin: 0; padding:0; }
+body.print_preview h2 { margin-top: 10px; }
+
+
+body.print_preview p.printCommands a
+{
+	text-decoration:none;
+}
+
+
+body.print_preview .content
+{
+	border-top: 1px solid #ccc;
+	clear: both;
+}
+
+body.print_preview .header_wrapper div,
+body.print_preview .dual_columns dl
+{ float: left; width: 48%; margin-bottom: 20px; }
+
+body.print_preview .column_two { padding-left: 20px; background-color:#fff; }
+
+body.print_preview h3 { padding: 20px 0 0 0; clear: both; }
+
+body.print_preview dl.side_by_side dt
+{ 
+	float: left;
+	clear: both;
+	width: 25%;
+	text-align: right;
+	margin-right: 10px;
+	font-weight: bold;
+}
+body.print_preview dl.side_by_side dd
+{
+	margin-left: 27%;
+	border: 1px solid transparent;
+	clear: right;
+	background-color: yellow;
+}
+
+body.print_preview table.plain
+{
+	float: left;
+	width:45%
+}
+
+body.print_preview table.plain td
+{
+	vertical-align: top;
+}
+
+body.print_preview table.plain td.label
+{
+	text-align:right;
+	font-weight: bold;
+	padding-right: 5px;
+	width: 25%;
+}
+
+
+
+body.print_preview table.print
+{
+    background-color:#FFFFFF;    
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	width: 100%;
+}
+
+body.print_preview table.print tr.master_header th { text-align:center }
+body.print_preview table.print tr.faux_header td { font-weight: bold; }
+
+body.print_preview table.print th
+{
+	padding: 5px;
+	text-align: left;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+	white-space:nowrap;
+}
+
+body.print_preview table.print td
+{
+	padding: 5px;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+body.print_preview .footer { font-size: 9px; clear: both;  padding-top: 20px;}

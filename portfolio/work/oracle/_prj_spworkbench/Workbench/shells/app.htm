@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html xmlns:ux="http://www.oracle.com/oracle-apps-ux" ><head>
+<script src='../../core/js/jquery-1.4.2.min.js'></script>
+<script src='../../core/js/jquery-ui-1.8.1.min.js'></script>
+<script src='../../core/js/extensions.js'></script>
+<script src='../../core/js/dwpe-2-lib.js'></script>
+<link rel='stylesheet' href='../extensions.css'/>
+<link rel='stylesheet' href='../../core/css/dwpe-2-lib.css'/></head><body>
+<ux:shell class="dwpe-uishell">
+  <script type="text/javascript">
+shell.tabs=new Array();
+shell.selected_tab=0;
+shell.appname="Fusion Applications";
+shell.user="John Smith";
+shell.search="Opportunities;Contacts;Accounts";
+shell.menu="../../Workbench/menus/global_menu_1.htm";
+shell.nav="../../Workbench/menus/global_navigation_1.htm";
+shell.selected_tab=0;
+
+var tab={};
+tab.selected="1";
+tab.label="My Dashboard";
+tab.icon="";
+tab.visible="1";
+tab.name="";
+tab.page_title="";
+tab.regional={};
+tab.regional.content="../../Workbench/accordions/regional_1.htm";
+tab.regional.size="20%";
+tab.regional.state="1";
+tab.regional.id="regional-pane";
+tab.local={};
+tab.local.content="../../Workbench/pages/WorkbenchDashboard.htm";
+tab.local.size="60%";
+tab.local.id="local-pane";
+tab.contextual={};
+tab.contextual.content="../../Workbench/accordions/contextual_1.htm";
+tab.contextual.size="20%";
+tab.contextual.state="-1";
+tab.contextual.id="contextual-pane";
+tab.tabs=new Array();shell.tabs.push(tab);
+
+var tab={};
+tab.selected="0";
+tab.label="Plan Workbench";
+tab.icon="";
+tab.visible="0";
+tab.name="planworkbench";
+tab.page_title="../../Workbench/pages/WorkbenchTitle.htm";
+tab.regional={};
+tab.regional.content="../../Workbench/accordions/regional_1.htm";
+tab.regional.size="20%";
+tab.regional.state="1";
+tab.regional.id="regional-pane";
+tab.local={};
+tab.local.content="../../Workbench/pages/PlanWorkbenchContent.htm";
+tab.local.size="60%";
+tab.local.id="local-pane";
+tab.contextual={};
+tab.contextual.content="../../Workbench/accordions/contextual_1.htm";
+tab.contextual.size="20%";
+tab.contextual.state="-1";
+tab.contextual.id="contextual-pane";
+tab.tabs=new Array();shell.tabs.push(tab);
+$(window).load(function(){generateUIShell(shell);});
+</script>
+  <!--args_shell:{k1:[{c1:'My Dashboard','name':'','page_title':'','visible':'1',i1:'1',e1:'','regional_content':'../../Workbench/accordions/regional_1.htm','regional_size':'20%','regional_state':'1','local_content':'../../Workbench/pages/WorkbenchDashboard.htm','local_size':'60%','local_state':'1','contextual_content':'../../Workbench/accordions/contextual_1.htm','contextual_size':'20%','contextual_state':'-1'},{c1:'Plan Workbench','name':'planworkbench','page_title':'../../Workbench/pages/WorkbenchTitle.htm','visible':'0',i1:'0',e1:'','regional_content':'../../Workbench/accordions/regional_1.htm','regional_size':'20%','regional_state':'1','local_content':'../../Workbench/pages/PlanWorkbenchContent.htm','local_size':'60%','local_state':'1','contextual_content':'../../Workbench/accordions/contextual_1.htm','contextual_size':'20%','contextual_state':'-1'}],'appname':'Fusion Applications','user':'John Smith','search':'Opportunities;Contacts;Accounts','menu':'../../Workbench/menus/global_menu_1.htm','nav':'../../Workbench/menus/global_navigation_1.htm'}-->
+</ux:shell>
+</body></html>

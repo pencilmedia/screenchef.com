@@ -1,0 +1,33 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="../../../global/css/default.css">
+<link type="text/css" rel="stylesheet" href="tree.css">
+<script type="text/javascript" src="../../../global/js/yui/treeview/treeview.js"></script>
+
+<script type="text/javascript" src="../../../global/js/treeview/AgileConstants.js"></script>
+<script type="text/javascript" src="../../../global/js/treeview/AgileTreeView.js"></script>
+<script type="text/javascript" src="../../../global/js/treeview/AgileKeyReader.js"></script>
+<script type="text/javascript" src="../../../global/js/treeview/AgileTextNode.js"></script>
+
+<script type="text/javascript" src="../../../global/js/treeview/yui-trees-data.js"></script>
+
+<script>
+var tree_RV = null;
+function loadRecentlyVisitedTree() {
+tree_RV = new YAHOO.widget.AgileTreeView("recentlyVisitedTree");
+tree_RV.setTreeContextInfo("RV", "RVisited", "PCMServlet", "LeftPaneHandler", "updateExpansions", "");
+var treeNode_RVisited = new YAHOO.widget.AgileTextNode(new TreeNode("_nodeId_RVisited", "Recently Visited", "Recently Visited", null, null, "../../../global/images/treeview/folders/folder_with_files.png", "../../../global/images/treeview/folders/folder_with_files.png", null, null, null, true, true, "RVisited"), tree_RV.getRoot(), true);
+var treeNode_1483_501624 = new YAHOO.widget.AgileTextNode(new TreeNode("treeNode_1483_501624", "PALCE16V8H-25JC/4 (AMD)", "PALCE16V8H-25JC/4 (AMD) [IC, PAL PROG CS 3685]","javascript:displayObjectFromLeftPane('MfrPartHandler', '1483', '501624', '0');", null, "../../../global/images/icn_obj_manufacturer_part.png", "../../../global/images/icn_obj_manufacturer_part.png", "Manufacturer Part", null, null, false, false, "1483_501624"), treeNode_RVisited, false);
+var treeNode_1442_500030 = new YAHOO.widget.AgileTextNode(new TreeNode("treeNode_1442_500030", "AMD", "AMD","javascript:displayObjectFromLeftPane('MfrHandler', '1442', '500030', '0');", null, "../../../global/images/icn_obj_manufacturer.png", "../../../global/images/icn_obj_manufacturer.png", "Manufacturer", null, null, false, false, "1442_500030"), treeNode_RVisited, false);
+var treeNode_1483_500256 = new YAHOO.widget.AgileTextNode(new TreeNode("treeNode_1483_500256", "1234-009 (AMD)", "1234-009 (AMD) [IC MULTIPLEX SEL QUAD 2-1 INV]","javascript:displayObjectFromLeftPane('MfrPartHandler', '1483', '500256', '0');", null, "../../../global/images/icn_obj_manufacturer_part.png", "../../../global/images/icn_obj_manufacturer_part.png", "Manufacturer Part", null, null, false, false, "1483_500256"), treeNode_RVisited, false);
+tree_RV._el.onkeydown  = function (evt) { tree_RV.handleKeyDownEvent(evt); }; 
+tree_RV.draw();
+} 
+</script>
+</head>
+<body onLoad="loadRecentlyVisitedTree()" style="margin: 10px;">
+
+<div id="recentlyVisitedTree" class="treemenu"></div>
+
+</body>
+</html>

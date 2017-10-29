@@ -1,0 +1,233 @@
+/* Global Styles */		
+body, p, td, div {
+	font-family: Arial;
+	font-size: 11px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #3366cc url('../images/bgd_client_browser2.png') repeat-y top center;
+	text-align: center;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #3366cc;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.blockLink {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+img {
+	margin: 0;
+	padding: 0;
+}
+
+p.empty {
+	position: relative;
+	left: 30px;
+	top: 10px;
+}
+
+/* Styles for the show/hide magic */
+.objHidden {
+	display: none;
+}
+
+.objBlock {
+	display: block;
+}
+
+/* Div Styles */
+/* div {border: 1px solid #ccc;} */
+
+#master {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 800px;
+}
+
+#invoHeader {
+	width: 800px;
+	height: 100px;
+	background: url('../images/bgd_horizontal_line.png') no-repeat bottom left;
+}
+
+#logo {
+	margin: 10px 0 0 10px;
+}
+
+#clientName {
+	width: 171px;
+	float: right;
+	padding: 15px 0 0 19px;
+}
+
+#clientName p {
+	color: #fff;
+}
+
+#clientName img {
+	margin-bottom: 5px;
+}
+
+#leftItems {
+	float: left;
+	width: 181px;
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+
+#research, #design, #documents, #invoLogo, #verticalGradient {
+	padding: 30px 0 0 0;
+	margin-left: 200px;
+	background: url('../images/bgd_vertical_line.png') repeat-y 0px 0px;
+	width: 590px;
+}
+
+#verticalGradient {
+	background: url('../images/bgd_vertical_gradient.png') no-repeat 0px 0px;
+	height: 120px;	
+}
+
+#footer {
+	clear: both;
+	padding: 0 0 50px 20px;
+}
+
+#recentlyAddedImage, #prototypesImage, #teamImage {
+	margin-top: 30px;
+}
+
+/* Icons */
+.iconPDF {background: url('../images/icn_pdf.png') no-repeat 1px 1px;}
+.iconPPT {background: url('../images/icn_ppt.png') no-repeat 1px 1px;}
+.iconDOC {background: url('../images/icn_doc.png') no-repeat 1px 1px;}
+.iconPSD {background: url('../images/icn_psd.png') no-repeat 1px 1px;}
+.iconJPEG {background: url('../images/icn_jpeg.png') no-repeat 1px 1px;}
+.iconHTML {background: url('../images/icn_html.png') no-repeat 1px 1px;}
+.iconINDD {background: url('../images/icn_indd.png') no-repeat 1px 1px;}
+.iconAI {background: url('../images/icn_ai.png') no-repeat 1px 1px;}
+.iconEPS {background: url('../images/icn_eps.png') no-repeat 1px 1px;}
+.iconXLS {background: url('../images/icn_xls.png') no-repeat 1px 1px;}
+.iconTXT {background: url('../images/icn_txt.png') no-repeat 1px 1px;}
+.iconZIP {background: url('../images/icn_zip.png') no-repeat 1px 1px;}
+.iconFLA {background: url('../images/icn_fla.png') no-repeat 1px 1px;}
+.iconSWF {background: url('../images/icn_swf.png') no-repeat 1px 1px;}
+.iconXML {background: url('../images/icn_xml.png') no-repeat 1px 1px;}
+.iconKEY {background: url('../images/icn_key.png') no-repeat 1px 1px;}
+.iconMOV {background: url('../images/icn_mov.png') no-repeat 1px 1px;}
+
+
+
+/* List Styles */
+ul.leftItemList, 
+ul.teamList {
+	margin: 0;
+	padding: 0;
+}
+
+ul.leftItemList li {
+	/*list-style-position: inside;*/
+	list-style-type: none;
+	padding: 5px 0 5px 22px;
+}
+
+ul.leftItemList li a {
+	margin-left: -22px;
+	padding-left: 22px;
+	display: block;
+}
+
+ul.teamList li {
+	/*list-style-position: inside;*/
+	list-style-type: none;
+	padding: 0px 0 0 30px;
+	margin: 5px 0 0 0;
+	height: 35px;
+}
+
+ul.teamList li span.phone {
+	line-height: 18px;
+}
+
+ul.teamList li.dirk {
+	background: url('../images/pho_dirk.png') no-repeat top left;
+}
+
+ul.teamList li.andrei {
+	background: url('../images/pho_andrei.png') no-repeat top left;
+}
+
+ul.teamList li.ben {
+	background: url('../images/pho_ben.png') no-repeat top left;
+}
+
+ul.teamList li.donna {
+	background: url('../images/pho_donna.png') no-repeat top left;
+}
+
+ul.teamList li.tiffany {
+	background: url('../images/pho_tiffany.png') no-repeat top left;
+}
+
+ul.teamList li.joel {
+	background: url('../images/pho_joel.png') no-repeat top left;
+}
+
+ul.teamList li.michele {
+	background: url('../images/pho_michele.png') no-repeat top left;
+}
+
+ul.teamList li.dave {
+	background: url('../images/pho_dave.png') no-repeat top left;
+}
+
+ul.teamList li.other {
+	background: url('../images/pho_other.png') no-repeat top left;
+}
+
+
+/* Table Styles */
+table.fileTable {
+	position: relative;
+	left: 25px;
+}
+
+table.fileTable td {
+	padding: 0px 2px;
+}
+
+table.fileTable td.fileDetails, table.fileTable td.fileDetails a {
+	color: #fff;
+	font-weight: normal;
+}
+
+table.fileTable td.cell1 {
+	width: 22px;
+	height: 22px;
+	padding: 0px;
+}
+
+table.fileTable td.cell2 {
+	width: 225px;
+}
+
+table.fileTable td.cell3 {
+	width: 145px;
+}
+
+table.fileTable td.cell4 {
+	width: 160px;
+}

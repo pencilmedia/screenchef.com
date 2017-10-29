@@ -1,0 +1,90 @@
+Windowing/MDI behavior notes
+----------------------------
+
+CORE ISSUES:
+- Spawning
+- Cloning/duplicating
+- Contextual changes
+- Object interactions
+- Window focus
+- Window titles
+- Window management/navigation
+
+
+Drag and drop issues:
+
+- main challenge is doing it reliably in all browsers with default security settings
+- secondary challenge of adequate feedback that keeps up with the user as he drags objects from one window to another
+
+So in cross-window DnD, maybe the following potential roadblocks:
+- different browser behavior
+- browser security settings
+- ability to transfer the data portion of the DnD operation at the window level
+- retaining browser session after window close and reopen (Siva and Ben checked, this should be a non-issue at this point)
+
+
+----------------------------
+
+General guideline: Follow Excel's interactions to retain precedent and familiarity with what's known (TBD, uday to study excel UI)
+
+----------------------------
+
+PROPOSED DEFAULT: (subject to CDP feedback cycle after first rev w/Ben)
+
+
+- Defer to user's browser defaults regarding new windows being launched (ie, open new windows in tabs, always show tab bar, etc.)
+
+
+- Click the MDI icon to separate Left Pane
+- If user closes Left Pane, it will re-appear (prevents accidental closure)
+- Left Pane position and size is remembered each time MDI icon is clicked
+- Left Pane serves as "controller" for other windows (message routing behind the scenes, per Ben's explanation of how it works)
+
+- TBD: How to dock the left pane? 
+- TBD: Should left pane be locked on the side?
+- TBD: Is the MDI button a toggle?
+- TBD: What's the impact when you have multiple windows? 
+- TBD: What's the impact on multiple monitors?
+
+Thought from Joel: pop-out the Agile UI tabs as their own windows like gmail?
+
+
+<idea>
+- Have a small "pop-out" link + icon in upper right area of tab content which the user clicks to launch the tab into a separate window. Original tab and window are preserved (ie, popping out the tab does NOT remove the tab from the original window). Spawned window appears with window title reflecting the tab + original page/product name.
+</idea>
+
+
+- Drill-down links load in the same page
+- KEY + CLICK spawns new window (KEY TBD)
+- Spawn window limit 10 (due to memory suck, perf hit, etc.)
+- After limit reached, javascript pop-up alert shown telling user to close down windows
+- Spawned window has focus immediately
+- Cursor focus on the first editable control on the page
+
+
+- Spawned window title reflects the content (eg, the object name)
+- Window navigator/manager done through what's already offered, not a custom Agile control: on Windows, use the taskbar. on Mac, use the browser menu bar across the top.
+
+- TBD FUTURE: Consider a window manager that provides more rich interaction/information about windows, positioning, etc. beyond the basics. For now, just do the basics.
+
+
+- Left Pane / Main Window Interactions:
+-- User can drag an object to any window, which then causes the target window to come to focus
+-- Double-click a Left Pane object spawns new window
+-- KEY + CLICK a Left Pane object uses foreground window (KEY TBD)
+-- If no windows open, then KEY + CLICK spawns new window
+
+- Modal windows: allow for modal lockout within a window, but not a window that blocks all others
+- No right-click menus for now, maybe for future (per Joel)
+
+- Defer to system convention for keyboard switching across windows
+- KEY TBD to force cascade/tile of Agile windows
+
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+@media print {
+  /*Reset Style*/
+  body {
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+	line-height: 1.4em;
+	word-spacing: 1px;
+	letter-spacing: 0.2px;
+	font: 13px Arial, Helvetica, "Lucida Grande", serif;
+	color: #000;
+	a:link,
+	a:visited {
+		background: transparent;
+		color: #333;
+		text-decoration: none;
+	}
+	a:link[href^="http://"]:after,
+	a[href^="http://"]:visited:after {
+		content: " (" attr(href) ") ";
+		font-size: 11px;
+	}
+	a[href^="http://"] {
+		color: #000;
+	}
+  }
+  /* USER ASSISTANCE */
+  .user-assistance {
+	overflow: visible;
+	header {
+	    display: none;
+	  }
+	> nav {
+		box-shadow: none;
+		border: none;
+	}
+	> nav .pull-right {
+		display: none;
+	}
+	.app {
+		display: block;
+		overflow: visible;
+		border-bottom: 5px solid black;
+	}
+  }
+}

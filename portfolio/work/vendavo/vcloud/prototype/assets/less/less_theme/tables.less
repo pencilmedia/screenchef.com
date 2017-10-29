@@ -1,0 +1,295 @@
+/* Tables.less
+// Theme: Vendavo
+// ----------------------------------------------------- */
+
+//TODO: Pavel: Review this when we move to new table look
+// JQ GRID TABLES
+// -----------------------------------------------------
+.grid-container {
+	border-radius: @radius;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin: 0 @pageMargin;
+	min-width: @minWidthContent;
+	width: auto;
+	border: 1px solid @blueDark;
+	background: @blueLightest @bgTexture;
+	.grid-actions {
+		box-sizing: border-box;
+		padding: 8px;
+		border-bottom: 1px solid @grayLightest;
+		background: lighten(@blueDarker, 20%);
+		.col-xs-6 {
+			// btn-group
+			.btn-toolbar {
+				.btn-group {
+					float: none;
+					button {
+						.caret {
+							margin-left: 3px;
+						}
+					}
+				}
+			}
+			&:last-child {
+				text-align: right;
+				.table-count {
+					display: inline-block;
+					margin-right: 3px;
+					vertical-align: top;
+					line-height: 34px;
+				}
+				.pager {
+					display: inline-block;
+					margin: 0;
+					width: 80px;
+				}
+			}
+		}
+	}
+	.grid {
+		overflow: auto;
+		height: auto;
+	}
+}
+
+
+// TABLES
+// -----------------------------------------------------
+
+// Mixins
+.col-icon() {
+	color: @blueDarkest;
+	width: 25px;
+	text-align: center;
+}
+
+.table-striped {
+	border-radius: @radius;
+	margin: 0;
+	width: 100%;
+	background: @blue @bgTexture;
+	background-color: @white;
+    table-layout: fixed;
+	&:focus {
+		outline: 1px solid transparent; // Fixes ODD behavior. Chrome is adding webkit-focus-ring-color on focus of the table
+	}
+	thead {
+		outline: 1px solid lighten(@grayLighter, 10%);
+		border: 1px solid @white;
+		tr {
+			background-color: lighten(@grayLightest,10%);
+			cursor: pointer;
+			&:first-child {
+				border: none;
+			}
+			th {
+				i {
+					display: inline-block;
+					visibility: hidden;
+					float: right;
+					padding-top: 2px;
+					width: 20px;
+					height: 20px;
+					vertical-align: middle;
+					text-align: center;
+				}
+				&:nth-child(1) {
+					.col-icon();
+				}
+				&.sort {
+					i {
+						visibility: visible;
+					}
+				}
+				&:hover {
+					color: @linkColorHover;
+					i {
+						visibility: visible;
+						color: @linkColor;
+					}
+					&:first-child {
+						background: none;
+						box-shadow: none;
+						cursor: default;
+					}
+				}
+			}
+			th.table-actions {
+				text-align: right;
+			}
+		}
+	}
+	tbody {
+		tr {
+			background: @white;
+			td {
+				overflow: hidden;
+				box-sizing: border-box;
+				padding: 0;
+				height: 44px;
+				border-top: 1px solid @blueLightBorder;
+				border-bottom: 1px solid transparent;
+				vertical-align: middle;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				cursor: pointer;
+				div {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					padding: 8px;
+				}
+				&.link-file {
+					a {
+						border: none;
+						i {
+							font-size: 150%;
+							vertical-align: middle;
+						}
+					}
+				}
+				b {
+					display: block;
+					font-weight: normal;
+				}
+				span {
+					display: block;
+					line-height: 18px;
+					&.inline-text {
+						display: inline;
+					}
+				}
+				&:nth-child(1) {
+					.col-icon();
+				}
+			}
+		}
+	}
+}
+.table-bordered {
+	border-color: @blue;
+	th {
+		border-color: @blue;
+	}
+	td {
+		border-color: @blue;
+	}
+}
+
+
+// ZEBRA-STRIPING
+// --------------
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  tbody {
+	tr {
+		&:nth-child(odd) {
+			td {
+				background-color: lighten(@grayLightest, 14%);
+			}
+		}
+	}
+    tr:nth-child(odd) td,
+    tr:nth-child(odd) th {
+      background-color: @tableBackgroundAccent;
+    }
+  }
+}
+
+// Row Hover
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+	background-color: @aliceBlue;
+	// Animation Effect when row is hovered
+    .transition(background-color .2s linear);
+}
+
+
+// Disabled / Selected State - All Tables
+.table {
+	tbody {
+		tr {
+			// Disabled State
+			&.disabled {
+				> td {
+					color: @grayLight;
+					a {
+						color: @grayLight;
+						border-bottom-color: @grayLight;
+					}
+					span {
+						color: @grayLight;
+					}
+				}
+				&:hover {
+					> td {
+						color: @grayLight;
+					}
+				}
+			}
+			// Selected State
+			&.selected {
+				> td {
+					background: @blueSelectState;
+					color: @white;
+					// Animation Effect when row is hovered
+				    .transition(background-color .2s linear);
+					text-shadow: none;// Table Row Highlight
+					a, span {
+						color: @white;
+						border-bottom-color: @white;
+					}
+					&:first-child {
+						i {
+							color: @white;
+						}
+					}
+				}
+				&:hover {
+					> td {
+						background: @blueSelectState;
+						color: @white;
+					}
+				}
+				&.disabled {
+					> td {
+						border-top: 1px solid @blueSelectState;
+						border-bottom: 1px solid @blueSelectState;
+						background: @blueSelectState;
+						color: @blueDark;
+						a, span {
+							color: @blueDark;
+							border-bottom-color: @blueDark;
+						}
+						&:first-child {
+							i {
+								color: @blueDark;
+							}
+						}
+					}
+					&:hover {
+						> td {
+							background: @blueSelectState;
+							color: @blueDark;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// ERRORS & WARNINGS
+// -----------------------------------------------------
+//icons
+.error {
+	color: @red;
+}
+.warning {
+	color: @orange;
+}
+.locked {
+	color: @yellow;
+}

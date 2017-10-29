@@ -1,0 +1,118 @@
+/* BEGIN: variables.scss - for theme.scss
+// -----------------------------------------------------*/
+
+// Primary Color Palette
+// -----------------------------------------------------
+
+// Base
+$white:					#fff;
+$black: 				   	#000;
+$charcoal: 				#333;
+
+// Primary
+$gray: 					#333F4C;
+$blue: 					#0387ab;
+$green:					#7ED321;
+$orange: 					#F19701;
+$red: 					#B52B2A;
+$yellow: 					#ECE602;
+$purple: 					#6F7EB8;
+
+// Secondary Color Palette
+// -----------------------------------------------------
+
+// Gray
+$gray2: 					#47525D;
+$gray3: 					#5C6570;
+$gray4: 					#707881;
+$gray5: 					#858C94;
+$gray6: 					#999FA5;
+$gray7: 					#ADB2B7;
+$gray8: 					#C1C5C9;
+$gray9: 					#D6D9DB;
+$gray10: 					#EAEBED;
+$gray11: 					#f9f9f9;
+	
+$modalBkgGray: 			    #333F4C;
+$smoke: 					#4c5c68;
+
+// Blue
+$blue2: 					#1C93B3;
+$blue3: 					#359FBC;
+$blue4: 					#4EABC4;
+$blue5: 					#68B7CD;
+$blue6: 					#81C3D5;
+$blue7: 					#9ACFDD;
+$blue8: 					#CDE7EE;
+$blue9: 					#E5F3F6;
+
+$linkBlue: 				#5588D6;
+
+// Green
+$greenDark:				#5FB106;
+$greenSoft:				#F2FAE8;
+
+// Orange
+$orangeDark:				#F19701;
+$orangeSoft:				#FEF3E0;
+
+// Red
+$redDark:					#B52B2A;
+$redSoft:					#FBEDED;
+$redMuted:				#EBCCD1;
+
+// Purple
+$purpleDark:				#6F7EB8;
+$purpleSoft:				#EBEDF5;
+		
+// Yellow
+$yellowDark:				#ECE602;
+$yellowSoft:				#FEF9EE;
+
+
+// Buttons
+// -----------------------------------------------------
+
+$btn-blue: 				#0387AB;
+$btn-mint: 				#4abc8b;
+$btn-silver: 				#f9f9f9;
+		
+$btnRadius:				3px;
+
+
+// Typography
+// -----------------------------------------------------
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+$mainFont: 				'Lato', 'Avenir', $helvetica; // Custom font
+$baseFont: 				$helvetica; // from bourbon
+$textColor: 				$charcoal;
+
+// Font
+$baseFontSize: 			13px;
+$body-font-size: 			14px;
+$borderRadius: 			5px;
+
+// Links
+$linkColor: 				$linkBlue;
+$linkHoverColor: 			darken($linkColor, 15%);
+$linkHoverDecoration: 		underline;
+
+
+// Layout and helpers
+// -----------------------------------------------------
+
+$pageMargin: 				20px;
+$pagePadding:				10px;
+$borderColor: 				#EBEBEB;
+		
+
+// Media queries breakpoints
+// -----------------------------------------------------
+
+$screen-xs-min: 			480px;// Extra small screen / phone
+$screen-sm-min: 			768px;// Small screen / tablet
+$screen-md-min: 			992px;// Medium screen / desktop
+$screen-lg-min: 			1200px;// Large screen / wide desktop
+
+

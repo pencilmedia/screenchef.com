@@ -1,0 +1,61 @@
+/* SCORECARD */
+
+table.scorecard	td				{ vertical-align: top; }
+
+td.scorecard_title 				{ width: 50%; padding-right: 40px; }
+td.scorecard_status 			{ width: 30%; }
+td.scorecard_rating 			{ width: 12%; }
+
+td.scorecard_status h1			{ padding: 17px 0 5px 0; }
+
+td.scorecard_rating ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: right;
+}
+
+td.scorecard_rating li			{ padding: 0 0 2px 0; }
+td.scorecard_rating img 		{ padding: 1px 0 0 20px; float: right;  }
+
+
+
+/* PROGRESS BAR */
+
+td.progress_bar 				{ width: 140px; }	
+	
+div.progress_container {
+	width: 100px;
+	height: 6px;
+	font-size: 1px;
+	line-height: 1px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 1px;
+	margin: 1px 5px 0 0;
+	float: left;
+}
+
+div.progress_outer {
+	height: 6px;
+	font-size: 1px;
+	line-height: 1px;
+	background-color: #ccc;
+}
+
+div.progress_inner {
+	height: 6px;
+	font-size: 1px;
+	line-height: 1px;
+	background-color: #69c;
+}
+
+div.progress_percentage 		{ width: 30%; }				/* Only value that needs to be set dynamically to match real value */
+
+
+
+/* FOR TESTING PAGE ONLY */
+
+div.wrapper { 
+	margin: 10px 10px 90px 10px;
+}

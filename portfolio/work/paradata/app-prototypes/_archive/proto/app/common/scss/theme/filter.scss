@@ -1,0 +1,170 @@
+/* BEGIN: filter.scss
+// -----------------------------------------------------*/
+
+.filter-container {
+	@include box-shadow();
+	min-height: $shortSlatHeight;
+	.btn-link {
+		border: none;
+		height: $shortSlatHeight;
+		.fa {
+			margin: auto 5px;
+		}
+	}
+	.add-filters, .apply-filters {
+		position: relative;
+	}
+	.add-filters {
+		> input {
+			border: none;
+			position: absolute;
+			top: 0;
+			width: 100%; // Temporary - will be replaced with Select2 component or something
+			height: 100%;
+			-webkit-appearance: none; /* to remove inset shadow for iOS */
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	.apply-filters {
+		@media(min-width: $screen-sm-min) {
+			width: 15%;
+		}
+		@media(min-width: $screen-sm-min) {
+			width: 10%;
+		}
+		@media(min-width: $screen-lg-min) {
+			width: 5%;
+		}
+		.btn {
+			font-size: 80%;
+			height: 100%;
+			position: absolute;
+			text-transform: uppercase;
+			top: 0;
+			width: 100%;
+		}
+	}
+	.comparison-filter {
+		border-top: 1px solid $borderColor;
+		// Hide Flexbox - to support show/hide of flexboxes
+		&.flex-show {
+			@include flexbox();
+		}
+		&.flex-hide {
+			display: none;
+		}
+	}
+	.filter-pills {
+		list-style: none;
+		padding: 0;
+		li {
+			float: left;
+			margin-right: 3px;
+			a {
+				color: $grayDarkest;
+				background: $grayLightest;
+				border: 1px solid $grayLighter;
+				margin: 7px 0;
+				padding: 3px 15px;
+				line-height: 24px;
+				font-size: 90%;
+				@include border-radius(16px);
+				> em {
+					font-style: normal;
+					color: $grayDark;
+				}
+				> strong {
+					margin-left: 3px;
+				}
+				&:hover {
+					background: $grayLighter;
+					border-color: $grayLight;
+				}
+				&.readonly {
+					background: $blueLightest;
+					border-color: $blueLighter;
+				}
+				&.dimension {
+					background: lighten($green, 45%);
+					border-color: lighten($green, 40%);
+					&:hover {
+						background: lighten($green, 35%);
+						border-color: lighten($green, 30%);
+					}
+				}
+				&.measure {
+					background: lighten($yellow, 15%);
+					border-color: lighten($yellow, 10%);
+					&:hover {
+						background: lighten($yellow, 10%);
+						border-color: lighten($yellow, 5%);
+					}
+				}
+			}
+		}
+	}
+	.advanced-filter {
+		header {
+			.btn {
+				margin: 5px 0 5px 10px;
+				&:last-child {
+					margin: 5px 10px 5px 5px;
+				}
+			}
+			h5 {
+				text-align: center;
+			}
+		}
+		section {
+			padding: 10px;
+			> p {
+				.form-control {
+					display: inline;
+					margin-left: 5px;
+					width: auto;
+				}
+			}
+			+ section {
+				border-top: 1px solid $borderColor;
+				margin-top: 10px;
+				padding-top: 10px;
+			}
+			form {
+				.form-group {
+					background: lighten($blueLightest, 4%);
+					border: 1px solid $borderColor;
+					border-bottom: none;
+					margin-bottom: 0;
+					padding: 5px;
+					&:last-child {
+						border-bottom: 1px solid $borderColor;
+					}
+					.form-control {
+						width: auto;
+						&.select2 {
+							min-width: 200px;
+						}
+					}
+					.dropdown {
+						&.pull-right {
+							margin: -5px;
+						}
+					}
+				}
+			}
+		}
+		footer {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.data-settings {
+			background: $blueLightest;
+			min-height: 250px;
+			.dropdown-menu {
+				background: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+.outer_block { position: absolute; background-color: #e5e5e5; border: 1px solid #999; overflow: hidden; }
+
+.list { position: absolute; background-color: #fff; border: 1px solid #999; }
+
+.list li { padding: 4px 10px; cursor: pointer; }
+.list li:hover { background-color: #e4eeff; cursor: pointer; }
+
+/*Special styles for buttons*/
+.outer_block textarea { vertical-align: middle; }
+.outer_block a.button { float: none; line-height: 24px; vertical-align: middle; }
+
+.inner_block {	border: 3px solid #e5e5e5; overflow: auto;}
+
+table td { border-left: 1px solid #ddd; font: 11px Arial, Verdana, sans-serif; margin: 0; -moz-outline:none; }
+table th { border-left: 1px solid #ddd; font: 11px Arial, Verdana, sans-serif; margin: 0; white-space: nowrap; }
+
+.truncate { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; height: 13px; margin: 5px; }
+
+select.editable { background-color: #fff; border: 1px solid #33b0ff; font: 11px Arial, Verdana, sans-serif; padding: 3px; width: 100%; }
+input.editable { background-color: #fff; border: 1px solid #33b0ff; cursor: text; font: 11px Arial, Verdana, sans-serif; height: 12px; padding: 3px; width: 94%; }
+textarea.editable { background-color: #fff; border: 1px solid #33b0ff; cursor: text; font: 11px Arial, Verdana, sans-serif; padding: 5px; overflow: hidden; width: 100%; }
+textarea.editable_scroll { background-color: #fff; border: 1px solid #33b0ff; cursor: text; font: 11px Arial, Verdana, sans-serif; padding: 5px; overflow: auto; }
+
+/* Cell Backgrounds NOT USED AT THIS TIME*/
+.normal_cell { background-color: #fff; }
+.selected_active_cell { background-color: #dde9ff; }
+.selected_disabled_cell { background-image:url(/global/images/bgd_gray_dot.png); }
+
+/* Calendar Stuff */
+.calendar_basic { height: 228px; width: 225px; }
+.calendar_basic .calendar_upper { height: 20px; margin: 0 auto; padding: 12px 0 5px 0; width: 125px; }
+.calendar_basic .calendar_lower { background-color: #fff; border: 1px solid #c9c9c9; height: 170px; margin: 0 7px 7px 17px; width: 190px; }
+
+.calendar_time12 { height: 245px; width: 225px; }
+.calendar_time12 .calendar_upper { height: 20px; margin: 0 auto; padding: 12px 0 5px 0; width: 125px; }
+.calendar_time12 .calendar_lower { background-color: #fff; border: 1px solid #ccc; height: 170px; margin: 0 7px 7px 17px; width: 190px; }
+.calendar_time12 .calendar_time p	{ text-align: center; }
+
+.calendar_time24 { height: 245px; width: 225px; }
+.calendar_time24 .calendar_upper { height: 20px; margin: 0 auto; padding: 12px 0 5px 0; width: 125px; }
+.calendar_time24 .calendar_lower { background-color: #fff; border: 1px solid #ccc; height: 170px; margin: 0 7px 7px 17px; width: 190px; }
+.calendar_time24 .calendar_time p	{ text-align: center; }
+
+/* Month code for calendar popup - uses pagination buttons *******************************************/
+.month 							{ border-bottom: 1px solid #e3e3e3; margin: 0 5px; padding: 6px 0 0 0; text-align: center;}
+.month span						{ line-height: 20px; }
+.month a						{ padding: 0 4px 0 4px; background-repeat: no-repeat; background-position: center center; height: 10px; }
+
+.year_prev	 					{ background: url('../images/icn_calendar_year_prev.png'); }
+.year_next 						{ background: url('../images/icn_calendar_year_next.png'); }
+.month_prev 					{ background: url('../images/icn_calendar_month_prev.png'); }
+.month_next						{ background: url('../images/icn_calendar_month_next.png'); }
+
+.days { color: #888; font-weight: bold; }
+.dates { font-size: 12px; }
+
+ul.numbers { clear: both; display: block; overflow: hidden; }
+ul.numbers li{ border: 1px solid #fff; color: #333; float: left; padding: 3px 2px; text-align: center; width: 21px; }
+ul.numbers li.disabled { background-color: #fff; color: #ccc;}
+ul.numbers li.selected { background-color:#b3ceff; border: 1px solid #6699ff; }
+
+.time { height: 20px; padding-top: 2px; }
+.meridiem { height: 20px; padding-top: 2px; }
+
+#popup_addr,
+#popup_search,
+#popup_text,
+#popup_calendar_basic,
+#popup_calendar_time12,
+#popup_calendar_time24,
+#popup_dropdown,
+#popup_textarea,
+#popup_units { display: none; z-index: 1000; }
+
+#list_weights { display: none; z-index: 1001; }

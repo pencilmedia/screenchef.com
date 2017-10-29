@@ -1,0 +1,212 @@
+/* BEGIN: PRODUCT TOUR - PROFIT ADVISOR
+// -----------------------------------------------------*/
+
+.modal.vpa-tour { 
+  // Display and Top : Fixes issue with .hide class making slideshow not appear
+  //display: inline-block;
+  //margin-left: -380px;// Adjust center alignment when you change the width, Also modified margin to account for slide left
+  //top: -70%;
+  .modal-dialog {
+    width: 750px;
+    .vpa-slides {
+      .modal-header {
+        h3 {
+          color: @green;
+          span {
+            font-weight: normal;
+          }
+        }
+      }
+      .modal-body {
+        width: 750px;
+        max-height: 800px;
+        min-height: 450px;
+        p {
+          margin-bottom: @pageMargin;
+        }
+        ul {
+          li {
+            h4 {
+              font-size: 110%;
+              line-height: 14px;
+              margin: 0;
+              span {
+                font-weight: normal;
+              }
+            }
+            p {
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+        .visual {
+          display: block;
+          margin-bottom: 40px;
+          position: relative;
+          text-align: center;
+          img {
+            margin: 0 auto;
+            max-width: 750px;
+          }
+          > span {
+            display: block;
+            font-size: 88%;
+            line-height: 13px;
+            position: absolute;
+            em {
+              display: block;
+              font-size: 110%;
+              font-style: normal;
+              font-weight: normal;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+      /* TOUR PAGES: DESCRIPTION TEXT LAYOUTS */
+      .page {
+        &.pg2 {
+          .visual {
+            > span {
+              &.one {
+                left: 20px;
+                top: 20px;
+                width: 210px;
+              }
+              &.two {
+                left: 310px;
+                top: 20px;
+                width: 200px;
+              }
+              &.three {
+                right: 10px;
+                top: 20px;
+                width: 150px;
+              }
+              &.four {
+                bottom: 40px;
+                left: 210px;
+                width: 150px;
+              }
+            }
+          }
+        }
+        &.pg3 {
+          .visual {
+            > span {
+              &.one {
+                left: 55px;
+                top: 200px;
+                width: 200px;
+              }
+              &.two {
+                left: 270px;
+                top: 200px;
+                width: 200px;
+              }
+              &.three {
+                right: 40px;
+                top: 200px;
+                width: 200px;
+              }
+            }
+          }
+        }
+        &.pg4 {
+          .visual {
+            > span {
+              width: 150px;
+              &.one {
+                bottom: 38px;
+                left: 140px;
+                width: 230px;
+              }
+              &.two {
+                left: 200px;
+                top: 7px;
+                width: 230px;
+              }
+              &.three {
+                bottom: 38px;
+                right: 30px;
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+      .modal-footer {
+        .btn {
+          display: inline-block;
+        }
+      }
+      // MODULE: SlideJS Custom Pagination Styles
+      .slidesjs-pagination {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 20px;
+        margin-top: -40px;
+        max-width: 65px;
+        min-width: 45px;
+        overflow: auto;
+        li {
+          float: left;
+          margin: 0 1px;
+          a {
+            background-image: url("/img/tour_indicators.png");
+            background-position: 0 0;
+            border: none;
+            display: block;
+            float: left;
+            height: 0;
+            overflow: hidden;
+            padding-top: 13px;
+            width: 13px;
+            &.active,
+            &:hover.active {
+              background-position: 0 -13px;
+            }
+            &:hover {
+              background-position: 0 -26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.carousel-indicators {
+  bottom: 10px;
+  left: 50%;
+  list-style: none;
+  margin-left: -30%;
+  padding-left: 0;
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  z-index: 15;
+}
+.carousel-indicators li {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  width: 10px;
+}
+.carousel-indicators .active {
+  background-color: #ffffff;
+  height: 12px;
+  margin: 0;
+  width: 12px;
+}
+
+
+/* END: PRODUCT TOUR - PROFIT ADVISOR
+// -----------------------------------------------------*/
+

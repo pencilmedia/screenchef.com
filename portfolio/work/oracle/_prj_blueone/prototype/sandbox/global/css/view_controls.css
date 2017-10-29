@@ -1,0 +1,33 @@
+/******************************************************************************
+VIEW_CONTROLS.CSS
+Description: View control related styles and definitions.
+******************************************************************************/
+.view_controls { 
+	margin: 10px 10px 7px 10px; 
+	overflow: hidden; 
+	clear: both;
+	padding-top: 7px;
+}
+.view_controls h4 { 
+	float: left;
+	display: inline;
+}
+.view_controls p { 
+	text-align: right;
+	margin-right: 3px;
+}
+.view_controls select { 
+	width: 245px;
+}
+
+.view_controls select.table_views {
+	margin-right: 2px;
+	width: auto;
+	vertical-align: middle;
+}
+
+.view_controls p.view_controls_status
+{
+	text-align:right;
+	margin:0 5px 10px 0;
+}

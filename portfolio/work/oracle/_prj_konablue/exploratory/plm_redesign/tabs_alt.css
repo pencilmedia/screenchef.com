@@ -1,0 +1,88 @@
+/* TAB CONTAINER */
+
+div.tabs {
+	height: 20px;
+	margin: 10px 0 0 0;
+	padding: 0 3px 0 0;
+	border-bottom: 1px solid #999;
+	overflow: hidden;
+}
+
+
+/* TAB IMAGES */
+
+div.tabs div.cap_lft_nrm,
+div.tabs div.cap_lft_ovr {
+	background: url('images/tab_begin.png') no-repeat top left; 
+}
+
+div.tabs div.cap_rgt_nrm,
+div.tabs div.cap_rgt_ovr { 
+	background: url('images/tab_end.png') no-repeat top left; 
+}
+
+div.tabs div.sep_rgt_nrm,
+div.tabs div.sep_rgt_ovr { 
+	background: url('images/tab_right.png') no-repeat top left; 
+}
+
+/* COMMON ATTRIBUTES */
+
+div.tabs div.cap_rgt_nrm,
+div.tabs div.cap_rgt_ovr,
+div.tabs div.cap_lft_nrm,
+div.tabs div.cap_lft_ovr,
+div.tabs div.sep_rgt_nrm,
+div.tabs div.sep_rgt_ovr,
+div.tabs div.tab_nrm,
+div.tabs div.tab_ovr {
+	float: left;
+	height: 20px;
+}
+
+div.tabs div.cap_rgt_nrm,
+div.tabs div.cap_rgt_ovr,
+div.tabs div.cap_lft_nrm,
+div.tabs div.cap_lft_ovr {
+	width: 2px;
+}
+
+div.tabs div.sep_rgt_nrm,
+div.tabs div.sep_rgt_ovr {
+	width: 1px;
+}
+
+
+/* SPECIFIC ATTRIBUTES*/
+
+div.tabs div.tab_nrm,
+div.tabs div.tab_ovr {
+	border-top: 1px solid #999;
+}
+
+div.tabs div.tab_ovr,
+div.tabs div.cap_rgt_ovr,
+div.tabs div.cap_lft_ovr,
+div.tabs div.sep_rgt_ovr {
+	background-color: #b3ceff;
+}
+
+
+/* LINK SETUP & TEXT COLOR */
+
+div.tabs div.tab_nrm a,
+div.tabs div.tab_ovr a {
+	display: block;
+	text-decoration: none;
+	padding: 3px 8px 3px 8px;
+	vertical-align: middle;
+}
+
+div.tabs div.tab_ovr a {
+	color: #000;
+}
+
+div.tabs div.tab_nrm a {
+	color: #000;
+}
+

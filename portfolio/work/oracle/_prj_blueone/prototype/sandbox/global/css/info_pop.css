@@ -1,0 +1,103 @@
+.prompt 
+{
+	background-color:#FFFFFF;
+	border:1px solid #666666;
+	height:auto;
+	left:-4px;
+	position:relative;
+	top:-4px;
+	width:100%;
+}
+
+.prompt p { width: 100% !important; }
+
+.prompt_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: #999;
+	opacity: .2;
+	filter: alpha(opacity=20);
+}
+
+.prompt_shadow {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	z-index: 99;
+	display: block;
+	background: url(../images/inset_shadow.png) no-repeat right bottom;
+	min-width: 300px;
+	width: 400px;
+	height: auto;
+	margin: auto 25%;
+	padding: 0 8px 5px 0;
+}
+.prompt_shadow p
+{
+	margin-top: 10px;
+	width: 90%;
+}
+.prompt_shadow select
+{
+	position: relative;
+	width: 49%;
+}
+
+.prompt fieldset {
+	border: none;
+	margin: 10px;
+	min-width: 100px !important;
+}
+
+.prompt_footer {
+	text-align: right;
+	margin: 0 20px 10px 0;
+}
+
+.prompt_content
+{
+	margin: 20px 0 20px 30px;
+	width: 300px;
+}
+.prompt_content .time_buffer
+{
+	width:30px;
+	margin-right:15px;
+}
+.prompt input.file 
+{
+	height:22px; 
+}
+
+dl.prompt_options {
+	margin-top: 20px;
+}
+dl.prompt_options dt {
+	width: 10% !important;
+}
+dl.prompt_options dd {
+	white-space: normal !important;
+}
+
+
+.prompt_shadow.search_prompt
+{
+	width: 725px;
+	margin: auto 10%;
+}
+.prompt_shadow.search_prompt fieldset {
+	margin: 0;
+}
+.prompt_shadow.search_prompt fieldset h4 {
+	margin: 10px;
+}
+.prompt_shadow.search_prompt div.message p
+{
+	margin-top: 0;
+}

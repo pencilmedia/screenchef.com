@@ -1,0 +1,582 @@
+/* Common.less
+// -----------------------------------------------------*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+body {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	padding-top: @navbarHeight;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;// Smooth the text
+	min-width: 320px;
+}
+
+
+// APPLICATION SHELL LAYOUT
+// -----------------------------------------------------
+
+.colonnade {
+	overflow: auto;
+	.lt-column,
+	.rt-column {
+		float: left;
+		width: 50%;
+	}
+}
+
+
+// HEADERS
+// -----------------------------------------------------
+
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 140%;
+}
+h3 {
+	font-size: 130%;
+}
+h4 {
+	font-size: 120%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+// Headers with butcon/button
+h1 button,
+h2 button,
+h2 a,
+h3 button,
+h4 button,
+h5 button,
+h6 button {
+	background: none;
+	border: none;
+	color: @blueDarkest; 
+	float:right;
+	font-size: 145%;
+	height: 34px;
+	text-align: center;
+	width: 40px;
+	&:hover {
+		background-color: @blue;
+		color: @navyBlue;
+		outline: 1px solid @blueDark;
+	}
+}
+// Butcon: Same styling as above, Buttons inside header
+.butcon {
+	background: none;
+	border: none;
+	color: @blueDarkest;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	width: 30px;
+	i {
+		display: block;
+		height: 30px;
+		line-height: 30px;
+		width: 30px;
+	}
+	&:hover {
+		background-color: @blue;
+		color: @navyBlue;
+		outline: 1px solid @blueDark;
+	}
+	&[disabled='disabled'] {border:1px solid red;
+		color: @gray;
+	}
+}
+
+h2 {
+	.disabled {
+		color: @grayLightest;
+		&:hover{
+			background: none;
+			color: @grayLightest;
+			cursor: default;
+			outline: none;
+		}
+	}
+	.edit-mode {
+		background-color: @blue;
+		color: @navyBlue;
+		outline: 1px solid @blueDark;
+	}
+}
+
+// BADGES
+.badge {
+	&.badge-success {
+		background-color: @green;
+	}
+	&.badge-warning {
+		background-color: @orange;
+	}
+}
+
+// Main Pane 
+.cloudshellWork {
+	section {
+		> h1 {
+			margin-left: @pageMargin;
+			margin-right: @pageMargin;
+		}
+		h2 {
+			border-bottom: 1px solid @blue;
+			clear: both;
+			color: @blueDarkest;
+			font-size: 95%;
+			line-height: 35px;
+			margin: 0;
+			padding-top: 10px;
+			text-transform: uppercase;
+			span {
+				color:@grayDark;
+				display:block;
+				line-height:15px; 
+				padding:0;
+			}
+		}
+		.progress {
+			margin: 0 15px;
+		}
+		.alert { // Main Content Area Alerts
+			margin: 10px 15px 0 15px;
+		}
+	}
+	aside {
+		h2 {
+			.tooltip {
+				  text-transform: none !important; // Added by Jan R.
+			}
+		}
+	}
+}
+.alert { // Main Content Area when it's outside the .cloudshellWork
+	// margin: 10px 15px; Enabling this breaks alerts in the aside rt panel. gives too much side padding.;
+}
+
+// Right Pane 
+aside {
+	// NOTE: When you include SECTION here it breaks midas right pane in main content area
+	article {
+		// Headers
+		h1 {
+			+ h2 {
+				margin: 0;
+				padding: 0; 
+				+ form {
+					> dl {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+		h2 {
+			border-bottom: 1px solid @blue;
+			clear: both;
+			color: @blueDarkest;
+			font-size: 95%;
+			line-height: 35px;
+			padding-top: 10px;
+			text-transform: uppercase;
+			span {
+				color:@grayDark;
+				display:block;
+				line-height:15px; 
+				padding:0;
+			}
+		}
+		h3 {
+			font-size: 100%;
+			line-height: 14px;
+			margin-bottom: 5px;
+		}
+		p {
+			margin: 10px 0;
+			+ h2 {
+				margin-top: 0;
+				padding-top: 0;
+			}
+		}
+		> .alert { // When alert box is inside and directly after the article tag
+			margin: 0 0 10px 0;
+		}
+		> h2 { // h2 directly after <article>, no h1 header above it
+			padding-top: 0;
+		}
+	}
+	.alert {
+		margin: 10px 15px 0 15px;
+	}
+}
+
+// Sliding right pane
+aside.rt-pane {
+	background-color: @white;
+	bottom: 0;
+	height: 100%;
+	padding-top: @navbarHeight;
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+	z-index: 888; // Pushes content down below navbar
+	width: 40%;
+	> section {
+		height: 100%;
+		overflow: auto;
+		 -ms-overflow-style: -ms-autohiding-scrollbar;
+		article {
+			margin: 10px 15px;
+			.alert {
+				margin: 10px 0;
+			}
+			.nav.pull-right {
+				position: absolute;
+				right: 10px;
+				top: 10px; // Pull Nav Action Buttons to the right
+				.dropdown-menu {
+					left: none;
+					position: absolute;
+					right: 0;
+					top: 100%;
+				}
+			}
+			.btn-back {
+				float: left;
+				width: auto;
+			}
+			.btn-group.pull-right {
+				> .btn { // Only for top action buttons
+					&:first-child {
+						margin-right: 20px;
+						&:after {
+							color: @grayLight;
+							content: "|";
+							position: relative;
+							right: -28px;
+						}
+					}
+				}
+			}
+			&.communication {
+				.alert {
+					margin: 20px 0;
+				}
+			}
+		}
+	}
+}
+
+// COLUMNS
+.colonnade {
+	.lt_column,
+	.rt_column {
+		float: left;
+		width: auto;
+	}
+}
+
+// MODAL DIALOGS/INDICATORS
+// -----------------------------------------------------
+.vmodal {
+	background: rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 15px @gray;
+	width: 200px;
+	//margin-left: -100px; // when changing the width, also change the margin-left below // Override default bootstrap center-ing since we changed the width
+	.progress-indicator {
+		p {
+			color: @white;
+		}
+		.progress-spinner {
+			display: table-cell;
+			padding: 20px 10px 10px 10px;
+			text-align: center;
+			vertical-align: middle;
+			width: 200px;
+			i {
+				color: @white;
+				font-size: 800%;
+			}
+		}
+	}
+}
+
+.modeless {
+	.box-shadow(0 3px 7px rgba(0,0,0,0.3));
+	background: rgba(0, 0, 0, 0.6);
+	border: 1px solid #333;
+	border: 1px solid rgba(0,0,0,.3);
+	border-radius: @radius;
+	box-shadow: 0 0 15px @gray;
+	float: left;
+	left: 50%;
+	overflow: hidden;
+	position: fixed;
+	top: 35%;
+	width: 200px;
+	z-index: @zindexModeless;
+	*border: 1px solid #999; /* IE6-7 */ // when changing the width, also change the margin-left below
+	margin-left: -100px;
+	&.fade {
+	.transition(e('opacity .3s linear, top .3s ease-out'));
+	top: -25%;
+	}
+	&.fade.in { top: 50%; } // Override default bootstrap center-ing since we changed the width
+	p {
+		color: @white;
+		text-shadow: 0 0 1px @black;
+		white-space: normal;
+		width: 175px;
+		word-wrap: break-word;
+	}
+	.progress-spinner {
+		display: table-cell;
+		padding: 20px 10px 10px 10px;
+		text-align: center;
+		vertical-align: middle;
+		width: 200px;
+		i {
+			color: @white;
+			font-size: 800%;
+		}
+	}
+	.background-clip(padding-box);
+}
+
+// Progress Bar
+.progress {
+   .bar {
+		#gradient > .vertical(@greenLightest, @green);
+	}
+}
+
+.progress-striped {
+   .bar {
+		#gradient > .striped(@green);
+	}
+}
+
+
+
+// TOOLTIP
+.tooltip {
+	font-weight: bold;
+	line-height: 17px;
+	text-shadow: none;
+}
+
+
+/*
+// MENUS - DRILLINS
+// -----------------------------------------------------*/
+.drilldown {
+	 max-width: 325px; // added so there is no flicker when drillin animates
+      overflow: hidden; // keep animation inside popover
+      -moz-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      -o-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+	.drilldown-container {
+		ul {
+			margin: 0;
+			max-height: 365px;
+			overflow-x: hidden; /* Prevent horizontal scroll */
+			overflow-y: auto; // lock height and scroll
+			.divider {
+				padding: 0;
+			}
+			li {
+				cursor: pointer;
+				list-style: none;
+				margin: 0;
+				padding: 10px 15px;
+				position: relative;
+				text-align: left;
+				&:hover {
+					background-color: @blueHover;
+					p + i {
+						color: @navyBlue;
+					}
+					button {
+						i {
+							color: @blueDarkest;
+						}
+					}
+				}
+				&:last-child {
+					border-bottom: 0;
+				}
+				h4 {
+					font-size: 1em;
+					margin: 0;
+					> i {
+						color: @blueDarkest;
+						margin-left: 5px;
+					}
+					+ p {
+						color: @gray;
+						margin-top: 3px;
+						line-height: 13px;
+						+ .butcon {
+							position: absolute;
+							right: 10px;
+							top: 16px;
+							i {
+								width: auto;
+								color: @blueDarkest;
+								text-align: center;
+							}
+							&:hover {
+								i {
+									color: @navyBlue;
+								}
+							}
+						}
+					}
+					//NOTE: PS - VSN-b purposes - needs work
+					+ span {
+						position: absolute;
+						right: 10px;
+						top: 10px;
+						i {
+							width: auto;
+							color: @blueDarkest;
+							text-align: center;
+						}
+					} 
+				}
+				h4, p {
+					width: 90%;
+				}
+			}
+		}
+		// Drilldown Backside
+		.drilldown-back {
+			color: @grayDarkest;
+			font-size: 110%;
+			background: #f7f7f7;
+			padding: 10px 0;
+			.drill-action-back {
+				border: none;
+				margin: 0 7px;
+				padding: 0 3px;
+				border-right: 1px solid @grayLight;
+				text-align: center;
+				i {
+					margin-right: 5px;
+					width: 20px;
+				}
+			}
+			&:hover { // Undo Hover 
+				background-color: #f7f7f7;
+			}
+		}
+		.drilldown-backside {
+			padding: 0;
+			ul {
+				li {
+
+				}
+			}
+			&:hover { // Undo Hover 
+				background-color: transparent;
+			}
+		}
+	}
+	dl {
+	margin: 15px @pageMargin;
+	dd {
+		margin: 0 0 10px 0;
+	}
+	}
+}
+
+.drilldown-sub {
+ display: none;
+}
+.drilldown-back {
+ font-weight: bold;
+}
+
+
+
+/*// MENUS - DROPDOWNS
+// -----------------------------------------------------*/
+
+.dropdown li a {
+	line-height: 25px;
+	text-shadow: none;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+	background-color: transparent;
+	color: saturate(@blueDark, 40%); // Color when menu link clicked
+	.caret {
+   		border-top-color: saturate(@blueDark, 40%);
+  	}
+} 
+.dropdown-submenu:hover > a {
+	line-height: 25px;
+}
+.dropdown-menu {
+	li {
+		a {
+			border-bottom: none;
+			cursor: pointer; // Added by Jan R.
+		}
+	}
+	.divider {
+		border-bottom-color: @blueLightBorder;
+	}
+}
+
+
+
+
+// MEDIA QUERIES - Depending on width, panels will resize
+// -----------------------------------------------------
+
+/* Resolution smaller than 1280 */
+// Right panel floats above workspace
+@media (max-width: @viewportWidth) {
+	.cloudshellWork .rt-pane {
+		border-left: 1px solid @white;
+		box-shadow: -3px 0 10px 0 #999;
+		min-width: 525px;
+		right: 15px;
+	}
+	// When width of browser is small and the left nav panel is opened, push rt panel offscreen
+	// .offscreen added in global.js 
+	.cloudshellWork .rt-pane.offscreen {
+		right: -600px;
+	}
+}
+
+/* Resolution bigger than 1280 */
+// Right panel sits side by side with workspace
+@media (min-width: @viewportWidth) {
+	.cloudshellWork.panel-open {
+	    -moz-transition: width .25s ease-out;
+	    -o-transition: width .25s ease-out;
+	 	-webkit-transition: width .25s ease-out;
+	    transition: width .25s ease-out;
+	    width: 60%; // Animates from 100% declared above (.ct_pane > .tab_pane) to 60% and back to 100% when panel closed.
+	}
+	.cloudshellWork .rt-pane {
+		border-left: 1px solid @blueLightBorder;
+		right: 0;
+	}
+}

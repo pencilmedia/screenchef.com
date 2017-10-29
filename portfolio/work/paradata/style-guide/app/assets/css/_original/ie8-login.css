@@ -1,0 +1,67 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #475159 !important;
+}
+.container {
+    width: 600px;
+}
+#loginContainer .form {
+    background-color: #5e6b79;
+    margin: 0 auto;
+    padding: 20px 80px 60px;
+    width: 50%;
+    min-width: 600px;
+    max-width: 600px;
+}
+img {
+    margin: 30px 20px 0 20px;
+    width: 200px;
+}
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.boldType-28 {
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.mainType-16 {
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
+    Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 16px;
+    margin: 0;
+}
+.bluebutton {
+    text-align: center;
+    height: 36px;
+    font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: #0387ab;
+    border: none;
+    color: white;
+    margin: 26px 0 15px 0;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}

@@ -1,0 +1,170 @@
+
+
+/*Toolbar*/
+
+
+
+.dwpe-toolbar
+{
+	white-space:nowrap;
+}
+
+.dwpe-toolbar>UL
+{
+	position:relative;
+	margin:0px;
+	padding:0px;
+	z-index:0;
+	white-space:nowrap;
+	display:inline-block;
+	
+}
+
+
+
+.dwpe-toolbar>UL>LI,
+.dwpe-toolbar>LI 
+{	display:inline-block;
+}
+
+
+
+/*Overflow Window Behavior*/
+UL.DWPE_window_overflow>LI.dwpe-button
+{
+	margin:1px 0px;
+}
+
+
+UL.DWPE_window_overflow>LI.RadioButtonGroup>UL>LI,
+UL.DWPE_window_overflow>LI.ToggleButton>UL>LI
+{
+	margin:1px 0px;
+	position:relative;
+	display:block;	
+}
+
+
+
+.dwpe-toolbar LI.IconicButton,
+.DWPE_window_overflow LI.IconicButton 
+{
+	padding:0px 4px;
+	margin:0px 0px;
+} /*override for a iconic button inside a toolbar*/
+
+
+
+
+/*Overflow Control*/
+LI.dwpe-overflow
+{
+	cursor:pointer;
+	position:relative;
+	display:inline-block;
+	z-index:1;
+	background:url(../images/toolbar_overflow_ena.png) center center no-repeat;
+	
+	border-color:transparent;
+	border-style:solid;
+	border-width:1px;	
+	
+	color: #003d5b;
+	width:14px;
+	height:14px;
+	padding:0px;
+	margin:3px 0px 4px 0px;;
+	text-decoration:none;
+	white-space:nowrap;
+	vertical-align:middle;
+	
+	}
+	
+LI.dwpe-overflow:hover
+{	
+	color:#000000;
+	border-width:1px;	
+	border-color:#3f6a9c;
+	background:#5484ad url(../images/toolbar_overflow_dwn.png) center center no-repeat;
+	
+}
+	
+
+LI.dwpe-overflow.active,
+LI.dwpe-overflow:active
+{	
+	color:#000000;
+	border-color:#54697b;
+	background:#273441 url(../images/toolbar_overflow_dwn.png) center center no-repeat;
+		
+}
+
+
+/*Resize Control*/
+.dwpe-toolbar-resize
+{	
+	display:inline-block;
+	cursor:w-resize;
+    position:relative;
+    width:5px;
+	height:18px;
+	margin:0px 0px 0px 5px;
+	padding:0px;
+	border-left:1px solid #6e89a2;
+	border-width:0px 1px;
+	vertical-align:middle;
+}
+
+.GlobalRegion .DWPE_ToolbarResize
+{
+	
+}
+
+
+
+
+/*----------------------------------*/
+/* Region Support                   */
+/*----------------------------------*/
+
+
+.GlobalRegion .dwpe-toolbar .IconicButton,
+.GlobalRegion.dwpe-toolbar .IconicButton,
+.GlobalRegion .dwpe-toolbar .InlineSelector,
+.GlobalRegion.dwpe-toolbar .InlineSelector
+
+{
+	color:#fff;
+}
+
+.PrimaryRegion .dwpe-toolbar .IconicButton,
+.PrimaryRegion.dwpe-toolbar .IconicButton,
+.PrimaryRegion .dwpe-toolbar .InlineSelector,
+.PrimaryRegion.dwpe-toolbar .InlineSelector
+{
+	color:#fff;
+}
+
+.SecondaryRegion .dwpe-toolbar .IconicButton,
+.SecondaryRegion.dwpe-toolbar .IconicButton,
+.SecondaryRegion .dwpe-toolbar .InlineSelector,
+.SecondaryRegion.dwpe-toolbar .InlineSelector
+{
+	color:#000;
+}
+
+.TiertiaryRegion .dwpe-toolbar .IconicButton,
+.TiertiaryRegion.dwpe-toolbar .IconicButton,
+.TiertiaryRegion .dwpe-toolbar .InlineSelector,
+.TiertiaryRegion.dwpe-toolbar .InlineSelector
+{
+	color:#000;
+}
+
+
+
+
+
+
+	
+	

@@ -1,0 +1,78 @@
+<!-- Page Top
+================================================== -->
+@@include('./../template_head.tpl', {"pageID": "iconography", "pageCategory": "foundations"})
+
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h2>Iconography</h2>
+<div class="sg-page-nav">
+  <div>
+    <h6>Navigate To:</h6>
+    <ul>
+      <li><a href="#1">Font Awesome</a></li>
+      <li><a href="#2">Custom Icons (Icomoon)</a></li>
+    </ul>
+  </div>
+  <div>
+    <a href="http://fontawesome.io/cheatsheet/" target="_blank" class="btn btn-default">View Font Awesome Cheat Sheet</a>
+    <a href="https://icomoon.io/app/" target="_blank" class="btn btn-default">View Custom Icon Creator</a>
+  </div>
+</div>
+
+<!-- Page Content
+================================================== -->
+<h2 id="1">Font Awesome</h2>
+<p>We use Font Awesome for our icons. It is a web font which gives us high resolution icons for retina screens. Visit <a href="http://fontawesome.io/cheatsheet/">the cheatsheet</a> for the correct class names and to view available icons.</p>
+<h3>How to use</h3>
+<p>ou can place Font Awesome icons just about anywhere using the CSS Prefix <code>fa</code> and the icon's name. Font Awesome is designed to be used with inline elements (we like the <code>&lt;i&gt;</code> tag for brevity, but using a <code>&lt;span&gt;</code> is more semantically correct).</p>
+<h4>Example</h4>
+<p><code>&lt;i class="fa fa-icon-name"&gt;&lt;/i&gt;</code></p>
+
+<h2 id="2">Custom Icons (Icomoon)</h2>
+<p>We create custom web font icons using the <a href="https://icomoon.io/app" target="_blank">Icomoon web app</a>. Below is the current set of custom icons. To implement a custom font, use the Font Awesome class <code>fa</code> in conjunction with the custom class name.</p>
+<h3>Example</h3>
+<p><code>&lt;i class="fa icon-custom-name"&gt;&lt;/i&gt;</code></p>
+<table class="table table-condensed table-icons">
+	<tr>
+		<th>Icon</th>
+		<th>Class Name</th>
+	</tr>
+	<tr>
+		<td><i class="fa icon-saq-high"></i></td>
+		<td><code>icon-saq-high</code></td>
+	</tr>
+	<tr>
+		<td><i class="fa icon-saq-med"></i></td>
+		<td><code>icon-saq-med</code></td>
+	</tr>
+	<tr>
+		<td><i class="fa icon-saq-low"></i></td>
+		<td><code>icon-saq-low</code></td>
+	</tr>
+	<tr>
+		<td><i class="fa icon-contract-price"></i></td>
+		<td><code>icon-contract-price</code></td>
+	</tr>
+	<tr>
+		<td><i class="fa icon-private-price"></i></td>
+		<td><code>icon-private-price</code></td>
+	</tr>
+</table>
+
+<h3>How to create custom icons</h3>
+<p>Download the <a href="/">Paradata Custom Icon JSON file</a> to be uploaded to Icomoon. This file preserves the existing icon set. After uploading you can add additional custom icons to the existing set. After uploading additional icons be sure to re-download the JSON file with this updated custom icon set.</p>
+<p>Preserve the <code>"icon-"</code> prefix when you name your custom icons through Icomoon.</p>
+
+<!-- END/ Page Content
+================================================== -->
+
+<!-- END: Template Content
+================================================== -->
+
+
+<!-- Page Bottom
+================================================== -->
+@@include('./../template_foot.tpl')

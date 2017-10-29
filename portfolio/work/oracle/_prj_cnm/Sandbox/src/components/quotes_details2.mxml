@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" verticalGap="0" xmlns:cnm="components.*">
+	<mx:XML xmlns="" id="quotesXML" source="../assets/data/quotes.xml" />
+	<mx:XML xmlns="" id="statusXML" source="../assets/data/projectStatus.xml" />
+	<mx:XML xmlns="" id="ownersXML" source="../assets/data/owners.xml" />
+	<mx:XML xmlns="" id="customersXML" source="../assets/data/customers.xml" />
+	<mx:XML xmlns="" id="attachmentsXML" source="../assets/data/attachments.xml" />
+	
+	<mx:Script>
+        <![CDATA[
+        	import mx.containers.Panel;
+            import mx.events.DataGridEvent;
+            import mx.events.DataGridEventReason;
+                    
+			[Embed(source="../assets/images/icons/ico_expanded.png")] 
+			var expandedImage:Class
+			[Embed(source="../assets/images/icons/ico_collapsed.png")] 
+			var collapsedImage:Class
+			[Embed(source="../assets/images/icons/ico_edit.png")] 
+			var editIconImage:Class
+			
+			private function init():void
+			{      	
+				text1.htmlText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus diam a magna. Aenean facilisis pede sed ipsum. Vivamus interdum. <br />[ <a href="event:toggleComments2()"><font color="#3C5AB3">Show 2 comments</font></a> ]';
+				text1.addEventListener(TextEvent.LINK, toggleComments2);
+			}
+
+	        private function showMore():void
+	         {
+	         	
+	         	if (c1.visible)
+	         	{
+	         		c1.visible = false;
+	         		c1.includeInLayout = false;
+	         	} else {
+	         		c1.visible = true;
+	         		c1.includeInLayout = true;
+	         	}
+	         }
+
+	        private function togglePanel1():void
+	         {
+	         	if (collapsePanel1Body.visible)
+	         	{
+	         		collapsePanel1Body.visible = false;
+	         		collapsePanel1Body.includeInLayout = false;
+	         		this.collapsePanel1Toggle.source = collapsedImage; 
+	         	} else {
+	         		collapsePanel1Body.visible = true;
+	         		collapsePanel1Body.includeInLayout = true;
+	         		this.collapsePanel1Toggle.source = expandedImage; 
+	         	}
+	         }
+
+	        private function togglePanel2():void
+	         {
+	         	if (collapsePanel2Body.visible)
+	         	{
+	         		collapsePanel2Body.visible = false;
+	         		collapsePanel2Body.includeInLayout = false;
+	         		this.collapsePanel2Toggle.source = collapsedImage; 
+	         	} else {
+	         		collapsePanel2Body.visible = true;
+	         		collapsePanel2Body.includeInLayout = true;
+	         		this.collapsePanel2Toggle.source = expandedImage; 
+	         	}
+	         }
+
+	        private function togglePanel3():void
+	         {
+	         	if (collapsePanel3Body.visible)
+	         	{
+	         		collapsePanel3Body.visible = false;
+	         		collapsePanel3Body.includeInLayout = false;
+	         		this.collapsePanel3Toggle.source = collapsedImage; 
+	         	} else {
+	         		collapsePanel3Body.visible = true;
+	         		collapsePanel3Body.includeInLayout = true;
+	         		this.collapsePanel3Toggle.source = expandedImage; 
+	         	}
+	         }
+
+	        private function toggleComments():void
+	         {
+	         	if (collapseComments.visible)
+	         	{
+	         		collapseComments.visible = false;
+	         		collapseComments.includeInLayout = false;
+	         	} else {
+	         		collapseComments.visible = true;
+	         		collapseComments.includeInLayout = true;
+	         	}
+	         }
+	         
+	        private function toggleComments2(event:TextEvent):void
+	         {
+	         	if (collapseComments.visible)
+	         	{
+	         		collapseComments.visible = false;
+	         		collapseComments.includeInLayout = false;
+	         	} else {
+	         		collapseComments.visible = true;
+	         		collapseComments.includeInLayout = true;
+	         	}
+	         }
+                        
+           // Define the event listener.
+           public function processData(event:DataGridEvent):void 
+            {
+                return;
+            }
+                     
+        ]]>
+    </mx:Script>
+    <mx:XMLList id="attachments">
+        <attachment>
+            <icon>x</icon>
+            <document>sensor.dwg</document>
+            <description>Sensor CAD file</description>
+        </attachment>
+        <attachment>
+            <icon>x</icon>
+            <document>sensor.pdf</document>
+            <description>Sensor drawing in pdf file</description>
+        </attachment>
+        <attachment>
+            <icon>x</icon>
+            <document>sensor.doc</document>
+            <description>This is a description for the reference item</description>
+        </attachment>
+        <attachment>
+            <icon>x</icon>
+            <document>1000-42-0011</document>
+            <description>This is a description for the reference item</description>
+        </attachment>
+        <attachment>
+            <icon>x</icon>
+            <document>1200-01-0000</document>
+            <description>This is another description for the reference item</description>
+        </attachment>
+    </mx:XMLList>
+    
+ 
+		<mx:Box id="quoteTwo" direction="horizontal" width="100%" height="100%" creationComplete="init()"> <!-- ****BEGIN: State Replaced Here****** -->
+			<mx:Panel width="75%" height="100%" layout="absolute" backgroundColor="#f5f5f5" headerHeight="10" horizontalScrollPolicy="off">
+		
+			<mx:VBox width="100%" height="100%" backgroundColor="#ffffff" verticalGap="0" verticalScrollPolicy="auto" horizontalScrollPolicy="off">
+				<mx:Grid width="100%"  backgroundColor="#EDF1F7" verticalGap="0" paddingBottom="2" borderStyle="solid" borderThickness="1" borderColor="#cccccc" >
+					<mx:GridRow width="100%" height="100%" paddingTop="5" paddingRight="5" paddingBottom="0" paddingLeft="5">
+						<mx:GridItem height="100%" width="100%">
+							<mx:Label id="objTitle" text="REQ-4321 (Dev Only: Quote 2)" fontSize="15" color="#666666" paddingLeft="5" />
+							<mx:Spacer width="100%" />
+							<mx:Label text="In Progress" fontSize="15" color="#666666" />
+						</mx:GridItem>
+					</mx:GridRow>
+				</mx:Grid>
+		    	<mx:Grid width="100%" paddingTop="10" paddingBottom="10" paddingRight="10" paddingLeft="10">
+					<mx:GridRow  id="collapsePanel1Header" width="100%" borderSides="bottom" borderStyle="solid" borderThickness="1" borderColor="#CCCCCC" paddingTop="14">
+						<mx:GridItem width="50%">
+							<mx:Image id="collapsePanel1Toggle" source="@Embed('../assets/images/icons/ico_expanded.png')" click="togglePanel1()" useHandCursor="true" buttonMode="true"/>
+							<mx:Text text="REQUIREMENT DETAILS" fontSize="12" color="#666666" paddingLeft="-8" click="togglePanel1()"/>	
+						</mx:GridItem>
+						<mx:GridItem horizontalAlign="right" width="50%" paddingTop="8" paddingRight="3">
+							<mx:Image source="{editIconImage}" right="10" useHandCursor="true" buttonMode="true" />
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow id="collapsePanel1Body" width="100%">
+						<mx:GridItem paddingTop="2" width="100%" colSpan="2">
+							<mx:VBox width="100%">
+								<mx:Text width="100%">
+									<mx:text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus diam a magna. Aenean facilisis pede sed ipsum. Vivamus interdum. a. Aenean facilisis pede sed ipsum. Vivamus interdum.</mx:text>
+								</mx:Text>
+								<mx:Canvas width="100%">
+									<mx:LinkButton label="Attribute details..." right="0" fontSize="11" paddingLeft="0" paddingTop="0" height="16" color="#3c5ab3" fontWeight="normal" click="showMore()" />			
+								</mx:Canvas>
+								<mx:HBox width="100%" id="c1" visible="false" includeInLayout="false">
+									<mx:Form width="50%" paddingTop="0" paddingBottom="0" verticalGap="0">
+										<mx:FormItem label="Owner">
+				                			<mx:Text text="Anurag Batra" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Lifecycle">
+				                			<mx:Text text="In Progress" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Type">
+				                			<mx:Text text="Requirement" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Created by">
+				                			<mx:Text text="Anurag Batra" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Created on">
+				                			<mx:Text text="10/12/2008 11:23 AM PST" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Updated by">
+				                			<mx:Text text="Anurag Batra" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Updated on">
+				                			<mx:Text text="12/02/2008 1:23 PM PST" />
+				            			</mx:FormItem>
+									</mx:Form>
+									<mx:Form width="50%" paddingTop="0" paddingBottom="0" verticalGap="0">
+										<mx:FormItem label="Owner">
+				                			<mx:Text text="Anurag Batra" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Lifecycle">
+				                			<mx:Text text="In Progress" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Type">
+				                			<mx:Text text="Requirement" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Created by">
+				                			<mx:Text text="Anurag Batra" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Created on">
+				                			<mx:Text text="10/12/2008 11:23 AM PST" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Updated by">
+				                			<mx:Text text="Anurag Batra" />
+				            			</mx:FormItem>
+										<mx:FormItem label="Updated on">
+				                			<mx:Text text="12/02/2008 1:23 PM PST" />
+				            			</mx:FormItem>
+									</mx:Form>
+								</mx:HBox>
+							</mx:VBox>
+						</mx:GridItem>
+					</mx:GridRow>
+				</mx:Grid>
+		
+				<mx:Grid width="100%" paddingTop="10" paddingBottom="10" paddingRight="10" paddingLeft="10">
+					<mx:GridRow  id="collapsePanel2Header" width="100%" borderSides="bottom" borderStyle="solid" borderThickness="1" borderColor="#CCCCCC">
+						<mx:GridItem paddingTop="2" width="50%">
+							<mx:Image id="collapsePanel2Toggle" source="@Embed('../assets/images/icons/ico_expanded.png')" click="togglePanel2()" useHandCursor="true" buttonMode="true"/>
+							<mx:Text text="ATTACHMENTS &amp; REFERENCES" fontSize="12" color="#666666" paddingLeft="-8" click="togglePanel2()" />
+						</mx:GridItem>
+						<mx:GridItem horizontalAlign="right" width="50%" paddingBottom="0" paddingTop="8" paddingRight="3">
+							<mx:Image source="@Embed('../assets/images/icons/ico_add.png')" verticalAlign="bottom" useHandCursor="true" buttonMode="true"/>
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow id="collapsePanel2Body" width="100%">
+						<mx:GridItem paddingTop="2" width="100%" colSpan="2">
+							<mx:VBox width="100%">
+						        <mx:DataGrid id="dg" 
+						        	width="100%" 
+						        	rowCount="5" 
+						        	dataProvider="{attachmentsXML.attachment}"
+						        	headerHeight="0"
+						        	alternatingItemColors="#ffffff"
+						        	borderThickness="0"
+						        	rollOverColor="#edf1f7"
+						        	selectionColor="#f5f5f5"
+						        	verticalGridLines="false"
+						        	horizontalGridLines="false"
+						        	editable="true"
+						        	itemEditEnd="dg.destroyItemEditor()">
+						            <mx:columns>
+						                <mx:DataGridColumn dataField="icon" headerText="" width="20" editable="false">
+						                	<mx:itemRenderer>
+						                		<mx:Component>
+						                			<mx:Image source="@Embed('../assets/images/icons/ico_obj_attachment.png')" horizontalAlign="center" width="100%" height="16" scaleContent="false" />
+						                		</mx:Component>
+						                	</mx:itemRenderer>
+						                </mx:DataGridColumn>
+						                <mx:DataGridColumn dataField="document" headerText="" width="80" editable="false" />
+						                <mx:DataGridColumn dataField="description" headerText="" editable="false" />
+						                <mx:DataGridColumn textAlign="right" width="40">
+						                	<mx:itemEditor>
+						                		<mx:Component>
+						                			<mx:HBox horizontalGap="0">
+							                			<mx:Image source="@Embed('../assets/images/icons/ico_check_out.png')" scaleContent="false" />
+							                			<mx:Image source="@Embed('../assets/images/icons/ico_close.png')" scaleContent="false" />
+						                			</mx:HBox>
+						                		</mx:Component>
+						                	</mx:itemEditor>
+						                </mx:DataGridColumn>
+						            </mx:columns>
+						        </mx:DataGrid>					
+							</mx:VBox>
+						</mx:GridItem>
+					</mx:GridRow>
+				</mx:Grid>
+		
+				<mx:Grid width="100%" paddingTop="10" paddingBottom="10" paddingRight="10" paddingLeft="10">
+					<mx:GridRow  id="collapsePanel3Header" width="100%"  borderSides="bottom" borderStyle="solid" borderThickness="1" borderColor="#CCCCCC">
+						<mx:GridItem paddingTop="2" width="50%">
+							<mx:Image id="collapsePanel3Toggle" source="@Embed('../assets/images/icons/ico_expanded.png')" click="togglePanel3()" useHandCursor="true" buttonMode="true"/>
+							<mx:Text text="NOTES" fontSize="12" color="#666666" paddingLeft="-8" click="togglePanel3()"/>			
+						</mx:GridItem>
+						<mx:GridItem horizontalAlign="right" width="50%" paddingTop="8" paddingRight="3">
+							<mx:Image source="@Embed('../assets/images/icons/ico_add.png')" right="10" useHandCursor="true" buttonMode="true" />
+						</mx:GridItem>
+					</mx:GridRow>
+					<mx:GridRow id="collapsePanel3Body" width="100%">
+						<mx:GridItem paddingTop="2" width="100%" colSpan="2">
+							<mx:VBox width="100%">
+							<mx:HBox width="100%" paddingTop="5">
+								<mx:Grid verticalGap="1" horizontalGap="0" width="100%">
+									<mx:GridRow width="100%" paddingBottom="10">
+										<mx:GridItem width="80%">
+											<mx:Text width="100%" id="text1" />
+										</mx:GridItem>
+										<mx:GridItem width="20%" textAlign="right">	
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Anthony Moquette<br /> 05:04 PM PST]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+									</mx:GridRow>
+								</mx:Grid>
+								</mx:HBox>
+								
+								<mx:HBox width="100%">
+								<mx:Grid id="collapseComments" verticalGap="1" horizontalGap="0" width="100%" visible="false" includeInLayout="false" paddingBottom="10">
+									<mx:GridRow width="100%" backgroundColor="#e9edff" paddingBottom="5" paddingTop="5" paddingLeft="5" paddingRight="5">
+										<mx:GridItem colSpan="2" paddingTop="5" paddingRight="5" paddingBottom="5" paddingLeft="5">
+											<mx:TextInput width="80%" cornerRadius="0" color="#999999" text="Enter comment" />
+										</mx:GridItem>
+									</mx:GridRow>
+									<mx:GridRow width="100%" backgroundColor="#e9edff" paddingBottom="5" paddingTop="5" paddingLeft="10" paddingRight="0">
+										<mx:GridItem width="80%">
+									   		<mx:Text width="100%">
+									            <mx:htmlText>
+									                <![CDATA[This is <font color="#FF0000">HTML text</font> in a <strong>Text component</strong>. Using the htmlText attribute of the <font color="#008800">Text component</font> you can use basic HTML markup.<br /><br />I am going to check on...]]>
+									            </mx:htmlText>
+									        </mx:Text>
+										</mx:GridItem>
+										<mx:GridItem width="20%" textAlign="right">
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Ralph Garcia<br />05:04 PM PST]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+									</mx:GridRow>
+									<mx:GridRow width="100%" backgroundColor="#e9edff" paddingBottom="5" paddingTop="5" paddingLeft="10" paddingRight="0">
+										<mx:GridItem>
+											<mx:Text width="80%">
+												<mx:text>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus diam a magna. Aenean facilisis pede sed ipsum. Vivamus interdum.</mx:text>
+											</mx:Text>
+										</mx:GridItem>
+										<mx:GridItem width="20%" textAlign="right">
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Anthony Moquette<br />05:04 PM PST]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+									</mx:GridRow>
+								</mx:Grid>
+								</mx:HBox>
+								
+								<mx:HRule width="100%" height="1" strokeColor="#E7E6E6" />
+								<mx:HBox width="100%" paddingBottom="10" paddingTop="5">
+								<mx:Grid verticalGap="1" horizontalGap="0" width="100%">
+									<mx:GridRow width="100%">
+										<mx:GridItem width="80%">
+											<mx:Text>
+												<mx:htmlText>
+													<![CDATA[John Smith uploaded file <font color="#3C5AB3">sensor.dwg</font>.<br />[ <a href="http://www.google.com"><font color="#3C5AB3">Add a comment</font></a> ]]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+										<mx:GridItem width="20%" textAlign="right">
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[03/03/09]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+									</mx:GridRow>	
+								</mx:Grid>
+								</mx:HBox>
+								<mx:HRule width="100%" height="1" strokeColor="#E7E6E6" />
+								<mx:HBox width="100%" paddingBottom="10" paddingTop="5">
+								<mx:Grid verticalGap="1" horizontalGap="0" width="100%">
+									<mx:GridRow width="100%">
+										<mx:GridItem width="80%">
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus diam a magna. Aenean facilisis pede sed ipsum. Vivamus interdum.<br />[ <a href="http://www.google.com"><font color="#3C5AB3">Add a comment</font></a> ]]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+										<mx:GridItem width="20%" textAlign="right">	
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Ralph Garcia<br />05:04 PM PST]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+									</mx:GridRow>
+								</mx:Grid>
+								</mx:HBox>
+								<mx:HRule width="100%" height="1" strokeColor="#E7E6E6" />
+								<mx:HBox width="100%" paddingBottom="10" paddingTop="5">
+								<mx:Grid verticalGap="1" horizontalGap="0" width="100%">
+									<mx:GridRow width="100%">
+										<mx:GridItem width="80%">
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum.<br />[ <a href="http://www.google.com"><font color="#3C5AB3">Add a comment</font></a> ]]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+										<mx:GridItem width="20%" textAlign="right">	
+											<mx:Text width="100%">
+												<mx:htmlText>
+													<![CDATA[Joel Nave<br />05:04 PM PST]]>
+												</mx:htmlText>
+											</mx:Text>
+										</mx:GridItem>
+									</mx:GridRow>
+								</mx:Grid>
+								</mx:HBox>
+							</mx:VBox>
+						</mx:GridItem>
+					</mx:GridRow>
+				</mx:Grid>
+			</mx:VBox>
+			</mx:Panel>
+			
+			
+			<mx:VDividedBox width="25%" height="100%" verticalGap="6">
+				<mx:VBox width="100%" height="100%" minWidth="20" paddingTop="3" verticalGap="0" horizontalScrollPolicy="off">
+				
+					<mx:Panel width="100%" layout="vertical" styleName="sidePanel" title="TEAM" verticalScrollPolicy="off" horizontalScrollPolicy="off" titleStyleName="panelTitle">
+						<mx:HBox width="100%">
+							<mx:Form paddingTop="10" paddingBottom="10" verticalGap="0">
+								<mx:LinkButton label="Anthony Moquette" fontSize="11" height="18" paddingLeft="0"
+				             		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_status_available.png')" />
+								<mx:LinkButton label="Anurag Batra"  fontSize="11" height="18" paddingLeft="0" paddingTop="0"
+				             		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_empty_space.png')" />
+								<mx:LinkButton label="Shibao Xu" fontSize="11" height="18" paddingLeft="0" paddingTop="0"
+				             		fontWeight="normal" icon="@Embed('../assets/images/icons/ico_status_available.png')" />
+							</mx:Form>
+						</mx:HBox>
+					</mx:Panel>
+					<mx:Spacer height="10" />
+					<mx:Panel width="100%" layout="vertical" title="SIMILAR TO" verticalScrollPolicy="off" horizontalScrollPolicy="off" titleStyleName="panelTitle">
+						<mx:HBox width="100%">
+							<mx:Form paddingTop="10" paddingBottom="0" verticalGap="0" width="100%">
+				    			<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3"
+				    				fontWeight="normal" />
+				    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" paddingBottom="10" paddingTop="0" />
+				    			<mx:LinkButton label="QTE-1552 -4.22" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3"
+				    				fontWeight="normal" />
+				    			<mx:Text text="Ultra supersonic wheels that can rotate at high velocity..." width="100%" paddingBottom="10" paddingTop="0" />
+				    			<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3"
+				    				fontWeight="normal" />
+				    			<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+				    			<mx:LinkButton label="QTE-3477 - 4.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3"
+				    				fontWeight="normal" />
+				    			<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+				    			<mx:LinkButton label="QTE-4443 - 2.00" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3"
+				    				fontWeight="normal" />
+				    			<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+				    			<mx:LinkButton label="QTE-8765 - 2.41" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3"
+				    				fontWeight="normal" />
+				    			<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+				    			
+							</mx:Form>
+						</mx:HBox>
+					</mx:Panel>
+				
+				</mx:VBox>
+			</mx:VDividedBox>
+		</mx:Box>    
+
+
+	</mx:VBox>

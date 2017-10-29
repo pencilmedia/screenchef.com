@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html xmlns:ux="http://www.oracle.com/oracle-apps-ux" >
+<head>
+<script src='../../core/js/jquery-1.4.2.min.js'></script>
+<script src='../../core/js/jquery-ui-1.8.1.min.js'></script>
+<script src='../../core/js/extensions.js'></script>
+<script src='../../core/js/dwpe-2-lib.js'></script>
+<link rel='stylesheet' href='../extensions.css'/>
+<link rel='stylesheet' href='../../core/css/dwpe-2-lib.css'/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<ux:toolbars class='dwpe-toolbar'>
+  <ul>
+    <li class='dwpe-button Separator'><span></span></li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-create ' ></div>
+    </li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-edit '  title='Edit' ></div>
+    </li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-remove '  title='Remove' ></div>
+    </li>
+    <li class='dwpe-button Separator'><span></span></li>
+    <li class='dwpe-button IconicButton'  cmd='js::toggleTableQBE();'>
+      <div class='icons  ico-qbe '  title='Query by Example' ></div>
+    </li>
+    <li class='dwpe-button Separator'><span></span></li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-freezecolumn '  title='Freeze Column' ></div>
+    </li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-wrap '  title='Wrap Text' ></div>
+    </li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-detach '  title='Detach Table' ></div>
+    </li>
+    <li class='dwpe-button Separator'><span></span></li>
+    <li class='dwpe-button IconicButton' >
+      <div class='icons  ico-exportexcel '  title='Export to Excel' ></div>
+    </li>
+    <li class='dwpe-button Separator'><span></span></li>
+    <li class='dwpe-button InlineSelector' ><span class='label'>Go&nbsp;To</span><span class='arw'>&nbsp;</span>
+      <ul class='inline-selector-menu'>
+        <li class=' TextButton  1 '>Exceptions</li>
+        <li class=' TextButton  1 '>Material Plan</li>
+        <li class=' TextButton  1 '>Resource Requirement</li>
+        <li class=' TextButton  1 '>Items</li>
+        <li class=' TextButton  1 '>Supply Chain Bill</li>
+        <li class=' TextButton  1 '>Suppliers</li>
+        <li class=' TextButton  1 '>Calendar</li>
+        <li class=' TextButton  1 '>Clear to Build Simulation</li>
+        <li class=' TextButton  1 '>----------</li>
+        <li class=' TextButton  1 '>Open as New Analysis</li>
+      </ul>
+    </li>
+    <li class='dwpe-overflow-btn aft'></li>
+  </ul>
+  <div class='dwpe-toolbar-resize'  style='display:none'  ></div>
+  <!--args_toolbar:{k1:[{c1:'------',a1:'1',h1:'ToolbarSeparator',g1:'',e1:'',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'create',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'edit',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'remove',f1:'','button_style':'TextButton'},{c1:'------',a1:'1',h1:'ToolbarSeparator',g1:'',e1:'',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'js::toggleTableQBE();',e1:'qbe',f1:'','button_style':'TextButton'},{c1:'------',a1:'1',h1:'ToolbarSeparator',g1:'',e1:'',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'freezecolumn',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'wrap',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'detach',f1:'','button_style':'TextButton'},{c1:'------',a1:'1',h1:'ToolbarSeparator',g1:'',e1:'',f1:'','button_style':'TextButton'},{c1:'Item',a1:'1',h1:'IconicButton',g1:'',e1:'exportexcel',f1:'','button_style':'TextButton'},{c1:'------',a1:'1',h1:'ToolbarSeparator',g1:'',e1:'',f1:'','button_style':'TextButton'},{c1:'Go To',a1:'1',h1:'InlineSelector',g1:'',e1:'',f1:'','button_style':'TextButton',k1:[{c1:'Exceptions',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Material Plan',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Resource Requirement',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Items',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Supply Chain Bill',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Suppliers',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Calendar',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Clear to Build Simulation',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'----------',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'},{c1:'Open as New Analysis',a1:'1',h1:'TextButton',g1:'',e1:'',f1:'','button_style':'TextButton','item_type':'normal'}]}],'resizable':'0'}-->
+</ux:toolbars>
+</body>
+</html>

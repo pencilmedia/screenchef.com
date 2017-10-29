@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" verticalGap="0" xmlns:cnm="components.*">
+	<mx:Script>
+		<![CDATA[
+		
+            //Set icons classes
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_idea.png")]
+            public var iconIdea:Class;
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_quote.png")]
+            public var iconQuote:Class;
+            [Bindable]
+            [Embed(source="../assets/images/icons/ico_obj_requirement.png")]
+            public var iconRequirement:Class;
+	         
+	        //Status In Progress
+	        [Embed(source="../assets/images/icons/ico_status_inprogress.png")] 
+	        public var statusInprogress:Class; 
+	        //Status Completed
+	        [Embed(source="../assets/images/icons/ico_status_complete.png")] 
+	        public var statusComplete:Class; 
+	        
+	        
+			public function goToQuoteDetail():void
+            {
+            	parentApplication.navStack.selectedChild = parentApplication.quoteDetail;
+            }
+            
+             // CREATE REQUIREMENTS POPUP
+	        import mx.managers.PopUpManager;
+	        import popups.create.createRequirementPopup;
+	        
+	        public var createRequirementPop:createRequirementPopup;
+	        
+	        public function requirementPopup():void
+	        {
+				createRequirementPop = new createRequirementPopup();
+				PopUpManager.addPopUp(createRequirementPop, this, false);
+				createRequirementPop.x = 300;
+				createRequirementPop.y = 100;
+			}
+			
+			
+			// CREATE NEW DROPDOWN MENU
+			import mx.controls.Menu;
+            import mx.events.MenuEvent;   
+            import flash.geom.Point;
+            
+            private var point1:Point = new Point();
+            private var myMenu:Menu;
+   
+            // Create and display the Menu control.
+            private function showMenu():void {
+                myMenu= Menu.createMenu(createNew, createNewMenu, false);
+                myMenu.labelField="@label"
+                myMenu.iconField="icon"
+                myMenu.addEventListener("itemClick", menuHandler);
+                
+                // Calculate position of Menu in Application's coordinates. 
+                point1.x = createNew.x;
+                point1.y = createNew.y;                
+                //point1 = createNew.localToGlobal(point1);
+
+                myMenu.show(point1.x + 512, point1.y + 75);
+            }
+       
+            // Event handler for the Menu control's change event.
+            private function menuHandler(event:MenuEvent):void  {
+               // Alert.show("Label: " + event.item.@label, "Clicked menu item");
+               requirementPopup();
+            }
+            
+
+			//MENU ITEMS - XML  
+			import mx.collections.XMLListCollection;
+            
+            [Bindable]
+            public var createNewMenu:XML =
+            <root>
+			    <menuitem label="Quote" icon="iconQuote" />
+			    <menuitem label="Idea" icon="iconIdea" />
+			    <menuitem label="Requirement" icon="iconRequirement" />
+        	</root>;
+			                                                                                                             
+	 ]]>                                                                                                                         
+	 </mx:Script>
+	
+	<mx:XML xmlns="" id="quotesXML" source="../assets/data/quotes.xml" />
+	<mx:XML xmlns="" id="favoritesXML" source="../assets/data/favorites.xml" />
+	<mx:XML xmlns="" id="actionItemsXML" source="../assets/data/actionItems.xml" />
+	<mx:XML xmlns="" id="recentUpdatesXML" source="../assets/data/recentUpdates.xml" />
+
+	<mx:Grid width="100%">
+		<mx:GridRow width="100%">
+			<mx:GridItem width="50%">
+				<mx:Text text="Welcome Ralph Garcia" fontSize="18" paddingLeft="10" paddingTop="10" paddingBottom="10"/>	
+			</mx:GridItem>
+			<mx:GridItem width="50%" horizontalAlign="right" paddingTop="10" paddingRight="10">
+				<mx:Button id="createNew" label="Create New" color="#3C5AB3" click="showMenu();" labelPlacement="left" icon="@Embed(source='../assets/images/icons/ico_dropdown.png')" />
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+	<mx:HDividedBox id="homeContent" width="100%" height="100%" paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="0" horizontalGap="10">
+		<mx:VDividedBox width="50%" height="100%" verticalGap="10">
+			<mx:Panel width="100%" height="40%" layout="absolute" title="My Open Action Items" paddingLeft="5" paddingRight="5" styleName="hmpgPanel" titleStyleName="hmpgPanelTitle">
+				<mx:DataGrid dataProvider="{actionItemsXML.item}" width="100%" height="100%" headerHeight="0" verticalGridLines="false" rowHeight="30" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+					<mx:columns>
+						<mx:DataGridColumn headerText="Description" dataField="{data.description}" wordWrap="true" paddingLeft="5" fontSize="11">
+							<mx:itemRenderer>
+								<mx:Component>
+									<mx:CheckBox label="{data.description}"/>
+								</mx:Component>
+							</mx:itemRenderer>
+						</mx:DataGridColumn>
+						<mx:DataGridColumn headerText="ID" dataField="id" width="100" fontSize="11" />
+						<mx:DataGridColumn headerText="Date" dataField="date" textAlign="right" paddingRight="5" width="80" fontSize="11"  />
+					</mx:columns>
+				</mx:DataGrid>
+				<mx:ControlBar textAlign="right" height="20" paddingTop="0" paddingRight="0" paddingBottom="5" horizontalAlign="right">
+					<mx:LinkButton label="View all..." fontSize="11" color="#3c5ab3" fontWeight="normal" />			
+				</mx:ControlBar>
+			</mx:Panel>
+			<mx:Panel width="100%" height="60%" layout="absolute" title="My Records" paddingLeft="5" paddingRight="5" styleName="hmpgPanel" titleStyleName="hmpgPanelTitle">
+				<mx:DataGrid dataProvider="{favoritesXML.favorite}" width="100%" height="100%" headerHeight="0" verticalGridLines="false" rowHeight="30" verticalAlign="middle" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid"
+					  click="goToQuoteDetail()">
+					<mx:columns>
+						<mx:DataGridColumn headerText="ID" dataField="id" width="80" />
+						<mx:DataGridColumn headerText="Description" dataField="description" wordWrap="false" paddingRight="10"/>
+					</mx:columns>
+				</mx:DataGrid>
+				<mx:ControlBar textAlign="right" height="20" paddingTop="0" paddingRight="0" paddingBottom="5" horizontalAlign="right">
+					<mx:LinkButton label="View all..." fontSize="11" color="#3c5ab3" fontWeight="normal" />			
+				</mx:ControlBar>
+			</mx:Panel>
+		</mx:VDividedBox>
+		<mx:Panel width="50%" height="100%" layout="absolute" title="Recent Updates" backgroundColor="#f5f5f5" styleName="hmpgPanel" titleStyleName="hmpgPanelTitle">
+			<mx:VBox paddingTop="10" paddingBottom="10" paddingLeft="10" paddingRight="10" verticalGap="0" width="100%" height="100%" backgroundColor="#ffffff" borderColor="#e4e4e4" borderThickness="1" borderStyle="solid">
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Note -" fontWeight="bold" />
+		    				<mx:LinkButton label="QTE-1552 -4.22" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Ultra supersonic wheels that can rotate at high velocity..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Joel Nave" />
+    					<mx:Text text="8:04 AM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Note -" fontWeight="bold" />
+		    				<mx:LinkButton label="QTE-1552 -4.22" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Ultra supersonic wheels that can rotate at high velocity..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Joel Nave" />
+    					<mx:Text text="8:04 AM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Note -" fontWeight="bold" />
+		    				<mx:LinkButton label="QTE-1552 -4.22" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Ultra supersonic wheels that can rotate at high velocity..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Joel Nave" />
+    					<mx:Text text="8:04 AM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Comment -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-1055 - 2.01" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+						</mx:HBox>
+    					<mx:Text text="Sensors for high velocity skates that should be capable for..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Ralph Garcia" />
+    					<mx:Text text="5:04 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New File Uploaded -" fontWeight="bold" />
+							<mx:LinkButton label="QTE-10133 - 1.17" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Skate sensors that can handle curves and can sense objects..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Anthony Moquette" />
+    					<mx:Text text="1:44 PM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox width="100%" horizontalGap="0">
+					<mx:VBox width="100%" verticalGap="0">
+						<mx:HBox horizontalGap="0">
+							<mx:Text text="New Note -" fontWeight="bold" />
+		    				<mx:LinkButton label="QTE-1552 -4.22" fontSize="11" height="15" paddingLeft="0" color="#3c5ab3" fontWeight="normal" />
+		    			</mx:HBox>
+		    			<mx:Text text="Ultra supersonic wheels that can rotate at high velocity..." width="100%" paddingBottom="10" paddingTop="0" />
+					</mx:VBox>
+					<mx:VBox verticalGap="0" width="100" height="100%">
+    					<mx:Text text="Joel Nave" />
+    					<mx:Text text="8:04 AM PST" />
+					</mx:VBox>
+				</mx:HBox>
+				
+				
+			</mx:VBox>
+			
+		</mx:Panel>
+	</mx:HDividedBox>
+</mx:VBox>

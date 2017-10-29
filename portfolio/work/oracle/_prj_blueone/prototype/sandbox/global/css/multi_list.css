@@ -1,0 +1,367 @@
+/*************************
+	AUTO COMPLETE
+*************************/	
+.controlOuterContainer,
+.sss, .agileautocomplete {
+    position: relative; /* ok in FF not IE */
+    *position: static; /* Ok in both SW */	
+	float: left;
+	height: 85px;
+	margin-right: 3px;
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+	background-color: #fff;
+}/* set width of widget here*/
+
+.mscl {
+	position: relative; 
+	float: left;
+	height: 63px;
+	margin-right: 3px;
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+	background-color: #fff;
+}
+#agileautocomplete { 
+	z-index: 8002
+} /* for IE z-index of absolute divs inside relative divs issue */
+#agileautocomplete2 {
+	z-index: 8001
+} /* for IE z-index of absolute divs inside relative divs issue */
+
+.agileautocomplete.disabled .selected_container {
+	border-top: 1px solid transparent;
+}
+
+.content.action_dialog {
+	margin-bottom: 0;
+}
+
+.focus_border { 
+	border:1px solid #c3d5f1;
+}	
+
+.agile_border {
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+}
+
+.search_query {
+	_position: absolute;
+	z-index: 0;
+	width: 98.5% !important;
+	height: 1.5em;
+	border: 0;
+	background-color: transparent;
+} /* abs for ie quirks */
+
+.results_container {
+	top: 1.7em;
+	left: -1px;
+	z-index: 10;
+	width: 100%; 
+	font-size: 11px;
+}
+.yui-ac-content {
+	position: absolute;
+	width: 100%;
+	z-index: 99999;
+	border-bottom: 1px solid #999; 
+	border-left: 1px solid #ccc; 
+	border-right: 1px solid #999; 
+	border-top: 1px solid #ccc; 
+	background-color: #fff;
+	overflow: hidden;
+}
+.yui-ac-shadow {
+	/* 	This style belongs to the YUI
+		AutoComplete and is not being used.
+	position: absolute;
+	z-index: 9049;
+	margin: .3em;
+	width: 100%;
+	background: #a0a0a0; */
+}
+.results_container ul {
+	padding: 5px 0;
+	width: 100%;
+}
+.results_container li {
+	padding: 0 5px;
+	cursor: default;
+	white-space: nowrap; 
+}
+.results_container li.yui-ac-highlight {
+	background-color: #dee7f8;
+}
+.results_container li.yui-ac-prehighlight {
+	/*background-color: #fefefe;*/
+}
+.selected_container {
+	height: 62px; 
+	*height: 61px;
+	overflow: auto; 
+	width: 99.85%;
+	border-top: 1px solid #ccc;
+	-moz-outline-style: none;
+	background-color: #FBFBFB;
+	background: url(../images/ico_status_non_editable.png) top left;
+}
+.single_container {
+	margin-top: -2px;
+	height: 23px;
+	*height: 21px;
+	width: 99.85%;
+	background-color: #FBFBFB;
+	background: url(../images/ico_status_non_editable.png) top left;
+}
+.mscl_container {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 62px; 
+	overflow: auto; 
+	width: 99.25% !important;
+	border-top: 1px solid #f5f5f5;	
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	.mscl_container { 
+		width: 610px !important;
+	}
+}
+/******************************************************************************
+SINGLE SELECT SEARCH STYLES
+******************************************************************************/
+div.sss {
+	float: left;
+	height: 42px;
+}
+div.sss input {
+	background-color: transparent;
+	border: 0;
+	margin: 2px;
+	padding: 0px;
+}
+.sss input { 
+	width: 99% !important;
+	border-bottom: 1px solid #ccc !important; 
+}
+/************************
+	PILL STYLES
+************************/
+.pillbox {
+	position: relative; 
+	top: 0; 
+	left: 0;
+}
+
+ul.pillbox li.selected div { 
+	background-color: #A4C8F6;
+}
+
+ul.pillbox li, .selected_container li, .mscl_container li { 
+	float: left;
+	font-size: 9px;
+	border: 1px solid #a4bdec;
+	padding: 0 1px 0 3px; /* old */
+	margin: 3px 0 0 3px;
+	height: 12px;
+	line-height: 12px;
+	background-color: #dee7f8;
+	cursor: pointer;
+	letter-spacing: .115em;
+	color: #333;
+	white-space: nowrap;
+}
+div.sss ul.pillbox li { 	padding: 0 15px 0 3px; }
+
+/* ellipsis div */
+.pillbox li div 
+{
+	position: absolute;
+	background-color: #dee7f8;
+	text-transform: none;
+	text-decoration: none;
+	margin: 0 0 0 2px;
+	padding: 0 3px;
+	height: 12px; 
+	display: none;
+}
+
+ul.pillbox a, .selected_container a, .mscl_container a{
+	background: url(../images/btn_pill_close.png) no-repeat right center;
+	text-decoration: none;
+	margin: 0 0 0 2px;
+	padding: 0 3px;
+	height: 12px; 
+}
+div.sss ul.pillbox a { position: absolute; }
+
+ul.pillbox a span, .selected_container a span, .mscl_container a span{
+	visibility: hidden;
+}
+ul.pillbox li.selected, .selected_container2 li.selected, .selected_container li.selected { 
+	border-color: #6a9eea;
+	background-color: #a4c8f6 !important;
+}
+ul.pillbox li.selected a, .selected_container2 li.selected a, .selected_container li.selected a { 
+	background: url(../images/btn_pill_selected_close.png) no-repeat right center;
+}
+/* disabled pill styles */
+.selected_container ul.disabled_pills li, .selected_container ul.disabled_pills li a {
+	cursor: default;
+	background-color: #eee;
+	border-color: #999;
+	color: #666;
+}
+.selected_container ul.disabled_pills li a { 
+	background: url(../images/btn_pill_disabled.png) no-repeat right center;
+}
+
+/************************
+	PILL STYLES
+************************/
+ul.pillbox li.selected div { background-color: #A4C8F6; }
+
+ul.pillbox li, .selected_container li, .mscl_container li {
+	float: left;
+	font-size: 9px;
+	border: 1px solid #a4bdec;
+	padding: 0 1px 0 3px; /* old */
+	margin: 3px 0 0 3px;
+	height: 12px;
+	line-height: 12px;
+	background-color: #A4C8F6;
+	cursor: pointer;
+	letter-spacing: .115em;
+	color: #333;
+	white-space: nowrap;
+  /*************************************
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  ***************************************/
+  /*overflow-x:hidden;*/
+}
+.ellipses
+{
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+
+/************************
+	PILL ADDED NOTICE STYLES
+************************/
+.added_notice, .palette_added_notice {
+	background-color: #393;	
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	color: #fff;
+}
+.added_notice {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	z-index: 10;
+	margin: 0 35%;
+	width: 45px;
+	padding: 2px;
+}
+.palette_added_notice {
+	position: absolute;
+	top: 20px;
+	right: 14px;
+	width: 55px;
+	padding: 2px;
+}
+
+/*************************
+	PALETTES
+*************************/	
+
+/*********************************************
+	MULTI SELECT CASCADE CONTAINER
+*********************************************/
+.msclTreeContainerDiv {
+	width: 95%;
+	margin: 5px auto;
+	background-color: #fff;
+	border: 1px solid silver;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 200px;
+}
+/*********************************************
+	MULTI SELECT SEARCH PALETTE
+*********************************************/
+#mssPalette div.palette_results_list table { 
+	border-bottom: 1px solid #ccc; 
+	margin-top: -1px;
+}
+#mssPalette div.palette_results_list td { 
+	border-right: 1px solid #ccc;
+}
+#mssPalette div.palette_results_list th { 
+	padding-left: 5px; 
+	border-right: 1px solid #ccc;
+}
+#mssPalette div.palette_results_list th a { 
+	color: #333;
+}
+/******************************************************************************
+SINGLE SELECT SEARCH PALETTE
+******************************************************************************/
+
+
+/*********************************************
+	MULTI USER SEARCH
+*********************************************/
+#mus_palette div.group_approval {
+	padding: 2px 0px 0 10px;
+	margin: 5px 0 0 10px;
+	height: 35px;
+}
+#mus_palette div.group_approval input {
+	border: 0px solid green; 
+	padding-top: 5px;
+}
+#mus_palette div.group_approval label { 
+	position: relative;
+	top: -4px;
+	*top: -2px;
+}
+#mus_palette div.msclTreeContainerDiv { 
+	height: 140px;
+}
+#group_approval {
+	margin: 5px 5px 5px 10px;
+}
+#group_approval input {
+	float: left;
+	margin-right: 3px;
+}
+#group_approval input[type="radio"]{
+	border: none;
+}
+#group_approval p {
+	clear: both;
+	margin-bottom: 5px;
+}
+/* Multi User Search Custom Icons */
+#mus_treeContainer.mus .itemIconFolderOpen,
+#mus_treeContainer.mus .itemIconFolderClosed {
+	background: transparent url(/global/images/icn_obj_user_group.png) no-repeat scroll 0px 2px;
+}
+#mus_treeContainer.mus .itemIconDocument {
+	background: transparent url(/global/images/icn_obj_user.png) no-repeat scroll 0px 1px;
+}
+
+

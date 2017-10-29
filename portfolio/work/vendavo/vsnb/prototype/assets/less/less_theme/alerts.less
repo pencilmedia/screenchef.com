@@ -1,0 +1,114 @@
+/* Alerts
+// Theme: Vendavo
+// -------------------------------------------------*/
+
+.alert-block { 
+	> ul {
+		margin: 10px 0px 10px 50px;
+		li {
+			line-height: 15px;
+		}
+	}
+}
+.alert-block p {
+	+ p {
+  		margin-top: 0px;
+  	}
+  	+ p button {
+  		margin-top: 5px;	
+  	}
+}
+
+.alert {
+	border-radius: 0;
+	margin: 10px 0;
+	h4,
+	strong {
+		i {
+			display: inline-block;
+			font-size: 125%;
+			margin-right: 5px;
+			min-width: 20px;
+			text-align: center;
+		}
+	}
+	p {
+		line-height: 18px;
+		padding-left: 25px;
+	}
+	.close {
+	  line-height: 15px;
+	  position: relative;
+	  top: 0;
+	}
+	&.alert-with-actions {
+		position: relative;
+		background: @mintLighter;
+		border-color: @mintDark;
+		h2 {
+			color: @grayDarkest;
+			margin: 0 0 5px 0;
+			line-height: 32px;
+		}
+		p {
+			color: @grayDark;
+			padding: 0;
+		}
+		.action-group {
+			position: absolute;
+			top: 15px;
+			right: 10px;
+			button {
+			
+				&.approve {
+					//background: @green;
+				}
+				&.deny {
+					//background: @red;
+				}
+			}
+		}
+	}
+}
+// Alert Box Icon Colors
+.alert-danger,
+.alert-error {
+	background-color: @errorBackground;
+	border-color: @errorBorder;
+	color: @errorText;
+	h4, strong {
+		i {
+            color: @errorText;
+		}
+	}
+}
+.alert-warning {
+	background-color: @warningBackground;
+	border-color: @warningBorder;
+	color: @warningText;
+	h4, strong {
+		i {
+            color: @warningText;
+		}
+	}
+}
+.alert-info {
+	background-color: @infoBackground;
+	border-color: @infoBorder;
+	color: @infoText;
+	h4, strong {
+		i {
+            color: @infoText;
+		}
+	}
+}
+.alert-success {
+	background-color: @successBackground;
+	border-color: @successBorder;
+	color: @successText;
+	h4, strong {
+		i {
+            color: @successText;
+		}
+	}
+}
