@@ -535,21 +535,12 @@ header nav > ul li a.active {
 .button {
   color: #043F90;
   background: #ccc;
+  font-size: .95em;
 }
-/* line 35, ../../scss/_buttons.scss */
+/* line 36, ../../scss/_buttons.scss */
 .button:hover {
   background: #bfbfbf;
   text-decoration: none;
-}
-/* line 39, ../../scss/_buttons.scss */
-.button.button-primary {
-  background: #FEC200;
-  border-color: #cb9b00;
-}
-/* line 42, ../../scss/_buttons.scss */
-.button.button-primary:hover {
-  background: #b28800;
-  border-color: #b28800;
 }
 
 /* BEGIN: footer.scss
@@ -632,12 +623,7 @@ footer ul li a:hover {
 .portfolio main > article.client > section p:last-child {
   margin-bottom: 30px;
 }
-/* line 44, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section.product img {
-  width: 325px;
-  margin-bottom: 1.6em;
-}
-/* line 49, ../../scss/_portfolio.scss */
+/* line 43, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container {
   max-width: 100%;
   margin-left: auto;
@@ -649,7 +635,7 @@ footer ul li a:hover {
   content: "";
   display: table;
 }
-/* line 51, ../../scss/_portfolio.scss */
+/* line 45, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -664,30 +650,30 @@ footer ul li a:hover {
   outline: 1px solid #d9d9d9;
   overflow: auto;
 }
-/* line 60, ../../scss/_portfolio.scss */
+/* line 54, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item:hover {
   background: #e6e6e6;
   box-shadow: 0 0 25px #a6a6a6;
   color: #000;
   text-decoration: none;
 }
-/* line 66, ../../scss/_portfolio.scss */
+/* line 60, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item .card-left, .portfolio main > article.client > section.card-container .card-item .card-right {
   min-height: 100px;
 }
-/* line 68, ../../scss/_portfolio.scss */
+/* line 62, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item .card-left h6, .portfolio main > article.client > section.card-container .card-item .card-right h6 {
   visibility: hidden;
 }
-/* line 71, ../../scss/_portfolio.scss */
+/* line 65, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item .card-left > p, .portfolio main > article.client > section.card-container .card-item .card-right > p {
   color: #595959;
 }
-/* line 73, ../../scss/_portfolio.scss */
+/* line 67, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item .card-left > p:last-child, .portfolio main > article.client > section.card-container .card-item .card-right > p:last-child {
   margin-bottom: 0;
 }
-/* line 78, ../../scss/_portfolio.scss */
+/* line 72, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item .card-left {
   float: left;
   display: block;
@@ -700,7 +686,7 @@ footer ul li a:hover {
 .portfolio main > article.client > section.card-container .card-item .card-left:last-child {
   margin-right: 0;
 }
-/* line 83, ../../scss/_portfolio.scss */
+/* line 77, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item .card-right {
   float: left;
   display: block;
@@ -712,7 +698,7 @@ footer ul li a:hover {
 .portfolio main > article.client > section.card-container .card-item .card-right:last-child {
   margin-right: 0;
 }
-/* line 88, ../../scss/_portfolio.scss */
+/* line 82, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-left {
   float: left;
   display: block;
@@ -724,7 +710,7 @@ footer ul li a:hover {
 .portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-left:last-child {
   margin-right: 0;
 }
-/* line 92, ../../scss/_portfolio.scss */
+/* line 86, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-right {
   float: left;
   display: block;
@@ -736,31 +722,31 @@ footer ul li a:hover {
 .portfolio main > article.client > section.card-container .card-item:nth-child(even) .card-right:last-child {
   margin-right: 0;
 }
-/* line 98, ../../scss/_portfolio.scss */
+/* line 92, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item.ixd .card-left {
   background: url("../img/graphic-ixd.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 104, ../../scss/_portfolio.scss */
+/* line 98, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item.front-end .card-right {
   background: url("../img/graphic-fee.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 110, ../../scss/_portfolio.scss */
+/* line 104, ../../scss/_portfolio.scss */
 .portfolio main > article.client > section.card-container .card-item.visual-design .card-left {
   background: url("../img/graphic-vd.jpg") no-repeat center center;
   background-size: 100%;
 }
-/* line 120, ../../scss/_portfolio.scss */
+/* line 114, ../../scss/_portfolio.scss */
 .portfolio main > article.screenshots section {
   overflow: hidden;
 }
-/* line 122, ../../scss/_portfolio.scss */
+/* line 116, ../../scss/_portfolio.scss */
 .portfolio main > article.screenshots section img {
   margin-bottom: 1.6em;
   max-width: 800px;
 }
-/* line 129, ../../scss/_portfolio.scss */
+/* line 123, ../../scss/_portfolio.scss */
 .portfolio main > article section.client-summary {
   padding-top: 1.6em;
 }
