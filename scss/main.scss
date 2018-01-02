@@ -1,4 +1,4 @@
-/* BEGIN: theme.scss
+/* BEGIN: main.scss
 // -----------------------------------------------------*/
 // Bourbon Library
 @import "../bower_components/bourbon/app/assets/stylesheets/_bourbon";
@@ -8,8 +8,6 @@
 @import "variables";
 @import "mixins";
 
-// Page Layout
-@import "layout";
 
 // Global/Common
 @import "typography";
@@ -19,6 +17,9 @@
 @import "nav";
 @import "buttons";
 @import "footer";
+
+// Page Layout
+@import "layout";
 
 // Specific Pages
 @import "portfolio";

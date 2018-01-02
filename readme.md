@@ -12,5 +12,5 @@ PHP and Grunt project
 
 ## How to run it
 
-1. ``compass watch`` command from root folder of project
+1. ``compass watch`` command from root folder of project, to watch scss
 2. Use MAMP Pro to run php server locally
