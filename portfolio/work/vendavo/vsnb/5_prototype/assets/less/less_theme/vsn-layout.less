@@ -1,0 +1,266 @@
+/* BEGIN: vsn-layout.less
+// -----------------------------------------------------*/
+/* VSN App Layout */
+
+.vsnb {
+    .mask {
+        background: rgba(0, 0, 0, .5);
+        bottom: 0;
+        display: none;
+        left: 0;
+        outline: 0;
+        overflow: auto;
+        overflow-y: scroll;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1050;
+        -webkit-overflow-scrolling: touch;
+    }
+    &.wideViewport {
+        > section {
+            /* 1st <section> desktop*/
+            padding-left: 250px;
+        }
+    }
+    &.slimViewport {
+        > section {
+            /* 1st <section> mobile*/
+            padding-left: 0;
+        }
+    }
+    // Mixin
+    .drilllist();
+    &.active-drillin {
+        // When details resized from <768 to >768, this avoids adding the padding-left 250px
+        > .navbar-fixed-top, > section {
+            padding-left: 0;
+        }
+        .rt-column {
+            width: 60%;
+            /* After .drill-list mixin because inheritance order */
+        }
+    }
+    &.sidebar-closed {
+        > section {
+            /* Sidebar closed remove padding-left */
+            padding-left: 0;
+        }
+    }
+    aside {
+        /* Sidebar Menu - Navigation */
+        &.sidebar-menu {
+            // Color in vsn-theme-default theme
+            display: block;
+            height: 100%;
+            overflow: auto;
+            position: fixed;
+            top: 0;
+            width: 250px;
+            z-index: 1060;
+            -webkit-overflow-scrolling: touch;
+            header {
+                // Color in vsn-theme-default theme
+                h1 {
+                    // Color in vsn-theme-default theme
+                    font-size: 120%;
+                    font-weight: normal;
+                    margin: 0;
+                    line-height: @navbarHeight;
+                    img {
+                        margin: -2px 10px 0 15px;
+                        width: 22px;
+                    }
+                }
+            }
+            .content {
+                height: 100%;
+                border-right: 1px solid @borderColor;
+                nav {
+                    .nav-stacked {
+                        li {
+                            margin-bottom: -1px; // bring up, so there is not double borders
+                            &:first-child {
+                                line-height: 33px;
+                                a {
+                                    font-weight: 500;
+                                    .badge {
+                                        margin-top: 8px;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                margin-top: 5px;
+                            }
+                            &.divider {
+                                // Color in vsn-theme-default theme
+                                margin: 0;
+                            }
+                            a {
+                                // Color in vsn-theme-default theme
+                                border: none;
+                                font-weight: 400;
+                                padding-left: 15px;
+                                .badge {
+                                    // Color in vsn-theme-default theme
+                                    min-width: 35px;
+                                }
+                                // Hover Color in vsn-theme-default theme
+                            }
+                            &.active {
+                                a {
+                                    // Color in vsn-theme-default theme
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+                footer {
+                    // Color in vsn-theme-default theme
+                    position: fixed;
+                    width: 249px; // bg mint needed because action menu in mobile has opacity. this removes that for the footer
+                    bottom: 10px;
+                    .footer-actions {
+                        .btn-group {
+                            .btn {
+                                // Color in vsn-theme-default theme
+                                background: none;
+                                border: none;
+                                box-shadow: none;
+                                text-shadow: none;
+                                font-weight: normal;
+                                letter-spacing: 0;
+                                // Hover Color in vsn-theme-default theme
+                                i {
+                                    font-size: 125%;
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* Contextual Pane */
+        &.contextual-pane {
+            // Color in vsn-theme-default theme
+            display: block;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 40%;
+            z-index: 1040;
+            /* FOR IE - fixed navbar needs special love inside a nested container :( */
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+                right: 17px;
+            }
+            .contextual-content {
+                border-left: 1px solid @borderColor;
+                padding-top: @navbarHeight;
+                height: 100%;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                .navbar-fixed-top {
+                    padding: 0;
+                    /* FOR IE - fixed navbar needs special love inside a nested container :( */
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+                        left: auto;
+                        right: auto;
+                        width: 60%;
+                    }
+                    // Mixin
+                    .butcons();
+                    .butcon {
+                        &:hover {
+                            outline: none;
+                        }
+                    }
+                    h1 {
+                        margin-left: 0;
+                        padding: 11px 0 11px 10px;
+                        line-height: 20px;
+                    }
+                    .close-pane {
+                        display: none;
+                    }
+                }
+                article {
+                    overflow: hidden;
+                    h1 {
+                        // Color in vsn-theme-default theme
+                        border: none;
+                        border-bottom: 1px solid @borderColor;
+                        text-transform: uppercase;
+                        font-size: 100%;
+                        font-weight: 400;
+                        margin: @pageMargin 0 0 0;
+                        padding: 0 0 10px 10px;
+                        + p {
+                            margin-top: 10px;
+                        }
+                    }
+                    p {
+                        margin: 0 10px;
+                        color: @grayLight;
+                    }
+                    &:first-child {
+                        h1 {
+                            &:first-child {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                    .stat-box {
+                        margin: 10px 0;
+                    }
+                    .description {
+                        margin: @pageMargin 10px;
+                    }
+                    .competitive-chart();
+                }
+                footer {
+                    text-align: center;
+                    // Color in vsn-theme-default theme
+                    margin: 0;
+                    padding: 10px;
+                    width: 100%;
+                    &.fixed-bottom {
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;
+                        z-index: 1040;
+                        // Color in vsn-theme-default theme
+                        /* FOR IE - fixed navbar needs special love inside a nested container :( */
+                        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+                            left: auto;
+                            right: auto;
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.contextual-pane-open {
+        aside {
+            &.contextual-pane {
+                width: 480px;
+                box-shadow: 0 0 5px @grayDarker;
+                border-left: none;
+                .contextual-content {
+                    .navbar-fixed-top {
+                        .close-pane {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Mixin
+    .statbox();
+}
+/* END: vsn-layout.less
+// -----------------------------------------------------*/

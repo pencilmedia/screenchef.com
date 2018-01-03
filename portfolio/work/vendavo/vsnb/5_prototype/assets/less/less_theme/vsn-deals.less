@@ -1,0 +1,147 @@
+/* BEGIN: vsn-deals.less
+// -----------------------------------------------------*/
+
+.vsnb {
+	&.price-lookup {
+		.drill-list {
+			.lt-column {
+				form {
+					fieldset {
+						padding: 10px;
+						> .select2-container {
+							width: 100%;
+							margin-bottom: 10px
+						}
+						&.group-w-btn {
+							.group-set {
+								padding: 0;
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.drill-list {
+		.lt-column {
+			.nav.nav-pills {
+				li {
+					width: 50%;
+				}
+			}
+		     header {
+		        &.message {
+		          	p {
+		          		margin: @pageMargin;
+			            	strong {
+			              		&.warning {
+			                		color: @orange;
+			              		}
+			            	}
+		          	}
+		        }
+		     }
+			form {
+				fieldset {
+					&.group-w-btn {
+						.group-set, .group-btn {
+							float: left;
+						}
+						.group-set {
+							padding: 10px 0 10px @pageMargin;
+							width: 94%;
+							.input-group {
+								.btn-group {
+									.btn {
+										box-shadow: none;
+										border-color: @borderColor; // Same border-color as input
+										border-right: none;
+										background: @white;
+									     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eee), color-stop(15%, #fff));
+									     background-image: -webkit-linear-gradient(top, #eee 1%, #fff 15%);
+									     background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%);
+									     background-image: linear-gradient(to bottom, #eee 1%, #fff 15%);
+									     &:hover {
+									     	color: @gray;
+									     	box-shadow: none;
+									     }
+									}
+									&.open {
+										.btn {
+											box-shadow: none;
+											color: @mintDarker;
+										}
+									}
+									.dropdown-menu {
+										max-height: 550px;
+										overflow-y: auto;
+										dt {
+											border-bottom: 1px solid @borderColor;
+											padding-left: 10px;
+											color: @mintDarker;
+											background: @mintLight;
+										}
+										dd {
+											a {
+												border-bottom: none;
+											}
+											&.divider {
+												margin: 5px 0;
+											}
+										}
+									}
+								}
+								.search {
+									width: 100%;
+								}
+							}
+						}
+						.group-btn {
+							padding: 10px;
+							width: 4%;
+							.fa {
+								font-size: 135%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.rt-column {
+			&.details-pane {
+				overflow: auto;
+				padding: 0 @pageMargin;
+				h1 {
+					em {
+						font-weight: normal;
+						font-style: normal;
+						font-size: 90%;
+						margin-left: 5px;
+					}
+				}
+				.linked {
+					display: block;
+					position: relative;
+					border: none;
+					.link-affordance {
+						cursor: pointer;
+						display: block;
+						&:hover:after {
+                    			// Color in vsn-theme-default theme
+							font-family: FontAwesome;
+							content: "\f054";
+							position: absolute;
+							font-size: 250%;
+							top: 25%;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* END: vsn-deals.less
+// -----------------------------------------------------*/

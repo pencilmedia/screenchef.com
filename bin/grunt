@@ -1,1 +1,3 @@
-../lib/node_modules/grunt/bin/grunt
+#!/usr/bin/env node
+
+require('grunt-cli/bin/grunt');

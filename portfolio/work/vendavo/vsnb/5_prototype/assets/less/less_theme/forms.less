@@ -1,0 +1,413 @@
+/* BEGIN: Forms.less
+// ----------------------------------------------------*/
+
+// GLOBAL FORM ELEMENTS
+// -----------------------------------------------------
+::-webkit-input-placeholder {
+   color: @grayLightest;
+   font-weight: normal;
+   letter-spacing: .08em;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: @grayLightest;
+   font-weight: normal;
+   letter-spacing: .08em;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: @grayLightest;
+   font-weight: normal;
+   letter-spacing: .08em;  
+}
+
+:-ms-input-placeholder {  
+   color: @grayLightest;
+   font-weight: normal;
+   letter-spacing: .08em;  
+}
+form {
+	::-webkit-input-placeholder {
+	   color: @grayLightest;
+	   font-family: @font-family-sans-serif;
+	   font-size: 95%;
+	   font-weight: 300;
+	   letter-spacing: 0;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: @grayLightest;
+	   font-family: @font-family-sans-serif;
+	   font-size: 95%;
+	   font-weight: 300;
+	   letter-spacing: 0;
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: @grayLightest;
+	   font-family: @font-family-sans-serif;
+	   font-size: 95%;
+	   font-weight: 300;
+	   letter-spacing: 0;
+	}
+	:-ms-input-placeholder {  
+	   color: @grayLightest;
+	   font-family: @font-family-sans-serif;
+	   font-size: 95%;
+	   font-weight: 300;
+	   letter-spacing: 0;
+	}
+	label {
+		display: block;
+		font-weight: 500;
+	}
+	input[type="checkbox"],
+	input[type="radio"] { 
+		box-shadow: none; 
+	}
+	input:not([type="checkbox"]):not([type="radio"]),
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"] {
+		border: 1px solid @borderColor;
+		display: inline-block;
+		padding: 0 7px;
+		&:focus {
+			border: none;
+			box-shadow: none;
+			outline: none;
+			&:required {
+				&:invalid {
+				  &:focus {
+				    border: none;
+				    box-shadow: none;
+				  }
+				}
+			}
+		}
+		&[readonly] {
+			background: none;
+			// Hover state
+			&:hover, &:focus {
+				background: none !important;
+			}
+			&:focus {
+				border-bottom-color: @borderColor !important;
+			}
+		}
+	}
+	input, select {
+		height: 28px;
+	}
+	textarea {
+		height: auto;
+		min-height: 28px;
+		.auto-expand {
+			display: block;
+			box-sizing: padding-box;
+			overflow: hidden;
+
+		}
+	}
+	.checkbox input[type="checkbox"] {
+		margin-left: 0; //override Bootstrap
+	}
+	
+	button[disabled], html input[disabled], input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+		background-color: #eee;
+	     color: @grayLighter !important;
+		cursor: not-allowed;
+	}
+	footer {
+		margin: @pageMargin 0;
+		.btn {
+			min-width: 15em;
+		}
+	}
+}
+
+.select2-choices {
+	box-shadow: none;
+}
+.select2-results .select2-highlighted {
+	background: @mintDark;
+	color: @grayDarkest;
+}
+.select2-drop-active {
+	border-color: @borderColor;
+}
+.select2-container-multi {
+	.select2-choices {
+		border-color: @borderColor;
+		border-left: none;
+		li {
+			a {
+				border: none;
+				height: 12px;
+			}
+		} 
+	}
+	&.select2-container-active {
+		.select2-choices {
+			border: 1px solid @blueDark;
+			outline: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+
+/* Form inside Contextual Pane */
+.edit-form {
+	form {
+		fieldset {
+			margin-top: 30px;
+			&:first-child {
+				margin-top: 0;
+			}
+			dl {
+				background: @white;
+				margin-top: @pageMargin;
+				border: 1px solid transparent;
+				&:first-child {
+					margin-top: 0;
+				}	
+				&:last-child {
+				//	margin-bottom: 75px; /* Allow space at end of form for footer */
+				}
+				dt {
+            		    // Color in vsn-theme-default theme
+                        border: none;
+                        border-bottom: 1px solid @borderColor;
+                        text-transform: uppercase;
+                        font-size: 100%;
+                        font-weight: 400;
+                        margin: @pageMargin 0 0 0;
+                        padding: 0 0 10px 10px;
+				}
+				dd {
+					label {
+						color: @gray;
+						font-size: 95%;
+						margin: 0;
+						padding: 10px 0 0 10px;
+					}
+					input:not([type="checkbox"]):not([type="radio"]),
+					select,
+					textarea,
+					input[type="text"],
+					input[type="password"],
+					input[type="date"],
+					input[type="month"],
+					input[type="time"] 
+					input[type="datetime"],
+					input[type="datetime-local"],
+					input[type="week"],
+					input[type="number"],
+					input[type="email"],
+					input[type="url"],
+					input[type="search"],
+					input[type="tel"],
+					input[type="color"] {
+						border: none;
+						border-bottom: 1px solid @borderColor;
+						color: @brightBlue;
+						margin: 0;
+						padding: 0 5px 0 10px;
+						width: 100%;
+						&:hover {
+							background: lighten(@blueLightest, 4%);
+						}
+						&:focus {
+							background: lighten(@blueLightest, 4%);
+							border: none;
+							border-bottom: 1px solid @brightBlue;
+							box-shadow: none;
+							outline: none;
+							&:invalid {
+								&:focus {
+									border-bottom: 1px solid @brightBlue;
+								}
+							}
+						}
+					}
+					input, select {
+						height: 35px;
+						&[type="checkbox"],
+						&[type="radio"] {
+							margin: 0 0 0 10px;
+							padding: 5px 0;
+						}
+					}
+					textarea {
+						padding: 5px 0 10px 10px;
+					}
+					select::-ms-expand { /* Hide IE Select dropdown arrow */
+					    display: none;
+					} 
+					select, input[type="date"] {
+						background: transparent;
+						border: none;
+						border-bottom: 1px solid @borderColor;
+						border-radius: 0;
+						color: @brightBlue;
+						padding: 0 10px;
+						width: 100%;
+						 /* Hide Select dropdown arrow */
+						appearance: none;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						-ms-appearance: none;
+						&:focus {
+							background: lighten(@blueLightest, 4%);
+							border: none;
+							box-shadow: none;
+							outline: none;
+							&:invalid {
+								&:focus {
+									border: none;
+									border-bottom: 1px solid @brightBlue;
+									box-shadow: none;
+									outline: none;
+								}
+							}
+						}
+					}
+					&.w-action {
+						position: relative;
+						> .butcon {
+							position: absolute;
+							top: 30px;
+							right: 0;
+							i {
+								color: @blueDark;
+							}
+							&:hover {
+								i {
+									color: @blueDarkest;
+								}
+							}
+						}
+						.sub-details {
+							display: none;
+							background: @mintLight;
+							border: 10px solid @mintLighter;
+							> h1 {
+								position: relative;
+								margin: 0;
+								padding: 10px;
+								.butcon {
+									margin: -8px;
+									i {
+										font-size: 75%;
+										color: @mintDarkest
+									}
+									&:hover {
+										background: @mintDark;
+										outline-color: @mintDarker;
+									}
+								}
+							}
+							dl {
+								border-bottom: none;
+								dd {
+									position: relative;
+									.butcon {
+										position: absolute;
+										top: 25%;
+										right: 5px;
+										i {
+											color: @grayLightest;
+											text-align: center;
+										}
+										&:hover {
+											background: @mint;
+											outline: @mintDarkest;
+											i {
+												color: @red;
+											}
+										}
+									}
+								}
+							}
+							p {
+								font-size: 90%;
+								&:last-child {
+									padding-bottom: 10px;
+								}
+							}
+						}
+					}
+					&.dual-fields {
+						overflow: hidden;
+						span {
+							float: left;
+							width: 50%;
+							font-size: 90%;
+							padding: 10px 0 0 10px;
+							&:first-child {
+								font-weight: bold;
+							}
+						}
+						input[type="text"], 
+						input[type="number"], 
+						input[type="date"]  {
+							float: left;
+							width: 50%;
+						}
+					}
+					&.error {
+						label {
+						//	color: @redDarker;
+						}
+						input:not([type="checkbox"]):not([type="radio"]),
+						select,
+						textarea,
+						input[type="text"],
+						input[type="password"],
+						input[type="date"],
+						input[type="month"],
+						input[type="time"] 
+						input[type="datetime"],
+						input[type="datetime-local"],
+						input[type="week"],
+						input[type="number"],
+						input[type="email"],
+						input[type="url"],
+						input[type="search"],
+						input[type="tel"],
+						input[type="color"] {
+							border-bottom-color: lighten(@red, 50%);
+							background: @redLightest;
+							color: @red;
+						}
+						.validation-errors {
+							background: @redLightest;
+							border-bottom: 1px solid @redLightest;
+							color: @redDarker;
+							font-size: 95%;
+							margin: 0;
+							padding: 5px 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* END: Forms.less
+// ----------------------------------------------------*/
+

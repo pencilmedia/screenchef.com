@@ -1,0 +1,366 @@
+/* BEGIN:vsn-theme-default.less
+// ----------------------------------------------------- */
+
+// Old Values : @navTitleBar: #1D4950;
+// Old Values : @contentTitleBar: #1B5B65;
+// Old Values : @contextualTitleBar: #51939E;
+
+@navTitleBar: #1D4950;
+@contentTitleBar: #18606B;
+@contextualTitleBar: #288D9F;
+@tableColor: lighten(@contextualTitleBar, 12%);
+
+.vsnb {
+	/* Buttons theme
+	// ------------------------------------------------ */
+	.butcon {
+		color: @blueDarkest;
+		&:hover {
+			background: lighten(@navTitleBar, 77%);
+			color: @navyBlue;
+			outline: 1px solid lighten(@navTitleBar, 70%);
+		}
+	}
+	/* Lists theme
+	// ------------------------------------------------ */
+	ul, dl {
+		> li, > dd {
+			> a {
+				&:hover, &.active {
+					background: lighten(@navTitleBar, 75%);
+				}
+			}
+		}
+	}
+	/* Navbar theme
+	// ------------------------------------------------ */
+	.navbar-fixed-top {
+		background-color: @contentTitleBar;
+		color: lighten(@contentTitleBar, 65%);
+		.btn {
+			background: darken(@contentTitleBar, 1%);
+			border-color: darken(@contentTitleBar, 5%);
+			color: lighten(@contentTitleBar, 65%);
+			&:hover {
+				background: lighten(@contentTitleBar, 10%);
+				border-color: lighten(@contentTitleBar, 5%);
+				outline: 1px solid lighten(@contentTitleBar, 15%);
+			}
+		}
+		.butcon {
+			i{
+				color: lighten(@contentTitleBar, 65%);
+			}
+			&:hover {
+				background-color: lighten(@contentTitleBar, 5%);
+				outline: none;
+			}
+			&.back {
+				border-right: 1px solid lighten(@contentTitleBar, 10%);
+			}
+			&.close-view {
+				border-left: 1px solid lighten(@contentTitleBar, 10%);
+			}
+		}
+	}
+	/* Side Menu Navigation theme
+	// ------------------------------------------------ */
+	aside {
+		&.sidebar-menu {
+			background: lighten(@navTitleBar, 77%);
+			/* Side Menu Header theme
+			// ------------------------------------------------ */
+			header {
+				background: @navTitleBar;
+				h1 {
+					color: lighten(@navTitleBar, 77%);
+				}
+			}
+			.content {
+				nav {
+					.nav-stacked {
+						li {
+							&.divider {
+								border-top: 1px solid lighten(@contentTitleBar, 55%);
+							}
+							a {
+								color: lighten(@contentTitleBar, 10%);
+								.badge {
+									background: none;
+									border: 1px solid lighten(@contentTitleBar, 10%);
+									color: lighten(@contentTitleBar, 10%);
+								}
+								&:hover {
+									background: lighten(@contentTitleBar, 73%);
+									color: @contentTitleBar;
+									.badge {
+										border-color: @contentTitleBar;
+										color: @contentTitleBar;
+									}
+								}
+								&.pending-approval {
+									.badge {
+										border-color: @red;
+										color: @red;
+									}
+								}
+							}
+							&.active {
+								a {
+									background: lighten(@contentTitleBar, 68%);
+									color: @contentTitleBar;
+									.badge {
+										background: @contentTitleBar;
+									}
+									&.pending-approval {
+										.badge {
+											background: transparent;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				footer {
+					.footer-actions {
+						.btn-group {
+							.btn {
+								color: lighten(@navTitleBar, 40%);
+								&:hover {
+									color: @navTitleBar;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		/* Contextual Pane */
+		&.contextual-pane {
+			//background: lighten(@grayLightest, 12%);
+			background: @white;
+			.contextual-content {
+				.navbar-fixed-top {
+					background: @contextualTitleBar;
+					color: lighten(@contextualTitleBar, 50%);
+					.butcon {
+						i {
+							color: lighten(@contextualTitleBar, 50%);
+						}
+						&:hover {
+							background-color: lighten(@contextualTitleBar, 15%);
+							i {
+								color: lighten(@contextualTitleBar, 65%);
+							}
+						}
+					}
+				}
+				article {
+					h1 {
+						color: @contextualTitleBar;
+					}
+				}
+				footer {
+					background: @white;
+					&.fixed-bottom {
+						background: lighten(@navTitleBar, 77%);
+					}
+				}
+			}
+		}
+	}
+	/* List theme
+	// ------------------------------------------------ */
+	.drill-list {
+		.nav {
+			li {
+				a {
+					height: 55px;
+					.badge {
+						background: @navTitleBar;
+					}
+				}
+				&.active {
+					a {
+						color: @navTitleBar;
+					}
+				}
+			}
+		}
+		.lt-column {
+		    form {
+				background: @white;
+				border-bottom: 1px solid @borderColor;
+		     }
+		}
+		.rt-column {
+			&.details-pane {
+				.linked {
+					.link-affordance {
+						&:hover:after {
+							color: @navTitleBar;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Statbox theme
+	// ------------------------------------------------ */
+	/* List theme
+	// ------------------------------------------------ */
+	.stat-box {
+		&.with-action {
+			li {
+				a {
+					.fa {
+						color: @navTitleBar;
+					}
+				}
+			}
+		}
+	}
+	/* List theme
+	// ------------------------------------------------ *//* Form inside Contextual Pane */
+	.edit-form {
+		form {
+			fieldset {
+				dl {
+					dt {
+	                        color: @contextualTitleBar;
+					}
+				}
+			}
+		}
+	}
+	/* Tables theme
+	// ------------------------------------------------ */
+	.table-wrapper {
+		.table-striped > tbody > tr:nth-child(odd) {
+			background: lighten(@tableColor, 45%);
+		}
+		.table {
+			tbody {
+				border: 1px solid lighten(@tableColor, 45%);
+				tr {
+					&.selected {
+						td {
+							background: lighten(@tableColor, 50%);
+						}
+					}
+					&:hover {
+						background: lighten(@tableColor, 50%);
+					}
+				}
+			}
+			/* For Product Family Hierarchy Tables */
+			&.prod-hierarchy {
+				tr {
+					td {
+						&:first-child {
+							.butcon {
+								i {
+									color: lighten(@tableColor, 20%);
+								}
+								&:hover {
+									i {
+										color: @contextualTitleBar;
+									}
+								}
+							}
+						}
+					}
+					&.selected {
+						td {
+							&:first-child {
+								.butcon {
+									i {
+										color: lighten(@contextualTitleBar, 20%);
+									}
+								}
+							}
+						}
+					}
+				}
+				thead {
+					tr {
+						&:last-child {
+							background: lighten(@tableColor, 48%);
+							border-right: 1px solid lighten(@tableColor, 45%);
+							border-left: 1px solid lighten(@tableColor, 45%);
+							th {
+								color: darken(@tableColor, 20%);
+							}
+						}
+					}
+					tr {
+						th {
+							border-bottom: 1px solid lighten(@tableColor, 38%);
+							.butcon {
+								i {
+									color: @grayLighter;
+								}
+								&:hover {
+									background: lighten(@tableColor, 40%);
+									outline: 1px solid lighten(@tableColor, 30%);
+									i {
+										color: @tableColor;
+									}
+								}
+								&.disabled {
+									i {
+										color: @grayLightest;
+									}
+									&:hover {
+										background: none;
+										outline: none;
+										i {
+											color: @grayLightest;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				tbody {
+					tr {
+						&.hierarchy-parent {
+							&:hover {
+								background: lighten(@tableColor, 32%); /* Hover Row Color */
+							}
+							&.open {
+								border-top: 2px solid lighten(@tableColor, 35%);
+								td {
+									border-color: lighten(@tableColor, 35%);
+								}
+								&:hover {
+									background: lighten(@tableColor, 32%); /* Hover Row Color */
+								}
+							}
+						}
+						&.hierarchy-child {
+							td {
+								&:first-child {
+									table {
+										tr {
+											&:hover {
+												background: lighten(@tableColor, 32%); /* Hover Row Color */
+											}
+										}
+									}
+								}
+							}
+						}
+						&.selected {
+							td {
+								background: lighten(@tableColor, 28%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
