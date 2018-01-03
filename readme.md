@@ -16,3 +16,4 @@ PHP and Grunt project
 
 1. ``compass watch`` command from root folder of project
 2. Use MAMP Pro to run php server locally
+
