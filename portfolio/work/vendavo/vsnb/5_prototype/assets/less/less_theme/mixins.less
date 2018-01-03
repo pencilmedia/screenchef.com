@@ -1,0 +1,940 @@
+//
+// Vendavo Mixins
+// --------------------------------------------------
+
+.h2-styles() {
+  border-bottom: 1px solid @blue;
+  clear: both;
+  color: @blueDarkest;
+  font-size: 95%;
+  line-height: 35px;
+  margin-left: @pageMargin;
+  margin-top: @pageMargin;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Status Dots Mixin
+.stat-dots () {
+  .status {
+    i{color: @grayLighter;
+      font-size: 10px;
+    }
+    &.good {
+      i{color: @green;
+      }
+    }
+    &.warning {
+      i{color: @orange;
+      }
+    }
+    &.bad {
+      i{color: @red;
+      }
+    }
+  }
+}
+// Buttons and Butcons
+.butcons() {
+  .butcon {
+    i{color: @blueDarker;
+    }
+    &:hover {
+      background: @blueLightest;
+      outline: 1px solid @blueLight;
+      i {
+        color: @blueDarkest;
+      }
+    }
+  }
+}
+// LISTS
+.list-styles () {
+  > li,
+  > dd {
+    margin: 0;
+    > a {
+      border-bottom: 1px solid @borderColor;
+      padding: 10px;
+      &:hover,
+      &.active {
+        // Color in vsn-theme-default theme
+        border-bottom: 1px solid transparent;
+        color: @grayDarkest;
+      }
+    }
+    &:last-child {
+      > a {
+        border-bottom: none;
+      }
+    }
+  }
+}
+// Drill List
+.drilllist() {
+  .drill-list {
+    overflow: hidden;
+    .lt-column,
+    .rt-column {
+      float: left;
+    }
+    .lt-column {
+      width: 100%;
+    }
+    .rt-column {
+      display: none;
+      width: 100%;
+    }
+  }
+}
+// Stat Box
+.statbox() {
+  .stat-box {
+    margin-top: @pageMargin;
+    overflow: hidden;
+    padding: 0;
+    > li {
+      border: 1px solid @borderColor;
+      float: left;
+      height: 70px;
+      list-style: none;
+      padding: 15px 10px;
+      text-align: center;
+      width: 33.3%;
+      strong,
+      em {
+        margin: 0;
+        color: @grayDark;
+      }
+      strong {
+        display: block;
+      }
+      em {
+        color: @gray;
+        display: block;
+        font-style: normal;
+        line-height: 13px;
+        font-size: 85%;
+      }
+      &.scorebox {
+        .scoring();
+        span {
+          &.score {
+            display: inline-block;
+            margin: 3px;
+            &:first-child {
+              margin-left: -10px;
+            }
+          }
+        }
+      }
+      &:first-child {
+        border-left: none;
+        border-right: none;
+      }
+      &:last-child {
+        border-left: none;
+        border-right: none;
+      }
+    }
+    &.with-action {
+      li {
+        padding: 0;
+        a {
+          border: none;
+          display: block;
+          padding: 15px 10px;
+          position: relative;
+          height: 70px;
+          .fa {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 40%;
+          }
+          &:hover {
+            h4,
+            .fa {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    &.stacked {
+      li {
+        width: 50%;
+        strong {
+          font-size: 125%;
+        }
+        &:first-child {
+          border-left: none;
+          border-right: none;
+          border-top: none;
+        }
+        &:nth-child(2) {
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          margin-left: -1px;
+        }
+        &:nth-child(3) {
+          border-bottom: none;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+        }
+        &:last-child {
+          border-bottom: none;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          margin-left: -1px;
+        }
+      }
+    }
+    &.dropdown-stats {
+      /* Fix dropdown hiding under overflow hidden from .stat-box default styles - need overflow and min-height below */
+      overflow: visible;
+      min-height: 70px;
+      > li {
+        padding: 0;
+        &.scorebox {
+          padding: 15px 10px;
+        }
+        a {
+          border: none;
+          text-decoration: none;
+          display: block;
+          padding: 15px 10px;
+          .fa {
+            display: none;
+          }
+          &:hover {
+            .fa {
+              display: inline-block;
+            }
+          }
+        }
+        .input-group {
+          display: block;
+        }
+        .dropdown-styles();
+        .dropdown-menu {
+          left: auto;
+            right: 10%;
+            z-index: 9999;
+          > .arrow {
+            top: -30px;
+            right: 10%;
+            &:after {
+              top: -15px;
+              right: -15px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .dropdown-menu {
+            left: auto;
+            right: -75%;
+            z-index: 9999;
+            > .arrow {
+              right: 45%;
+              &:after {
+                top: -15px;
+                right: -15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Score Labels Mixin
+.scoring () {
+  .score {
+    border: 1px solid @grayLight;
+    border-radius: 50%;
+    display: block;
+    height: 10px;
+    margin: 0 auto;
+    width: 10px;
+    &.good {
+      background: @green;
+      border-color: darken(@green, 10%);
+    }
+    &.warning {
+      background: @orange;
+      border-color: darken(@orange, 10%);
+    }
+    &.bad {
+      background: @red;
+      border-color: darken(@red, 10%);
+    }
+  }
+}
+// Table Score Labels Mixin
+.scoring-table () {
+  .score {
+   span {
+    display: block;
+    margin: 0;
+    width: 4px;
+   }
+    &.good {
+      span {
+        background: @green;
+        border-color: darken(@green, 10%);
+      }
+    }
+    &.okay {
+      span {
+        background: @orange;
+        border-color: darken(@orange, 10%);
+      }
+    }
+    &.bad {
+      span {
+        background: @red;
+        border-color: darken(@red, 10%);
+      }
+    }
+  }
+}
+
+
+// Dropdown Menus
+.dropdown-styles() {
+        .dropdown-menu {
+          background: @white;
+        //  background: rgba(251, 253, 255, .8);
+          border: 1px solid @glass;
+          color: @grayDark;
+          font-size: 100%;
+          min-width: 325px;
+          width: 100%;
+          padding: 0;
+          .arrow {
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-top-width: 0;
+            border-bottom-color: @blueDarkest;
+            border-width: 15px;
+            &:after {
+              position: absolute;
+              display: block;
+              width: 0;
+              height: 0;
+              border-color: transparent;
+              border-style: solid;
+              content: " ";
+              margin-left: 0;
+              border-top-width: 0;
+              border-bottom-color: rgba(255, 255, 255, 1);
+              border-width: 15px;
+            }
+          }
+          .dropdown-content {
+            .alert {
+              margin: 10px;
+              p {
+                margin: 0;
+              }
+            }
+            h1, h2, p, a, li, dd, table {
+              color: @grayDarker;
+            }
+            h1 {
+              position: relative;
+              font-size: 125%;
+              font-weight: 500;
+              border-bottom: none;
+              text-transform: none;
+              padding: 0 0 10px @pageMargin;
+              strong, span {
+                display: inline-block;
+                padding: 0;
+              }
+              strong {
+                margin-right: 5px;
+              }
+              span {
+                margin: 0 5px;
+              }
+              .btn {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                font-size: 75%;
+                color: @brightBlue;
+                border: none;
+                box-shadow: none;
+                padding: 3px 6px;
+                &:hover {
+                  background: none;
+                  outline: none;
+                  color: @green;
+                }
+              }
+            }
+            > h2 {
+              font-size: 100%;
+              font-weight: 400;
+              margin: 0 @pageMargin 10px @pageMargin;
+              padding: 0;
+              em {
+                font-style: normal;
+                &:after {
+                  content: '\2022';
+                  margin: 0 10px;
+                }
+              }
+            }
+            > p {
+              margin: 0 @pageMargin;
+            }
+            table {
+              width: 100%;
+              margin: 0;
+              margin-bottom: 10px;
+                tr {
+                   td {
+                    padding: 2px 5px;
+                    &:first-child {
+                      padding-left: @pageMargin;
+                    }
+                    &:last-child {
+                      padding-right: @pageMargin;
+                      text-align: right;
+                    }
+                   }
+                }
+            }
+            ol, dl {
+             > li, > dd {
+                position: relative;
+                padding: 15px 0;
+                &:last-child {
+                  border-bottom: none;
+                }
+                > h1, > p {
+                  margin: 0;
+                  padding: 0;
+                }
+                > h1 {
+                  font-size: 100%;
+                  font-weight: normal;
+                }
+                > p {
+                  margin-top: 5px;
+                  line-height: 16px;
+                }
+                a {
+                  color: @brightBlue;
+                  font-size: 90%;
+                  display: inline-block;
+                  margin: 0 3px 0 0;
+                  padding: 0;
+                  &:hover {
+                    color: @greenDarkest;
+                  }
+                  &:after {
+                    content: ',';
+                  }
+                  &:last-child {
+                    &:after {
+                      content: ' ';
+                    }
+                  }
+                }
+                > button {
+                  background: none;
+                  border: none;
+                  color: @brightBlue;
+                  position: absolute;
+                  right: 10px;
+                  top: 32%;
+                  &:hover {
+                    color: @green;
+                  }
+                }
+              }
+            }
+            dl {
+              dd {
+                border-bottom: 1px solid @borderColor;
+                > h1, > p {
+                  padding: 0 50px 0 @pageMargin;
+                }
+                &:last-child {
+                  border-bottom: none;
+                }
+                &.message {
+                  strong {
+                    margin-bottom: 3px;
+                  }
+                  p {
+                    color: @grayDarker;
+                    margin: 0;
+                    padding: 0 @pageMargin;
+                  }
+                }
+              }
+            }
+            ol {
+              overflow: inherit;
+              padding: 0;
+              counter-reset: my-badass-counter;
+              > li {
+                list-style: none;
+                width: 100%;
+                padding: 10px 5px 10px 60px;
+                border-bottom: 1px solid @borderColor;
+                &:before {
+                  content: counter(my-badass-counter);
+                  counter-increment: my-badass-counter;
+                  border-radius: 50%;
+                  border: 1px solid @grayLighter;
+                  background: @grayLightest;
+                  position: absolute;
+                  left: 10px;
+                  width: 35px;
+                  height: 35px;
+                  padding-top: 2px;
+                  vertical-align: middle;
+                  text-align: center;
+                  font-weight: bold;
+                  font-size: 150%;
+                }
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                h1 {
+                    line-height: 18px;
+                  span {
+                    display: block;
+                    margin: 0;
+                    font-weight: 500;
+                  }
+                }
+                ul {
+                  margin: 0;
+                  padding: 0 0 0 15px;
+                  > li {
+                    margin: 0;
+                    padding: 0;
+                  }
+                }
+                button {
+                  background: none;
+                  border: none;
+                  color: @brightBlue;
+                  position: absolute;
+                  right: 5px;
+                  top: 24%;
+                  &:hover {
+                    color: @green;
+                  }
+                }
+              }
+            }
+          }
+        }
+}
+// Competitive Chart
+.competitive-chart() {
+  .competitive-chart {border: 2px solid red;
+    text-align: center;
+    position: relative;
+    border: 1px solid transparent;
+    min-height: 125px;
+    margin: 0 auto;
+    width: 75%;
+    .chart {
+      position: relative;
+      z-index: 900;
+      height: 25px;
+      margin-top: 50px;
+      .marker-target {
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 25px;
+        border-left: 1px dashed @grayDarkest;
+      }
+      span {
+        display: block;
+        background-color: @gray;
+        height: 100%;
+        padding: 2px 4px;
+        font-size: 75%;
+        font-weight: bold;
+        text-align: right;
+        color: @white;
+        font-size: 100%;
+        vertical-align: middle;
+      }
+      &.good {
+        border: 1px solid @grayLighter;
+        background-color: @grayLightest;
+        span {
+          display: block;
+          background-color: @green;
+          height: 100%;
+          &:hover {
+            background-color: @greenDark;
+          }
+        }
+      }
+      &.warning {
+        border: 1px solid @grayLighter;
+        background-color: @grayLightest;
+        span {
+          display: block;
+          background-color: @orange;
+          height: 100%;
+          &:hover {
+            background-color: @orangeDark;
+          }
+        }
+      }
+      &.bad {
+        border: 1px solid @grayLighter;
+        background-color: @grayLightest;
+        span {
+          display: block;
+          background-color: @red;
+          height: 100%;
+          &:hover {
+            background-color: @redDark;
+          }
+        }
+      }
+    }
+    .dropdown {
+      position: absolute;
+      display: inline-block;
+      height: 60px;
+      padding: 1px;
+      &.right-border {
+        border-right: 1px solid @grayLight;
+      }
+      &.left-border {
+        border-left: 1px solid @grayLight;
+      }
+      > a {
+        padding: 2px 6px;
+        font-size: 80%;
+        border: 0;
+        color: @glassDarkest;
+        display: block;
+        min-width: 65px;
+        background: @glassLighter;
+        outline: 1px solid @glassLight;
+        border: 1px solid @white;
+        &:hover {
+          color: @brightBlue;
+          background: @glass;
+          outline: 1px solid @glass;
+          border: 1px solid @glassLight;
+        }
+        span {
+          display: block;
+          &:last-child {
+            font-weight: bold;
+            color: @brightBlue;
+          }
+        }
+      }
+      .dropdown-styles();
+      &.competition-price {
+        z-index: 1111;
+        // TODO:PS - split dropdown mixin into two + make 'right' a parameter.
+        .dropdown-menu {
+          left: -75%;
+          .competition {
+            > .arrow {
+              top: -31px;
+              left: 30%;
+              border: 1px solid transparent;
+            }
+          }
+        }
+      }
+      &.last-price {
+        bottom: 0;
+        z-index: 920;
+        > a {
+          position: relative;
+          top: 50%;
+        }
+        .dropdown-menu {
+          top: 125%;
+          left: -250%;
+        }
+      }
+    }
+  }
+  .history {
+    h1 {
+      font-size: 125%;
+      font-weight: 500;
+      border-bottom: none;
+      text-transform: none;
+      padding: 0 0 10px @pageMargin;
+      text-align: left;
+      color: @grayDarker;
+      strong, span {
+        display: inline-block;
+        padding: 0;
+      }
+      strong {
+        margin-right: 5px;
+      }
+      span {
+        margin: 0 5px;
+      }
+      .btn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 75%;
+        color: @brightBlue;
+        border: none;
+        box-shadow: none;
+        padding: 3px 6px;
+        &:hover {
+          background: none;
+          outline: none;
+          color: @green;
+        }
+      }
+    }
+    > h2 {
+      font-size: 100%;
+      font-weight: 400;
+      margin: 0 @pageMargin 10px @pageMargin;
+      padding: 0;
+      em {
+        font-style: normal;
+        &:after {
+          content: '\2022';
+          margin: 0 10px;
+        }
+      }
+    }
+    .chart-summary {
+      overflow: hidden;
+      margin: 0 @pageMargin;
+      border-bottom: 1px solid @borderColor;
+      span {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        margin-bottom: 10px;
+        strong {
+          display: block;
+        }
+        em {
+          font-style: normal;
+        }
+      }
+    }
+    ul {
+      display: block;
+      border-bottom: 1px solid @borderColor;
+      list-style: none;
+      width: 90%;
+      height: 100px;
+      margin: 20px auto;
+      padding: 0;
+      li {
+        float: left;
+        width: 20px;
+        height: 100px;
+        margin: 0 5px;
+        &:first-child {
+          margin-left: 5%;
+        }
+        span {
+          display: block;
+          background-color: @grayLightest;
+          border: 1px solid @grayLighter;
+          &:hover {
+            background-color: @gray;
+          }
+          &.selected {
+            background-color: @mintDarker;
+          }
+        }
+      }
+    }
+    footer {
+      > p {
+        color: @grayDarker;
+        border: 1px solid transparent;
+        strong {
+          display: block;
+        }
+      }
+    }
+    // TODO:PS - split dropdown mixin into two + make 'right' a parameter.
+    > .arrow {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      top: -30px;
+      right: 50%;
+      border-top-width: 0;
+      border-bottom-color: rgba(0, 0, 0, .5);
+      border-width: 15px;
+      &:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        content: " ";
+        top: -15px;
+        right: -15px;
+        margin-left: 0;
+        border-top-width: 0;
+        border-bottom-color: @white;
+        border-width: 15px;
+      }
+    }
+  }
+}
+
+
+
+
+
+// Background clipping
+// Heads up:FF 3.6 and under need "padding" instead of "padding-box"
+.background-clip(@clip) {
+  background-clip: @clip;
+  -webkit-background-clip: @clip;
+  -moz-background-clip: @clip;
+}
+// Gradient Bar Colors for buttons and alerts
+.gradientBar(@primaryColor,
+@secondaryColor,
+@textColor:#fff,
+@textShadow:0 -1px 0 rgba(0,
+0,
+0,
+.25)) {
+  border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) fadein(rgba(0, 0, 0, .1), 15%);
+  color: @textColor;
+  text-shadow: @textShadow;
+  #gradient > .vertical(@primaryColor, @secondaryColor);
+}
+// Button backgrounds
+// ------------------
+.buttonBackground(@startColor,
+@endColor,
+@textColor:#fff,
+@textShadow:0 -1px 0 rgba(0,
+0,
+0,
+.25)) {
+  .reset-filter();
+  *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  // in these cases the gradient won't cover the background,
+  so we override
+  &:hover,
+  &:active,
+  &.active,
+  &.disabled,
+  &[disabled] {
+    background-color: @endColor;
+    color: @textColor;
+    *background-color: darken(@endColor, 5%);
+  }
+  // IE 7 + 8 can't handle box-shadow to show active,
+  so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@endColor, 10%) e("\9");
+  }
+  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+  .gradientBar(@startColor, @endColor, @textColor, @textShadow);
+}
+// Tooltips and popovers
+// -------------------------
+@tooltipColor: #fff;
+@tooltipBackground: #000;
+@tooltipArrowWidth: 5px;
+@tooltipArrowColor: @tooltipBackground;
+@popoverBackground: #fff;
+@popoverArrowWidth: 10px;
+@popoverArrowColor: #fff;
+@popoverTitleBackground: darken(@popoverBackground,
+3%);
+// Special enhancement for popovers
+@popoverArrowOuterWidth: @popoverArrowWidth + 1;
+@popoverArrowOuterColor: rgba(0,
+0,
+0,
+.25);
+// Border Radius
+.border-radius(@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+// Single Corner Border Radius
+.border-top-left-radius(@radius) {
+  -moz-border-radius-topleft: @radius;
+  -webkit-border-top-left-radius: @radius;
+  border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+  -moz-border-radius-topright: @radius;
+  -webkit-border-top-right-radius: @radius;
+  border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius) {
+  -moz-border-radius-bottomright: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius) {
+  -moz-border-radius-bottomleft: @radius;
+  -webkit-border-bottom-left-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+// Single Side Border Radius
+.border-top-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-top-left-radius(@radius);
+}
+.border-right-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+.border-bottom-radius(@radius) {
+  .border-bottom-right-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+.border-left-radius(@radius) {
+  .border-top-left-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}

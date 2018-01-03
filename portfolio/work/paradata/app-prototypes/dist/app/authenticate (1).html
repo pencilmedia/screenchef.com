@@ -1,0 +1,118 @@
+<!-- Page <HEAD>
+================================================== -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
+    <!-- Page <HEAD>
+    ================================================== -->
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="shortcut icon" href="/common/img/favicon.png">
+        <meta name="description" content="">
+        <!-- For iOS web apps-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="/common/img/favicon.ico">
+        <link rel="apple-touch-icon" href="/common/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-touch-icon-114x114.png">
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Modernizr -->
+        <script type="text/javascript" src="/common/bower_components/modernizer/modernizr.js"></script>
+        <!-- Bootstrap Styles
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        
+        <!-- Font Library
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/bower_components/fontawesome/css/font-awesome.css">
+
+        <!-- Plug-Ins Styles
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
+        <link rel="stylesheet" type="text/css" href="/common/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+
+        <!-- Animate.css
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/bower_components/animate.css/animate.min.css">
+
+        <!-- Components Styles
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/css/authenticate.css">
+
+        <!-- Conflict-free Component  - No frameworks/jquery/bootstrap
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/global_nav/css/global_navbar.css">
+
+        <!-- Theme Styles
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/css/theme.css">
+
+        <!-- Styleguide - DEV ONLY - Don't include in production
+        ================================================== -->
+        <link rel="stylesheet" type="text/css" href="/common/css/styleguide.css">
+        
+        <title>Paradata Prototype</title>
+    </head>
+    <!-- Page <BODY>
+    ================================================== -->
+    <body class="authenticate" data-id="authentication">
+        <main>
+            <form name="login" method="post" action="/auth" accept-charset="utf-8">
+                <img src="/common/img/paradata_darkbg.png" alt="Paradata Logo">
+                <div class="alert alert-info" role="alert">
+                    Your session has expired.
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Username" aria-describedby="username" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" aria-describedby="password">
+                </div>
+                <input type="submit" value="Login" class="btn btn-primary btn-lg">
+            </form>
+            <footer>
+                <p>
+                    <a href="#/">Forgot Your Password?</a>
+                    <span>Send email to support@paradata.io</span>
+                </p>
+            </footer>
+        </main>
+    <!-- JavaScripts
+    ================================================== -->
+        <!--jQuery CDN -->
+<script src="/common/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Plug-Ins -->
+<script src="/common/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+<!-- Bootstrap Components -->
+<script src="/common/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/common/bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+<script src="/common/bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+
+<!-- Global (common) JS -->
+<script src="/common/js/global.js"></script>
+
+<!-- App Specific JS -->
+<script src="/common/js/app.js"></script>
+
+<!-- Proto Specific JS -->
+<script src="/common/js/proto.js"></script>
+
+<!-- Conflict-free Component  - No frameworks/jquery/bootstrap
+================================================== -->
+<script src="/global_nav/js/navigation.js"></script>
+    </body>
+</html>
