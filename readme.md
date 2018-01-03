@@ -3,16 +3,12 @@ PHP and Grunt project
 
 ## To Install:
 
-``npm install``
-``npm install grunt``
-``npm install bower``
-
-``gem install compass``
-``gem install bourbon``
-``gem install neat``
+1. ``npm install``
+2. ``npm install grunt``
+3. ``npm install bower``
 
 
 ## How to run it
 
-1. ``compass watch`` command from root folder of project
+1. ``grunt`` command from root folder of project
 2. Use MAMP Pro to run php server locally
