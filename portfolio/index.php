@@ -20,7 +20,8 @@
     <main>
         <?php include("../inc/nav.inc.php"); ?>
         <h1><? echo $thisPage ?></h1>
-        <article class="client">
+
+        <article class="mdc-layout-grid client">
             <section class="client-summary">
                 <a href="http://www.paradata.io" title="Go to Paradata.io" class="client-brand">
                     <?php echo '<img src="' . $ROOT . 'assets/img/logos_clients/logo-paradata.png" alt="Paradata Inc.">'; ?>
@@ -28,19 +29,19 @@
                 <a href="http://www.paradata.io" title="Go to Paradata.io" class="pull-right">paradata.io</a>
                 <p>Paradata is a supply chain software company that uses internal and external big data to help high tech OEM brand companies get increased transparency from their global supply chains. They identify cost, lead time, compliance and risk problems and offer verified insights to fix problems before they happen.</p>
             </section>
-            <section class="row product">
-                <div class="four columns">
-                    <img src="../portfolio/work/paradata/thumbs/bom_advantage_2.png" alt="BOM Advantage 2.0 Thumbnail" />
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                    <img src="../portfolio/work/paradata/thumbs/bom_advantage_2.png" alt="BOM Advantage 2.0 Thumbnail" class="product-thumbnail" />
                 </div>
-                <div class="eight columns">
+                <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
                     <h4><a href="http://www.paradata.io/product/" target="_blank">BOM Advantage 2.0</a></h4>
                     <p><strong>Description:</strong> Paradata is transparency, traceability and trusted data for decision makers. Paradata builds proprietary supplier data useful for enterprises to gain supply chain network intelligence. Paradata is a Vertical-Specific Big Data Platform building golden data about your networked supply chain. Paradata is a SAAS delivering verified insights and executable actions to supply chain problems before they occur.</p>
                     <p><strong>Project Work:</strong> IxD, Front End Development, Responsive Design, Visual Design</p>
                     <p><a href="work/paradata/ba.php">View the Screenshots</a></p>
                 </div>
             </section>
-            <section class="row product">
-                <div class="eight columns">
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
                     <h4>Printable Product Analysis</h4>
                     <p><strong>Description:</strong> Provide the customer with the opportunity to print out a report that highlights our value showing opportunities to reduce costs and mitigate supply chain risks. Help speed up the sales cycle by making this report/presentation readily available to customers. Customers use the report to communicate up/down their organization.</p>
                     <p><strong>Project Work:</strong> Visualizations, Visual Design</p>
@@ -49,15 +50,15 @@
                         <a href="work/paradata/projects/2_bom_advantage/printable_analysis/full_report_no_customer.pdf" target="_blank">View the printable analysis report (pdf)</a>
                     </p>
                 </div>
-                <div class="four columns">
-                    <img src="../portfolio/work/paradata/thumbs/printable_analysis.png" alt="Printable Analysis Thumbnail" />
+                <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                    <img src="../portfolio/work/paradata/thumbs/printable_analysis.png" alt="Printable Analysis Thumbnail" class="product-thumbnail" />
                 </div>
             </section>
-            <section class="row product">
-                <div class="four columns">
-                    <img src="../portfolio/work/paradata/thumbs/sourcing_advantage_2.png" alt="Sourcing Advantage 2.0 Thumbnail" />
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                    <img src="../portfolio/work/paradata/thumbs/sourcing_advantage_2.png" alt="Sourcing Advantage 2.0 Thumbnail" class="product-thumbnail" />
                 </div>
-                <div class="eight columns">
+                <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
                     <h4><a href="http://www.paradata.io/product/" target="_blank">Sourcing Advantage 2.0</a></h4>
                     <p><strong>Description:</strong> Supply Base Managers have two main goals; reduce costs and mitigate supply risks. This product can look cross BOM (primarily for negotiating lower prices) to create a Request for Quote. The product will create demand roll up across products, suggest ways to switch demand and consolidate suppliers.
                     </p>
@@ -71,41 +72,49 @@
                     </p>
                 </div>
             </section>
-            <section class="row product">
-                <h4>Account Statistics (Internal Tool)</h4>
-                <p><strong>Description:</strong> View a quick overview and details through key metrics from which the user can drill­ in to see more detailed statistics.</p>
-                <p><strong>Project Work:</strong> IxD, Front End Advisor, Responsive Design, Visual Design</p>
-                <p>
-                    <a href="work/paradata/bs.php">View the Screenshots</a>
-                </p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>Account Statistics (Internal Tool)</h4>
+                    <p><strong>Description:</strong> View a quick overview and details through key metrics from which the user can drill­ in to see more detailed statistics.</p>
+                    <p><strong>Project Work:</strong> IxD, Front End Advisor, Responsive Design, Visual Design</p>
+                    <p>
+                        <a href="work/paradata/bs.php">View the Screenshots</a>
+                    </p>
+                </div>
             </section>
-            <section class="row product">
-                <h4>New Material Requests</h4>
-                <p><strong>Description:</strong> A product specifically designed for a global pharma client. Provide an easier way to enter and receive new product requests. Using Paradata proprietary (Trusted Discovery) technology to complete missing data. The customer regularly received a large quantity of global requests that often were missing data.</p>
-                <p><strong>Project Work:</strong> IxD, Front End Advisor, Visual Design</p>
-                <p>
-                   <a href="work/paradata/nmr.php">View the Screenshots</a>
-                </p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>New Material Requests</h4>
+                    <p><strong>Description:</strong> A product specifically designed for a global pharma client. Provide an easier way to enter and receive new product requests. Using Paradata proprietary (Trusted Discovery) technology to complete missing data. The customer regularly received a large quantity of global requests that often were missing data.</p>
+                    <p><strong>Project Work:</strong> IxD, Front End Advisor, Visual Design</p>
+                    <p>
+                    <a href="work/paradata/nmr.php">View the Screenshots</a>
+                    </p>
+                </div>
             </section>
-            <section class="row product">
-                <h4>Supplier Network Collaboration</h4>
-                <p><strong>Description:</strong> A concept for New Product Managers, Supply Chain Operations and Supply Base Managers to understand what data is needed to improve the health of their BOM. Allow the ability to create and track response requests. Alert and track supplier responses.</p>
-                <p><strong>Project Work:</strong> IxD, Front End Advisor, Visual Design</p>
-                <p>
-                    <a href="work/paradata/projects/5_supplier_collab/1ux/ux_workflow.pdf" target="_blank">View Task Workflow</a>&nbsp;&bull;&nbsp;<a href="https://invis.io/PB5AFLGR2" target="_blank">View the Invision Prototype</a>&nbsp;&bull;&nbsp;<a href="work/paradata/sc.php">View the Mockups</a>
-                </p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>Supplier Network Collaboration</h4>
+                    <p><strong>Description:</strong> A concept for New Product Managers, Supply Chain Operations and Supply Base Managers to understand what data is needed to improve the health of their BOM. Allow the ability to create and track response requests. Alert and track supplier responses.</p>
+                    <p><strong>Project Work:</strong> IxD, Front End Advisor, Visual Design</p>
+                    <p>
+                        <a href="work/paradata/projects/5_supplier_collab/1ux/ux_workflow.pdf" target="_blank">View Task Workflow</a>&nbsp;&bull;&nbsp;<a href="https://invis.io/PB5AFLGR2" target="_blank">View the Invision Prototype</a>&nbsp;&bull;&nbsp;<a href="work/paradata/sc.php">View the Mockups</a>
+                    </p>
+                </div>
             </section>
-            <section class="row product">
-                <h4>Style Guide</h4>
-                <p><strong>Description:</strong> A common design language for Paradata applications.</p>
-                <p><strong>Project Work:</strong> IxD, Front End Advisor, Visual Design</p>
-                <p>
-                    <a href="work/paradata/style-guide/dist/app/" target="_blank">View the Style Guide</a>
-                </p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>Style Guide</h4>
+                    <p><strong>Description:</strong> A common design language for Paradata applications.</p>
+                    <p><strong>Project Work:</strong> IxD, Front End Advisor, Visual Design</p>
+                    <p>
+                        <a href="work/paradata/style-guide/dist/app/" target="_blank">View the Style Guide</a>
+                    </p>
+                </div>
             </section>
         </article>
 
-        <article class="client">
+        <article class="mdc-layout-grid client">
             <section class="client-summary">
                 <a href="http://www.vendavo.com" title="Go to Vendavo.com" target="_blank" class="client-brand">
                     <?php echo '<img src="' . $ROOT . 'assets/img/logos_clients/logo-vendavo.png" alt="Vendavo Inc.">'; ?>
@@ -113,37 +122,47 @@
                 <a href="http://www.vendavo.com" title="Go to Vendavo.com" target="_blank" class="pull-right">vendavo.com</a>
                 <p>Vendavo empowers businesses with innovative solutions to unlock hidden opportunities to improve profitability and maximize margins.</p>
             </section>
-            <section class="row product">
-                <h4><a href="http://www.vendavo.com/products/profit-analyzer/" target="_blank">Vendavo Profit Analyzer™</a></h4>
-                <p><strong>Description:</strong> Profit Analyzer delivers powerful in-memory analytics helping you to continually identify profit trends and opportunities for improvement.</p>
-                <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
-                <p>
-                    <a href="work/vendavo/eps/5_prototype/dist/app/explorer/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/eps/eps.php">View the Artifacts</a>
-                </p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4><a href="http://www.vendavo.com/products/profit-analyzer/" target="_blank">Vendavo Profit Analyzer™</a></h4>
+                    <p><strong>Description:</strong> Profit Analyzer delivers powerful in-memory analytics helping you to continually identify profit trends and opportunities for improvement.</p>
+                    <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
+                    <p>
+                        <a href="work/vendavo/eps/5_prototype/dist/app/explorer/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/eps/eps.php">View the Artifacts</a>
+                    </p>
+                </div>
             </section>
-            <section class="row product">
-                <h4><a href="http://www.vendavo.com/resources/dealguidedatasheet/" target="_blank">Vendavo Deal Guide™</a></h4>
-                <p><strong>Description:</strong> Deal Guide better equips your sales force with analytical context and pricing guidance to negotiate profitable deals while reducing deal cycle time.</p>
-                <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
-                <p><a href="work/vendavo/vsnb/prototype/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/vsnb/vsnb.php">View the Screenshots</a></p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4><a href="http://www.vendavo.com/resources/dealguidedatasheet/" target="_blank">Vendavo Deal Guide™</a></h4>
+                    <p><strong>Description:</strong> Deal Guide better equips your sales force with analytical context and pricing guidance to negotiate profitable deals while reducing deal cycle time.</p>
+                    <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
+                    <p><a href="work/vendavo/vsnb/prototype/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/vsnb/vsnb.php">View the Screenshots</a></p>
+                </div>
             </section>
-            <section class="row product">
-                <h4>Vendavo Profit Opportunities</h4>
-                <p><strong>Description:</strong> Codename: Midas - "Find the needle in the haystack." This product never launched but it was a tool to pinpoint profit opportunity. This was Vendavo's first attempt at a SaaS cloud product.</p>
-                <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
-                <p><a href="work/vendavo/vcloud/prototype/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/vcloud/vcloud.php">View the Screenshots</a></p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>Vendavo Profit Opportunities</h4>
+                    <p><strong>Description:</strong> Codename: Midas - "Find the needle in the haystack." This product never launched but it was a tool to pinpoint profit opportunity. This was Vendavo's first attempt at a SaaS cloud product.</p>
+                    <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
+                    <p><a href="work/vendavo/vcloud/prototype/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/vcloud/vcloud.php">View the Screenshots</a></p>
+                </div>
             </section>
-            <section class="row product">
-                <h4>Vendavo Sales Advisor for Mobile</h4>
-                <p><strong>Description:</strong> Native iOS application for sales people.</p>
-                <p><strong>Project Work:</strong> IxD, Visual Design</p>
-                <p><a href="work/vendavo/vsa/vsa.php" target="_blank">View the Screenshots</a></p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>Vendavo Sales Advisor for Mobile</h4>
+                    <p><strong>Description:</strong> Native iOS application for sales people.</p>
+                    <p><strong>Project Work:</strong> IxD, Visual Design</p>
+                    <p><a href="work/vendavo/vsa/vsa.php" target="_blank">View the Screenshots</a></p>
+                </div>
             </section>
-            <section class="row product">
-                <h4>Vendavo UX Styleguide</h4>
-                <p><strong>Description:</strong> A product styleguide that standardizes patterns, components and styles for developers.</p>
-                <p><strong>Project Work:</strong> Styleguide Development</p>
-                <p><a href="work/vendavo/eps/5_prototype/dist/app/" target="_blank">View the Styleguide</a></p>
+            <section class="mdc-layout-grid__inner product">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <h4>Vendavo UX Styleguide</h4>
+                    <p><strong>Description:</strong> A product styleguide that standardizes patterns, components and styles for developers.</p>
+                    <p><strong>Project Work:</strong> Styleguide Development</p>
+                    <p><a href="work/vendavo/eps/5_prototype/dist/app/" target="_blank">View the Styleguide</a></p>
+                </div>
             </section>
         </article>
         <article>

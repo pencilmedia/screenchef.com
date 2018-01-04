@@ -18,6 +18,8 @@
 <!-- Browser favicon -->
 <link rel="shortcut icon" href="favicon.png">
 
+<!-- Plug-in Styles -->
+
 <!-- CSS: Skeleton -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 

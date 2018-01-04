@@ -1,8 +1,11 @@
 /* BEGIN: main.scss
 // -----------------------------------------------------*/
-// Bourbon Library
+// Plugins
 @import "../bower_components/bourbon/app/assets/stylesheets/_bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/_neat";
+
+@import '../node_modules/@material/layout-grid/mixins';
+@import '../node_modules/@material/layout-grid/mdc-layout-grid';
 
 // Global Includes
 @import "variables";
@@ -19,6 +22,7 @@
 @import "footer";
 
 // Page Layout
+@import "grid";
 @import "layout";
 
 // Specific Pages

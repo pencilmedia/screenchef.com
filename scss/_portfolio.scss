@@ -40,6 +40,10 @@
                                    margin-bottom: 30px;
                               }
                          }
+                         .product-thumbnail {
+                            width: 100%;
+                            max-width: 400px;
+                         }
                         //  &.card-container {border:1px solid red;
                         //       @include outer-container(100%);
                         //       .card-item {
