@@ -1,11 +1,16 @@
 <?php
-define("hmpgTitle", "screenchef : not meant for your eyes.");
-define("exercisesTitle", "screenchef : exercises");
-define("journalTitle", "screenchef : journal");
+define("hmpgTitle", "screenchef : Portfolio of Ralph A. Garcia");
+define("portfolioTitle", "screenchef : portfolio");
+define("aboutTitle", "screenchef : about");
 
 // Set the path that will be used in include files
 define("path", "http://www.screenchef.com");
-define("mainphone", "650.493.5200");
+define("mainphone", "408.398.1976");
 
-$yearsExperience = date_diff(date_create(1999), date_create('now'))->y;
+// Years Experience
+$date_1 = new DateTime( '2000-01-01' );
+$date_2 = new DateTime( date( 'Y-m-d' ) );
+
+$yearsExperience = $date_2->diff( $date_1 );
+
 ?>

@@ -6,11 +6,11 @@
 
 /* Highlight Text Color */
 ::selection {
-     background: #f96;    /* Safari */
+     background: $orange;    /* Safari */
      color: #fff;
 }
 ::-moz-selection {
-     background: #f96;    /* Firefox */
+     background: $orange;    /* Firefox */
      color: #fff;
 }
 
@@ -46,4 +46,9 @@ dl {
 /* Helpers ************* */
 .pull-right {
      float: right;
+}
+.back_top {
+    margin-bottom: 6vh;
+    padding: 2vh 2vh 2vh 0;
+    border-top: 1px dashed $borderColor;
 }

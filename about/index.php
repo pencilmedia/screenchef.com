@@ -10,7 +10,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $aboutTitle ?></title>
+<title><?php echo aboutTitle ?></title>
 <?php include("../inc/head.inc.php"); ?>
 </head>
 <body class="secondary about">
@@ -23,15 +23,19 @@
         <article>
             <section>
                 <p>
-                    I am a interaction designer and prototyper with <?php echo $yearsExperience; ?> years of experience in visual and interaction design, information architecture, web development, graphic design, and hand drawing. 
+                    I am a interaction designer and prototyper with <?php echo (string)$yearsExperience->y; ?> years of experience in visual and interaction design, information architecture, web development, graphic design, and hand drawing. 
                 </p>
                 <h3>Specialties</h3>
-                <h4>Prototype:</h4>
-                <p>W3C Web Standards & Usability, HTML5, CSS3, SCSS, LESS, Grunt, Angular, JavaScript, JQuery and other JavaScript Frameworks, Bootstrap, Foundation, PHP, XML/XSLT, Flash &amp; Flex/AIR</p>
-                
+                  
                 <h4>Design:</h4>
                 <p>User-Centered Design, User Interface Design, User Experience Design, Information Architecture, Sketch, Material Design (Google), Balsamiq, Adobe Photoshop, Illustrator, InDesign, Fireworks, Flash, Hand Drawing, Visual/Graphic Design</p></p>
 
+                <h4>Prototype:</h4>
+                <p>HTML5, CSS3, SCSS, LESS, W3C Web Standards &amp; Usability, Grunt, Angular, JavaScript, JQuery, Bootstrap, Foundation, PHP, XML/XSLT, Flash &amp; Flex/AIR</p>
+
+                <p>
+                    <a href="https://www.linkedin.com/in/garciaralph/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i> Visit my LinkedIn Profile</a>
+                </p>
             </section>
         </article>
         <?php include("../inc/foot.inc.php"); ?>   

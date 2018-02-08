@@ -19,7 +19,7 @@
     <![endif]-->
     <main>
         <?php include("../../../../inc/nav.inc.php"); ?>
-        <h1 id="backToTop">Vendavo Profit Analyzer Mockups</h1>
+        <h1 id="backToTop">Vendavo Profit Analyzer Mockups <button class="btn btn-primary pull-right" onclick="history.go(-1);"><i class="fa fa-chevron-left"></i> Back to Portfolio</button></h1>
         <article class="screenshots">
             <p>
                 <a href="#1">Final Screenshots</a> | <a href="#2">Customer Accounts Screenshots</a> | <a href="#3">Users Screenshots</a>

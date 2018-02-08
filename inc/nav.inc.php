@@ -6,7 +6,7 @@
     <hgroup>
         <h1><a href="<?php echo $ROOT ?>">Ralph Adrian Garcia</a></h1>
         <h2>Interaction Designer and Prototyper</h2>
-        <p><?php echo $yearsExperience; ?> years of experience in web development, visual and interaction design.</p>
+        <p><?php echo (string)$yearsExperience->y; ?> years in user experience and interaction design.</p>
     </hgroup>
     <nav class="main-nav">
        <ul>

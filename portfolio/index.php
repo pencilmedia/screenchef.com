@@ -10,7 +10,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo hmpgTitle ?></title>
+<title><?php echo portfolioTitle ?></title>
 <?php include("../inc/head.inc.php"); ?>
 </head>
 <body class="secondary animate5s fadeIn portfolio">
@@ -34,7 +34,7 @@
                     <img src="../portfolio/work/paradata/thumbs/bom_advantage_2.png" alt="BOM Advantage 2.0 Thumbnail" class="product-thumbnail" />
                 </div>
                 <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
-                    <h4><a href="http://www.paradata.io/product/" target="_blank">BOM Advantage 2.0</a></h4>
+                    <h4><a href="http://www.paradata.io/product/" target="_blank">BOM Advantage 2.0 <i class="fas fa-xs fa-external-link-alt" aria-hidden="true"></i></a></h4>
                     <p><strong>Description:</strong> Paradata is transparency, traceability and trusted data for decision makers. Paradata builds proprietary supplier data useful for enterprises to gain supply chain network intelligence. Paradata is a Vertical-Specific Big Data Platform building golden data about your networked supply chain. Paradata is a SAAS delivering verified insights and executable actions to supply chain problems before they occur.</p>
                     <p><strong>Project Work:</strong> IxD, Front End Development, Responsive Design, Visual Design</p>
                     <p><a href="work/paradata/ba.php">View the Screenshots</a></p>
@@ -59,7 +59,7 @@
                     <img src="../portfolio/work/paradata/thumbs/sourcing_advantage_2.png" alt="Sourcing Advantage 2.0 Thumbnail" class="product-thumbnail" />
                 </div>
                 <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
-                    <h4><a href="http://www.paradata.io/product/" target="_blank">Sourcing Advantage 2.0</a></h4>
+                    <h4><a href="http://www.paradata.io/product/" target="_blank">Sourcing Advantage 2.0 <i class="fas fa-xs fa-external-link-alt" aria-hidden="true"></i></a></h4>
                     <p><strong>Description:</strong> Supply Base Managers have two main goals; reduce costs and mitigate supply risks. This product can look cross BOM (primarily for negotiating lower prices) to create a Request for Quote. The product will create demand roll up across products, suggest ways to switch demand and consolidate suppliers.
                     </p>
                     <p>
@@ -73,13 +73,16 @@
                 </div>
             </section>
             <section class="mdc-layout-grid__inner product">
-                <div class="mdc-layout-grid__cell--span-12">
+                <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
                     <h4>Account Statistics (Internal Tool)</h4>
                     <p><strong>Description:</strong> View a quick overview and details through key metrics from which the user can drill­ in to see more detailed statistics.</p>
                     <p><strong>Project Work:</strong> IxD, Front End Advisor, Responsive Design, Visual Design</p>
                     <p>
                         <a href="work/paradata/bs.php">View the Screenshots</a>
                     </p>
+                </div>
+                <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                    <img src="../portfolio/work/paradata/thumbs/account_stats_thumb.png" alt="Account Statistics Internal Tool" class="product-thumbnail" />
                 </div>
             </section>
             <section class="mdc-layout-grid__inner product">
@@ -121,10 +124,19 @@
                 </a>
                 <a href="http://www.vendavo.com" title="Go to Vendavo.com" target="_blank" class="pull-right">vendavo.com</a>
                 <p>Vendavo empowers businesses with innovative solutions to unlock hidden opportunities to improve profitability and maximize margins.</p>
+                <h4>Awards</h4>
+                <p>
+                    <strong>2014 BIG Innovation Award</strong><br />
+                    <a href="work/vendavo/vsnb/1_awards/big_innovation_award.pdf" target="_blank">PDF Link</a> | <a href="http://www.prweb.com/releases/2014/01/prweb11483764.htm" target="_blank">Web Link</a>
+                </p>
+                <p>
+                    <strong>2016 SIIA CODiE Award Finalist for Best Business Intelligence Reporting &amp; Analytics Solution</strong><br />
+                        <a href="work/vendavo/vsnb/1_awards/siia_codie_finalist.pdf" target="_blank">PDF Link</a> | <a href="https://www.vendavo.com/news/vendavo-named-siia-business-technology-codie-award-finalist-for-best-business-intelligence-reporting-analytics-solution/" target="_blank">Web Link</a>
+                </p>
             </section>
             <section class="mdc-layout-grid__inner product">
                 <div class="mdc-layout-grid__cell--span-12">
-                    <h4><a href="http://www.vendavo.com/products/profit-analyzer/" target="_blank">Vendavo Profit Analyzer™</a></h4>
+                    <h4><a href="http://www.vendavo.com/products/profit-analyzer/" target="_blank">Vendavo Profit Analyzer™ <i class="fas fa-xs fa-external-link-alt" aria-hidden="true"></i></a></h4>
                     <p><strong>Description:</strong> Profit Analyzer delivers powerful in-memory analytics helping you to continually identify profit trends and opportunities for improvement.</p>
                     <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
                     <p>
@@ -134,7 +146,7 @@
             </section>
             <section class="mdc-layout-grid__inner product">
                 <div class="mdc-layout-grid__cell--span-12">
-                    <h4><a href="http://www.vendavo.com/resources/dealguidedatasheet/" target="_blank">Vendavo Deal Guide™</a></h4>
+                    <h4><a href="http://www.vendavo.com/resources/dealguidedatasheet/" target="_blank">Vendavo Deal Guide™ <i class="fas fa-xs fa-external-link-alt" aria-hidden="true"></i></a></h4>
                     <p><strong>Description:</strong> Deal Guide better equips your sales force with analytical context and pricing guidance to negotiate profitable deals while reducing deal cycle time.</p>
                     <p><strong>Project Work:</strong> IxD, Responsive Design, Visual Design</p>
                     <p><a href="work/vendavo/vsnb/prototype/" target="_blank">View the Prototype</a>&nbsp;&bull;&nbsp;<a href="work/vendavo/vsnb/vsnb.php">View the Screenshots</a></p>
@@ -153,7 +165,7 @@
                     <h4>Vendavo Sales Advisor for Mobile</h4>
                     <p><strong>Description:</strong> Native iOS application for sales people.</p>
                     <p><strong>Project Work:</strong> IxD, Visual Design</p>
-                    <p><a href="work/vendavo/vsa/vsa.php" target="_blank">View the Screenshots</a></p>
+                    <p><a href="work/vendavo/vsa/vsa.php">View the Screenshots</a></p>
                 </div>
             </section>
             <section class="mdc-layout-grid__inner product">

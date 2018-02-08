@@ -1,6 +1,0 @@
-node_modules/.bin/**
-node_modules/**
-.*
-
-!.bowerrc
-!.gitignore

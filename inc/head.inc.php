@@ -27,6 +27,7 @@
 <?php echo '<link rel="stylesheet" href="' . $ROOT . 'bower_components/animate.css/animate.min.css">'; ?>
 
 <!-- Web Fonts -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <?php echo '<link rel="stylesheet" href="' . $ROOT . 'assets/fonts/webfonts.css">'; ?>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata">
 
@@ -38,7 +39,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 <!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 
 

@@ -19,7 +19,7 @@
     <![endif]-->
     <main>
         <?php include("../../../../inc/nav.inc.php"); ?>
-        <h1 id="backToTop">Vendavo Sales Advisor Mockups</h1>
+        <h1 id="backToTop">Vendavo Sales Advisor Mockups <button class="btn btn-primary pull-right" onclick="history.go(-1);"><i class="fa fa-chevron-left"></i> Back to Portfolio</button></h1>
         <article class="screenshots">
             <p>
                 <a href="#specVisuals">Jump to Spec Visuals</a>

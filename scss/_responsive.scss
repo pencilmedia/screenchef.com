@@ -40,13 +40,6 @@
             }
         }
     }
-    footer {
-        position: absolute;
-        z-index: 1050;
-        bottom: 0;
-        display: block;
-        width: 100%;
-    }
 }
 
 
@@ -87,6 +80,12 @@ only screen and (max-width: 480px) and (orientation: portrait) {
             section {
                 .colonnade {
                     &.cards {
+                        .card {
+                            padding-bottom: 0;
+                            footer {
+                                position: inherit;
+                            }
+                        }
                         .lt-column {
                             min-height: 450px;
                         }

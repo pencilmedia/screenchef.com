@@ -19,61 +19,90 @@
     <![endif]-->
     <main>
         <?php include("../../../../inc/nav.inc.php"); ?>
-        <h1 id="backToTop">Vendavo Profit Analyzer Mockups</h1>
+        <h1 id="backToTop">Vendavo Profit Analyzer Mockups <button class="btn btn-primary pull-right" onclick="history.go(-1);"><i class="fa fa-chevron-left"></i> Back to Portfolio</button></h1>
         <article class="screenshots">
             <p>
-                <a href="#1">Personas</a> | <a href="#2">Storyboards</a> | <a href="#3">Concepts</a> | <a href="#4">Mockups</a>
+                <a href="#1">Personas</a> | <a href="#2">Storyboards</a> | <a href="#3">Concepts</a> | <a href="#4">Mockups</a> | <a href="#5">Prototype</a> | <a href="#6">Case Study</a>
             </p>
             <section>
                 <h2 id="1">Personas</h2>
                 <?php 
                     $dirname = "1_personas/";
-                    $images = glob($dirname."*.png");
+                    $images = glob($dirname."*.{jpg,gif,png}", GLOB_BRACE);
                     foreach($images as $image) {
                     echo '<p><img src="'.$image.'" /></p>';
                     }
                 ?>
             </section>
-            <p>
+            <p class="back_top">
                 <a href="#backToTop">Back To Top</a>
             </p>
             <section>
                 <h2 id="2">Storyboards</h2>
                 <?php 
                     $dirname = "2_storyboard/";
-                    $images = glob($dirname."*.jpg");
+                    $images = glob($dirname."*.{jpg,gif,png}", GLOB_BRACE);
                     foreach($images as $image) {
                     echo '<p><img src="'.$image.'" /></p>';
                     }
                 ?>
             </section>
-            <p>
+            <p class="back_top">
                 <a href="#backToTop">Back To Top</a>
             </p>
             <section>
                 <h2 id="3">Concepts</h2>
                 <?php 
                     $dirname = "3_concepts/";
-                    $images = glob($dirname."*.png");
+                    $images = glob($dirname."*.{jpg,gif,png}", GLOB_BRACE);
                     foreach($images as $image) {
                     echo '<p><img src="'.$image.'" /></p>';
                     }
                 ?>
+                <h3>PDF Format</h3>
+                <p>
+                    <?php 
+                        $dirname = "3_concepts/";
+                        $pdf_files = glob($dirname."*.pdf", GLOB_BRACE);
+                        foreach($pdf_files as $pdf_file) {
+                            $shortname = basename($pdf_file);
+                            echo '<br />PDF Link:<br /><a href="'.$pdf_file.'" target="_blank" />'.$shortname.'</a>&nbsp;';
+                        }
+                    ?>
+                </p>
             </section>
-            <p>
+            <p class="back_top">
                 <a href="#backToTop">Back To Top</a>
             </p>
             <section>
                 <h2 id="4">Mockups</h2>
                 <?php 
                     $dirname = "4_mockups/";
-                    $images = glob($dirname."*.png");
+                    $images = glob($dirname."*.{jpg,gif,png}", GLOB_BRACE);
                     foreach($images as $image) {
                     echo '<p><img src="'.$image.'" /></p>';
                     }
                 ?>
             </section>
-            <p>
+            <p class="back_top">
+                <a href="#backToTop">Back To Top</a>
+            </p>
+            <section>
+                <h2 id="5">Prototype</h2>
+                <p>
+                    <a href="5_prototype/dist/app/explorer/" target="_blank">Visit the prototype</a>
+                </p>
+            </section>
+            <p class="back_top">
+                <a href="#backToTop">Back To Top</a>
+            </p>
+            <section>
+                <h2 id="6">Case Study</h2>
+                <p>
+                    <a href="6_case_study/" target="_blank">View the case study</a>
+                </p>
+            </section>
+            <p class="back_top">
                 <a href="#backToTop">Back To Top</a>
             </p>
         </article>
