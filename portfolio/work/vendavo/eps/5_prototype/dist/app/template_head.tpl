@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="shortcut icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.png">
+    <link rel="shortcut icon" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.png">
     <meta name="description" content="">
 
     <!-- For iOS web apps-->
@@ -18,47 +18,47 @@
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.ico">
+    <link rel="apple-touch-icon" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-114x114.png">
 
     <!--[if lt IE 9]>
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/apphttp://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="@@context/portfolio/work/vendavo/eps/5_prototype/apphttp://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Bootstrap Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Font Library
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fontawesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/icomoon/dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/icomoon/dist/css/style.css">
 
     <!-- Plug-Ins Styles
     ================================================== -->
     <!-- Animate.css
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2-bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 
     <!-- Vendavo Style Guide Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/css/styleguide.css">
 
     <!-- Theme Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/css/theme.css">
 
     <!-- Modernizr -->
-    <script type="text/javascript" src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/modernizer/modernizr.js"></script>
+    <script type="text/javascript" src="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/modernizer/modernizr.js"></script>
 
 
-    <link rel="stylesheet" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="@@context/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/styles/monokai_sublime.css">
 
     <!-- Temporary solution (should be in Vendavo npm repository => we need budget) -->
     <!-- Versioning maybe needed too -->

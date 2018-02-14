@@ -18,8 +18,7 @@
   ],
   "dependencies": {
     "fastclick": "*",
-    "animate.css": "latest",
-    "bourbon": "^4.2.7",
-    "neat": "^1.7.4"
+    "animate.css": "^3.5.2",
+    "skeleton-tabs": "^1.0.0"
   }
 }

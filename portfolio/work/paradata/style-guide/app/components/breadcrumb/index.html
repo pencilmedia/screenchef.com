@@ -1,0 +1,79 @@
+<!-- Page Top
+================================================== -->
+@@include('./../../template_head.tpl', {"pageID": "component-breadcrumb", "pageCategory": "components"})
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h1>@@titleBreadcrumb</h1>
+<p>A breadcrumb is a navigation scheme that shows the navigation trail as the user moves down a hierarchy or through a series of steps.</p>
+
+<!-- Page Nav
+================================================== -->
+<div class="sg-page-nav">
+  <div>
+    <h6>Go To:</h6>
+  <!--   <ul>
+      <li>
+        <a href="#breadcrumb-state">Breadcrumb with Truncation</a>
+      </li>
+    </ul> -->
+  </div>
+  <div>
+    <a href="https://confluence.vendavo.com/x/6BA_AQ" target="_blank" class="btn btn-primary">View Guidelines</a>
+
+  </div>
+</div>
+
+<!-- Page Content
+================================================== -->
+
+<h2>Breadcrumb with Truncation</h2>
+<p>The class <code>.truncated</code> is added to give truncation capabilities through JavaScript.</p>
+<h3>Regular State</h3>
+<ul class="breadcrumb">
+  <li><a href="#/">Example A</a></li>
+  <li><a href="#/">Example B</a></li>
+  <li>Example C</li>
+</ul>
+<h3>Truncated State</h3>
+<p>In the below example there are 8 values. Truncation limits the values to 6 and tucks in the remaining values behind an ellipsis. Clicking the ellipsis
+ will reveal those values and select the last hidden value. The other values 6-8 will go away.</p>
+<ul class="breadcrumb truncated">
+  <li><a href="#/">Example 1</a></li>
+  <li><a href="#/">Example 2</a></li>
+  <li><a href="#/">Example 3</a></li>
+  <li><a href="#/">Example 4</a></li>
+  <li><a href="#/">Example 5</a></li>
+  <li><a href="#/">Example 6</a></li>
+  <li><a href="#/">Example 7</a></li>
+  <li>Example 8</li>
+</ul>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+  <pre>
+<code class="html">
+<ul class="breadcrumb truncated">
+  <li><a href="#/">Example 1</a></li>
+  <li><a href="#/">Example 2</a></li>
+  <li><a href="#/">Example 3</a></li>
+  <li><a href="#/">Example 4</a></li>
+  <li><a href="#/">Example 5</a></li>
+  <li><a href="#/">Example 6</a></li>
+  <li><a href="#/">Example 7</a></li>
+  <li>Example 8</li>
+</ul>
+
+</code>
+</pre>
+</div>
+<!--/.highlight-->
+
+<!-- END: Template Content
+================================================== -->
+
+<!-- Page Bottom
+================================================== -->
+@@include('./../../template_foot.tpl')

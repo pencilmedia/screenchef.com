@@ -5,7 +5,7 @@
 // BUTTON VARIABLES
 
 // btn-default
-$btnDefault: #ccc;
+$btnDefault: #fefefe;
 $btnDefaultBorder: darken($btnDefault, 10%);
 	//hover
 $btnDefaultHvr: darken($btnDefault, 5%);
@@ -30,11 +30,25 @@ $btnInfoBorderHvr: darken($btnInfo, 25%);
 // -----------------------------------------------------
 
 .button {
-     color: #043F90;
-     background: $btnDefault;
-     font-size: .95em;
+    border-color: darken($btnDefault, 15%);
+    transition: ease-in-out .25s;
      &:hover {
      	background: $btnDefaultHvr;
         text-decoration: none;
+        border-color: darken($btnDefault, 20%);
+        transition: ease-in-out .25s;
      }
+     &.button-primary {
+         color: #333;
+         background: $btnPrimary;
+         border-color: $btnPrimaryBorder;
+         &:hover {
+            color: #333;
+             background: darken($btnPrimary, 5%);
+             border-color: darken($btnPrimaryBorder, 5%);
+         }
+     }
+}
+.button-more {
+    min-width: 250px;
 }

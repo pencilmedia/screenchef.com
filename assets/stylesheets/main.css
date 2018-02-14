@@ -1,16 +1,6 @@
 @charset "UTF-8";
 /* BEGIN: main.scss
 // -----------------------------------------------------*/
-/* line 4, ../../bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
-html {
-  box-sizing: border-box;
-}
-
-/* line 9, ../../bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
 /* line 18, ../../node_modules/@material/layout-grid/mdc-layout-grid.scss */
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
@@ -1019,6 +1009,15 @@ dl > dd {
   border-top: 1px dashed #ddd;
 }
 
+/* line 55, ../../scss/_common.scss */
+.align-right {
+  text-align: right;
+}
+/* line 57, ../../scss/_common.scss */
+.align-right .button {
+  margin-bottom: 0;
+}
+
 /* BEGIN: forms.scss
 // -----------------------------------------------------*/
 /* BEGIN: nav.scss
@@ -1163,14 +1162,32 @@ header nav > ul li a.active {
 // -----------------------------------------------------*/
 /* line 32, ../../scss/_buttons.scss */
 .button {
-  color: #043F90;
-  background: #ccc;
-  font-size: .95em;
+  border-color: #d8d8d8;
+  transition: ease-in-out .25s;
 }
-/* line 36, ../../scss/_buttons.scss */
+/* line 35, ../../scss/_buttons.scss */
 .button:hover {
-  background: #bfbfbf;
+  background: #f1f1f1;
   text-decoration: none;
+  border-color: #cbcbcb;
+  transition: ease-in-out .25s;
+}
+/* line 41, ../../scss/_buttons.scss */
+.button.button-primary {
+  color: #333;
+  background: #FEC200;
+  border-color: #cb9b00;
+}
+/* line 45, ../../scss/_buttons.scss */
+.button.button-primary:hover {
+  color: #333;
+  background: #e5af00;
+  border-color: #b28800;
+}
+
+/* line 52, ../../scss/_buttons.scss */
+.button-more {
+  min-width: 250px;
 }
 
 /* BEGIN: footer.scss
@@ -1225,7 +1242,7 @@ main {
     correctly and if it is shorter it won't shrink to fit content */
   margin: 0 5% 0 5%;
   padding-top: 2em;
-  padding-bottom: 40px;
+  padding-bottom: 6em;
   min-height: 100%;
   position: relative;
   border: 1px solid transparent;
@@ -1234,39 +1251,43 @@ main {
 main > h1 {
   margin-top: 20px;
 }
-/* line 19, ../../scss/_layout.scss */
-main > article section > h2 {
+/* line 17, ../../scss/_layout.scss */
+main .tab-nav {
+  margin: 2.5rem 0 0 0;
+}
+/* line 22, ../../scss/_layout.scss */
+main article section > h2 {
   display: inline-block;
   margin: 0 0 10px 0;
 }
-/* line 23, ../../scss/_layout.scss */
-main > article section .back-top {
+/* line 26, ../../scss/_layout.scss */
+main article section .back-top {
   margin-top: 5px;
 }
-/* line 26, ../../scss/_layout.scss */
-main > article section .colonnade {
+/* line 29, ../../scss/_layout.scss */
+main article section .colonnade {
   padding: 20px 5px;
 }
-/* line 28, ../../scss/_layout.scss */
-main > article section .colonnade .lt-column,
-main > article section .colonnade .mid-column,
-main > article section .colonnade .rt-column {
+/* line 31, ../../scss/_layout.scss */
+main article section .colonnade .lt-column,
+main article section .colonnade .mid-column,
+main article section .colonnade .rt-column {
   padding-left: 10px;
 }
-/* line 32, ../../scss/_layout.scss */
-main > article section .colonnade .lt-column h2,
-main > article section .colonnade .mid-column h2,
-main > article section .colonnade .rt-column h2 {
+/* line 35, ../../scss/_layout.scss */
+main article section .colonnade .lt-column h2,
+main article section .colonnade .mid-column h2,
+main article section .colonnade .rt-column h2 {
   margin: 1em 0;
 }
-/* line 35, ../../scss/_layout.scss */
-main > article section .colonnade .lt-column:first-child,
-main > article section .colonnade .mid-column:first-child,
-main > article section .colonnade .rt-column:first-child {
+/* line 38, ../../scss/_layout.scss */
+main article section .colonnade .lt-column:first-child,
+main article section .colonnade .mid-column:first-child,
+main article section .colonnade .rt-column:first-child {
   padding-left: 0;
 }
-/* line 40, ../../scss/_layout.scss */
-main > article section .colonnade.cards .card {
+/* line 43, ../../scss/_layout.scss */
+main article section .colonnade.cards .card {
   font-family: 'Inconsolata';
   background: #f2f2f2;
   border: 1px solid #fff;
@@ -1275,25 +1296,25 @@ main > article section .colonnade.cards .card {
   outline: 1px solid #d9d9d9;
   padding: 0 0 60px 0;
 }
-/* line 48, ../../scss/_layout.scss */
-main > article section .colonnade.cards .card footer {
+/* line 51, ../../scss/_layout.scss */
+main article section .colonnade.cards .card footer {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 20px;
 }
-/* line 56, ../../scss/_layout.scss */
-main > article section .colonnade.cards .lt-column,
-main > article section .colonnade.cards .mid-column,
-main > article section .colonnade.cards .rt-column {
+/* line 59, ../../scss/_layout.scss */
+main article section .colonnade.cards .lt-column,
+main article section .colonnade.cards .mid-column,
+main article section .colonnade.cards .rt-column {
   float: left;
   position: relative;
 }
-/* line 61, ../../scss/_layout.scss */
-main > article section .colonnade.cards .lt-column:hover,
-main > article section .colonnade.cards .mid-column:hover,
-main > article section .colonnade.cards .rt-column:hover {
+/* line 64, ../../scss/_layout.scss */
+main article section .colonnade.cards .lt-column:hover,
+main article section .colonnade.cards .mid-column:hover,
+main article section .colonnade.cards .rt-column:hover {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1304,44 +1325,44 @@ main > article section .colonnade.cards .rt-column:hover {
   color: #000;
   text-decoration: none;
 }
-/* line 68, ../../scss/_layout.scss */
-main > article section .colonnade.cards .lt-column h1,
-main > article section .colonnade.cards .mid-column h1,
-main > article section .colonnade.cards .rt-column h1 {
+/* line 71, ../../scss/_layout.scss */
+main article section .colonnade.cards .lt-column h1,
+main article section .colonnade.cards .mid-column h1,
+main article section .colonnade.cards .rt-column h1 {
   font-family: "GothamProLight";
   margin-top: 10px;
   font-size: 150%;
   margin: 20px 20px 0.75em 20px;
 }
-/* line 74, ../../scss/_layout.scss */
-main > article section .colonnade.cards .lt-column p,
-main > article section .colonnade.cards .mid-column p,
-main > article section .colonnade.cards .rt-column p {
+/* line 77, ../../scss/_layout.scss */
+main article section .colonnade.cards .lt-column p,
+main article section .colonnade.cards .mid-column p,
+main article section .colonnade.cards .rt-column p {
   text-align: justify;
   margin: 0 20px;
 }
-/* line 79, ../../scss/_layout.scss */
-main > article section .colonnade.cards .lt-column {
+/* line 82, ../../scss/_layout.scss */
+main article section .colonnade.cards .lt-column {
   min-height: 350px;
   right: -5px;
   top: 20px;
   width: 31.3%;
 }
-/* line 85, ../../scss/_layout.scss */
-main > article section .colonnade.cards .mid-column {
+/* line 88, ../../scss/_layout.scss */
+main article section .colonnade.cards .mid-column {
   min-height: 425px;
   z-index: 2;
   width: 37.3%;
 }
-/* line 90, ../../scss/_layout.scss */
-main > article section .colonnade.cards .rt-column {
+/* line 93, ../../scss/_layout.scss */
+main article section .colonnade.cards .rt-column {
   left: -5px;
   min-height: 350px;
   top: 20px;
   width: 31.3%;
 }
-/* line 98, ../../scss/_layout.scss */
-main > article section.callout {
+/* line 101, ../../scss/_layout.scss */
+main article section.callout {
   background-color: #f6f6f6;
   color: gray;
   font-family: Helvetica;
@@ -1349,122 +1370,187 @@ main > article section.callout {
   outline: 1px solid #e9e9e9;
   padding: 1em;
 }
-/* line 105, ../../scss/_layout.scss */
-main > article section.callout h1 {
+/* line 108, ../../scss/_layout.scss */
+main article section.callout h1 {
   margin-bottom: 1em;
 }
-/* line 108, ../../scss/_layout.scss */
-main > article section.callout dl {
+/* line 111, ../../scss/_layout.scss */
+main article section.callout dl {
   clear: both;
   display: block;
   margin-bottom: 20px;
   overflow: hidden;
 }
-/* line 113, ../../scss/_layout.scss */
-main > article section.callout dl dt {
+/* line 116, ../../scss/_layout.scss */
+main article section.callout dl dt {
   margin: .5em auto;
 }
-/* line 116, ../../scss/_layout.scss */
-main > article section.callout dl dd {
+/* line 119, ../../scss/_layout.scss */
+main article section.callout dl dd {
   display: inline-block;
   margin: .25em .25em .25em 0;
 }
-/* line 119, ../../scss/_layout.scss */
-main > article section.callout dl dd.graphic {
+/* line 122, ../../scss/_layout.scss */
+main article section.callout dl dd.graphic {
   float: left;
   margin: 0 15px 0 0;
   width: auto;
 }
-/* line 123, ../../scss/_layout.scss */
-main > article section.callout dl dd.graphic img {
+/* line 126, ../../scss/_layout.scss */
+main article section.callout dl dd.graphic img {
   border: 3px solid #fff;
   border-radius: 100%;
 }
-/* line 129, ../../scss/_layout.scss */
-main > article section.callout dl:last-child {
+/* line 132, ../../scss/_layout.scss */
+main article section.callout dl:last-child {
   margin-bottom: 0;
 }
 
-/* line 142, ../../scss/_layout.scss */
+/* line 145, ../../scss/_layout.scss */
 .secondary main article:first-of-type {
   padding-top: 20px;
 }
-/* line 145, ../../scss/_layout.scss */
+/* line 148, ../../scss/_layout.scss */
 .secondary main article > h1 {
   margin-bottom: 10px;
   margin-top: 40px;
 }
-/* line 154, ../../scss/_layout.scss */
+/* line 157, ../../scss/_layout.scss */
 .secondary.about article section h3 {
   margin-bottom: 20px;
+}
+
+/* BEGIN: tabs.scss
+// -----------------------------------------------------*/
+/* line 4, ../../scss/_tabs.scss */
+ul.tab-nav {
+  list-style: none;
+  border-bottom: 1px dashed #ddd;
+}
+
+/* line 9, ../../scss/_tabs.scss */
+ul.tab-nav li {
+  display: inline;
+}
+
+/* line 13, ../../scss/_tabs.scss */
+ul.tab-nav li a.button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: -1px;
+  border-bottom: none;
+}
+/* line 18, ../../scss/_tabs.scss */
+ul.tab-nav li a.button:focus {
+  border-color: #ddd;
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+
+/* line 25, ../../scss/_tabs.scss */
+ul.tab-nav li a.active.button {
+  cursor: default;
+  border-bottom: 1px solid #fff;
+  background-color: #fff;
+}
+
+/* line 31, ../../scss/_tabs.scss */
+.tab-content .tab-pane {
+  display: none;
+}
+
+/* line 35, ../../scss/_tabs.scss */
+.tab-content .tab-pane.active {
+  display: block;
 }
 
 /* BEGIN: portfolio.scss
 // -----------------------------------------------------*/
 /* line 7, ../../scss/_portfolio.scss */
-.portfolio main > article.client {
+.portfolio main article.client {
   border-top: 1px dashed #FEC200;
-  margin-bottom: 30px;
 }
-/* line 10, ../../scss/_portfolio.scss */
-.portfolio main > article.client:first-of-type {
+/* line 9, ../../scss/_portfolio.scss */
+.portfolio main article.client:first-of-type {
   border-top: none;
 }
-/* line 13, ../../scss/_portfolio.scss */
-.portfolio main > article.client h2 {
+/* line 12, ../../scss/_portfolio.scss */
+.portfolio main article.client h2 {
   margin: 20px 0;
 }
-/* line 16, ../../scss/_portfolio.scss */
-.portfolio main > article.client h3 {
+/* line 15, ../../scss/_portfolio.scss */
+.portfolio main article.client h3 {
   margin-bottom: 15px;
 }
-/* line 19, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section {
+/* line 18, ../../scss/_portfolio.scss */
+.portfolio main article.client section {
   border-bottom: 1px dashed #ddd;
-  margin-bottom: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 /* line 22, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section:last-of-type {
-  border-bottom: none;
+.portfolio main article.client section:last-of-type {
+  margin-bottom: 20px;
 }
 /* line 25, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section.client-summary {
+.portfolio main article.client section.client-summary {
+  border-bottom: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+/* line 30, ../../scss/_portfolio.scss */
+.portfolio main article.client section.client-summary .client-brand {
   border-bottom: none;
 }
-/* line 27, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section.client-summary .client-brand {
-  border-bottom: none;
-}
-/* line 29, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section.client-summary .client-brand > img {
+/* line 32, ../../scss/_portfolio.scss */
+.portfolio main article.client section.client-summary .client-brand > img {
   margin-bottom: 20px;
   max-width: 200px;
 }
-/* line 35, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section > h4 {
-  margin-bottom: 5px;
+/* line 38, ../../scss/_portfolio.scss */
+.portfolio main article.client section h4 {
+  margin-bottom: 20px;
 }
-/* line 39, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section p:last-child {
-  margin-bottom: 30px;
+/* line 42, ../../scss/_portfolio.scss */
+.portfolio main article.client section p:last-child {
+  margin-bottom: 0;
 }
-/* line 43, ../../scss/_portfolio.scss */
-.portfolio main > article.client > section .product-thumbnail {
+/* line 45, ../../scss/_portfolio.scss */
+.portfolio main article.client section p label {
+  display: block;
+}
+/* line 48, ../../scss/_portfolio.scss */
+.portfolio main article.client section p .button {
+  margin-bottom: 0;
+}
+/* line 52, ../../scss/_portfolio.scss */
+.portfolio main article.client section .product-thumbnail {
   width: 100%;
   max-width: 400px;
 }
-/* line 118, ../../scss/_portfolio.scss */
-.portfolio main > article.screenshots section {
+/* line 56, ../../scss/_portfolio.scss */
+.portfolio main article.client section .callout-awards {
+  padding: 20px 40px;
+  border: 1px dashed #FEC200;
+  background: #fffffe;
+}
+/* line 60, ../../scss/_portfolio.scss */
+.portfolio main article.client section .callout-awards > h4 {
+  margin-bottom: 10px;
+}
+/* line 63, ../../scss/_portfolio.scss */
+.portfolio main article.client section .callout-awards .icon-award {
+  color: #d9d9d9;
+}
+/* line 71, ../../scss/_portfolio.scss */
+.portfolio main article.screenshots section {
   overflow: hidden;
 }
-/* line 120, ../../scss/_portfolio.scss */
-.portfolio main > article.screenshots section img {
+/* line 73, ../../scss/_portfolio.scss */
+.portfolio main article.screenshots section img {
   margin-bottom: 20px;
   max-width: 800px;
-}
-/* line 127, ../../scss/_portfolio.scss */
-.portfolio main > article section.client-summary {
-  padding-top: 20px;
 }
 
 /* BEGIN: responsive.scss

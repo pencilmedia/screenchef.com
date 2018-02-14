@@ -1,9 +1,5 @@
 /* BEGIN: main.scss
 // -----------------------------------------------------*/
-// Plugins
-@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon";
-@import "../bower_components/neat/app/assets/stylesheets/_neat";
-
 @import '../node_modules/@material/layout-grid/mixins';
 @import '../node_modules/@material/layout-grid/mdc-layout-grid';
 
@@ -24,6 +20,7 @@
 // Page Layout
 @import "grid";
 @import "layout";
+@import "tabs";
 
 // Specific Pages
 @import "portfolio";

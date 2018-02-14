@@ -1,0 +1,189 @@
+<!-- Page Top
+================================================== -->
+@@include('./../../template_head.tpl', {"pageID": "buttons", "pageCategory": "components"})
+<!-- BEGIN: Template Content
+================================================== -->
+<!-- Content Title
+================================================== -->
+<h1>@@titleButton</h1>
+<p>@@titleButton are used as triggers for actions. Depending on the use case, buttons contain a combination of a clear label and an icon.</p>
+<!-- Page Nav
+================================================== -->
+<div class="alert alert-info" role="alert">
+    <p>
+        <i class="fa fa-info-circle"></i> @@titleButton are an extension of Bootstrap buttons. Please visit <a href="http://getbootstrap.com/css/#buttons" class="alert-link" target="_blank">bootstrap buttons</a> to get more information on them if you don't see what you need here.
+    </p>
+</div>
+<div class="sg-page-nav">
+    <div>
+        <h6>Navigate To:</h6>
+        <ul>
+            <li><a href="#regular-btns">@@titleButton</a></li>
+            <li><a href="#icon-btns">Icon @@titleButton</a></li>
+            <li><a href="#disabled-btns">Disabled @@titleButton</a></li>
+            <li><a href="#indicator-btns">Progress Indicator @@titleButton</a></li>
+        </ul>
+    </div>
+    <div>
+        <a href="http://getbootstrap.com/css/#buttons" target="_blank" class="btn btn-default">View Bootstrap Guidelines</a>
+    </div>
+</div>
+<!-- Page Content
+================================================== -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="regular-btns">@@titleButton Types</h3>
+    </div>
+    <div class="panel-body">
+        <!-- BEGIN: CONTENT HERE -->
+        <p>Buttons do not have a fixed width. Instead they grow with the length of text inside them. However, please keep text short.</p>
+        <h3>Main Buttons</h3>
+        <p>Buttons are an extension of Bootstrap buttons. They have been customized to fit our own branding.</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-default">Default</button></div>
+                <div class="col-sm-9">The <code>.btn-default</code> button is the standard button across the application.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-primary">Primary</button></div>
+                <div class="col-sm-9">The <code>.btn-primary</code> button is the happy path action on forms (or dialogs), and the strongest call to action on a page. It can only ever appear once per screen (not including the application header; can appear in a modal dialog, ignoring what's on the main page). Not every screen needs a primary button.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-secondary">Secondary</button></div>
+                <div class="col-sm-9">The <code>.btn-secondary</code> button is used for secondary actions when a primary button already exists or the action is not a strong action such as "Save", etc.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-link">Link Button</button></div>
+                <div class="col-sm-9">The <code>.btn-link</code> button is used for secondary actions, destructive actions such as "Cancel" and "Archive". Used to discourage the user from taking an action unless they must.</div>
+            </div>
+        </div>
+
+        <h3>Alternative Buttons</h3>
+        <p>Use these for special circumstances like status.</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-danger">Delete</button></div>
+                <div class="col-sm-9">The <code>.btn-danger</code> button is used for the destructive action "Delete" or "Remove".</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-success">Success</button></div>
+                <div class="col-sm-9">The <code>.btn-success</code> button is used upon a successful flow. Use sparingly as default, primary, secondary or link button may suffice.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-info">Info</button></div>
+                <div class="col-sm-9">The <code>.btn-info</code> button is used in cases such as an Informational alert box. Use sparingly as default, primary, secondary or link button may suffice.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button type="button" class="btn btn-warning">Warning</button></div>
+                <div class="col-sm-9">The <code>.btn-warning</code> button is used in cases such as an Warning alert box. Use sparingly as default, primary, secondary or link button may suffice.</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"><button class="btn btn-upload">Upload a File <input type="file"></button></div>
+                <div class="col-sm-9">The <code>.btn-upload</code> button is used for uploading a file.</div>
+            </div>
+        </div>
+
+
+        <h4>Code Snippet</h4>
+        <div class="highlight">
+            <pre>
+<code class="html">
+<!-- Main -->
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-link">Link Button</button>
+
+<!-- Alternative -->
+<button class="btn btn-upload">Upload a File <input type="file"></button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+
+</code>
+</pre>
+        </div>
+        <!--/.highlight-->
+    </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="icon-btns">Icon @@titleButton</h3>
+    </div>
+    <div class="panel-body">
+        <!-- BEGIN: CONTENT HERE -->
+        <p>Icon @@titleButton can contain text or no text. Use the class <code>.btn-link</code> to have an icon button with no background.</p>
+        <p>If you need an icon on the rightside of a button move the icon markup to the right of the text and add the class <code>.btn-icon-right</code>.</p>
+        <h3>.btn-default</h3>
+        <button type="button" class="btn btn-default"><i class="fa fa-bars"></i>@@titleButton with Icon</button>
+        <h3>.btn-icon-right</h3>
+        <button type="button" class="btn btn-default btn-icon-right">@@titleButton with Icon on Right<i class="fa fa-bars"></i></button>
+        <h3>.btn-icon</h3>
+        <p>with background</p>
+        <button type="button" class="btn btn-icon"><i class="fa fa-bars"></i></button>
+        <h3>.btn-link</h3>
+        <p>without background</p>
+        <button type="button" class="btn btn-link"><i class="fa fa-bars"></i></button>
+        <h4>Code Snippet</h4>
+        <div class="highlight">
+            <pre>
+<code class="html">
+<button type="button" class="btn btn-default"><i class="fa fa-bars"></i>@@titleButton with Icon</button>
+<button type="button" class="btn btn-default btn-icon-right">@@titleButton with Icon on Right<i class="fa fa-bars"></i></button>
+<button type="button" class="btn btn-icon"><i class="fa fa-bars"></i></button>
+<button type="button" class="btn btn-link"><i class="fa fa-bars"></i></button>
+
+</code>
+</pre>
+        </div>
+        <!--/.highlight-->
+    </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="disabled-btns">Disabled State</h3>
+    </div>
+    <div class="panel-body">
+        <!-- BEGIN: CONTENT HERE -->
+        <p>Include the class <code>.disabled</code> and , for semantics, the attribute <code>disabled</code> to disable a button.</p>
+        <h3>.btn.disabled</h3>
+        <button type="button" class="btn btn-default disabled" disabled>Default</button>
+        <button type="button" class="btn btn-primary disabled" disabled>Primary</button>
+        <button type="button" class="btn btn-secondary disabled" disabled>Secondary</button>
+        <button type="button" class="btn btn-link disabled" disabled>Link Button</button>
+        <!-- END: CONTENT HERE -->
+    </div>
+</div>
+<!--/.panel-body-->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="indicator-btns">Progress Indicator Buttons</h3>
+    </div>
+    <div class="panel-body">
+        <!-- BEGIN: CONTENT HERE -->
+        <h2>Animated Progress Indicator State</h2>
+        <p>Include the class <code>.fa-spin</code> to the <code>.fa</code> icon to create an animated spinner progress indicator.</p>
+        <h3>.btn .fa.fa-spin</h3>
+        <button type="button" class="btn btn-default"><i class="fa fa-spinner fa-spin"></i> Button with Progress Indicator</button>
+        <h4>Code Snippet</h4>
+        <div class="highlight">
+            <pre>
+		<code class="html">
+		<button type="button" class="btn btn-default"><i class="fa fa-spinner fa-spin"></i> Button with Progress Indicator</button>
+
+		</code>
+		</pre>
+        </div>
+        <!--/.highlight-->
+        <!-- END: CONTENT HERE -->
+    </div>
+</div>
+<!--/.panel-body-->
+<!-- END: Template Content
+================================================== -->
+<!-- Page Bottom
+================================================== -->
+@@include('./../../template_foot.tpl')

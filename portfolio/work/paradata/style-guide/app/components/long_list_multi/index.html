@@ -1,0 +1,256 @@
+<!-- Page Top
+================================================== -->
+@@include('./../../template_head.tpl', {"pageID": "long-list-multi", "pageCategory": "components"})
+
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h1>@@titleLongListMulti</h1>
+<p>Use the Long List - Single Selection control when you need to select an item from a large number of options. There are two states for this control</p>
+
+<!-- Page Nav
+================================================== -->
+<div class="sg-page-nav">
+  <div>
+    <h6>Go To:</h6>
+    <ul>
+      <li><a href="#presentation-state">Presentation State</a></li>
+      <li><a href="#readonly-state">Read Only State</a></li>
+      <li><a href="#editable-state">Editable State</a></li>
+    </ul>
+  </div>
+  <div>
+    <a href="https://confluence.vendavo.com/x/ABE_AQ" target="_blank" class="btn btn-primary">View Guidelines</a>
+  </div>
+</div>
+
+<!-- Page Content
+================================================== -->
+<h2>Examples</h2>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="presentation-state">Presentation State</h3>
+  </div>
+  <div class="panel-body">
+  	<p>Use the class <code>.truncate</code> to init the jquery.truncator plugin. </p>
+  	<ul class="long-list read-state truncate">
+  		<li>Long List Option 2</li>
+  		<li>Long List Option 4</li>
+  		<li>Long List Option 5</li>
+  		<li>Long List Option 7</li>
+  		<li>Long List Option 22</li>
+  		<li>Long List Option 41</li>
+  		<li>Long List Option 51</li>
+  		<li>Long List Option 71</li>
+  		<li>Long List Option 62</li>
+  		<li>Long List Option 64</li>
+  		<li>Long List Option 65</li>
+  		<li>Long List Option 67</li>
+  	</ul>
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+
+<ul class="long-list read-state truncate">
+   <li>Long List Option 2</li>
+   ...
+   <li>Long List Option 7</li>
+</ul>
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="readonly-state">Read Only State</h3>
+  </div>
+  <div class="panel-body">
+	<p>Add the <code>disabled</code> attribute to the <code>select</code> to create a read-only mode component.</p>
+	<form>
+		<p>
+			<select class="form-control select2 long-list multi-edit" multiple="" tabindex="-1" disabled style="width: 100%">
+			    <option value="AK" selected>ABC List Item</option>
+			    <option value="HI">DEF List Item</option>
+			    <option value="CA" selected>GHI List Item</option>
+			    <option value="NV">JKL List Item</option>
+			    <option value="OR">MNO List Item</option>
+			    <option value="WA">PQR List Item</option>
+			</select>
+		</p>
+	</form>
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+
+<select class="form-control select2 long-list multi-edit" multiple="" tabindex="-1" disabled style="width: 100%">
+   <option value="AK" selected>ABC List Item</option>
+   ...
+   <option value="WA">PQR List Item</option>
+</select>
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="editable-state">Editable State</h3>
+  </div>
+  <div class="panel-body">
+	<form>
+		<p>
+			<select class="form-control select2 long-list multi-edit" multiple="" tabindex="-1" data-placeholder="Please select options...">
+				<optgroup label="Recently Used Items" class="recently-used">
+					<option value="ds">STU List Item</option>
+				</optgroup>
+				<option value="" disabled>-----</option>
+				<option value="AK">ABC List Item</option>
+				<option value="HI">DEF List Item</option>
+				<option value="CA">GHI List Item</option>
+				<option value="NV">JKL List Item</option>
+				<option value="OR">MNO List Item</option>
+				<option value="WA">PQR List Item</option>
+			</select>
+		</p>
+	</form>
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+
+<select class="form-control select2 long-list multi-edit" multiple="" tabindex="-1" data-placeholder="Please select options...">
+  <optgroup label="Recently Used Items" class="recently-used">
+    <option value="ds">STU List Item</option>
+  </optgroup>
+  <option value="" disabled>-----</option>
+  <option value="AK">ABC List Item</option>
+  ...
+  <option value="WA">PQR List Item</option>
+</select>
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="pezzi">Pezzi Component</h3>
+  </div>
+  <div class="panel-body">
+    <h4>Component input parameters</h4>
+     <table class="table table-bordered table-striped">
+        <tr>
+          <th>Parameter</th>
+          <th>Values</th>
+          <th>Default</th>
+          <th>Functionality</th>
+        </tr>
+        <tr>
+          <td>container</td>
+          <td>String</td>
+          <td>N/A</td>
+          <td>jQuery selector where component will be rendered</td>
+        </tr>
+        <tr>
+          <td>id</td>
+          <td>String</td>
+          <td>N/A</td>
+          <td>Class ID of element. This is required.</td>
+        </tr>
+        <tr>
+          <td>dataset</td>
+          <td>Array of Objects</td>
+          <td></td>
+          <td>[{id: 1, text: 'Option 1'}, ...] these items will be displayed in selector</td>
+        </tr>
+        <tr>
+          <td>val</td>
+          <td>Array of keys</td>
+          <td>[]</td>
+          <td>Initial selection.  If not `multiple` then will use first element. Provide a list of ids, no need to provide whole objects as provided to `dataSet`</td>
+        </tr>
+        <tr>
+          <td>styleWidth</td>
+          <td>String</td>
+          <td>100%</td>
+          <td>inline style for select</td>
+        </tr>
+        <tr>
+          <td>enabled</td>
+          <td>Boolean</td>
+          <td>true</td>
+          <td>Enable/disable the input</td>
+        </tr>
+        <tr>
+          <td>allowClear</td>
+          <td>Boolean</td>
+          <td>true</td>
+          <td>Allow clear for single select</td>
+        </tr>
+        <tr>
+          <td>multiple</td>
+          <td>Boolean</td>
+          <td>false</td>
+          <td>Enable/Disable multiple selection</td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td>String</td>
+          <td>Make a selection</td>
+          <td>Placeholder text</td>
+        </tr>
+        <tr>
+          <td>onSelection</td>
+          <td>function</td>
+          <td></td>
+          <td>Callback for selection event</td>
+        </tr>
+        <tr>
+          <td>ajax</td>
+          <td>object</td>
+          <td></td>
+          <td>Ajax support, see documentation of Select2 3.5.2</td>
+        </tr>
+        <tr>
+          <td>ajaxDefault</td>
+          <td>Array of Objects</td>
+          <td></td>
+          <td>Initial selection.  If not `multiple` then will use first element. Provide a list of object (representing what ajax would return)</td>
+        </tr>
+        <tr>
+          <td>initSelection</td>
+          <td>Array</td>
+          <td>default implementation returns ajaxDefault objects</td>
+          <td>initSelection support, see documentation of Select2 3.5.2</td>
+        </tr>
+
+     </table>
+
+     <br />
+     <h4>Playground With Examples</h4>
+     <iframe width="100%" height="500" src="//jsfiddle.net/rudovsky/a2y78nmx/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+  </div>
+</div>
+
+<!-- END: Template Content
+================================================== -->
+
+
+<!-- Page Bottom
+================================================== -->
+@@include('./../../template_foot.tpl')

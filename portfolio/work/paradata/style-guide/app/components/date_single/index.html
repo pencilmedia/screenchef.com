@@ -1,0 +1,153 @@
+<!-- Page Top
+================================================== -->
+@@include('./../../template_head.tpl', {"pageID": "date-single", "pageCategory": "components"})
+<!-- BEGIN: Template Content
+================================================== -->
+
+<!-- Content Title
+================================================== -->
+<h1>@@titleDateSingle</h1>
+<p>Use Date Range when you need to input a specific time period, either static or dynamic.</p>
+
+<!-- Page Nav
+================================================== -->
+<div class="sg-page-nav">
+  <div>
+    <h6>Go To:</h6>
+    <ul>
+      <li><a href="#presentation-state">Presentation State</a></li>
+      <li><a href="#readonly-state">Read Only State</a></li>
+      <li><a href="#editable-state">Editable State</a></li>
+    </ul>
+  </div>
+  <div>
+    <a href="https://confluence.vendavo.com/x/LCY_AQ" target="_blank" class="btn btn-primary">View Guidelines</a>
+
+  </div>
+</div>
+
+<!-- Page Content
+================================================== -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="presentation-state">Presentation State</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: Panel Content -->
+    <h4>Presentation Component</h4>
+  <p>
+    <span>02/23/1836</span>
+  </p>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+<span>02/23/1836</span>
+
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="readonly-state">Read Only State</h3>
+  </div>
+  <div class="panel-body">
+    <!-- BEGIN: Panel Content -->
+    <h4>Readonly Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Apply the class <code>.readonly</code> to the bootstrap class <code>.input-group</code>, add the attribute <code>readonly</code> to the input field and add the attribute <code>disabled</code> to the button.</p>
+    <!-- END: Panel Comments -->
+  <div class="input-group date readonly">
+    <input type="text" class="form-control" value="02/23/1836" readonly>
+    <span class="input-group-addon" disabled>
+      <i class="fa fa-calendar"></i>
+    </span>
+  </div>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+  <div class="input-group date readonly">
+    <input type="text" class="form-control" value="02/23/1836" readonly>
+    <span class="input-group-addon" disabled>
+      <i class="fa fa-calendar"></i>
+    </span>
+  </div>
+
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="editable-state">Editable State</h3>
+  </div>
+  <div class="panel-body">
+    <h4>Editable Component</h4>
+    <!-- BEGIN: Panel Comments -->
+    <p>Add <code>.input-group-addon .btn-info</code> at the end to create the info button.</p>
+    <!-- END: Panel Comments -->
+  <div class="input-group date dropdown">
+    <input type="text" class="form-control" value="02/23/1836" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown-menu auto-suggest limited" role="menu" aria-labelledby="dLabel">
+      <ul class="menu-list">
+        <li class="dropdown-header">Date Shortcut</li>
+        <li><a href="#">Today</a></li>
+        <li><a href="#">Yesterday</a></li>
+        <li><a href="#">Tomorrow</a></li>
+        <li><a href="#">The Business Week Start</a></li>
+        <li><a href="#">The Business Week End</a></li>
+        <li><a href="#">The Calendar Month Start</a></li>
+        <li><a href="#">The Calendar Month End</a></li>
+        <li><a href="#">The Calendar Quarter Start</a></li>
+        <li><a href="#">The Calendar Quarter End</a></li>
+        <li><a href="#">The Financial Quarter Start</a></li>
+        <li><a href="#">The Financial Quarter End</a></li>
+        <li><a href="#">The Calendar Year Start</a></li>
+        <li><a href="#">The Calendar Year End</a></li>
+        <li><a href="#">The Financial Year Start</a></li>
+        <li><a href="#">The Financial Year End</a></li>
+      </ul>
+      <ul class="menu-list">
+        <li class="divider"></li>
+        <li class="list-button"><a href="#">More about date shortcut</a></li>
+      </ul>
+    </div>
+
+    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+    <span class="input-group-addon btn-info"><i class="fa fa-info-circle"></i></span>
+  </div>
+
+<h4>Code Snippet</h4>
+<div class="highlight">
+<pre>
+<code class="html">
+  <div class="input-group date">
+    <input type="text" class="form-control" value="02/23/1836">
+    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+    <span class="input-group-addon btn-info"><i class="fa fa-info-circle"></i></span>
+  </div>
+
+
+</code>
+</pre>
+</div><!--/.highlight-->
+  </div>
+</div>
+
+<!-- END: Template Content
+================================================== -->
+
+<!-- Page Bottom
+================================================== -->
+@@include('./../../template_foot.tpl')

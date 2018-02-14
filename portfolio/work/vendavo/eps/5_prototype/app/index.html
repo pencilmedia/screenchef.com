@@ -1,11 +1,11 @@
 <!-- Page Top - NOTE: pageName will pass as a class to the <body> tag for navigation
 ================================================== -->
-@@include('./template_head.tpl', {"pageID": "overview", "pageCategory": "overview"})
+@@include('./@@context/template_head.tpl', {"pageID": "overview", "pageCategory": "overview"})
 
 
 <!-- BEGIN: Template Content
 ================================================== -->
-@@include('./overview.tpl')
+@@include('./@@context/overview.tpl')
 
 <!-- END: Template Content
 ================================================== -->
@@ -13,4 +13,4 @@
 
 <!-- Page Bottom
 ================================================== -->
-@@include('./template_foot.tpl')
+@@include('./@@context/template_foot.tpl')

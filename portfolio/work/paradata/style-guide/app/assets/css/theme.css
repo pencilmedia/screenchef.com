@@ -1,0 +1,571 @@
+/* BEGIN: theme.scss
+// -----------------------------------------------------*/
+/* BEGIN: variables.scss - for theme.scss
+// -----------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+/* BEGIN: Include Mixins
+// -----------------------------------------------------*/
+/* BEGIN: border-radius.scss
+// -----------------------------------------------------*/
+/* BEGIN: box-shadow.scss
+// -----------------------------------------------------*/
+/* BEGIN: layout.scss
+// -----------------------------------------------------*/
+.field-mapping {
+  margin: 0 20px; }
+  .field-mapping *[class^='col-sm'] {
+    padding-left: 0; }
+  .field-mapping .title-group {
+    border-bottom: 1px solid #EBEBEB; }
+  .field-mapping .row {
+    line-height: 34px;
+    margin-bottom: 10px; }
+    .field-mapping .row .form-control {
+      margin-bottom: 0; }
+    .field-mapping .row div:last-child .fa {
+      color: #7ED321; }
+
+/* BEGIN: typography.scss
+// -----------------------------------------------------*/
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 13px; }
+
+a,
+a:hover,
+a:active,
+a:visited {
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover,
+  a:hover:hover,
+  a:active:hover,
+  a:visited:hover {
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #5588D6;
+    text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Avenir", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+  h1 [class^='btn'], h2 [class^='btn'], h3 [class^='btn'], h4 [class^='btn'], h5 [class^='btn'], h6 [class^='btn'] {
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+  h1 .btn.user-assistance, h1 .user-assistance.btn-upload, h2 .btn.user-assistance, h2 .user-assistance.btn-upload, h3 .btn.user-assistance, h3 .user-assistance.btn-upload, h4 .btn.user-assistance, h4 .user-assistance.btn-upload, h5 .btn.user-assistance, h5 .user-assistance.btn-upload, h6 .btn.user-assistance, h6 .user-assistance.btn-upload {
+    color: #5588D6; }
+  h1 .fa, h2 .fa, h3 .fa, h4 .fa, h5 .fa, h6 .fa {
+    margin-left: 5px; }
+
+h1 {
+  font-size: 26px; }
+
+h2 {
+  font-size: 22px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+h1 {
+  font-weight: 900; }
+
+h2, h3, h4 {
+  font-weight: 700; }
+
+h5, h6 {
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.fa {
+  font-size: 16px;
+  height: 16px;
+  width: 16px; }
+
+.text-warning {
+  color: #F19701; }
+
+.text-danger {
+  color: #B52B2A; }
+
+.bold {
+  font-weight: bold; }
+
+.boldType-28 {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 28px;
+  font-weight: bold; }
+
+.mainType-16 {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 16px; }
+
+.boldType-14 {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: bold; }
+
+.redText {
+  color: #B52B2A; }
+
+.blueText {
+  color: #0387ab; }
+
+.greenText {
+  color: #7ED321; }
+
+/* BEGIN: common.scss (global app styles)
+// -----------------------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+/* Columns - Not using FlexBox */
+.colonnade {
+  overflow: hidden;
+  width: 100%; }
+  .colonnade > .lt-column, .colonnade > .rt-column, .colonnade > .mid1-column, .colonnade > .mid2-column {
+    float: left; }
+  .colonnade.two > .lt-column, .colonnade.two > .rt-column {
+    width: 50%; }
+  .colonnade.three > .lt-column, .colonnade.three > .mid-column, .colonnade.three > .rt-column {
+    width: 33.3%; }
+  .colonnade.four > .lt-column, .colonnade.four > .mid1-column, .colonnade.four > .mid2-column, .colonnade.four > .rt-column {
+    width: 25%; }
+
+/* BEGIN: tabs.scss
+// -----------------------------------------------------*/
+/* ALL TABS */
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0; }
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none; }
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block; }
+
+/* ALL SIDE TABS */
+.tabs-right > .nav-tabs > li,
+.tabs-left > .nav-tabs > li {
+  float: none; }
+  .tabs-right > .nav-tabs > li > a,
+  .tabs-left > .nav-tabs > li > a {
+    margin-right: 0;
+    min-width: 35px;
+    padding: 10px;
+    text-align: center; }
+
+/* LEFT SIDE TABS */
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 0; }
+  .tabs-left > .nav-tabs > li > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid transparent;
+    margin-right: -1px; }
+
+/* RIGHT SIDE TABS */
+.tabs-right > .nav-tabs {
+  border-left: 1px solid #EBEBEB;
+  float: right;
+  margin-left: 19px; }
+  .tabs-right > .nav-tabs > li > a {
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    margin-left: -1px; }
+    .tabs-right > .nav-tabs > li > a:hover, .tabs-right > .nav-tabs > li > a:focus {
+      border-color: #eeeeee #eeeeee #eeeeee #EBEBEB; }
+
+/* BELOW TABS */
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #EBEBEB; }
+  .tabs-below > .nav-tabs > li {
+    margin-bottom: 0;
+    margin-top: -1px; }
+    .tabs-below > .nav-tabs > li > a {
+      -webkit-border-radius: 0 4px 4px 0;
+      -moz-border-radius: 0 4px 4px 0;
+      -ms-border-radius: 0 4px 4px 0;
+      border-radius: 0 4px 4px 0; }
+      .tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
+        border-bottom-color: transparent;
+        border-top-color: #EBEBEB; }
+
+.tabs-below > .nav-tabs > .active > a:hover, .tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #EBEBEB #EBEBEB #EBEBEB; }
+
+/* BEGIN: forms.scss
+// -----------------------------------------------------*/
+form h3, form h4 {
+  color: #4c5c68;
+  margin-top: 30px; }
+  form h3:first-of-type, form h4:first-of-type {
+    margin-top: 10px; }
+form fieldset {
+  border: 1px solid transparent;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: relative; }
+  form fieldset legend {
+    border-bottom: none;
+    color: #0387ab;
+    font-size: 16px;
+    font-weight: 200;
+    left: 0;
+    position: absolute;
+    top: 0; }
+    form fieldset legend + .form-group {
+      margin-top: 10px; }
+form label, form .radio label, form .checkbox label {
+  color: #4c5c68;
+  font-size: 95%; }
+form [class^="text"] {
+  margin: 5px 0 0 0; }
+form input[type="checkbox"],
+form input[type="radio"] {
+  height: auto !important; }
+form .form-control {
+  margin-bottom: 0;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 1px solid #EBEBEB;
+  box-shadow: none; }
+  form .form-control::-webkit-input-placeholder {
+    color: #C1C5C9;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 14px; }
+  form .form-control:-moz-placeholder {
+    color: #C1C5C9;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 14px; }
+  form .form-control::-moz-placeholder {
+    color: #C1C5C9;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 14px; }
+  form .form-control:-ms-input-placeholder {
+    color: #C1C5C9;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 14px; }
+  form .form-control:focus {
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border-color: #d2d2d2;
+    outline: none !important; }
+form.form-horizontal label {
+  padding-right: 0; }
+form.form-horizontal .form-group textarea {
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  min-height: 85px;
+  max-height: 85px;
+  resize: none; }
+form.form-divider {
+  border-top-color: #e6e6e6;
+  margin: 20px 0; }
+form.inline-status label {
+  display: block; }
+form.inline-status .form-control {
+  display: inline-block;
+  width: 90%; }
+form.inline-status .field-indicator .fa {
+  margin-left: 5px;
+  width: 16px; }
+form.inline-status .has-error .fa {
+  color: #a94442; }
+form.pd-horizontal *[class^='col-sm'] {
+  padding-left: 0; }
+form .field-mapping {
+  margin: 0 20px; }
+  form .field-mapping *[class^='col-sm'] {
+    padding-left: 0; }
+  form .field-mapping .title-group {
+    border-bottom: 1px solid #EBEBEB; }
+  form .field-mapping .row {
+    line-height: 34px;
+    margin-bottom: 10px; }
+    form .field-mapping .row .form-control {
+      margin-bottom: 0; }
+    form .field-mapping .row div:last-child .fa {
+      color: #7ED321; }
+
+/* FORMS IN DIALOGS */
+.modal-body form fieldset dl dt {
+  font-size: 16px;
+  font-weight: 500; }
+.modal-body form fieldset dl dt, .modal-body form fieldset dl dd {
+  margin-bottom: 10px;
+  overflow: hidden; }
+
+/* BEGIN: alerts.scss
+// -----------------------------------------------------*/
+.alert {
+  border-radius: 0; }
+  .alert p .fa {
+    margin-right: 5px; }
+
+/* BEGIN: buttons.scss
+// -----------------------------------------------------*/
+.btn, .btn-upload {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: #f9f9f9;
+  border-color: #f6f6f6;
+  background-image: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: normal;
+  font-weight: 500;
+  padding: 6px 17px;
+  text-shadow: none; }
+  .btn.btn-sm, .btn-sm.btn-upload {
+    padding: 3px 10px; }
+  .btn .fa, .btn-upload .fa {
+    margin: 0 5px 0 0;
+    vertical-align: middle; }
+  .btn.disabled, .disabled.btn-upload, .btn.btn[disabled], [disabled].btn-upload, .btn[disabled], [disabled].btn-upload {
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    cursor: default;
+    filter: alpha(opacity=5);
+    font-weight: normal;
+    letter-spacing: 0;
+    opacity: 0.5;
+    text-shadow: none; }
+  .btn.btn-default, .btn-upload {
+    background-color: #f9f9f9;
+    border-color: #f6f6f6;
+    color: #333; }
+    .btn.btn-default:hover, .btn-upload:hover, .btn.btn-default:active, .btn-upload:active, .btn.btn-default:active, .btn-upload:active {
+      background-color: #e0e0e0;
+      border-color: #dddddd;
+      color: #333; }
+    .btn.btn-default.disabled:focus, .disabled.btn-upload:focus, .btn.btn-default.disabled:hover, .disabled.btn-upload:hover, .btn.btn-default[disabled]:focus, [disabled].btn-upload:focus, .btn.btn-default[disabled]:hover, [disabled].btn-upload:hover, .btn.btn-default[disabled]:focus, [disabled].btn-upload:focus, .btn.btn-default[disabled]:hover, [disabled].btn-upload:hover {
+      background-color: #f9f9f9;
+      border-color: #f6f6f6; }
+  .btn.btn-primary, .btn-primary.btn-upload {
+    background-color: #0387AB;
+    border-color: #037fa1;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-weight: 600;
+    color: #fff; }
+    .btn.btn-primary:hover, .btn-primary.btn-upload:hover, .btn.btn-primary:active, .btn-primary.btn-upload:active, .btn.btn-primary.active, .btn-primary.active.btn-upload {
+      background-color: #025f79;
+      border-color: #025b74; }
+    .btn.btn-primary.disabled, .btn-primary.disabled.btn-upload, .btn.btn-primary.btn[disabled], .btn-primary[disabled].btn-upload, .btn.btn-primary[disabled], .btn-primary[disabled].btn-upload {
+      color: #81C3D5; }
+      .btn.btn-primary.disabled:focus, .btn-primary.disabled.btn-upload:focus, .btn.btn-primary.disabled:hover, .btn-primary.disabled.btn-upload:hover, .btn.btn-primary.btn[disabled]:focus, .btn-primary[disabled].btn-upload:focus, .btn.btn-primary.btn[disabled]:hover, .btn-primary[disabled].btn-upload:hover, .btn.btn-primary[disabled]:focus, .btn-primary[disabled].btn-upload:focus, .btn.btn-primary[disabled]:hover, .btn-primary[disabled].btn-upload:hover {
+        background-color: #0387AB;
+        border-color: #037fa1; }
+  .btn.btn-secondary, .btn-secondary.btn-upload {
+    background-color: #4abc8b;
+    border-color: #44b886;
+    color: #f1faf6; }
+    .btn.btn-secondary:hover, .btn-secondary.btn-upload:hover, .btn.btn-secondary:active, .btn-secondary.btn-upload:active, .btn.btn-secondary.active, .btn-secondary.active.btn-upload {
+      background-color: #399a70;
+      border-color: #38966e;
+      color: white; }
+    .btn.btn-secondary.disabled, .btn-secondary.disabled.btn-upload, .btn.btn-secondary.btn[disabled], .btn-secondary[disabled].btn-upload, .btn.btn-secondary[disabled], .btn-secondary[disabled].btn-upload {
+      color: #ccecde; }
+      .btn.btn-secondary.disabled:focus, .btn-secondary.disabled.btn-upload:focus, .btn.btn-secondary.disabled:hover, .btn-secondary.disabled.btn-upload:hover, .btn.btn-secondary.btn[disabled]:focus, .btn-secondary[disabled].btn-upload:focus, .btn.btn-secondary.btn[disabled]:hover, .btn-secondary[disabled].btn-upload:hover, .btn.btn-secondary[disabled]:focus, .btn-secondary[disabled].btn-upload:focus, .btn.btn-secondary[disabled]:hover, .btn-secondary[disabled].btn-upload:hover {
+        background-color: #4abc8b;
+        border-color: #44b886; }
+  .btn.btn-info, .btn-info.btn-upload {
+    background-color: #81C3D5;
+    border-color: #79bfd2; }
+    .btn.btn-info:hover, .btn-info.btn-upload:hover, .btn.btn-info:active, .btn-info.btn-upload:active, .btn.btn-info.active, .btn-info.active.btn-upload {
+      background-color: #5bb1c8;
+      border-color: #57afc7; }
+  .btn.btn-warning, .btn-warning.btn-upload {
+    background-color: #F19701;
+    border-color: #e79101; }
+    .btn.btn-warning:hover, .btn-warning.btn-upload:hover, .btn.btn-warning:active, .btn-warning.btn-upload:active, .btn.btn-warning.active, .btn-warning.active.btn-upload {
+      background-color: #be7701;
+      border-color: #b97401; }
+  .btn.btn-success, .btn-success.btn-upload {
+    background-color: #7ED321;
+    border-color: #79ca20; }
+    .btn.btn-success:hover, .btn-success.btn-upload:hover, .btn.btn-success:active, .btn-success.btn-upload:active, .btn.btn-success.active, .btn-success.active.btn-upload {
+      background-color: #64a71a;
+      border-color: #61a219; }
+  .btn.btn-danger, .btn-danger.btn-upload {
+    background-color: #B52B2A;
+    border-color: #ad2928; }
+    .btn.btn-danger:hover, .btn-danger.btn-upload:hover, .btn.btn-danger:active, .btn-danger.btn-upload:active, .btn.btn-danger.active, .btn-danger.active.btn-upload {
+      background-color: #8c2120;
+      border-color: #87201f; }
+  .btn.btn-icon, .btn-icon.btn-upload, .btn.btn-close, .btn-close.btn-upload {
+    color: #333; }
+    .btn.btn-icon:hover, .btn-icon.btn-upload:hover, .btn.btn-icon:active, .btn-icon.btn-upload:active, .btn.btn-icon:active, .btn-icon.btn-upload:active, .btn.btn-close:hover, .btn-close.btn-upload:hover, .btn.btn-close:active, .btn-close.btn-upload:active, .btn.btn-close:active, .btn-close.btn-upload:active {
+      background-color: #e0e0e0;
+      border-color: #dddddd;
+      color: #333; }
+    .btn.btn-icon.disabled:focus, .btn-icon.disabled.btn-upload:focus, .btn.btn-icon.disabled:hover, .btn-icon.disabled.btn-upload:hover, .btn.btn-icon[disabled]:focus, .btn-icon[disabled].btn-upload:focus, .btn.btn-icon[disabled]:hover, .btn-icon[disabled].btn-upload:hover, .btn.btn-icon[disabled]:focus, .btn-icon[disabled].btn-upload:focus, .btn.btn-icon[disabled]:hover, .btn-icon[disabled].btn-upload:hover, .btn.btn-close.disabled:focus, .btn-close.disabled.btn-upload:focus, .btn.btn-close.disabled:hover, .btn-close.disabled.btn-upload:hover, .btn.btn-close[disabled]:focus, .btn-close[disabled].btn-upload:focus, .btn.btn-close[disabled]:hover, .btn-close[disabled].btn-upload:hover, .btn.btn-close[disabled]:focus, .btn-close[disabled].btn-upload:focus, .btn.btn-close[disabled]:hover, .btn-close[disabled].btn-upload:hover {
+      background-color: #f9f9f9;
+      border-color: #f6f6f6; }
+  .btn.btn-link, .btn-link.btn-upload {
+    background: none;
+    border: none;
+    color: #333; }
+    .btn.btn-link:focus, .btn-link.btn-upload:focus, .btn.btn-link:hover, .btn-link.btn-upload:hover {
+      background: #f9f9f9;
+      color: #5588D6; }
+    .btn.btn-link.disabled:focus, .btn-link.disabled.btn-upload:focus, .btn.btn-link.disabled:hover, .btn-link.disabled.btn-upload:hover, .btn.btn-link[disabled]:focus, .btn-link[disabled].btn-upload:focus, .btn.btn-link[disabled]:hover, .btn-link[disabled].btn-upload:hover, .btn.btn-link[disabled]:focus, .btn-link[disabled].btn-upload:focus, .btn.btn-link[disabled]:hover, .btn-link[disabled].btn-upload:hover {
+      background: none;
+      color: #0387ab; }
+  .btn.btn-close, .btn-close.btn-upload {
+    background: none;
+    border: none; }
+    .btn.btn-close .fa, .btn-close.btn-upload .fa {
+      color: #999FA5;
+      font-size: 125%; }
+    .btn.btn-close:hover .fa, .btn-close.btn-upload:hover .fa {
+      color: #333; }
+  .btn.btn-link, .btn-link.btn-upload, .btn.btn-icon, .btn-icon.btn-upload, .btn.btn-close, .btn-close.btn-upload {
+    /* Undo Margin for icon only buttons */ }
+    .btn.btn-link .fa, .btn-link.btn-upload .fa, .btn.btn-icon .fa, .btn-icon.btn-upload .fa, .btn.btn-close .fa, .btn-close.btn-upload .fa {
+      margin: 0; }
+  .btn.btn-icon-right .fa, .btn-icon-right.btn-upload .fa {
+    margin-left: 5px;
+    margin-right: 0; }
+
+.btn-upload {
+  border: 1px solid #EBEBEB;
+  position: relative;
+  overflow: hidden;
+  font-weight: normal; }
+  .btn-upload input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: #fff;
+    cursor: inherit;
+    display: block; }
+
+.no-file {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 6px 10px; }
+
+/* BEGIN: animation.scss - Custom Animation
+// -----------------------------------------------------*/
+.animate25s {
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animate5s {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+/* Dropdown Menu - Open */
+@-webkit-keyframes menuOpen {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes menuOpen {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* Dropdown Menu - Close */
+@-webkit-keyframes menuClose {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes menuClose {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/* BEGIN: dialogs.scss
+// -----------------------------------------------------*/
+.modal-dialog.confirmation .modal-header, .modal-dialog.confirmation .modal-footer {
+  border: none;
+  text-align: center; }
+.modal-dialog.wizard .wizard-steps {
+  font-size: 110%;
+  font-weight: 500;
+  margin-top: 8px; }
+.modal-dialog .modal-content {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0; }
+.modal-dialog .modal-header h4 {
+  font-size: 22px;
+  text-transform: capitalize; }
+.modal-dialog .modal-body {
+  padding: 20px 30px 10px 30px; }
+  .modal-dialog .modal-body form fieldset .checkbox, .modal-dialog .modal-body form fieldset .radio {
+    padding-left: 10px; }
+
+@media (min-width: 768px) {
+  .modal-sm {
+    width: 350px; } }
+/* BEGIN: themes.scss - For changing color theming
+// -----------------------------------------------------*/

@@ -1,0 +1,37 @@
+/* BEGIN: tabs.scss
+// -----------------------------------------------------*/
+
+ul.tab-nav {
+    list-style: none;
+    border-bottom: 1px dashed $borderColor;
+}
+
+ul.tab-nav li {
+    display: inline;
+}
+
+ul.tab-nav li a.button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+    border-bottom: none;
+    &:focus {
+        border-color: $borderColor;
+        border-bottom-color: $white;
+        background-color: $white;
+    }
+}
+
+ul.tab-nav li a.active.button {
+    cursor: default;
+    border-bottom: 1px solid $white;
+    background-color: $white;
+}
+
+.tab-content .tab-pane {
+    display: none;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}
