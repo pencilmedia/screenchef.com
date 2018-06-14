@@ -12,3 +12,11 @@ PHP and Grunt project
 
 1. ``grunt`` command from root folder of project
 2. Use MAMP Pro to run php server locally
+
+
+
+#Heroku
+
+heroku login
+
+git push heroku master
