@@ -1,6 +1,9 @@
 Grunt SCSS, PHP - MAMP, Heroku Deploy
 
 # grunt-screenchef
+Instead of FTP, auto-deploy using heroku
+- portfolio images too big
+
 
 ## Install
 npm install && bower install
