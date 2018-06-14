@@ -1,26 +1,50 @@
-# screenchef.com
-PHP and Grunt project
+# Create New Express Project
+Includes gruntfile.js and package.json
 
-## To Install:
+## Installation
+##########################################
 
-1. ``npm install``
-2. ``npm install grunt``
-3. ``npm install bower``
-
-
-## How to run it
-
-1. ``grunt`` command from root folder of project
-2. Use MAMP Pro to run php server locally
+1. What should already be installed:
+nodejs/npm
+express
+express-generator
+gem install sass ( FOR El Capitan OSX: sudo gem install -n /usr/local/bin sass )
 
 
-
-#Heroku
-
-heroku login
-
-git push heroku master
+2. Create new project:
+express -e "name-of-proj" ( -e for ejs)
 
 
-#set to heroku if can't connect
-heroku git:remote -a screenchef
+3. Place Gruntfile.js and package.json into the root of new project, then run:
+
+npm install
+or 
+sudo npm install -g grunt
+
+The project should download all the package dependencies
+
+
+## How to RUN it
+------------------------------------------
+open 2 terminals:
+
+Term 1:
+``npm start`` command from root folder of project
+
+Term 2:
+"grunt" command from root folder of project
+
+
+
+## In the project
+------------------------------------------
+Create the following hidden files:
+
+.gitignore - paste the following: (git ignore these)
+
+node_modules/.bin/**
+node_modules/**
+.*
+
+!.bowerrc
+!.gitignore
