@@ -1,0 +1,8 @@
+# Heroku should ignore
+
+*.psd
+*.pdf
+*.png
+*.sketch
+/test
+/spec
