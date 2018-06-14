@@ -36,6 +36,34 @@
                 <p>
                     <a href="https://www.linkedin.com/in/garciaralph/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i> Visit my LinkedIn Profile</a>
                 </p>
+
+                <p>&nbsp;</p>
+
+                <div class="mdc-layout-grid__cell callout">
+                    <h4>The UX Process</h4>
+                    <p>The design process is dependent on project needs, time and company needs. User-centered design and Lean UX are two approaches. User-centered design is a thorough process with a lot of validation from actual human users. Lean UX
+                        is appropriate when you follow the Agile development method or have less time/resources.</p>
+                    <p><strong>User-centered Design</strong> follows some variant of <strong>Research, Analyze, Design, Prototype, Measure</strong> with deliverables from each stage.</p>
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell--span-6">
+                            <ul class="list-column">
+                                <li>Figure out goals and users from stakeholders</li>
+                                <li>Customer Interviews, search for job roles <em>then validate</em></li>
+                                <li>Create Personas <em>then validate</em></li>
+                                <li>Create stories and storyboards</li>
+                            </ul>
+                        </div>
+                        <div class="mdc-layout-grid__cell--span-6">
+                            <ul class="list-column">
+                                <li>Brainstorm/sketch concepts</li>
+                                <li>Create wireframes <em>then validate</em> with stakeholders/users</li>
+                                <li>Create mockups and clickable prototypes considering visual design <em>then validate</em></li>
+                                <li>Create web-based browser prototype for high detail interactions/problems - user testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p><strong>Lean UX</strong> is focused on obtaining feedback as early and often as possible to make quick decisions.</p>
+                </div>
             </section>
         </article>
         <?php include("../inc/foot.inc.php"); ?>   

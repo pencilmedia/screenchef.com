@@ -48,13 +48,31 @@ dl {
      float: right;
 }
 .back_top {
-    margin-bottom: 6vh;
-    padding: 2vh 2vh 2vh 0;
-    border-top: 1px dashed $borderColor;
+    margin: 0;
+    padding: $pageMargin $pageMargin $pageMargin 0;
+    border-bottom: 1px dashed $schoolbusYellow;
+    // border-top: 1px dashed $schoolbusYellow;
 }
 .align-right {
     text-align: right;
     .button {
         margin-bottom: 0;
+    }
+}
+
+.callout {
+    padding: $pageMargin $pageMargin + 20px;
+    border: 1px dashed $borderColor;
+    background: $grayLightest;
+    > h4 {
+        margin-bottom: $pageMargin - 10px;
+    }
+    .icon-award {
+       //  color: lighten($schoolbusYellow, 25%);
+       color: $grayLight;
+    }
+    .callout-awards {
+        border: 1px dashed $schoolbusYellow;
+        background: lighten($schoolbusYellow, 50%);
     }
 }

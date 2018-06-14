@@ -70,8 +70,12 @@
                &.screenshots {
                     section {
                          overflow: hidden;
+                         p {
+                             &:last-child {
+                                 margin-bottom: 0;
+                             }
+                         }
                          img {
-                              margin-bottom: $pageMargin;
                               max-width: 800px;
                          }
                     }

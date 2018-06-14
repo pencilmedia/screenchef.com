@@ -201,7 +201,7 @@
                                 <a href="http://www.vendavo.com" title="Go to Vendavo.com" target="_blank" class="client-brand"><?php echo '<img src="' . $ROOT . 'assets/img/logos_clients/logo-vendavo.png" alt="Vendavo Inc.">'; ?></a>
                                 <a href="http://www.vendavo.com" title="Go to Vendavo.com" target="_blank" class="pull-right">vendavo.com</a>
                                 <p>Vendavo empowers businesses with innovative solutions to unlock hidden opportunities to improve profitability and maximize margins.</p>
-                                <div class="mdc-layout-grid__cell callout-awards">
+                                <div class="mdc-layout-grid__cell callout callout-awards">
                                     <h4>Awards</h4>
                                     <div class="mdc-layout-grid__inner">
                                         <div class="mdc-layout-grid__cell--span-1">
@@ -245,8 +245,8 @@
                                     <label><strong>Project Work:</strong></label> Interaction Design, Responsive Design, Visual Design
                                 </p>
                                 <p>
+                                    <a href="work/vendavo/eps/eps.php" class="button">View the UX Process Artifacts</a>
                                     <a href="work/vendavo/eps/5_prototype/dist/app/explorer/" target="_blank" class="button">View the Prototype</a>
-                                    <a href="work/vendavo/eps/eps.php" class="button">View the Artifacts</a>
                                 </p>
                             </div>
                         </section>
@@ -344,7 +344,7 @@
                                 <p>
                                     <label><strong>Project Work:</strong></label> Interaction Design, Front-end Development, Responsive Design, Visual Design</p>
                                 <p>
-                                    <a href="work/paradata/ba.php" class="button">View the Screenshots</a>
+                                    <!-- <a href="work/paradata/ba.php" class="button">View the Screenshots</a> -->
                                 </p>
                             </div>
                         </section>
@@ -356,7 +356,7 @@
                                 <p>
                                     <label><strong>Project Work:</strong></label> Interaction Design, Front-end Development, Responsive Design, Visual Design</p>
                                 <p>
-                                    <a href="work/paradata/ba.php" class="button">View the Screenshots</a>
+                                    <!-- <a href="work/paradata/ba.php" class="button">View the Screenshots</a> -->
                                 </p>
                             </div>
                             <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
