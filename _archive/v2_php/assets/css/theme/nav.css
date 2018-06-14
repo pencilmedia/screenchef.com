@@ -1,0 +1,44 @@
+/* Nav.scss -----
+Nav styles */
+/* Nav ************* */
+/* line 8, ../../../sass/theme/nav.scss */
+header {
+  position: relative;
+  margin: 2em 15% 0 15%;
+}
+/* line 12, ../../../sass/theme/nav.scss */
+header hgroup h1, header hgroup h2 {
+  margin-bottom: .15em;
+}
+/* line 16, ../../../sass/theme/nav.scss */
+header hgroup h1 a {
+  color: #595959;
+}
+/* line 20, ../../../sass/theme/nav.scss */
+header hgroup h2 {
+  font-size: 135%;
+  color: #ff9966;
+}
+/* line 23, ../../../sass/theme/nav.scss */
+header hgroup h2 + p {
+  margin-bottom: 2em;
+}
+/* line 28, ../../../sass/theme/nav.scss */
+header nav {
+  color: #cccccc;
+}
+/* line 31, ../../../sass/theme/nav.scss */
+header nav a {
+  display: inline-block;
+  padding: 5px 15px;
+  text-shadow: 0 1px #fff;
+}
+/* line 35, ../../../sass/theme/nav.scss */
+header nav a:last-child {
+  padding-right: 0;
+}
+/* line 38, ../../../sass/theme/nav.scss */
+header nav a#selected {
+  color: #986fb1;
+  font-weight: bold;
+}

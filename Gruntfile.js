@@ -14,19 +14,19 @@ module.exports = function(grunt) {
 				options: {
 					update: true, // Update changes made only
 					noCache: true,
-					sourcemap: 'auto',
+					sourcemap: 'none',
           			style: 'nested' // we don't want to compress it
 				},
 				files: {
-					'assets/stylesheets/main.css': 'scss/main.scss',
-					'assets/fonts/webfonts.css': 'scss/webfonts.scss'
+					'public/stylesheets/main.css': 'sass/main.scss',
+					'public/fonts/webfonts.css': 'sass/webfonts.scss'
 				}
 			}
 		},
 		// LiveReload in browser
 		watch: {
 			scripts: {
-				files: ['scss/**/*.scss', 'assets/javascripts/**/*js'], // File types to watch for
+				files: ['views/**/*.ejs','sass/**/*.scss', 'public/javascripts/**/*js'], // File types to watch for
 				tasks: ['sass'], // Tasks that should run on save
 				options: {
 					livereload: true,
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				// We watch and compile sass files as normal but don't live reload here
-				files: ['scss/**/*.scss'],
+				files: ['sass/**/*.scss'],
 				tasks: ['sass']
 			}
 		}

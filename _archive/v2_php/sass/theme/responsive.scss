@@ -1,0 +1,129 @@
+/*/////////////////////////////
+/* RESPONSIVE DESIGN
+*//////////////////////////////
+/* NOTE: The order these appear is important. Tablet then Phone in that order in order to trigger. Desktop is default styles */
+
+// Variables and Mixins
+@import "partials/variables";
+@import "partials/mixins";
+
+/* Desktop & Tablet - >480px - Shared styles for desktop/tablet */
+@media (min-width: 768px)  {
+  /* Begin Navigation */
+  header {
+    nav {
+      position: absolute;
+      top: .5em;
+      right: 0;
+      text-align: right;
+    }
+  }
+  /* Begin Layout */
+  main {
+    section {
+      article {
+        /* Cool Stuff */
+      }
+    }
+  }
+}
+
+/* Desktop Only - >768px  */
+@media (min-width: 768px) {
+  /* Begin Layout */
+  main {
+    section {
+      article {
+        .colonnade {
+          &.cards {
+            .lt-column {
+              min-height: 350px;
+            }
+            .mid-column {
+              min-height: 400px;
+            }
+            .rt-column {
+              min-height: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet and Phone - <768px */
+@media (max-width: 768px) {
+  /* Begin Navigation */
+  header {
+    nav {
+      margin: 1em  0;
+      a {
+        margin: 0;
+        width: 30.3%;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:nth-child(2) {
+          text-align: center;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+  /* Begin Layout */
+  main {
+    section {
+      article {
+        .colonnade {
+          &.cards {
+            .lt-column {
+              min-height: 450px;
+            }
+            .mid-column {
+              min-height: 500px;
+            }
+            .rt-column {
+              min-height: 450px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Phone Only - <480px */
+@media (max-width: 480px) {
+  /* Begin Navigation */
+  header {
+    hgroup {
+        h2 {
+            + p {
+                margin-bottom: 0;
+            }
+        }
+    }
+  }
+  /* Begin Layout */
+  main {
+    section {
+      article {
+        .colonnade {
+          &.cards {
+            .lt-column, .mid-column, .rt-column {
+              position: inherit;
+              float: none;
+              width: 100%;
+              min-height: 100px;
+              top: auto;
+              left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

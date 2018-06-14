@@ -1,0 +1,456 @@
+/* Layout.scss -----
+common layout styles */
+/* line 5, ../../sass/layout.scss */
+html,
+body {
+  font-family: sans-serif;
+  font-size: small;
+  color: #444;
+  background-color: #f9f9f9;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Elements ************* */
+/* line 16, ../../sass/layout.scss */
+p {
+  margin: 0 0 1.25em 0;
+  line-height: 1.5em;
+}
+
+/* line 20, ../../sass/layout.scss */
+a {
+  color: #043F90;
+}
+
+/* line 23, ../../sass/layout.scss */
+a:hover {
+  color: #986FB1;
+  text-decoration: underline;
+}
+
+/* Highlight Text Color */
+/* line 29, ../../sass/layout.scss */
+::selection {
+  color: #fff;
+  background: #f96;
+  /* Safari */
+}
+
+/* line 33, ../../sass/layout.scss */
+::-moz-selection {
+  color: #fff;
+  background: #f96;
+  /* Firefox */
+}
+
+/* line 42, ../../sass/layout.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 46, ../../sass/layout.scss */
+h1 {
+  font-size: 200%;
+}
+
+/* line 49, ../../sass/layout.scss */
+h2 {
+  font-size: 175%;
+  color: #432;
+}
+
+/* line 53, ../../sass/layout.scss */
+h3 {
+  font-size: 150%;
+  color: #654;
+}
+
+/* line 57, ../../sass/layout.scss */
+h4 {
+  font-size: 125%;
+  color: #666;
+}
+
+/* line 61, ../../sass/layout.scss */
+h5 {
+  font-size: 100%;
+  color: #999;
+}
+
+/* line 65, ../../sass/layout.scss */
+h6 {
+  font-size: 90%;
+  color: #e9e9e9;
+}
+
+/* line 69, ../../sass/layout.scss */
+header h2 {
+  font-size: 110%;
+  color: #f96;
+}
+
+/* line 73, ../../sass/layout.scss */
+section h1 {
+  font-size: 150%;
+  margin: .75em 0 0 0;
+}
+
+/* line 77, ../../sass/layout.scss */
+section h2 {
+  font-size: 110%;
+  margin: 0 0 1.5em 0;
+  color: #666;
+}
+
+/* line 82, ../../sass/layout.scss */
+article h2 {
+  font-size: 120%;
+  margin: 0 0 .5em 0;
+}
+
+/* line 86, ../../sass/layout.scss */
+article h3 {
+  font-size: 110%;
+  margin: 1.5em 0 .5em 0;
+}
+
+/* line 90, ../../sass/layout.scss */
+article h4 {
+  font-size: 100%;
+  margin: 2em 0 .5em 0;
+}
+
+/* line 94, ../../sass/layout.scss */
+article h5 {
+  font-size: 90%;
+  margin: 2em 0 .5em 0;
+}
+
+/* line 98, ../../sass/layout.scss */
+section h3:first-child {
+  font-size: 100%;
+  margin: 2em 0 .75em 0;
+  color: #609;
+}
+
+/* Buttons ************* */
+/* line 105, ../../sass/layout.scss */
+.button {
+  font-size: .95em;
+  color: #043F90;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  margin: auto 3px auto 0;
+  outline-style: none;
+  padding: 7px 0 16px 15px;
+  white-space: nowrap;
+  background: url(../img/btns/btn_left.png) no-repeat left center;
+}
+
+/* line 119, ../../sass/layout.scss */
+.button span {
+  height: 35px;
+  line-height: 35px;
+  margin: 0;
+  padding: 7px 15px 16px 0;
+  background: url(../img/btns/btn_right.png) no-repeat right center;
+}
+
+/* line 126, ../../sass/layout.scss */
+.button em {
+  background-position: left center;
+  background-repeat: no-repeat;
+  font-style: normal;
+  font-weight: normal;
+  margin-right: 0;
+  padding: 3px 6px;
+}
+
+/* line 134, ../../sass/layout.scss */
+.button:hover {
+  text-decoration: none;
+  background: url(../img/btns/btn_left_hvr.png) no-repeat left center;
+}
+
+/* line 138, ../../sass/layout.scss */
+.button:hover span {
+  background: url(../img/btns/btn_right_hvr.png) no-repeat right center;
+}
+
+/* Layout ************* */
+/* line 143, ../../sass/layout.scss */
+#db {
+  margin-top: 2em;
+}
+
+/* line 146, ../../sass/layout.scss */
+#db p {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* line 150, ../../sass/layout.scss */
+#wrapper {
+  /* This div is stretched height 100% by setting html, body to 100% in the code above and then setting min-height here so if the content is longer it browser scrolls correctly and if it is shorter it won't shrink to fit content */
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: -2em;
+  /* keeps footer clear of text going underneath */
+  padding: 0 1em;
+  min-height: 100%;
+}
+
+/* line 158, ../../sass/layout.scss */
+header {
+  overflow: hidden;
+  margin-top: 2em;
+}
+
+/* line 162, ../../sass/layout.scss */
+header hgroup {
+  float: left;
+  width: 60%;
+}
+
+/* line 166, ../../sass/layout.scss */
+nav {
+  float: right;
+  width: 40%;
+}
+
+/* line 170, ../../sass/layout.scss */
+nav ul {
+  float: right;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 176, ../../sass/layout.scss */
+nav ul li {
+  float: right;
+  width: auto;
+  list-style: none;
+  margin-left: 2em;
+  padding: 5px 0;
+  text-align: right;
+}
+
+/* line 184, ../../sass/layout.scss */
+nav ul li a {
+  color: #999;
+  text-decoration: none;
+  padding: 4px 0;
+  text-shadow: 0 1px #fff;
+}
+
+/* line 190, ../../sass/layout.scss */
+nav ul li a:hover {
+  color: #f96;
+  text-decoration: none;
+  border-top: 1px solid #f96;
+}
+
+/* line 195, ../../sass/layout.scss */
+nav ul li:first-child {
+  /* If you add to the navigation decrease this margin to align the right edge with stuff below it */
+}
+
+/* line 198, ../../sass/layout.scss */
+nav ul li a#selected {
+  border-bottom: 1px solid #f96;
+}
+
+/* line 202, ../../sass/layout.scss */
+#exercises section nav,
+#exercises section nav ul {
+  float: none;
+  width: 100%;
+}
+
+/* line 206, ../../sass/layout.scss */
+#exercises section nav ul li {
+  display: inline;
+  float: left;
+  width: auto;
+}
+
+/* line 211, ../../sass/layout.scss */
+#exercises section nav ul li a {
+  color: #000;
+}
+
+/* line 214, ../../sass/layout.scss */
+#exercises section nav ul li:first-child {
+  margin-left: 0;
+}
+
+/* line 217, ../../sass/layout.scss */
+footer {
+  height: 2em;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+/* line 223, ../../sass/layout.scss */
+footer ul {
+  margin: 0 0 0 28%;
+  padding: .5em 0;
+}
+
+/* line 227, ../../sass/layout.scss */
+footer ul li {
+  display: inline;
+  list-style: none;
+  margin-left: 1em;
+  font-size: 85%;
+  color: #999;
+}
+
+/* line 234, ../../sass/layout.scss */
+footer ul li a {
+  color: #999;
+  text-decoration: none;
+}
+
+/* line 238, ../../sass/layout.scss */
+footer ul li a:hover {
+  text-decoration: none;
+}
+
+/* line 241, ../../sass/layout.scss */
+section {
+  margin-top: 0em;
+}
+
+/* line 244, ../../sass/layout.scss */
+article {
+  font-family: Helvetica;
+  margin: 0 0 2em 0;
+  padding: 1em;
+  background-color: #f6f6f6;
+  outline: 1px solid #e9e9e9;
+}
+
+/* Wordpress overrides ************* */
+/* line 253, ../../sass/layout.scss */
+#journal #wrapper {
+  background: none;
+}
+
+/* line 256, ../../sass/layout.scss */
+#journal article {
+  float: left;
+  width: 45%;
+  margin-left: .5em;
+}
+
+/* line 261, ../../sass/layout.scss */
+#journal article:first-child {
+  margin: 2em 0 0 0;
+}
+
+/* line 264, ../../sass/layout.scss */
+#journal section {
+  overflow: auto;
+}
+
+/* line 267, ../../sass/layout.scss */
+#journal #journal_content {
+  float: left;
+  width: 65%;
+  margin-top: 5%;
+}
+
+/* line 272, ../../sass/layout.scss */
+#journal #sidebar1 {
+  float: right;
+  width: 30%;
+  margin-top: 5%;
+  padding-left: 2em;
+}
+
+/* line 278, ../../sass/layout.scss */
+.entry-utility {
+  margin-bottom: 3em;
+}
+
+/* line 281, ../../sass/layout.scss */
+#journal h2.entry-title {
+  margin-top: 2em;
+}
+
+/* line 284, ../../sass/layout.scss */
+#journal h2 a {
+  color: #432;
+  text-decoration: none;
+}
+
+/* line 289, ../../sass/layout.scss */
+.entry-meta span,
+.entry-meta a {
+  color: #999;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+/* line 294, ../../sass/layout.scss */
+.entry-content {
+  margin-top: 2em;
+}
+
+/* line 297, ../../sass/layout.scss */
+.meta {
+  font-size: 85%;
+  margin-bottom: 1em;
+  color: #999;
+}
+
+/* line 302, ../../sass/layout.scss */
+h3.storytitle {
+  margin-bottom: 0.5em;
+}
+
+/* line 305, ../../sass/layout.scss */
+h3.storytitle a {
+  color: #969;
+  text-decoration: none;
+}
+
+/* line 309, ../../sass/layout.scss */
+#sidebar1 ul {
+  list-style: none;
+  margin: 0 0 25% 0;
+  padding: 0;
+}
+
+/* line 314, ../../sass/layout.scss */
+#sidebar1 ul li {
+  margin: 0 0 .5em 0;
+}
+
+/* line 317, ../../sass/layout.scss */
+#sidebar1 h3.widget-title {
+  font-size: 120%;
+  color: #f96;
+  margin-top: 2em;
+}
+
+/* line 322, ../../sass/layout.scss */
+#sidebar1 #searchform label {
+  font-size: 80%;
+  color: #999;
+  display: none;
+}

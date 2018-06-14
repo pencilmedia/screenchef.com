@@ -1,0 +1,55 @@
+/* BEGIN: nav.scss
+// -----------------------------------------------------*/
+
+header {
+    position: relative;
+    margin: 2em 15% 0 15%;
+    + section {
+        margin: 2em 15% 0 15%;
+    }
+    hgroup {
+        h1,
+        h2 {
+            margin-bottom: .15em;
+        }
+        h1 {
+            a {
+                color: $grayDarkest;
+            }
+        }
+        h2 {
+            font-size: 135%;
+            color: $orange;
+            + p {
+                margin-bottom: 2em;
+            }
+        }
+    }
+    nav {
+        // Position is in responsive.scss
+        color: $gray;
+        > ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    padding: 5px 15px;
+                    text-shadow: 0 1px #fff;
+                    &.active {
+                        color: $purple;
+                        font-weight: bold;
+                    }
+                }
+                &:after {
+                    content: "•";
+                }
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
