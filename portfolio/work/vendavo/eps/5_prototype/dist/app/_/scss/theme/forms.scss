@@ -1,6 +1,8 @@
 /* BEGIN: forms.scss
 // -----------------------------------------------------*/
 
+$input-height-base: 34px;
+
 // Global Form Styles
 form {
 	h3 {
@@ -26,6 +28,7 @@ form {
 	}
 	label {
 		font-weight: normal;
+		color: $grayDark;
 	}
 	footer {
 		border-top: 1px solid $borderColor;
@@ -40,6 +43,18 @@ form {
 		border-top-color: $borderColor;
 		margin: $pageMargin 0;
 	}
+	&.inline-status {
+		label {
+			display: block;
+		}
+		.form-control {
+			display: inline-block;
+			width: 90%;
+		}
+		.field-indicator {
+			padding: 6px 4px;
+		}
+	}
 	/* Inline Forms - Label left of inputs */
 	.form-group {
 		&.has-error {
@@ -50,6 +65,24 @@ form {
 			}
 			.fa {
 				color: $errorText;
+			}
+		}
+		.sub-form-group {
+			display: none;
+		}
+		&.open {
+			background: $blueLightest;
+			border-bottom: 1px solid $blueLight;
+			margin-left: -10px;
+			margin-right: -10px;
+			margin-bottom: 0;
+			padding: 0 10px 10px 10px;
+			.sub-form-group {
+				display: block;
+				margin-bottom: 0;
+				> label {
+					margin-top: 10px;
+				}
 			}
 		}
 	}

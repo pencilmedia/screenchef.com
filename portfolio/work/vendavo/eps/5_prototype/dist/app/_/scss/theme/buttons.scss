@@ -6,7 +6,7 @@
 
 // btn-default
 $btnDefault: #D8D8D8;
-$btnDefaultBorder: lighten($btnDefault, 10%);
+$btnDefaultBorder: lighten($btnDefault, 5%);
 $btnDefaultOutline: darken($btnDefault, 10%);
 	//hover
 $btnDefaultHvr: darken($btnDefault, 5%);
@@ -15,7 +15,7 @@ $btnDefaultOutlineHvr: darken($btnDefault, 15%);
 
 // btn-primary
 $btnPrimary: #5C9FAA;
-$btnPrimaryBorder: lighten($btnPrimary, 15%);
+$btnPrimaryBorder: lighten($btnPrimary, 10%);
 $btnPrimaryOutline: darken($btnPrimary, 10%);
 	//hover
 $btnPrimaryHvr: darken($btnPrimary, 10%);
@@ -226,6 +226,13 @@ $btnDangerOutlineHvr: darken($btnDanger, 5%);
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
 	border-radius: 0;
+}
+
+.input-group > .input-group-btn {
+	.btn {
+		height: $input-height-base;
+		outline: 0;
+	}
 }
 
 

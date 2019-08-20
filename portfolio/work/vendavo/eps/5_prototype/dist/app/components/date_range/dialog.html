@@ -13,7 +13,7 @@
         <div class="input-group">
           <input type="text" class="form-control xlarge" id="calendar-from" value="05/23/2013">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+            <button class="btn btn-default btn-icon" type="button"><i class="fa fa-calendar"></i></button>
           </span>
         </div><!-- /input-group -->
       </div>
@@ -22,7 +22,7 @@
           <div class="input-group">
             <input type="text" class="form-control xlarge" id="calendar-to" value="05/22/2014">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+              <button class="btn btn-default btn-icon" type="button"><i class="fa fa-calendar"></i></button>
             </span>
           </div><!-- /input-group -->
       </div>
@@ -37,47 +37,139 @@
     </nav>
     <div class="business-calendar">
       <p class="text-center"><span></i>05/23/2013 - 05/22/2014</span></p>
-      <div class="business-calendar-years">
-        <button class="btn btn-default all" type="button">All</button>
-        <button class="btn btn-default" type="button">2012</button>
-        <button class="btn btn-default" type="button">2013</button>
-        <button class="btn btn-default" type="button">2014</button>
-        <button class="btn btn-default" type="button">2015</button>
-        <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-      </div>
-      <div class="business-calendar-quarters">
-        <div class="business-calendar-quarter">
-          <button class="btn btn-default" type="button">Q1</button>
-          <button class="btn btn-default" type="button">January</button>
-          <button class="btn btn-default" type="button">February</button>
-          <button class="btn btn-default" type="button">March</button>
-        </div>
-        <div class="business-calendar-quarter">
-          <button class="btn btn-default" type="button">Q2</button>
-          <button class="btn btn-default" type="button">April</button>
-          <button class="btn btn-default" type="button">May</button>
-          <button class="btn btn-default" type="button">June</button>
-        </div>
-        <div class="business-calendar-quarter">
-          <button class="btn btn-default" type="button">Q3</button>
-          <button class="btn btn-default" type="button">July</button>
-          <button class="btn btn-default" type="button">August</button>
-          <button class="btn btn-default" type="button">September</button>
-        </div>
-        <div class="business-calendar-quarter">
-          <button class="btn btn-default" type="button">Q4</button>
-          <button class="btn btn-default" type="button">October</button>
-          <button class="btn btn-default" type="button">November</button>
-          <button class="btn btn-default" type="button">December</button>
+      <div class="btn-group business-calendar-years" data-toggle="buttons">
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="years" value="1" autocomplete="off"> All
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="years" value="2" autocomplete="off"> 2015
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="years" value="3" autocomplete="off"> 2014
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="years" value="4" autocomplete="off"> 2013
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="years" value="5" autocomplete="off"> 2012
+        </label>
+        <div class="btn-group" role="group">
+          <button class="btn btn-default btn-calendar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a href="#">2011</a></li>
+            <li><a href="#">2010</a></li>
+            <li><a href="#">2009</a></li>
+            <li><a href="#">2008</a></li>
+            <li><a href="#">2007</a></li>
+            <li><a href="#">2006</a></li>
+          </ul>
         </div>
       </div>
-      <div class="business-calendar-weeks">
-        <button class="btn btn-default" type="button">Week01</button>
-        <button class="btn btn-default" type="button">Week02</button>
-        <button class="btn btn-default" type="button">Week03</button>
-        <button class="btn btn-default" type="button">Week04</button>
-        <button class="btn btn-default" type="button">Week05</button>
-        <button class="btn btn-default" type="button">Week06</button>
+      <div class="business-calendar-quarters colonnade four animate5s fadeIn">
+        <div class="lt-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="quarters" value="1" autocomplete="off"> Q1
+            </label>
+          </div>
+        </div>
+        <div class="mid1-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="quarters" value="2" autocomplete="off"> Q2
+            </label>
+          </div>
+        </div>
+        <div class="mid2-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="quarters" value="3" autocomplete="off"> Q3
+            </label>
+          </div>
+        </div>
+        <div class="rt-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="quarters" value="4" autocomplete="off"> Q4
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="business-calendar-months colonnade four animate5s fadeIn">
+        <div class="lt-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="1" autocomplete="off"> January
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="2" autocomplete="off"> February
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="3" autocomplete="off"> March
+            </label>
+          </div>
+        </div>
+        <div class="mid1-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="4" autocomplete="off"> April
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="5" autocomplete="off"> May
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="6" autocomplete="off"> June
+            </label>
+          </div>
+        </div>
+        <div class="mid2-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="7" autocomplete="off"> July
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="8" autocomplete="off"> August
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="9" autocomplete="off"> September
+            </label>
+          </div>
+        </div>
+        <div class="rt-column">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="10" autocomplete="off"> October
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="11" autocomplete="off"> November
+            </label>
+            <label class="btn btn-default btn-calendar">
+              <input type="checkbox" name="months" value="12" autocomplete="off"> December
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group business-calendar-weeks animate5s fadeIn" data-toggle="buttons">
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="weeks" value="1" autocomplete="off"> Week01
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="weeks" value="2" autocomplete="off"> Week02
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="weeks" value="3" autocomplete="off"> Week03
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="weeks" value="4" autocomplete="off"> Week04
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="weeks" value="5" autocomplete="off"> Week05
+        </label>
+        <label class="btn btn-default btn-calendar">
+          <input type="checkbox" name="weeks" value="6" autocomplete="off"> Week06
+        </label>
       </div>
   </div>
 </div>

@@ -1,20 +1,24 @@
 /* BEGIN: dialogs.scss
 // -----------------------------------------------------*/
 
-// Dialogs - Draggable
-
-// Dialog - Date Range
+// Dialogs
 .bootstrap-dialog {
-	.modal-header {
-		background: $grayLighter;
-		border-bottom-color: $grayLight;
-		&.bootstrap-dialog-draggable {
-			cursor: move;
+	&.type-primary {
+		.modal-header {
+			background: $grayLighter;
+			border-bottom-color: $grayLight;
+			&.bootstrap-dialog-draggable {
+				cursor: move;
+			}
 		}
+		.modal-content {
+			// Mixin
+			// @include border-radius(0);
+		}
+
 	}
-	.modal-content {
-		// Mixin
-		@include border-radius(0);
+	.bootstrap-dialog-title {
+		color: $grayDarkest;
 	}
 }
 

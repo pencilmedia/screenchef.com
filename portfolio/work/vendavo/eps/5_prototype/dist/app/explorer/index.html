@@ -12,7 +12,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="shortcut icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.png">
+    <link rel="shortcut icon" href="/_/img/favicon.png">
     <meta name="description" content="">
 
     <!-- For iOS web apps-->
@@ -20,10 +20,10 @@
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/_/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/_/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/_/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/_/img/apple-touch-icon-114x114.png">
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,30 +31,31 @@
 
     <!-- Bootstrap Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css">
 
     <!-- Font Library
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fontawesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/icomoon/dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/icomoon/dist/css/style.css">
 
     <!-- Plug-Ins Styles
     ================================================== -->
     <!-- Animate.css
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.css">
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/select2-ng/select2.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/select2-ng/select2-bootstrap.css">
 
     <!-- Theme Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="/_/css/theme.css">
 
     <!-- Modernizr -->
-    <script type="text/javascript" src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/modernizer/modernizr.js"></script>
+    <script type="text/javascript" src="/_/bower_components/modernizer/modernizr.js"></script>
 
 
-    <link rel="stylesheet" href="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="/_/bower_components/highlightjs/styles/monokai_sublime.css">
 
     <!-- Temporary solution (should be in Vendavo npm repository => we need budget) -->
     <!-- Versioning maybe needed too -->
@@ -107,328 +108,1092 @@
     <!-- Page Actionbar
 ================================================== -->
 <header class="page-actionbar navbar-fixed-top" role="navigation">
-		<div class="page-navigator dropdown pull-left">
-			<button class="btn btn-link dropdown-toggle" type="button" id="analysis-switcher" data-toggle="dropdown" aria-expanded="true">Low Margin Customers<i class="fa fa-caret-down"></i></button>
-			<div class="dropdown-menu dropdown-analysis" role="menu" aria-labelledby="analysis-switcher">
-				<ul >
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customers with Low Margin Transactions</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customers with Negative Margin Tranasactions</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bottom Performing Sales Reps</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Products with Low Margin Transactions</a></li>
-				</ul>
+	<div class="page-navigator dropdown pull-left">
+		<button class="btn btn-link dropdown-toggle" type="button" id="analysis-switcher" data-toggle="dropdown" aria-expanded="true">Low Margin Customers<i class="fa fa-caret-down"></i></button>
+		<div class="dropdown-menu dropdown-analysis colonnade two" role="menu" aria-labelledby="analysis-switcher">
+			<div class="lt-column">
+				<dl>
+					<dt>Recent Analyses</dt>
+					<dd role="presentation"><a role="menuitem" tabindex="-1" href="#">Customers with Low Margin Transactions</a></dd>
+					<dd role="presentation"><a role="menuitem" tabindex="-1" href="#">Customers with Negative Margin Tranasactions</a></dd>
+					<dd role="presentation"><a role="menuitem" tabindex="-1" href="#">Bottom Performing Sales Reps</a></dd>
+					<dd role="presentation"><a role="menuitem" tabindex="-1" href="#">Products with Low Margin Transactions</a></dd>
+				</dl>
+			</div>
+			<div class="rt-column">
+				<dl>
+					<dt>&nbsp;</dt>
+					<dd role="presentation"><a role="menuitem" tabindex="-1" href="#">Customers with Low Margin Transactions</a></dd>
+					<dd role="presentation"><a role="menuitem" tabindex="-1" href="#">Customers with Negative Margin Tranasactions</a></dd>
+				</dl>
 			</div>
 		</div>
-		<div class="page-actions dropdown-analysis-closed dropdown pull-right">
-			<label><input type="checkbox" id="comparison-filter" />Comparison</label>
-			<button class="btn btn-icon" type="button"><i class="fa fa-floppy-o"></i></button>
-			<button class="btn btn-icon" type="button"><i class="fa fa-download"></i></button>
-
-
-<!-- Showing Double Menu - NEED TO FIX -->
-<button class="btn btn-icon dropdown-togglxxxe" type="button" id="actionbar-share-menuxx" data-toggle="dropdownxxx" aria-expanded="true"><i class="fa fa-share-alt"></i></button>
-<!-- <ul class="dropdown-menu" role="menu" aria-labelledby="actionbar-share-menu">
-	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy Link to Clipboard</a></li>
-	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Email Link</a></li>
-</ul> -->
-
-
-			<button class="btn btn-icon dropdown-toggle" type="button" id="actionbar-menu" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
+	</div>
+	<div class="page-actions dropdown-analysis-closed pull-right">
+		<ul class="nav navbar-nav navbar-right">
+              <li><button class="btn btn-icon" type="button"><i class="fa fa-floppy-o"></i></button></li>
+              <li><button class="btn btn-icon" type="button"><i class="fa fa-download"></i></button></li>
+              <li class="dropdown">
+                <button class="btn btn-icon dropdown-toggle" type="button" id="actionbar-share-menu" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-share-alt"></i></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="actionbar-share-menu">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy Link to Clipboard</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Email Link</a></li>
+				</ul>
+              </li>
+              <li class="dropdown">
+              	<button class="btn btn-icon dropdown-toggle" type="button" id="actionbar-menu" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="actionbar-menu">
 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-plus"></i>New Analysis</a></li>
 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-copy"></i>Duplicate</a></li>
 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-trash-o"></i>Delete Analysis</a></li>
 				<li role="presentation" class="divider"></li>
 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-file-text-o"></i>Edit Properties</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="#" id="comparison-filter"><i class="fa fa-check-square-o"></i>Comparison</a>
+				</li>
 			</ul>
-		</div>
-		<div class="page-actions dropdown-analysis-open pull-right">
-			<button type="button" class="btn btn-link"><i class="fa fa-th-list"></i>View All</button>
-			<div class="search-analysis pull-right">
-				<input type="search" class="form-control" placeholder="Search Analyses">			
-				<button class="btn btn-link" type="button"><i class="fa fa-search"></i></button>
-			</div>		
-		</div>
+              </li>
+            </ul>
+	</div>
+	<div class="page-actions dropdown-analysis-open pull-right">
+		<button type="button" class="btn btn-link"><i class="fa fa-th-list"></i>View All</button>
+		<div class="search-analysis pull-right">
+			<input type="search" class="form-control" id="search-analyses" placeholder="Search Analyses">			
+			<button class="btn btn-link" type="button"><i class="fa fa-search"></i></button>
+		</div>		
+	</div>
 </header>
     <!-- Filter -->
-    <!-- Filter
-================================================== -->
-<section class="filter-container" role="navigation">
-    <div class="flex-colonnade">
-        <!-- Begin: Filters -->
-        <div class="flex">
-
-            <!-- Main Filter -->
-            <div class="flex-colonnade primary-filter">
-                <div class="flex-column data-settings dropdown">
-                    <button class="btn btn-link" title="Data Settings" id="data-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-list-alt"></i></button>
-                    <div class="dropdown-menu data-settings" role="menu" aria-labelledby="data-settings">
-                        <form action="#">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label for="pricemart">Pricemart</label>
-                                    <select id="pricemart" class="form-control">
-                                        <option value="">Pricemart Transactions</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lifecycle-stage">Lifecycle Stage</label>
-                                    <select id="lifecycle-stage" class="form-control">
-                                        <option value="">POS and Direct</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="target-unit">Target Unit</label>
-                                    <select id="target-unit" class="form-control">
-                                        <option value="">EACH</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="target-currency">Target Currency</label>
-                                    <select id="target-currency" class="form-control">
-                                        <option value="">USD</option>
-                                    </select>
-                                </div>
-                                <h5>Convert Currency Using</h5>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>                                
-                                        Transaction Date
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">                                
-                                        Fixed Date
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label sr-only"></label>
-                                    <input class="form-control large" type="date" placeholder="MM/DD/YYYY" disabled />
-                                </div>
-                            </fieldset>
-                            <footer>
-                                <button class="btn btn-primary">Apply</button>
-                            </footer>
-                        </form>
-                    </div>
-                </div>
-                <div class="flex-column">
-                    <div class="dropdown">
-                        <button class="btn btn-link dropdown-toggle" title="Dimensions &amp; Measures" id="dm_listings" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-plus"></i></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dm_listings">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Region</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customer</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex add-filters">
-                    <input type="text" placeholder="Add Filters">
-                </div>
-                 <div class="flex-column">
-                    <button class="btn btn-link" title="Advanced Search"><i class="fa fa-bullseye"></i></button>
+    <section class="filter-container" role="navigation">
+        <!-- BASIC FILTER-->
+        <div id="basic-filter" class="flex-colonnade basic-filter">
+    <!-- Begin: Filters -->
+    <div class="flex">
+        <!-- Primary Filter -->
+        <div class="flex-colonnade primary-filter">
+            <div class="flex-column data-settings dropdown">
+                <button class="btn btn-link" title="Data Settings" id="data-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-list-alt"></i></button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="data-settings">
+                    <form action="#">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="pricemart">Pricemart</label>
+                                <select id="pricemart" class="form-control">
+                                    <option value="">Pricemart Transactions</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="lifecycle-stage">Lifecycle Stage</label>
+                                <select id="lifecycle-stage" class="form-control">
+                                    <option value="">POS and Direct</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="target-unit">Target Unit</label>
+                                <select id="target-unit" class="form-control">
+                                    <option value="">EACH</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="target-currency">Target Currency</label>
+                                <select id="target-currency" class="form-control">
+                                    <option value="">USD</option>
+                                </select>
+                            </div>
+                            <h5>Convert Currency Using</h5>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>                                
+                                    Transaction Date
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">                                
+                                    Fixed Date
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only"></label>
+                                <input class="form-control large" type="date" placeholder="MM/DD/YYYY" disabled />
+                            </div>
+                        </fieldset>
+                        <footer>
+                            <button class="btn btn-primary">Apply</button>
+                        </footer>
+                    </form>
                 </div>
             </div>
-
-            <!-- Comparison Filter -->
-             <div class="flex-colonnade comparison-filter flex-hide" id="comparison-one">
-                <div class="flex-column data-settings dropdown">
-                    <button class="btn btn-link" title="Data Settings" id="data-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-list-alt"></i></button>
-                    <div class="dropdown-menu data-settings" role="menu" aria-labelledby="data-settings">
-                        <form action="#">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label for="pricemart">Pricemart</label>
-                                    <select id="pricemart" class="form-control">
-                                        <option value="">Pricemart Transactions</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lifecycle-stage">Lifecycle Stage</label>
-                                    <select id="lifecycle-stage" class="form-control">
-                                        <option value="">POS and Direct</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="target-unit">Target Unit</label>
-                                    <select id="target-unit" class="form-control">
-                                        <option value="">EACH</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="target-currency">Target Currency</label>
-                                    <select id="target-currency" class="form-control">
-                                        <option value="">USD</option>
-                                    </select>
-                                </div>
-                                <h5>Convert Currency Using</h5>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>                                
-                                        Transaction Date
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">                                
-                                        Fixed Date
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label sr-only"></label>
-                                    <input class="form-control large" type="date" placeholder="MM/DD/YYYY" disabled />
-                                </div>
-                            </fieldset>
-                            <footer>
-                                <button class="btn btn-primary">Apply</button>
-                            </footer>
-                        </form>
+            <div class="flex-column">
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" title="Add Filter" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-plus-circle"></i></button>
+                  <!--   <ul class="dropdown-menu" role="menu" aria-labelledby="add-dm">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Region</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customer</a></li>
+                    </ul> -->
+                    <div class="dropdown-menu" role="menu" aria-labelledby="add-dm">
+                        <button class="btn btn-primary" id="add-filter">Open</button>
+                        <select class="form-control select2 long-list single-edit" id="dm-list" data-placeholder="Please select an item">
+                            <option value=""></option>
+                            <optgroup label="Recently Used Items" class="recently-used">
+                                <option value=""></option>
+                                <option value="">DADR</option>
+                                <option value="">MALOKS</option>
+                            </optgroup>
+                            <option value="" disabled="">-----</option>
+                            <option value="">1DEPCON</option>
+                            <option value="">BADGW2P19</option> 
+                            <option value="">Option 3</option>
+                            <option value="">Option 4</option>
+                        </select>
                     </div>
-                </div>
-                <div class="flex-column">
-                    <div class="dropdown">
-                        <button class="btn btn-link dropdown-toggle" title="Dimensions &amp; Measures" id="dm_listings" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-plus"></i></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dm_listings">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Region</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customer</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex add-filters">
-                    <input type="text" placeholder="Add Filters">
-                </div>
-                 <div class="flex-column">
-                    <button class="btn btn-link" title="Advanced Search"><i class="fa fa-bullseye"></i></button>
                 </div>
             </div>
-            <!-- End: Filters -->
+            <div class="flex add-filters dropdown">
+                <!-- <input type="text" placeholder="Add Filters"> -->
+               <ul class="nav filter-pills" role="tablist">
+                   <li role="presentation">
+                       <a href="#/" class="readonly" id="pill-date" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <em>Transaction Date</em> <strong>2014</strong>
+                       </a>
+                       <div class="dropdown-menu" role="menu" aria-labelledby="pill-date"><form action="#">
+    <div class="form-group">
+        <label for="start-date">Start Date</label>
+        <input id="start-date" class="form-control" type="date">
+    </div>
+    <div class="form-group">
+        <label for="start-date">End Date</label>
+        <input id="start-date" class="form-control" type="date">
+    </div>
+</form></div>
+                   </li>
+                   <li role="presentation">
+                       <a href="#/" class="dimension" id="pill-dimension1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <em>Region</em> <strong>Asia</strong></a>
+                       <div class="dropdown-menu" role="menu" aria-labelledby="pill-dimension1"><form action="#">
+    <div class="form-group">
+        <label for="start-date">Start Date</label>
+        <input id="start-date" class="form-control" type="date">
+    </div>
+    <div class="form-group">
+        <label for="start-date">End Date</label>
+        <input id="start-date" class="form-control" type="date">
+    </div>
+</form></div>
+                   </li>
+                   <li role="presentation">
+                       <a href="#/" class="measure" id="pill-measure1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <em>Market Price</em> <strong>&gt;&nbsp;$145,000</strong></a>
+                       <div class="dropdown-menu" role="menu" aria-labelledby="pill-measure1"><form action="#">
+    <div class="form-group">
+        <label for="start-date">Start Date</label>
+        <input id="start-date" class="form-control" type="date">
+    </div>
+    <div class="form-group">
+        <label for="start-date">End Date</label>
+        <input id="start-date" class="form-control" type="date">
+    </div>
+</form></div>
+                   </li>
+               </ul>
+            </div>
+             <div class="flex-column">
+                <button class="btn btn-link" data-toggle="toggle-advanced" title="Advanced Search"><i class="fa fa-caret-square-o-down"></i></button>
+            </div>
         </div>
-        <div class="flex-column apply-filters">
-            <button class="btn btn-link" title="Apply these filters">Apply</button>
+        <!-- Comparison Filter -->
+         <div class="flex-colonnade comparison-filter flex-hide" id="comparison-one">
+            <div class="flex-column data-settings dropdown">
+                <button class="btn btn-link" title="Data Settings" id="data-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-list-alt"></i></button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="data-settings">
+                    <form action="#">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="pricemart">Pricemart</label>
+                                <select id="pricemart" class="form-control">
+                                    <option value="">Pricemart Transactions</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="lifecycle-stage">Lifecycle Stage</label>
+                                <select id="lifecycle-stage" class="form-control">
+                                    <option value="">POS and Direct</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="target-unit">Target Unit</label>
+                                <select id="target-unit" class="form-control">
+                                    <option value="">EACH</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="target-currency">Target Currency</label>
+                                <select id="target-currency" class="form-control">
+                                    <option value="">USD</option>
+                                </select>
+                            </div>
+                            <h5>Convert Currency Using</h5>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>                                
+                                    Transaction Date
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">                                
+                                    Fixed Date
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only"></label>
+                                <input class="form-control large" type="date" placeholder="MM/DD/YYYY" disabled />
+                            </div>
+                        </fieldset>
+                        <footer>
+                            <button class="btn btn-primary">Apply</button>
+                        </footer>
+                    </form>
+                </div>
+            </div>
+            <div class="flex-column">
+                <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" title="Add Filter" id="dm_listings" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-plus-circle"></i></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dm_listings">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Region</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex add-filters">
+                <input type="text" placeholder="Add Filters">
+            </div>
+             <div class="flex-column">
+                <button class="btn btn-link" data-toggle="toggle-advanced" title="Advanced Search"><i class="fa fa-caret-square-o-down"></i></button>
+            </div>
+        </div>
+        <!-- End: Filters -->
+    </div>
+    <div class="flex-column apply-filters">
+        <button class="btn btn-link" title="Apply these filters">Apply</button>
+    </div>
+</div>
+        <!-- ADVANCED FILTER -->
+        <div id="advanced-filter" class="flex-colonnade advanced-filter hide-flex">
+        <!-- Begin: Filters -->
+    <div class="flex">
+        <div class="flex-colonnade">
+            <div class="flex-row data-settings">
+                <div class="dropdown">
+                    <button class="btn btn-link" title="Data Settings" id="data-settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-list-alt"></i></button>
+                    <div class="dropdown-menu data-settings" role="menu" aria-labelledby="data-settings">
+                        <form action="#">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="pricemart">Pricemart</label>
+                                    <select id="pricemart" class="form-control">
+                                        <option value="">Pricemart Transactions</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lifecycle-stage">Lifecycle Stage</label>
+                                    <select id="lifecycle-stage" class="form-control">
+                                        <option value="">POS and Direct</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="target-unit">Target Unit</label>
+                                    <select id="target-unit" class="form-control">
+                                        <option value="">EACH</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="target-currency">Target Currency</label>
+                                    <select id="target-currency" class="form-control">
+                                        <option value="">USD</option>
+                                    </select>
+                                </div>
+                                <h5>Convert Currency Using</h5>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>                                
+                                        Transaction Date
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">                                
+                                        Fixed Date
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only"></label>
+                                    <input class="form-control large" type="date" placeholder="MM/DD/YYYY" disabled />
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button class="btn btn-primary" title="Apply Data Settings">Apply</button>
+                            </footer>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <header class="flex-colonnade">
+                    <div class="flex-column">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" title="Add Filter" id="dm_listings" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-plus-circle"></i>Add Filter</button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dm_listings">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Region</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Customer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <h5>Primary Filters</h5>
+                    </div>
+                    <div class="flex-column">
+                        <div class="button-group">
+                            <button class="btn btn-primary" title="Apply Filters" disabled><i class="fa fa-check"></i>Apply</button>
+                            <button class="btn btn-link" data-toggle="toggle-advanced" title="Close Advanced Search"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                </header>
+                <section>
+                    <p class="text-muted">Filter Applied to Single Transaction</p>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="Transaction Date" readonly>
+                            <select class="form-control">
+                                <option value="">And</option>
+                                <option value="">Or</option>
+                                <option value="" selected>Between</option>
+                            </select>
+                            <div class="input-group">
+                                <label class="sr-only" for="date-range-example">Date Range</label>
+                                <input type="text" id="date-range-example" class="form-control" value="05/23/2013 - 05/22/2014">                                
+                                <span class="input-group-btn">
+                                    <button class="btn btn-icon" type="button"> <i class="fa fa-calendar"></i></button>
+                                </span>
+                                <span class="input-group-addon btn-info"> <i class="fa fa-info-circle"></i></span>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <button class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-gear"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Filter After Grouping</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy to Comparison Data Set</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                       </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="Sold To Customer" readonly>
+                            <select class="form-control">
+                                <option value="">And</option>
+                                <option value="">Or</option>
+                                <option value="" selected>Between</option>
+                            </select>
+                            <select class="form-control select2 long-list multi-edit" multiple="" tabindex="-1" data-placeholder="115 Items">
+                                <optgroup label="Recently Used Items" class="recently-used">
+                                    <option value="ds">115 Items</option>
+                                </optgroup>
+                                <option value="" disabled="">-----</option>
+                                <option value="AK">ABC List Item</option>
+                                <option value="WA">PQR List Item</option>
+                            </select>
+                            <div class="dropdown pull-right">
+                                <button class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-gear"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Filter After Grouping</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy to Comparison Data Set</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="Transaction Date" readonly>
+                            <select class="form-control">
+                                <option value="">And</option>
+                                <option value="">Or</option>
+                                <option value="" selected>Between</option>
+                            </select>
+                            <select class="form-control select2 long-list multi-edit" multiple="" tabindex="-1" data-placeholder="5.00 - 32.00">
+                                <optgroup label="Recently Used Items" class="recently-used">
+                                    <option value="ds">5.00 - 32.00</option>
+                                </optgroup>
+                                <option value="" disabled="">-----</option>
+                                <option value="AK">ABC List Item</option>
+                                <option value="WA">PQR List Item</option>
+                            </select>
+                            <div class="dropdown pull-right">
+                                <button class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-gear"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Filter After Grouping</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy to Comparison Data Set</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <section>
+                    <p class="text-muted">
+                        Filter Applied to Grouped Rows By
+                        <select class="form-control">
+                            <option value="">Region</option>
+                        </select>
+                    </p>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="" selected>Pocket Margin</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="" selected>SUM</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="" selected>Greater Than</option>
+                            </select>
+                            <input type="number" class="form-control" value="1234.68">
+                            <div class="dropdown pull-right">
+                                <button class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-gear"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Filter After Grouping</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy to Comparison Data Set</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="" selected>Pocket Margin</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="" selected>SUM</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="" selected>Greater Than or Equal To</option>
+                            </select>
+                            <input type="number" class="form-control" value="5">
+                            <div class="dropdown pull-right">
+                                <button class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-gear"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Filter After Grouping</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Copy to Comparison Data Set</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <footer>
+                    <p class="text-warning pull-right">30,000,000 Transactions</p>
+                </footer>
+            </div>
         </div>
     </div>
-</section>
+</div>
+        
+    </section>
     <!-- Workarea -->
     <main>
         <div class="workarea-container tabs-left">
             <ul class="nav nav-tabs">
-                <li><a href="#add-chart" data-toggle="tab"><i class="fa fa-plus"></i></a></li>
-                <li><a href="#chart-1" data-toggle="tab"><i class="fa fa-bar-chart"></i></a></li>
-                <li><a href="#chart-2" data-toggle="tab"><i class="fa fa-table"></i></a></li>
-                <li class="active"><a href="#chart-3" data-toggle="tab"><i class="fa fa-pie-chart"></i></a></li>
+                <li class="active"><a href="#add-chart" data-toggle="tab"><i class="fa fa-plus"></i></a></li>
+                <li><a href="#simple-table" data-toggle="tab"><i class="fa fa-table"></i></a></li>
+                <li><a href="#pie-chart" data-toggle="tab"><i class="fa fa-pie-chart"></i></a></li>
+                <li><a href="#bar-chart" data-toggle="tab"><i class="fa fa-bar-chart"></i></a></li>
+                <li><a href="#waterfall-chart" data-toggle="tab"><i class="fa fa-signal"></i></a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane" id="add-chart">
-                    <div class="workarea">
-                        <div class="workspace">
-                            <h2>Select a chart</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="chart-1">Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.</div>
-                <div class="tab-pane" id="chart-2">Thirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
-                <div class="tab-pane active" id="chart-3">
-                    <div class="workarea">
-                        <div class="workarea-actions">
-                            <!-- Workarea Action Bar -->
-                            <div class="flex-colonnade">
-                                <div class="flex-column">
-                                    <!-- Workarea Tabs -->
-                                    <ul class="nav nav-pills" role="tablist">
-                                        <li role="presentation" class="active"><a href="#chart-area" aria-controls="chart-area" role="tab" data-toggle="tab">Chart</a></li>
-                                        <li role="presentation"><a href="#table-area" aria-controls="table-area" role="tab" data-toggle="tab">Table</a></li>
-                                    </ul>
-                                </div>
-                                <div class="flex chart-title">
-                                    <!-- Workarea Title -->
-                                    <h2>Low Margin by Product</h2>
-                                </div>
-                                <div class="flex-column">
-                                    <!-- Workarea Actions -->
-                                    <div class="dropdown pull-right">
-                                        <button class="btn btn-link"><i class="fa fa-camera"></i></button>
-                                        <button class="btn btn-link" data-open-pane="workarea-pane"><i class="fa fa-gear"></i></button>
-                                        <button class="btn btn-link dropdown-toggle" type="button" id="chart-menu" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-ellipsis-v"></i></button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="chart-menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-download"></i>Export</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-trash-o"></i>Delete Chart</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane workspace chart-area active" id="chart-area">
-                                <!--img src="http://placehold.it/200/6666ff/fff" class="center-block img-responsive img-circle slideInLeftanimated" alt="Generic placeholder thumbnail"-->
-                                <div id="highchart" style="height:300px;"></div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane workspace table-area" id="table-area">
-                               <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th> 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Chart Properties -->
-                    <!-- Properties
+                <div class="tab-pane fade in active" id="add-chart">
+                    <!-- Add Chart -->
+                    <!-- Work Area - Add Chart
 ================================================== -->
-<aside class="workarea-pane animate25s slideOutRight" id="workarea-pane">
+<div class="workarea">
+     <div class="flex-colonnade workspace">
+		<div class="flex-column visualizations add-a-table">
+			<h3>Add a Table</h3>
+		    <ul>
+		    		<li>
+		    			<div class="visualization"></div>
+		    			<span>Simple Table</span>
+		    		</li>
+		    		<li>
+		    			<div class="visualization"></div>
+		    			<span>Advanced Table</span>
+		    		</li>
+		    </ul>
+		</div>
+		<div class="flex visualizations add-a-chart">
+			<header class="flex-colonnade">
+				<h3 class="flex-column">Add a Chart</h3>
+				<div class="flex chart-toggle">
+				  <a href="#" class="btn btn-link" data-id="comparative">Comparative</a>
+				  <a href="#" class="btn btn-link" data-id="contribution">Contribution</a>
+				  <a href="#" class="btn btn-link" data-id="trending">Trending</a>
+				  <a href="#" class="btn btn-link" data-id="variation">Variation</a>
+				</div>
+			</header>
+		    <ul class="chart-list">
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Area</span>
+		    		</li>
+		    		<li data-id="comparative">
+		    			<div class="visualization"></div>
+		    			<span>Bar</span>
+		    		</li>
+		    		<li data-id="comparative">
+		    			<div class="visualization"></div>
+		    			<span>Bar with Negative Stack</span>
+		    		</li>
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Box Plot</span>
+		    		</li>
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Bubble</span>
+		    		</li>
+		    		<li data-id="comparative">
+		    			<div class="visualization"></div>
+		    			<span>Column</span>
+		    		</li>
+		    		<li data-id="comparative">
+		    			<div class="visualization"></div>
+		    			<span>Column Range</span>
+		    		</li>
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Contribution Chart</span>
+		    		</li>
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Contribution Chart</span>
+		    		</li>
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Contribution Chart</span>
+		    		</li>
+		    		<li data-id="trending">
+		    			<div class="visualization"></div>
+		    			<span>Trending Chart</span>
+		    		</li>
+		    		<li data-id="trending">
+		    			<div class="visualization"></div>
+		    			<span>Trending Chart</span>
+		    		</li>
+		    		<li data-id="variation">
+		    			<div class="visualization"></div>
+		    			<span>Variation Chart</span>
+		    		</li>
+		    		<li data-id="trending">
+		    			<div class="visualization"></div>
+		    			<span>Bubble</span>
+		    		</li>
+		    		<li data-id="contribution">
+		    			<div class="visualization"></div>
+		    			<span>Contribution Chart</span>
+		    		</li>
+		    		<li data-id="comparative">
+		    			<div class="visualization"></div>
+		    			<span>Comparative Chart</span>
+		    		</li>
+		    		<li data-id="trending">
+		    			<div class="visualization"></div>
+		    			<span>Trending Chart</span>
+		    		</li>
+		    		<li data-id="variation">
+		    			<div class="visualization"></div>
+		    			<span>Variation Chart</span>
+		    		</li>
+		    		<li data-id="variation">
+		    			<div class="visualization"></div>
+		    			<span>Variation Chart</span>
+		    		</li>
+		    		<li data-id="variation">
+		    			<div class="visualization"></div>
+		    			<span>Variation Chart</span>
+		    		</li>
+		    		<li data-id="variation">
+		    			<div class="visualization"></div>
+		    			<span>Variation Chart</span>
+		    		</li>
+		    		<li data-id="variation">
+		    			<div class="visualization"></div>
+		    			<span>Variation Chart</span>
+		    		</li>
+		    </ul>
+			
+		</div>
+    </div>
+</div>
+                </div>
+                <div class="tab-pane fade" id="simple-table">
+                    <!-- Simple Table -->
+                    <!-- Work Area - Simple Table
+================================================== -->
+<div class="workarea">
+    <div class="workspace">
+         Thirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.
+    </div>
+</div>
+                </div>
+                <div class="tab-pane fade" id="pie-chart">
+                    <!-- Pie Chart -->
+                    <!-- Work Area - Pie Chart
+================================================== -->
+<div class="workarea">
+	<div class="workarea-actions">
+		<!-- Workarea Action Bar -->
+		<div class="flex-colonnade">
+			<div class="flex-column">
+				<!-- Workarea Tabs -->
+				<ul class="nav nav-pills nav-charts" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#chart-area" aria-controls="chart-area" role="tab" data-toggle="tab">Chart</a>
+					</li>
+					<li role="presentation">
+						<a href="#table-area" aria-controls="table-area" role="tab" data-toggle="tab">Table</a>
+					</li>
+				</ul>
+			</div>
+			<div class="flex chart-title">
+				<!-- Workarea Title -->
+				<hgroup>
+					<h3>Low Margin by Product</h3>
+					<h4>
+						Displaying
+						<span class="number-of">1,223,421</span>
+						transactions convertible to
+						<span class="uom">each</span>
+					</h4>
+				</hgroup>
+			</div>
+			<div class="flex-column">
+				<!-- Workarea Actions -->
+				<div class="dropdown pull-right">
+					<button class="btn btn-link"> <i class="fa fa-camera"></i>
+					</button>
+					<button class="btn btn-link" data-open-pane="workarea-pane"> <i class="fa fa-gear"></i>
+					</button>
+					<button class="btn btn-link dropdown-toggle" type="button" id="chart-menu" data-toggle="dropdown" aria-expanded="true">
+						<i class="fa fa-ellipsis-v"></i>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="chart-menu">
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<i class="fa fa-download"></i>
+								Export
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<i class="fa fa-trash-o"></i>
+								Delete Chart
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane workspace chart-area active" id="chart-area">
+			<div id="highchart" style="height:300px;"></div>
+		</div>
+		<div role="tabpanel" class="tab-pane workspace table-area" id="table-area">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+                    <!-- Pie Chart Properties -->
+                    <!-- Pie Properties
+================================================== -->
+<aside class="workarea-pane animate25s slideOutRight">
     <section>
-        <form>
-            <!-- <h3>Form Title</h3> -->
+        <form class="inline-status">
             <fieldset>
-                <!-- <legend>Form Group Headline</legend> -->
                 <div class="form-group">
-                    <label for="x-axis">Chart Title</label>
-                    <input id="x-axis" class="form-control" value="Low Margin by Product" placeholder="Required" required="">
+                    <label for="chart-title">Chart Title</label>
+                    <input id="chart-title" class="form-control" value="">
                 </div>
                 <div class="form-group">
-                    <label for="x-axis">X-Axis</label>
-                    <select name="x-axis" id="x-axis" class="form-control">
-                        <option value="">Chrome</option><option value="">Firefox</option><option value="">IE</option>
+                    <label for="slice-by">Slice By</label>
+                    <select id="slice-by" class="form-control select2 long-list single-edit" data-placeholder="Choose a dimension">
+                        <optgroup label="Recently Used Items" class="recently-used">
+                            <option value="Dimension 8">Dimension 8</option>
+                        </optgroup>
+                        <option value="" disabled>-----</option>
+                        <option value="Dimension 1" selected>Dimension 1</option>
+                        <option value="Dimension 2">Dimension 2</option>
+                        <option value="Dimension 3">Dimension 3</option>
+                        <option value="Dimension 1">Dimension 4</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="y-axis">Y-Axis</label>
-                    <input id="y-axis" class="form-control" value="Fruit eaten" placeholder="Required" required="">
+                    <label for="slice-size">Slice Size</label>
+                    <select id="slice-size" class="form-control select2 long-list single-edit" data-placeholder="Choose a measure">
+                        <optgroup label="Recently Used Items" class="recently-used">
+                            <option value="Measure 10">Measure 10</option>
+                        </optgroup>
+                        <option value="" disabled>-----</option>
+                        <option value="Measure 1" selected>Measure 1</option>
+                        <option value="Measure 2">Measure 2</option>
+                        <option value="Measure 3">Measure 3</option>
+                        <option value="Measure 1">Measure 4</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-toggle="toggle"> Display Legend
+                    </label>
                 </div>
                 <div class="form-group">
-                    <label for="label-1">Series</label>
-                    <input id="label-1" class="form-control" placeholder="Required" required="">
+                    <label for="legend-color-by">Color By</label>
+                    <input id="legend-color-by" class="form-control" value="Dimension 1" readonly>
                 </div>
             </fieldset>
         </form>
-    </section>
+        <footer class="nav navbar navbar-fixed-bottom">
+            <button class="btn btn-primary">Apply</button>
+        </footer>
+</section>
 </aside>
 
 
+                </div>
+                <div class="tab-pane fade" id="bar-chart">
+                    <!-- Bar Chart -->
+                    <!-- Work Area - Simple Table
+================================================== -->
+<div class="workarea">
+	<div class="workarea-actions">
+		<!-- Workarea Action Bar -->
+		<div class="flex-colonnade">
+			<div class="flex-column">
+				<!-- Workarea Tabs -->
+				<ul class="nav nav-pills" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#chart-area" aria-controls="chart-area" role="tab" data-toggle="tab">Chart</a>
+					</li>
+					<li role="presentation">
+						<a href="#table-area" aria-controls="table-area" role="tab" data-toggle="tab">Table</a>
+					</li>
+				</ul>
+			</div>
+			<div class="flex chart-title">
+				<!-- Workarea Title -->
+				<hgroup>
+					<h2>Bar Chart</h2>
+					<h3>
+						Displaying
+						<span class="number-of">1,143,098</span>
+						transactions convertible to
+						<span class="uom">each</span>
+					</h3>
+				</hgroup>
+			</div>
+			<div class="flex-column">
+				<!-- Workarea Actions -->
+				<div class="dropdown pull-right">
+					<button class="btn btn-link"> <i class="fa fa-camera"></i>
+					</button>
+					<button class="btn btn-link" data-open-pane="workarea-pane"> <i class="fa fa-gear"></i>
+					</button>
+					<button class="btn btn-link dropdown-toggle" type="button" id="chart-menu" data-toggle="dropdown" aria-expanded="true">
+						<i class="fa fa-ellipsis-v"></i>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="chart-menu">
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<i class="fa fa-download"></i>
+								Export
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<i class="fa fa-trash-o"></i>
+								Delete Chart
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane workspace chart-area active" id="chart-area">
+			<div id="highchart" style="height:300px;"></div>
+		</div>
+		<div role="tabpanel" class="tab-pane workspace table-area" id="table-area">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+                    <!-- Bar Chart Properties -->
+                    <!-- Bar Properties
+================================================== -->
+<aside class="workarea-pane animate25s slideOutRight">
+    <section>
+        <form class="inline-status">
+            <fieldset>
+                <div class="form-group">
+                    <label for="chart-title">Chart Title</label>
+                    <input id="chart-title" class="form-control" value="">
+                </div>
+                <div class="form-group">
+                    <label for="horizontal-axis">Horizontal Axis</label>
+                    <select id="horizontal-axis" class="form-control">
+                        <option value="">Measure 1</option><option value="">Dimension 2</option><option value="">Dimension 3</option>
+                    </select>
+                    <button type="button" class="btn btn-link field-indicator expand-form"><i class="fa fa-caret-down"></i></button>
+                    <!-- Sub Form Group -->
+                    <div class="form-group sub-form-group">
+                        <label for="horizontal-axis-label">Label</label>
+                        <select id="horizontal-axis-label" class="form-control">
+                            <option value="">Measure 1</option>
+                        </select>
+                        <label for="horizontal-axis-scale">Scale</label>
+                        <select id="horizontal-axis-scale" class="form-control">
+                            <option value="">Absolute</option>
+                            <option value="">Percent</option>
+                            <option value="">Per Unit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vertical-axis">Vertical Axis</label>
+                    <select id="vertical-axis" class="form-control">
+                        <option value="">Dimension 1</option><option value="">Dimension 2</option><option value="">Dimension 3</option>
+                    </select>
+                    <button type="button" class="btn btn-link field-indicator expand-form"><i class="fa fa-caret-down"></i></button>
+                    <!-- Sub Form Group -->
+                    <div class="form-group sub-form-group">
+                        <label for="vertical-axis-label">Label</label>
+                        <select id="vertical-axis-label" class="form-control">
+                            <option value="">Dimension 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="group-by">Group By</label>
+                    <select id="group-by" class="form-control">
+                        <option value="" selected>Dimension 1</option>
+                        <option value="">Time</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="color-by">Color By</label>
+                    <input id="color-by" class="form-control" value="Dimension 1" readonly>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-toggle="toggle"> Stacked
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+        <footer class="nav navbar navbar-fixed-bottom">
+            <button class="btn btn-primary">Apply</button>
+        </footer>
+    </section>
+</aside>
+                </div>
+                <div class="tab-pane fade" id="waterfall-chart">
+                    <!-- Waterfall Chart -->
+                    <!-- Work Area - Simple Table
+================================================== -->
+
+<div class="workarea">
+	<div class="workarea-actions">
+		<!-- Workarea Action Bar -->
+		<div class="flex-colonnade">
+			<div class="flex-column">
+				<!-- Workarea Tabs -->
+				<ul class="nav nav-pills" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#chart-area" aria-controls="chart-area" role="tab" data-toggle="tab">Chart</a>
+					</li>
+					<li role="presentation">
+						<a href="#table-area" aria-controls="table-area" role="tab" data-toggle="tab">Table</a>
+					</li>
+				</ul>
+			</div>
+			<div class="flex chart-title">
+				<!-- Workarea Title -->
+				<hgroup>
+					<h2>Waterfall Chart</h2>
+					<h3>
+						Defaults to
+						<span class="number-of">1,223,421</span>
+						transactions convertible to
+						<span class="uom">each</span>
+					</h3>
+				</hgroup>
+			</div>
+			<div class="flex-column">
+				<!-- Workarea Actions -->
+				<div class="dropdown pull-right">
+					<button class="btn btn-link"> <i class="fa fa-camera"></i>
+					</button>
+					<button class="btn btn-link" data-open-pane="workarea-pane"> <i class="fa fa-gear"></i>
+					</button>
+					<button class="btn btn-link dropdown-toggle" type="button" id="chart-menu" data-toggle="dropdown" aria-expanded="true">
+						<i class="fa fa-ellipsis-v"></i>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="chart-menu">
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<i class="fa fa-download"></i>
+								Export
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<i class="fa fa-trash-o"></i>
+								Delete Chart
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane workspace chart-area active" id="chart-area">
+			<div id="highchart" style="height:300px;"></div>
+		</div>
+		<div role="tabpanel" class="tab-pane workspace table-area" id="table-area">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+                    <!-- Waterfall Chart Properties -->
+                    <!-- Waterfall Properties
+================================================== -->
+<aside class="workarea-pane animate25s slideOutRight">
+    <section>
+        <form class="inline-status">
+            <fieldset>
+                <div class="form-group">
+                    <label for="chart-title">Chart Title</label>
+                    <input id="chart-title" class="form-control" value="">
+                </div>
+                <div class="form-group">
+                    <label for="vertical-axis-scale">Vertical Axis Scale</label>
+                    <select id="vertical-axis-scale" class="form-control">
+                        <option value="">Absolute</option>
+                        <option value="">Percent</option>
+                        <option value="">Per Unit</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <footer class="nav navbar navbar-fixed-bottom">
+            <button class="btn btn-primary">Apply</button>
+        </footer>
+    </section>
+</aside>
                 </div>
             </div>
         </div>
@@ -450,21 +1215,23 @@
     ================================================== -->
 
     <!--jQuery CDN -->
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Plug-Ins -->
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.min.js"></script>
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/jquery.truncator/jquery.truncator.js"></script>
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="/_/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/_/bower_components/select2-ng/select2.min.js"></script>
+    <script src="/_/bower_components/jquery.truncator/jquery.truncator.js"></script>
+    <script src="/_/bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    <script src="/_/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
 
 
     <!-- Bootstrap Components -->
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/_/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Vendavo App Specific JS -->
-    <script src="http://www.screenchef.com/portfolio/work/vendavo/eps/5_prototype/app/_/js/app.js"></script>
+    <script src="/_/js/app.js"></script>
+    <script src="/_/js/filter.js"></script>
 
     <!-- LiveReload -->
     <script src="//localhost:35729/livereload.js"></script>

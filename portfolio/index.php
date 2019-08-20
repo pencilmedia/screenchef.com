@@ -246,7 +246,9 @@
                                 </p>
                                 <p>
                                     <a href="work/vendavo/eps/eps.php" class="button">View the UX Process Artifacts</a>
-                                    <a href="work/vendavo/eps/5_prototype/dist/app/explorer/" target="_blank" class="button">View the Prototype</a>
+                                    <a href="https://vendavo-eps.herokuapp.com/explorer/" target="_blank" class="button">View Prototype</a>
+                                    <a href="https://vendavo-eps.herokuapp.com" target="_blank" class="button">View Styleguide</a>
+                                    <!-- <a href="work/vendavo/eps/5_prototype/dist/app/explorer/" target="_blank" class="button">View the Prototype</a> -->
                                 </p>
                             </div>
                         </section>
@@ -316,7 +318,7 @@
                                 <p>
                                     <label><strong>Project Work:</strong></label>Interaction Design, Front-end Development, Responsive Design, Visual Design, Design System</p>
                                 <p>
-                                    <a href="work/vendavo/eps/5_prototype/dist/app/" target="_blank" class="button">View the Styleguide</a>
+                                    <a href="https://vendavo-eps.herokuapp.com/" target="_blank" class="button">View the Styleguide</a>
                                 </p>
                             </div>
                         </section>
@@ -334,6 +336,62 @@
                             <p>Ivanti offers unified IT management solutions. They have various offerings from software that can manage IT assets, patches, systems management to IT service delivery and security.</p>
                         </section>
                         <section class="mdc-layout-grid__inner product">
+                            <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
+                                <h4>Project Uno: Living Styleguide</h4>
+                                <p>
+                                    <label><strong>Description:</strong></label>The team decided to use Material Design as the UI framework for a brand new Cloud product, Project Uno. 
+                                    The living styleguide was the bridge between designers and developers. A major challenge was MD for Angular 2 was not ready so I combined two frameworks, 
+                                     MD for Angular 2 and Material Design Lite. This allowed developers to base their work on the MD framework and MD Lite could fill missing gaps. It was challenging
+                                     to combine two themes based on different CSS/SCSS variable approaches and coordinate the new SCSS to be simple to use for developers.
+                                </p>
+                                <p>The company merged with another and the project did not get completed. Development of this project was stopped.</p>
+                                <p>
+                                    <label><strong>Project Work:</strong></label> Front-end Development, SCSS, Angular 2/4, Theming, Material Design, Material Design Lite, MDC for Web</p>
+                                <p>
+                                    <a href="https://ivanti-prototype.herokuapp.com/" target="_blank" class="button">View Prototype</a>
+                                </p>
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                                <img src="../portfolio/work/ivanti/thumbs/thumb_ivanti_proto.png" alt="Smart Advisor Thumbnail" class="product-thumbnail" />
+                            </div>
+                        </section>
+                        <section class="mdc-layout-grid__inner product">
+                            <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                                <img src="../portfolio/work/ivanti/thumbs/thumb_nav_wireframe.png" alt="Thumbnail" class="product-thumbnail" />
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
+                            <h4>Project Uno: Wireframes</h4>
+                                <p>
+                                    <label><strong>Description: Wireframes</strong></label>Created wireframes to demonstrate global search and navigation flow for new product.
+                                </p>
+                                <p>
+                                    <label><strong>Project Work:</strong></label> Interaction Design, UX Design</p>
+                                <p>
+                                    <a href="../portfolio/work/ivanti/1_global_nav/index.html" target="_blank" class="button">Nav Wireframes</a>
+                                    <a href="../portfolio/work/ivanti/2_heatone_nav_flow/index.html" target="_blank" class="button">Nav Exploration</a>
+                                    <a href="../portfolio/work/ivanti/3_heatone_nav_flow_model_multipane/index.html" target="_blank" class="button">Multipane Nav Model</a>
+                                </p>
+                            </div>
+                        </section>
+                        <section class="mdc-layout-grid__inner product">
+                            <div class="mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-4-phone">
+                            <h4>Smart Advisors</h4>
+                                <p>
+                                    <label><strong>Description:</strong></label>Smart Advisors analyzes the network and creates intelligent AI-based recommendations for IT professionals exposing problem areas.</p>
+                                <p>
+                                    <label><strong>Project Work:</strong></label> Interaction Design, Visual Design</p>
+                                <p>
+                                    <a href="../portfolio/work/ivanti/0_smart_advisors/index.html" target="_blank" class="button">View the Invision Prototype</a>
+                                </p>
+                                <p>
+                                    <!-- <a href="work/paradata/ba.php" class="button">View the Screenshots</a> -->
+                                </p>
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
+                                <img src="../portfolio/work/ivanti/thumbs/thumb_sa_sko.png" alt="Smart Advisor Thumbnail" class="product-thumbnail" />
+                            </div>
+                        </section>
+                        <section class="mdc-layout-grid__inner product">
                             <div class="mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">
                                 <img src="../portfolio/work/ivanti/thumbs/catalog_thumb.png" alt="Catalog Thumbnail" class="product-thumbnail" />
                             </div>
@@ -343,9 +401,9 @@
                                     <label><strong>Description:</strong></label>Project Uno was the first SaaS cloud offering from Heat Software. It was designed to allow IT professionals to monitor assets, deploy patches and provide application and device control from the cloud.</p>
                                 <p>
                                     <label><strong>Project Work:</strong></label> Interaction Design, Front-end Development, Responsive Design, Visual Design</p>
-                                <p>
-                                    <!-- <a href="work/paradata/ba.php" class="button">View the Screenshots</a> -->
-                                </p>
+                                <!-- <p>
+                                    <a href="../portfolio/work/ivanti/uno/uno.php" target="_blank" class="button">View the Invision Prototype</a>
+                                </p> -->
                             </div>
                         </section>
                         <section class="mdc-layout-grid__inner product">

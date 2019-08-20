@@ -22,6 +22,25 @@
         <h1 id="backToTop">Vendavo Profit Analyzer <button class="btn btn-primary pull-right" onclick="history.go(-1);"><i class="fa fa-chevron-left"></i> Back to Portfolio</button></h1>
         <article class="screenshots">
             <p>
+            Redesign of Vendavo’s bread-and-butter enterprise application. A high-visibility project, the Vendavo pricing suite is used by hundreds of Fortune 500 companies. The initial design concept and wireframes received praise when revealed during Vendavo’s European Profit Summit.
+            </p>
+            <h4>Goals</h4>
+            <ul>
+                <li>Decrease application complexity and redundancy</li>
+                <li>Expose the power of the application while making it easy to use</li>
+                <li>Modernize the interactions and visual design</li>
+            </ul>
+            <h4>User Research</h4>
+            <ul>
+                <li>Understanding customers' pain points with the current application</li>
+                <li>Creating personas and user journeys</li>
+                <li>Iterative testing of the product from low-fidelity paper sketches to high-fidelity prototypes</li>
+            </ul>
+            <p>
+            Decisions were informed by 21 interviews, 28 contextual inquiries, 9 design feedback sessions, 7 design sprint sessions, and 25 usability tests.
+            </p>
+            <p>&nbsp;</p>
+            <p>
                 <a href="#1">Personas</a> | <a href="#2">Storyboards</a> | <a href="#3">Concepts</a> | <a href="#4">Mockups</a> | <a href="#5">Prototype</a> | <a href="#6">Case Study</a>
             </p>
             <section>
@@ -76,6 +95,13 @@
             </p>
             <section>
                 <h2 id="4">Mockups</h2>
+                <ol>
+                        <li>KPI Dashboard - User taps on hamburger menu to go to:</li>
+                        <li>Price Explorer - User can filter down results or taps:</li>
+                        <li>Recent Analysis Dropdown - Recent and pre-canned analysis packs shown; User searches and this area swaps for:</li>
+                        <li>Search Results Dropdown - User can search for keywords in analyses; User taps View All to view:</li>
+                        <li>All analyses</li>
+                </ol> 
                 <?php 
                     $dirname = "4_mockups/";
                     $images = glob($dirname."*.{jpg,gif,png}", GLOB_BRACE);

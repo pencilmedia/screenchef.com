@@ -2,7 +2,7 @@
 // -----------------------------------------------------*/
 
 .global-navbar {
-	background: $main;
+	background: $main-shade;
 	z-index: 9999999999; /* High z-index for dropdown menus to be top most level */
 	.nav-box {
 		display: inline-block;

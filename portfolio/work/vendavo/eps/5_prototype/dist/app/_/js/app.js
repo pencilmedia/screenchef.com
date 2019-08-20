@@ -11,8 +11,9 @@
          // app
          app.togglePane();
          app.formsJS();
-         app.filters();
          app.analysisSwitcher();
+         app.workArea();
+         app.addChart();
      },
      // INIT PLUGINS
      ///////////////
@@ -32,6 +33,9 @@
 
              // Popovers
              $('[data-toggle="popover"]').popover();
+            
+             // Tooltips
+             $('[data-toggle="tooltip"]').tooltip();
 
              // Init jquery.truncator truncation plugin
              $('.truncate').truncate({
@@ -90,7 +94,7 @@
          // Chart Pane - Toggle Open/Close
         $('[data-open-pane]').on("click", function() {
             $('.workarea-container > .tab-content > .tab-pane.active').toggleClass('pane-open');
-            $('#workarea-pane').toggleClass('slideInRight slideOutRight');
+            $('.tab-pane.active .workarea-pane').toggleClass('slideInRight slideOutRight');
 
             // Toggling pane reflows highchart
             $('#highchart').animate({
@@ -114,24 +118,16 @@
          $('.form-control').mouseup(function(e) {
              e.preventDefault();
          });
-         // Popover for status indicator in forms
-         $('.form-group .field-indicator').popover({
+         // Popover for error status indicator in forms
+         $('.form-group.has-error .field-indicator').popover({
              trigger: 'hover',
-             placement: 'right',
+             placement: 'top',
              container: 'body',
              content: 'You made a big mistake'
          });
-     },
-     // FILTERS
-     ////////////////////////
-     filters: function() {
-         // Toggle Comparison Filter
-        $("#comparison-filter").click(function() {
-            // If checked
-         
-                //show the hidden div
-                $("#comparison-one").toggleClass('flex-show').toggleClass('flex-hide');
-            
+        // Expand/Collapse Form Accordion
+        $('.form-group .expand-form').on("click", function() {
+            $(this).parent().toggleClass('open');
         });
      },
      // Analysis Switcher
@@ -144,7 +140,66 @@
             // Toggle Analyses Actions
             $('.page-actions.dropdown-analysis-open').toggle();
         })
-     }
- };
+     },
+     // Work Area
+     ////////////////////////
+     workArea: function() {
+        // Choose
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+            e.target // newly activated tab
+            e.relatedTarget // previous active tab
+        })
+     },
+     // Work Area
+     ////////////////////////
+     addChart: function() {
+        // Filter Chart Types
+        $('.chart-toggle a').on('click', function() {
+            var chartList = $('.chart-list');
+            var whichChart = $(this).attr('data-id');
+            var chartItems = $('.visualizations .chart-list li').filter(function() { return $(this).data('id') == whichChart; });
+            
+
+            if($(this).hasClass('active')) {
+                // Enable everything because an active toggle was clicked
+                $(this).removeClass('active');
+                chartList.removeClass('highlight');
+                chartItems.removeClass('on');
+            } else {
+                // Remove other active toggles
+                $('.chart-toggle a').removeClass('active');
+                // Toggle Active State
+                $(this).toggleClass('active');
+
+                 if (!$('.chart-toggle a').hasClass('active')) {
+                    // Deselect all chart toggles
+                    chartList.removeClass('highlight');
+                    chartItems.removeClass('on');
+                } else {
+                    // Toggle highlight list
+                    if (chartList.hasClass('highlight')) {
+                        // // Turn off toggle and select the new toggle
+                        $('.chart-list li').removeClass('on');
+                        // Toggle On Highlighted Chart Types
+                        chartItems.toggleClass('on');
+                        return;
+                    } else {
+                        // Turn off .highlight
+                        chartList.toggleClass('highlight');
+                    }
+                    // Toggle On Highlighted Chart Types
+                    chartItems.toggleClass('on');
+                }
+
+            }
+
+
+           
+
+
+
+        })
+    }
+};
  $(app.init);
 

@@ -12,7 +12,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="shortcut icon" href="/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.png">
+    <link rel="shortcut icon" href="/_/img/favicon.png">
     <meta name="description" content="">
 
     <!-- For iOS web apps-->
@@ -20,47 +20,47 @@
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="/portfolio/work/vendavo/eps/5_prototype/app/_/img/favicon.ico">
-    <link rel="apple-touch-icon" href="/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/portfolio/work/vendavo/eps/5_prototype/app/_/img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/_/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/_/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/_/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/_/img/apple-touch-icon-114x114.png">
 
     <!--[if lt IE 9]>
-    <script src="/portfolio/work/vendavo/eps/5_prototype/apphttp://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Bootstrap Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Font Library
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fontawesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/icomoon/dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/icomoon/dist/css/style.css">
 
     <!-- Plug-Ins Styles
     ================================================== -->
     <!-- Animate.css
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2-bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/select2-ng/select2.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/select2-ng/select2-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 
     <!-- Vendavo Style Guide Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/css/styleguide.css">
+    <link rel="stylesheet" type="text/css" href="/_/css/styleguide.css">
 
     <!-- Theme Styles
     ================================================== -->
-    <link rel="stylesheet" type="text/css" href="/portfolio/work/vendavo/eps/5_prototype/app/_/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="/_/css/theme.css">
 
     <!-- Modernizr -->
-    <script type="text/javascript" src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/modernizer/modernizr.js"></script>
+    <script type="text/javascript" src="/_/bower_components/modernizer/modernizr.js"></script>
 
 
-    <link rel="stylesheet" href="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="/_/bower_components/highlightjs/styles/monokai_sublime.css">
 
     <!-- Temporary solution (should be in Vendavo npm repository => we need budget) -->
     <!-- Versioning maybe needed too -->
@@ -389,6 +389,23 @@
 		</div>
 	</fieldset>
 </form>
+<form class="inline-status">
+	<div class="alert alert-danger" role="alert">
+		<p><i class="fa fa-exclamation-triangle"></i>Please resolve the issues below.</p>
+	</div>
+	<fieldset>
+		<legend>Form Title</legend>
+		<div class="form-group">
+			<label for="full_name3">Name</label>
+			<input id="full_name3" class="form-control">
+		</div>
+		<div class="form-group has-error">
+			<label class="control-label" for="description3">Description</label>
+			<input type="text" class="form-control" id="description3" placeholder="Required" required>
+			<button type="button" class="btn btn-link field-indicator"><i class="fa fa-exclamation-triangle"></i></button>
+		</div>
+	</fieldset>
+</form>
 
 <h4>Code Snippet</h4>
 <div class="highlight">
@@ -540,45 +557,51 @@
           ================================================== -->
           <!-- Page Header
 ================================================== -->
+<!-- INSTRUCTIONS: 
+The navigation item is selected by matching the 'data-id' and the "pageID" variable on the index.html for each page
+-->
 <h1><i class="fa fa-briefcase"></i>Component Library</h1>
 <nav id="styleguideNav" role="navigation">
    <ul class="nav nav-list">
        <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Overview</h2>
            <ul class="nav nav-pills nav-stacked tree">
-			       <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/" data-id="overview">Overview</a></li>
-             <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/explorer" data-id="pa-explorer">Price Explorer</a></li>
+			       <li><a href="/" data-id="overview">Overview</a></li>
+             <li><a href="/explorer" data-id="pa-explorer">Price Explorer</a></li>
            </ul>
        </li>
        <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Foundations</h2>
            <ul class="nav nav-pills nav-stacked tree">
-        		<li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/entities.html" data-id="entities">HTML Entities</a></li>
-        		<li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/typography.html" data-id="typography">Typography</a></li>
-        		<li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/colors.html" data-id="colors">Colors</a></li>
-        		<li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/icons.html" data-id="iconography">Iconography</a></li>
-        		<li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/foundations/animation.html" data-id="animation">Animation</a></li>
+        		<li><a href="/foundations/entities.html" data-id="entities">HTML Entities</a></li>
+        		<li><a href="/foundations/typography.html" data-id="typography">Typography</a></li>
+        		<li><a href="/foundations/colors.html" data-id="colors">Colors</a></li>
+        		<li><a href="/foundations/icons.html" data-id="iconography">Iconography</a></li>
+        		<li><a href="/foundations/animation.html" data-id="animation">Animation</a></li>
            </ul>
        </li>
        <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Components</h2>
            <ul class="nav nav-pills nav-stacked tree">
-              <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/breadcrumb/" data-id="component-breadcrumb">Breadcrumb</a></li>
-              <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/buttons/" data-id="buttons">Buttons</a></li>
-              <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/forms/" data-id="forms">Forms</a></li>
+              <li><a href="/components/breadcrumb/" data-id="component-breadcrumb">Breadcrumb</a></li>
+              <li><a href="/components/buttons/" data-id="buttons">Buttons</a></li>
+              <li><a href="/components/dialogs/" data-id="dialogs">Dialogs</a></li>
+              <li><a href="/components/forms/" data-id="forms">Forms</a></li>
+              <li><a href="/components/tabs/" data-id="tabs">Tabs</a></li>
+              <li><a href="/components/tooltips/" data-id="tooltips">Tooltips</a></li>
               <li> <!-- Subtree -->
                 <a href="#/" class="tree-toggler subtree"><i class="fa fa-caret-down"></i>Input Controls</a>
                 <ul class="nav nav-pills nav-stacked tree">
-                  <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/date_range/" data-id="date-range">Date, Date Range</a></li>
-                  <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/date_single/" data-id="date-single">Date, Single Date</a></li>
-                  <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/long_list_single/" data-id="long-list-single">List, Long Single Value</a></li>
-                  <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/long_list_multi/" data-id="long-list-multi">List, Long Multi Value</a></li>
-                  <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/money/" data-id="money-input">Money Input</a></li>
-                  <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/components/quantity/" data-id="quantity-input">Quantity Input</a></li>
+                  <li><a href="/components/date_range/" data-id="date-range">Date, Date Range</a></li>
+                  <li><a href="/components/date_single/" data-id="date-single">Date, Single Date</a></li>
+                  <li><a href="/components/long_list_single/" data-id="long-list-single">List, Long Single Value</a></li>
+                  <li><a href="/components/long_list_multi/" data-id="long-list-multi">List, Long Multi Value</a></li>
+                  <li><a href="/components/money/" data-id="money-input">Money Input</a></li>
+                  <li><a href="/components/quantity/" data-id="quantity-input">Quantity Input</a></li>
                 </ul>
               </li>
            </ul>
        </li>
        <li><h2 class="tree-toggler"><i class="fa fa-caret-down"></i>Patterns</h2>
            <ul class="nav nav-pills nav-stacked tree">
-              <li><a href="/portfolio/work/vendavo/eps/5_prototype/dist/app/patterns/tables/" data-id="tables">Table</a></li>
+              <li><a href="/patterns/tables/" data-id="tables">Tabsle</a></li>
            </ul>
        </li>
    </ul>
@@ -598,36 +621,36 @@
     ================================================== -->
 
     <!--jQuery CDN -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Plug-Ins -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/select2-ng/select2.min.js"></script>
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/jquery.truncator/jquery.truncator.js"></script>
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="/_/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/_/bower_components/select2-ng/select2.min.js"></script>
+    <script src="/_/bower_components/jquery.truncator/jquery.truncator.js"></script>
+    <script src="/_/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
 
     <!-- Polyfills - create support for unsupported browsers
     ... Will be added here ... -->
 
     <!-- Bootstrap Components -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/_/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Plugins  -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+    <script src="/_/bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
 
     <!-- Vendavo App JS -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/js/app.js"></script>
+    <script src="/_/js/app.js"></script>
 
     <!-- Vendavo Components JS  -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/js/components.js"></script>
+    <script src="/_/js/components.js"></script>
 
     <!-- Component Library (Style Guide) Specific JS -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/js/styleguide.js"></script>
+    <script src="/_/js/styleguide.js"></script>
 
 
     <!-- HighLight Plugin for code snippest -->
-    <script src="/portfolio/work/vendavo/eps/5_prototype/app/_/bower_components/highlightjs/highlight.pack.js"></script>
+    <script src="/_/bower_components/highlightjs/highlight.pack.js"></script>
     <script>hljs.configure({ 'languages': ['html'] });</script>
     <script type="text/javascript">
       $('pre code').each(function(i, item){ 

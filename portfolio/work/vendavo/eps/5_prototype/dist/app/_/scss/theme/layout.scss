@@ -28,29 +28,26 @@ body {
 					margin-left: 5px;
 				}
 			}
-			.page-navigator, .page-actions {
+			.page-actions {
 				line-height: $shortSlatHeight;
 			}
 			.page-actions {
-				padding-right: $pageMargin;
-				> label {
-					color: $main-tint;
-					cursor: pointer;
-					font-size: 90%;
-					font-weight: normal;
-					line-height: $shortSlatHeight;
+				> .navbar-right {
 					margin: 0 $pageMargin 0 0;
-					input[type="checkbox"] {
-						margin-right: 5px;
+					li {
+						float: left;
+						.btn {
+							margin-left: 5px;
+						}
 					}
 				}
 				.search-analysis {
-					position: relative;
 					margin-top: 5px;
+					position: relative;
 					> .btn-link {
 						position: absolute;
-						top: 0;
 						right: 0;
+						top: 0;
 					}
 				}
 				&.dropdown-analysis-open {
@@ -62,74 +59,45 @@ body {
 			}
 			/* Analyses Menu */
 			.page-navigator {
+				padding-bottom: 6px;
+				padding-top: 6px;
+			}
+			.page-navigator {
 				&.open {
 					position: static;
 					.dropdown-analysis {
-						background: $main-shade;
 						display: table;
 						left: 0;
 						margin-top: 1px;
+						padding-bottom: $pageMargin;
 						right: 0;
-						text-align: center;
-						width: 100%;
 						width: 100%;
 					}
 				}
-			}
-		}
-		.filter-container {
-			@include box-shadow();
-			min-height: $shortSlatHeight;
-			.btn-link {
-				border: none;
-				height: $shortSlatHeight;
-				.fa {
-					margin: auto 5px;
-				}
-			}
-			.add-filters, .apply-filters {
-				position: relative;
-			}
-			.add-filters {
-				input {
-					border: none;
-					position: absolute;
-					top: 0;
-					width: 100%; // Temporary - will be replaced with Select2 component or something
-					height: 100%;
-					-webkit-appearance: none; /* to remove inset shadow for iOS */
-					&:focus {
-						outline: none;
+				dl {
+					list-style: none;
+					margin: 0 5px;
+					max-height: 350px;
+					overflow-y: auto;
+					padding: 0;
+					dt {
+						color: $main-tint;
+						padding: 15px 0 15px 10px;
 					}
-				}
-			}
-			.apply-filters {
-				@media(min-width: $screen-sm-min) {
-					width: 15%;
-				}
-				@media(min-width: $screen-sm-min) {
-					width: 10%;
-				}
-				@media(min-width: $screen-lg-min) {
-					width: 5%;
-				}
-				.btn {
-					font-size: 80%;
-					height: 100%;
-					position: absolute;
-					text-transform: uppercase;
-					top: 0;
-					width: 100%;
-				}
-			}
-			.comparison-filter {
-				border-top: 1px solid $borderColor;
-				// Hide Flexbox - to support show/hide of flexboxes
-				&.flex-show {
-					@include flexbox();
-				}
-				&.flex-hide {
-					display: none;
+					dd {
+						> a {
+							clear: both;
+							color: $main-tint;
+							display: block;
+							padding: 5px 10px;
+							white-space: nowrap;
+							&:hover {
+								@include transition(.4s);
+								background: lighten($main-shade, 15%);
+								text-decoration: none;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -142,6 +110,7 @@ body {
 				left: 0;
 				margin: 10px;
 				overflow-y: auto;
+				overflow-x: hidden;
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -168,14 +137,18 @@ body {
 								padding-left: 40px; // Same as .tabs-left width + padding width
 								.chart-title {
 									text-align: center;
-									h2 {
+									h3 {
 										display: inline-block;
-										font-size: 115%;
 										margin-top: 10px;
 										width: auto;
 									}
+									h4 {
+										color: $grayDark;
+										margin-top: 0;
+										text-align: center;
+									}
 								}
-								.nav-pills {
+								.nav-charts {
 									> li {
 										> a {
 											@include border-radius(0);
@@ -190,23 +163,121 @@ body {
 							}
 							.workspace {
 								margin-left: 40px;
-								padding: $pageMargin;
+								// padding: 0 10px;
 								#highchart {
 									min-height: 300px;
-									.highcharts-container {
-										
+								}
+								.visualizations {
+									padding-left: 15px;
+									&.add-a-table {
+										width: 200px;
+									}
+									&.add-a-chart {
+										border-left: 1px solid $borderColor;
+									}
+									h3 {
+										margin: 0;
+										padding-left: 5px;
+										line-height: 36px;
+									}
+									header {
+										.chart-toggle {
+											margin-right: 10px;
+											text-align: right;
+											.btn-link {
+												background: $grayLight;
+												color: $grayDarkest;
+												margin-bottom: 3px;
+												margin-top: 5px;
+												padding-bottom: 3px;
+												padding-top: 3px;
+												font-size: 12px;
+												letter-spacing: 0;
+												@include border-radius(3px);
+												&:hover {
+													background: $gray;
+												}
+												&.active {
+													background: $gray;
+													color: $white;
+													@include box-shadow();
+												}
+											}
+										}
+									}
+									> ul {
+										list-style: none;
+										margin-top: $pageMargin;
+										padding: 0;
+										overflow: hidden;
+										li {
+											border: 1px solid $blueLightest;
+											float: left;
+											min-height: 135px;
+											width: 170px;
+											margin: 0 5px 5px 0;
+											@include transition(.25s);
+											&:hover {
+												cursor: pointer;								
+												border-color: $white;
+												background: lighten($blueLightest, 2%);
+												@include box-shadow();
+												.visualization {
+													background: $blueLight;
+												}
+											}
+											.visualization {
+												background: $blueLightest;
+												margin: 3px;
+												height: 85px;
+												padding-bottom: 5px;
+											}
+											> span {
+												display: block;
+												text-align: center;
+											}
+										}
+										&.highlight {
+											li {
+												opacity: .25;
+												&.on {
+													opacity: 1;
+												}
+												&:hover {
+													opacity: 1;
+												}
+											}
+										}
 									}
 								}
-							}
-						}
-						.workarea-pane {
-							border-left: 1px solid $borderColor;
-							height: 100%;
-							position: absolute;
-							right: 0;
-							top: 0;
-							> section {
-								margin: 0 10px;
+								.lt-column {
+									width: 25%;
+									max-width: 190px;
+								}
+								.rt-column {
+									width: 75%;
+									border-left: 1px solid $borderColor;
+									padding-left: $pageMargin;
+									> li {
+										float: left;
+									}
+								}
+								@media(max-width: $screen-sm-min) {
+									.lt-column {
+										max-width: 100%;
+									}
+									.lt-column, .rt-column {
+										width: 100%;
+										> ul {
+											li {
+												float: left;
+											}
+										}
+									}
+								}
+								@media(max-width: $screen-md-min) {
+									
+								}
 							}
 						}
 						.workarea {
@@ -215,7 +286,22 @@ body {
 						}
 						.workarea-pane {
 							@include transition(.25s);
+							border-left: 1px solid $borderColor;
 							display: none;
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							> section {
+								margin: 0 10px;
+								> footer {
+									padding: 10px;
+									.btn {
+										margin: 0;
+										width: 100%;
+									}
+								}
+							}
 						}
 						&.pane-open {
 							.workarea {

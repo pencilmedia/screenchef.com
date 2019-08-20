@@ -96,3 +96,88 @@
 .truncator-link {
 	font-size: 85%;
 }
+
+/* Business Calendar */
+$calendarWidth: 485px;
+$calendarButtonWidth: 80px;
+$calendarButtonLargeWidth: 115px; 
+
+.business-calendar {
+	width: $calendarWidth;
+	margin: 10px auto;
+	p {
+		margin: 20px 0;
+	}
+	> .btn-group {
+		width: 100%;
+	}
+	.btn.btn-default.btn-calendar {
+		background: $white;
+		border-color: $borderColor;
+		font-size: $baseFontSize;
+		margin: 0;
+		outline: 0;
+		width: 100%;
+		&.active {
+			background: $blueDarkest;
+			&:hover {
+				background: $blueDarker;
+			}
+		}
+		&:hover {
+			background: $grayLighter;
+		}
+		&.active, &:hover {
+			box-shadow: none;
+			-webkit-box-shadow: none;
+		}
+	}
+	.business-calendar-years {
+		> .btn.btn-default.btn-calendar {
+			width: $calendarButtonWidth;
+			&:first-child {
+				margin-right: $calendarButtonWidth / 2;
+			}
+			&:nth-child(n+3) {
+				border-left: 0;
+			}
+		}
+		.btn-group {
+			.btn.btn-default.btn-calendar {
+				width: $calendarButtonWidth / 2;
+			}
+			.dropdown-menu {
+				min-width: 0;
+			}
+		}
+	}
+	.business-calendar-quarters {
+		.btn-calendar {
+			&:first-child {
+				margin: 20px 0;
+			}
+		}
+	}
+	.business-calendar-quarters,
+	.business-calendar-months {
+		.btn-group {
+			width: $calendarButtonLargeWidth;
+		}
+		.btn-calendar {
+			&:last-child {
+				margin-bottom: 20px;
+			}
+			&:nth-child(n+2) {
+				border-top: 0;
+			}
+		}
+	}
+	.business-calendar-weeks {
+		.btn.btn-default.btn-calendar {
+			width: $calendarButtonWidth;
+			&:nth-child(n+2) {
+				border-left: 0;
+			}
+		}
+	}
+}

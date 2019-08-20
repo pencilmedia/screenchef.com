@@ -30,7 +30,7 @@
                         <p>
                             Making empathetic, informed decisions and paying incredible attention to detail regarding the aesthetics of digital products including branding, logo, graphic design and animation. 
                         </p>
-                        <footer>
+                        <footer>Third party link:<br />
                             <a href="https://www.styleguide.io" target="_blank">Design Systems &amp; Styleguides <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
                         </footer>
                     </div>
@@ -40,7 +40,7 @@
                             The ability to be empathetic and inquisitive are essential components to designing a successful experience for people. 
                             User experience design encompasses traditional human-computer interaction (HCI) design and extends it by addressing all aspects of a product or service as perceived by users. 
                         </p>
-                        <footer>
+                        <footer>Third party link:<br />
                             <a href="https://www.uxchecklist.github.io/" target="_blank">User Experience Designer Checklist <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
                         </footer>
                     </div>
@@ -49,7 +49,7 @@
                         <p>
                             A combination of programming skills and designing with empathy for the end user. Knowledge about accessibility, browser nuances, semantic markup, CSS techniques negating the need for JavaScript solutions.
                         </p>
-                        <footer>
+                        <footer>Third party link:<br />
                             <a href="https://www.upwork.com/hiring/development/beginners-guide-to-front-end-development/" target="_blank">Guide to Front End Development <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
                         </footer>
                     </div>

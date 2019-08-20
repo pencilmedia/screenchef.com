@@ -6,18 +6,18 @@ body {
 	&.theme-vendavo {
 		background: $grayLightest;
 		.page-actionbar {
-			background: $main-shade;
-			border-bottom: 1px solid $main-shade;
+			background: $main;
+			border-bottom: 1px solid $main;
 			.btn-link {
 				color: $white;
 			}
 			.btn-link, .btn-icon {
 				background: none;
-				border-color: darken($main-shade, 3%);
+				border-color: darken($main, 3%);
 				color: $main-tint;
 				&:focus, &:hover {
-					background: lighten($main-shade, 10%);
-					border-color: lighten($main-shade, 15%);
+					background: lighten($main, 10%);
+					border-color: lighten($main, 15%);
 				}
 			}
 			.btn-link {
@@ -25,15 +25,20 @@ body {
 			}
 			.search-analysis {
 				.form-control {
-					background: lighten($main-shade, 5%);
-					border-color: darken($main-shade, 3%);
+					background: lighten($main, 5%);
+					border-color: darken($main, 3%);
 					color: $main-tint;
 					@include placeholder(#193a3f);
 				}
 				> .btn-link {
 					.fa {
-						color: darken($main-shade, 3%);
+						color: darken($main, 3%);
 					}
+				}
+			}
+			.page-navigator {
+				.dropdown-analysis {
+					background: $main;
 				}
 			}
 		}
@@ -89,7 +94,7 @@ body {
 					background: $blueLightest;
 					border-right: 1px solid $blueLight;
 				}
-				.nav-pills {
+				.nav-charts {
 					> li {
 						> a {
 							background: none;

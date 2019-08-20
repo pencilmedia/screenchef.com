@@ -124,7 +124,7 @@
 .colonnade {
 	overflow: hidden;
 	width: 100%;
-	> .lt-column, > .rt-column {
+	> .lt-column, > .rt-column, > .mid1-column, > .mid2-column {
 		float: left;
 	}
 	&.two {
@@ -133,8 +133,13 @@
 		}
 	}
 	&.three {
-		> .lt-column, > .rt-column {
+		> .lt-column, > .mid-column, > .rt-column {
 			width: 33.3%;
+		}
+	}
+	&.four {
+		> .lt-column, > .mid1-column, > .mid2-column, > .rt-column {
+			width: 25%;
 		}
 	}
 }
@@ -148,40 +153,13 @@
 		@include flexbox();
 		@include flexDirection(column);
 	}
+	.flex-row {
+		@include flexDirection(row);
+	}
 	.flex {
 		@include flex(1);
 	}
-}
-
-
-/* Business Calendar */
-.business-calendar {
-	width: 500px;
-	margin: 10px auto;
-	p {
-		margin: 20px 0;
-	}
-	button {
-		min-width: 75px;
-		&.all {
-			margin-right: 5px;
-		}
-	}
-	.business-calendar-quarter {
-		float: left;
-		width: 25%;
-		margin: 10px 0;
-		button {
-			width: 100px;
-			float: left;
-			&:first-child {
-				margin-bottom: 5px;
-			}
-		}
-	}
-	.business-calendar-weeks {
-		button {
-			font-size: 12px;
-		}
+	&.hide-flex {
+		display: none;
 	}
 }
